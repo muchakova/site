@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Блог — Марина Мучакова" />
+
+  <title>Блог — Марина Мучакова</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about"    data-key="nav_about">За мен</a></li>
+        <li><a href="index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="blog.html"           data-key="nav_blog">Блог</a></li>
+        <li><a href="index.html#contact"  data-key="nav_contact">Контакти</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-hero section-soft">
+    <div class="container">
+      <h1 class="section-title" data-key="blog_page_title">Блог</h1>
+      <p class="page-hero-subtitle" data-key="blog_page_subtitle">Статии и обновления</p>
+    </div>
+  </header>
+
+  <!-- =========================================
+       BLOG LIST
+       За да добавите нова статия:
+       1. Копирайте blog/sample-post.html → blog/my-new-post.html
+       2. Редактирайте съдържанието
+       3. Добавете нова .blog-card карта по-долу
+       ========================================= -->
+  <main>
+    <div class="container">
+      <div class="blog-list-grid">
+
+        <!-- ── Статия 1 ──────────────────────────────── -->
+        <a href="blog/sample-post.html" class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">25 февруари 2026</span>
+            <span class="blog-tag">Обновление</span>
+          </div>
+          <h2 class="blog-card-title">Заглавие на първата статия</h2>
+          <p class="blog-card-excerpt">
+            Кратко описание на статията — привлечете вниманието на читателя
+            с интересно начало на историята.
+          </p>
+          <span class="blog-read-more">Прочети →</span>
+        </a>
+
+        <!-- ── Статия 2 ──────────────────────────────── -->
+        <a href="blog/sample-post.html" class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">18 февруари 2026</span>
+            <span class="blog-tag">Статия</span>
+          </div>
+          <h2 class="blog-card-title">Заглавие на втората статия</h2>
+          <p class="blog-card-excerpt">
+            Кратко описание на статията — привлечете вниманието на читателя
+            с интересно начало на историята.
+          </p>
+          <span class="blog-read-more">Прочети →</span>
+        </a>
+
+        <!--
+          ══════════════════════════════════════════
+          КАК ДА ДОБАВИТЕ НОВА СТАТИЯ:
+          ══════════════════════════════════════════
+          1. Копирайте: blog/sample-post.html → blog/nova-statia.html
+          2. Редактирайте заглавието, датата, тага и съдържанието
+          3. Копирайте блока по-долу и го поставете ТУК (над тази бележка):
+
+          <a href="blog/nova-statia.html" class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date">ДД месец ГГГГ</span>
+              <span class="blog-tag">Категория</span>
+            </div>
+            <h2 class="blog-card-title">Заглавие на новата статия</h2>
+            <p class="blog-card-excerpt">
+              Кратко описание...
+            </p>
+            <span class="blog-read-more">Прочети →</span>
+          </a>
+          ══════════════════════════════════════════
+        -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

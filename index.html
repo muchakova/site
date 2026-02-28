@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Марина Мучакова — личен уебсайт" />
+
+  <title>Марина Мучакова</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =========================================
+       NAVIGATION
+       ========================================= -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Главна навигация">
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"    data-key="nav_about">За мен</a></li>
+        <li><a href="#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="#blog"     data-key="nav_blog">Блог</a></li>
+        <li><a href="#contact"  data-key="nav_contact">Контакти</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================================
+       HERO
+       ========================================= -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+
+      <div class="hero-text">
+        <p class="hero-greeting" data-key="hero_greeting">Здравей, аз съм</p>
+        <h1 class="hero-name" data-key="full_name">Марина Мучакова</h1>
+        <p class="hero-title" data-key="hero_title">Данъчен консултант</p>
+        <p class="hero-desc" data-key="hero_desc">
+          Помагам на хора и бизнеси да минат НАП без НАП да ги мине, чрез законни данъчни оптимизации и стратегии.
+        </p>
+        <div class="hero-cta">
+          <a href="#about"   class="btn btn-primary"  data-key="hero_cta_about">За мен</a>
+          <a href="#contact" class="btn btn-outline"  data-key="hero_cta_contact">Свържи се с мен</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="profile-photo-wrap">
+          <img
+            src="images/profile_1.jpg"
+            alt="Марина Мучакова"
+            class="profile-photo"
+            loading="eager"
+          />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       ABOUT / ЗА МЕН
+       ========================================= -->
+  <section class="section section-soft" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-image">
+          <img
+            src="images/profile_2.jpg"
+            alt="Марина Мучакова"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="about-text">
+          <h2 class="section-title" data-key="about_title">За мен</h2>
+          <div class="about-bio">
+            <p data-key="about_bio_1"></p>
+            <p data-key="about_bio_2"></p>
+            <p data-key="about_bio_3"></p>
+            <p data-key="about_bio_4"></p>
+          </div>
+          <div class="about-links">
+            <a href="#contact" class="btn btn-primary" data-key="about_contact">Свържи се с мен</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       PROJECTS / ПРОЕКТИ
+       ========================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title" data-key="projects_title">Проекти</h2>
+          <p class="section-subtitle" data-key="projects_subtitle">Избрани проекти и работа</p>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Проект 1 — копирайте блока за нов проект -->
+        <article class="project-card">
+          <div class="project-category" data-key="proj_cat_1">Корпоративен сайт</div>
+          <h3 class="project-name" data-key="proj_title_1">Веста Консулт</h3>
+          <p class="project-desc" data-key="proj_desc_1">
+            Онлайн присъствие на Веста Консулт с ясно представяне на услуги,
+            бизнес профил и контактна информация.
+          </p>
+          <a href="https://vesta-bg.eu" target="_blank" rel="noopener noreferrer" class="project-link" data-key="proj_link">Виж повече →</a>
+        </article>
+
+        <!-- Проект 2 -->
+        <article class="project-card">
+          <div class="project-category" data-key="proj_cat_2">Образователна платформа</div>
+          <h3 class="project-name" data-key="proj_title_2">Крипто Академията</h3>
+          <p class="project-desc" data-key="proj_desc_2">
+            Образователен проект за крипто и блокчейн с фокус върху достъпно
+            съдържание и практическо обучение.
+          </p>
+          <a href="https://thecrypto.academy" target="_blank" rel="noopener noreferrer" class="project-link" data-key="proj_link">Виж повече →</a>
+        </article>
+
+        <!-- Проект 3 -->
+        <article class="project-card">
+          <div class="project-category" data-key="proj_cat_3">Асоциация</div>
+          <h3 class="project-name" data-key="proj_title_3">НАБИ - Национална Асоциация по Блокчейн и Иновации</h3>
+          <p class="project-desc" data-key="proj_desc_3">
+            Официалният сайт е в процес на разработка (under construction).
+            Скоро ще бъде публикуван.
+          </p>
+          <span class="project-link" data-key="proj_link">Виж повече →</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       BLOG PREVIEW / БЛОГ
+       ========================================= -->
+  <section class="section section-soft" id="blog">
+    <div class="container">
+
+      <div class="section-header">
+        <h2 class="section-title" data-key="blog_title">Блог</h2>
+        <a href="blog.html" class="see-all" data-key="blog_see_all">Всички статии →</a>
+      </div>
+
+      <div class="blog-grid">
+
+        <!-- Статия 1 — актуализирайте след като добавите реална статия -->
+        <a href="blog/sample-post.html" class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">25 февруари 2026</span>
+            <span class="blog-tag" data-key="blog_post_1_tag">Обновление</span>
+          </div>
+          <h3 class="blog-card-title" data-key="blog_post_1_title">Заглавие на първата статия</h3>
+          <p class="blog-card-excerpt" data-key="blog_post_1_excerpt">
+            Кратко описание на статията — привлечете вниманието на читателя
+            с интересно начало на историята.
+          </p>
+          <span class="blog-read-more" data-key="read_more">Прочети →</span>
+        </a>
+
+        <!-- Статия 2 -->
+        <a href="blog/sample-post.html" class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">18 февруари 2026</span>
+            <span class="blog-tag" data-key="blog_post_2_tag">Статия</span>
+          </div>
+          <h3 class="blog-card-title" data-key="blog_post_2_title">Заглавие на втората статия</h3>
+          <p class="blog-card-excerpt" data-key="blog_post_2_excerpt">
+            Кратко описание на статията — привлечете вниманието на читателя
+            с интересно начало на историята.
+          </p>
+          <span class="blog-read-more" data-key="read_more">Прочети →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       CONTACT / КОНТАКТИ
+       ========================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+
+      <div class="section-header" style="justify-content: center; text-align: center;">
+        <div>
+          <h2 class="section-title" data-key="contact_title">Контакти</h2>
+          <p class="section-subtitle" data-key="contact_subtitle">Свържете се с мен</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p data-key="contact_text">
+            Имате въпроси или искате да се свържете? Изпратете ми имейл или
+            ме намерете в социалните мрежи.
+          </p>
+
+          <!-- Директен контакт -->
+          <div class="contact-group">
+            <p class="contact-group-label" data-key="contact_group_direct">Директен контакт</p>
+            <div class="contact-links">
+              <a href="mailto:office@vesta-bg.eu" class="contact-item">
+                <span class="contact-icon">✉</span>
+                <span>office@vesta-bg.eu</span>
+              </a>
+              <a href="tel:+359887460907" class="contact-item">
+                <span class="contact-icon">☎</span>
+                <span>+359 887 460 907</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Съобщения -->
+          <div class="contact-group">
+            <p class="contact-group-label" data-key="contact_group_messaging">Съобщения</p>
+            <div class="contact-links contact-links-row">
+              <a href="viber://chat?number=%2B359887460907" class="contact-item contact-item-sm">
+                <span class="contact-icon">📲</span>
+                <span>Viber</span>
+              </a>
+              <a href="https://wa.me/359887460907" class="contact-item contact-item-sm" target="_blank" rel="noopener">
+                <span class="contact-icon">💬</span>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://t.me/+359887460907" class="contact-item contact-item-sm" target="_blank" rel="noopener">
+                <span class="contact-icon">✈</span>
+                <span>Telegram</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Социални мрежи -->
+          <div class="contact-group">
+            <p class="contact-group-label" data-key="contact_group_social">Социални мрежи</p>
+            <div class="contact-links contact-links-row">
+              <a href="https://www.facebook.com/muchakova" class="contact-item contact-item-sm" target="_blank" rel="noopener">
+                <span class="contact-icon">f</span>
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.linkedin.com/in/vestaconsult/" class="contact-item contact-item-sm" target="_blank" rel="noopener">
+                <span class="contact-icon">in</span>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.tiktok.com/@muchakova" class="contact-item contact-item-sm" target="_blank" rel="noopener">
+                <span class="contact-icon">♪</span>
+                <span>TikTok</span>
+              </a>
+              <a href="https://www.youtube.com/@TheCryptoAcademy375" class="contact-item contact-item-sm" target="_blank" rel="noopener">
+                <span class="contact-icon">▶</span>
+                <span>YouTube</span>
+              </a>
+              <a href="https://x.com/VestaConsult" class="contact-item contact-item-sm" target="_blank" rel="noopener">
+                <span class="contact-icon">𝕏</span>
+                <span>Twitter</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+  <footer class="footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
