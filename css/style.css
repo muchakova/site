@@ -729,6 +729,25 @@ img {
   margin: 0 auto;
 }
 
+.post-cover {
+  max-width: 560px;
+  margin: 8px auto 28px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.post-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.post-cover-compact {
+  max-width: 420px;
+  margin: 8px auto 24px;
+}
+
 .post-content h2 {
   font-size: 1.625rem;
   margin: 48px 0 18px;
