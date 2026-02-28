@@ -1,0 +1,48 @@
+# Marina Muchakova — Personal Website
+
+> Tax consultant, legal specialist, and educator based in Bulgaria.
+
+## About
+
+Marina Muchakova (Марина Мучакова) is a tax consultant with a law degree and over 15 years of experience in Bulgarian and EU tax law. She specialises in:
+
+- Crypto taxation and blockchain-related financial compliance
+- Investment income taxation (bonds, equities, government securities)
+- Double Taxation Avoidance Treaties (application and planning)
+- Business structuring and profit optimisation
+- MiCA (Markets in Crypto-Assets Regulation) prudential assessments and stress testing
+
+She works across three main projects:
+- **Vesta Consult** — accounting firm and consultancy (https://vesta-bg.eu)
+- **The Crypto Academy** — educational platform for crypto and blockchain (https://thecrypto.academy)
+- **NABI** — National Association for Blockchain and Innovation (non-profit)
+
+## Website
+
+- Homepage: https://muchakova.com/
+- Blog: https://muchakova.com/blog.html
+- Language: Bulgarian (primary) + English (toggle available on every page)
+
+## Blog Articles
+
+### ДЦК и как не се облагат с данъци / Government Bonds and How They Are NOT Taxed
+- URL: https://muchakova.com/blog/dck-obligacii-danaci.html
+- Date: 2026-02-14
+- Topics: Government securities (ДЦК), bond taxation in Bulgaria, coupons, discounts, capital gains, ZDDFL (Bulgarian Personal Income Tax Act), regulated markets, ESMA, MiFID 2, Bulgarian Stock Exchange
+- Languages: BG + EN
+
+### Размерът има значение! / Size Matters!
+- URL: https://muchakova.com/blog/razmer-ima-znachenie.html
+- Date: 2026-02-28
+- Topics: Starting capital, business stress testing, MiCA licensing, FSC (КФН), prudential requirements, business model resilience, break-even, risk buffers
+- Languages: BG + EN
+
+## Contact
+
+- Email: office@vesta-bg.eu
+- Phone / Viber / WhatsApp / Telegram: +359 887 460 907
+- LinkedIn: https://www.linkedin.com/in/vestaconsult/
+- Facebook: https://www.facebook.com/muchakova
+- X / Twitter: https://x.com/VestaConsult
+- TikTok: https://www.tiktok.com/@muchakova
+- YouTube: https://www.youtube.com/@TheCryptoAcademy375

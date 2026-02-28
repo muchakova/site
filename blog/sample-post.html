@@ -10,15 +10,39 @@
     Как да добавите нова статия:
     1. Копирайте целия този файл с ново име,
        напр. blog/moята-статия.html
-    2. Заменете мета тага <title> и description
+    2. Попълнете всички места с ГЛАВНИ БУКВИ по-долу:
+       SLUG, ЗАГЛАВИЕ, ОПИСАНИЕ, ДАТА, ТЕМА, KEYWORDS
     3. Попълнете .post-tag, .post-title, .post-meta
-    4. Напишете съдържанието в <div class="post-content">
+    4. Напишете съдържанието в двата lang-content блока
     5. Добавете карта в blog.html и в блог секцията на index.html
     ═══════════════════════════════════════════════
   -->
-  <meta name="description" content="Заглавие на статията — Марина Мучакова" />
+  <meta name="description" content="КРАТКО ОПИСАНИЕ НА СТАТИЯТА (до 160 знака) — Марина Мучакова" />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/blog/SLUG.html" />
 
-  <title>Заглавие на статията — Марина Мучакова</title>
+  <title>ЗАГЛАВИЕ НА СТАТИЯТА — Марина Мучакова</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muchakova.com/blog/SLUG.html" />
+  <meta property="og:title" content="ЗАГЛАВИЕ НА СТАТИЯТА — Марина Мучакова" />
+  <meta property="og:description" content="КРАТКО ОПИСАНИЕ НА СТАТИЯТА" />
+  <meta property="og:image" content="https://muchakova.com/images/profile_1.jpg" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+  <meta property="article:author" content="Марина Мучакова" />
+  <meta property="article:published_time" content="YYYY-MM-DD" />
+  <meta property="article:tag" content="ТЕМА" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="ЗАГЛАВИЕ НА СТАТИЯТА" />
+  <meta name="twitter:description" content="КРАТКО ОПИСАНИЕ НА СТАТИЯТА" />
+  <meta name="twitter:image" content="https://muchakova.com/images/profile_1.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +52,36 @@
   />
 
   <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ЗАГЛАВИЕ НА СТАТИЯТА",
+    "description": "КРАТКО ОПИСАНИЕ НА СТАТИЯТА",
+    "url": "https://muchakova.com/blog/SLUG.html",
+    "datePublished": "YYYY-MM-DD",
+    "dateModified": "YYYY-MM-DD",
+    "image": "https://muchakova.com/images/profile_1.jpg",
+    "inLanguage": ["bg", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "url": "https://muchakova.com/blog.html"
+    },
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3"]
+  }
+  </script>
 </head>
 <body>
 
