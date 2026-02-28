@@ -48,12 +48,12 @@ const translations = {
     // Blog
     blog_title:      'Блог',
     blog_see_all:    'Всички статии →',
-    blog_post_1_tag:     'Обновление',
-    blog_post_1_title:   'Заглавие на първата статия',
-    blog_post_1_excerpt: 'Кратко описание на статията — привлечете вниманието на читателя с интересно начало на историята.',
-    blog_post_2_tag:     'Статия',
-    blog_post_2_title:   'Заглавие на втората статия',
-    blog_post_2_excerpt: 'Кратко описание на статията — привлечете вниманието на читателя с интересно начало на историята.',
+    blog_post_1_tag:     'Данъци',
+    blog_post_1_title:   'ДЦК и как не се облагат с данъци',
+    blog_post_1_excerpt: 'Купони, отстъпки и капиталови печалби — пълното данъчно ръководство за физически лица, инвестиращи в ДЦК и облигации.',
+    blog_post_2_tag:     'Бизнес',
+    blog_post_2_title:   'Размерът има значение!',
+    blog_post_2_excerpt: 'Истината, която финансистите няма да ти разкрият безвъзмездно — размерът на стартовия капитал понякога е границата между фалита и успеха.',
     read_more:       'Прочети →',
 
     // Contact
@@ -70,6 +70,16 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
+
+    // Post: DCK
+    dck_tag:       'Данъци',
+    dck_title:     'ДЦК и как не се облагат с данъци',
+    dck_read_time: '8 мин четене',
+
+    // Post: Razmer
+    razmer_tag:       'Бизнес',
+    razmer_title:     'Размерът има значение!',
+    razmer_read_time: '4 мин четене',
 
     // Post page
     post_back:       '← Обратно към блога',
@@ -122,12 +132,12 @@ const translations = {
     // Blog
     blog_title:      'Blog',
     blog_see_all:    'All articles →',
-    blog_post_1_tag:     'Update',
-    blog_post_1_title:   'Title of the first article',
-    blog_post_1_excerpt: 'Short article description — draw the reader\'s attention with an engaging opening.',
-    blog_post_2_tag:     'Article',
-    blog_post_2_title:   'Title of the second article',
-    blog_post_2_excerpt: 'Short article description — draw the reader\'s attention with an engaging opening.',
+    blog_post_1_tag:     'Taxes',
+    blog_post_1_title:   'Government bonds and how they are not taxed',
+    blog_post_1_excerpt: 'Coupons, discounts and capital gains — a complete tax guide for individual investors in government bonds and corporate bonds.',
+    blog_post_2_tag:     'Business',
+    blog_post_2_title:   'Size matters!',
+    blog_post_2_excerpt: 'The truth that financial advisors won\'t share for free — the size of your starting capital can be the difference between failure and success.',
     read_more:       'Read more →',
 
     // Contact
@@ -144,6 +154,16 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
+
+    // Post: DCK
+    dck_tag:       'Taxes',
+    dck_title:     'Government Bonds and How They Are NOT Taxed',
+    dck_read_time: '8 min read',
+
+    // Post: Razmer
+    razmer_tag:       'Business',
+    razmer_title:     'Size Matters!',
+    razmer_read_time: '4 min read',
 
     // Post page
     post_back:       '← Back to blog',
@@ -172,6 +192,11 @@ function applyLanguage(lang) {
     if (t[key] !== undefined) {
       el.textContent = t[key];
     }
+  });
+
+  // Show/hide bilingual content blocks in blog posts
+  document.querySelectorAll('.lang-content').forEach(el => {
+    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
   });
 
   // Update language toggle button text
