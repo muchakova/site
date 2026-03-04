@@ -154,7 +154,7 @@ const translations = {
     blog_post_0_title:   'Summary of VAT Regime Changes After 1.1.2026',
     blog_post_0_excerpt: 'A practical overview of the new SME/OSS regimes, EX number, reporting changes, and VAT registration effects after January 1, 2026.',
     blog_post_1_tag:     'VAT',
-    blog_post_1_title:   'Промени в ДДС при електронна търговия и онлайн събития',
+    blog_post_1_title:   'VAT Changes for E-commerce and Online Events',
     blog_post_1_excerpt: 'What changes for online businesses, digital services, and cross-border EU sales as of January 1, 2026.',
     blog_post_2_tag:     'Taxes',
     blog_post_2_title:   'Government bonds and how they are not taxed',
@@ -179,7 +179,7 @@ const translations = {
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
     blog_page_post_0_title: 'Summary of VAT Regime Changes After 1.1.2026',
-    blog_page_post_1_title: 'Промени в ДДС при електронна търговия и онлайн събития',
+    blog_page_post_1_title: 'VAT Changes for E-commerce and Online Events',
 
     // Post: ZDDS 2026 Summary
     zdds2026_tag:       'VAT',
@@ -193,7 +193,7 @@ const translations = {
 
     // Post: DDS 2026
     dds2026_tag:       'VAT',
-    dds2026_title:     'Промени в ДДС при електронна търговия и онлайн събития',
+    dds2026_title:     'VAT Changes for E-commerce and Online Events',
     dds2026_read_time: '3 min read',
 
     // Post: Razmer
