@@ -250,6 +250,12 @@ function applyLanguage(lang) {
   if (shareNativeBtn) {
     shareNativeBtn.textContent = t.share_native;
   }
+
+  // Optional per-page document title by language.
+  const titleByLang = lang === 'bg' ? document.body?.dataset?.titleBg : document.body?.dataset?.titleEn;
+  if (titleByLang) {
+    document.title = titleByLang;
+  }
 }
 
 // ============ NAVBAR SCROLL EFFECT ============
