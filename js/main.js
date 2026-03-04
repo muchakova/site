@@ -48,12 +48,15 @@ const translations = {
     // Blog
     blog_title:      'Блог',
     blog_see_all:    'Всички статии →',
-    blog_post_1_tag:     'Данъци',
-    blog_post_1_title:   'ДЦК и как не се облагат с данъци',
-    blog_post_1_excerpt: 'Купони, отстъпки и капиталови печалби — пълното данъчно ръководство за физически лица, инвестиращи в ДЦК и облигации.',
-    blog_post_2_tag:     'Бизнес',
-    blog_post_2_title:   'Размерът има значение!',
-    blog_post_2_excerpt: 'Истината, която финансистите няма да ти разкрият безвъзмездно — размерът на стартовия капитал понякога е границата между фалита и успеха.',
+    blog_post_1_tag:     'ДДС',
+    blog_post_1_title:   'Промени в ДДС от 1 януари 2026 г.',
+    blog_post_1_excerpt: 'Какво се променя за онлайн бизнеса, дигиталните услуги и трансграничните продажби в ЕС от 1 януари 2026 г.',
+    blog_post_2_tag:     'Данъци',
+    blog_post_2_title:   'ДЦК и как не се облагат с данъци',
+    blog_post_2_excerpt: 'Купони, отстъпки и капиталови печалби — пълното данъчно ръководство за физически лица, инвестиращи в ДЦК и облигации.',
+    blog_post_3_tag:     'Бизнес',
+    blog_post_3_title:   'Размерът има значение!',
+    blog_post_3_excerpt: 'Истината, която финансистите няма да ти разкрият безвъзмездно — размерът на стартовия капитал понякога е границата между фалита и успеха.',
     read_more:       'Прочети →',
 
     // Contact
@@ -70,11 +73,17 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
+    blog_page_post_1_title: 'Промени в ДДС от 1 януари 2026 г.',
 
     // Post: DCK
     dck_tag:       'Данъци',
     dck_title:     'ДЦК и как не се облагат с данъци',
     dck_read_time: '8 мин четене',
+
+    // Post: DDS 2026
+    dds2026_tag:       'ДДС',
+    dds2026_title:     'Промени в ДДС от 1 януари 2026 г.',
+    dds2026_read_time: '3 мин четене',
 
     // Post: Razmer
     razmer_tag:       'Бизнес',
@@ -132,12 +141,15 @@ const translations = {
     // Blog
     blog_title:      'Blog',
     blog_see_all:    'All articles →',
-    blog_post_1_tag:     'Taxes',
-    blog_post_1_title:   'Government bonds and how they are not taxed',
-    blog_post_1_excerpt: 'Coupons, discounts and capital gains — a complete tax guide for individual investors in government bonds and corporate bonds.',
-    blog_post_2_tag:     'Business',
-    blog_post_2_title:   'Size matters!',
-    blog_post_2_excerpt: 'The truth that financial advisors won\'t share for free — the size of your starting capital can be the difference between failure and success.',
+    blog_post_1_tag:     'VAT',
+    blog_post_1_title:   'VAT Changes Effective January 1, 2026',
+    blog_post_1_excerpt: 'What changes for online businesses, digital services, and cross-border EU sales as of January 1, 2026.',
+    blog_post_2_tag:     'Taxes',
+    blog_post_2_title:   'Government bonds and how they are not taxed',
+    blog_post_2_excerpt: 'Coupons, discounts and capital gains — a complete tax guide for individual investors in government bonds and corporate bonds.',
+    blog_post_3_tag:     'Business',
+    blog_post_3_title:   'Size matters!',
+    blog_post_3_excerpt: 'The truth that financial advisors won\'t share for free — the size of your starting capital can be the difference between failure and success.',
     read_more:       'Read more →',
 
     // Contact
@@ -154,11 +166,17 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
+    blog_page_post_1_title: 'VAT Changes Effective January 1, 2026',
 
     // Post: DCK
     dck_tag:       'Taxes',
     dck_title:     'Government Bonds and How They Are NOT Taxed',
     dck_read_time: '8 min read',
+
+    // Post: DDS 2026
+    dds2026_tag:       'VAT',
+    dds2026_title:     'VAT Changes Effective January 1, 2026',
+    dds2026_read_time: '3 min read',
 
     // Post: Razmer
     razmer_tag:       'Business',
