@@ -60,6 +60,9 @@ const translations = {
     blog_post_3_tag:     'Бизнес',
     blog_post_3_title:   'Размерът има значение!',
     blog_post_3_excerpt: 'Истината, която финансистите няма да ти разкрият безвъзмездно — размерът на стартовия капитал понякога е границата между фалита и успеха.',
+    blog_post_4_tag:     'ДДС',
+    blog_post_4_title:   'Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.',
+    blog_post_4_excerpt: 'Прагът е 51 130 евро, но регистрацията възниква автоматично след преминаването му и носи задължения още преди издаване на акта.',
     read_more:       'Прочети →',
 
     // Contact
@@ -76,8 +79,14 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
+    blog_page_post_4_title: 'Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.',
     blog_page_post_0_title: 'Обобщение на промените в режима на ДДС след 1.1.2026',
     blog_page_post_1_title: 'Промени в ДДС при електронна търговия и онлайн събития',
+
+    // Post: VAT Turnover 2026
+    vatturnover2026_tag:       'ДДС',
+    vatturnover2026_title:     'Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.',
+    vatturnover2026_read_time: '7 мин четене',
 
     // Post: ZDDS 2026 Summary
     zdds2026_tag:       'ДДС',
@@ -162,6 +171,9 @@ const translations = {
     blog_post_3_tag:     'Business',
     blog_post_3_title:   'Size matters!',
     blog_post_3_excerpt: 'The truth that financial advisors won\'t share for free — the size of your starting capital can be the difference between failure and success.',
+    blog_post_4_tag:     'VAT',
+    blog_post_4_title:   'VAT Registration Turnover Accumulation After 01.01.2026',
+    blog_post_4_excerpt: 'The threshold remains EUR 51,130, but registration arises automatically after crossing it, with obligations before the formal act is issued.',
     read_more:       'Read more →',
 
     // Contact
@@ -178,8 +190,14 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
+    blog_page_post_4_title: 'VAT Registration Turnover Accumulation After 01.01.2026',
     blog_page_post_0_title: 'Summary of VAT Regime Changes After 1.1.2026',
     blog_page_post_1_title: 'VAT Changes for E-commerce and Online Events',
+
+    // Post: VAT Turnover 2026
+    vatturnover2026_tag:       'VAT',
+    vatturnover2026_title:     'VAT Registration Turnover Accumulation After 01.01.2026',
+    vatturnover2026_read_time: '7 min read',
 
     // Post: ZDDS 2026 Summary
     zdds2026_tag:       'VAT',
