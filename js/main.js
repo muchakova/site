@@ -48,8 +48,11 @@ const translations = {
     // Blog
     blog_title:      'Блог',
     blog_see_all:    'Всички статии →',
+    blog_post_0_tag:     'ДДС',
+    blog_post_0_title:   'Обобщение на промените в режима на ДДС след 1.1.2026',
+    blog_post_0_excerpt: 'Пълен практически преглед на новите режими SME/OSS, EX номера, отчетността и ефекта върху регистрациите по ЗДДС след 1 януари 2026 г.',
     blog_post_1_tag:     'ДДС',
-    blog_post_1_title:   'Промени в ДДС от 1 януари 2026 г.',
+    blog_post_1_title:   'Промени в ДДС при електронна търговия и онлайн събития',
     blog_post_1_excerpt: 'Какво се променя за онлайн бизнеса, дигиталните услуги и трансграничните продажби в ЕС от 1 януари 2026 г.',
     blog_post_2_tag:     'Данъци',
     blog_post_2_title:   'ДЦК и как не се облагат с данъци',
@@ -73,7 +76,13 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
-    blog_page_post_1_title: 'Промени в ДДС от 1 януари 2026 г.',
+    blog_page_post_0_title: 'Обобщение на промените в режима на ДДС след 1.1.2026',
+    blog_page_post_1_title: 'Промени в ДДС при електронна търговия и онлайн събития',
+
+    // Post: ZDDS 2026 Summary
+    zdds2026_tag:       'ДДС',
+    zdds2026_title:     'Обобщение на промените в режима на ДДС след 1.1.2026',
+    zdds2026_read_time: '6 мин четене',
 
     // Post: DCK
     dck_tag:       'Данъци',
@@ -82,7 +91,7 @@ const translations = {
 
     // Post: DDS 2026
     dds2026_tag:       'ДДС',
-    dds2026_title:     'Промени в ДДС от 1 януари 2026 г.',
+    dds2026_title:     'Промени в ДДС при електронна търговия и онлайн събития',
     dds2026_read_time: '3 мин четене',
 
     // Post: Razmer
@@ -141,8 +150,11 @@ const translations = {
     // Blog
     blog_title:      'Blog',
     blog_see_all:    'All articles →',
+    blog_post_0_tag:     'VAT',
+    blog_post_0_title:   'Summary of VAT Regime Changes After 1.1.2026',
+    blog_post_0_excerpt: 'A practical overview of the new SME/OSS regimes, EX number, reporting changes, and VAT registration effects after January 1, 2026.',
     blog_post_1_tag:     'VAT',
-    blog_post_1_title:   'VAT Changes Effective January 1, 2026',
+    blog_post_1_title:   'Промени в ДДС при електронна търговия и онлайн събития',
     blog_post_1_excerpt: 'What changes for online businesses, digital services, and cross-border EU sales as of January 1, 2026.',
     blog_post_2_tag:     'Taxes',
     blog_post_2_title:   'Government bonds and how they are not taxed',
@@ -166,7 +178,13 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
-    blog_page_post_1_title: 'VAT Changes Effective January 1, 2026',
+    blog_page_post_0_title: 'Summary of VAT Regime Changes After 1.1.2026',
+    blog_page_post_1_title: 'Промени в ДДС при електронна търговия и онлайн събития',
+
+    // Post: ZDDS 2026 Summary
+    zdds2026_tag:       'VAT',
+    zdds2026_title:     'Summary of VAT Regime Changes After 1.1.2026',
+    zdds2026_read_time: '6 min read',
 
     // Post: DCK
     dck_tag:       'Taxes',
@@ -175,7 +193,7 @@ const translations = {
 
     // Post: DDS 2026
     dds2026_tag:       'VAT',
-    dds2026_title:     'VAT Changes Effective January 1, 2026',
+    dds2026_title:     'Промени в ДДС при електронна търговия и онлайн събития',
     dds2026_read_time: '3 min read',
 
     // Post: Razmer
