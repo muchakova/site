@@ -63,6 +63,9 @@ const translations = {
     blog_post_4_tag:     'ДДС',
     blog_post_4_title:   'Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.',
     blog_post_4_excerpt: 'Прагът е 51 130 евро, но регистрацията възниква автоматично след преминаването му и носи задължения още преди издаване на акта.',
+    blog_post_5_tag:     'Данъчно право',
+    blog_post_5_title:   'Какво е „субстанция“ на една компания и защо това е важно?',
+    blog_post_5_excerpt: 'Реалната субстанция на бизнеса определя къде може да се дължат данъци, независимо къде е формално регистрирана компанията.',
     read_more:       'Прочети →',
 
     // Contact
@@ -79,9 +82,15 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
+    blog_page_post_5_title: 'Какво е „субстанция“ на една компания и защо това е важно?',
     blog_page_post_4_title: 'Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.',
     blog_page_post_0_title: 'Обобщение на промените в режима на ДДС след 1.1.2026',
     blog_page_post_1_title: 'Промени в ДДС при електронна търговия и онлайн събития',
+
+    // Post: Substance
+    substance_tag:       'Данъчно право',
+    substance_title:     'Какво е „субстанция“ на една компания и защо това е важно?',
+    substance_read_time: '6 мин четене',
 
     // Post: VAT Turnover 2026
     vatturnover2026_tag:       'ДДС',
@@ -174,6 +183,9 @@ const translations = {
     blog_post_4_tag:     'VAT',
     blog_post_4_title:   'VAT Registration Turnover Accumulation After 01.01.2026',
     blog_post_4_excerpt: 'The threshold remains EUR 51,130, but registration arises automatically after crossing it, with obligations before the formal act is issued.',
+    blog_post_5_tag:     'Tax Law',
+    blog_post_5_title:   'What Is Company Substance and Why Does It Matter?',
+    blog_post_5_excerpt: 'Real business substance determines where taxes may be due, regardless of where the company is formally incorporated.',
     read_more:       'Read more →',
 
     // Contact
@@ -190,9 +202,15 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
+    blog_page_post_5_title: 'What Is Company Substance and Why Does It Matter?',
     blog_page_post_4_title: 'VAT Registration Turnover Accumulation After 01.01.2026',
     blog_page_post_0_title: 'Summary of VAT Regime Changes After 1.1.2026',
     blog_page_post_1_title: 'VAT Changes for E-commerce and Online Events',
+
+    // Post: Substance
+    substance_tag:       'Tax Law',
+    substance_title:     'What Is Company Substance and Why Does It Matter?',
+    substance_read_time: '6 min read',
 
     // Post: VAT Turnover 2026
     vatturnover2026_tag:       'VAT',
