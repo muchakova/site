@@ -48,6 +48,10 @@ const translations = {
     // Blog
     blog_title:      'Блог',
     blog_see_all:    'Всички статии →',
+    blog_post_7_date:    '28 май 2026',
+    blog_post_7_tag:     'MiCA',
+    blog_post_7_title:   'Затрудненията пред CASP-овете при MiCA лиценз пред КФН',
+    blog_post_7_excerpt: 'Практически преглед на най-честите препъни камъни пред CASP компаниите в България при кандидатстване за MiCA лиценз.',
     blog_post_6_date:    '28 май 2026',
     blog_post_6_tag:     'Криптоикономика',
     blog_post_6_title:   'Какво не пише в white paper-ите',
@@ -86,11 +90,18 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
+    blog_page_post_7_title: 'Затрудненията пред CASP-овете при MiCA лиценз пред КФН',
     blog_page_post_6_title: 'Какво не пише в white paper-ите',
     blog_page_post_5_title: 'Какво е „субстанция“ на една компания и защо това е важно?',
     blog_page_post_4_title: 'Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.',
     blog_page_post_0_title: 'Обобщение на промените в режима на ДДС след 1.1.2026',
     blog_page_post_1_title: 'Промени в ДДС при електронна търговия и онлайн събития',
+
+    // Post: CASP MiCA
+    casp_mica_tag:       'MiCA',
+    casp_mica_title:     'Затрудненията пред CASP-овете при MiCA лиценз пред КФН',
+    casp_mica_date:      '28 май 2026',
+    casp_mica_read_time: '12 мин четене',
 
     // Post: Cryptoeconomics
     cryptoeco_tag:       'Криптоикономика',
@@ -179,6 +190,10 @@ const translations = {
     // Blog
     blog_title:      'Blog',
     blog_see_all:    'All articles →',
+    blog_post_7_date:    'May 28, 2026',
+    blog_post_7_tag:     'MiCA',
+    blog_post_7_title:   'CASP Challenges in Bulgaria During MiCA Licensing Before the FSC',
+    blog_post_7_excerpt: 'A practical overview of the common stumbling blocks Bulgarian CASP companies face when applying for a MiCA licence.',
     blog_post_6_date:    'May 28, 2026',
     blog_post_6_tag:     'Cryptoeconomics',
     blog_post_6_title:   'What White Papers Do Not Say',
@@ -217,11 +232,18 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
+    blog_page_post_7_title: 'CASP Challenges in Bulgaria During MiCA Licensing Before the FSC',
     blog_page_post_6_title: 'What White Papers Do Not Say',
     blog_page_post_5_title: 'What Is Company Substance and Why Does It Matter?',
     blog_page_post_4_title: 'VAT Registration Turnover Accumulation After 01.01.2026',
     blog_page_post_0_title: 'Summary of VAT Regime Changes After 1.1.2026',
     blog_page_post_1_title: 'VAT Changes for E-commerce and Online Events',
+
+    // Post: CASP MiCA
+    casp_mica_tag:       'MiCA',
+    casp_mica_title:     'CASP Challenges in Bulgaria During MiCA Licensing Before the FSC',
+    casp_mica_date:      'May 28, 2026',
+    casp_mica_read_time: '12 min read',
 
     // Post: Cryptoeconomics
     cryptoeco_tag:       'Cryptoeconomics',

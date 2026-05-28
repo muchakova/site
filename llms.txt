@@ -25,6 +25,12 @@ She works across three main projects:
 
 ## Blog Articles
 
+### Затрудненията пред CASP-овете при MiCA лиценз пред КФН / CASP Challenges in Bulgaria During MiCA Licensing Before the FSC
+- URL: https://muchakova.com/blog/zatrudnenia-casp-mica-licenz-kfn.html
+- Date: 2026-05-28
+- Topics: MiCA licensing, CASP authorisation, FSC Bulgaria, prudential safeguards, DORA, outsourcing, custody, client asset segregation, knowledge and competence, fit and proper assessment
+- Languages: BG + EN
+
 ### Какво не пише в white paper-ите / What White Papers Do Not Say
 - URL: https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html
 - Date: 2026-05-28
