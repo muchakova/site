@@ -25,6 +25,12 @@ She works across three main projects:
 
 ## Blog Articles
 
+### Какво не пише в white paper-ите / What White Papers Do Not Say
+- URL: https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html
+- Date: 2026-05-28
+- Topics: Cryptoeconomics, blockchain economics, Bitcoin, Ethereum, DeFi, Layer 2, bridges, wrapped tokens, MiCA, crypto regulation, shadow banking
+- Languages: BG + EN
+
 ### ДЦК и как не се облагат с данъци / Government Bonds and How They Are NOT Taxed
 - URL: https://muchakova.com/blog/dck-obligacii-danaci.html
 - Date: 2026-02-14

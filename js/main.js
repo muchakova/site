@@ -48,6 +48,10 @@ const translations = {
     // Blog
     blog_title:      'Блог',
     blog_see_all:    'Всички статии →',
+    blog_post_6_date:    '28 май 2026',
+    blog_post_6_tag:     'Криптоикономика',
+    blog_post_6_title:   'Какво не пише в white paper-ите',
+    blog_post_6_excerpt: 'Защо Bitcoin, Ethereum, DeFi, Layer 2 и bridge-овете са нова инфраструктура за стари икономически закони.',
     blog_post_0_tag:     'ДДС',
     blog_post_0_title:   'Обобщение на промените в режима на ДДС след 1.1.2026',
     blog_post_0_excerpt: 'Пълен практически преглед на новите режими SME/OSS, EX номера, отчетността и ефекта върху регистрациите по ЗДДС след 1 януари 2026 г.',
@@ -82,10 +86,17 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
+    blog_page_post_6_title: 'Какво не пише в white paper-ите',
     blog_page_post_5_title: 'Какво е „субстанция“ на една компания и защо това е важно?',
     blog_page_post_4_title: 'Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.',
     blog_page_post_0_title: 'Обобщение на промените в режима на ДДС след 1.1.2026',
     blog_page_post_1_title: 'Промени в ДДС при електронна търговия и онлайн събития',
+
+    // Post: Cryptoeconomics
+    cryptoeco_tag:       'Криптоикономика',
+    cryptoeco_title:     'Какво не пише в white paper-ите',
+    cryptoeco_date:      '28 май 2026',
+    cryptoeco_read_time: '14 мин четене',
 
     // Post: Substance
     substance_tag:       'Данъчно право',
@@ -168,6 +179,10 @@ const translations = {
     // Blog
     blog_title:      'Blog',
     blog_see_all:    'All articles →',
+    blog_post_6_date:    'May 28, 2026',
+    blog_post_6_tag:     'Cryptoeconomics',
+    blog_post_6_title:   'What White Papers Do Not Say',
+    blog_post_6_excerpt: 'Why Bitcoin, Ethereum, DeFi, Layer 2, and bridges are new infrastructure for old economic laws.',
     blog_post_0_tag:     'VAT',
     blog_post_0_title:   'Summary of VAT Regime Changes After 1.1.2026',
     blog_post_0_excerpt: 'A practical overview of the new SME/OSS regimes, EX number, reporting changes, and VAT registration effects after January 1, 2026.',
@@ -202,10 +217,17 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
+    blog_page_post_6_title: 'What White Papers Do Not Say',
     blog_page_post_5_title: 'What Is Company Substance and Why Does It Matter?',
     blog_page_post_4_title: 'VAT Registration Turnover Accumulation After 01.01.2026',
     blog_page_post_0_title: 'Summary of VAT Regime Changes After 1.1.2026',
     blog_page_post_1_title: 'VAT Changes for E-commerce and Online Events',
+
+    // Post: Cryptoeconomics
+    cryptoeco_tag:       'Cryptoeconomics',
+    cryptoeco_title:     'What White Papers Do Not Say',
+    cryptoeco_date:      'May 28, 2026',
+    cryptoeco_read_time: '14 min read',
 
     // Post: Substance
     substance_tag:       'Tax Law',

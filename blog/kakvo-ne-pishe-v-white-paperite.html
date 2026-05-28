@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Криптоикономиката на блокчейна през очите на икономист: Bitcoin, Ethereum, DeFi, Layer 2, bridge-ове и регулация отвъд white paper-ите." />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html" />
+
+  <title>Какво не пише в white paper-ите — Марина Мучакова</title>
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html" />
+  <meta property="og:title" content="Какво не пише в white paper-ите — Марина Мучакова" />
+  <meta property="og:description" content="Криптоикономиката на блокчейна през очите на икономист: Bitcoin, Ethereum, DeFi, Layer 2, bridge-ове и регулация отвъд white paper-ите." />
+  <meta property="og:image" content="https://muchakova.com/images/profile_1.jpg" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+  <meta property="article:author" content="Марина Мучакова" />
+  <meta property="article:published_time" content="2026-05-28" />
+  <meta property="article:tag" content="Криптоикономика" />
+  <meta property="article:tag" content="Блокчейн" />
+  <meta property="article:tag" content="DeFi" />
+  <meta property="article:tag" content="Регулации" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="Какво не пише в white paper-ите" />
+  <meta name="twitter:description" content="Криптоикономиката на блокчейна през очите на икономист: Bitcoin, Ethereum, DeFi, Layer 2, bridge-ове и регулация отвъд white paper-ите." />
+  <meta name="twitter:image" content="https://muchakova.com/images/profile_1.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Какво не пише в white paper-ите",
+    "description": "Криптоикономиката на блокчейна през очите на икономист: Bitcoin, Ethereum, DeFi, Layer 2, bridge-ове и регулация отвъд white paper-ите.",
+    "url": "https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html",
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "image": "https://muchakova.com/images/profile_1.jpg",
+    "inLanguage": ["bg", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "url": "https://muchakova.com/blog.html"
+    },
+    "keywords": ["Криптоикономика", "Blockchain", "Bitcoin", "Ethereum", "DeFi", "Layer 2", "Bridge hacks", "MiCA", "Shadow banking", "Crypto regulation"]
+  }
+  </script>
+</head>
+<body
+  data-title-bg="Какво не пише в white paper-ите — Марина Мучакова"
+  data-title-en="What White Papers Do Not Say — Marina Muchakova"
+>
+
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact" data-key="nav_contact">Контакти</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="post-header">
+    <div class="container">
+      <a href="../blog.html" class="post-back" data-key="post_back">← Обратно към блога</a>
+
+      <div class="post-tag" data-key="cryptoeco_tag">Криптоикономика</div>
+      <h1 class="post-title" data-key="cryptoeco_title">Какво не пише в white paper-ите</h1>
+
+      <div class="post-meta">
+        <div class="post-author">
+          <img src="../images/profile_3.jpg" alt="Марина Мучакова" class="post-author-img" />
+          <span class="post-author-name" data-key="full_name">Марина Мучакова</span>
+        </div>
+        <span class="post-separator">·</span>
+        <time datetime="2026-05-28" data-key="cryptoeco_date">28 май 2026</time>
+        <span class="post-separator">·</span>
+        <span data-key="cryptoeco_read_time">14 мин четене</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="post-body">
+    <div class="container">
+      <article class="post-content">
+
+        <div class="lang-content" data-lang="bg">
+          <p><em>Криптоикономиката на блокчейна през очите на икономист</em></p>
+
+          <p>
+            Bitcoin не е просто технология.
+          </p>
+
+          <p>
+            Ethereum не е просто блокчейн.
+          </p>
+
+          <p>
+            А Layer 2 не е просто „по-евтин Ethereum".
+          </p>
+
+          <p>
+            През последните години крипто индустрията изгради собствен език, собствена митология
+            и собствена икономика. White paper-ите обещават революция, децентрализация и „нов
+            финансов свят". Само че рядко обясняват какво всъщност се случва — икономически.
+          </p>
+
+          <p>Истината е по-проста и по-неудобна:</p>
+
+          <blockquote>
+            <strong>Почти всичко в крипто вече е съществувало в някаква форма в класическата
+            икономика. Блокчейнът не отменя икономическите закони. Той просто ги пренася върху
+            нова инфраструктура.</strong>
+          </blockquote>
+
+          <p>
+            Bitcoin прилича на дигитален златен стандарт. Ethereum е програмируема икономика с
+            монетарна политика. Layer 2 решенията работят като валутен борд. Bridge-овете между
+            блокчейните функционират като международни капиталови потоци. Wrapped токените са
+            почти идентични с депозитарните разписки на традиционните пазари.
+          </p>
+
+          <p>
+            Криптоикономиката не е „анти-икономика". Тя е <strong>нова институционална форма на
+            стара икономика</strong>.
+          </p>
+
+          <p>И точно това почти никой не казва.</p>
+
+          <h2>Блокчейнът не премахва собствеността. Той сменя гаранта.</h2>
+
+          <p>
+            В традиционната икономика държавата защитава собствеността чрез цяла институционална
+            архитектура: съдилища, полиция, нотариуси, имотни и търговски регистри, банки,
+            агенции за защита на потребителите.
+          </p>
+
+          <p>
+            Цялата тази машина струва пари, изисква хора и винаги е политически уязвима. Но върши
+            работа от хилядолетия.
+          </p>
+
+          <p>
+            В блокчейн среда гаранцията се измества: <strong>от държавата към криптографията</strong>.
+          </p>
+
+          <p>Вместо:</p>
+
+          <blockquote>
+            <em>„Това е мое, защото държавата го признава."</em>
+          </blockquote>
+
+          <p>се появява:</p>
+
+          <blockquote>
+            <em>„Това е мое, защото само аз контролирам ключа."</em>
+          </blockquote>
+
+          <p>
+            Това звучи технологически. Но всъщност е дълбоко институционално. Държавата като
+            гарант на собствеността не е премахната — тя е заменена с математика и икономически
+            стимули. Известната крипто фраза:
+          </p>
+
+          <blockquote>
+            <strong><em>Not your keys, not your coins</em></strong>
+          </blockquote>
+
+          <p>
+            е една от най-кратките дефиниции на частна собственост, написана някога. И най-важното
+            — тя не е написана от юрист. Написана е от анонимен криптограф и приета от милиони
+            хора, които никога не са чели Хайек или Коус.
+          </p>
+
+          <h2>Bitcoin е икономика с твърдо правило</h2>
+
+          <p>
+            Bitcoin е вероятно най-чистият пример за икономическа система, основана на
+            <strong>правило</strong>, а не на <strong>дискреция</strong>.
+          </p>
+
+          <p>
+            Няма централна банка. Няма управителен съвет. Няма възможност някой да „печата още".
+          </p>
+
+          <p>Предлагането е математически фиксирано — 21 милиона монети. Точка.</p>
+
+          <p>
+            Това е причината Bitcoin толкова често да бъде сравняван със златния стандарт. Само че
+            Bitcoin е дори по-твърд от златото:
+          </p>
+
+          <ul>
+            <li>При златото винаги могат да бъдат открити нови залежи.</li>
+            <li>При Bitcoin математиката е окончателна.</li>
+          </ul>
+
+          <p>И точно тук започва голямата икономическа дилема.</p>
+
+          <p>
+            <strong>Фиксираното предлагане създава доверие. Но същевременно прави системата
+            изключително чувствителна към промени в търсенето.</strong>
+          </p>
+
+          <p>
+            Когато търсенето расте — цената експлодира. Когато търсенето пада — сривът е също
+            толкова драматичен.
+          </p>
+
+          <p>
+            Bitcoin не е нестабилен „защото е крипто". Bitcoin е нестабилен по една много по-стара
+            причина — той е пазар с почти вертикална крива на предлагането. Това е учебникарска
+            микроикономика, не нещо ново.
+          </p>
+
+          <p>
+            Икономистите познават точно тази дилема от десетилетия. Дебатът между
+            <strong>правило и дискреция</strong> в монетарната политика — между Милтън Фридмън и
+            Джон Мейнард Кейнс — е същият дебат, който днес се води в Twitter между „биткойн
+            максималисти" и привържениците на Ethereum.
+          </p>
+
+          <p>Само че повечето хора в Twitter не го знаят.</p>
+
+          <h2>Ethereum не е валута. Ethereum е икономика.</h2>
+
+          <p>
+            Това е огромната разлика между Bitcoin и Ethereum, която почти никой не обяснява
+            правилно.
+          </p>
+
+          <p>
+            Bitcoin е проектиран основно за трансфер и съхранение на стойност. Той е валута. Точка.
+          </p>
+
+          <p>
+            Ethereum е проектиран като <strong>програмируема икономическа инфраструктура</strong>.
+          </p>
+
+          <p>Върху Ethereum работят:</p>
+
+          <ul>
+            <li>банки без банки,</li>
+            <li>борси без борси,</li>
+            <li>заеми без кредитни институции,</li>
+            <li>деривати без посредници,</li>
+            <li>инвестиционни фондове без управляващи дружества,</li>
+            <li>организации без управителен съвет.</li>
+          </ul>
+
+          <p>
+            Това движение носи името <strong>DeFi</strong> — децентрализирани финанси. И то
+            всъщност представлява опит за изграждане на паралелна финансова система.
+          </p>
+
+          <p>Само че не чрез закон. А чрез код.</p>
+
+          <p>Това поражда дълбоки въпроси, на които никой досега не е отговорил задоволително:</p>
+
+          <ul>
+            <li>Кой носи отговорност, когато смарт контракт има бъг?</li>
+            <li>Кой защитава потребителя в DeFi среда?</li>
+            <li>Кой плаща, когато протокол бъде хакнат?</li>
+            <li>В коя юрисдикция е „регистриран" един DAO?</li>
+          </ul>
+
+          <p>
+            Като юрист мога да ви кажа: повечето от тези въпроси все още нямат ясен отговор в
+            българското и европейското право. И точно това е причината MiCA да създаде огромно
+            регулативно напрежение в индустрията.
+          </p>
+
+          <h2>DeFi е сенчест банков сектор върху блокчейн</h2>
+
+          <p>Това е може би най-точната икономическа дефиниция на DeFi.</p>
+
+          <p>Лендинг протоколи като Aave, Compound и Morpho функционират почти като банки:</p>
+
+          <ul>
+            <li>приемат ликвидност,</li>
+            <li>отпускат кредити,</li>
+            <li>определят лихви,</li>
+            <li>управляват кредитен риск.</li>
+          </ul>
+
+          <p>Но:</p>
+
+          <ul>
+            <li>без капиталови изисквания,</li>
+            <li>без Базел III,</li>
+            <li>без lender of last resort,</li>
+            <li>без гаранционен фонд,</li>
+            <li>без централна банка.</li>
+          </ul>
+
+          <p>
+            Това е учебникарска дефиниция на <strong>shadow banking</strong> — сенчестия банков
+            сектор, който допринесе значително за финансовата криза 2008 г.
+          </p>
+
+          <p>
+            Разликата е, че този път сенчестият сектор не е скрит. Той е публично четим, отворен
+            код, прозрачен на блокчейн ниво.
+          </p>
+
+          <p>Но икономически рисковете са същите. И точно затова DeFi може да бъде едновременно:</p>
+
+          <ul>
+            <li>изключително ефективен,</li>
+            <li>и изключително нестабилен.</li>
+          </ul>
+
+          <p>
+            Колапсът на Terra/Luna през 2022 г. не беше нещо ново в икономическата история. Това
+            беше класически срив на фиксиран валутен курс — точно както Аржентина 2001, точно както
+            Мексико 1994.
+          </p>
+
+          <p>Различното беше само скоростта: $40 милиарда се изпариха за 72 часа.</p>
+
+          <h2>Layer 2 решенията работят като валутен борд</h2>
+
+          <p>
+            Тази аналогия е една от най-интересните в целия крипто свят. И почти никой в индустрията
+            не я прави.
+          </p>
+
+          <p>Arbitrum, Optimism, zkSync и StarkNet имат:</p>
+
+          <ul>
+            <li>собствена икономика,</li>
+            <li>собствени такси,</li>
+            <li>собствена инфраструктура,</li>
+            <li>понякога дори собствен токен (ARB, OP).</li>
+          </ul>
+
+          <p>Но сигурността им идва от Ethereum.</p>
+
+          <p>
+            Те „наследяват доверие" от голяма икономика — точно както България години наред
+            наследяваше доверието към еврото чрез валутния борд от 1997 г.
+          </p>
+
+          <p>Сделката е една и съща във всички подобни режими:</p>
+
+          <blockquote>
+            <strong>Отказваш се от част от суверенитета си в замяна на стабилност и достъп до
+            доверието на по-голяма система.</strong>
+          </blockquote>
+
+          <p>
+            Arbitrum не може просто да промени правилата на Ethereum. Точно както БНБ не можеше
+            едностранно да обезцени лева. Но в замяна получава:
+          </p>
+
+          <ul>
+            <li>сигурност,</li>
+            <li>ликвидност,</li>
+            <li>доверие,</li>
+            <li>инфраструктура.</li>
+          </ul>
+
+          <p>
+            Това е същата логика, по която работят валутните режими в реалния свят. Това е
+            едновременно сила и слабост на режима. При шок не можеш да реагираш — но и шоковете
+            върху теб са по-малки, защото системата като цяло е стабилна.
+          </p>
+
+          <p>
+            И точно както България в продължение на 28 години не можа да реагира с обезценяване на
+            лева в свои собствени кризи, така и Layer 2 мрежите не могат да реагират самостоятелно
+            на свои собствени икономически проблеми.
+          </p>
+
+          <h2>Bridge-овете са митниците на крипто света</h2>
+
+          <p>Тук аналогията става почти плашещо точна.</p>
+
+          <p>
+            Всеки блокчейн е отделна икономическа система. Bitcoin не „знае" какво е Ethereum.
+            Ethereum не „разбира" Solana. Те нямат общ език, обща история, общ консенсус.
+          </p>
+
+          <p>
+            <strong>Това е икономически еквивалент на две държави без дипломатически отношения и
+            без обща банкова система.</strong>
+          </p>
+
+          <p>
+            Bridge-овете са инфраструктурата, през която капиталът преминава между тези системи.
+            Те изпълняват функция, много близка до:
+          </p>
+
+          <ul>
+            <li>международни капиталови потоци,</li>
+            <li>валутни пазари,</li>
+            <li>гранични пунктове,</li>
+            <li>клирингови системи.</li>
+          </ul>
+
+          <p>
+            Оракулите на bridge-овете работят като митнически служители — проверяват дали
+            трансакцията е валидна на „изходящата" верига, преди да позволят емитиране на wrapped
+            токен в „приемащата" верига.
+          </p>
+
+          <p>Таксите за bridge-а са като мита — възнаграждават инфраструктурата, защитават системата.</p>
+
+          <p>
+            А bridge exploit-овете са като контрабанда — само че индустриална, автоматизирана и в
+            мащаб, който в реалния свят е невъзможен.
+          </p>
+
+          <p>И точно както в реалния свят, най-големият риск е концентриран именно на границата.</p>
+
+          <p>
+            Затова <strong>най-големите крипто кражби в историята почти винаги са bridge hacks</strong>:
+          </p>
+
+          <ul>
+            <li>Ronin Bridge (2022): $625 милиона</li>
+            <li>Poly Network (2021): $610 милиона</li>
+            <li>Wormhole (2022): $326 милиона</li>
+            <li>Nomad (2022): $190 милиона</li>
+            <li>Multichain (2023): $130 милиона</li>
+          </ul>
+
+          <p>Общо над $3 милиарда за периода 2021–2024 г.</p>
+
+          <p>Когато bridge бъде компрометиран, ефектът прилича на:</p>
+
+          <ul>
+            <li>банкова паника,</li>
+            <li>валутна криза,</li>
+            <li>колапс на фиксиран курс,</li>
+            <li>зараза между свързани финансови системи.</li>
+          </ul>
+
+          <p>
+            Това не е екзотичен крипто проблем. Това е икономическата зараза от Азиатската криза
+            1997 г., просто с други инструменти.
+          </p>
+
+          <h2>Крипто постепенно престава да бъде „антисистемно"</h2>
+
+          <p>Това е нещо, което много хора в индустрията отказват да приемат.</p>
+
+          <p>
+            MiCA в ЕС от 30 декември 2024 г. SEC и CFTC рамките в САЩ. MAS правилата в Сингапур.
+            FINMA в Швейцария. VARA в ОАЕ.
+          </p>
+
+          <p>
+            Всички тези режими правят едно и също: <strong>интегрират крипто в традиционната
+            финансова система</strong>.
+          </p>
+
+          <p>
+            BitGo получи MiCA лиценз от BaFin през май 2025 г. Coinbase Custody е регулиран в
+            няколко европейски юрисдикции. Stablecoin емитентите трябва да публикуват резервите си.
+          </p>
+
+          <p>
+            Крипто не унищожава финансовата система. Крипто постепенно става <strong>част</strong>
+            от нея.
+          </p>
+
+          <p>
+            Това вероятно беше неизбежно. Защото регулацията следва парите. А когато индустрия
+            достигне пазарна капитализация над $2,5 трилиона, регулаторите вече нямат избор — те
+            трябва да реагират.
+          </p>
+
+          <p>
+            Като данъчен консултант ще ви кажа още нещо: данъчните органи и финансовите регулатори
+            в България и ЕС вече имат много по-добър достъп до крипто данни, отколкото повечето
+            потребители си представят. Анонимността на блокчейна е илюзия — публичните регистри са
+            перфектен инструмент за форензичен анализ, ако знаеш как да четеш chain-а.
+          </p>
+
+          <h2>Големият парадокс на блокчейна</h2>
+
+          <p>Блокчейнът обещава децентрализация.</p>
+
+          <p>Но реалната икономика на крипто все повече се концентрира:</p>
+
+          <ul>
+            <li>в няколко големи борси (Binance, Coinbase, Kraken),</li>
+            <li>в няколко големи кастодиани (BitGo, Coinbase Custody, Anchorage),</li>
+            <li>в няколко инфраструктурни доставчици (Infura, Alchemy),</li>
+            <li>в няколко емитента на стейбълкойни (Tether, Circle),</li>
+            <li>в няколко Layer 2 оператори (Arbitrum, Optimism, Base, Polygon).</li>
+          </ul>
+
+          <p>Това не означава, че технологията се е „провалила".</p>
+
+          <p>Означава нещо много по-важно:</p>
+
+          <blockquote>
+            <strong>Икономическите сили на концентрация не изчезват само защото инфраструктурата е
+            нова.</strong>
+          </blockquote>
+
+          <p>
+            Икономии от мащаба, мрежови ефекти, репутационни предимства, регулаторни бариери —
+            всички тези класически икономически феномени се проявяват на крипто пазара с пълна
+            сила. Точно както в традиционните финанси.
+          </p>
+
+          <p>
+            Това е едно от най-смущаващите наблюдения за хора, които вярват, че технологията решава
+            политически и икономически проблеми. Не ги решава. Тя просто ги пренася в нова
+            инфраструктура.
+          </p>
+
+          <h2>Какво всъщност представлява криптоикономиката?</h2>
+
+          <p>Най-краткият отговор е този:</p>
+
+          <blockquote>
+            <strong>Криптоикономиката е опит за изграждане на пазарна система, в която доверието
+            се произвежда не от държавата, а от комбинация между криптография, алгоритми,
+            икономически стимули и мрежов консенсус.</strong>
+          </blockquote>
+
+          <p>Това е фундаментално нова инфраструктура.</p>
+
+          <p>Но не и фундаментално нова икономика.</p>
+
+          <p>
+            Bitcoin не отменя теорията за паричното предлагане. Ethereum не отменя теорията на
+            банковото посредничество. DeFi не отменя теорията за финансовите кризи. Bridge-овете
+            не отменят теорията за капиталовите потоци.
+          </p>
+
+          <p>
+            Колкото повече крипто узрява, толкова по-ясно става нещо парадоксално и важно:
+          </p>
+
+          <blockquote>
+            <strong>Най-добрият начин да разберем бъдещето на блокчейна е чрез класическата
+            икономическа теория.</strong>
+          </blockquote>
+
+          <p>Не чрез white paper-ите. Не чрез Twitter. Не чрез крипто инфлуенсърите.</p>
+
+          <p>
+            А чрез учебниците, които вече бяха написани преди да се родят основателите на тази
+            индустрия.
+          </p>
+
+          <p>
+            Това не омаловажава иновацията. Точно обратно — то я поставя в контекст, в който можем
+            да я разберем сериозно.
+          </p>
+
+          <p>
+            И когато става дума за капитал, риск и регулация, <strong>сериозно</strong> е
+            единственото нещо, което има значение.
+          </p>
+
+          <p>
+            <em>Марина Мучакова е докторант по икономика в УНСС, данъчен консултант и юрист. Пише
+            за пресечните точки между традиционната икономика, регулативната рамка и крипто
+            инфраструктурата. Тази статия е базирана върху по-широк академичен реферат, написан за
+            специалност Икономикс на ОНС „Доктор" в УНСС.</em>
+          </p>
+
+          <p>
+            <em>Ако темата ви е интересна, абонирайте се за нови публикации или ме потърсете за
+            консултация по регулативни и данъчни въпроси, свързани с крипто активи.</em>
+          </p>
+        </div>
+
+        <div class="lang-content" data-lang="en" style="display:none;">
+          <p><em>The cryptoeconomics of blockchain through an economist's eyes</em></p>
+
+          <p>Bitcoin is not just technology.</p>
+
+          <p>Ethereum is not just a blockchain.</p>
+
+          <p>And Layer 2 is not just "cheaper Ethereum".</p>
+
+          <p>
+            In recent years, the crypto industry has built its own language, its own mythology, and
+            its own economy. White papers promise revolution, decentralization, and a "new financial
+            world". Yet they rarely explain what is actually happening in economic terms.
+          </p>
+
+          <p>The truth is simpler and more uncomfortable:</p>
+
+          <blockquote>
+            <strong>Almost everything in crypto has already existed in some form in classical
+            economics. Blockchain does not repeal economic laws. It simply moves them onto new
+            infrastructure.</strong>
+          </blockquote>
+
+          <p>
+            Bitcoin resembles a digital gold standard. Ethereum is a programmable economy with
+            monetary policy. Layer 2 solutions operate like a currency board. Bridges between
+            blockchains function like international capital flows. Wrapped tokens are almost
+            identical to depositary receipts in traditional markets.
+          </p>
+
+          <p>
+            Cryptoeconomics is not an "anti-economy". It is <strong>a new institutional form of an
+            old economy</strong>.
+          </p>
+
+          <p>And that is exactly what almost no one says.</p>
+
+          <h2>Blockchain does not abolish property. It changes the guarantor.</h2>
+
+          <p>
+            In the traditional economy, the state protects property through an entire institutional
+            architecture: courts, police, notaries, property and commercial registers, banks, and
+            consumer protection agencies.
+          </p>
+
+          <p>
+            This whole machine costs money, requires people, and is always politically vulnerable.
+            But it has worked for millennia.
+          </p>
+
+          <p>
+            In a blockchain environment, the guarantee shifts: <strong>from the state to
+            cryptography</strong>.
+          </p>
+
+          <p>Instead of:</p>
+
+          <blockquote>
+            <em>"This is mine because the state recognizes it."</em>
+          </blockquote>
+
+          <p>we get:</p>
+
+          <blockquote>
+            <em>"This is mine because only I control the key."</em>
+          </blockquote>
+
+          <p>
+            This sounds technological. In reality, it is deeply institutional. The state as guarantor
+            of property has not been abolished. It has been replaced by mathematics and economic
+            incentives. The well-known crypto phrase:
+          </p>
+
+          <blockquote>
+            <strong><em>Not your keys, not your coins</em></strong>
+          </blockquote>
+
+          <p>
+            is one of the shortest definitions of private property ever written. Most importantly,
+            it was not written by a lawyer. It was written by an anonymous cryptographer and adopted
+            by millions of people who have never read Hayek or Coase.
+          </p>
+
+          <h2>Bitcoin is an economy with a hard rule</h2>
+
+          <p>
+            Bitcoin is probably the purest example of an economic system based on <strong>rule</strong>,
+            rather than <strong>discretion</strong>.
+          </p>
+
+          <p>
+            There is no central bank. No board of governors. No possibility for someone to "print
+            more".
+          </p>
+
+          <p>The supply is mathematically fixed: 21 million coins. Full stop.</p>
+
+          <p>
+            This is why Bitcoin is so often compared to the gold standard. But Bitcoin is even harder
+            than gold:
+          </p>
+
+          <ul>
+            <li>With gold, new deposits can always be discovered.</li>
+            <li>With Bitcoin, the mathematics is final.</li>
+          </ul>
+
+          <p>And this is exactly where the big economic dilemma begins.</p>
+
+          <p>
+            <strong>Fixed supply creates trust. At the same time, it makes the system extremely
+            sensitive to changes in demand.</strong>
+          </p>
+
+          <p>
+            When demand rises, the price explodes. When demand falls, the crash is just as dramatic.
+          </p>
+
+          <p>
+            Bitcoin is not volatile "because it is crypto". Bitcoin is volatile for a much older
+            reason: it is a market with an almost vertical supply curve. This is textbook
+            microeconomics, not something new.
+          </p>
+
+          <p>
+            Economists have known this dilemma for decades. The debate between <strong>rule and
+            discretion</strong> in monetary policy — between Milton Friedman and John Maynard Keynes
+            — is the same debate now taking place on Twitter between "Bitcoin maximalists" and
+            Ethereum supporters.
+          </p>
+
+          <p>Most people on Twitter just do not know it.</p>
+
+          <h2>Ethereum is not a currency. Ethereum is an economy.</h2>
+
+          <p>
+            This is the enormous difference between Bitcoin and Ethereum that almost no one explains
+            properly.
+          </p>
+
+          <p>
+            Bitcoin was designed primarily for the transfer and storage of value. It is a currency.
+            Full stop.
+          </p>
+
+          <p>
+            Ethereum was designed as <strong>programmable economic infrastructure</strong>.
+          </p>
+
+          <p>On Ethereum, there are:</p>
+
+          <ul>
+            <li>banks without banks,</li>
+            <li>exchanges without exchanges,</li>
+            <li>loans without credit institutions,</li>
+            <li>derivatives without intermediaries,</li>
+            <li>investment funds without management companies,</li>
+            <li>organizations without a board of directors.</li>
+          </ul>
+
+          <p>
+            This movement is called <strong>DeFi</strong>, or decentralized finance. In reality, it
+            is an attempt to build a parallel financial system.
+          </p>
+
+          <p>But not through law. Through code.</p>
+
+          <p>This creates deep questions that no one has answered satisfactorily so far:</p>
+
+          <ul>
+            <li>Who is responsible when a smart contract has a bug?</li>
+            <li>Who protects the consumer in a DeFi environment?</li>
+            <li>Who pays when a protocol is hacked?</li>
+            <li>In which jurisdiction is a DAO "registered"?</li>
+          </ul>
+
+          <p>
+            As a lawyer, I can tell you this: most of these questions still do not have a clear
+            answer under Bulgarian or European law. And this is exactly why MiCA has created enormous
+            regulatory pressure in the industry.
+          </p>
+
+          <h2>DeFi is shadow banking on blockchain</h2>
+
+          <p>This may be the most accurate economic definition of DeFi.</p>
+
+          <p>Lending protocols such as Aave, Compound, and Morpho function almost like banks:</p>
+
+          <ul>
+            <li>they accept liquidity,</li>
+            <li>they issue loans,</li>
+            <li>they set interest rates,</li>
+            <li>they manage credit risk.</li>
+          </ul>
+
+          <p>But:</p>
+
+          <ul>
+            <li>without capital requirements,</li>
+            <li>without Basel III,</li>
+            <li>without a lender of last resort,</li>
+            <li>without a guarantee fund,</li>
+            <li>without a central bank.</li>
+          </ul>
+
+          <p>
+            This is the textbook definition of <strong>shadow banking</strong>, the shadow banking
+            sector that contributed significantly to the 2008 financial crisis.
+          </p>
+
+          <p>
+            The difference is that this time the shadow sector is not hidden. It is publicly
+            readable, open source, and transparent at blockchain level.
+          </p>
+
+          <p>
+            But economically, the risks are the same. And that is precisely why DeFi can be both:
+          </p>
+
+          <ul>
+            <li>extremely efficient,</li>
+            <li>and extremely unstable.</li>
+          </ul>
+
+          <p>
+            The collapse of Terra/Luna in 2022 was not something new in economic history. It was a
+            classic collapse of a fixed exchange rate, just like Argentina in 2001 and Mexico in
+            1994.
+          </p>
+
+          <p>The only difference was speed: $40 billion evaporated in 72 hours.</p>
+
+          <h2>Layer 2 solutions work like a currency board</h2>
+
+          <p>
+            This analogy is one of the most interesting in the entire crypto world. And almost no one
+            in the industry makes it.
+          </p>
+
+          <p>Arbitrum, Optimism, zkSync, and StarkNet have:</p>
+
+          <ul>
+            <li>their own economy,</li>
+            <li>their own fees,</li>
+            <li>their own infrastructure,</li>
+            <li>sometimes even their own token (ARB, OP).</li>
+          </ul>
+
+          <p>But their security comes from Ethereum.</p>
+
+          <p>
+            They "inherit trust" from a larger economy, just as Bulgaria for years inherited trust in
+            the euro through the currency board introduced in 1997.
+          </p>
+
+          <p>The deal is the same in all such regimes:</p>
+
+          <blockquote>
+            <strong>You give up part of your sovereignty in exchange for stability and access to the
+            trust of a larger system.</strong>
+          </blockquote>
+
+          <p>
+            Arbitrum cannot simply change Ethereum's rules. Just as the Bulgarian National Bank could
+            not unilaterally devalue the lev. But in return, it receives:
+          </p>
+
+          <ul>
+            <li>security,</li>
+            <li>liquidity,</li>
+            <li>trust,</li>
+            <li>infrastructure.</li>
+          </ul>
+
+          <p>
+            This is the same logic by which currency regimes operate in the real world. It is both
+            the strength and the weakness of the regime. In a shock, you cannot react. But the shocks
+            hitting you are also smaller because the system as a whole is stable.
+          </p>
+
+          <p>
+            And just as Bulgaria for 28 years could not respond to its own crises by devaluing the
+            lev, Layer 2 networks cannot independently respond to their own economic problems.
+          </p>
+
+          <h2>Bridges are the customs offices of the crypto world</h2>
+
+          <p>Here, the analogy becomes almost frighteningly precise.</p>
+
+          <p>
+            Every blockchain is a separate economic system. Bitcoin does not "know" what Ethereum is.
+            Ethereum does not "understand" Solana. They have no shared language, no shared history,
+            no shared consensus.
+          </p>
+
+          <p>
+            <strong>This is the economic equivalent of two countries without diplomatic relations and
+            without a shared banking system.</strong>
+          </p>
+
+          <p>
+            Bridges are the infrastructure through which capital moves between these systems. They
+            perform a function very close to:
+          </p>
+
+          <ul>
+            <li>international capital flows,</li>
+            <li>foreign exchange markets,</li>
+            <li>border checkpoints,</li>
+            <li>clearing systems.</li>
+          </ul>
+
+          <p>
+            Bridge oracles work like customs officers. They check whether the transaction is valid on
+            the "outgoing" chain before allowing a wrapped token to be issued on the "receiving"
+            chain.
+          </p>
+
+          <p>Bridge fees are like customs duties: they reward the infrastructure and protect the system.</p>
+
+          <p>
+            Bridge exploits are like smuggling, only industrial, automated, and on a scale that would
+            be impossible in the real world.
+          </p>
+
+          <p>And just like in the real world, the greatest risk is concentrated at the border.</p>
+
+          <p>
+            This is why <strong>the largest crypto thefts in history are almost always bridge hacks</strong>:
+          </p>
+
+          <ul>
+            <li>Ronin Bridge (2022): $625 million</li>
+            <li>Poly Network (2021): $610 million</li>
+            <li>Wormhole (2022): $326 million</li>
+            <li>Nomad (2022): $190 million</li>
+            <li>Multichain (2023): $130 million</li>
+          </ul>
+
+          <p>More than $3 billion in total for the period 2021-2024.</p>
+
+          <p>When a bridge is compromised, the effect resembles:</p>
+
+          <ul>
+            <li>a bank run,</li>
+            <li>a currency crisis,</li>
+            <li>the collapse of a fixed exchange rate,</li>
+            <li>contagion between connected financial systems.</li>
+          </ul>
+
+          <p>
+            This is not an exotic crypto problem. It is the economic contagion of the 1997 Asian
+            crisis, simply with different instruments.
+          </p>
+
+          <h2>Crypto is gradually ceasing to be "anti-system"</h2>
+
+          <p>This is something many people in the industry refuse to accept.</p>
+
+          <p>
+            MiCA in the EU from December 30, 2024. SEC and CFTC frameworks in the United States. MAS
+            rules in Singapore. FINMA in Switzerland. VARA in the UAE.
+          </p>
+
+          <p>
+            All these regimes do the same thing: <strong>they integrate crypto into the traditional
+            financial system</strong>.
+          </p>
+
+          <p>
+            BitGo received a MiCA license from BaFin in May 2025. Coinbase Custody is regulated in
+            several European jurisdictions. Stablecoin issuers must publish their reserves.
+          </p>
+
+          <p>
+            Crypto is not destroying the financial system. Crypto is gradually becoming <strong>part</strong>
+            of it.
+          </p>
+
+          <p>
+            This was probably inevitable. Regulation follows the money. And when an industry reaches a
+            market capitalization above $2.5 trillion, regulators no longer have a choice: they must
+            respond.
+          </p>
+
+          <p>
+            As a tax consultant, I will tell you something else: tax authorities and financial
+            regulators in Bulgaria and the EU already have much better access to crypto data than most
+            users imagine. Blockchain anonymity is an illusion. Public ledgers are a perfect tool for
+            forensic analysis if you know how to read the chain.
+          </p>
+
+          <h2>The great paradox of blockchain</h2>
+
+          <p>Blockchain promises decentralization.</p>
+
+          <p>But the real economy of crypto is increasingly concentrated:</p>
+
+          <ul>
+            <li>in a few large exchanges (Binance, Coinbase, Kraken),</li>
+            <li>in a few large custodians (BitGo, Coinbase Custody, Anchorage),</li>
+            <li>in a few infrastructure providers (Infura, Alchemy),</li>
+            <li>in a few stablecoin issuers (Tether, Circle),</li>
+            <li>in a few Layer 2 operators (Arbitrum, Optimism, Base, Polygon).</li>
+          </ul>
+
+          <p>This does not mean the technology has "failed".</p>
+
+          <p>It means something far more important:</p>
+
+          <blockquote>
+            <strong>The economic forces of concentration do not disappear just because the
+            infrastructure is new.</strong>
+          </blockquote>
+
+          <p>
+            Economies of scale, network effects, reputational advantages, regulatory barriers: all
+            these classical economic phenomena appear in the crypto market in full force. Exactly as
+            they do in traditional finance.
+          </p>
+
+          <p>
+            This is one of the most unsettling observations for people who believe technology solves
+            political and economic problems. It does not. It simply moves them onto new
+            infrastructure.
+          </p>
+
+          <h2>So what is cryptoeconomics, really?</h2>
+
+          <p>The shortest answer is this:</p>
+
+          <blockquote>
+            <strong>Cryptoeconomics is an attempt to build a market system in which trust is produced
+            not by the state, but by a combination of cryptography, algorithms, economic incentives,
+            and network consensus.</strong>
+          </blockquote>
+
+          <p>This is fundamentally new infrastructure.</p>
+
+          <p>But it is not a fundamentally new economy.</p>
+
+          <p>
+            Bitcoin does not repeal the theory of money supply. Ethereum does not repeal the theory
+            of banking intermediation. DeFi does not repeal the theory of financial crises. Bridges
+            do not repeal the theory of capital flows.
+          </p>
+
+          <p>
+            The more crypto matures, the clearer one paradoxical and important point becomes:
+          </p>
+
+          <blockquote>
+            <strong>The best way to understand the future of blockchain is through classical economic
+            theory.</strong>
+          </blockquote>
+
+          <p>Not through white papers. Not through Twitter. Not through crypto influencers.</p>
+
+          <p>
+            But through textbooks that had already been written before the founders of this industry
+            were born.
+          </p>
+
+          <p>
+            This does not diminish the innovation. Quite the opposite: it places it in a context in
+            which we can understand it seriously.
+          </p>
+
+          <p>
+            And when capital, risk, and regulation are involved, <strong>seriously</strong> is the
+            only thing that matters.
+          </p>
+
+          <p>
+            <em>Marina Muchakova is a PhD candidate in economics at the University of National and
+            World Economy, a tax consultant, and a lawyer. She writes about the intersections between
+            traditional economics, the regulatory framework, and crypto infrastructure. This article
+            is based on a broader academic paper written for the Economics doctoral program at UNWE.</em>
+          </p>
+
+          <p>
+            <em>If this topic is of interest to you, subscribe for new publications or contact me for
+            consulting on regulatory and tax questions related to crypto assets.</em>
+          </p>
+        </div>
+
+        <hr>
+        <div class="post-share">
+          <p class="share-label" data-key="share_label">Сподели</p>
+          <div class="share-buttons">
+
+            <button class="share-btn" id="shareNative" style="display:none;">
+              📤 <span data-key="share_native">Сподели</span>
+            </button>
+
+            <a href="#" class="share-btn" id="shareTwitter" target="_blank" rel="noopener">
+              𝕏 Twitter
+            </a>
+
+            <a href="#" class="share-btn" id="shareFacebook" target="_blank" rel="noopener">
+              f Facebook
+            </a>
+
+            <a href="#" class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener">
+              in LinkedIn
+            </a>
+
+            <button class="share-btn" id="shareCopy" data-key="share_copy">
+              🔗 Копирай линк
+            </button>
+
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
