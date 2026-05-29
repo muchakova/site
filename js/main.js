@@ -48,6 +48,10 @@ const translations = {
     // Blog
     blog_title:      'Блог',
     blog_see_all:    'Всички статии →',
+    blog_post_8_date:    '29 май 2026',
+    blog_post_8_tag:     'ДДС',
+    blog_post_8_title:   'Кога сделките с ценни книжа СА икономическа дейност?',
+    blog_post_8_excerpt: 'Анализ на практиката на Съда на ЕС относно сделките с ценни книжа като икономическа дейност и приложението й в България.',
     blog_post_7_date:    '28 май 2026',
     blog_post_7_tag:     'MiCA',
     blog_post_7_title:   'Затрудненията пред CASP-овете при MiCA лиценз пред КФН',
@@ -90,6 +94,7 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
+    blog_page_post_8_title: 'Кога сделките с ценни книжа СА икономическа дейност?',
     blog_page_post_7_title: 'Затрудненията пред CASP-овете при MiCA лиценз пред КФН',
     blog_page_post_6_title: 'Какво не пише в white paper-ите',
     blog_page_post_5_title: 'Какво е „субстанция“ на една компания и защо това е важно?',
@@ -108,6 +113,12 @@ const translations = {
     cryptoeco_title:     'Какво не пише в white paper-ите',
     cryptoeco_date:      '28 май 2026',
     cryptoeco_read_time: '14 мин четене',
+
+    // Post: Securities and VAT
+    securities_vat_tag:       'ДДС',
+    securities_vat_title:     'Кога сделките с ценни книжа СА икономическа дейност?',
+    securities_vat_date:      '29 май 2026',
+    securities_vat_read_time: '10 мин четене',
 
     // Post: Substance
     substance_tag:       'Данъчно право',
@@ -190,6 +201,10 @@ const translations = {
     // Blog
     blog_title:      'Blog',
     blog_see_all:    'All articles →',
+    blog_post_8_date:    'May 29, 2026',
+    blog_post_8_tag:     'VAT',
+    blog_post_8_title:   'When Are Securities Transactions an Economic Activity?',
+    blog_post_8_excerpt: 'An analysis of CJEU case law on securities transactions as an economic activity and its application in Bulgaria.',
     blog_post_7_date:    'May 28, 2026',
     blog_post_7_tag:     'MiCA',
     blog_post_7_title:   'CASP Challenges in Bulgaria During MiCA Licensing Before the FSC',
@@ -232,6 +247,7 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
+    blog_page_post_8_title: 'When Are Securities Transactions an Economic Activity?',
     blog_page_post_7_title: 'CASP Challenges in Bulgaria During MiCA Licensing Before the FSC',
     blog_page_post_6_title: 'What White Papers Do Not Say',
     blog_page_post_5_title: 'What Is Company Substance and Why Does It Matter?',
@@ -250,6 +266,12 @@ const translations = {
     cryptoeco_title:     'What White Papers Do Not Say',
     cryptoeco_date:      'May 28, 2026',
     cryptoeco_read_time: '14 min read',
+
+    // Post: Securities and VAT
+    securities_vat_tag:       'VAT',
+    securities_vat_title:     'When Are Securities Transactions an Economic Activity?',
+    securities_vat_date:      'May 29, 2026',
+    securities_vat_read_time: '10 min read',
 
     // Post: Substance
     substance_tag:       'Tax Law',

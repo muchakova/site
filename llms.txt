@@ -25,6 +25,12 @@ She works across three main projects:
 
 ## Blog Articles
 
+### Кога сделките с ценни книжа СА икономическа дейност? / When Are Securities Transactions an Economic Activity?
+- URL: https://muchakova.com/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html
+- Date: 2026-05-29
+- Topics: VAT, securities transactions, economic activity, CJEU case law, Polysar, Wellcome Trust, AB SKF, Régie Dauphinoise, Bulgarian VAT Act, VAT registration threshold
+- Languages: BG + EN
+
 ### Затрудненията пред CASP-овете при MiCA лиценз пред КФН / CASP Challenges in Bulgaria During MiCA Licensing Before the FSC
 - URL: https://muchakova.com/blog/zatrudnenia-casp-mica-licenz-kfn.html
 - Date: 2026-05-28
