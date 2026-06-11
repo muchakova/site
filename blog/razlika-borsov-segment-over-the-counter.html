@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Практическо разграничение между борсово изпълнение и over-the-counter сделки, включително fractional shares, MiFID II / MiFIR и off-exchange изпълнение." />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html" />
+
+  <title>Разлика между търговия на борсов сегмент и over-the-counter — Марина Мучакова</title>
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html" />
+  <meta property="og:title" content="Разлика между търговия на борсов сегмент и over-the-counter — Марина Мучакова" />
+  <meta property="og:description" content="Какво означава OTC, как се различава от борсовото търгуване и защо fractional shares често изискват по-внимателен прочит на trade confirmation." />
+  <meta property="og:image" content="https://muchakova.com/images/IMG_0725.JPG" />
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:alt" content="Разлика между борсово и OTC изпълнение" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+  <meta property="article:author" content="Марина Мучакова" />
+  <meta property="article:published_time" content="2026-06-11" />
+  <meta property="article:tag" content="Инвестиции" />
+  <meta property="article:tag" content="OTC" />
+  <meta property="article:tag" content="MiFID II" />
+  <meta property="article:tag" content="MiFIR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="Разлика между търговия на борсов сегмент и over-the-counter" />
+  <meta name="twitter:description" content="Какво означава OTC, как се различава от борсовото търгуване и защо fractional shares трябва да се четат внимателно." />
+  <meta name="twitter:image" content="https://muchakova.com/images/IMG_0725.JPG" />
+  <meta name="twitter:image:alt" content="Разлика между борсово и OTC изпълнение" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Разлика между търговия на борсов сегмент и over-the-counter",
+    "alternativeHeadline": "The Difference Between Exchange Trading and Over-the-Counter Trading",
+    "description": "Практическо разграничение между борсово изпълнение и over-the-counter сделки, включително fractional shares, MiFID II / MiFIR и off-exchange изпълнение.",
+    "url": "https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html",
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "image": "https://muchakova.com/images/IMG_0725.JPG",
+    "inLanguage": ["bg", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "url": "https://muchakova.com/blog.html"
+    },
+    "keywords": ["OTC", "over-the-counter", "борсово търгуване", "fractional shares", "MiFID II", "MiFIR", "systematic internaliser", "ATS", "NASDAQ", "Xetra"]
+  }
+  </script>
+</head>
+<body
+  data-title-bg="Разлика между търговия на борсов сегмент и over-the-counter — Марина Мучакова"
+  data-title-en="The Difference Between Exchange Trading and Over-the-Counter Trading — Marina Muchakova"
+>
+
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact" data-key="nav_contact">Контакти</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="post-header">
+    <div class="container">
+      <a href="../blog.html" class="post-back" data-key="post_back">← Обратно към блога</a>
+
+      <div class="post-tag">
+        <span class="lang-content" data-lang="bg">Инвестиции</span>
+        <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
+      </div>
+
+      <h1 class="post-title">
+        <span class="lang-content" data-lang="bg">Разлика между търговия на борсов сегмент и over-the-counter</span>
+        <span class="lang-content" data-lang="en" style="display:none;">The Difference Between Exchange Trading and Over-the-Counter Trading</span>
+      </h1>
+
+      <div class="post-meta">
+        <div class="post-author">
+          <img src="../images/profile_3.jpg" alt="Марина Мучакова" class="post-author-img" />
+          <span class="post-author-name" data-key="full_name">Марина Мучакова</span>
+        </div>
+        <span class="post-separator">·</span>
+        <time datetime="2026-06-11">
+          <span class="lang-content" data-lang="bg">11 юни 2026</span>
+          <span class="lang-content" data-lang="en" style="display:none;">June 11, 2026</span>
+        </time>
+        <span class="post-separator">·</span>
+        <span>
+          <span class="lang-content" data-lang="bg">8 мин четене</span>
+          <span class="lang-content" data-lang="en" style="display:none;">8 min read</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="post-body">
+    <div class="container">
+      <article class="post-content">
+
+        <div class="lang-content" data-lang="bg">
+          <p>
+            Заформи се интересен спор под клипа ми на тема „Revolut регулиран пазар ли е?“.
+            Темата е важна за данъците ни, затова според мен повече информация тук е полезна.
+            Осведомеността и образованието винаги са предимство.
+          </p>
+
+          <figure class="post-cover">
+            <img
+              src="../images/IMG_0725.JPG"
+              alt="Разлика между борсово и OTC изпълнение"
+              loading="eager"
+              width="1536"
+              height="1024"
+            />
+          </figure>
+
+          <h2>Какво значи OTC продажба на акции?</h2>
+
+          <p>
+            OTC идва от <em>over-the-counter</em>. Най-просто казано, това означава, че сделката
+            не минава през централната борсова „витрина“, където всички виждат поръчките купува/продава
+            в обща книга с поръчки.
+          </p>
+
+          <p>
+            Вместо това сделката се изпълнява извън борсата: например директно срещу брокер,
+            маркет мейкър, систематичен участник или друг професионален контрагент.
+          </p>
+
+          <blockquote>
+            OTC не значи автоматично „нелегално“, „сиво“ или „нерегулирано“. Значи „извън борсовата книга“.
+          </blockquote>
+
+          <p>
+            Възможно е изпълнението да е напълно регулирано, с правила за най-добро изпълнение,
+            отчетност и публикуване на информация за сделката. Затова е важно да се гледа не само
+            какъв е инструментът, а и как точно е изпълнена поръчката.
+          </p>
+
+          <h2>Как се различава от борсовото търгуване?</h2>
+
+          <p>
+            При борсовото търгуване имаме организиран пазар: например NASDAQ, NYSE, Xetra,
+            Euronext, Българска фондова борса и други. Има централизирана система, книга с поръчки,
+            правила за достъп, правила за съпоставяне на поръчките и публична пазарна цена.
+          </p>
+
+          <p>
+            При OTC сделка обикновено няма такава централна книга с поръчки. Клиентът подава
+            поръчка към посредник, а посредникът може да я изпълни срещу маркет мейкър, през
+            систематичен участник, през алтернативна система, вътрешно срещу собствена позиция
+            или чрез агрегиране с други клиентски поръчки.
+          </p>
+
+          <h2>Може ли листната акция да се купи или продаде OTC?</h2>
+
+          <p>
+            Да, може, но зависи от инструмента, юрисдикцията, статута на посредника и приложимите
+            правила. Тук има една важна разлика.
+          </p>
+
+          <ol>
+            <li>
+              <strong>OTC акция или OTC security.</strong> Самият инструмент не е листнат на голяма
+              национална борса и се търгува извън нея.
+            </li>
+            <li>
+              <strong>OTC изпълнение или off-exchange execution.</strong> Инструментът може да е
+              листнат на борса, но конкретната клиентска сделка да бъде изпълнена извън борсовата
+              книга: например чрез ATS, маркет мейкър, systematic internaliser или друг off-exchange
+              механизъм.
+            </li>
+          </ol>
+
+          <p>
+            Например акцията може да е листната на NASDAQ, но конкретната клиентска поръчка да бъде
+            изпълнена от маркет мейкър или от брокер като принципал, а не непременно директно в
+            борсовата книга на NASDAQ.
+          </p>
+
+          <h2>За ЕС: какво казват MiFID II и MiFIR?</h2>
+
+          <p>
+            В ЕС „място на търговия“ по MiFID II включва регулиран пазар, MTF и OTF. За акции
+            MiFIR е още по-конкретен: при акции с ЕИП ISIN, които се търгуват на място на търговия,
+            инвестиционните посредници по принцип трябва да изпълняват сделките на регулиран пазар,
+            MTF, systematic internaliser или еквивалентно място в трета държава, освен при изрично
+            предвидени изключения.
+          </p>
+
+          <p>
+            Тоест в Европа не е просто „правим си OTC както решим“. Systematic internaliser не е
+            борса, но е допустим канал по MiFIR за изпълнение на определени сделки с акции.
+            MiFID II го дефинира като инвестиционен посредник, който организирано, често и систематично
+            търгува за собствена сметка, изпълнявайки клиентски поръчки извън regulated market,
+            MTF или OTF.
+          </p>
+
+          <p>
+            Xetra е класически пример за прозрачно борсово/организирано изпълнение: има книга с
+            поръчки и правила за формиране на цената, които са предварително определени и публични.
+          </p>
+
+          <h2>САЩ: защо листната акция може да мине извън борса?</h2>
+
+          <p>
+            В САЩ фактът, че META е листната на NASDAQ, не означава, че всяка клиентска поръчка
+            непременно влиза директно в NASDAQ order book. Листнати ценни книжа могат да имат
+            off-exchange изпълнение, включително през ATS и други off-exchange venues.
+          </p>
+
+          <p>
+            FINRA публикува OTC статистика за сделки, докладвани от ATS-и и фирми членове, включително
+            за OTC активност извън ATS. Затова „акцията е листната“ и „моята конкретна поръчка е
+            изпълнена на борсата“ не са едно и също твърдение.
+          </p>
+
+          <h2>Пример: купувам 8.456 fractional shares на META</h2>
+
+          <p>
+            Най-вероятно не цялата сделка минава като една нормална борсова сделка за 8.456 акции,
+            защото борсите по принцип не търгуват акции в дробни количества под една акция.
+          </p>
+
+          <p>Обичайният модел е следният:</p>
+
+          <ul>
+            <li>
+              цялата част от поръчката, например 8 акции, може да бъде изпълнена на борса, срещу
+              маркет мейкър, през ATS или друг venue според routing политиката на брокера;
+            </li>
+            <li>
+              дробната част, например 0.456 акция, най-често се урежда вътрешно: брокерът може да
+              действа като насрещна страна, да агрегира дробни поръчки на много клиенти или да държи
+              цяла акция и да разпределя икономически права върху части от нея.
+            </li>
+          </ul>
+
+          <p>
+            Затова при fractional shares клиентът често реално има икономическа експозиция към
+            дробна част от акция, но тази дробна част може да не е прехвърляема към друг брокер и
+            може да трябва да бъде продадена при трансфер на портфейла.
+          </p>
+
+          <blockquote>
+            Когато купуваш през приложение „8.456 акции META“, не трябва автоматично да си представяш,
+            че 8.456 акции са влезли като една поръчка в NASDAQ order book.
+          </blockquote>
+
+          <h2>Какво трябва да се провери?</h2>
+
+          <p>
+            Преди да се твърди данъчно, счетоводно или правно какво точно е купено, трябва да се
+            видят документите и условията на конкретния посредник.
+          </p>
+
+          <ul>
+            <li>trade confirmation или contract note;</li>
+            <li>execution venue;</li>
+            <li>capacity на брокера: agent, principal или riskless principal;</li>
+            <li>условията за fractional shares;</li>
+            <li>дали клиентът има пряка собственост, договорно/икономическо право срещу брокера, omnibus holding или вътрешно разпределена част от цяла акция.</li>
+          </ul>
+
+          <p>
+            Този детайл има значение при прехвърляне към друг брокер, корпоративни действия, гласуване,
+            дивиденти и данъчно документиране.
+          </p>
+
+          <h2>По-точният израз</h2>
+
+          <p>
+            За клиентски, счетоводни или данъчни цели не бих писала автоматично „купени са акции на
+            NASDAQ“. По-точно е:
+          </p>
+
+          <blockquote>
+            Клиентът е придобил експозиция/позиция в META чрез инвестиционен посредник; конкретното
+            място и начин на изпълнение следва да се установят от trade confirmation, contract note,
+            execution venue report и условията за fractional shares на посредника.
+          </blockquote>
+
+          <p>
+            Настоящата публикация има информационен характер и не представлява правна, данъчна или
+            инвестиционна консултация.
+          </p>
+
+          <h2>Източници и полезни препратки</h2>
+
+          <ul>
+            <li><a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/over-counter-otc-securities" target="_blank" rel="noopener">SEC Investor.gov: Over-The-Counter (OTC) Securities</a></li>
+            <li><a href="https://www.finra.org/filing-reporting/otc-transparency" target="_blank" rel="noopener">FINRA: OTC (ATS &amp; Non-ATS) Transparency</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/BG/TXT/?uri=CELEX%3A32014R0600" target="_blank" rel="noopener">Регламент (ЕС) No 600/2014 (MiFIR)</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/BG/TXT/?uri=CELEX%3A32014L0065" target="_blank" rel="noopener">Директива 2014/65/ЕС (MiFID II)</a></li>
+          </ul>
+        </div>
+
+        <div class="lang-content" data-lang="en" style="display:none;">
+          <p>
+            An interesting discussion formed under my video on whether Revolut is a regulated market.
+            The topic matters for tax treatment, so I think more information is useful here.
+            Awareness and education are always an advantage.
+          </p>
+
+          <figure class="post-cover">
+            <img
+              src="../images/IMG_0725.JPG"
+              alt="The difference between exchange and OTC execution"
+              loading="eager"
+              width="1536"
+              height="1024"
+            />
+          </figure>
+
+          <h2>What does an OTC sale of shares mean?</h2>
+
+          <p>
+            OTC stands for <em>over-the-counter</em>. In simple terms, it means that the transaction
+            does not pass through the central exchange "shop window", where everyone can see buy and
+            sell orders in a common order book.
+          </p>
+
+          <p>
+            Instead, the transaction is executed off exchange: for example directly against a broker,
+            a market maker, a systematic internaliser, or another professional counterparty.
+          </p>
+
+          <blockquote>
+            OTC does not automatically mean "illegal", "grey", or "unregulated". It means "outside the exchange order book".
+          </blockquote>
+
+          <p>
+            The execution can still be fully regulated, with best execution rules, reporting obligations,
+            and publication of trade information. That is why it is important to look not only at the
+            instrument, but also at how the order was actually executed.
+          </p>
+
+          <h2>How is it different from exchange trading?</h2>
+
+          <p>
+            In exchange trading, there is an organised market: for example NASDAQ, NYSE, Xetra,
+            Euronext, the Bulgarian Stock Exchange, and others. There is a central system, an order
+            book, access rules, order-matching rules, and a publicly visible market price.
+          </p>
+
+          <p>
+            In an OTC transaction, there is usually no such central order book. The client sends an
+            order to an intermediary, and the intermediary may execute it against a market maker, via
+            a systematic internaliser, through an alternative system, internally against its own
+            position, or by aggregating it with other client orders.
+          </p>
+
+          <h2>Can a listed share be bought or sold OTC?</h2>
+
+          <p>
+            Yes, it can, but this depends on the instrument, the jurisdiction, the intermediary's
+            status, and the applicable rules. There is one important distinction here.
+          </p>
+
+          <ol>
+            <li>
+              <strong>OTC stock or OTC security.</strong> The instrument itself is not listed on a
+              major national exchange and is traded outside one.
+            </li>
+            <li>
+              <strong>OTC execution or off-exchange execution.</strong> The instrument may be listed
+              on an exchange, but the specific client trade may be executed outside the exchange order
+              book: for example through an ATS, a market maker, a systematic internaliser, or another
+              off-exchange mechanism.
+            </li>
+          </ol>
+
+          <p>
+            For example, a share may be listed on NASDAQ, while the specific client order is executed
+            by a market maker or by the broker acting as principal, rather than necessarily entering
+            NASDAQ's order book directly.
+          </p>
+
+          <h2>For the EU: what do MiFID II and MiFIR say?</h2>
+
+          <p>
+            In the EU, a "trading venue" under MiFID II includes a regulated market, an MTF, and an
+            OTF. For shares, MiFIR is more specific: for shares with an EEA ISIN that are traded on a
+            trading venue, investment firms must generally ensure that trades are executed on a
+            regulated market, an MTF, a systematic internaliser, or an equivalent third-country venue,
+            except where an express exception applies.
+          </p>
+
+          <p>
+            In other words, Europe is not a place where one simply "does OTC however one decides".
+            A systematic internaliser is not an exchange, but it is an allowed MiFIR channel for
+            executing certain share trades. MiFID II defines it as an investment firm which, on an
+            organised, frequent, and systematic basis, deals on own account when executing client
+            orders outside a regulated market, MTF, or OTF.
+          </p>
+
+          <p>
+            Xetra is a classic example of transparent exchange or organised execution: it has an
+            order book and price-formation rules that are predetermined and public.
+          </p>
+
+          <h2>In the US: why can a listed share trade off exchange?</h2>
+
+          <p>
+            In the US, the fact that META is listed on NASDAQ does not mean that every client order
+            necessarily enters the NASDAQ order book directly. Listed securities may have off-exchange
+            execution, including through ATSs and other off-exchange venues.
+          </p>
+
+          <p>
+            FINRA publishes OTC statistics for trades reported by ATSs and member firms, including
+            OTC activity outside ATSs. So "the share is listed" and "my specific order was executed
+            on the exchange" are not the same statement.
+          </p>
+
+          <h2>Example: buying 8.456 fractional shares of META</h2>
+
+          <p>
+            Most likely, the entire transaction does not pass as one ordinary exchange trade for
+            8.456 shares, because exchanges generally do not trade shares in quantities below one
+            whole share.
+          </p>
+
+          <p>The usual model looks like this:</p>
+
+          <ul>
+            <li>
+              the whole-share portion of the order, for example 8 shares, may be executed on an
+              exchange, against a market maker, through an ATS, or another venue depending on the
+              broker's routing policy;
+            </li>
+            <li>
+              the fractional component, for example 0.456 of a share, is often handled internally:
+              the broker may act as counterparty, aggregate fractional orders from many clients, or
+              hold a whole share and allocate economic rights over parts of it.
+            </li>
+          </ul>
+
+          <p>
+            That is why, with fractional shares, the client often has economic exposure to a fraction
+            of a share, but that fractional component may not be transferable to another broker and
+            may have to be sold when the portfolio is transferred.
+          </p>
+
+          <blockquote>
+            When you buy "8.456 META shares" through an app, you should not automatically imagine
+            that 8.456 shares entered the NASDAQ order book as one single order.
+          </blockquote>
+
+          <h2>What should be checked?</h2>
+
+          <p>
+            Before making a tax, accounting, or legal statement about what exactly was purchased,
+            the documents and the specific intermediary's terms must be reviewed.
+          </p>
+
+          <ul>
+            <li>the trade confirmation or contract note;</li>
+            <li>the execution venue;</li>
+            <li>the broker's capacity: agent, principal, or riskless principal;</li>
+            <li>the fractional share terms;</li>
+            <li>whether the client has direct ownership, a contractual/economic right against the broker, an omnibus holding, or an internally allocated part of a whole share.</li>
+          </ul>
+
+          <p>
+            This detail matters for transfers to another broker, corporate actions, voting, dividends,
+            and tax documentation.
+          </p>
+
+          <h2>The more precise wording</h2>
+
+          <p>
+            For client, accounting, or tax purposes, I would not automatically write "shares were
+            purchased on NASDAQ". A more precise formulation is:
+          </p>
+
+          <blockquote>
+            The client acquired exposure/a position in META through an investment intermediary; the
+            specific place and method of execution should be established from the trade confirmation,
+            contract note, execution venue report, and the intermediary's fractional share terms.
+          </blockquote>
+
+          <p>
+            This publication is for informational purposes only and does not constitute legal, tax,
+            or investment advice.
+          </p>
+
+          <h2>Sources and useful references</h2>
+
+          <ul>
+            <li><a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/over-counter-otc-securities" target="_blank" rel="noopener">SEC Investor.gov: Over-The-Counter (OTC) Securities</a></li>
+            <li><a href="https://www.finra.org/filing-reporting/otc-transparency" target="_blank" rel="noopener">FINRA: OTC (ATS &amp; Non-ATS) Transparency</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014R0600" target="_blank" rel="noopener">Regulation (EU) No 600/2014 (MiFIR)</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0065" target="_blank" rel="noopener">Directive 2014/65/EU (MiFID II)</a></li>
+          </ul>
+        </div>
+
+        <hr>
+        <div class="post-share">
+          <p class="share-label" data-key="share_label">Сподели</p>
+          <div class="share-buttons">
+
+            <button class="share-btn" id="shareNative" style="display:none;">
+              <span data-key="share_native">Сподели</span>
+            </button>
+
+            <a href="#" class="share-btn" id="shareTwitter" target="_blank" rel="noopener">
+              𝕏 Twitter
+            </a>
+
+            <a href="#" class="share-btn" id="shareFacebook" target="_blank" rel="noopener">
+              f Facebook
+            </a>
+
+            <a href="#" class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener">
+              in LinkedIn
+            </a>
+
+            <button class="share-btn" id="shareCopy" data-key="share_copy">
+              Копирай линк
+            </button>
+
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -25,6 +25,12 @@ She works across three main projects:
 
 ## Blog Articles
 
+### Разлика между търговия на борсов сегмент и over-the-counter / The Difference Between Exchange Trading and Over-the-Counter Trading
+- URL: https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html
+- Date: 2026-06-11
+- Topics: OTC trading, exchange execution, off-exchange execution, fractional shares, MiFID II, MiFIR, systematic internaliser, ATS, execution venue, trade confirmation
+- Languages: BG + EN
+
 ### Кога сделките с ценни книжа СА икономическа дейност? / When Are Securities Transactions an Economic Activity?
 - URL: https://muchakova.com/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html
 - Date: 2026-05-29
