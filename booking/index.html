@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Запазете си час за консултация с Марина Мучакова — данъчен консултант. Изберете удобен ден и час директно в онлайн календара." />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/booking/" />
+
+  <title>Запази час — Марина Мучакова</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muchakova.com/booking/" />
+  <meta property="og:title" content="Запази час — Марина Мучакова" />
+  <meta property="og:description" content="Запазете си час за консултация с Марина Мучакова — данъчен консултант. Изберете удобен ден и час директно в онлайн календара." />
+  <meta property="og:image" content="https://muchakova.com/images/profile_1.jpg" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-title-bg="Запази час — Марина Мучакова" data-title-en="Book a Meeting — Marina Muchakova">
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Главна навигация">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about"    data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html"           data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact"  data-key="nav_contact">Контакти</a></li>
+        <li><a href="./"                     data-key="nav_booking">Запази час</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-hero section-soft">
+    <div class="container">
+      <h1 class="section-title" data-key="booking_page_title">Запази час</h1>
+      <p class="page-hero-subtitle" data-key="booking_page_subtitle">Изберете удобен ден и час за консултация</p>
+    </div>
+  </header>
+
+  <!-- BOOKING CALENDAR (Cal.eu embed) -->
+  <main class="booking-section">
+    <div class="container">
+
+      <div id="cal-booking" class="booking-embed"></div>
+
+      <p class="booking-fallback">
+        <span data-key="booking_fallback">Ако календарът не се зарежда, отворете го директно:</span>
+        <a href="https://cal.eu/marina-muchakova-dxmkoe" target="_blank" rel="noopener" data-key="booking_open_direct">cal.eu/marina-muchakova-dxmkoe →</a>
+      </p>
+
+      <noscript>
+        <p class="booking-fallback">
+          <a href="https://cal.eu/marina-muchakova-dxmkoe" target="_blank" rel="noopener">https://cal.eu/marina-muchakova-dxmkoe</a>
+        </p>
+      </noscript>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <!-- Cal.eu inline embed -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+
+    Cal("init", { origin: "https://www.cal.eu" });
+
+    Cal("inline", {
+      elementOrSelector: "#cal-booking",
+      calLink: "marina-muchakova-dxmkoe",
+      config: { layout: "month_view" }
+    });
+
+    Cal("ui", {
+      styles: { branding: { brandColor: "#0F766E" } },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+  </script>
+</body>
+</html>

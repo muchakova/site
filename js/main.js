@@ -14,6 +14,7 @@ const translations = {
     nav_projects:   'Проекти',
     nav_blog:       'Блог',
     nav_contact:    'Контакти',
+    nav_booking:    'Запази час',
     lang_btn:       'EN',
 
     // Hero
@@ -87,6 +88,14 @@ const translations = {
     contact_group_direct:   'Директен контакт',
     contact_group_messaging:'Съобщения',
     contact_group_social:   'Социални мрежи',
+    contact_group_booking:  'Онлайн консултация',
+    contact_booking_link:   'Запази час за консултация',
+
+    // Booking page
+    booking_page_title:    'Запази час',
+    booking_page_subtitle: 'Изберете удобен ден и час за консултация',
+    booking_fallback:      'Ако календарът не се зарежда, отворете го директно:',
+    booking_open_direct:   'cal.eu/marina-muchakova-dxmkoe →',
 
     // Footer
     footer_text: '© 2026 Марина Мучакова. Всички права запазени.',
@@ -167,6 +176,7 @@ const translations = {
     nav_projects:   'Projects',
     nav_blog:       'Blog',
     nav_contact:    'Contact',
+    nav_booking:    'Book a Meeting',
     lang_btn:       'BG',
 
     // Hero
@@ -240,6 +250,14 @@ const translations = {
     contact_group_direct:   'Direct contact',
     contact_group_messaging:'Messaging',
     contact_group_social:   'Social media',
+    contact_group_booking:  'Online consultation',
+    contact_booking_link:   'Book a consultation',
+
+    // Booking page
+    booking_page_title:    'Book a Meeting',
+    booking_page_subtitle: 'Pick a convenient day and time for a consultation',
+    booking_fallback:      "If the calendar doesn't load, open it directly:",
+    booking_open_direct:   'cal.eu/marina-muchakova-dxmkoe →',
 
     // Footer
     footer_text: '© 2026 Marina Muchakova. All rights reserved.',

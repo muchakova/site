@@ -21,6 +21,7 @@ She works across three main projects:
 
 - Homepage: https://muchakova.com/
 - Blog: https://muchakova.com/blog.html
+- Book a consultation: https://muchakova.com/booking/ (online booking via Cal.eu: https://cal.eu/marina-muchakova-dxmkoe)
 - Language: Bulgarian (primary) + English (toggle available on every page)
 
 ## Blog Articles
@@ -63,6 +64,7 @@ She works across three main projects:
 
 ## Contact
 
+- Book a consultation: https://muchakova.com/booking/
 - Email: office@vesta-bg.eu
 - Phone / Viber / WhatsApp / Telegram: +359 887 460 907
 - LinkedIn: https://www.linkedin.com/in/vestaconsult/
