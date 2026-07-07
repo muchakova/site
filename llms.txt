@@ -21,7 +21,7 @@ She works across three main projects:
 
 - Homepage: https://muchakova.com/
 - Blog: https://muchakova.com/blog.html
-- Book a consultation: https://muchakova.com/booking/ (online booking via Cal.eu: https://cal.eu/marina-muchakova-dxmkoe)
+- Book a consultation: https://muchakova.com/booking/
 - Language: Bulgarian (primary) + English (toggle available on every page)
 
 ## Blog Articles

@@ -94,8 +94,6 @@ const translations = {
     // Booking page
     booking_page_title:    'Запази час',
     booking_page_subtitle: 'Изберете удобен ден и час за консултация',
-    booking_fallback:      'Ако календарът не се зарежда, отворете го директно:',
-    booking_open_direct:   'cal.eu/marina-muchakova-dxmkoe →',
 
     // Footer
     footer_text: '© 2026 Марина Мучакова. Всички права запазени.',
@@ -256,8 +254,6 @@ const translations = {
     // Booking page
     booking_page_title:    'Book a Meeting',
     booking_page_subtitle: 'Pick a convenient day and time for a consultation',
-    booking_fallback:      "If the calendar doesn't load, open it directly:",
-    booking_open_direct:   'cal.eu/marina-muchakova-dxmkoe →',
 
     // Footer
     footer_text: '© 2026 Marina Muchakova. All rights reserved.',
