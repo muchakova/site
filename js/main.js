@@ -93,7 +93,7 @@ const translations = {
 
     // Booking page
     booking_page_title:    'Запази час',
-    booking_page_subtitle: 'Резервирайте лична консултация с мен, Марина Мучакова. Всяка среща провеждам лично аз — изберете удобен ден и час директно в календара.',
+    booking_page_subtitle: 'Изберете удобен ден и час за лична консултация с Марина Мучакова.',
 
     // Footer
     footer_text: '© 2026 Марина Мучакова. Всички права запазени.',
@@ -253,7 +253,7 @@ const translations = {
 
     // Booking page
     booking_page_title:    'Book a Meeting',
-    booking_page_subtitle: 'Book a personal consultation with me, Marina Muchakova. Every meeting is held personally by me — pick a convenient day and time directly in the calendar.',
+    booking_page_subtitle: 'Pick a convenient day and time for a personal consultation with Marina Muchakova.',
 
     // Footer
     footer_text: '© 2026 Marina Muchakova. All rights reserved.',
