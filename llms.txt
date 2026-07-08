@@ -26,6 +26,12 @@ She works across three main projects:
 
 ## Blog Articles
 
+### MetaMask CL Card вече преминава под MiCA / MetaMask CL Card Now Moves Under MiCA
+- URL: https://muchakova.com/blog/metamask-cl-card-mica-moonpay.html
+- Date: 2026-07-08
+- Topics: MetaMask CL Card, MoonPay Europe, MiCA, CASP, AFM, AML, Travel Rule, KYC, DORA, DAC8, CARF, automatic exchange of information, NRA Bulgaria, crypto taxation
+- Languages: BG + EN
+
 ### Разлика между търговия на борсов сегмент и over-the-counter / The Difference Between Exchange Trading and Over-the-Counter Trading
 - URL: https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html
 - Date: 2026-06-11
