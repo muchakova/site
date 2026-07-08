@@ -171,10 +171,36 @@
        ========================================= -->
   <main>
     <div class="container">
+
+      <!-- =========================================
+           BLOG TOOLBAR — сортиране и филтри
+           Категории на статия се задават в data-cats
+           на картата (разделени с интервал):
+           taxes crypto invest economy business institutions
+           data-date = дата на публикуване (YYYY-MM-DD)
+           data-pop  = ранг за "Популярни" (1 = най-четена)
+           ========================================= -->
+      <div class="blog-toolbar" id="blogToolbar">
+        <div class="blog-filters" role="group" aria-label="Филтър по тема">
+          <button class="filter-chip active" data-cat="all"          data-key="filter_all">Всички</button>
+          <button class="filter-chip" data-cat="taxes"        data-key="filter_taxes">Данъци</button>
+          <button class="filter-chip" data-cat="crypto"       data-key="filter_crypto">Крипто и MiCA</button>
+          <button class="filter-chip" data-cat="invest"       data-key="filter_invest">Инвестиции</button>
+          <button class="filter-chip" data-cat="economy"      data-key="filter_economy">Икономика</button>
+          <button class="filter-chip" data-cat="business"     data-key="filter_business">Предприемачество и бизнес</button>
+          <button class="filter-chip" data-cat="institutions" data-key="filter_institutions">Какво знаят институциите</button>
+        </div>
+        <div class="blog-sort" role="group" aria-label="Подредба">
+          <button class="sort-btn active" data-sort="newest"  data-key="sort_newest">Най-нови</button>
+          <button class="sort-btn" data-sort="oldest"  data-key="sort_oldest">Най-стари</button>
+          <button class="sort-btn" data-sort="popular" data-key="sort_popular">Популярни</button>
+        </div>
+      </div>
+
       <div class="blog-list-grid">
 
         <!-- ── Статия 12 ──────────────────────────────── -->
-        <a href="blog/moite-5-stotinki-za-proektobyudzhet-2026.html" class="blog-card">
+        <a href="blog/moite-5-stotinki-za-proektobyudzhet-2026.html" class="blog-card" data-date="2026-07-08" data-pop="4" data-cats="economy business">
           <div class="blog-meta">
             <span class="blog-date">
               <span class="lang-content" data-lang="bg">8 юли 2026</span>
@@ -197,7 +223,7 @@
         </a>
 
         <!-- ── Статия 11 ──────────────────────────────── -->
-        <a href="blog/metamask-cl-card-mica-moonpay.html" class="blog-card">
+        <a href="blog/metamask-cl-card-mica-moonpay.html" class="blog-card" data-date="2026-07-08" data-pop="2" data-cats="crypto taxes institutions">
           <div class="blog-meta">
             <span class="blog-date">
               <span class="lang-content" data-lang="bg">8 юли 2026</span>
@@ -220,7 +246,7 @@
         </a>
 
         <!-- ── Статия 10 ──────────────────────────────── -->
-        <a href="blog/razlika-borsov-segment-over-the-counter.html" class="blog-card">
+        <a href="blog/razlika-borsov-segment-over-the-counter.html" class="blog-card" data-date="2026-06-11" data-pop="5" data-cats="invest taxes">
           <div class="blog-meta">
             <span class="blog-date">
               <span class="lang-content" data-lang="bg">11 юни 2026</span>
@@ -243,7 +269,7 @@
         </a>
 
         <!-- ── Статия 9 ──────────────────────────────── -->
-        <a href="blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html" class="blog-card">
+        <a href="blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html" class="blog-card" data-date="2026-05-29" data-pop="8" data-cats="taxes invest">
           <div class="blog-meta">
             <span class="blog-date" data-key="blog_post_8_date">29 май 2026</span>
             <span class="blog-tag" data-key="blog_post_8_tag">ДДС</span>
@@ -259,7 +285,7 @@
         </a>
 
         <!-- ── Статия 8 ──────────────────────────────── -->
-        <a href="blog/zatrudnenia-casp-mica-licenz-kfn.html" class="blog-card">
+        <a href="blog/zatrudnenia-casp-mica-licenz-kfn.html" class="blog-card" data-date="2026-05-28" data-pop="10" data-cats="crypto business">
           <div class="blog-meta">
             <span class="blog-date" data-key="blog_post_7_date">28 май 2026</span>
             <span class="blog-tag" data-key="blog_post_7_tag">MiCA</span>
@@ -275,7 +301,7 @@
         </a>
 
         <!-- ── Статия 7 ──────────────────────────────── -->
-        <a href="blog/kakvo-ne-pishe-v-white-paperite.html" class="blog-card">
+        <a href="blog/kakvo-ne-pishe-v-white-paperite.html" class="blog-card" data-date="2026-05-28" data-pop="11" data-cats="crypto economy">
           <div class="blog-meta">
             <span class="blog-date" data-key="blog_post_6_date">28 май 2026</span>
             <span class="blog-tag" data-key="blog_post_6_tag">Криптоикономика</span>
@@ -291,7 +317,7 @@
         </a>
 
         <!-- ── Статия 1 ──────────────────────────────── -->
-        <a href="blog/substancia-kompania-zashto-vazhno.html" class="blog-card">
+        <a href="blog/substancia-kompania-zashto-vazhno.html" class="blog-card" data-date="2026-03-04" data-pop="9" data-cats="taxes business">
           <div class="blog-meta">
             <span class="blog-date">4 март 2026</span>
             <span class="blog-tag">Данъчно право</span>
@@ -304,7 +330,7 @@
         </a>
 
         <!-- ── Статия 2 ──────────────────────────────── -->
-        <a href="blog/natrupvane-oborot-registraciya-dds-2026.html" class="blog-card">
+        <a href="blog/natrupvane-oborot-registraciya-dds-2026.html" class="blog-card" data-date="2026-03-04" data-pop="6" data-cats="taxes business">
           <div class="blog-meta">
             <span class="blog-date">4 март 2026</span>
             <span class="blog-tag">ДДС</span>
@@ -317,7 +343,7 @@
         </a>
 
         <!-- ── Статия 3 ──────────────────────────────── -->
-        <a href="blog/obobshtenie-promeni-zdds-2026.html" class="blog-card">
+        <a href="blog/obobshtenie-promeni-zdds-2026.html" class="blog-card" data-date="2026-03-04" data-pop="1" data-cats="taxes">
           <div class="blog-meta">
             <span class="blog-date">4 март 2026</span>
             <span class="blog-tag">ДДС</span>
@@ -330,7 +356,7 @@
         </a>
 
         <!-- ── Статия 4 ──────────────────────────────── -->
-        <a href="blog/dds-promeni-2026.html" class="blog-card">
+        <a href="blog/dds-promeni-2026.html" class="blog-card" data-date="2026-03-04" data-pop="7" data-cats="taxes business">
           <div class="blog-meta">
             <span class="blog-date">4 март 2026</span>
             <span class="blog-tag">ДДС</span>
@@ -343,7 +369,7 @@
         </a>
 
         <!-- ── Статия 5 ──────────────────────────────── -->
-        <a href="blog/dck-obligacii-danaci.html" class="blog-card">
+        <a href="blog/dck-obligacii-danaci.html" class="blog-card" data-date="2026-02-14" data-pop="3" data-cats="taxes invest">
           <div class="blog-meta">
             <span class="blog-date">14 февруари 2026</span>
             <span class="blog-tag">Данъци</span>
@@ -356,7 +382,7 @@
         </a>
 
         <!-- ── Статия 6 ──────────────────────────────── -->
-        <a href="blog/razmer-ima-znachenie.html" class="blog-card">
+        <a href="blog/razmer-ima-znachenie.html" class="blog-card" data-date="2026-02-28" data-pop="12" data-cats="business economy">
           <div class="blog-meta">
             <span class="blog-date">28 февруари 2026</span>
             <span class="blog-tag">Бизнес</span>

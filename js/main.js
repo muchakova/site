@@ -101,6 +101,16 @@ const translations = {
     // Blog page
     blog_page_title:    'Блог',
     blog_page_subtitle: 'Статии и обновления',
+    filter_all:          'Всички',
+    filter_taxes:        'Данъци',
+    filter_crypto:       'Крипто и MiCA',
+    filter_invest:       'Инвестиции',
+    filter_economy:      'Икономика',
+    filter_business:     'Предприемачество и бизнес',
+    filter_institutions: 'Какво знаят институциите',
+    sort_newest:         'Най-нови',
+    sort_oldest:         'Най-стари',
+    sort_popular:        'Популярни',
     blog_page_post_8_title: 'Кога сделките с ценни книжа СА икономическа дейност?',
     blog_page_post_7_title: 'Затрудненията пред CASP-овете при MiCA лиценз пред КФН',
     blog_page_post_6_title: 'Какво не пише в white paper-ите',
@@ -261,6 +271,16 @@ const translations = {
     // Blog page
     blog_page_title:    'Blog',
     blog_page_subtitle: 'Articles and updates',
+    filter_all:          'All',
+    filter_taxes:        'Taxes',
+    filter_crypto:       'Crypto & MiCA',
+    filter_invest:       'Investing',
+    filter_economy:      'Economy',
+    filter_business:     'Business & Entrepreneurship',
+    filter_institutions: 'What the Authorities Know',
+    sort_newest:         'Newest',
+    sort_oldest:         'Oldest',
+    sort_popular:        'Popular',
     blog_page_post_8_title: 'When Are Securities Transactions an Economic Activity?',
     blog_page_post_7_title: 'CASP Challenges in Bulgaria During MiCA Licensing Before the FSC',
     blog_page_post_6_title: 'What White Papers Do Not Say',
@@ -480,6 +500,56 @@ function initShare() {
   if (linkedinBtn) linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
 }
 
+// ============ BLOG SORT & FILTER (blog.html) ============
+function initBlogControls() {
+  const toolbar = document.getElementById('blogToolbar');
+  const grid    = document.querySelector('.blog-list-grid');
+  if (!toolbar || !grid) return;
+
+  // Original DOM order is the tie-breaker for equal dates/ranks
+  const cards = Array.from(grid.querySelectorAll('.blog-card'));
+
+  let activeCat  = 'all';
+  let activeSort = 'newest';
+
+  function apply() {
+    const sorted = [...cards].sort((a, b) => {
+      if (activeSort === 'oldest') {
+        return (a.dataset.date || '').localeCompare(b.dataset.date || '');
+      }
+      if (activeSort === 'popular') {
+        return (parseInt(a.dataset.pop, 10) || 999) - (parseInt(b.dataset.pop, 10) || 999);
+      }
+      // newest (default)
+      return (b.dataset.date || '').localeCompare(a.dataset.date || '');
+    });
+
+    sorted.forEach(card => {
+      const cats = (card.dataset.cats || '').split(/\s+/);
+      card.style.display = (activeCat === 'all' || cats.includes(activeCat)) ? '' : 'none';
+      grid.appendChild(card); // re-append in sorted order
+    });
+  }
+
+  toolbar.querySelectorAll('.filter-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCat = btn.dataset.cat;
+      toolbar.querySelectorAll('.filter-chip').forEach(b => b.classList.toggle('active', b === btn));
+      apply();
+    });
+  });
+
+  toolbar.querySelectorAll('.sort-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeSort = btn.dataset.sort;
+      toolbar.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b === btn));
+      apply();
+    });
+  });
+
+  apply();
+}
+
 // ============ INIT ============
 document.addEventListener('DOMContentLoaded', () => {
   // Language
@@ -493,4 +563,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMobileMenu();
   initShare();
+  initBlogControls();
 });
