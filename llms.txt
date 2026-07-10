@@ -26,6 +26,12 @@ She works across three main projects:
 
 ## Blog Articles
 
+### Наръчник: Как успешно да преминем AML проверка при крипто транзакции / A Guide to Successfully Passing an AML Check on Crypto Transactions
+- URL: https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html
+- Date: 2026-07-10
+- Topics: AML checks on crypto transactions, KYC, source of funds (SoF), source of wealth (SoW), MiCA Regulation (EU) 2023/1114, Travel Rule Regulation (EU) 2023/1113, Bulgarian Measures Against Money Laundering Act (ЗМИП), compliance, crypto exchanges, bank transfers, structuring, smurfing, blockchain explorers, document file preparation
+- Languages: BG + EN
+
 ### Данъчен наръчник за инвеститори в България / Tax Guide for Investors in Bulgaria
 - URL: https://muchakova.com/blog/danachen-narachnik-za-investitori.html
 - Date: 2026-07-08

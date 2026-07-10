@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Наръчник: как успешно да преминем AML проверка при крипто транзакции — как мислят AML анализаторите, разликата между произход на средствата и източник на богатството и как да подготвим досието си." />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html" />
+
+  <title>Наръчник: Как успешно да преминем AML проверка при крипто транзакции — Марина Мучакова</title>
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html" />
+  <meta property="og:title" content="Наръчник: Как успешно да преминем AML проверка при крипто транзакции" />
+  <meta property="og:description" content="Как мислят AML анализаторите, каква е разликата между произход на средствата и източник на богатството и как да подготвите досието си, така че проверката да премине бързо и безпроблемно." />
+  <meta property="og:image" content="https://muchakova.com/images/og-site.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Марина Мучакова — данъчен консултант" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+  <meta property="article:author" content="Марина Мучакова" />
+  <meta property="article:published_time" content="2026-07-10" />
+  <meta property="article:tag" content="AML" />
+  <meta property="article:tag" content="Крипто" />
+  <meta property="article:tag" content="Compliance" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="Наръчник: Как успешно да преминем AML проверка при крипто транзакции" />
+  <meta name="twitter:description" content="Как мислят AML анализаторите, каква е разликата между произход на средствата и източник на богатството и как да подготвите досието си за проверката." />
+  <meta name="twitter:image" content="https://muchakova.com/images/og-site.jpg" />
+  <meta name="twitter:image:alt" content="Марина Мучакова — данъчен консултант" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Наръчник: Как успешно да преминем AML проверка при крипто транзакции",
+    "alternativeHeadline": "A Guide to Successfully Passing an AML Check on Crypto Transactions",
+    "description": "Как мислят AML анализаторите, каква е разликата между произход на средствата и източник на богатството и как да подготвите досието си, така че проверката да премине бързо и безпроблемно.",
+    "url": "https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html",
+    "datePublished": "2026-07-10",
+    "dateModified": "2026-07-10",
+    "image": "https://muchakova.com/images/og-site.jpg",
+    "inLanguage": ["bg", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "url": "https://muchakova.com/blog.html"
+    },
+    "keywords": ["AML", "KYC", "произход на средствата", "източник на богатството", "Source of Funds", "Source of Wealth", "MiCA", "Travel Rule", "ЗМИП", "крипто борса", "compliance", "нормативно съответствие", "крипто транзакции", "банкова проверка", "structuring", "smurfing"]
+  }
+  </script>
+</head>
+<body
+  data-title-bg="Наръчник: Как успешно да преминем AML проверка при крипто транзакции — Марина Мучакова"
+  data-title-en="A Guide to Successfully Passing an AML Check on Crypto Transactions — Marina Muchakova"
+>
+
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact" data-key="nav_contact">Контакти</a></li>
+        <li><a href="../booking/" data-key="nav_booking">Запази час</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="post-header">
+    <div class="container">
+      <a href="../blog.html" class="post-back" data-key="post_back">← Обратно към блога</a>
+
+      <div class="post-tag">
+        <span class="lang-content" data-lang="bg">AML</span>
+        <span class="lang-content" data-lang="en" style="display:none;">AML</span>
+      </div>
+
+      <h1 class="post-title">
+        <span class="lang-content" data-lang="bg">Наръчник: Как успешно да преминем AML проверка при крипто транзакции</span>
+        <span class="lang-content" data-lang="en" style="display:none;">A Guide to Successfully Passing an AML Check on Crypto Transactions</span>
+      </h1>
+
+      <div class="post-meta">
+        <div class="post-author">
+          <img src="../images/profile_3.jpg" alt="Марина Мучакова" class="post-author-img" />
+          <span class="post-author-name" data-key="full_name">Марина Мучакова</span>
+        </div>
+        <span class="post-separator">·</span>
+        <time datetime="2026-07-10">
+          <span class="lang-content" data-lang="bg">10 юли 2026</span>
+          <span class="lang-content" data-lang="en" style="display:none;">July 10, 2026</span>
+        </time>
+        <span class="post-separator">·</span>
+        <span>
+          <span class="lang-content" data-lang="bg">7 мин четене</span>
+          <span class="lang-content" data-lang="en" style="display:none;">7 min read</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="post-body">
+    <div class="container">
+      <article class="post-content">
+
+        <div class="lang-content" data-lang="bg">
+          <p>
+            Ако днес се събудите в Европейския съюз и решите да си откриете акаунт в крипто
+            борса, или просто искате да продадете част от криптовалутата си и да преведете
+            парите към банковата си сметка, има голяма вероятност много скоро да получите имейл
+            от отдел „Нормативно съответствие“ (Compliance). В него ще ви помолят да изпратите
+            документи и ще ви зададат въпроси като:
+          </p>
+
+          <ul>
+            <li>Откъде са тези средства?</li>
+            <li>Как закупихте първото си крипто?</li>
+            <li>Какъв е произходът на богатството ви?</li>
+            <li>Защо тази сума е значително по-голяма от обичайните ви транзакции?</li>
+          </ul>
+
+          <p>
+            За много хора това изглежда като прекомерна бюрокрация. Всъщност това е нормалната
+            регулаторна среда. След приемането на Регламент (ЕС) 2023/1114 (MiCA), Регламент
+            (ЕС) 2023/1113 (Travel Rule) и действащото законодателство срещу изпирането на пари
+            (AMLD, ЗМИП), всички финансови институции имат законово задължение да познават
+            клиента си (KYC), да оценяват риска и при необходимост да изискват доказателства за
+            произхода на средствата.
+          </p>
+
+          <p>
+            Този наръчник обединява бюрократичната, логичната, правната и икономическата страна
+            на процеса, за да ви помогне да разберете как мислят AML анализаторите и как да
+            подготвите досието си така, че проверката да премине бързо и безпроблемно.
+          </p>
+
+          <h2>1. Как мисли AML анализаторът? Четворната логика на проверката</h2>
+
+          <p>
+            Всеки изискан документ има една единствена цел – да отговори на конкретен въпрос.
+            За всяка транзакция институцията се опитва да докаже четири взаимосвързани елемента:
+          </p>
+
+          <h3>Въпрос 1: Има ли законен икономически произход на парите?</h3>
+
+          <ul>
+            <li>
+              <strong>Икономическа логика:</strong> Никой не може да инвестира или похарчи
+              повече средства, отколкото реално е спечелил или законно придобил. Ако декларирате
+              годишен доход от 30 000 лв., а внезапно инвестирате 400 000 лв., възниква
+              въпросът: откъде идва разликата?
+            </li>
+            <li>
+              <strong>Правна рамка:</strong> ЗМИП и европейските AML директиви относно
+              комплексната проверка на клиента.
+            </li>
+            <li>
+              <strong>Какво се проверява:</strong> Съотношение доходи/активи, професия,
+              деклариран оборот и исторически приходи.
+            </li>
+            <li>
+              <strong>Доказателства:</strong> Трудови договори, данъчни декларации, договори за
+              продажба, дивиденти, наследства и др.
+            </li>
+          </ul>
+
+          <h3>Въпрос 2: Проследим ли е целият път на парите?</h3>
+
+          <ul>
+            <li>
+              <strong>Икономическа логика:</strong> Колкото по-малко „черни кутии“ има във
+              финансовия поток, толкова по-нисък е рискът. Институцията иска да проследи ясна
+              верига: Заплата → Банкова сметка → Крипто борса → Покупка → Продажба → Банкова
+              сметка.
+            </li>
+            <li>
+              <strong>Правна рамка:</strong> Регламент (ЕС) 2023/1113 (Travel Rule).
+            </li>
+            <li>
+              <strong>Какво се проверява:</strong> Липсващи преводи, неизвестни портфейли,
+              използване на миксери или трансфери към високорискови държави.
+            </li>
+            <li>
+              <strong>Доказателства:</strong> Банкови извлечения, CSV история от борси, блокчейн
+              експлоръри (blockchain explorer).
+            </li>
+          </ul>
+
+          <h3>Въпрос 3: Има ли икономическа логика самата операция?</h3>
+
+          <ul>
+            <li>
+              <strong>Икономическа логика:</strong> Проверява се дали поведението изглежда
+              нормално. Да продадеш имот и да инвестираш парите е логично. Но да получаваш
+              ежедневно по 1500 евро от стотици различни лица (напр. при P2P търговия) активира
+              червени флагове.
+            </li>
+            <li>
+              <strong>Какво се проверява:</strong> Честота, размер, държави, контрагенти, модел
+              на движение. Времето на престой на средствата (ако влязат и почти веднага бъдат
+              изпратени) също е сериозен индикатор за риск.
+            </li>
+          </ul>
+
+          <h3>Въпрос 4: Съответства ли всичко на профила на клиента (KYC)?</h3>
+
+          <ul>
+            <li>
+              <strong>Икономическа логика:</strong> При откриване на сметка декларирате
+              професия, очакван оборот и цел на използване. Алгоритмите непрекъснато сравняват
+              текущото ви поведение с първоначално декларираното.
+            </li>
+            <li>
+              <strong>Какво се проверява:</strong> Разминаване между заявени 10 000 евро годишен
+              оборот и реални транзакции за стотици хиляди или милиони.
+            </li>
+          </ul>
+
+          <h2>2. Голямата разлика: „Произход на средствата“ срещу „Източник на богатството“</h2>
+
+          <p>
+            Съгласно ЗМИП, при по-висок риск задължените лица трябва да установят и двете
+            понятия, които често се бъркат.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Произход на средствата (Source of Funds – SoF):</strong> Отговаря на
+              въпроса: Откъде идват точно тези средства, които постъпват сега? (напр. продажба
+              на кола, банков заем, крипто търговия). Институцията проследява конкретната
+              транзакция.
+            </li>
+            <li>
+              <strong>Източник на богатството (Source of Wealth – SoW):</strong> Отговаря на
+              въпроса: Как през годините сте натрупали общото си имущество? Разглежда се
+              цялостният профил: професия, бизнес, инвестиции, наследства.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Пример:</strong> Ако депозирате 50 000 лв., но официалните ви доходи за
+            последните месеци са 10 000 лв., алгоритъмът отчита несъответствие. Трябва да
+            докажете произхода на цялата сума, дори текущата операция да е само една.
+          </p>
+
+          <h2>3. Подготовка на досието: Непрекъсната верига на собствеността</h2>
+
+          <p>
+            Най-честата грешка е изпращането само на един документ (например само нотариален
+            акт). Проверяващият изгражда пълна финансова картина. Всяка липсваща връзка поражда
+            въпроси.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Доходи от труд:</strong> Трудови договори, допълнителни споразумения,
+              служебни бележки, годишни данъчни декларации, платежни ведомости. Целта е
+              документите математически да обясняват натрупаните средства.
+            </li>
+            <li>
+              <strong>Спестявания:</strong> Само твърдението „спестявал съм“ не е достатъчно.
+              Изискват се банкови извлечения за няколко години и доказана последователност между
+              доходите и натрупаните спестявания.
+            </li>
+            <li>
+              <strong>Дарения и заеми от семейството:</strong> Доказва се както извършването на
+              транзакцията (договор, банков превод), така и законният произход на средствата на
+              самия дарител/заемодател.
+            </li>
+            <li>
+              <strong>Продажба на имущество (имот или автомобил):</strong> Нотариални актове за
+              придобиване и продажба (или договори за МПС), банкови извлечения за получената
+              цена, платени данъци.
+            </li>
+            <li>
+              <strong>Доходи от крипто:</strong> Най-детайлно проверяваната категория. Трябва да
+              може да бъде проследен целият жизнен цикъл на инвестицията: CSV експорти от
+              борсите, история на всички сделки, депозити във фиат, тегления, адреси на
+              портфейли и платени данъци (когато са дължими).
+            </li>
+          </ul>
+
+          <h2>4. Златните правила за безпроблемна проверка</h2>
+
+          <ol>
+            <li>
+              <strong>Бъдете проактивни:</strong> Не чакайте институцията да поиска документите.
+              Ако предстои голям превод, подгответе пълното досие и уведомете банката или
+              платежната институция предварително.
+            </li>
+            <li>
+              <strong>Не разделяйте преводите изкуствено:</strong> Умишленото раздробяване на
+              голяма сума на множество малки преводи („structuring“ или „smurfing“) с цел
+              избягване на проверки е класически индикатор за пране на пари. Това само по себе
+              си води до задълбочена проверка, блокиране на средства и подаване на сигнал.
+            </li>
+            <li>
+              <strong>Отговаряйте подробно и логично:</strong> Когато комуникирате с Compliance
+              отдела, опишете хронологията ясно, обяснете произхода на средствата и приложете
+              всички документи наведнъж. Създайте логическа последователност в обяснението си.
+            </li>
+          </ol>
+
+          <h2>Заключение</h2>
+
+          <p>
+            AML проверката не представлява данъчна ревизия, а процес по управление на риска.
+            Основният принцип при криптоактивите е един: всяко движение на средства трябва да
+            бъде проследимо, логично обяснимо и подкрепено с документи.
+          </p>
+
+          <p>
+            Когато разберете четирите стълба на проверката – правна причина, икономическа
+            логика, оценка на риска и материални доказателства – вие спирате да бъдете просто
+            обект на бюрокрация. Започвате да мислите като AML анализатор и можете предварително
+            да организирате досието си така, че процесът да премине значително по-бързо и с
+            по-малко допълнителни въпроси.
+          </p>
+        </div>
+
+        <div class="lang-content" data-lang="en" style="display:none;">
+          <p>
+            If you wake up in the European Union today and decide to open an account on a crypto
+            exchange, or simply want to sell part of your cryptocurrency and transfer the money
+            to your bank account, there is a high probability that you will very soon receive an
+            email from the Compliance department. It will ask you to send documents and will
+            pose questions such as:
+          </p>
+
+          <ul>
+            <li>Where do these funds come from?</li>
+            <li>How did you buy your first crypto?</li>
+            <li>What is the origin of your wealth?</li>
+            <li>Why is this amount significantly larger than your usual transactions?</li>
+          </ul>
+
+          <p>
+            To many people this looks like excessive bureaucracy. In fact, it is the normal
+            regulatory environment. With the adoption of Regulation (EU) 2023/1114 (MiCA),
+            Regulation (EU) 2023/1113 (the Travel Rule) and the anti-money laundering
+            legislation in force (the AML Directives and the Bulgarian Measures Against Money
+            Laundering Act), all financial institutions have a legal obligation to know their
+            customer (KYC), to assess risk and, where necessary, to request evidence of the
+            origin of funds.
+          </p>
+
+          <p>
+            This guide brings together the bureaucratic, logical, legal and economic sides of
+            the process, to help you understand how AML analysts think and how to prepare your
+            file so that the check goes quickly and smoothly.
+          </p>
+
+          <h2>1. How Does an AML Analyst Think? The Four-Fold Logic of the Check</h2>
+
+          <p>
+            Every document requested has one single purpose — to answer a specific question. For
+            every transaction, the institution tries to establish four interconnected elements:
+          </p>
+
+          <h3>Question 1: Do the funds have a lawful economic origin?</h3>
+
+          <ul>
+            <li>
+              <strong>Economic logic:</strong> No one can invest or spend more money than they
+              have actually earned or lawfully acquired. If you declare an annual income of
+              BGN 30,000 and suddenly invest BGN 400,000, the question arises: where does the
+              difference come from?
+            </li>
+            <li>
+              <strong>Legal framework:</strong> The Bulgarian Measures Against Money Laundering
+              Act and the European AML directives on customer due diligence.
+            </li>
+            <li>
+              <strong>What is checked:</strong> The income-to-assets ratio, profession, declared
+              turnover and historical earnings.
+            </li>
+            <li>
+              <strong>Evidence:</strong> Employment contracts, tax returns, sale agreements,
+              dividends, inheritances, etc.
+            </li>
+          </ul>
+
+          <h3>Question 2: Is the entire path of the money traceable?</h3>
+
+          <ul>
+            <li>
+              <strong>Economic logic:</strong> The fewer "black boxes" there are in the
+              financial flow, the lower the risk. The institution wants to trace a clear chain:
+              Salary → Bank account → Crypto exchange → Purchase → Sale → Bank account.
+            </li>
+            <li>
+              <strong>Legal framework:</strong> Regulation (EU) 2023/1113 (the Travel Rule).
+            </li>
+            <li>
+              <strong>What is checked:</strong> Missing transfers, unknown wallets, the use of
+              mixers, or transfers to high-risk countries.
+            </li>
+            <li>
+              <strong>Evidence:</strong> Bank statements, CSV histories from exchanges,
+              blockchain explorers.
+            </li>
+          </ul>
+
+          <h3>Question 3: Does the operation itself make economic sense?</h3>
+
+          <ul>
+            <li>
+              <strong>Economic logic:</strong> What is examined is whether the behaviour looks
+              normal. Selling a property and investing the money is logical. But receiving
+              EUR 1,500 every day from hundreds of different people (e.g. in P2P trading)
+              triggers red flags.
+            </li>
+            <li>
+              <strong>What is checked:</strong> Frequency, size, countries, counterparties,
+              movement patterns. The dwell time of the funds (if they come in and are sent out
+              almost immediately) is also a serious risk indicator.
+            </li>
+          </ul>
+
+          <h3>Question 4: Does everything match the customer's profile (KYC)?</h3>
+
+          <ul>
+            <li>
+              <strong>Economic logic:</strong> When opening an account you declare a profession,
+              an expected turnover and a purpose of use. The algorithms constantly compare your
+              current behaviour with what you initially declared.
+            </li>
+            <li>
+              <strong>What is checked:</strong> A mismatch between a declared annual turnover of
+              EUR 10,000 and actual transactions worth hundreds of thousands or millions.
+            </li>
+          </ul>
+
+          <h2>2. The Big Difference: "Source of Funds" vs "Source of Wealth"</h2>
+
+          <p>
+            Under the Bulgarian Measures Against Money Laundering Act, in higher-risk cases the
+            obliged entities must establish both concepts, which are often confused.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Source of Funds (SoF):</strong> Answers the question: Where exactly do the
+              funds coming in right now originate from? (e.g. the sale of a car, a bank loan,
+              crypto trading). The institution traces the specific transaction.
+            </li>
+            <li>
+              <strong>Source of Wealth (SoW):</strong> Answers the question: How have you
+              accumulated your overall assets over the years? The full profile is examined:
+              profession, business, investments, inheritances.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Example:</strong> If you deposit BGN 50,000, but your official income over
+            the past months is BGN 10,000, the algorithm registers a discrepancy. You must prove
+            the origin of the entire amount, even if the current operation is just a single one.
+          </p>
+
+          <h2>3. Preparing the File: An Unbroken Chain of Ownership</h2>
+
+          <p>
+            The most common mistake is sending only a single document (for example, only a
+            notary deed). The reviewer builds a complete financial picture. Every missing link
+            raises questions.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Employment income:</strong> Employment contracts, addenda, employer
+              certificates, annual tax returns, payroll records. The goal is for the documents
+              to mathematically explain the accumulated funds.
+            </li>
+            <li>
+              <strong>Savings:</strong> Merely claiming "I have been saving" is not enough. Bank
+              statements covering several years are required, along with a demonstrated
+              consistency between income and accumulated savings.
+            </li>
+            <li>
+              <strong>Gifts and loans from family:</strong> Both the execution of the
+              transaction (a contract, a bank transfer) and the lawful origin of the funds of
+              the donor/lender themselves must be evidenced.
+            </li>
+            <li>
+              <strong>Sale of property (real estate or a vehicle):</strong> Notary deeds for the
+              acquisition and the sale (or vehicle sale contracts), bank statements showing the
+              price received, taxes paid.
+            </li>
+            <li>
+              <strong>Crypto income:</strong> The most scrutinised category. The entire life
+              cycle of the investment must be traceable: CSV exports from the exchanges, the
+              history of all trades, fiat deposits, withdrawals, wallet addresses and taxes paid
+              (where due).
+            </li>
+          </ul>
+
+          <h2>4. The Golden Rules for a Smooth Check</h2>
+
+          <ol>
+            <li>
+              <strong>Be proactive:</strong> Do not wait for the institution to request the
+              documents. If a large transfer is coming up, prepare the complete file and notify
+              the bank or payment institution in advance.
+            </li>
+            <li>
+              <strong>Do not split transfers artificially:</strong> Deliberately breaking a
+              large amount into multiple small transfers ("structuring" or "smurfing") in order
+              to avoid checks is a classic money laundering indicator. This in itself leads to
+              an in-depth review, the blocking of funds and the filing of a report.
+            </li>
+            <li>
+              <strong>Respond in detail and logically:</strong> When communicating with the
+              Compliance department, describe the chronology clearly, explain the origin of the
+              funds and attach all documents at once. Build a logical sequence into your
+              explanation.
+            </li>
+          </ol>
+
+          <h2>Conclusion</h2>
+
+          <p>
+            An AML check is not a tax audit — it is a risk management process. The core
+            principle with crypto assets is a single one: every movement of funds must be
+            traceable, logically explainable and supported by documents.
+          </p>
+
+          <p>
+            Once you understand the four pillars of the check — legal grounds, economic logic,
+            risk assessment and tangible evidence — you stop being merely a subject of
+            bureaucracy. You start thinking like an AML analyst and can organise your file in
+            advance so that the process goes significantly faster and with fewer follow-up
+            questions.
+          </p>
+        </div>
+
+        <hr>
+        <div class="post-share">
+          <p class="share-label" data-key="share_label">Сподели</p>
+          <div class="share-buttons">
+
+            <button class="share-btn" id="shareNative" style="display:none;">
+              <span data-key="share_native">Сподели</span>
+            </button>
+
+            <a href="#" class="share-btn" id="shareTwitter" target="_blank" rel="noopener">
+              𝕏 Twitter
+            </a>
+
+            <a href="#" class="share-btn" id="shareFacebook" target="_blank" rel="noopener">
+              f Facebook
+            </a>
+
+            <a href="#" class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener">
+              in LinkedIn
+            </a>
+
+            <button class="share-btn" id="shareCopy" data-key="share_copy">
+              Копирай линк
+            </button>
+
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
