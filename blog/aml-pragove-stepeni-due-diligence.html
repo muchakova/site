@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Допълнение към AML наръчника: законовите прагове от 1 000, 10 000 и 15 000 евро, трите степени на комплексна проверка (SDD, CDD, EDD) и защо алгоритмите определят динамични прагове за всеки клиент." />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html" />
+
+  <title>Допълнение: Прагове и степени на комплексна проверка (Due Diligence) — Марина Мучакова</title>
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html" />
+  <meta property="og:title" content="Допълнение: Прагове и степени на комплексна проверка (Due Diligence)" />
+  <meta property="og:description" content="Законовите прагове от 1 000, 10 000 и 15 000 евро, трите степени на проверка (SDD, CDD, EDD) и защо няма „магическо число“, под което сте невидими за AML проверките." />
+  <meta property="og:image" content="https://muchakova.com/images/og-site.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Марина Мучакова — данъчен консултант" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+  <meta property="article:author" content="Марина Мучакова" />
+  <meta property="article:published_time" content="2026-07-10" />
+  <meta property="article:tag" content="AML" />
+  <meta property="article:tag" content="Крипто" />
+  <meta property="article:tag" content="Compliance" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="Допълнение: Прагове и степени на комплексна проверка (Due Diligence)" />
+  <meta name="twitter:description" content="Законовите прагове от 1 000, 10 000 и 15 000 евро, трите степени на проверка (SDD, CDD, EDD) и защо няма „магическо число“, под което сте невидими за AML проверките." />
+  <meta name="twitter:image" content="https://muchakova.com/images/og-site.jpg" />
+  <meta name="twitter:image:alt" content="Марина Мучакова — данъчен консултант" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence)",
+    "alternativeHeadline": "Addendum: Thresholds and Levels of Due Diligence",
+    "description": "Законовите прагове от 1 000, 10 000 и 15 000 евро, трите степени на комплексна проверка (SDD, CDD, EDD) и защо алгоритмите определят динамични прагове за всеки клиент.",
+    "url": "https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html",
+    "datePublished": "2026-07-10",
+    "dateModified": "2026-07-10",
+    "image": "https://muchakova.com/images/og-site.jpg",
+    "inLanguage": ["bg", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "url": "https://muchakova.com/blog.html"
+    },
+    "keywords": ["AML", "прагове", "thresholds", "due diligence", "комплексна проверка", "SDD", "CDD", "EDD", "Travel Rule", "ЗМИП", "AMLD", "Risk-Based Approach", "рисково-базиран подход", "PEP", "smurfing", "динамични прагове", "крипто борса", "EBA"]
+  }
+  </script>
+</head>
+<body
+  data-title-bg="Допълнение: Прагове и степени на комплексна проверка (Due Diligence) — Марина Мучакова"
+  data-title-en="Addendum: Thresholds and Levels of Due Diligence — Marina Muchakova"
+>
+
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about" data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact" data-key="nav_contact">Контакти</a></li>
+        <li><a href="../booking/" data-key="nav_booking">Запази час</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="post-header">
+    <div class="container">
+      <a href="../blog.html" class="post-back" data-key="post_back">← Обратно към блога</a>
+
+      <div class="post-tag">
+        <span class="lang-content" data-lang="bg">AML</span>
+        <span class="lang-content" data-lang="en" style="display:none;">AML</span>
+      </div>
+
+      <h1 class="post-title">
+        <span class="lang-content" data-lang="bg">Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence)</span>
+        <span class="lang-content" data-lang="en" style="display:none;">Addendum: Thresholds and Levels of Due Diligence</span>
+      </h1>
+
+      <div class="post-meta">
+        <div class="post-author">
+          <img src="../images/profile_3.jpg" alt="Марина Мучакова" class="post-author-img" />
+          <span class="post-author-name" data-key="full_name">Марина Мучакова</span>
+        </div>
+        <span class="post-separator">·</span>
+        <time datetime="2026-07-10">
+          <span class="lang-content" data-lang="bg">10 юли 2026</span>
+          <span class="lang-content" data-lang="en" style="display:none;">July 10, 2026</span>
+        </time>
+        <span class="post-separator">·</span>
+        <span>
+          <span class="lang-content" data-lang="bg">6 мин четене</span>
+          <span class="lang-content" data-lang="en" style="display:none;">6 min read</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="post-body">
+    <div class="container">
+      <article class="post-content">
+
+        <div class="lang-content" data-lang="bg">
+          <p>
+            <em>Този материал е допълнение към
+            <a href="kak-da-preminem-aml-proverka-kripto.html">наръчника „Как успешно да
+            преминем AML проверка при крипто транзакции“</a>.</em>
+          </p>
+
+          <p>
+            Едно от най-големите заблуждения при използването на финансови институции и крипто
+            борси е, че съществува „магическо число“ или праг (threshold), под който човек е
+            напълно невидим за AML проверките. Макар законът да дефинира конкретни суми,
+            съвременната регулаторна рамка е изградена около Подхода, базиран на риска
+            (Risk-Based Approach – RBA).
+          </p>
+
+          <p>
+            Това означава, че дълбочината на проверката не зависи само от сумата, а от
+            комбинацията между сумата, профила на клиента и естеството на транзакцията.
+          </p>
+
+          <h2>1. Основни законови прагове в ЕС и България</h2>
+
+          <p>
+            Нормативната рамка за тези прагове е заложена на европейско ниво в Директивите
+            срещу изпирането на пари (AMLD) и Регламентите (Travel Rule), а в България – в
+            Закона за мерките срещу изпирането на пари (ЗМИП) и Правилника за неговото
+            прилагане (ППЗМИП).
+          </p>
+
+          <h3>Прагът от 1 000 евро (Крипто преводи и Travel Rule)</h3>
+
+          <ul>
+            <li>
+              <strong>Нормативна обосновка:</strong> Регламент (ЕС) 2023/1113 (Travel Rule) и
+              чл. 11, ал. 1, т. 5 от ЗМИП.
+            </li>
+            <li>
+              <strong>Какво означава:</strong> При преводи на криптоактиви на стойност равна
+              или надвишаваща 1 000 евро (или тяхната равностойност), доставчиците (CASP) са
+              длъжни да приложат мерки за комплексна проверка, включително събиране и обмен на
+              информация за наредителя и получателя. При трансфери към „нехостнати“
+              (self-hosted) портфейли, изискванията за верификация на собствеността на
+              портфейла са още по-строги.
+            </li>
+          </ul>
+
+          <h3>Прагът от 15 000 евро (Случайни транзакции)</h3>
+
+          <ul>
+            <li>
+              <strong>Нормативна обосновка:</strong> Директива (ЕС) 2015/849 (AMLD4/5) и
+              чл. 11, ал. 1, т. 2 от ЗМИП.
+            </li>
+            <li>
+              <strong>Какво означава:</strong> Извършване на случайна операция или сключване на
+              сделка на стойност равна или надвишаваща 15 000 евро (или тяхната равностойност в
+              друга валута) задължително изисква прилагане на мерки за комплексна проверка,
+              независимо дали операцията е осъществена чрез една или няколко свързани
+              транзакции.
+            </li>
+          </ul>
+
+          <h3>Прагът от 10 000 евро (Плащания в брой / Граничен контрол)</h3>
+
+          <ul>
+            <li>
+              <strong>Нормативна обосновка:</strong> Закон за ограничаване на плащанията в брой
+              (в България) и митническото законодателство на ЕС.
+            </li>
+            <li>
+              <strong>Какво означава:</strong> В България плащанията в брой над 10 000 лв. са
+              забранени. На ниво ЕС, пренасянето на пари в брой над 10 000 евро през граница
+              подлежи на задължително деклариране. Този праг често се използва от финансовите
+              институции като психологическа и алгоритмична граница за повишено внимание при
+              банкови преводи към крипто борси.
+            </li>
+          </ul>
+
+          <h2>2. Степени на дълбочина на проверката</h2>
+
+          <p>
+            В зависимост от това какви прагове достига потребителят и какъв е неговият рисков
+            профил, той попада в една от следните три степени на проверка:
+          </p>
+
+          <h3>Степен 1: Опростена комплексна проверка (Simplified Due Diligence – SDD)</h3>
+
+          <ul>
+            <li>
+              <strong>Кога се прилага:</strong> При потребители с нисък риск (напр. местни
+              граждани без политически функции) и транзакции под основните прагове (напр.
+              покупки на крипто за 200 – 500 евро).
+            </li>
+            <li>
+              <strong>Дълбочина на проверката:</strong> Изисква се само базова идентификация
+              (KYC) – лична карта, селфи и понякога адресна регистрация. Системата не изисква
+              документи за произход на средствата, тъй като сумите са в рамките на обичайния
+              профил за средностатистически потребител.
+            </li>
+          </ul>
+
+          <h3>Степен 2: Стандартна комплексна проверка (Customer Due Diligence – CDD)</h3>
+
+          <ul>
+            <li>
+              <strong>Кога се прилага:</strong> Когато транзакциите започнат да доближават
+              праговете (напр. кумулативни преводи за няколко хиляди евро) или при по-честа
+              търговия, която надхвърля първоначално декларирания от клиента профил.
+            </li>
+            <li>
+              <strong>Дълбочина на проверката:</strong> Включва мониторинг на транзакциите.
+              Борсата може да поиска актуализация на данните (KYC Refresh) и да зададе общи
+              въпроси през приложението: „Каква е основната ви професия?“ или „Каква е целта на
+              транзакциите?“. Възможно е да бъде поискан един документ за доходи (напр. фиш от
+              заплата), за да се оправдае обемът.
+            </li>
+          </ul>
+
+          <h3>Степен 3: Разширена комплексна проверка (Enhanced Due Diligence – EDD)</h3>
+
+          <ul>
+            <li>
+              <strong>Кога се прилага:</strong> 1) Автоматично при надвишаване на големи
+              прагове (напр. единични транзакции над 10 000/15 000 евро). 2) При високорискови
+              фактори – например клиентът е Видна политическа личност (PEP), получава средства
+              от високорискова държава или използва миксери за криптовалута, дори сумата да е
+              500 евро.
+            </li>
+            <li>
+              <strong>Дълбочина на проверката:</strong> Това е пълната AML проверка, описана в
+              <a href="kak-da-preminem-aml-proverka-kripto.html">основния наръчник</a>.
+              Изискват се изрични и подробни документи за Произход на средствата (Source of
+              Funds) и Източник на богатството (Source of Wealth). Проверява се цялостната
+              финансова история, данъчни декларации, история на транзакциите на блокчейна и
+              логиката на движение на средствата.
+            </li>
+          </ul>
+
+          <h2>3. От какво произтича гъвкавостта на праговете? (Рисковият профил)</h2>
+
+          <p>
+            Много потребители се оплакват: „Приятелят ми преведе 20 000 евро и нищо не му
+            поискаха, а на мен ми блокираха превод от 2 000 евро. Защо?“
+          </p>
+
+          <p>
+            Отговорът се крие в Насоките на Европейския банков орган (EBA) и задължението за
+            прилагане на Рисково-базиран подход (чл. 16 от ЗМИП).
+          </p>
+
+          <p>
+            Законът казва, че институцията трябва да оцени риска на всеки отделен клиент въз
+            основа на неговите индивидуални характеристики. Алгоритмите определят „вътрешни“
+            динамични прагове (Dynamic Thresholds) за всеки акаунт, които зависят от:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Декларираното в KYC профила:</strong> Ако клиент А е ИТ специалист и е
+              декларирал месечен доход от 5000 евро, алгоритъмът ще очаква по-големи преводи и
+              няма да се активира при 4000 евро. Ако клиент Б е студент без деклариран доход,
+              превод от 2000 евро представлява аномалия спрямо профила и ще задейства Разширена
+              проверка (EDD).
+            </li>
+            <li>
+              <strong>Историческото поведение:</strong> Ако правите редовни малки преводи в
+              продължение на 2 години, изграждате доверие в системата. Внезапен голям превод на
+              нов акаунт е червен флаг.
+            </li>
+            <li>
+              <strong>Свързаност и „Смърфинг“ (Smurfing):</strong> Ако алгоритъмът забележи, че
+              правите 4 превода по 900 евро (очевидно под прага от 1000 евро за Travel Rule) в
+              рамките на няколко дни, това се отчита като опит за избягване на прага и
+              автоматично вдига рисковия рейтинг (Risk Score), предизвиквайки EDD.
+            </li>
+          </ul>
+
+          <h2>Обобщение</h2>
+
+          <p>
+            Законовите прагове (като 1000 евро или 15 000 евро) са абсолютният таван – над тях
+            институцията задължително трябва да предприеме действия. Но поради
+            Рисково-базирания подход, институциите имат свободата (и задължението) да изискват
+            доказателства при всяка една сума, ако алгоритмите или анализаторите отчетат
+            несъответствие между операцията, профила на клиента и икономическата логика.
+          </p>
+        </div>
+
+        <div class="lang-content" data-lang="en" style="display:none;">
+          <p>
+            <em>This material is an addendum to the guide
+            <a href="kak-da-preminem-aml-proverka-kripto.html">"How to Successfully Pass an AML
+            Check on Crypto Transactions"</a>.</em>
+          </p>
+
+          <p>
+            One of the biggest misconceptions when using financial institutions and crypto
+            exchanges is that there is a "magic number" or threshold below which a person is
+            completely invisible to AML checks. Although the law defines specific amounts, the
+            modern regulatory framework is built around the Risk-Based Approach (RBA).
+          </p>
+
+          <p>
+            This means that the depth of the check does not depend only on the amount, but on
+            the combination of the amount, the customer's profile and the nature of the
+            transaction.
+          </p>
+
+          <h2>1. The Main Statutory Thresholds in the EU and Bulgaria</h2>
+
+          <p>
+            The regulatory framework for these thresholds is laid down at European level in the
+            Anti-Money Laundering Directives (AMLD) and the Regulations (the Travel Rule), and
+            in Bulgaria — in the Measures Against Money Laundering Act (ЗМИП) and the Rules for
+            its implementation.
+          </p>
+
+          <h3>The EUR 1,000 Threshold (Crypto Transfers and the Travel Rule)</h3>
+
+          <ul>
+            <li>
+              <strong>Legal basis:</strong> Regulation (EU) 2023/1113 (the Travel Rule) and
+              Art. 11(1)(5) of the Bulgarian Measures Against Money Laundering Act.
+            </li>
+            <li>
+              <strong>What it means:</strong> For transfers of crypto assets with a value equal
+              to or exceeding EUR 1,000 (or its equivalent), the providers (CASPs) are obliged
+              to apply due diligence measures, including collecting and exchanging information
+              about the originator and the beneficiary. For transfers to self-hosted wallets,
+              the requirements for verifying ownership of the wallet are even stricter.
+            </li>
+          </ul>
+
+          <h3>The EUR 15,000 Threshold (Occasional Transactions)</h3>
+
+          <ul>
+            <li>
+              <strong>Legal basis:</strong> Directive (EU) 2015/849 (AMLD4/5) and Art. 11(1)(2)
+              of the Bulgarian Measures Against Money Laundering Act.
+            </li>
+            <li>
+              <strong>What it means:</strong> Carrying out an occasional operation or
+              concluding a transaction with a value equal to or exceeding EUR 15,000 (or its
+              equivalent in another currency) mandatorily requires the application of due
+              diligence measures, regardless of whether the operation is carried out through
+              one or several linked transactions.
+            </li>
+          </ul>
+
+          <h3>The EUR 10,000 Threshold (Cash Payments / Border Control)</h3>
+
+          <ul>
+            <li>
+              <strong>Legal basis:</strong> The Bulgarian Act on the Restriction of Cash
+              Payments and EU customs legislation.
+            </li>
+            <li>
+              <strong>What it means:</strong> In Bulgaria, cash payments above BGN 10,000 are
+              prohibited. At EU level, carrying cash above EUR 10,000 across a border is
+              subject to mandatory declaration. This threshold is often used by financial
+              institutions as a psychological and algorithmic line for heightened attention to
+              bank transfers to crypto exchanges.
+            </li>
+          </ul>
+
+          <h2>2. Levels of Depth of the Check</h2>
+
+          <p>
+            Depending on which thresholds the user reaches and what their risk profile is, they
+            fall into one of the following three levels of due diligence:
+          </p>
+
+          <h3>Level 1: Simplified Due Diligence (SDD)</h3>
+
+          <ul>
+            <li>
+              <strong>When it applies:</strong> For low-risk users (e.g. local citizens without
+              political functions) and transactions below the main thresholds (e.g. crypto
+              purchases of EUR 200–500).
+            </li>
+            <li>
+              <strong>Depth of the check:</strong> Only basic identification (KYC) is required
+              — an ID card, a selfie and sometimes proof of address. The system does not
+              request documents on the origin of funds, since the amounts are within the usual
+              profile of an average user.
+            </li>
+          </ul>
+
+          <h3>Level 2: Customer Due Diligence (CDD)</h3>
+
+          <ul>
+            <li>
+              <strong>When it applies:</strong> When transactions begin to approach the
+              thresholds (e.g. cumulative transfers of several thousand euros) or with more
+              frequent trading that exceeds the profile initially declared by the customer.
+            </li>
+            <li>
+              <strong>Depth of the check:</strong> Includes transaction monitoring. The
+              exchange may request an update of your data (a KYC Refresh) and ask general
+              questions through the app: "What is your main occupation?" or "What is the
+              purpose of your transactions?". A single income document (e.g. a payslip) may be
+              requested to justify the volume.
+            </li>
+          </ul>
+
+          <h3>Level 3: Enhanced Due Diligence (EDD)</h3>
+
+          <ul>
+            <li>
+              <strong>When it applies:</strong> 1) Automatically when large thresholds are
+              exceeded (e.g. single transactions above EUR 10,000/15,000). 2) In the presence
+              of high-risk factors — for example, the customer is a Politically Exposed Person
+              (PEP), receives funds from a high-risk country or uses cryptocurrency mixers,
+              even if the amount is EUR 500.
+            </li>
+            <li>
+              <strong>Depth of the check:</strong> This is the full AML check described in
+              <a href="kak-da-preminem-aml-proverka-kripto.html">the main guide</a>. Explicit
+              and detailed documents on the Source of Funds and the Source of Wealth are
+              required. The entire financial history is examined, along with tax returns, the
+              transaction history on the blockchain and the logic of the movement of funds.
+            </li>
+          </ul>
+
+          <h2>3. Where Does the Flexibility of the Thresholds Come From? (The Risk Profile)</h2>
+
+          <p>
+            Many users complain: "My friend transferred EUR 20,000 and was asked for nothing,
+            while my EUR 2,000 transfer got blocked. Why?"
+          </p>
+
+          <p>
+            The answer lies in the Guidelines of the European Banking Authority (EBA) and the
+            obligation to apply a Risk-Based Approach (Art. 16 of the Bulgarian Measures
+            Against Money Laundering Act).
+          </p>
+
+          <p>
+            The law says that the institution must assess the risk of each individual customer
+            based on their individual characteristics. The algorithms set "internal" Dynamic
+            Thresholds for each account, which depend on:
+          </p>
+
+          <ul>
+            <li>
+              <strong>What is declared in the KYC profile:</strong> If customer A is an IT
+              specialist and has declared a monthly income of EUR 5,000, the algorithm will
+              expect larger transfers and will not be triggered at EUR 4,000. If customer B is
+              a student with no declared income, a transfer of EUR 2,000 is an anomaly relative
+              to the profile and will trigger Enhanced Due Diligence (EDD).
+            </li>
+            <li>
+              <strong>Historical behaviour:</strong> If you make regular small transfers over
+              the course of 2 years, you build trust in the system. A sudden large transfer on
+              a new account is a red flag.
+            </li>
+            <li>
+              <strong>Linked transactions and "smurfing":</strong> If the algorithm notices
+              that you make 4 transfers of EUR 900 each (obviously below the EUR 1,000 Travel
+              Rule threshold) within a few days, this is registered as an attempt to circumvent
+              the threshold and automatically raises the Risk Score, triggering EDD.
+            </li>
+          </ul>
+
+          <h2>Summary</h2>
+
+          <p>
+            The statutory thresholds (such as EUR 1,000 or EUR 15,000) are the absolute ceiling
+            — above them, the institution is obliged to act. But because of the Risk-Based
+            Approach, institutions have the freedom (and the obligation) to request evidence at
+            any amount whatsoever, if the algorithms or the analysts detect a mismatch between
+            the operation, the customer's profile and the economic logic.
+          </p>
+        </div>
+
+        <hr>
+        <div class="post-share">
+          <p class="share-label" data-key="share_label">Сподели</p>
+          <div class="share-buttons">
+
+            <button class="share-btn" id="shareNative" style="display:none;">
+              <span data-key="share_native">Сподели</span>
+            </button>
+
+            <a href="#" class="share-btn" id="shareTwitter" target="_blank" rel="noopener">
+              𝕏 Twitter
+            </a>
+
+            <a href="#" class="share-btn" id="shareFacebook" target="_blank" rel="noopener">
+              f Facebook
+            </a>
+
+            <a href="#" class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener">
+              in LinkedIn
+            </a>
+
+            <button class="share-btn" id="shareCopy" data-key="share_copy">
+              Копирай линк
+            </button>
+
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

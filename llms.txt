@@ -26,6 +26,12 @@ She works across three main projects:
 
 ## Blog Articles
 
+### Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence) / Addendum: Thresholds and Levels of Due Diligence
+- URL: https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html
+- Date: 2026-07-10
+- Topics: AML thresholds, EUR 1000 Travel Rule threshold, EUR 15000 occasional transactions threshold, EUR 10000 cash payments and border control, Simplified Due Diligence (SDD), Customer Due Diligence (CDD), Enhanced Due Diligence (EDD), Risk-Based Approach, dynamic thresholds, PEP, smurfing, EBA guidelines, Bulgarian Measures Against Money Laundering Act (ЗМИП), crypto exchanges
+- Languages: BG + EN
+
 ### Наръчник: Как успешно да преминем AML проверка при крипто транзакции / A Guide to Successfully Passing an AML Check on Crypto Transactions
 - URL: https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html
 - Date: 2026-07-10
