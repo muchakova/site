@@ -99,7 +99,7 @@
         <li><a href="#projects" data-key="nav_projects">Проекти</a></li>
         <li><a href="#blog"     data-key="nav_blog">Блог</a></li>
         <li><a href="#contact"  data-key="nav_contact">Контакти</a></li>
-        <li><a href="booking/" data-key="nav_booking">Запази час</a></li>
+        <li><a href="booking/" class="nav-cta" data-key="nav_booking">Запази час</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -137,7 +137,7 @@
       <div class="hero-image">
         <div class="profile-photo-wrap">
           <img
-            src="images/profile_1.jpg"
+            src="images/profile_3.jpg"
             alt="Марина Мучакова"
             class="profile-photo"
             loading="eager"
@@ -158,7 +158,7 @@
 
         <div class="about-image">
           <img
-            src="images/profile_2.jpg"
+            src="images/profile_9.jpg"
             alt="Марина Мучакова"
             loading="lazy"
           />
@@ -553,93 +553,60 @@
         </div>
       </div>
 
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p data-key="contact_text">
-            Имате въпроси или искате да се свържете? Изпратете ми имейл или
-            ме намерете в социалните мрежи.
-          </p>
+      <div class="contact-layout">
 
-          <!-- Запазване на час -->
-          <div class="contact-group">
-            <p class="contact-group-label" data-key="contact_group_booking">Онлайн консултация</p>
-            <div class="contact-links">
-              <a href="booking/" class="contact-item">
-                <span class="contact-icon">📅</span>
-                <span data-key="contact_booking_link">Запази час за консултация</span>
+        <!-- Primary action: online consultation booking -->
+        <a href="booking/" class="contact-cta">
+          <span class="contact-cta-icon" aria-hidden="true">📅</span>
+          <span class="contact-cta-body">
+            <span class="contact-cta-eyebrow" data-key="contact_group_booking">Онлайн консултация</span>
+            <span class="contact-cta-title" data-key="contact_booking_link">Запази час за консултация</span>
+            <span class="contact-cta-sub" data-key="contact_booking_sub">Изберете удобен ден и час за лична онлайн среща.</span>
+            <span class="contact-cta-link">
+              <span data-key="contact_cta_action">Запази час</span>
+              <span class="contact-cta-arrow" aria-hidden="true">→</span>
+            </span>
+          </span>
+        </a>
+
+        <!-- Contact details -->
+        <div class="contact-panel">
+
+          <div class="contact-block">
+            <p class="contact-block-label" data-key="contact_group_direct">Директен контакт</p>
+            <a href="mailto:office@vesta-bg.eu" class="contact-line">
+              <span class="contact-line-icon" aria-hidden="true">✉</span>
+              <span>office@vesta-bg.eu</span>
+            </a>
+            <a href="tel:+359887460907" class="contact-line">
+              <span class="contact-line-icon" aria-hidden="true">☎</span>
+              <span>+359 887 460 907</span>
+            </a>
+          </div>
+
+          <div class="contact-block">
+            <p class="contact-block-label" data-key="contact_group_messaging">Съобщения</p>
+            <div class="contact-chips">
+              <a href="viber://chat?number=%2B359887460907" class="contact-chip">
+                <span class="contact-chip-icon" aria-hidden="true">📲</span><span>Viber</span>
+              </a>
+              <a href="https://wa.me/359887460907" class="contact-chip" target="_blank" rel="noopener">
+                <span class="contact-chip-icon" aria-hidden="true">💬</span><span>WhatsApp</span>
+              </a>
+              <a href="https://t.me/+359887460907" class="contact-chip" target="_blank" rel="noopener">
+                <span class="contact-chip-icon" aria-hidden="true">✈</span><span>Telegram</span>
               </a>
             </div>
           </div>
 
-          <!-- Подкрепа / Дарение -->
-          <div class="contact-group">
-            <p class="contact-group-label" data-key="contact_group_donate">Подкрепа</p>
-            <div class="contact-links">
-              <a href="donate/" class="contact-item">
-                <span class="contact-icon">💛</span>
-                <span data-key="contact_donate_link">Подкрепи работата ми</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Директен контакт -->
-          <div class="contact-group">
-            <p class="contact-group-label" data-key="contact_group_direct">Директен контакт</p>
-            <div class="contact-links">
-              <a href="mailto:office@vesta-bg.eu" class="contact-item">
-                <span class="contact-icon">✉</span>
-                <span>office@vesta-bg.eu</span>
-              </a>
-              <a href="tel:+359887460907" class="contact-item">
-                <span class="contact-icon">☎</span>
-                <span>+359 887 460 907</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Съобщения -->
-          <div class="contact-group">
-            <p class="contact-group-label" data-key="contact_group_messaging">Съобщения</p>
-            <div class="contact-links contact-links-row">
-              <a href="viber://chat?number=%2B359887460907" class="contact-item contact-item-sm">
-                <span class="contact-icon">📲</span>
-                <span>Viber</span>
-              </a>
-              <a href="https://wa.me/359887460907" class="contact-item contact-item-sm" target="_blank" rel="noopener">
-                <span class="contact-icon">💬</span>
-                <span>WhatsApp</span>
-              </a>
-              <a href="https://t.me/+359887460907" class="contact-item contact-item-sm" target="_blank" rel="noopener">
-                <span class="contact-icon">✈</span>
-                <span>Telegram</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Социални мрежи -->
-          <div class="contact-group">
-            <p class="contact-group-label" data-key="contact_group_social">Социални мрежи</p>
-            <div class="contact-links contact-links-row">
-              <a href="https://www.facebook.com/muchakova" class="contact-item contact-item-sm" target="_blank" rel="noopener">
-                <span class="contact-icon">f</span>
-                <span>Facebook</span>
-              </a>
-              <a href="https://www.linkedin.com/in/vestaconsult/" class="contact-item contact-item-sm" target="_blank" rel="noopener">
-                <span class="contact-icon">in</span>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://www.tiktok.com/@muchakova" class="contact-item contact-item-sm" target="_blank" rel="noopener">
-                <span class="contact-icon">♪</span>
-                <span>TikTok</span>
-              </a>
-              <a href="https://www.youtube.com/@TheCryptoAcademy375" class="contact-item contact-item-sm" target="_blank" rel="noopener">
-                <span class="contact-icon">▶</span>
-                <span>YouTube</span>
-              </a>
-              <a href="https://x.com/VestaConsult" class="contact-item contact-item-sm" target="_blank" rel="noopener">
-                <span class="contact-icon">𝕏</span>
-                <span>Twitter</span>
-              </a>
+          <div class="contact-block">
+            <p class="contact-block-label" data-key="contact_group_social">Социални мрежи</p>
+            <div class="contact-socials">
+              <a href="https://www.facebook.com/muchakova" class="contact-social" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">f</a>
+              <a href="https://www.linkedin.com/in/vestaconsult/" class="contact-social" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
+              <a href="https://www.tiktok.com/@muchakova" class="contact-social" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">♪</a>
+              <a href="https://www.youtube.com/@TheCryptoAcademy375" class="contact-social" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">▶</a>
+              <a href="https://x.com/VestaConsult" class="contact-social" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)">𝕏</a>
             </div>
           </div>
 

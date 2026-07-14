@@ -90,6 +90,8 @@ const translations = {
     contact_group_social:   'Социални мрежи',
     contact_group_booking:  'Онлайн консултация',
     contact_booking_link:   'Запази час за консултация',
+    contact_booking_sub:    'Изберете удобен ден и час за лична онлайн среща.',
+    contact_cta_action:     'Запази час',
     contact_group_donate:   'Подкрепа',
     contact_donate_link:    'Подкрепи работата ми',
 
@@ -274,6 +276,8 @@ const translations = {
     contact_group_social:   'Social media',
     contact_group_booking:  'Online consultation',
     contact_booking_link:   'Book a consultation',
+    contact_booking_sub:    'Pick a convenient day and time for a personal online meeting.',
+    contact_cta_action:     'Book now',
     contact_group_donate:   'Support',
     contact_donate_link:    'Support my work',
 
