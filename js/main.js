@@ -90,12 +90,26 @@ const translations = {
     contact_group_social:   'Социални мрежи',
     contact_group_booking:  'Онлайн консултация',
     contact_booking_link:   'Запази час за консултация',
+    contact_group_donate:   'Подкрепа',
+    contact_donate_link:    'Подкрепи работата ми',
 
     // Booking page
     booking_page_title:    'Запази час',
     booking_page_subtitle: 'Изберете удобен ден и час за лична консултация с Марина Мучакова.',
 
+    // Donate page
+    donate_page_title:    'Подкрепи ме',
+    donate_page_subtitle: 'Ако статиите и материалите в блога са ви полезни, можете да подкрепите работата ми с доброволно дарение.',
+    donate_stripe_title:  'С банкова карта',
+    donate_stripe_desc:   'Еднократно дарение с дебитна или кредитна карта. Сигурно плащане, обработвано от Stripe.',
+    donate_stripe_btn:    'Дари с карта',
+    donate_revolut_title: 'Чрез Revolut',
+    donate_revolut_desc:  'Бързо дарение през Revolut — без такси между Revolut потребители.',
+    donate_revolut_btn:   'Дари през Revolut',
+    donate_note:          'Дарението е напълно доброволно и не представлява заплащане за консултантска услуга. Благодаря ви за подкрепата! 💛',
+
     // Footer
+    footer_donate: '💛 Подкрепи ме',
     footer_text: '© 2026 Марина Мучакова. Всички права запазени.',
 
     // Blog page
@@ -260,12 +274,26 @@ const translations = {
     contact_group_social:   'Social media',
     contact_group_booking:  'Online consultation',
     contact_booking_link:   'Book a consultation',
+    contact_group_donate:   'Support',
+    contact_donate_link:    'Support my work',
 
     // Booking page
     booking_page_title:    'Book a Meeting',
     booking_page_subtitle: 'Pick a convenient day and time for a personal consultation with Marina Muchakova.',
 
+    // Donate page
+    donate_page_title:    'Support Me',
+    donate_page_subtitle: 'If the articles and materials on this blog are useful to you, you can support my work with a voluntary donation.',
+    donate_stripe_title:  'By card',
+    donate_stripe_desc:   'A one-off donation with a debit or credit card. Secure payment processed by Stripe.',
+    donate_stripe_btn:    'Donate by card',
+    donate_revolut_title: 'Via Revolut',
+    donate_revolut_desc:  'A quick donation via Revolut — free of charge between Revolut users.',
+    donate_revolut_btn:   'Donate via Revolut',
+    donate_note:          'Donations are entirely voluntary and do not constitute payment for consulting services. Thank you for your support! 💛',
+
     // Footer
+    footer_donate: '💛 Support me',
     footer_text: '© 2026 Marina Muchakova. All rights reserved.',
 
     // Blog page
