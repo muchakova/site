@@ -1104,6 +1104,18 @@ img {
   border-color: var(--accent, #0f766e);
 }
 
+.ib-agreement-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 8px 0 28px;
+}
+
+.ib-agreement-gallery .ib-agreement-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 .post-content h2 {
   font-size: 1.625rem;
   margin: 48px 0 18px;
