@@ -3,14 +3,14 @@
 
   <url>
     <loc>https://muchakova.com/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://muchakova.com/blog.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,6 +27,20 @@
     <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://muchakova.com/blog/dds-turisticheska-usluga-9-ili-20.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://muchakova.com/blog/esma-non-compliant-mexc.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
