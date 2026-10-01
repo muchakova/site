@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Продажбите на криптоактиви през Instant Sell и Convert, през order book и през DEX като Uniswap имат различно място на изпълнение — и затова не всички участват в прага от 51 130 евро за регистрация по ЗДДС. Анализ по чл. 21 и чл. 168в ЗДДС, чл. 18 от Регламент 282/2011 и MiCA. — Марина Мучакова" />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/blog/kripto-borsi-cex-dex-oborot-zdds.html" />
+
+  <title>Чий е оборотът: на борсата или наш? — Марина Мучакова</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muchakova.com/blog/kripto-borsi-cex-dex-oborot-zdds.html" />
+  <meta property="og:title" content="Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът по ЗДДС" />
+  <meta property="og:description" content="Instant Sell, order book или Uniswap — кои продажби на криптоактиви участват в прага от 51 130 евро за регистрация по ЗДДС и кои „отиват при борсата“." />
+  <meta property="og:image" content="https://muchakova.com/images/og-site.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Марина Мучакова — данъчен консултант" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+  <meta property="article:author" content="Марина Мучакова" />
+  <meta property="article:published_time" content="2026-10-01" />
+  <meta property="article:tag" content="ДДС" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="Чий е оборотът: на борсата или наш?" />
+  <meta name="twitter:description" content="Крипто сделките през CEX и DEX и прагът от 51 130 евро за регистрация по ЗДДС." />
+  <meta name="twitter:image" content="https://muchakova.com/images/og-site.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът за регистрация по ЗДДС",
+    "description": "Анализ на мястото на изпълнение при продажбата на криптоактиви през централизирани и децентрализирани платформи и последиците за годишния оборот по чл. 168в ЗДДС.",
+    "url": "https://muchakova.com/blog/kripto-borsi-cex-dex-oborot-zdds.html",
+    "datePublished": "2026-10-01",
+    "dateModified": "2026-10-01",
+    "image": "https://muchakova.com/images/og-site.jpg",
+    "inLanguage": ["bg", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "url": "https://muchakova.com/blog.html"
+    },
+    "keywords": ["ДДС", "криптоактиви", "регистрация по ЗДДС", "чл. 168в ЗДДС", "годишен оборот", "място на изпълнение", "чл. 21 ЗДДС", "Регламент 282/2011", "MiCA", "CEX", "DEX", "Kraken", "Binance", "Uniswap", "order book", "Hedqvist"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about"    data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html"           data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact"  data-key="nav_contact">Контакти</a></li>
+        <li><a href="../booking/" class="nav-cta" data-key="nav_booking">Запази час</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- POST HEADER -->
+  <header class="post-header">
+    <div class="container">
+
+      <a href="../blog.html" class="post-back" data-key="post_back">← Обратно към блога</a>
+
+      <div class="post-tag">
+        <span class="lang-content" data-lang="bg">ДДС</span>
+        <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
+      </div>
+
+      <h1 class="post-title">
+        <span class="lang-content" data-lang="bg">Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът за регистрация по ЗДДС</span>
+        <span class="lang-content" data-lang="en" style="display:none;">Whose Turnover Is It — the Exchange’s or Ours? Crypto Trades via CEX and DEX and the VAT Registration Threshold</span>
+      </h1>
+
+      <div class="post-meta">
+        <div class="post-author">
+          <img
+            src="../images/profile_7.jpg"
+            alt="Марина Мучакова"
+            class="post-author-img"
+          />
+          <span class="post-author-name" data-key="full_name">Марина Мучакова</span>
+        </div>
+        <span class="post-separator">·</span>
+        <time datetime="2026-10-01">
+          <span class="lang-content" data-lang="bg">1 октомври 2026</span>
+          <span class="lang-content" data-lang="en" style="display:none;">October 1, 2026</span>
+        </time>
+        <span class="post-separator">·</span>
+        <span>
+          <span class="lang-content" data-lang="bg">12 мин четене</span>
+          <span class="lang-content" data-lang="en" style="display:none;">12 min read</span>
+        </span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- POST BODY -->
+  <main class="post-body">
+    <div class="container">
+      <article class="post-content">
+
+        <!-- ═══════════════════════════════════════ BULGARIAN CONTENT ═══════════════════════════════════════ -->
+        <div class="lang-content" data-lang="bg">
+
+          <p>
+            <em>Анализ на мястото на изпълнение при продажбата на криптоактиви през централизирани и децентрализирани платформи и последиците за годишния оборот по чл. 168в ЗДДС</em>
+          </p>
+
+          <h2>Изходната точка: обменът на криптовалута е освободена финансова услуга</h2>
+
+          <p>
+            В делото <strong>Hedqvist (C-264/14)</strong> Съдът на ЕС приема, че обменът на традиционна валута срещу биткойн и обратно представлява <strong>доставка на услуги срещу възнаграждение</strong> по смисъла на чл. 2, параграф 1, буква „в“ от Директива 2006/112/ЕО, и че тази доставка е <strong>освободена</strong> на основание чл. 135, параграф 1, буква „д“ – освобождаването за сделки с валута, банкноти и монети, използвани като законно платежно средство. В българския закон тази разпоредба е транспонирана в <strong>чл. 46, ал. 1, т. 4 ЗДДС</strong>. Националната агенция за приходите в практиката си е квалифицирала сделките с биткойн и като финансови услуги по чл. 46, ал. 1, т. 3 ЗДДС (становище изх. № М-24-31-32 от 08.07.2014 г. на ЦУ на НАП).
+          </p>
+
+          <p>
+            За целите на настоящия анализ разграничението между т. 3 и т. 4 няма практическо значение: и в двата случая става дума за <strong>финансова услуга по чл. 46 ЗДДС</strong>, а именно тази категория е изрично включена в годишния оборот по новия чл. 168в, ал. 1, т. 3 ЗДДС.
+          </p>
+
+          <p>
+            Целият анализ по-долу почива на една предпоставка, разгледана подробно в предходната ми статия <a href="koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html">„Кога сделките с ценни книжа СА икономическа дейност?“</a>: <strong>лицето трябва да извършва независима икономическа дейност</strong> по смисъла на чл. 3, ал. 2 ЗДДС. Ако продажбите на криптоактиви са управление на лично портфолио, те са извън обхвата на ДДС и въпросът за натрупването на оборот изобщо не възниква. Ако обаче търговията е системна, по занятие и с цел доход от самата търговия, лицето е данъчно задължено и трябва да знае <strong>кои от сделките му участват в прага от 51 130 евро и кои – не</strong>.
+          </p>
+
+          <h2>Защо мястото на изпълнение решава въпроса за прага</h2>
+
+          <p>
+            От 01.01.2026 г. прагът за задължителна регистрация по чл. 96, ал. 1 ЗДДС е <strong>51 130 евро годишен оборот в страната</strong>, проследяван за календарна година по правилата на новия чл. 168в ЗДДС (ДВ, бр. 115/2025 г.). Годишният оборот в страната включва, наред с облагаемите доставки, и доставките на финансови услуги по чл. 46, освен ако са <strong>съпътстващи доставки</strong> – доставки, които не са свързани с обичайната икономическа дейност на лицето и имат второстепенен или случаен характер (§ 1, т. 105 ДР ЗДДС). За професионален трейдър продажбите на криптоактиви са самата му дейност, така че изключението за съпътстващи доставки не му помага.
+          </p>
+
+          <p>
+            Решаващото обаче е друго: прагът се изчислява върху <strong>оборота в страната</strong>, т.е. върху доставките с място на изпълнение на територията на България. Това следва от логиката на чл. 288 от Директивата в редакцията на Директива (ЕС) 2020/285, която разграничава годишния оборот в съответната държава членка от годишния оборот в Съюза. В скорошно становище от 28.09.2026 г. на дирекция „ОДОП“ – Пловдив НАП приема, че услуги към данъчно задължено лице в друга държава членка са с място на изпълнение извън страната по чл. 21, ал. 2 ЗДДС и <strong>не се включват</strong> в годишния оборот по чл. 168в, ал. 1 ЗДДС.
+          </p>
+
+          <p>
+            Следователно за всяка отделна продажба на криптоактив въпросът е един: <strong>къде е мястото на изпълнение на тази доставка?</strong> А отговорът зависи изцяло от това кой е получателят – т.е. кой е насрещната страна по сделката и какъв е неговият статут.
+          </p>
+
+          <p>Приложимите правила в ЗДДС са три:</p>
+
+          <ul>
+            <li><strong>Чл. 21, ал. 2 ЗДДС</strong> – когато получателят е данъчно задължено лице, мястото на изпълнение е мястото, където получателят е установил независимата си икономическа дейност. Ако купувачът е борса, установена в Ирландия, мястото на изпълнение е в Ирландия.</li>
+            <li><strong>Чл. 21, ал. 1 ЗДДС</strong> – когато получателят е данъчно незадължено лице, мястото на изпълнение е мястото, където доставчикът е установил своята дейност. За трейдър, установен в България, това е България.</li>
+            <li><strong>Чл. 21, ал. 5 ЗДДС</strong> – по изключение, при банкови и финансови услуги (т. 2, буква „д“) към данъчно незадължено лице, установено извън Европейския съюз, мястото на изпълнение е там, където е установен получателят.</li>
+          </ul>
+
+          <h2>Как определяме статута на насрещната страна: чл. 18 от Регламент 282/2011</h2>
+
+          <p>
+            Доставчикът рядко може да провери данъчния статут на купувача си. Затова Регламент за изпълнение (ЕС) № 282/2011 въвежда презумпции, с пряко действие във всички държави членки:
+          </p>
+
+          <ul>
+            <li><strong>чл. 18, параграф 1</strong> – доставчикът може да приеме, че получател, установен в Общността, е <strong>данъчно задължено лице</strong>, ако получателят му е съобщил идентификационния си номер по ДДС и доставчикът е потвърдил неговата валидност (VIES), или ако разполага с друго доказателство за статута му;</li>
+            <li><strong>чл. 18, параграф 2</strong> – освен ако разполага с информация за противното, доставчикът може да приеме, че получател, установен в Общността, е <strong>данъчно незадължено лице</strong>, когато може да докаже, че този получател не му е съобщил идентификационен номер по ДДС;</li>
+            <li><strong>чл. 18, параграф 3</strong> – за получател, установен извън Общността, статутът на данъчно задължено лице се доказва със сертификат от данъчната администрация, с номер по ДДС или сходен идентификатор, или с друго доказателство за икономическа дейност.</li>
+          </ul>
+
+          <blockquote>
+            Тези три правила са ключът към тезата: <strong>там, където знаем кой е купувачът и че той е данъчно задължено лице, оборотът „отива при него“; там, където купувачът е анонимен и не ни е съобщил ДДС номер, оборотът остава при нас.</strong>
+          </blockquote>
+
+          <h2>CEX: един акаунт, два различни договора</h2>
+
+          <p>
+            Централизираната борса изглежда като един продукт, но правно в нея съжителстват две различни услуги, които Регламент (ЕС) 2023/1114 (MiCA) разграничава изрично:
+          </p>
+
+          <ul>
+            <li><strong>управление на платформа за търговия с криптоактиви</strong> (чл. 3, параграф 1, т. 18 MiCA) – управлението на една или повече многостранни системи, които събират или улесняват събирането на множество интереси на трети лица за покупка и продажба на криптоактиви. Това е order book-ът: купувачът и продавачът са <strong>клиенти</strong>, а не борсата;</li>
+            <li><strong>обмен на криптоактиви срещу средства или срещу други криптоактиви</strong> (чл. 3, параграф 1, т. 19 и т. 20 MiCA) – сключването на договори за покупка или продажба на криптоактиви с клиенти <strong>чрез използване на собствен капитал</strong>. Тук борсата <strong>е</strong> насрещната страна.</li>
+          </ul>
+
+          <p>
+            Разделението е подсилено от <strong>чл. 76, параграф 5 MiCA</strong>, според който доставчикът, управляващ платформа за търговия, не може да търгува за собствена сметка на платформата, която управлява, включително когато предоставя обмен на криптоактиви срещу средства или други криптоактиви. С други думи, регулаторната рамка сама изисква двата канала да бъдат отделени.
+          </p>
+
+          <p>
+            Регистърът на ESMA показва това нагледно. <strong>Kraken</strong> е лицензиран от Централната банка на Ирландия на 25.06.2025 г. чрез две отделни дружества: <em>Payward Global Solutions Limited</em> – единствено за управление на платформа за търговия, и <em>Payward Europe Solutions Limited</em> – за попечителство, обмен срещу средства и срещу други криптоактиви, изпълнение на нареждания от името на клиенти и др., с паспорт за всички държави от ЕИП, включително България.
+          </p>
+
+          <h2>Канал 1: Instant Sell, Convert и подобни – борсата е купувач</h2>
+
+          <p>
+            Когато трейдърът натисне „Instant Sell“ в Kraken или „Convert“ в Binance, той не излага поръчка на пазара. Той получава котировка от самата борса и продава на нея. Общите условия на Kraken за ЕИП предвиждат, че при моменталните покупки и продажби Kraken действа като принципал. В условията на Binance за услугата Convert формулировката е още по-категорична: „Binance is your counterparty on all Conversions“.
+          </p>
+
+          <p>
+            Купувачът в тази хипотеза е <strong>лицензиран доставчик на услуги за криптоактиви</strong> – юридическо лице с LEI код, вписано в публичен регистър, което по дефиниция извършва икономическа дейност. Статутът му на данъчно задължено лице може да бъде доказан по чл. 18, параграф 1, буква „б“ или параграф 3 от Регламент 282/2011. Следователно:
+          </p>
+
+          <blockquote>
+            <em>Продажба през Instant Sell / Convert → получател – данъчно задължено лице → чл. 21, ал. 2 ЗДДС → място на изпълнение в държавата на борсата → доставката <strong>не участва</strong> в годишния оборот в страната по чл. 168в ЗДДС.</em>
+          </blockquote>
+
+          <p>
+            Две уточнения за Binance. Първо, Binance не е получил лиценз по MiCA – оттеглил е заявлението си в Гърция на 21.06.2026 г. и след края на преходния период на 01.07.2026 г. ограничава услугите си за клиенти от ЕС. Второ, за сделки от по-ранни периоди меродавно е кое дружество на групата е било насрещна страна според общите условия към датата на сделката. Ако то е установено извън ЕС, резултатът е същият – мястото на изпълнение е извън България, защото получателят е данъчно задължено лице (чл. 21, ал. 2 ЗДДС във връзка с чл. 18, параграф 3 от Регламент 282/2011).
+          </p>
+
+          <h2>Канал 2: Order book – купувачът е анонимен</h2>
+
+          <p>
+            При пазарна или лимитна поръчка в order book-а поръчката на трейдъра се съпоставя с насрещна поръчка на друг клиент. Продавачът не знае кой е купувачът, а купувачът не му е съобщил идентификационен номер по ДДС. По чл. 18, параграф 2 от Регламент 282/2011 доставчикът може да приеме, че такъв получател е <strong>данъчно незадължено лице</strong>. Следователно:
+          </p>
+
+          <blockquote>
+            <em>Продажба през order book → анонимен получател без ДДС номер → презумпция за данъчно незадължено лице → чл. 21, ал. 1 ЗДДС → място на изпълнение в България → доставката <strong>участва</strong> в годишния оборот в страната по чл. 168в ЗДДС.</em>
+          </blockquote>
+
+          <p>Тук има две уговорки, които трябва да се имат предвид:</p>
+
+          <ul>
+            <li><strong>Matched principal и чл. 28 от Директивата.</strong> Чл. 76, параграф 6 MiCA допуска платформата да търгува чрез съпоставяне на насрещни сделки за собствена сметка (matched principal trading), ако клиентът е дал съгласие. Освен това, ако борсата изпълнява поръчките <strong>от свое име</strong>, но за сметка на клиентите, чл. 28 от Директивата приравнява посредника на лице, което само е получило и доставило услугата. И в двата случая борсата се оказва правна насрещна страна и сделката се премества в Канал 1. При Kraken например клиентите от ЕИП достъпват платформата чрез Payward Europe Solutions, която е лицензирана и за изпълнение на нареждания от името на клиенти – затова конкретният правен механизъм трябва да се провери в общите условия за съответния период.</li>
+            <li><strong>Регистърът понякога сам дава отговора.</strong> Някои лицензирани борси изобщо нямат разрешение за управление на платформа за търговия. Bybit EU GmbH (Австрия) например е лицензирана за попечителство, обмен срещу средства и срещу други криптоактиви, пласиране и прехвърляне – но не и за управление на платформа или изпълнение на нареждания. При такава борса и привидният „order book“ правно може да функционира само като обмен срещу собствен капитал, т.е. като Канал 1.</li>
+          </ul>
+
+          <h2>DEX: пул без собственик</h2>
+
+          <p>
+            Uniswap, SushiSwap, PancakeSwap и сходните протоколи работят чрез автоматизирани маркет мейкъри: смарт договори, в които доставчици на ликвидност (liquidity providers, LP) депозират двойки токени, а цената се определя алгоритмично. Когато трейдърът разменя токен през пула, той <strong>не сключва договор с юридическо лице</strong>. Разработчикът на протокола поддържа интерфейса, но не е страна по размяната. Самият пул е програмен код, а токените в него принадлежат на анонимни доставчици на ликвидност.
+          </p>
+
+          <p>
+            Две последици следват от това. Първо, MiCA изрично изключва от обхвата си криптоуслуги, предоставяни по напълно децентрализиран начин без посредник (съображение 22) – няма лиценз, няма вписване в регистъра на ESMA, няма идентифицируем доставчик. Второ, по ЗДДС данъчно задължено е <strong>лице</strong>, което извършва независима икономическа дейност (чл. 3, ал. 1 ЗДДС; чл. 9 от Директивата). Смарт договорът не е лице. Икономическите насрещни страни са доставчиците на ликвидност, които са неидентифицирани и не са съобщили ДДС номер. Следователно:
+          </p>
+
+          <blockquote>
+            <em>Размяна през DEX → няма идентифицирана насрещна страна, няма ДДС номер → чл. 18, параграф 2 от Регламент 282/2011 → чл. 21, ал. 1 ЗДДС → място на изпълнение в България → доставката <strong>участва</strong> в годишния оборот в страната.</em>
+          </blockquote>
+
+          <p>
+            Това, че трейдърът „използва пула за ликвидност“, не променя резултата. Пулът не е купувач, а техническа инфраструктура – функционално по-близка до order book-а, отколкото до Instant Sell. Икономически DEX е order book без оператор.
+          </p>
+
+          <p>
+            Една бележка за размените „криптоактив срещу криптоактив“, които са типични за DEX. Делото Hedqvist е за обмен срещу фиатна валута; Съдът не се е произнасял изрично по размяна между два криптоактива. За целите на прага това не е съществено: ако размяната е освободена финансова услуга, тя попада в чл. 168в, ал. 1, т. 3, а ако се приеме за облагаема – в т. 1. И в двата случая, при място на изпълнение в България, тя се брои.
+          </p>
+
+          <h2>Практически пример</h2>
+
+          <p>
+            Физическо лице, установено в България, търгува системно и дейността му отговаря на критериите за икономическа дейност. През 2026 г. реализира следните продажби (в евро):
+          </p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Канал</th><th>Стойност</th><th>Насрещна страна</th><th>Място на изпълнение</th><th>В оборота по чл. 168в?</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Kraken – Instant Sell</td><td>30 000</td><td>Payward Europe Solutions Ltd (IE) – принципал</td><td>Ирландия – чл. 21, ал. 2</td><td>Не</td></tr>
+                <tr><td>Kraken Pro – order book</td><td>25 000</td><td>Анонимни клиенти</td><td>България – чл. 21, ал. 1</td><td>Да</td></tr>
+                <tr><td>Binance Convert (I–VI.2026)</td><td>12 000</td><td>Дружество от групата Binance – принципал</td><td>Извън България – чл. 21, ал. 2</td><td>Не</td></tr>
+                <tr><td>Uniswap – размени</td><td>20 000</td><td>Неидентифицирани доставчици на ликвидност</td><td>България – чл. 21, ал. 1</td><td>Да</td></tr>
+                <tr><td><strong>Общо</strong></td><td><strong>87 000</strong></td><td></td><td></td><td><strong>45 000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Годишният оборот в страната е <strong>45 000 евро</strong> – под прага от 51 130 евро, и задължение за регистрация по чл. 96, ал. 1 ЗДДС не възниква. Ако се приеме обратната, опростена позиция – че целият обем от 87 000 евро е оборот в страната – прагът е надвишен и лицето е длъжно да подаде заявление в 7-дневен срок от деня на надвишаването. Разликата е изцяло в правилното определяне на получателя по всяка отделна сделка.
+          </p>
+
+          <h2>Слабите места и как да бъдат покрити</h2>
+
+          <p>
+            Тезата е защитима, но не е безрискова. Ето къде би атакувала приходната администрация и с какво да се подготвим:
+          </p>
+
+          <ul>
+            <li><strong>Икономическата дейност.</strong> Всичко по-горе предполага, че лицето е данъчно задължено. Ако не е, няма оборот за броене – но не може да се твърди едновременно, че дейността е лично портфолио и че част от оборота е „при борсата“.</li>
+            <li><strong>Правният механизъм на order book-а.</strong> Ако общите условия показват matched principal или изпълнение от името на борсата (чл. 28 от Директивата), сделките се преквалифицират в Канал 1. Това е в полза на трейдъра, но изисква последователност – не може един и същ механизъм да се третира различно в различни периоди без промяна в условията.</li>
+            <li><strong>Анонимен купувач извън ЕС.</strong> Презумпцията по чл. 18, параграф 2 се отнася до получател, установен в Общността. Ако анонимният купувач е извън ЕС, приложим би бил чл. 21, ал. 5 ЗДДС и мястото на изпълнение също би било извън страната. Трейдърът обаче не може да докаже това, така че включването на order book-а в оборота е <strong>консервативният</strong> и последователен подход.</li>
+            <li><strong>Доказателствата.</strong> За всеки период трябва да се съхраняват: версията на общите условия към датата на сделките; извлечение от регистъра на ESMA за съответното дружество; LEI код и проверка на ДДС номера му във VIES; отчети от борсата, от които се вижда видът на поръчката (Instant/Convert срещу market/limit). Повечето експорти от инструменти като Koinly не разграничават тези канали автоматично и изискват ръчно маркиране.</li>
+            <li><strong>Данъчната основа.</strong> Отделен, нерешен въпрос е дали оборотът се измерва с брутната продажна стойност или с нетния резултат. В делото First National Bank of Chicago (C-172/96) Съдът приема, че при валутни сделки без такси данъчната основа е нетният резултат от сделките за даден период. Брутната стойност е консервативната мярка за прага, но аргументът за нетния резултат заслужава отделна статия.</li>
+            <li><strong>Видимостта за НАП.</strong> От 2026 г. доставчиците на услуги за криптоактиви докладват данни за сделките на клиентите си по Директива (ЕС) 2023/2226 (DAC8). Администрацията ще вижда общите обеми по борси, без разбивка по канали – обяснението трябва да е подготвено предварително.</li>
+          </ul>
+
+          <h2>Обобщение</h2>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Канал</th><th>Насрещна страна</th><th>Статут (Рег. 282/2011)</th><th>Място (ЗДДС)</th><th>Оборот по чл. 168в</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>CEX – Instant Sell / Convert</td><td>Борсата (обмен срещу собствен капитал, чл. 3(1)(19)–(20) MiCA)</td><td>Данъчно задължено – чл. 18(1) / 18(3)</td><td>Държавата на борсата – чл. 21, ал. 2</td><td>Не (при борсата)</td></tr>
+                <tr><td>CEX – order book</td><td>Анонимни клиенти (платформа, чл. 3(1)(18) MiCA)</td><td>Данъчно незадължено – чл. 18(2)</td><td>България – чл. 21, ал. 1</td><td>Да (при нас)</td></tr>
+                <tr><td>CEX – matched principal / от името на борсата</td><td>Борсата (чл. 76(6) MiCA; чл. 28 Директива)</td><td>Данъчно задължено</td><td>Държавата на борсата – чл. 21, ал. 2</td><td>Не</td></tr>
+                <tr><td>DEX – Uniswap, SushiSwap, PancakeSwap</td><td>Няма лице; анонимни доставчици на ликвидност</td><td>Данъчно незадължено – чл. 18(2)</td><td>България – чл. 21, ал. 1</td><td>Да (при нас)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <hr>
+
+          <p>
+            <em>Настоящата публикация има информационен характер и не представлява правна или данъчна консултация. За конкретни случаи препоръчвам консултация с лицензиран данъчен консултант или адвокат.</em>
+          </p>
+
+          <h2>Източници</h2>
+
+          <ul>
+            <li>EUR-Lex / CURIA — C-264/14 Hedqvist; C-172/96 First National Bank of Chicago</li>
+            <li>ЗДДС — чл. 3, чл. 21, ал. 1, 2 и 5, чл. 46, ал. 1, чл. 96, ал. 1, чл. 168в и § 1, т. 105 ДР (ДВ бр. 115/2025 г., в сила от 01.01.2026 г.; последно изменение ДВ бр. 69/2026 г.)</li>
+            <li>Регламент за изпълнение (ЕС) № 282/2011 — чл. 18</li>
+            <li>Регламент (ЕС) 2023/1114 (MiCA) — чл. 3, параграф 1, т. 18–21, чл. 76, параграфи 5 и 6, съображение 22</li>
+            <li>Interim MiCA Register на ESMA (актуализация от 24.09.2026 г.)</li>
+            <li>Становище на ЦУ на НАП изх. № М-24-31-32/08.07.2014 г.; становище на ДОДОП – Пловдив от 28.09.2026 г.</li>
+            <li>Общи условия на Kraken (EEA) и Binance (Convert)</li>
+          </ul>
+
+        </div><!-- /lang-content bg -->
+
+
+        <!-- ═══════════════════════════════════════ ENGLISH CONTENT ═══════════════════════════════════════ -->
+        <div class="lang-content" data-lang="en" style="display:none;">
+
+          <p>
+            <em>An analysis of the place of supply when selling crypto-assets through centralised and decentralised platforms, and what it means for annual turnover under Art. 168c of the Bulgarian VAT Act</em>
+          </p>
+
+          <h2>The starting point: exchanging cryptocurrency is an exempt financial service</h2>
+
+          <p>
+            In <strong>Hedqvist (C-264/14)</strong> the Court of Justice of the EU held that exchanging traditional currency for bitcoin and back constitutes a <strong>supply of services for consideration</strong> within the meaning of Art. 2(1)(c) of Directive 2006/112/EC, and that this supply is <strong>exempt</strong> under Art. 135(1)(e) – the exemption for transactions in currency, bank notes and coins used as legal tender. In Bulgarian law that provision is transposed in <strong>Art. 46(1)(4) VAT Act</strong>. In its practice, the National Revenue Agency (NRA) has also classified bitcoin transactions as financial services under Art. 46(1)(3) VAT Act (opinion ref. No. M-24-31-32 of 08.07.2014 of the NRA’s central office).
+          </p>
+
+          <p>
+            For the purposes of this analysis, the distinction between items 3 and 4 has no practical significance: in both cases we are dealing with a <strong>financial service under Art. 46 VAT Act</strong>, and it is precisely this category that is expressly included in annual turnover under the new Art. 168c(1)(3) VAT Act.
+          </p>
+
+          <p>
+            The whole analysis below rests on one premise, discussed in detail in my previous article <a href="koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html">“When Are Securities Transactions an Economic Activity?”</a>: <strong>the person must be carrying out an independent economic activity</strong> within the meaning of Art. 3(2) VAT Act. If the sales of crypto-assets are the management of a personal portfolio, they fall outside the scope of VAT and the question of accumulating turnover does not arise at all. If, however, the trading is systematic, carried on as an occupation and aimed at earning income from the trading itself, the person is a taxable person and needs to know <strong>which of their transactions count towards the €51,130 threshold and which do not</strong>.
+          </p>
+
+          <h2>Why the place of supply decides the threshold question</h2>
+
+          <p>
+            From 01.01.2026 the threshold for mandatory registration under Art. 96(1) VAT Act is <strong>€51,130 of annual turnover in the country</strong>, tracked per calendar year under the rules of the new Art. 168c VAT Act (State Gazette issue 115/2025). Annual turnover in the country includes, alongside taxable supplies, supplies of financial services under Art. 46, unless they are <strong>ancillary supplies</strong> – supplies not connected with the person’s usual economic activity and of a secondary or incidental nature (§ 1(105) of the Supplementary Provisions of the VAT Act). For a professional trader, selling crypto-assets is the activity itself, so the ancillary-supplies exception does not help them.
+          </p>
+
+          <p>
+            What is decisive, however, is something else: the threshold is calculated on <strong>turnover in the country</strong>, i.e. on supplies whose place of supply is in Bulgaria. This follows from the logic of Art. 288 of the Directive as amended by Directive (EU) 2020/285, which distinguishes annual turnover in the Member State concerned from annual turnover in the Union. In a recent opinion of 28.09.2026, the NRA’s “ODOP” Directorate in Plovdiv accepted that services supplied to a taxable person in another Member State have their place of supply outside the country under Art. 21(2) VAT Act and <strong>are not included</strong> in annual turnover under Art. 168c(1) VAT Act.
+          </p>
+
+          <p>
+            So for every single sale of a crypto-asset there is one question: <strong>where is the place of supply of this particular supply?</strong> And the answer depends entirely on who the recipient is – i.e. who the counterparty to the trade is and what their status is.
+          </p>
+
+          <p>There are three applicable rules in the VAT Act:</p>
+
+          <ul>
+            <li><strong>Art. 21(2) VAT Act</strong> – where the recipient is a taxable person, the place of supply is where the recipient has established its independent economic activity. If the buyer is an exchange established in Ireland, the place of supply is in Ireland.</li>
+            <li><strong>Art. 21(1) VAT Act</strong> – where the recipient is a non-taxable person, the place of supply is where the supplier has established its business. For a trader established in Bulgaria, that is Bulgaria.</li>
+            <li><strong>Art. 21(5) VAT Act</strong> – by way of exception, for banking and financial services (item 2(e)) supplied to a non-taxable person established outside the European Union, the place of supply is where the recipient is established.</li>
+          </ul>
+
+          <h2>How we determine the counterparty’s status: Art. 18 of Regulation 282/2011</h2>
+
+          <p>
+            A supplier can rarely verify the tax status of its buyer. That is why Implementing Regulation (EU) No 282/2011 introduces presumptions that apply directly in all Member States:
+          </p>
+
+          <ul>
+            <li><strong>Art. 18(1)</strong> – the supplier may regard a recipient established within the Community as a <strong>taxable person</strong> if the recipient has communicated its VAT identification number and the supplier has confirmed its validity (VIES), or if the supplier has other evidence of that status;</li>
+            <li><strong>Art. 18(2)</strong> – unless it has information to the contrary, the supplier may regard a recipient established within the Community as a <strong>non-taxable person</strong> where it can show that the recipient has not communicated a VAT identification number;</li>
+            <li><strong>Art. 18(3)</strong> – for a recipient established outside the Community, taxable-person status is evidenced by a certificate from the tax authority, by a VAT number or similar identifier, or by any other proof of economic activity.</li>
+          </ul>
+
+          <blockquote>
+            These three rules are the key to the argument: <strong>where we know who the buyer is and that they are a taxable person, the turnover “goes to them”; where the buyer is anonymous and has not given us a VAT number, the turnover stays with us.</strong>
+          </blockquote>
+
+          <h2>CEX: one account, two different contracts</h2>
+
+          <p>
+            A centralised exchange looks like a single product, but legally it houses two different services, which Regulation (EU) 2023/1114 (MiCA) expressly distinguishes:
+          </p>
+
+          <ul>
+            <li><strong>operation of a trading platform for crypto-assets</strong> (Art. 3(1)(18) MiCA) – the management of one or more multilateral systems that bring together, or facilitate the bringing together of, multiple third-party buying and selling interests in crypto-assets. That is the order book: the buyer and the seller are <strong>clients</strong>, not the exchange;</li>
+            <li><strong>exchange of crypto-assets for funds or for other crypto-assets</strong> (Art. 3(1)(19) and (20) MiCA) – concluding contracts with clients for the purchase or sale of crypto-assets <strong>using proprietary capital</strong>. Here the exchange <strong>is</strong> the counterparty.</li>
+          </ul>
+
+          <p>
+            The separation is reinforced by <strong>Art. 76(5) MiCA</strong>, under which a provider operating a trading platform may not deal on own account on the platform it operates, including when it provides the exchange of crypto-assets for funds or other crypto-assets. In other words, the regulatory framework itself requires the two channels to be kept apart.
+          </p>
+
+          <p>
+            The ESMA register shows this clearly. <strong>Kraken</strong> was authorised by the Central Bank of Ireland on 25.06.2025 through two separate companies: <em>Payward Global Solutions Limited</em> – solely for operating a trading platform – and <em>Payward Europe Solutions Limited</em> – for custody, exchange for funds and for other crypto-assets, execution of orders on behalf of clients and more, passported to all EEA countries, including Bulgaria.
+          </p>
+
+          <h2>Channel 1: Instant Sell, Convert and the like – the exchange is the buyer</h2>
+
+          <p>
+            When a trader hits “Instant Sell” on Kraken or “Convert” on Binance, they are not placing an order on the market. They get a quote from the exchange itself and sell to it. Kraken’s EEA terms provide that for instant buys and sells Kraken acts as principal. Binance’s terms for its Convert service are even more categorical: “Binance is your counterparty on all Conversions”.
+          </p>
+
+          <p>
+            In this scenario the buyer is a <strong>licensed crypto-asset service provider</strong> – a legal entity with an LEI code, entered in a public register, which by definition carries out an economic activity. Its status as a taxable person can be evidenced under Art. 18(1)(b) or Art. 18(3) of Regulation 282/2011. Therefore:
+          </p>
+
+          <blockquote>
+            <em>Sale via Instant Sell / Convert → recipient is a taxable person → Art. 21(2) VAT Act → place of supply in the exchange’s country → the supply <strong>does not count</strong> towards annual turnover in the country under Art. 168c VAT Act.</em>
+          </blockquote>
+
+          <p>
+            Two clarifications on Binance. First, Binance has not obtained a MiCA licence – it withdrew its application in Greece on 21.06.2026 and, after the end of the transitional period on 01.07.2026, is restricting its services to EU clients. Second, for trades from earlier periods, what matters is which group company was the counterparty under the terms in force at the date of the trade. If it is established outside the EU, the result is the same – the place of supply is outside Bulgaria, because the recipient is a taxable person (Art. 21(2) VAT Act in conjunction with Art. 18(3) of Regulation 282/2011).
+          </p>
+
+          <h2>Channel 2: Order book – the buyer is anonymous</h2>
+
+          <p>
+            With a market or limit order in the order book, the trader’s order is matched against an opposing order from another client. The seller does not know who the buyer is, and the buyer has not communicated a VAT identification number. Under Art. 18(2) of Regulation 282/2011 the supplier may regard such a recipient as a <strong>non-taxable person</strong>. Therefore:
+          </p>
+
+          <blockquote>
+            <em>Sale via order book → anonymous recipient with no VAT number → presumption of a non-taxable person → Art. 21(1) VAT Act → place of supply in Bulgaria → the supply <strong>counts</strong> towards annual turnover in the country under Art. 168c VAT Act.</em>
+          </blockquote>
+
+          <p>There are two caveats to keep in mind here:</p>
+
+          <ul>
+            <li><strong>Matched principal and Art. 28 of the Directive.</strong> Art. 76(6) MiCA allows the platform to engage in matched principal trading – dealing on own account by matching opposing trades – if the client has consented. In addition, if the exchange executes orders <strong>in its own name</strong> but on behalf of clients, Art. 28 of the Directive treats the intermediary as having received and supplied the service itself. In both cases the exchange turns out to be the legal counterparty and the trade moves to Channel 1. With Kraken, for example, EEA clients access the platform through Payward Europe Solutions, which is also licensed to execute orders on behalf of clients – so the specific legal mechanism needs to be checked in the terms for the relevant period.</li>
+            <li><strong>Sometimes the register gives the answer itself.</strong> Some licensed exchanges have no authorisation to operate a trading platform at all. Bybit EU GmbH (Austria), for instance, is licensed for custody, exchange for funds and for other crypto-assets, placing and transfer – but not for operating a platform or executing orders. On such an exchange, even an apparent “order book” can legally function only as an exchange against proprietary capital, i.e. as Channel 1.</li>
+          </ul>
+
+          <h2>DEX: a pool with no owner</h2>
+
+          <p>
+            Uniswap, SushiSwap, PancakeSwap and similar protocols operate through automated market makers: smart contracts into which liquidity providers (LPs) deposit token pairs, with the price set algorithmically. When a trader swaps a token through the pool, they <strong>do not enter into a contract with a legal entity</strong>. The protocol developer maintains the interface but is not a party to the swap. The pool itself is code, and the tokens in it belong to anonymous liquidity providers.
+          </p>
+
+          <p>
+            Two consequences follow. First, MiCA expressly excludes from its scope crypto-asset services provided in a fully decentralised manner without any intermediary (recital 22) – no licence, no entry in the ESMA register, no identifiable provider. Second, under the VAT Act a taxable person is a <strong>person</strong> carrying out an independent economic activity (Art. 3(1) VAT Act; Art. 9 of the Directive). A smart contract is not a person. The economic counterparties are the liquidity providers, who are unidentified and have not communicated a VAT number. Therefore:
+          </p>
+
+          <blockquote>
+            <em>Swap via DEX → no identified counterparty, no VAT number → Art. 18(2) of Regulation 282/2011 → Art. 21(1) VAT Act → place of supply in Bulgaria → the supply <strong>counts</strong> towards annual turnover in the country.</em>
+          </blockquote>
+
+          <p>
+            The fact that the trader “uses the liquidity pool” does not change the outcome. The pool is not a buyer but technical infrastructure – functionally closer to an order book than to Instant Sell. Economically, a DEX is an order book without an operator.
+          </p>
+
+          <p>
+            One note on “crypto-for-crypto” swaps, which are typical on a DEX. Hedqvist concerned exchange against fiat currency; the Court has not ruled expressly on a swap between two crypto-assets. For threshold purposes this does not matter: if the swap is an exempt financial service, it falls under Art. 168c(1)(3); if it is treated as taxable, under item 1. Either way, with the place of supply in Bulgaria, it counts.
+          </p>
+
+          <h2>A worked example</h2>
+
+          <p>
+            An individual established in Bulgaria trades systematically, and their activity meets the criteria for an economic activity. In 2026 they make the following sales (in euro):
+          </p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Channel</th><th>Value</th><th>Counterparty</th><th>Place of supply</th><th>In turnover under Art. 168c?</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Kraken – Instant Sell</td><td>30,000</td><td>Payward Europe Solutions Ltd (IE) – principal</td><td>Ireland – Art. 21(2)</td><td>No</td></tr>
+                <tr><td>Kraken Pro – order book</td><td>25,000</td><td>Anonymous clients</td><td>Bulgaria – Art. 21(1)</td><td>Yes</td></tr>
+                <tr><td>Binance Convert (Jan–Jun 2026)</td><td>12,000</td><td>Binance group company – principal</td><td>Outside Bulgaria – Art. 21(2)</td><td>No</td></tr>
+                <tr><td>Uniswap – swaps</td><td>20,000</td><td>Unidentified liquidity providers</td><td>Bulgaria – Art. 21(1)</td><td>Yes</td></tr>
+                <tr><td><strong>Total</strong></td><td><strong>87,000</strong></td><td></td><td></td><td><strong>45,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Annual turnover in the country is <strong>€45,000</strong> – below the €51,130 threshold, so no obligation to register under Art. 96(1) VAT Act arises. If the opposite, simplified position is taken – that the entire €87,000 volume is turnover in the country – the threshold is exceeded and the person must file an application within 7 days of the day it was exceeded. The whole difference lies in correctly identifying the recipient of each individual trade.
+          </p>
+
+          <h2>The weak spots and how to cover them</h2>
+
+          <p>
+            The argument is defensible, but not risk-free. Here is where the revenue authority would attack, and how to prepare:
+          </p>
+
+          <ul>
+            <li><strong>The economic activity.</strong> Everything above assumes the person is a taxable person. If they are not, there is no turnover to count – but one cannot argue at the same time that the activity is a personal portfolio and that part of the turnover sits “with the exchange”.</li>
+            <li><strong>The legal mechanism of the order book.</strong> If the terms show matched principal or execution in the exchange’s own name (Art. 28 of the Directive), the trades are reclassified into Channel 1. This works in the trader’s favour, but requires consistency – the same mechanism cannot be treated differently in different periods without a change in the terms.</li>
+            <li><strong>An anonymous buyer outside the EU.</strong> The presumption in Art. 18(2) concerns a recipient established within the Community. If the anonymous buyer is outside the EU, Art. 21(5) VAT Act would apply and the place of supply would also be outside the country. The trader cannot prove this, however, so including the order book in turnover is the <strong>conservative</strong> and consistent approach.</li>
+            <li><strong>The evidence.</strong> For each period you should keep: the version of the terms in force at the date of the trades; an extract from the ESMA register for the relevant company; its LEI code and a VIES check of its VAT number; exchange statements showing the order type (Instant/Convert versus market/limit). Most exports from tools such as Koinly do not separate these channels automatically and require manual tagging.</li>
+            <li><strong>The tax base.</strong> A separate, unresolved question is whether turnover is measured by gross sale value or by the net result. In First National Bank of Chicago (C-172/96) the Court held that for foreign-exchange transactions without fees, the taxable amount is the net result of the transactions over a given period. Gross value is the conservative measure for the threshold, but the net-result argument deserves an article of its own.</li>
+            <li><strong>Visibility to the NRA.</strong> From 2026, crypto-asset service providers report their clients’ transaction data under Directive (EU) 2023/2226 (DAC8). The authority will see total volumes per exchange, with no breakdown by channel – the explanation should be prepared in advance.</li>
+          </ul>
+
+          <h2>Summary</h2>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Channel</th><th>Counterparty</th><th>Status (Reg. 282/2011)</th><th>Place (VAT Act)</th><th>Turnover under Art. 168c</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>CEX – Instant Sell / Convert</td><td>The exchange (exchange against proprietary capital, Art. 3(1)(19)–(20) MiCA)</td><td>Taxable – Art. 18(1) / 18(3)</td><td>Exchange’s country – Art. 21(2)</td><td>No (with the exchange)</td></tr>
+                <tr><td>CEX – order book</td><td>Anonymous clients (platform, Art. 3(1)(18) MiCA)</td><td>Non-taxable – Art. 18(2)</td><td>Bulgaria – Art. 21(1)</td><td>Yes (with us)</td></tr>
+                <tr><td>CEX – matched principal / in the exchange’s name</td><td>The exchange (Art. 76(6) MiCA; Art. 28 Directive)</td><td>Taxable</td><td>Exchange’s country – Art. 21(2)</td><td>No</td></tr>
+                <tr><td>DEX – Uniswap, SushiSwap, PancakeSwap</td><td>No person; anonymous liquidity providers</td><td>Non-taxable – Art. 18(2)</td><td>Bulgaria – Art. 21(1)</td><td>Yes (with us)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <hr>
+
+          <p>
+            <em>This publication is for information purposes only and does not constitute legal or tax advice. For specific cases I recommend consulting a licensed tax adviser or lawyer.</em>
+          </p>
+
+          <h2>Sources</h2>
+
+          <ul>
+            <li>EUR-Lex / CURIA — C-264/14 Hedqvist; C-172/96 First National Bank of Chicago</li>
+            <li>Bulgarian VAT Act — Art. 3, Art. 21(1), (2) and (5), Art. 46(1), Art. 96(1), Art. 168c and § 1(105) of the Supplementary Provisions (SG issue 115/2025, in force from 01.01.2026; last amended SG issue 69/2026)</li>
+            <li>Implementing Regulation (EU) No 282/2011 — Art. 18</li>
+            <li>Regulation (EU) 2023/1114 (MiCA) — Art. 3(1)(18)–(21), Art. 76(5) and (6), recital 22</li>
+            <li>ESMA Interim MiCA Register (update of 24.09.2026)</li>
+            <li>NRA central office opinion ref. No. M-24-31-32/08.07.2014; opinion of the DODOP Directorate – Plovdiv of 28.09.2026</li>
+            <li>Terms and conditions of Kraken (EEA) and Binance (Convert)</li>
+          </ul>
+
+        </div><!-- /lang-content en -->
+
+
+        <!-- SHARE (always visible) -->
+        <hr>
+        <div class="post-share">
+          <p class="share-label" data-key="share_label">Сподели</p>
+          <div class="share-buttons">
+
+            <button class="share-btn" id="shareNative" style="display:none;">
+              📤 <span data-key="share_native">Сподели</span>
+            </button>
+
+            <a href="#" class="share-btn" id="shareTwitter" target="_blank" rel="noopener">
+              ✕ Twitter
+            </a>
+
+            <a href="#" class="share-btn" id="shareFacebook" target="_blank" rel="noopener">
+              f Facebook
+            </a>
+
+            <a href="#" class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener">
+              in LinkedIn
+            </a>
+
+            <button class="share-btn" id="shareCopy" data-key="share_copy">
+              🔗 Копирай линк
+            </button>
+
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <a href="../donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
