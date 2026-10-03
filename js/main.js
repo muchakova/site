@@ -14,6 +14,7 @@ const translations = {
     nav_projects:   'Проекти',
     nav_blog:       'Блог',
     nav_contact:    'Контакти',
+    nav_game:       'Игра',
     nav_booking:    'Запази час',
     lang_btn:       'EN',
 
@@ -200,6 +201,7 @@ const translations = {
     nav_projects:   'Projects',
     nav_blog:       'Blog',
     nav_contact:    'Contact',
+    nav_game:       'Game',
     nav_booking:    'Book a Meeting',
     lang_btn:       'BG',
 
@@ -424,6 +426,9 @@ function applyLanguage(lang) {
   if (titleByLang) {
     document.title = titleByLang;
   }
+
+  // Let page-specific scripts (e.g. the game) follow the language toggle.
+  document.dispatchEvent(new CustomEvent('mm:lang', { detail: lang }));
 }
 
 // ============ NAVBAR SCROLL EFFECT ============

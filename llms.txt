@@ -22,6 +22,7 @@ She works across three main projects:
 - Homepage: https://muchakova.com/
 - Blog: https://muchakova.com/blog.html
 - Book a consultation: https://muchakova.com/booking/
+- Game "Marina vs the Tax Zombies" (3-minute browser game, BG + EN): https://muchakova.com/game/
 - Language: Bulgarian (primary) + English (toggle available on every page)
 
 ## Blog Articles

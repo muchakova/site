@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Кратка безплатна игра: Марина Мучакова спасява граждани от данъчни зомбита, ревизии и глоби. Превърта се за 3 минути." />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/game/" />
+
+  <title>Марина срещу данъчните зомбита — игра</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muchakova.com/game/" />
+  <meta property="og:title" content="Марина срещу данъчните зомбита" />
+  <meta property="og:description" content="Кратка безплатна игра: Марина Мучакова спасява граждани от данъчни зомбита, ревизии и глоби. Превърта се за 3 минути." />
+  <meta property="og:image" content="https://muchakova.com/game/og-game.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Марина хвърля параграфи по данъчни зомбита пред архива, а отзад стои Главният Ревизор" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="Марина срещу данъчните зомбита" />
+  <meta name="twitter:description" content="Кратка безплатна игра: Марина Мучакова спасява граждани от данъчни зомбита, ревизии и глоби. Превърта се за 3 минути." />
+  <meta name="twitter:image" content="https://muchakova.com/game/og-game.png" />
+
+  <!-- Google Fonts: Inter (site) + Golos Text / PT Mono / Russo One (game) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Golos+Text:wght@400;600;700&family=PT+Mono&family=Russo+One&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+  /* Game styles are scoped to .mg so they don't clash with the site's .btn, headings, etc.
+     Layout: one game "cabinet" (HUD strip + night-street stage); every menu screen is an official paper document with a stamp */
+  .mg{
+    --night:#121729; --street:#1b2240; --line:#2e3863; --lamp:#f2b544; --paper:#f3eee0; --paper-2:#e9e1cb;
+    --ink:#1d2236; --ink-2:#5a5f75; --stamp:#c9443a; --sage:#93ab8c; --hero:#5b8def; --muted:#a3abcb;
+    --display:"Russo One","Arial Black",system-ui,sans-serif;
+    --body:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:"PT Mono",ui-monospace,"Courier New",monospace;
+    color-scheme:dark;
+    background:var(--night);color:var(--paper);
+    font-family:var(--body);font-size:16px;line-height:1.5;
+  }
+  .mg a{color:inherit}
+  .mg h1,.mg h2,.mg h3{letter-spacing:normal}
+  .mg .wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:20px 36px;display:flex;flex-direction:column;gap:14px}
+  .mg .top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .mg .top>div{min-width:0}
+  .mg .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lamp)}
+  .mg h1{font-family:var(--display);font-weight:400;font-size:clamp(24px,4.6vw,42px);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+  .mg h1 span{color:var(--sage)}
+  .mg .iconbtn{font-family:var(--mono);font-size:13px;color:var(--paper);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+  .mg .iconbtn:hover{border-color:var(--muted)}
+  .mg .iconbtn:focus-visible,.mg .btn:focus-visible{outline:3px solid var(--hero);outline-offset:2px}
+  .mg .cabinet{scroll-margin-top:calc(var(--nav-height) + 8px);border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--street);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+  .mg .hud{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:13px;min-height:46px}
+  .mg .hud .lvl{color:var(--lamp);letter-spacing:.04em}
+  .mg .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .mg .chip{padding:3px 10px;border-radius:999px;background:rgba(243,238,224,.08);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .mg .chip.done{background:var(--sage);color:var(--ink)}
+  .mg .bossbar{flex:1 1 160px;max-width:340px;height:12px;border-radius:6px;background:rgba(243,238,224,.12);overflow:hidden;border:1px solid rgba(201,68,58,.6)}
+  .mg .bossbar i{display:block;height:100%;width:100%;background:var(--stamp);transition:width .15s}
+  /* Fit the whole cabinet on screen below the site navbar */
+  .mg .stage{position:relative;height:clamp(420px,calc(100svh - 230px),660px)}
+  .mg canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+  .mg .overlay{position:absolute;inset:0;display:grid;place-items:center;padding:14px;background:rgba(18,23,41,.72);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+  .mg .doc{background:var(--paper);color:var(--ink);width:min(580px,100%);max-height:100%;overflow:auto;border-radius:4px;padding:20px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.5);background-image:linear-gradient(transparent 31px,rgba(29,34,54,.05) 32px);background-size:100% 32px}
+  .mg .meta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px dashed #b7ad94;padding-bottom:9px;margin-bottom:14px}
+  .mg .stampmark{display:inline-block;transform:rotate(-6deg);border:2.5px solid var(--stamp);color:var(--stamp);font-family:var(--display);font-size:14px;letter-spacing:.08em;padding:2px 10px;border-radius:5px}
+  .mg .doc h2{font-family:var(--display);font-weight:400;font-size:clamp(21px,3.6vw,29px);line-height:1.1;margin:0 0 12px;text-wrap:balance}
+  .mg .doc h3{font-family:var(--display);font-weight:400;font-size:clamp(18px,3vw,23px);line-height:1.15;margin:0 0 8px;text-wrap:balance}
+  .mg .doc p{margin:0 0 10px;max-width:64ch}
+  .mg .howto{list-style:none;margin:6px 0 4px;padding:0;display:grid;gap:6px;font-size:14.5px}
+  .mg .howto li{display:grid;grid-template-columns:96px 1fr;gap:10px}
+  .mg .howto b{font-family:var(--mono);font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--stamp);padding-top:2px}
+  .mg .law{border:1.5px dashed #b3a27e;border-radius:6px;padding:10px 12px;background:var(--paper-2);font-size:14.5px;margin:12px 0}
+  .mg .law b{display:block;font-family:var(--mono);font-weight:400;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin-bottom:2px}
+  .mg .goal{font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+  .mg .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
+  .mg .btn{font-family:var(--body);font-weight:700;font-size:15px;line-height:1.2;padding:11px 18px;border-radius:7px;border:2px solid var(--ink);background:var(--lamp);color:var(--ink);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:normal;transition:transform .15s}
+  .mg .btn:hover{transform:translateY(-1px)}
+  .mg .btn.ghost{background:transparent}
+  .mg .btn.ink{background:var(--ink);color:var(--paper)}
+  .mg .note{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+  .mg .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:10px;margin:4px 0 16px}
+  .mg .stats div{border-top:2px solid var(--ink);padding-top:6px}
+  .mg .stats strong{display:block;font-family:var(--display);font-weight:400;font-size:26px;font-variant-numeric:tabular-nums;line-height:1.1}
+  .mg .stats span{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
+  .mg .cta{border-top:1px dashed #b7ad94;padding-top:16px;margin-top:6px}
+  .mg .contacts{font-family:var(--mono);font-size:13px;margin-top:12px;user-select:text}
+  .mg .under{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;font-size:14px;color:var(--muted)}
+  .mg .under p{margin:0;max-width:70ch}
+  .mg .under kbd{font-family:var(--mono);font-size:12px;border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--paper)}
+  .mg [hidden]{display:none!important}
+  @media (max-width:480px){.mg .howto li{grid-template-columns:1fr;gap:0}.mg .doc{padding:16px}}
+  @media (prefers-reduced-motion:reduce){.mg .btn:hover{transform:none}.mg .bossbar i{transition:none}}
+  </style>
+</head>
+<body data-title-bg="Марина срещу данъчните зомбита — игра" data-title-en="Marina vs the Tax Zombies — a game">
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Главна навигация">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about"    data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html"           data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact"  data-key="nav_contact">Контакти</a></li>
+        <li><a href="./" data-key="nav_game">Игра</a></li>
+        <li><a href="../booking/"            class="nav-cta" data-key="nav_booking">Запази час</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- GAME -->
+  <main class="mg">
+    <div class="wrap">
+      <header class="top">
+        <div>
+          <div class="eyebrow" data-g="eyebrow">muchakova.com · игра за 3 минути</div>
+          <h1 data-g="title">Марина срещу <span>данъчните зомбита</span></h1>
+        </div>
+        <button class="iconbtn" id="snd" type="button" aria-pressed="true">Звук: вкл.</button>
+      </header>
+
+      <section class="cabinet" id="cabinet" aria-label="Игра">
+        <div class="hud" id="hud">
+          <span class="lvl" id="hudLvl">Мисия</span>
+          <div class="bossbar" id="bossbar" hidden><i id="bossfill"></i></div>
+          <span class="chips" id="hudChips"></span>
+        </div>
+        <div class="stage" id="stage">
+          <canvas id="game" aria-label="Игрално поле: нощна улица пред архива"></canvas>
+          <div class="overlay" id="overlay"><div class="doc" id="card" role="dialog" aria-live="polite"></div></div>
+        </div>
+      </section>
+
+      <div class="under">
+        <p data-g="controls">Управление: <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd> или <kbd>WASD</kbd>. С мишка или пръст: задръж и влачи. Марина стреля сама.</p>
+        <p data-g="disclaimer">Хумористична игра. Зомбитата и Главният Ревизор са измислени, а истинските служители на НАП са хора, които си вършат работата. Съветите в играта са обща информация, не правна консултация.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <a href="../donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+  (()=>{
+  const $=s=>document.querySelector(s);
+  const cv=$('#game'),ctx=cv.getContext('2d'),stage=$('#stage'),ov=$('#overlay'),card=$('#card');
+  const cabinet=$('#cabinet'),hudLvl=$('#hudLvl'),hudChips=$('#hudChips'),bossbar=$('#bossbar'),bossfill=$('#bossfill'),sndBtn=$('#snd');
+  const TAU=Math.PI*2, TOP=108;
+  const rand=(a,b)=>a+Math.random()*(b-a), pick=a=>a[Math.floor(Math.random()*a.length)];
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), dist=(a,b,c,d)=>Math.hypot(a-c,b-d);
+  const FM=(px,w='400')=>`${w} ${px}px "PT Mono", ui-monospace, monospace`;
+  const FB=(px,w=600)=>`${w} ${px}px "Golos Text", system-ui, sans-serif`;
+  const FD=px=>`${px}px "Russo One", "Arial Black", sans-serif`;
+  const COL={paper:'#f3eee0',ink:'#1d2236',stamp:'#c9443a',lamp:'#f2b544',sage:'#93ab8c',hero:'#4f7ee8'};
+
+  /* ---------- i18n (follows the site's BG/EN toggle via localStorage 'mm-lang' + the 'mm:lang' event) ---------- */
+  const KBD='<kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd>';
+  const I18N={
+    bg:{
+      eyebrow:'muchakova.com · игра за 3 минути',
+      title:'Марина срещу <span>данъчните зомбита</span>',
+      controls:`Управление: ${KBD} или <kbd>WASD</kbd>. С мишка или пръст: задръж и влачи. Марина стреля сама.`,
+      disclaimer:'Хумористична игра. Зомбитата и Главният Ревизор са измислени, а истинските служители на НАП са хора, които си вършат работата. Съветите в играта са обща информация, не правна консултация.',
+      cabinet:'Игра', canvas:'Игрално поле: нощна улица пред архива',
+      sndOn:'Звук: вкл.', sndOff:'Звук: изкл.',
+      waves:['Ниво 1 · Писмото от НАП','Ниво 2 · Тримесечната проверка'],
+      waveShort:['Писмото от НАП','Тримесечната проверка'],
+      papers:['РЕВИЗИЯ','ГЛОБА','АУАН','ПРОВЕРКА','ЗАПОР','ЛИХВИ','ДОП. ДДС','ПРИЗОВКА'],
+      bossPapers:['ПЕЧАТ','РА','ПРЕДПИСАНИЕ','ОТКАЗ','РЕВИЗИЯ'],
+      catch:['Обжалвано!','Възражение!','По закона!','Отхвърлено!','Има срок!'],
+      thanks:['Благодаря!','Ще подам ГДД до 30 април!','Значи имало срок за жалба!','Спасена съм!','Вече знам какво да декларирам!','Ура, без ДДС регистрация!'],
+      calm:['Всичко е изрядно.','Отивам за кафе.','Нямам въпроси.','Приключвам.','Хм, по закона е.'],
+      bossSay:['ДОКУМЕНТИТЕ, МОЛЯ!','КЪДЕ Е ДЕКЛАРАЦИЯТА?','ЩЕ ИМА РЕВИЗИЯ!','ПЕЧАТ! ПЕЧАТ!'],
+      bossFirst:'ДОКУМЕНТИТЕ, МОЛЯ!', bossPh2:'ТОВА… ПО ЗАКОНА ЛИ Е?!', bossDown:'Всичко е изрядно. Приключвам ревизията.',
+      people:['Фрийлансър','Крипто инвеститор','Пенсионерка','Малък бизнес','Наемодател','Студент с ETF','Програмистка','Земеделец'],
+      finaleBig:'Финал · Главният Ревизор', cleared:'Нивото е чисто!', ouch:'Ох!', espresso:'Двойно еспресо!', cup:'ЕСПРЕСО',
+      boss:'ГЛАВНИЯТ РЕВИЗОР', exBoss:'БИВШ РЕВИЗОР', sign:'АРХИВ · ВХОД САМО ЗА РЕВИЗОРИ',
+      hudMission:'Мисия: спаси гражданите', hudDone:'Мисията е изпълнена', hudFinale:'Финал · Главният Ревизор',
+      rescued:'Спасени', calmed:'Успокоени', appealed:'Обжалвани',
+      cards:[
+        ()=>`<div class="meta"><span>Вх. № 2026-10/01 · гр. София</span><span class="stampmark">СПЕШНО</span></div>
+        <h2>Марина срещу данъчните зомбита</h2>
+        <p>Последната седмица на тримесечието. От архива излизат данъчни зомбита и замерват гражданите с ревизии, глоби и АУАН-и. Хората не знаят какво да подадат, докога и къде.</p>
+        <p>Само един човек знае наизуст ДОПК, ЗДДС и ЗДДФЛ. Марина взима кафето, наметалото и кодекса и излиза на улицата.</p>
+        <ul class="howto">
+          <li><b>Движение</b><span>Стрелки или WASD. С мишка или пръст: задръж и влачи.</span></li>
+          <li><b>Атака</b><span>Марина сама хвърля параграфи § по най-близкото зомби.</span></li>
+          <li><b>Спасяване</b><span>Мини през гражданин и той си тръгва спокоен.</span></li>
+          <li><b>Документи</b><span>Не могат да навредят на Марина. Хване ли ги, ги обжалва.</span></li>
+          <li><b>Еспресо</b><span>Вземи кафето и параграфите летят двойно по-бързо.</span></li>
+        </ul>
+        <div class="actions"><button class="btn" data-go>Започни мисията</button><span class="note">2 нива и финален бос · не можеш да загубиш</span></div>`,
+        ()=>`<div class="meta"><span>Справка № 2026-10/02</span><span class="stampmark">ОТБИТО</span></div>
+        <h2>Писмата са обжалвани. Засега.</h2>
+        <p>Петима ревизори отидоха за кафе, а гражданите се прибраха спокойни. Но от архива вече се чува тропот на печати: идва тримесечната проверка.</p>
+        <div class="law"><b>Справка по закона</b>От 1 януари 2026 г. прагът за задължителна регистрация по ЗДДС е 51 130 евро, а оборотът се следи за календарната година (чл. 96, ал. 1 ЗДДС). Който го надхвърли, подава заявление за регистрация в 7-дневен срок.</div>
+        <p class="goal">Следваща цел: спаси 6 граждани и успокой 8 зомбита.</p>
+        <div class="actions"><button class="btn" data-go>Към ниво 2</button></div>`,
+        ()=>`<div class="meta"><span>Уведомление · Последен етаж</span><span class="stampmark">ВНИМАНИЕ</span></div>
+        <h2>Главният Ревизор слиза лично</h2>
+        <p>Носи най-големия печат в страната и не понася непопълнени декларации. Пази гражданите на опашката и не спирай да цитираш закона. Когато го ядосаш, ще повика помощници.</p>
+        <div class="law"><b>Справка по закона</b>Срещу ревизионен акт се подава жалба в 14-дневен срок от връчването му (чл. 152, ал. 1 ДОПК). Срокът е преклузивен: пропуснеш ли го, актът влиза в сила.</div>
+        <div class="actions"><button class="btn" data-go>Към финала</button></div>`,
+      ],
+      finale:(s,time)=>`<div class="meta"><span>Решение № 2026-10/03</span><span class="stampmark">ИЗРЯДНО</span></div>
+        <h2>Ревизията приключи без задължения</h2>
+        <div class="stats">
+          <div><strong>${s.rescued}</strong><span>спасени граждани</span></div>
+          <div><strong>${s.calmed}</strong><span>успокоени зомбита</span></div>
+          <div><strong>${s.caught}</strong><span>обжалвани документа</span></div>
+          <div><strong>${time}</strong><span>време</span></div>
+        </div>
+        <div class="cta">
+          <h3>А вас преследват ли ви данъчни зомбита?</h3>
+          <p>Писмо от НАП за доходи от инвестиции, ревизия, крипто сделки, регистрация по ДДС или лиценз по MiCA. В истинския живот няма автоматичен огън. Има закон, опит и добра подготовка.</p>
+          <p>Аз съм Марина Мучакова, данъчен консултант с над 15 години опит. Помагам на хора и бизнеси да минат НАП, без НАП да ги мине, чрез законни данъчни оптимизации и стратегии.</p>
+          <div class="actions">
+            <a class="btn" href="../booking/">Запази консултация</a>
+            <a class="btn ghost" href="../">Към началната страница</a>
+            <button class="btn ink" data-replay>Играй отново</button>
+          </div>
+          <div class="contacts">office@vesta-bg.eu · +359 887 460 907</div>
+        </div>`,
+    },
+    en:{
+      eyebrow:'muchakova.com · a 3-minute game',
+      title:'Marina vs <span>the Tax Zombies</span>',
+      controls:`Controls: ${KBD} or <kbd>WASD</kbd>. With a mouse or finger: press and drag. Marina fires on her own.`,
+      disclaimer:'A humorous game. The zombies and the Chief Auditor are made up, and the real NRA staff are people just doing their jobs. The tips in the game are general information, not legal advice.',
+      cabinet:'Game', canvas:'Playing field: a night street outside the archive',
+      sndOn:'Sound: on', sndOff:'Sound: off',
+      waves:['Level 1 · The Letter from the NRA','Level 2 · The Quarterly Inspection'],
+      waveShort:['The Letter from the NRA','The Quarterly Inspection'],
+      papers:['AUDIT','FINE','PENALTY','INSPECTION','SEIZURE','INTEREST','EXTRA VAT','SUMMONS'],
+      bossPapers:['STAMP','ASSESSMENT','ORDER','REFUSAL','AUDIT'],
+      catch:['Appealed!','Objection!','By the law!','Dismissed!','Deadline applies!'],
+      thanks:['Thank you!','I’ll file my return by 30 April!','So there IS a deadline to appeal!','I’m saved!','Now I know what to declare!','Hooray, no VAT registration!'],
+      calm:['All in order.','Off for a coffee.','No further questions.','Case closed.','Hmm, that’s by the law.'],
+      bossSay:['DOCUMENTS, PLEASE!','WHERE IS THE RETURN?','THERE WILL BE AN AUDIT!','STAMP! STAMP!'],
+      bossFirst:'DOCUMENTS, PLEASE!', bossPh2:'IS THAT… ACTUALLY LEGAL?!', bossDown:'All in order. I’m closing the audit.',
+      people:['Freelancer','Crypto investor','Pensioner','Small business','Landlord','Student with ETFs','Developer','Farmer'],
+      finaleBig:'Finale · The Chief Auditor', cleared:'Level cleared!', ouch:'Ouch!', espresso:'Double espresso!', cup:'ESPRESSO',
+      boss:'CHIEF AUDITOR', exBoss:'FORMER AUDITOR', sign:'ARCHIVE · AUDITORS ONLY',
+      hudMission:'Mission: save the citizens', hudDone:'Mission accomplished', hudFinale:'Finale · The Chief Auditor',
+      rescued:'Rescued', calmed:'Calmed', appealed:'Appealed',
+      cards:[
+        ()=>`<div class="meta"><span>Ref. No. 2026-10/01 · Sofia</span><span class="stampmark">URGENT</span></div>
+        <h2>Marina vs the Tax Zombies</h2>
+        <p>The last week of the quarter. Tax zombies pour out of the archive and pelt citizens with audits, fines and penalty notices. People don’t know what to file, by when, or where.</p>
+        <p>Only one person knows the Tax Procedure Code, the VAT Act and the Personal Income Tax Act by heart. Marina grabs her coffee, her cape and her code book and heads out into the street.</p>
+        <ul class="howto">
+          <li><b>Move</b><span>Arrow keys or WASD. With a mouse or finger: press and drag.</span></li>
+          <li><b>Attack</b><span>Marina throws § sections at the nearest zombie on her own.</span></li>
+          <li><b>Rescue</b><span>Walk through a citizen and they leave reassured.</span></li>
+          <li><b>Documents</b><span>They can’t hurt Marina. If she catches one, she appeals it.</span></li>
+          <li><b>Espresso</b><span>Grab the coffee and the sections fly twice as fast.</span></li>
+        </ul>
+        <div class="actions"><button class="btn" data-go>Start the mission</button><span class="note">2 levels and a final boss · you can’t lose</span></div>`,
+        ()=>`<div class="meta"><span>Memo No. 2026-10/02</span><span class="stampmark">REPELLED</span></div>
+        <h2>The letters are appealed. For now.</h2>
+        <p>Five auditors went off for coffee and the citizens went home reassured. But the thud of stamps is already coming from the archive: the quarterly inspection is on its way.</p>
+        <div class="law"><b>What the law says</b>From 1 January 2026 the threshold for mandatory VAT registration in Bulgaria is EUR 51,130, and turnover is tracked over the calendar year (Art. 96(1) of the VAT Act). Anyone who exceeds it must apply for registration within 7 days.</div>
+        <p class="goal">Next goal: rescue 6 citizens and calm 8 zombies.</p>
+        <div class="actions"><button class="btn" data-go>On to level 2</button></div>`,
+        ()=>`<div class="meta"><span>Notice · Top floor</span><span class="stampmark">WARNING</span></div>
+        <h2>The Chief Auditor comes down in person</h2>
+        <p>He carries the biggest stamp in the country and can’t stand unfiled returns. Protect the citizens in the queue and keep quoting the law. Make him angry and he’ll call for backup.</p>
+        <div class="law"><b>What the law says</b>An appeal against a tax audit assessment must be filed within 14 days of its service (Art. 152(1) of the Tax and Social Insurance Procedure Code). The deadline is preclusive: miss it and the assessment becomes final.</div>
+        <div class="actions"><button class="btn" data-go>To the finale</button></div>`,
+      ],
+      finale:(s,time)=>`<div class="meta"><span>Decision No. 2026-10/03</span><span class="stampmark">IN ORDER</span></div>
+        <h2>The audit closed with nothing owed</h2>
+        <div class="stats">
+          <div><strong>${s.rescued}</strong><span>citizens rescued</span></div>
+          <div><strong>${s.calmed}</strong><span>zombies calmed</span></div>
+          <div><strong>${s.caught}</strong><span>documents appealed</span></div>
+          <div><strong>${time}</strong><span>time</span></div>
+        </div>
+        <div class="cta">
+          <h3>Are tax zombies chasing you too?</h3>
+          <p>An NRA letter about investment income, a tax audit, crypto trades, VAT registration or a MiCA licence. Real life has no auto-fire. It has the law, experience and good preparation.</p>
+          <p>I’m Marina Muchakova, a tax consultant with over 15 years of experience. I help people and businesses deal with the NRA on their own terms, through lawful tax optimisation and strategies.</p>
+          <div class="actions">
+            <a class="btn" href="../booking/">Book a consultation</a>
+            <a class="btn ghost" href="../">Back to the homepage</a>
+            <button class="btn ink" data-replay>Play again</button>
+          </div>
+          <div class="contacts">office@vesta-bg.eu · +359 887 460 907</div>
+        </div>`,
+    },
+  };
+  let LANG='bg';
+  try{ if(localStorage.getItem('mm-lang')==='en') LANG='en'; }catch(e){}
+  const T=()=>I18N[LANG];
+
+  const WAVES=[
+    {zombies:5,citizens:4,hp:2,maxZ:3,zGap:2.2,speed:34,tmin:2.7,tmax:3.5},
+    {zombies:8,citizens:6,hp:3,maxZ:4,zGap:1.8,speed:40,tmin:2.1,tmax:2.9},
+  ];
+  const PEOPLE=[
+    {body:'#e07a5f',hair:'#2d1f1a'},{body:'#e8b04a',hair:'#6b4a2b'},
+    {body:'#9b7fd1',hair:'#d9d4cc'},{body:'#3fb59a',hair:'#1f1a17'},
+    {body:'#d96aa7',hair:'#7a3b26'},{body:'#6fb6e8',hair:'#3a2a1f'},
+    {body:'#7dc06b',hair:'#b5653a'},{body:'#c98b4f',hair:'#4a4440'}];
+  const SKINS=['#f1c9a8','#e0b08c','#c98f6a','#f5d5bd','#a87455'];
+
+  let W=380,H=540,S=1,DPR=1;
+  const bg=document.createElement('canvas'),bgx=bg.getContext('2d');
+  const DOORS=[.18,.5,.82];
+
+  const G={mode:'card',cardIdx:0,wave:0,t:0,player:{x:190,y:470,face:1,fireCd:0,coffee:0,moving:false},
+    citizens:[],zombies:[],papers:[],bolts:[],parts:[],texts:[],coffee:null,coffeeT:9,
+    zT:0,cT:0,zSpawned:0,rescued:0,calmed:0,boss:null,pi:0,endT:0,
+    stats:{rescued:0,calmed:0,caught:0},elapsed:0};
+
+  /* ---------- sizing & background ---------- */
+  function resize(){
+    const r=stage.getBoundingClientRect(); if(!r.width||!r.height) return;
+    DPR=Math.min(2,window.devicePixelRatio||1);
+    S=Math.min(r.width/380,r.height/540); W=r.width/S; H=r.height/S;
+    cv.width=Math.round(r.width*DPR); cv.height=Math.round(r.height*DPR);
+    bg.width=cv.width; bg.height=cv.height; buildBg();
+    const p=G.player; p.x=clamp(p.x,20,W-20); p.y=clamp(p.y,TOP+20,H-20);
+    if(G.boss) G.boss.y=TOP+92;
+  }
+  function buildBg(){
+    const g=bgx; g.setTransform(S*DPR,0,0,S*DPR,0,0);
+    let gr=g.createLinearGradient(0,TOP,0,H); gr.addColorStop(0,'#212a4b'); gr.addColorStop(1,'#141a31');
+    g.fillStyle=gr; g.fillRect(0,0,W,H);
+    // sidewalk + curb
+    g.fillStyle='#283153'; g.fillRect(0,TOP-6,W,36);
+    g.strokeStyle='rgba(243,238,224,.05)'; g.lineWidth=1;
+    for(let x=0;x<W;x+=30){g.beginPath();g.moveTo(x,TOP-6);g.lineTo(x,TOP+30);g.stroke();}
+    g.fillStyle='#3a4570'; g.fillRect(0,TOP+30,W,3);
+    // lane dashes & zebra
+    g.fillStyle='rgba(243,238,224,.09)';
+    const ly=TOP+(H-TOP)*.56; for(let x=12;x<W;x+=64) g.fillRect(x,ly,32,4);
+    for(let i=0;i<6;i++) g.fillRect(W*.5-60+i*22,H-34,12,24);
+    // building
+    g.fillStyle='#0e1323'; g.fillRect(0,0,W,TOP-6);
+    const cols=Math.floor((W-10)/34);
+    for(let i=0;i<cols;i++)for(let j=0;j<2;j++){
+      const lit=((i*7+j*3)%5)<2; g.fillStyle=lit?'rgba(242,181,68,.5)':'rgba(120,135,190,.12)';
+      g.fillRect(12+i*34,9+j*24,18,13);
+    }
+    g.fillStyle='#1a2038'; g.fillRect(0,56,W,10);
+    g.font=FM(8.5); g.fillStyle='rgba(242,181,68,.85)'; g.textAlign='center'; g.textBaseline='middle';
+    g.fillText(T().sign,W/2,61.5);
+    for(const d of DOORS){ const x=d*W; g.fillStyle='#232a40'; g.fillRect(x-18,68,36,TOP-74); g.fillStyle='#0a0d18'; g.fillRect(x-14,72,28,TOP-78); }
+    // lamp pools
+    for(const [lx,ly2,r] of [[W*.06,TOP+46,150],[W*.94,TOP+46,150],[W*.5,H-10,190]]){
+      const rg=g.createRadialGradient(lx,ly2,4,lx,ly2,r); rg.addColorStop(0,'rgba(242,181,68,.16)'); rg.addColorStop(1,'rgba(242,181,68,0)');
+      g.fillStyle=rg; g.fillRect(lx-r,ly2-r,r*2,r*2);
+    }
+  }
+  new ResizeObserver(resize).observe(stage);
+
+  /* ---------- audio ---------- */
+  let AC=null, muted=false;
+  function ensureAudio(){ if(!AC){ try{AC=new (window.AudioContext||window.webkitAudioContext)();}catch(e){} } if(AC&&AC.state==='suspended') AC.resume(); }
+  function tone(f,d=.09,type='square',vol=.04,slide=1,delay=0){
+    if(!AC||muted) return; const t0=AC.currentTime+delay;
+    const o=AC.createOscillator(),g=AC.createGain(); o.type=type; o.frequency.setValueAtTime(f,t0);
+    if(slide!==1) o.frequency.exponentialRampToValueAtTime(f*slide,t0+d);
+    g.gain.setValueAtTime(vol,t0); g.gain.exponentialRampToValueAtTime(.0001,t0+d);
+    o.connect(g).connect(AC.destination); o.start(t0); o.stop(t0+d+.03);
+  }
+  const SFX={
+    catch:()=>tone(880,.06,'square',.03,1.5),
+    hit:()=>tone(220,.05,'triangle',.05,.7),
+    calm:()=>{tone(523,.09,'triangle',.05);tone(784,.12,'triangle',.05,1,.08);},
+    rescue:()=>{[523,659,784].forEach((f,i)=>tone(f,.1,'triangle',.05,1,i*.07));},
+    coffee:()=>tone(330,.25,'sawtooth',.03,2.2),
+    clear:()=>{[523,659,784,1047].forEach((f,i)=>tone(f,.16,'triangle',.05,1,i*.1));},
+    win:()=>{[392,523,659,784,1047,1319].forEach((f,i)=>tone(f,.22,'triangle',.05,1,i*.11));},
+  };
+  const sndLabel=()=>{sndBtn.textContent=muted?T().sndOff:T().sndOn;};
+  sndBtn.addEventListener('click',()=>{muted=!muted; sndLabel(); sndBtn.setAttribute('aria-pressed',String(!muted)); if(!muted) ensureAudio();});
+
+  /* ---------- input ---------- */
+  const keys=new Set(); const ptr={active:false,x:0,y:0};
+  addEventListener('keydown',e=>{
+    const k=e.key.toLowerCase(); keys.add(k);
+    if(G.mode==='play'&&['arrowup','arrowdown','arrowleft','arrowright',' '].includes(k)) e.preventDefault();
+  });
+  addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));
+  addEventListener('blur',()=>{keys.clear();ptr.active=false;});
+  function setPtr(e){const r=cv.getBoundingClientRect(); ptr.x=(e.clientX-r.left)/S; ptr.y=(e.clientY-r.top)/S;}
+  cv.addEventListener('pointerdown',e=>{ptr.active=true;setPtr(e);try{cv.setPointerCapture(e.pointerId);}catch(_){}});
+  cv.addEventListener('pointermove',e=>{if(ptr.active)setPtr(e);});
+  ['pointerup','pointercancel'].forEach(t=>cv.addEventListener(t,()=>ptr.active=false));
+
+  /* ---------- spawning ---------- */
+  function spawnZombie(o={}){
+    const w=WAVES[Math.min(G.wave,1)];
+    G.zombies.push({x:o.x??pick(DOORS)*W,y:o.y??TOP-8,hp:o.hp??w.hp,max:o.hp??w.hp,state:'walk',
+      throwCd:rand(1.4,2.4),face:1,seed:Math.random()*10,flash:0,alpha:0,s:o.s??1,
+      speed:o.speed??w.speed,tmin:o.tmin??w.tmin,tmax:o.tmax??w.tmax,say:'',sayT:0});
+  }
+  function spawnCitizen(boss=false){
+    const pid=G.pi++%PEOPLE.length, p=PEOPLE[pid], side=Math.random()<.5;
+    const minY=boss?H*.58:TOP+60;
+    G.citizens.push({...p,pid,skin:SKINS[G.pi%SKINS.length],x:side?W-34:34,y:rand(minY,H-30),
+      vx:rand(-1,1)*34,vy:rand(-1,1)*30,state:'wander',stress:0,shake:0,alpha:0,turn:rand(1,2.5),
+      seed:Math.random()*10,minY,say:'',sayT:0,face:1});
+  }
+  function throwPaper(from,tgt,label,speed,off=0,fy=20){
+    const sx=from.x, sy=from.y-fy*(from.s||1), ty=tgt.y-20;
+    const a=Math.atan2(ty-sy,tgt.x-sx)+off;
+    ctx.font=FM(9,'700'); const w=ctx.measureText(label).width+10;
+    G.papers.push({x:sx,y:sy,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,label,w,ph:Math.random()*6,life:5});
+  }
+  function burst(x,y,n,colors,spd=120){
+    if(G.parts.length>320) return;
+    for(let i=0;i<n;i++){const a=rand(0,TAU),v=rand(.3,1)*spd;
+      G.parts.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-40,life:rand(.5,.9),max:.9,c:pick(colors),sz:rand(2,4)});}
+  }
+  function float(x,y,s,c=COL.paper,big=false){G.texts.push({x,y,s,c,big,life:big?1.9:1.1,max:big?1.9:1.1});}
+
+  /* ---------- waves ---------- */
+  function resetWave(i){
+    Object.assign(G,{wave:i,cardIdx:i,citizens:[],zombies:[],papers:[],bolts:[],parts:[],texts:[],coffee:null,coffeeT:9,
+      zT:.8,cT:0,zSpawned:0,rescued:0,calmed:0,boss:null});
+    const p=G.player; p.x=W/2; p.y=H-70; p.coffee=0; p.fireCd=.5;
+    if(i===2){
+      G.boss={x:W/2,y:TOP+92,hp:40,max:40,t:0,atk:2.4,summon:4,flash:0,state:'fight',face:1,s:2.2,
+        say:T().bossFirst,sayT:2.6,sayCd:6,ph2:false,seed:0,alpha:1};
+      for(let k=0;k<3;k++) spawnCitizen(true);
+      float(W/2,H*.45,T().finaleBig,COL.lamp,true);
+    } else float(W/2,H*.45,T().waveShort[i],COL.lamp,true);
+  }
+  function spawn(dt){
+    const active=G.zombies.filter(z=>z.state==='walk').length;
+    const activeC=G.citizens.filter(c=>c.state==='wander').length;
+    G.cT-=dt; G.zT-=dt;
+    if(G.wave<2){
+      const w=WAVES[G.wave];
+      if(G.zSpawned<w.zombies&&active<w.maxZ&&G.zT<=0){spawnZombie();G.zSpawned++;G.zT=w.zGap;}
+      if(G.rescued+activeC<w.citizens&&activeC<3&&G.cT<=0){spawnCitizen();G.cT=1.2;}
+      if(G.calmed>=w.zombies&&G.rescued>=w.citizens){
+        G.mode='clear'; G.endT=1.7; clearPapers(); float(W/2,H*.45,T().cleared,COL.sage,true); SFX.clear();
+      }
+    } else if(activeC<3&&G.cT<=0){spawnCitizen(true);G.cT=2.4;}
+  }
+  function clearPapers(){for(const p of G.papers) burst(p.x,p.y,5,[COL.paper,COL.lamp],80); G.papers=[];}
+
+  /* ---------- update ---------- */
+  function updPlayer(dt){
+    const p=G.player; let ax=0,ay=0;
+    if(keys.has('arrowleft')||keys.has('a')) ax--; if(keys.has('arrowright')||keys.has('d')) ax++;
+    if(keys.has('arrowup')||keys.has('w')) ay--; if(keys.has('arrowdown')||keys.has('s')) ay++;
+    let sp=250;
+    if(ptr.active&&!ax&&!ay){const dx=ptr.x-p.x,dy=(ptr.y+18)-p.y,d=Math.hypot(dx,dy); if(d>5){ax=dx/d;ay=dy/d;sp*=Math.min(1,d/40);}}
+    const m=Math.hypot(ax,ay); if(m>0){ax/=m;ay/=m;}
+    p.moving=m>0; if(ax) p.face=ax<0?-1:1;
+    p.x=clamp(p.x+ax*sp*dt,18,W-18); p.y=clamp(p.y+ay*sp*dt,TOP+40,H-14);
+    p.coffee=Math.max(0,p.coffee-dt);
+    if(G.mode!=='play') return;
+    p.fireCd-=dt;
+    if(p.fireCd<=0){
+      let best=null,bd=460;
+      for(const z of G.zombies) if(z.state==='walk'&&z.alpha>.4){const d=dist(p.x,p.y,z.x,z.y); if(d<bd){bd=d;best=z;}}
+      if(G.boss&&G.boss.state==='fight'&&!best) best=G.boss;
+      if(best){
+        const sy=p.y-30, a=Math.atan2(best.y-20*(best.s||1)-sy,best.x-p.x);
+        G.bolts.push({x:p.x,y:sy,vx:Math.cos(a)*480,vy:Math.sin(a)*480,tgt:best,life:1.6});
+        p.fireCd=p.coffee>0?.13:.3;
+      }
+    }
+  }
+  function updCitizens(dt){
+    const p=G.player;
+    for(const c of G.citizens){
+      c.alpha=Math.min(1,c.alpha+dt*2.5); c.shake=Math.max(0,c.shake-dt); c.sayT-=dt;
+      if(c.state==='wander'){
+        c.turn-=dt; if(c.turn<=0){c.vx=rand(-1,1)*34;c.vy=rand(-1,1)*30;c.turn=rand(1.2,2.8);}
+        c.x+=c.vx*dt; c.y+=c.vy*dt;
+        if(c.x<20||c.x>W-20){c.vx*=-1;c.x=clamp(c.x,20,W-20);}
+        if(c.y<c.minY||c.y>H-16){c.vy*=-1;c.y=clamp(c.y,c.minY,H-16);}
+        if(Math.abs(c.vx)>3) c.face=c.vx<0?-1:1;
+        if(G.mode==='play'&&dist(p.x,p.y,c.x,c.y)<32){
+          c.state='saved'; c.t0=0; c.exit=c.x<W/2?-40:W+40; c.say=pick(T().thanks); c.sayT=2.2;
+          G.rescued++; G.stats.rescued++; burst(c.x,c.y-24,14,[COL.lamp,COL.sage,COL.paper]); SFX.rescue();
+        }
+      } else {
+        c.t0+=dt; if(c.t0>.5){const dir=Math.sign(c.exit-c.x); c.x+=dir*125*dt; c.face=dir;}
+      }
+    }
+    G.citizens=G.citizens.filter(c=>c.state==='wander'||(c.x>-50&&c.x<W+50));
+  }
+  function updZombies(dt){
+    const p=G.player;
+    for(const z of G.zombies){
+      z.flash=Math.max(0,z.flash-dt); z.sayT-=dt;
+      if(z.state==='walk'){
+        z.alpha=Math.min(1,z.alpha+dt*1.8);
+        let tgt=null,bd=1e9;
+        for(const c of G.citizens) if(c.state==='wander'){const d=dist(z.x,z.y,c.x,c.y); if(d<bd){bd=d;tgt=c;}}
+        if(!tgt){tgt=p;bd=dist(z.x,z.y,p.x,p.y);}
+        const keep=tgt===p?95:135, dx=tgt.x-z.x, dy=tgt.y-z.y;
+        if(bd>keep){z.x+=dx/bd*z.speed*dt; z.y+=dy/bd*z.speed*dt;}
+        z.face=dx<0?-1:1; z.x=clamp(z.x,16,W-16); z.y=clamp(z.y,TOP-10,H-14);
+        z.throwCd-=dt;
+        if(G.mode==='play'&&z.throwCd<=0&&bd<330&&z.y>TOP-2){throwPaper(z,tgt,pick(T().papers),150);z.throwCd=rand(z.tmin,z.tmax);}
+      } else {
+        z.calmT+=dt;
+        if(z.calmT>.9){const dir=Math.sign(z.exit-z.x); z.x+=dir*62*dt; z.face=dir;}
+        if(z.calmT>3.2) z.alpha-=dt*1.4;
+      }
+    }
+    G.zombies=G.zombies.filter(z=>z.alpha>0||z.state==='walk');
+  }
+  function calmZombie(z){
+    z.state='calm'; z.calmT=0; z.exit=z.x<W/2?-40:W+40; z.say=pick(T().calm); z.sayT=2.4;
+    G.calmed++; G.stats.calmed++; burst(z.x,z.y-26,12,[COL.sage,COL.paper]); SFX.calm();
+  }
+  function updBoss(dt){
+    const b=G.boss; if(!b) return;
+    b.t+=dt; b.flash=Math.max(0,b.flash-dt); b.sayT-=dt;
+    if(b.state==='fight'&&G.mode==='play'){
+      b.x=W/2+Math.sin(b.t*.55)*(W/2-80); b.face=Math.cos(b.t*.55)>=0?1:-1;
+      const ph2=b.hp<=b.max/2;
+      if(ph2&&!b.ph2){b.ph2=true;b.say=T().bossPh2;b.sayT=2.6;b.sayCd=6;}
+      b.atk-=dt;
+      if(b.atk<=0){
+        const tg=G.citizens.filter(c=>c.state==='wander');
+        const tgt=tg.length&&Math.random()<.65?pick(tg):G.player, n=ph2?5:3;
+        for(let i=0;i<n;i++) throwPaper(b,tgt,pick(T().bossPapers),130,(i-(n-1)/2)*.26,22);
+        b.atk=ph2?2.2:2.7;
+      }
+      if(ph2){b.summon-=dt; if(b.summon<=0&&G.zombies.filter(z=>z.state==='walk').length<3){
+        spawnZombie({x:b.x-34,y:b.y+6,hp:1,s:.9,speed:42,tmin:2.8,tmax:3.6});
+        spawnZombie({x:b.x+34,y:b.y+6,hp:1,s:.9,speed:42,tmin:2.8,tmax:3.6}); b.summon=7;}}
+      b.sayCd-=dt; if(b.sayCd<=0){b.say=pick(T().bossSay);b.sayT=2.2;b.sayCd=rand(5.5,7.5);}
+    }
+  }
+  function defeatBoss(){
+    const b=G.boss; b.state='calm'; b.say=T().bossDown; b.sayT=5;
+    G.mode='bossdown'; G.endT=3.6; clearPapers(); G.bolts=[];
+    for(const z of G.zombies) if(z.state==='walk') calmZombie(z);
+    for(let i=0;i<6;i++) burst(rand(40,W-40),rand(TOP+40,H*.6),22,[COL.lamp,COL.sage,COL.paper,COL.hero,COL.stamp],200);
+    SFX.win();
+  }
+  function updBolts(dt){
+    const b=G.boss;
+    for(const o of G.bolts){
+      o.life-=dt; const t=o.tgt;
+      const alive=t&&((t===b&&b.state==='fight')||(t!==b&&t.state==='walk'));
+      if(alive){const ty=t.y-20*(t.s||1),dx=t.x-o.x,dy=ty-o.y,d=Math.hypot(dx,dy)||1,k=Math.min(1,dt*7);
+        o.vx+=(dx/d*480-o.vx)*k; o.vy+=(dy/d*480-o.vy)*k;}
+      o.x+=o.vx*dt; o.y+=o.vy*dt;
+      for(const z of G.zombies){
+        if(z.state!=='walk'||z.alpha<.3) continue;
+        if(dist(o.x,o.y,z.x,z.y-20*z.s)<18*z.s+4){
+          o.life=0; z.hp--; z.flash=.12; burst(o.x,o.y,4,[COL.lamp],70); SFX.hit();
+          if(z.hp<=0) calmZombie(z); break;
+        }
+      }
+      if(o.life>0&&b&&b.state==='fight'&&dist(o.x,o.y,b.x,b.y-44)<42){
+        o.life=0; b.hp--; b.flash=.1; burst(o.x,o.y,4,[COL.lamp,COL.stamp],80); SFX.hit();
+        if(b.hp<=0) defeatBoss();
+      }
+    }
+    G.bolts=G.bolts.filter(o=>o.life>0&&o.x>-30&&o.x<W+30&&o.y>-30&&o.y<H+30);
+  }
+  function updPapers(dt){
+    const p=G.player;
+    for(const q of G.papers){
+      q.life-=dt; q.x+=q.vx*dt; q.y+=q.vy*dt; q.ph+=dt;
+      if(dist(q.x,q.y,p.x,p.y-24)<28){
+        q.life=0; G.stats.caught++; float(p.x,p.y-64,pick(T().catch),COL.lamp); burst(q.x,q.y,8,[COL.paper,COL.lamp],90); SFX.catch(); continue;
+      }
+      for(const c of G.citizens){
+        if(c.state==='wander'&&dist(q.x,q.y,c.x,c.y-18)<16){q.life=0;c.stress++;c.shake=.5;float(c.x,c.y-56,T().ouch,COL.paper);break;}
+      }
+    }
+    G.papers=G.papers.filter(q=>q.life>0&&q.x>-60&&q.x<W+60&&q.y>TOP-60&&q.y<H+40);
+  }
+  function updCoffee(dt){
+    const p=G.player; if(G.mode!=='play') return;
+    if(!G.coffee){G.coffeeT-=dt; if(G.coffeeT<=0) G.coffee={x:rand(40,W-40),y:rand(TOP+70,H-40),life:11};}
+    else{const c=G.coffee; c.life-=dt;
+      if(dist(p.x,p.y,c.x,c.y)<30){p.coffee=6;float(p.x,p.y-66,T().espresso,COL.lamp);burst(c.x,c.y,12,[COL.lamp,'#8a5a3b']);SFX.coffee();G.coffee=null;G.coffeeT=13;}
+      else if(c.life<=0){G.coffee=null;G.coffeeT=11;}}
+  }
+  function updFx(dt){
+    for(const q of G.parts){q.life-=dt;q.x+=q.vx*dt;q.y+=q.vy*dt;q.vy+=180*dt;}
+    G.parts=G.parts.filter(q=>q.life>0);
+    for(const t of G.texts){t.life-=dt; if(!t.big) t.y-=28*dt;}
+    G.texts=G.texts.filter(t=>t.life>0);
+  }
+  function update(dt){
+    G.t+=dt; updFx(dt);
+    if(G.mode==='play'||G.mode==='clear'||G.mode==='bossdown'){
+      if(G.mode==='play') G.elapsed+=dt;
+      updPlayer(dt); updCitizens(dt); updZombies(dt); updBoss(dt); updBolts(dt); updPapers(dt); updCoffee(dt);
+      if(G.mode==='play') spawn(dt);
+      else{G.endT-=dt; if(G.endT<=0){ if(G.mode==='clear') showCard(G.wave+1); else showFinale(); }}
+    }
+    hud();
+  }
+
+  /* ---------- drawing ---------- */
+  function rr(x,y,w,h,r){ctx.beginPath(); if(ctx.roundRect) ctx.roundRect(x,y,w,h,r); else ctx.rect(x,y,w,h);}
+  function shadow(x,y,rx){ctx.fillStyle='rgba(0,0,0,.3)';ctx.beginPath();ctx.ellipse(x,y,rx,rx*.36,0,0,TAU);ctx.fill();}
+  function drawMarina(){
+    const p=G.player,t=G.t,mv=p.moving,step=mv?Math.sin(t*14)*2.5:0,bob=mv?Math.abs(Math.sin(t*14))*1.4:Math.sin(t*2)*.4;
+    if(p.coffee>0){ctx.strokeStyle=`rgba(242,181,68,${.35+.25*Math.sin(t*12)})`;ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(p.x,p.y,22,8,0,0,TAU);ctx.stroke();}
+    ctx.save(); ctx.translate(p.x,p.y); shadow(0,0,14); ctx.translate(0,-bob); ctx.scale(1.3*p.face,1.3);
+    ctx.fillStyle=COL.lamp; ctx.beginPath(); ctx.moveTo(-6,-28);
+    ctx.quadraticCurveTo(-17-(mv?3:0),-16,-14-(mv?5:0),-3+Math.sin(t*9)*1.6); ctx.lineTo(-2,-9); ctx.closePath(); ctx.fill();
+    ctx.fillStyle='#232a45'; ctx.fillRect(-6+step*.6,-11,5,11); ctx.fillRect(1-step*.6,-11,5,11);
+    ctx.fillStyle=COL.hero; rr(-9.5,-29,19,20,5); ctx.fill();
+    ctx.fillStyle=COL.paper; ctx.beginPath(); ctx.moveTo(-3.5,-29); ctx.lineTo(0,-22); ctx.lineTo(3.5,-29); ctx.fill();
+    ctx.fillStyle='#4a2c22'; rr(-9,-45,17,22,8); ctx.fill();
+    ctx.fillStyle='#f1c9a8'; ctx.beginPath(); ctx.arc(.8,-36.5,7.4,0,TAU); ctx.fill();
+    ctx.fillStyle='#4a2c22'; ctx.beginPath(); ctx.arc(.4,-38.6,7.9,Math.PI*1.02,Math.PI*1.98); ctx.fill();
+    ctx.fillStyle=COL.ink; ctx.fillRect(3,-37,1.6,2.2); ctx.fillRect(-1.2,-37,1.6,2.2);
+    ctx.strokeStyle='#9a4a3a'; ctx.lineWidth=1; ctx.beginPath(); ctx.arc(1.8,-33.6,2,.25,Math.PI-.25); ctx.stroke();
+    ctx.fillStyle=COL.stamp; rr(6,-23,9,11,1.5); ctx.fill(); ctx.fillStyle=COL.paper; ctx.fillRect(7.2,-21.5,1.3,8);
+    ctx.restore();
+  }
+  function drawCitizen(c){
+    const t=G.t+c.seed,mv=c.state!=='wander'||Math.hypot(c.vx,c.vy)>8,step=mv?Math.sin(t*12)*2.2:0;
+    ctx.save(); ctx.globalAlpha=c.alpha; ctx.translate(c.x+(c.shake>0?Math.sin(t*70)*1.6:0),c.y);
+    shadow(0,0,10); ctx.scale(c.face,1);
+    ctx.fillStyle='#2b3150'; ctx.fillRect(-5.5+step*.6,-10,4.5,10); ctx.fillRect(1-step*.6,-10,4.5,10);
+    ctx.fillStyle=c.body; rr(-8.5,-27,17,18,5); ctx.fill();
+    ctx.fillStyle=c.skin; ctx.beginPath(); ctx.arc(0,-33,7,0,TAU); ctx.fill();
+    ctx.fillStyle=c.hair; ctx.beginPath(); ctx.arc(0,-35,7.4,Math.PI*1.05,Math.PI*1.95); ctx.fill();
+    ctx.fillStyle=COL.ink; ctx.fillRect(2.2,-34,1.5,2); ctx.fillRect(-1.6,-34,1.5,2);
+    if(c.state==='saved'){ctx.strokeStyle=COL.ink;ctx.lineWidth=1;ctx.beginPath();ctx.arc(.6,-30.6,1.8,.2,Math.PI-.2);ctx.stroke();}
+    if(c.stress>0&&c.state==='wander'){ctx.fillStyle='#8fd0f0';ctx.beginPath();ctx.arc(-8,-38+Math.sin(t*6),1.8,0,TAU);ctx.fill();}
+    ctx.restore();
+    if(c.state==='wander'&&c.alpha>.6){
+      const label=T().people[c.pid];
+      ctx.font=FM(9.5); const w=ctx.measureText(label).width+10;
+      const lx=clamp(c.x,w/2+2,W-w/2-2); // keep the label inside the stage near the edges
+      ctx.fillStyle='rgba(18,23,41,.72)'; rr(lx-w/2,c.y-56,w,14,7); ctx.fill();
+      ctx.fillStyle=COL.paper; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(label,lx,c.y-48.5);
+    }
+  }
+  function drawZombie(z,boss=false){
+    const calm=z.state==='calm',t=G.t+z.seed,s=z.s||1,step=calm||boss?Math.sin(t*9)*1.6:Math.sin(t*5)*2;
+    ctx.save(); ctx.globalAlpha=Math.max(0,Math.min(1,z.alpha??1)); ctx.translate(z.x,z.y); shadow(0,0,11*s);
+    ctx.scale(s*z.face,s); if(!calm) ctx.rotate(Math.sin(t*3)*.06);
+    const skin=calm?'#e6c3a3':'#9cb593';
+    ctx.fillStyle='#2a3046'; ctx.fillRect(-5.5+step*.5,-11,5,11); ctx.fillRect(.5-step*.5,-11,5,11);
+    ctx.fillStyle=boss?'#3b4058':'#4a5170'; rr(-9.5,-29,19,20,4); ctx.fill();
+    ctx.fillStyle=COL.paper; ctx.beginPath(); ctx.moveTo(-3,-29); ctx.lineTo(0,-24); ctx.lineTo(3,-29); ctx.fill();
+    ctx.fillStyle=COL.stamp; ctx.fillRect(-1,-25,2,8);
+    if(calm){
+      ctx.fillStyle=skin; ctx.fillRect(5,-22,7,3.5);
+      ctx.fillStyle=COL.paper; rr(10,-27,6,7,1); ctx.fill(); ctx.fillStyle='#8a5a3b'; ctx.fillRect(10.5,-26.5,5,1.6);
+    } else if(boss){
+      ctx.fillStyle=skin; ctx.fillRect(5,-27,4,-10+Math.sin(t*4)*2);
+      ctx.fillStyle='#6b4a2b'; ctx.fillRect(4.5,-46+Math.sin(t*4)*2,5,9);
+      ctx.fillStyle=COL.stamp; rr(1,-50+Math.sin(t*4)*2,11,5,1.5); ctx.fill();
+      ctx.fillStyle=skin; ctx.fillRect(-14,-24,12,3.5);
+    } else {
+      ctx.fillStyle=skin; ctx.fillRect(4,-26,14,3.6); ctx.fillRect(4,-20,12,3.6);
+      ctx.fillStyle='#c8b48a'; ctx.fillRect(13,-31,7,10); ctx.fillStyle=COL.paper; ctx.fillRect(14,-29.5,5,1.2); ctx.fillRect(14,-27,5,1.2);
+    }
+    ctx.fillStyle=skin; ctx.beginPath(); ctx.arc(0,-36,7.8,0,TAU); ctx.fill();
+    ctx.fillStyle=calm?'#3d3530':'#3a4033';
+    if(boss){rr(-7.5,-45,15,5,2);ctx.fill();}
+    else{ctx.fillRect(-6,-44,4,4);ctx.fillRect(-1,-45,4,3);ctx.fillRect(3,-43,3,3);}
+    if(calm){ctx.fillStyle=COL.ink;ctx.fillRect(2.4,-37.5,1.6,2);ctx.fillRect(-1.8,-37.5,1.6,2);
+      ctx.strokeStyle='#8a4a3a';ctx.lineWidth=1;ctx.beginPath();ctx.arc(.8,-33.8,2,.25,Math.PI-.25);ctx.stroke();}
+    else{
+      ctx.fillStyle='#f6f1d8'; ctx.fillRect(1.6,-38.5,3,3); ctx.fillRect(-2.6,-38.5,3,3);
+      ctx.fillStyle=COL.stamp; ctx.fillRect(2.6,-37.5,1.3,1.3); ctx.fillRect(-1.6,-37.5,1.3,1.3);
+      ctx.strokeStyle='#3a4033'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(-2,-32); ctx.lineTo(-.5,-33); ctx.lineTo(1,-32); ctx.lineTo(2.5,-33); ctx.stroke();
+      if(boss){ctx.strokeStyle=COL.ink;ctx.lineWidth=.9;ctx.strokeRect(-3.3,-39.3,4.4,4.4);ctx.strokeRect(1.2,-39.3,4.4,4.4);}
+    }
+    if(z.flash>0){ctx.globalCompositeOperation='source-atop';ctx.fillStyle='rgba(255,255,255,.65)';ctx.fillRect(-20,-55,44,56);}
+    ctx.restore();
+    if(!boss&&z.state==='walk'&&z.hp<z.max){
+      const w=22*s; ctx.fillStyle='rgba(0,0,0,.45)'; ctx.fillRect(z.x-w/2,z.y-56*s,w,3.5);
+      ctx.fillStyle=COL.sage; ctx.fillRect(z.x-w/2,z.y-56*s,w*(z.hp/z.max),3.5);
+    }
+  }
+  function drawPaper(q){
+    ctx.save(); ctx.translate(q.x,q.y); ctx.rotate(Math.sin(q.ph*5)*.28);
+    ctx.fillStyle=COL.paper; rr(-q.w/2,-8,q.w,16,2); ctx.fill();
+    ctx.strokeStyle=COL.stamp; ctx.lineWidth=1.2; ctx.stroke();
+    ctx.font=FM(9,'700'); ctx.fillStyle=COL.stamp; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(q.label,0,.5);
+    ctx.restore();
+  }
+  function drawBolt(o){
+    ctx.fillStyle='rgba(242,181,68,.25)'; ctx.beginPath(); ctx.arc(o.x,o.y,9,0,TAU); ctx.fill();
+    ctx.fillStyle=COL.lamp; ctx.beginPath(); ctx.arc(o.x,o.y,6,0,TAU); ctx.fill();
+    ctx.font=FD(9); ctx.fillStyle=COL.ink; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('§',o.x,o.y+.5);
+  }
+  function drawCoffee(c){
+    const b=Math.sin(G.t*4)*2, a=c.life<3?(Math.sin(G.t*14)>0?1:.4):1;
+    ctx.save(); ctx.globalAlpha=a; ctx.translate(c.x,c.y+b); shadow(0,10-b,10);
+    ctx.fillStyle=COL.paper; rr(-8,-10,16,18,3); ctx.fill(); ctx.fillStyle='#8a5a3b'; ctx.fillRect(-8,-4,16,6);
+    ctx.strokeStyle=COL.paper; ctx.lineWidth=2.4; ctx.beginPath(); ctx.arc(9,-1,4,-1.4,1.4); ctx.stroke();
+    ctx.strokeStyle='rgba(243,238,224,.6)'; ctx.lineWidth=1.4;
+    for(const sx of [-3,3]){ctx.beginPath();ctx.moveTo(sx,-13);ctx.quadraticCurveTo(sx+3*Math.sin(G.t*3+sx),-18,sx,-23);ctx.stroke();}
+    ctx.font=FM(8.5,'700'); ctx.fillStyle=COL.lamp; ctx.textAlign='center'; ctx.fillText(T().cup,0,22);
+    ctx.restore();
+  }
+  function bubble(x,y,text,alpha,boss=false){
+    ctx.save(); ctx.globalAlpha=Math.max(0,Math.min(1,alpha)); ctx.font=boss?FM(11,'700'):FB(11.5);
+    const w=Math.min(ctx.measureText(text).width+16,W-8), bx=clamp(x-w/2,4,W-w-4), by=y-26;
+    ctx.fillStyle=boss?COL.stamp:COL.paper; rr(bx,by,w,21,6); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(clamp(x,bx+8,bx+w-8)-5,by+20); ctx.lineTo(clamp(x,bx+8,bx+w-8),by+27); ctx.lineTo(clamp(x,bx+8,bx+w-8)+5,by+20); ctx.fill();
+    ctx.fillStyle=boss?COL.paper:COL.ink; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(text,bx+w/2,by+11,w-12);
+    ctx.restore();
+  }
+  function draw(){
+    ctx.setTransform(1,0,0,1,0,0); ctx.drawImage(bg,0,0);
+    ctx.setTransform(S*DPR,0,0,S*DPR,0,0);
+    for(const d of DOORS){const x=d*W,a=.12+.08*Math.sin(G.t*2+d*9); ctx.fillStyle=`rgba(147,171,140,${a})`; ctx.fillRect(x-14,72,28,TOP-78);}
+    if(G.coffee) drawCoffee(G.coffee);
+    const list=[];
+    for(const c of G.citizens) list.push([c.y,()=>drawCitizen(c)]);
+    for(const z of G.zombies) list.push([z.y,()=>drawZombie(z)]);
+    if(G.boss) list.push([G.boss.y,()=>drawZombie(G.boss,true)]);
+    list.push([G.player.y,drawMarina]);
+    list.sort((a,b)=>a[0]-b[0]).forEach(e=>e[1]());
+    for(const q of G.papers) drawPaper(q);
+    for(const o of G.bolts) drawBolt(o);
+    for(const q of G.parts){ctx.globalAlpha=Math.max(0,q.life/q.max);ctx.fillStyle=q.c;ctx.fillRect(q.x,q.y,q.sz,q.sz);}
+    ctx.globalAlpha=1;
+    const b=G.boss;
+    if(b){
+      const label=b.state==='fight'?T().boss:T().exBoss;
+      ctx.font=FM(10,'700'); const w=ctx.measureText(label).width+14;
+      ctx.fillStyle='rgba(18,23,41,.8)'; rr(b.x-w/2,b.y-128,w,16,8); ctx.fill();
+      ctx.fillStyle=b.state==='fight'?COL.stamp:COL.sage; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(label,b.x,b.y-119.5);
+      if(b.sayT>0) bubble(b.x,b.y-130,b.say,b.sayT*2,b.state==='fight');
+    }
+    for(const z of G.zombies) if(z.sayT>0) bubble(z.x,z.y-50*z.s,z.say,z.sayT*2*Math.min(1,z.alpha));
+    for(const c of G.citizens) if(c.sayT>0) bubble(c.x,c.y-50,c.say,c.sayT*2);
+    for(const t of G.texts){
+      const a=Math.min(1,t.life/t.max*2.2); ctx.globalAlpha=a; ctx.textAlign='center'; ctx.textBaseline='middle';
+      ctx.font=t.big?FD(Math.min(30,W/13)):FB(13,700); ctx.lineWidth=t.big?5:3.5; ctx.strokeStyle='rgba(18,23,41,.9)';
+      ctx.strokeText(t.s,t.x,t.y); ctx.fillStyle=t.c; ctx.fillText(t.s,t.x,t.y);
+    }
+    ctx.globalAlpha=1;
+  }
+
+  /* ---------- HUD ---------- */
+  let hudKey='';
+  function hud(){
+    const L=T(); let lvl,chips;
+    if(G.mode==='finale'){lvl=L.hudDone;chips=[[`${L.rescued} ${G.stats.rescued}`,1],[`${L.appealed} ${G.stats.caught}`,0]];}
+    else if(G.wave<2){const w=WAVES[G.wave];
+      lvl=G.mode==='card'&&G.cardIdx===0?L.hudMission:L.waves[G.wave];
+      chips=[[`${L.rescued} ${Math.min(G.rescued,w.citizens)}/${w.citizens}`,G.rescued>=w.citizens],[`${L.calmed} ${Math.min(G.calmed,w.zombies)}/${w.zombies}`,G.calmed>=w.zombies],[`${L.appealed} ${G.stats.caught}`,0]];}
+    else{lvl=L.hudFinale;chips=[[`${L.rescued} ${G.stats.rescued}`,0],[`${L.appealed} ${G.stats.caught}`,0]];}
+    const key=lvl+chips.map(c=>c.join()).join('|');
+    if(key!==hudKey){hudKey=key; hudLvl.textContent=lvl;
+      hudChips.innerHTML=chips.map(([s,d])=>`<span class="chip${d?' done':''}">${s}</span>`).join('');}
+    const showBar=!!G.boss&&G.wave===2&&G.mode!=='finale';
+    if(bossbar.hidden===showBar) bossbar.hidden=!showBar;
+    if(showBar){const w=Math.max(0,G.boss.hp/G.boss.max*100).toFixed(1)+'%'; if(bossfill.style.width!==w) bossfill.style.width=w;}
+  }
+
+  /* ---------- cards ---------- */
+  const fmtTime=s=>`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
+  function showCard(i,focus=true){
+    G.mode='card'; G.cardIdx=i; G.papers=[]; G.bolts=[]; ptr.active=false;
+    card.innerHTML=T().cards[i](); ov.hidden=false; card.scrollTop=0;
+    const b=card.querySelector('[data-go]');
+    b.addEventListener('click',()=>{ensureAudio(); ov.hidden=true; resetWave(i); G.mode='play'; showCabinet();});
+    if(focus) setTimeout(()=>b.focus({preventScroll:true}),30);
+  }
+  // Bring the whole play area into view (below the sticky navbar) when a level starts
+  function showCabinet(){
+    const r=cabinet.getBoundingClientRect(), navH=document.getElementById('navbar')?.offsetHeight||0;
+    if(r.top<navH||r.bottom>innerHeight) cabinet.scrollIntoView({block:r.height>innerHeight-navH?'start':'nearest',behavior:'smooth'});
+  }
+  function showFinale(){
+    G.mode='finale';
+    card.innerHTML=T().finale(G.stats,fmtTime(G.elapsed));
+    ov.hidden=false; card.scrollTop=0;
+    card.querySelector('[data-replay]').addEventListener('click',()=>{G.stats={rescued:0,calmed:0,caught:0};G.elapsed=0;showCard(0);});
+  }
+
+  /* ---------- language ---------- */
+  function applyLang(lang){
+    LANG=lang==='en'?'en':'bg'; const L=T();
+    document.querySelectorAll('.mg [data-g]').forEach(el=>{el.innerHTML=L[el.dataset.g];});
+    cabinet.setAttribute('aria-label',L.cabinet); cv.setAttribute('aria-label',L.canvas);
+    sndLabel(); hudKey=''; buildBg();
+    // Re-render an open paper card in the new language; a running level just continues
+    if(G.mode==='card') showCard(G.cardIdx,false);
+    else if(G.mode==='finale') showFinale();
+  }
+  document.addEventListener('mm:lang',e=>{ if(e.detail!==LANG) applyLang(e.detail); });
+
+  /* ---------- loop & boot ---------- */
+  let last=performance.now();
+  function frame(now){const dt=Math.min(.05,(now-last)/1000); last=now; update(dt); draw(); requestAnimationFrame(frame);}
+  resize();
+  applyLang(LANG);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(buildBg);
+  requestAnimationFrame(t=>{last=t;frame(t);});
+  })();
+  </script>
+</body>
+</html>
