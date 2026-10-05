@@ -129,8 +129,8 @@
         </time>
         <span class="post-separator">·</span>
         <span>
-          <span class="lang-content" data-lang="bg">11 мин четене</span>
-          <span class="lang-content" data-lang="en" style="display:none;">11 min read</span>
+          <span class="lang-content" data-lang="bg">13 мин четене</span>
+          <span class="lang-content" data-lang="en" style="display:none;">13 min read</span>
         </span>
       </div>
 
@@ -429,13 +429,43 @@
             <li>Във <strong>физическата СПБ-8</strong> държавата е на <strong>емитента</strong> за ценните книжа и на <strong>институцията, в която е сметката</strong>, за паричните салда.</li>
           </ul>
 
-          <p><strong>2. Маржинът.</strong></p>
+          <p><strong>2. Маржинът: кредит ли е?</strong></p>
+
+          <p>
+            Кратък отговор: почти винаги да, ако реално си взел пари назаем. В Наредба № 27 и Указанията няма определение за „финансов кредит“, а думата „маржин“ не се среща никъде. Затова това е тълкуване, но с добри аргументи. Брокерът ти дава пари, които дължиш, плащаш лихва, връщаш при поискване, а залог са акциите ти. Това е класическа кредитна линия. А формите на БНБ познават точно такива кредити: в СПБ-1 видовете включват „Револвиращ кредит (кредитна линия)“ и „Овърдрафт“.
+          </p>
+
+          <p><strong>Как се отразява отрицателният кеш в СПБ-8:</strong></p>
 
           <ul>
-            <li>Положителният кеш е актив.</li>
-            <li>Отрицателният кеш може да е задължение към чуждестранно лице, тоест ред 02 „Получени финансови кредити“ в СПБ-8.</li>
-            <li>Дали е „финансов кредит“, зависи от договора. Каквото и да се окаже, <strong>не го приспадай</strong> от стойността на акциите. Активите и задълженията се отчитат поотделно.</li>
+            <li><strong>ред 02</strong> „Получени финансови кредити“;</li>
+            <li>матуритет <strong>S</strong>, защото се връща при поискване;</li>
+            <li>държава: тази на дружеството на брокера, което те кредитира (от договора);</li>
+            <li>валута: тази на отрицателното салдо, например USD;</li>
+            <li>размер: салдото в началото и в края на годината, в хиляди, закръглено;</li>
+            <li><strong>отделен праг</strong>: задължения от 25 000 евро или повече към 31 декември (чл. 13, ал. 2, т. 2 от Наредбата).</li>
           </ul>
+
+          <p><strong>Какво не е кредит:</strong></p>
+
+          <ul>
+            <li><strong>Неизползваната покупателна сила (buying power).</strong> Щом нищо не е взето, нищо не се отчита. Важи само реалното отрицателно салдо към 31 декември.</li>
+            <li><strong>Маржинът като обезпечение за фючърси и опции.</strong> Това е гаранция, а не заем, а дериватите изобщо са извън СПБ-8.</li>
+            <li><strong>Късите продажби (short).</strong> Там си взел назаем акции, а не пари, а във формата няма ред за отрицателна позиция в ценни книжа. Сива зона, която е добре да уточниш с БНБ.</li>
+          </ul>
+
+          <blockquote>
+            <strong>💱 Капанът с валутите</strong><br />
+            Да кажем, че имаш −30 000 USD и +40 000 EUR. Interactive Brokers ти начислява лихва върху доларите, въпреки че „нетно“ си на плюс. За БНБ салдата <strong>не се нетират</strong>. Доларите са задължение и се проверяват спрямо прага от 25 000 евро. Еврото е актив и влиза в сбора на активите. Така може да подаваш СПБ-8 и на двете основания. И в никакъв случай не приспадай заема от стойността на акциите.
+          </blockquote>
+
+          <p>
+            <strong>При фирма</strong> маржин кредит от 25 000 евро нагоре означава отделна декларация СПБ-1 до 15 работни дни от договора (чл. 6, ал. 1, т. 1 от Наредбата). След това се подава СПБ-4А годишно или СПБ-4 тримесечно, ако кредитът е от 250 000 евро нагоре. Неясно е какъв е „размерът“ на кредит, който постоянно се променя: договореният лимит или реално усвоената сума. Това е въпрос за БНБ.
+          </p>
+
+          <p>
+            Понеже няма изрична разпоредба, при съмнение най-сигурно е да поискаш <strong>писмено становище</strong> от дирекция „Статистика“ на БНБ. Телефоните ѝ са на самата форма СПБ-8: (02) 9145 1071 и (02) 9145 1523. Писменият отговор те пази, ако по-късно някой тълкува иначе.
+          </p>
 
           <p><strong>3. ETF срещу частен фонд.</strong></p>
 
@@ -792,13 +822,43 @@
             <li>In an <strong>individual’s SPB-8</strong>, the country is that of the <strong>issuer</strong> for securities and that of the <strong>institution holding the account</strong> for cash balances.</li>
           </ul>
 
-          <p><strong>2. Margin.</strong></p>
+          <p><strong>2. Margin: is it a loan?</strong></p>
+
+          <p>
+            Short answer: almost always yes, if you have actually borrowed money. Ordinance No. 27 and the Guidelines do not define “financial loan”, and the word “margin” appears nowhere in them. So this is an interpretation, but a well-founded one. The broker gives you money you owe, you pay interest, you repay on demand, and your shares are the collateral. That is a classic credit line. And the BNB’s forms know exactly this kind of loan: the loan types in SPB-1 include “Revolving loan (credit line)” and “Overdraft”.
+          </p>
+
+          <p><strong>How negative cash goes into SPB-8:</strong></p>
 
           <ul>
-            <li>Positive cash is an asset.</li>
-            <li>Negative cash may be a liability to a foreign person, i.e. row 02 “Financial loans received” in SPB-8.</li>
-            <li>Whether it is a “financial loan” depends on the agreement. Whatever the answer, <strong>do not deduct it</strong> from the value of your shares. Assets and liabilities are reported separately.</li>
+            <li><strong>row 02</strong> “Financial loans received”;</li>
+            <li>maturity <strong>S</strong>, because it is repayable on demand;</li>
+            <li>country: that of the broker’s entity that lends to you (from the agreement);</li>
+            <li>currency: that of the negative balance, e.g. USD;</li>
+            <li>amount: the balance at the beginning and at the end of the year, in thousands, rounded;</li>
+            <li><strong>a separate threshold</strong>: liabilities of EUR 25,000 or more as at 31 December (Art. 13(2)(2) of the Ordinance).</li>
           </ul>
+
+          <p><strong>What is not a loan:</strong></p>
+
+          <ul>
+            <li><strong>Unused buying power.</strong> If nothing has been borrowed, nothing is reported. Only the actual negative balance at 31 December counts.</li>
+            <li><strong>Margin as collateral for futures and options.</strong> That is a guarantee, not a loan, and derivatives are outside SPB-8 altogether.</li>
+            <li><strong>Short selling.</strong> There you have borrowed shares, not money, and the form has no row for a negative securities position. A grey zone worth clarifying with the BNB.</li>
+          </ul>
+
+          <blockquote>
+            <strong>💱 The currency trap</strong><br />
+            Say you have −USD 30,000 and +EUR 40,000. Interactive Brokers charges you interest on the dollars even though you are “net” positive. For the BNB the balances are <strong>not netted</strong>. The dollars are a liability, tested against the EUR 25,000 threshold. The euro is an asset and counts towards your total assets. So you may have to file SPB-8 on both grounds. And never deduct the loan from the value of your shares.
+          </blockquote>
+
+          <p>
+            <strong>For a company</strong>, a margin loan of EUR 25,000 or more means a separate SPB-1 declaration within 15 working days of the agreement (Art. 6(1)(1) of the Ordinance). After that comes SPB-4A annually, or SPB-4 quarterly if the loan is EUR 250,000 or more. What is unclear is the “amount” of a loan that keeps changing: the agreed limit or the amount actually drawn. That is a question for the BNB.
+          </p>
+
+          <p>
+            Since there is no explicit rule, the safest course when in doubt is to ask the BNB’s Statistics Directorate for a <strong>written opinion</strong>. Its phone numbers are on the SPB-8 form itself: +359 2 9145 1071 and +359 2 9145 1523. A written answer protects you if someone later reads the rules differently.
+          </p>
 
           <p><strong>3. ETF vs. private fund.</strong></p>
 
