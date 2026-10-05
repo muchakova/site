@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Кога инвеститор с Interactive Brokers подава СПБ-8 пред БНБ: прагът от 25 000 евро към 31 декември, какво точно се попълва (ISIN, брой, държава на емитента), СПБ-10 и СПБ-10А за фирми, СПБ-2, глобите по чл. 19 от Валутния закон. — Марина Мучакова" />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/blog/spb-8-bnb-interactive-brokers.html" />
+
+  <title>Скъпа БНБ, имам акции в Interactive Brokers — Марина Мучакова</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muchakova.com/blog/spb-8-bnb-interactive-brokers.html" />
+  <meta property="og:title" content="Скъпа БНБ, имам акции в Interactive Brokers" />
+  <meta property="og:description" content="БНБ не иска данък, иска статистика. Кога се подава СПБ-8, какво точно се попълва и защо фирмата ти ще пише на БНБ всеки месец." />
+  <meta property="og:image" content="https://muchakova.com/images/og-site.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Марина Мучакова — данъчен консултант" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+  <meta property="article:author" content="Марина Мучакова" />
+  <meta property="article:published_time" content="2026-10-05" />
+  <meta property="article:tag" content="Инвестиции" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="Скъпа БНБ, имам акции в Interactive Brokers" />
+  <meta name="twitter:description" content="СПБ-8, прагът от 25 000 евро и защо ценните книжа се пишат в брой, а не в евро." />
+  <meta name="twitter:image" content="https://muchakova.com/images/og-site.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Скъпа БНБ, имам акции в Interactive Brokers",
+    "description": "Кога инвеститор с Interactive Brokers подава СПБ-8 пред БНБ, какво точно се попълва във формата, кои форми подават фирмите (СПБ-10, СПБ-10А, СПБ-10Б, СПБ-2, СПБ-5, СПБ-5А) и какви са санкциите по чл. 19 от Валутния закон.",
+    "url": "https://muchakova.com/blog/spb-8-bnb-interactive-brokers.html",
+    "datePublished": "2026-10-05",
+    "dateModified": "2026-10-05",
+    "image": "https://muchakova.com/images/og-site.jpg",
+    "inLanguage": ["bg", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "url": "https://muchakova.com/blog.html"
+    },
+    "keywords": ["СПБ-8", "БНБ", "Interactive Brokers", "Наредба № 27", "Валутен закон", "СПБ-10", "СПБ-10А", "СПБ-2", "25 000 евро", "сметки в чужбина", "ценни книжа", "ISIN", "ИСИС"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about"    data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html"           data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact"  data-key="nav_contact">Контакти</a></li>
+        <li><a href="../game/" data-key="nav_game">Игра</a></li>
+        <li><a href="../booking/" class="nav-cta" data-key="nav_booking">Запази час</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- POST HEADER -->
+  <header class="post-header">
+    <div class="container">
+
+      <a href="../blog.html" class="post-back" data-key="post_back">← Обратно към блога</a>
+
+      <div class="post-tag">
+        <span class="lang-content" data-lang="bg">Отчетност пред БНБ</span>
+        <span class="lang-content" data-lang="en" style="display:none;">BNB reporting</span>
+      </div>
+
+      <h1 class="post-title">
+        <span class="lang-content" data-lang="bg">Скъпа БНБ, имам акции в Interactive Brokers</span>
+        <span class="lang-content" data-lang="en" style="display:none;">Dear BNB, I Have Shares at Interactive Brokers</span>
+      </h1>
+
+      <div class="post-meta">
+        <div class="post-author">
+          <img
+            src="../images/profile_7.jpg"
+            alt="Марина Мучакова"
+            class="post-author-img"
+          />
+          <span class="post-author-name" data-key="full_name">Марина Мучакова</span>
+        </div>
+        <span class="post-separator">·</span>
+        <time datetime="2026-10-05">
+          <span class="lang-content" data-lang="bg">5 октомври 2026</span>
+          <span class="lang-content" data-lang="en" style="display:none;">October 5, 2026</span>
+        </time>
+        <span class="post-separator">·</span>
+        <span>
+          <span class="lang-content" data-lang="bg">11 мин четене</span>
+          <span class="lang-content" data-lang="en" style="display:none;">11 min read</span>
+        </span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- POST BODY -->
+  <main class="post-body">
+    <div class="container">
+      <article class="post-content">
+
+        <!-- ═══════════════════════════════════════ BULGARIAN CONTENT ═══════════════════════════════════════ -->
+        <div class="lang-content" data-lang="bg">
+
+          <p>
+            <em>Кога се подава СПБ-8 (и защо фирмата ти ще пише на БНБ всеки месец). Актуално към 5 октомври 2026 г.</em>
+          </p>
+
+          <p>
+            От 1 януари 2026 г. левът вече е само в колекциите на нумизматите, а един от любимите ми прагове най-сетне е закръглен: <strong>25 000 евро</strong>. Става дума за отчитането пред Българската народна банка (БНБ).
+          </p>
+
+          <p>
+            Едно уточнение, преди някой да се е паникьосал: <strong>БНБ не е НАП</strong>. Тя не иска данък. Иска статистика. Платежният баланс на България трябва да отрази и твоите седем акции на Nvidia. БНБ не ти бърка в джоба, само наднича в него.
+          </p>
+
+          <p>
+            Отчетът е безплатен, освен ако го забравиш. Тогава става платен. За това по-долу.
+          </p>
+
+          <p><strong>Нормативната база, на която стъпваме:</strong></p>
+
+          <ul>
+            <li><strong>Валутен закон (ВЗ)</strong>: чл. 7, ал. 5; чл. 10, ал. 1 и 2; чл. 12, ал. 1; чл. 19.</li>
+            <li><strong>Наредба № 27 на БНБ</strong> от 13.03.2014 г. за статистиката на платежния баланс, международната инвестиционна позиция и статистиката на ценните книжа, последно изменена с ДВ, бр. 30 от 2026 г., в сила от 1.04.2026 г.</li>
+            <li><strong>Указанията към Наредба № 27</strong>, в сила от 1.04.2026 г. Те съдържат образците на формите и правилата за попълването им.</li>
+          </ul>
+
+          <h2>1. Накратко: физическо лице с Interactive Brokers</h2>
+
+          <ul>
+            <li><strong>Откриването на брокерската сметка не се декларира.</strong> Срокът от 15 дни в чл. 7, ал. 5 ВЗ и чл. 6, ал. 1 от Наредбата е за юридически лица и еднолични търговци. Ти си свободна душа.</li>
+            <li><strong>Подаваш годишна форма СПБ-8 до 31 март на следващата година</strong> (чл. 10, ал. 2 ВЗ; чл. 13, ал. 1 от Наредбата), ако към 31 декември е изпълнено поне едно от двете:
+              <ul>
+                <li><strong>активите</strong> са <strong>25 000 евро или повече</strong> (чл. 13, ал. 2, т. 1). Броят се три неща: ценни книжа, купени без български инвестиционен посредник; салда по сметки в чужбина; вземания по финансови кредити, които си дал на чуждестранни лица;</li>
+                <li><strong>задълженията</strong> по финансови кредити към чуждестранни лица са <strong>25 000 евро или повече</strong> (чл. 13, ал. 2, т. 2).</li>
+              </ul>
+            </li>
+            <li>За <strong>2026 г.</strong> отчетът се подава <strong>до 31 март 2027 г.</strong></li>
+          </ul>
+
+          <blockquote>
+            <strong>💡 За 2025 г.</strong><br />
+            За отчета за 2025 г. (подаден до 31 март 2026 г.) важеше старият праг от 50 000 лв. Новият праг от 25 000 евро се прилага за отчетните периоди от 1 януари 2026 г. (§ 3 от Указанията).
+          </blockquote>
+
+          <h3>1.1. Кое се брои и кое не</h3>
+
+          <p>Важи <strong>стойността към 31 декември</strong>. Не важат:</p>
+
+          <ul>
+            <li>колко си внесъл през годината;</li>
+            <li>върхът, на който портфейлът е бил през ноември (за него можеш да си спомняш с умиление);</li>
+            <li>печалбата ти;</li>
+            <li>стойността в деня, в който подаваш отчета.</li>
+          </ul>
+
+          <p>
+            <strong>Валутите</strong> се превръщат в евро по пазарния курс към края на периода (чл. 5, ал. 11 от Указанията). Валутният закон изрично посочва, че за статистически цели се ползват референтните курсове на еврото, публикувани от БНБ (чл. 12, ал. 1 ВЗ). Затова вземи курса от сайта на БНБ за 31 декември.
+          </p>
+
+          <p>
+            <strong>Ценните книжа</strong> се оценяват по пазарна или близка до пазарната стойност. Указанията го препоръчват (чл. 5, ал. 13). Тази стойност ти трябва, за да провериш дали си стигнал прага.
+          </p>
+
+          <h3>1.2. Буквоядска разлика за точно 25 000,00 евро</h3>
+
+          <p>
+            Валутният закон казва, че отчет се подава, ако сборът <strong>„надхвърля 25 000 евро“</strong> (чл. 10, ал. 2 ВЗ). Наредбата и Указанията казват <strong>„равна на или надвишава“</strong> (чл. 13, ал. 2 от Наредбата).
+          </p>
+
+          <p>
+            Ако към полунощ на 31 декември портфейлът ти е точно 25 000,00 евро, първо: поздравления за прецизността. Второ: <strong>подай отчета</strong>. Ще се разминеш със спор, който никой не иска да води.
+          </p>
+
+          <h3>1.3. Активите и задълженията не се нетират</h3>
+
+          <p>
+            Двата прага са отделни. 30 000 евро в акции и 20 000 евро маржин заем не правят „нетни 10 000 евро, значи нищо не подавам“. Подаваш заради активите от 30 000 евро.
+          </p>
+
+          <blockquote>
+            <strong>🧮 Пример</strong><br />
+            Към 31 декември имаш акции и ETF в Interactive Brokers за <strong>22 000 евро</strong>, свободни пари при брокера <strong>4 000 евро</strong> и сметка в германска банка с <strong>3 000 евро</strong>.<br /><br />
+            Общо: <strong>29 000 евро</strong>. Това е над прага, значи СПБ-8 до 31 март.
+          </blockquote>
+
+          <p>
+            Едно „но“ за <strong>кеша при брокера</strong>. Провери в договора какво точно представлява той: клиентска парична сметка при брокера, депозит в конкретна банка, вземане към брокера или част от програма за разпределяне на средства. IBAN-ът, по който пращаш пари на Interactive Brokers, обикновено е на брокера, а не е твоя банкова сметка.
+          </p>
+
+          <h2>2. Какво всъщност се попълва в СПБ-8</h2>
+
+          <p>Формата е проста, ако знаеш какво пита. Ето кое се бърка най-често.</p>
+
+          <p>
+            <strong>Лични данни.</strong> Име, ЕГН/ЛНЧ. Адрес, телефон и имейл се попълват само при първата регистрация в БНБ или ако се променят.
+          </p>
+
+          <p><strong>Четири реда с вземания и задължения:</strong></p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Ред</th><th>Какво е</th><th>Какво се попълва</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>01</td><td>Предоставени финансови кредити</td><td>матуритет, държава, валута, размер</td></tr>
+                <tr><td>02</td><td>Получени финансови кредити (напр. маржин заем, ако по договор е кредит)</td><td>матуритет, държава, валута, размер</td></tr>
+                <tr><td>03</td><td>Сметки, открити в чужбина</td><td>матуритет, държава, валута, размер</td></tr>
+                <tr><td>04</td><td>Придобити ценни книжа</td><td>ISIN и количество</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>За редове 01–03:</strong></p>
+
+          <ul>
+            <li><strong>Матуритет:</strong> код <strong>L</strong> (над една година, включително безсрочни) или <strong>S</strong> (до една година включително).</li>
+            <li><strong>Държава:</strong> на чуждестранното лице. За сметките това е държавата на <strong>банката или институцията, в която е открита сметката</strong>.</li>
+            <li><strong>Валута:</strong> оригиналната валута, а не евро.</li>
+            <li><strong>Размер:</strong> в <strong>хиляди валутни единици</strong>, закръглен до цяло число, <strong>в началото и в края на годината</strong>. Ако имаш няколко сметки в една и съща валута с еднакъв матуритет, може да ги запишеш на един ред.</li>
+          </ul>
+
+          <p><strong>За ред 04 (ценните книжа):</strong></p>
+
+          <ul>
+            <li><strong>Един ISIN на ред.</strong> Принципът е „ценна книга по ценна книга“.</li>
+            <li><strong>Държава на емитента</strong>, а не на брокера и не на борсата. Акциите на Apple са от САЩ. Много ETF-и, чийто ISIN започва с IE, са ирландски, макар да следват S&amp;P 500.</li>
+            <li><strong>Количество, а не стойност:</strong> <strong>брой</strong> за акции, ETF и други дялови инструменти; <strong>номинал</strong> за облигации. Посочва се в оригиналната валута на емисията, <strong>в началото и в края на годината</strong>.</li>
+          </ul>
+
+          <blockquote>
+            <strong>⚠️ Най-честата грешка</strong><br />
+            В ред 04 се пише броят дялове, а не пазарната стойност в евро. Пазарната стойност ти трябва само за проверката дали си стигнал 25 000 евро.
+          </blockquote>
+
+          <p>
+            <strong>Не влизат във формата:</strong> деривати (опции, фючърси, CFD) и репо сделки.
+          </p>
+
+          <p>
+            <strong>Подписът.</strong> Под формата стои декларация, че носиш отговорност по <strong>чл. 313 от Наказателния кодекс</strong> за неверни данни. БНБ не се шегува, макар аз да се опитвам.
+          </p>
+
+          <p><strong>Документи, които е добре да пазиш</strong> (не се прилагат към отчета, но с тях доказваш числата):</p>
+
+          <ul>
+            <li>годишното извлечение от брокера към 31 декември;</li>
+            <li>отчетите Positions/Portfolio и Cash;</li>
+            <li>списък на инструментите с ISIN и брой;</li>
+            <li>пазарната стойност по инструменти към 31 декември;</li>
+            <li>документ, от който се вижда кое дружество на брокера е страна по договора ти;</li>
+            <li>годишните извлечения от чуждестранните банки и платежни институции.</li>
+          </ul>
+
+          <h3>2.1. Как се подава</h3>
+
+          <ul>
+            <li><strong>Електронно</strong> през портала ИСИС на БНБ, с квалифициран електронен подпис (КЕП);</li>
+            <li><strong>на хартия</strong> в деловодството на БНБ <strong>или по пощата</strong> (София 1000, пл. „Княз Александър I“ № 1, дирекция „Статистика“);</li>
+            <li><strong>лично или чрез пълномощник</strong> (чл. 13, ал. 3 от Наредбата).</li>
+          </ul>
+
+          <p>
+            <strong>Ако записите са повече от пет, отчетът се подава само електронно</strong> (чл. 14, ал. 5 от Наредбата). Всеки ISIN е отделен запис. Шест ETF-а в портфейла и вече си човек с КЕП. 🙂
+          </p>
+
+          <h2>3. Фирми (юридически лица и ЕТ): тук няма праг за „влизане“</h2>
+
+          <p>Ако инвестираш през дружество, БНБ иска да те опознае още от първата сделка.</p>
+
+          <h3>3.1. Ценни книжа през чуждестранен брокер</h3>
+
+          <p><strong>СПБ-10: еднократна декларация, без минимален праг</strong></p>
+
+          <ul>
+            <li>Подава се <strong>при първата покупка</strong> на ценни книжа без български инвестиционен посредник (чл. 7, ал. 5 ВЗ; чл. 6, ал. 1, т. 5 от Наредбата).</li>
+            <li><strong>Срок.</strong> Валутният закон казва <strong>15 дни</strong> от сключването на сделката. Наредбата казва <strong>15 работни дни</strong>. Моят съвет: брой <strong>15 календарни дни</strong> и си спокоен.</li>
+            <li>Подава се <strong>веднъж</strong>. Следващите покупки не изискват нова декларация, а влизат в периодичните отчети.</li>
+            <li>Какво съдържа: наименование и ЕИК на дружеството; вид на инвестицията; начин на придобиване (код BOUGHT при пазарна покупка, OTHER при друго събитие); <strong>наименование и държава на чуждестранния посредник</strong>; датата, от която започваш да инвестираш без местен посредник; данни за декларатора.</li>
+          </ul>
+
+          <p><strong>СПБ-10А: месечен отчет за ценните книжа</strong></p>
+
+          <ul>
+            <li>Основание: чл. 9, ал. 11, т. 1 от Наредбата.</li>
+            <li>Срок: <strong>до края на 7-ия работен ден</strong> на следващия месец (чл. 12, ал. 7).</li>
+            <li>Отчита се по ISIN: позиции в началото и в края, покупки, продажби, други промени, както и <strong>получените дивиденти и лихви</strong>.</li>
+            <li>Подава се <strong>само електронно</strong> (чл. 14, ал. 2).</li>
+            <li>Подава се, докато има ценни книжа в портфейла. Да, всеки месец. Да, и през август.</li>
+          </ul>
+
+          <p><strong>СПБ-10Б: тримесечен отчет за чуждестранни фондове за дялов капитал</strong></p>
+
+          <ul>
+            <li>Основание: чл. 9, ал. 11, т. 2 от Наредбата.</li>
+            <li>Срок: <strong>до 55 календарни дни</strong> след края на тримесечието (чл. 12, ал. 6).</li>
+          </ul>
+
+          <blockquote>
+            <strong>Изключение</strong><br />
+            Дружествата от сектор „финансови предприятия“ не подават СПБ-10 (чл. 6, ал. 5). Те отчитат ценните си книжа по отделен режим (чл. 9, ал. 9).
+          </blockquote>
+
+          <h3>3.2. Сметка в чуждестранна банка, платежна институция или дружество за електронни пари</h3>
+
+          <p><strong>СПБ-2: при откриване на сметката, без праг</strong></p>
+
+          <ul>
+            <li>Основание: чл. 7, ал. 5 ВЗ; чл. 6, ал. 1, т. 2 от Наредбата.</li>
+            <li>Срок: <strong>15 работни дни</strong> от откриването (и тук законът казва 15 дни, затова важи същият съвет).</li>
+            <li>Обхваща и сметки във <strong>виртуална банка</strong>, <strong>платежна институция</strong>, <strong>дружество за електронни пари</strong>, както и <strong>cash-pool/treasury</strong> сметки.</li>
+            <li>Промяна или закриване: коригираща СПБ-2 или заявка за промяна в ИСИС в срок до <strong>15 работни дни</strong> (чл. 8, ал. 1 и 2).</li>
+          </ul>
+
+          <p><strong>Периодичните отчети след това:</strong></p>
+
+          <ul>
+            <li><strong>СПБ-5</strong> за сметки по договор за управление на средства (cash-pool). Подава се <strong>тримесечно, независимо от салдото</strong> (чл. 9, ал. 1, т. 2), до 20-о число на месеца след тримесечието. За четвъртото тримесечие срокът е 25 януари (чл. 12, ал. 2 и 3).</li>
+            <li><strong>СПБ-5А</strong> за всички останали сметки. Подава се <strong>веднъж годишно</strong>, ако сборът на салдата към края на годината е <strong>25 000 евро или повече</strong> (чл. 9, ал. 4, т. 3), <strong>до 25 януари</strong> (чл. 12, ал. 4).</li>
+          </ul>
+
+          <h2>4. Шпаргалка: брокер срещу банка</h2>
+
+          <p><strong>Физическо лице</strong></p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Ситуация</th><th>Форма</th><th>Праг</th><th>Срок</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Ценни книжа чрез чуждестранен брокер</td><td>СПБ-8</td><td>общо активи ≥ 25 000 € към 31.12</td><td>до 31 март</td></tr>
+                <tr><td>Сметка в чуждестранна банка</td><td>СПБ-8</td><td>влиза в същия общ праг</td><td>до 31 март</td></tr>
+                <tr><td>Маржин или друг кредит от чуждестранно лице</td><td>СПБ-8</td><td>задължения ≥ 25 000 € (отделен праг)</td><td>до 31 март</td></tr>
+                <tr><td>Само откриване на сметка при брокер или банка</td><td>нищо</td><td>—</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>Фирма</strong></p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Ситуация</th><th>Първоначално</th><th>Праг</th><th>После</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Ценни книжа чрез чуждестранен брокер</td><td>СПБ-10 до 15 работни дни</td><td>няма</td><td>СПБ-10А месечно / СПБ-10Б тримесечно</td></tr>
+                <tr><td>Сметка в чуждестранна банка или ПИ</td><td>СПБ-2 до 15 работни дни</td><td>няма</td><td>СПБ-5А годишно при ≥ 25 000 €</td></tr>
+                <tr><td>Cash-pool / управление на средства</td><td>СПБ-2 до 15 работни дни</td><td>няма</td><td>СПБ-5 тримесечно, независимо от салдото</td></tr>
+                <tr><td>Превод по IBAN на брокера (сметката е негова)</td><td>обикновено не е твоя сметка</td><td>—</td><td>провери договора</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Последният ред е мой практически извод, не изрична разпоредба. Решаващо е дали дружеството ти е <strong>титуляр</strong> на сметката, или само превежда пари по сметка на брокера.
+          </p>
+
+          <h2>5. Още прагове за фирми, за да няма изненади</h2>
+
+          <ul>
+            <li><strong>Финансови кредити от/към чуждестранни лица от 25 000 евро нагоре:</strong> СПБ-1 до 15 работни дни (чл. 6, ал. 1, т. 1).
+              <ul>
+                <li>от 25 000 до 250 000 евро: после <strong>СПБ-4А</strong> годишно до 25 януари (чл. 9, ал. 4, т. 1; чл. 12, ал. 4);</li>
+                <li>от 250 000 евро нагоре: <strong>СПБ-4</strong> тримесечно, до 20-о число след тримесечието и до 25 януари за четвъртото (чл. 9, ал. 1, т. 1; чл. 12, ал. 2 и 3).</li>
+              </ul>
+            </li>
+            <li><strong>Търговски вземания</strong> от чуждестранни лица от <strong>100 000 евро</strong> нагоре: <strong>СПБ-6А</strong> тримесечно (чл. 9, ал. 1, т. 3).</li>
+            <li><strong>Търговски задължения</strong> към чуждестранни лица от <strong>100 000 евро</strong> нагоре: <strong>СПБ-6Б</strong> тримесечно (чл. 9, ал. 1, т. 4).</li>
+            <li><strong>Пряка инвестиция в чужбина:</strong> СПБ-3 до 15 работни дни (чл. 6, ал. 1, т. 3). После <strong>СПБ-7</strong> тримесечно или <strong>СПБ-7Б</strong> годишно за недвижими имоти (чл. 10 от Наредбата).</li>
+            <li><strong>Услуги, възнаграждения и безвъзмездни плащания (СПБ-11)</strong> и <strong>преки чуждестранни инвестиции в твоето дружество (СПБ-12):</strong> подават се <strong>само ако БНБ ти пише</strong> (чл. 9, ал. 1, т. 5 и 6). Ако не си получил писмо, спи спокойно.</li>
+          </ul>
+
+          <h2>6. Interactive Brokers: три капана</h2>
+
+          <p>
+            <strong>1. „Interactive Brokers“ не е достатъчно.</strong> Групата има няколко дружества в различни държави. Например много клиенти от ЕС са към Interactive Brokers Ireland Limited, но провери <strong>своя</strong> договор. Нужно ти е точното дружество от Client Agreement, Account Confirmation или годишния отчет.
+          </p>
+
+          <ul>
+            <li>Във <strong>фирмената СПБ-10</strong> се пишат наименованието и държавата на <strong>това</strong> дружество.</li>
+            <li>Във <strong>физическата СПБ-8</strong> държавата е на <strong>емитента</strong> за ценните книжа и на <strong>институцията, в която е сметката</strong>, за паричните салда.</li>
+          </ul>
+
+          <p><strong>2. Маржинът.</strong></p>
+
+          <ul>
+            <li>Положителният кеш е актив.</li>
+            <li>Отрицателният кеш може да е задължение към чуждестранно лице, тоест ред 02 „Получени финансови кредити“ в СПБ-8.</li>
+            <li>Дали е „финансов кредит“, зависи от договора. Каквото и да се окаже, <strong>не го приспадай</strong> от стойността на акциите. Активите и задълженията се отчитат поотделно.</li>
+          </ul>
+
+          <p><strong>3. ETF срещу частен фонд.</strong></p>
+
+          <ul>
+            <li>За физическото лице и двете обикновено отиват в ред 04 като ценни книжа с ISIN.</li>
+            <li>За фирмата борсовите акции, облигации и ETF отиват в <strong>СПБ-10А</strong>, а чуждестранните фондове за дялов капитал — в <strong>СПБ-10Б</strong>.</li>
+          </ul>
+
+          <p>
+            А ако търгуваш активно през Interactive Brokers, провери и <a href="dds-registraciya-interactive-brokers.html">кога това води до ДДС регистрация</a>. Там вече говорим за НАП, а не за статистика.
+          </p>
+
+          <h2>7. А ако забравя?</h2>
+
+          <p>БНБ не начислява лихви, но съставя актове. Санкциите са по <strong>чл. 19 ВЗ</strong>:</p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Кой</th><th>Първо нарушение</th><th>Повторно нарушение (чл. 19, ал. 7)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Физическо лице (чл. 19, ал. 1)</td><td>глоба 200–1000 лв. (≈ 102,26–511,29 €)</td><td>500–2500 лв. (≈ 255,65–1278,23 €)</td></tr>
+                <tr><td>Фирма или ЕТ (чл. 19, ал. 2)</td><td>имуществена санкция 2000–10 000 лв. (≈ 1022,58–5112,92 €)</td><td>4000–20 000 лв. (≈ 2045,17–10 225,84 €)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Законът все още посочва сумите в левове. Те се прилагат превалутирани по фиксирания курс 1,95583 (чл. 12 и § 5, ал. 1 от ПЗР на Закона за въвеждане на еврото в Република България).
+          </p>
+
+          <p>
+            Актовете се съставят от служители на БНБ, а наказателните постановления ги издава управителят на БНБ или упълномощено от него лице (чл. 19, ал. 8 ВЗ).
+          </p>
+
+          <h2>8. Практичният извод</h2>
+
+          <ul>
+            <li><strong>Инвестираш лично?</strong> На 31 декември погледни портфейла си, а не само елхата. При 25 000 евро или повече подай СПБ-8 до 31 март. За 2026 г. крайният срок е <strong>31 март 2027 г.</strong></li>
+            <li><strong>Инвестираш през фирма?</strong> Не чакай 25 000 евро. При първата покупка през чуждестранен брокер подай СПБ-10 (брой 15 календарни дни). После всеки месец СПБ-10А. Ако фирмата има и собствена сметка в чуждестранна банка или платежна институция, подай отделно СПБ-2.</li>
+            <li><strong>Преди да попълниш каквото и да е за Interactive Brokers,</strong> провери три неща: кое е договорното дружество, какво пише в годишния отчет към 31 декември и как е квалифициран кешът или маржинът. Тези три неща най-често сменят формата и числата.</li>
+          </ul>
+
+          <p>
+            Ако след всичко това си казваш „не, благодаря, предпочитам някой друг да се разправя с ИСИС“, <a href="../booking/">запази си час</a> и ще го оправим заедно. 😉
+          </p>
+
+          <p>
+            <em>Материалът е обща информация към 5 октомври 2026 г. и не замества индивидуална консултация. Това особено важи при маржин сметки, кеш при брокера или различни договорни дружества в групата на Interactive Brokers.</em>
+          </p>
+
+          <h3>Нормативни актове и източници</h3>
+
+          <ul>
+            <li>Валутен закон: чл. 7, ал. 5; чл. 10, ал. 1 и 2; чл. 12, ал. 1; чл. 19.</li>
+            <li>БНБ – <a href="https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/regulations_registrationinb_bg.pdf" target="_blank" rel="noopener">Наредба № 27 на БНБ от 13.03.2014 г.</a>: чл. 6, 8, 9, 10, 12, 13 и 14 (посл. изм. ДВ, бр. 30 от 2026 г., в сила от 1.04.2026 г.)</li>
+            <li>БНБ – <a href="https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/au_lf_guidline_27-2026_bg.pdf" target="_blank" rel="noopener">Указания към Наредба № 27</a>, в сила от 1.04.2026 г.: чл. 5, ал. 11 и 13; § 3; указанията за попълване на СПБ-2, СПБ-5, СПБ-5А, СПБ-8, СПБ-10, СПБ-10А и СПБ-10Б</li>
+            <li>БНБ – <a href="https://www.bnb.bg/AboutUs/AUFAQ/CONTR_ORDINANCE27_FAQ" target="_blank" rel="noopener">Въпроси и отговори по Наредба № 27</a></li>
+            <li>БНБ – <a href="https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/laws_euro_bg.pdf" target="_blank" rel="noopener">Закон за въвеждане на еврото в Република България</a>: чл. 12; § 5, ал. 1 от ПЗР</li>
+            <li>Наказателен кодекс: чл. 313</li>
+          </ul>
+
+        </div><!-- /lang-content bg -->
+
+
+        <!-- ═══════════════════════════════════════ ENGLISH CONTENT ═══════════════════════════════════════ -->
+        <div class="lang-content" data-lang="en" style="display:none;">
+
+          <p>
+            <em>When you file Form SPB-8 (and why your company will be writing to the BNB every month). Up to date as of 5 October 2026.</em>
+          </p>
+
+          <p>
+            Since 1 January 2026 the lev has lived only in coin collectors’ albums, and one of my favourite thresholds has finally been rounded off: <strong>EUR 25,000</strong>. We are talking about reporting to the Bulgarian National Bank (BNB).
+          </p>
+
+          <p>
+            One clarification before anyone panics: <strong>the BNB is not the National Revenue Agency (NRA)</strong>. It does not want tax. It wants statistics. Bulgaria’s balance of payments needs to reflect your seven Nvidia shares too. The BNB is not reaching into your pocket, just peeking into it.
+          </p>
+
+          <p>
+            The report costs nothing, unless you forget it. Then it starts costing. More on that below.
+          </p>
+
+          <p>
+            <em>A note on names: the forms are officially called СПБ-1, СПБ-2 and so on. Below they are written as SPB-1, SPB-2, etc.</em>
+          </p>
+
+          <p><strong>The legal basis we stand on:</strong></p>
+
+          <ul>
+            <li><strong>Currency Act (CA)</strong>: Art. 7(5); Art. 10(1) and (2); Art. 12(1); Art. 19.</li>
+            <li><strong>BNB Ordinance No. 27</strong> of 13 March 2014 on balance of payments, international investment position and securities statistics, last amended in State Gazette No. 30 of 2026, in force from 1 April 2026.</li>
+            <li><strong>The Guidelines to Ordinance No. 27</strong>, in force from 1 April 2026. They contain the form templates and the rules for filling them in.</li>
+          </ul>
+
+          <h2>1. In short: an individual with Interactive Brokers</h2>
+
+          <ul>
+            <li><strong>Opening the brokerage account is not declared.</strong> The 15-day deadline in Art. 7(5) CA and Art. 6(1) of the Ordinance applies to legal entities and sole traders. You are a free spirit.</li>
+            <li><strong>You file an annual Form SPB-8 by 31 March of the following year</strong> (Art. 10(2) CA; Art. 13(1) of the Ordinance) if, as at 31 December, at least one of the following is true:
+              <ul>
+                <li>your <strong>assets</strong> are <strong>EUR 25,000 or more</strong> (Art. 13(2)(1)). Three things count: securities bought without a Bulgarian investment intermediary; balances on accounts abroad; claims on financial loans you have granted to foreign persons;</li>
+                <li>your <strong>liabilities</strong> on financial loans to foreign persons are <strong>EUR 25,000 or more</strong> (Art. 13(2)(2)).</li>
+              </ul>
+            </li>
+            <li>For <strong>2026</strong>, the report is due <strong>by 31 March 2027</strong>.</li>
+          </ul>
+
+          <blockquote>
+            <strong>💡 About 2025</strong><br />
+            The report for 2025 (due by 31 March 2026) still used the old threshold of BGN 50,000. The new EUR 25,000 threshold applies to reporting periods from 1 January 2026 (§ 3 of the Guidelines).
+          </blockquote>
+
+          <h3>1.1. What counts and what doesn’t</h3>
+
+          <p>What matters is the <strong>value as at 31 December</strong>. What does not matter:</p>
+
+          <ul>
+            <li>how much you deposited during the year;</li>
+            <li>the peak your portfolio reached in November (feel free to remember it fondly);</li>
+            <li>your profit;</li>
+            <li>the value on the day you file.</li>
+          </ul>
+
+          <p>
+            <strong>Foreign currencies</strong> are converted into euro at the market rate at the end of the period (Art. 5(11) of the Guidelines). The Currency Act states that for statistical purposes the euro reference rates published by the BNB are used (Art. 12(1) CA). So take the rate for 31 December from the BNB website.
+          </p>
+
+          <p>
+            <strong>Securities</strong> are valued at market value or close to it, as the Guidelines recommend (Art. 5(13)). You need this value to check whether you have reached the threshold.
+          </p>
+
+          <h3>1.2. A pedantic difference for exactly EUR 25,000.00</h3>
+
+          <p>
+            The Currency Act says a report is due if the total <strong>“exceeds EUR 25,000”</strong> (Art. 10(2) CA). The Ordinance and the Guidelines say <strong>“equal to or exceeding”</strong> (Art. 13(2) of the Ordinance).
+          </p>
+
+          <p>
+            If at midnight on 31 December your portfolio is worth exactly EUR 25,000.00, first: congratulations on your precision. Second: <strong>file the report</strong>. You will avoid an argument nobody wants to have.
+          </p>
+
+          <h3>1.3. Assets and liabilities are not netted</h3>
+
+          <p>
+            The two thresholds are separate. EUR 30,000 in shares and a EUR 20,000 margin loan do not make “a net EUR 10,000, so I file nothing”. You file because of the EUR 30,000 in assets.
+          </p>
+
+          <blockquote>
+            <strong>🧮 Example</strong><br />
+            As at 31 December you hold shares and ETFs at Interactive Brokers worth <strong>EUR 22,000</strong>, free cash at the broker of <strong>EUR 4,000</strong> and an account with a German bank holding <strong>EUR 3,000</strong>.<br /><br />
+            Total: <strong>EUR 29,000</strong>. That is above the threshold, so SPB-8 by 31 March.
+          </blockquote>
+
+          <p>
+            One “but” about <strong>cash at the broker</strong>. Check your agreement to see what it actually is: a client cash account with the broker, a deposit with a specific bank, a claim against the broker, or part of a cash sweep programme. The IBAN you use to send money to Interactive Brokers usually belongs to the broker and is not your own bank account.
+          </p>
+
+          <h2>2. What actually goes into SPB-8</h2>
+
+          <p>The form is simple once you know what it is asking. Here is what people get wrong most often.</p>
+
+          <p>
+            <strong>Personal details.</strong> Name and personal ID number (EGN/LNCh). Address, phone and email are filled in only at your first registration with the BNB or when they change.
+          </p>
+
+          <p><strong>Four rows of claims and liabilities:</strong></p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Row</th><th>What it is</th><th>What you fill in</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>01</td><td>Financial loans granted</td><td>maturity, country, currency, amount</td></tr>
+                <tr><td>02</td><td>Financial loans received (e.g. a margin loan, if the agreement makes it a loan)</td><td>maturity, country, currency, amount</td></tr>
+                <tr><td>03</td><td>Accounts opened abroad</td><td>maturity, country, currency, amount</td></tr>
+                <tr><td>04</td><td>Securities acquired</td><td>ISIN and quantity</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>For rows 01–03:</strong></p>
+
+          <ul>
+            <li><strong>Maturity:</strong> code <strong>L</strong> (over one year, including open-ended) or <strong>S</strong> (up to and including one year).</li>
+            <li><strong>Country:</strong> that of the foreign person. For accounts, it is the country of the <strong>bank or institution where the account is held</strong>.</li>
+            <li><strong>Currency:</strong> the original currency, not euro.</li>
+            <li><strong>Amount:</strong> in <strong>thousands of currency units</strong>, rounded to a whole number, <strong>at the beginning and at the end of the year</strong>. Several accounts in the same currency with the same maturity may go on one row.</li>
+          </ul>
+
+          <p><strong>For row 04 (securities):</strong></p>
+
+          <ul>
+            <li><strong>One ISIN per row.</strong> The principle is “security by security”.</li>
+            <li><strong>Country of the issuer</strong>, not of the broker and not of the exchange. Apple shares are from the US. Many ETFs whose ISIN starts with IE are Irish, even though they track the S&amp;P 500.</li>
+            <li><strong>Quantity, not value:</strong> the <strong>number</strong> of units for shares, ETFs and other equity instruments; the <strong>nominal amount</strong> for bonds. It is given in the original currency of the issue, <strong>at the beginning and at the end of the year</strong>.</li>
+          </ul>
+
+          <blockquote>
+            <strong>⚠️ The most common mistake</strong><br />
+            Row 04 takes the number of units, not the market value in euro. You need the market value only to check whether you have reached EUR 25,000.
+          </blockquote>
+
+          <p>
+            <strong>Not included in the form:</strong> derivatives (options, futures, CFDs) and repo transactions.
+          </p>
+
+          <p>
+            <strong>The signature.</strong> At the bottom of the form you declare that you are liable under <strong>Art. 313 of the Criminal Code</strong> for false information. The BNB is not joking, although I am trying to.
+          </p>
+
+          <p><strong>Documents worth keeping</strong> (they are not attached to the report, but they back up your numbers):</p>
+
+          <ul>
+            <li>the broker’s annual statement as at 31 December;</li>
+            <li>the Positions/Portfolio and Cash reports;</li>
+            <li>a list of instruments with ISIN and quantity;</li>
+            <li>the market value per instrument as at 31 December;</li>
+            <li>a document showing which entity of the broker is party to your agreement;</li>
+            <li>annual statements from foreign banks and payment institutions.</li>
+          </ul>
+
+          <h3>2.1. How to file</h3>
+
+          <ul>
+            <li><strong>Electronically</strong> through the BNB’s ISIS portal, with a qualified electronic signature (QES);</li>
+            <li><strong>on paper</strong> at the BNB registry <strong>or by post</strong> (1 Knyaz Alexander I Sq., Sofia 1000, Statistics Directorate);</li>
+            <li><strong>in person or through a proxy</strong> (Art. 13(3) of the Ordinance).</li>
+          </ul>
+
+          <p>
+            <strong>With more than five records, the report can only be filed electronically</strong> (Art. 14(5) of the Ordinance). Each ISIN is a separate record. Six ETFs in your portfolio and you are officially a person with a QES. 🙂
+          </p>
+
+          <h2>3. Companies (legal entities and sole traders): no entry threshold here</h2>
+
+          <p>If you invest through a company, the BNB wants to get to know you from the very first trade.</p>
+
+          <h3>3.1. Securities through a foreign broker</h3>
+
+          <p><strong>SPB-10: a one-off declaration, no minimum threshold</strong></p>
+
+          <ul>
+            <li>Filed <strong>on the first purchase</strong> of securities without a Bulgarian investment intermediary (Art. 7(5) CA; Art. 6(1)(5) of the Ordinance).</li>
+            <li><strong>Deadline.</strong> The Currency Act says <strong>15 days</strong> from the transaction. The Ordinance says <strong>15 working days</strong>. My advice: count <strong>15 calendar days</strong> and sleep well.</li>
+            <li>Filed <strong>once</strong>. Later purchases do not need a new declaration; they go into the periodic reports.</li>
+            <li>What it contains: the company’s name and UIC; type of investment; how it was acquired (code BOUGHT for a market purchase, OTHER for another event); <strong>the name and country of the foreign intermediary</strong>; the date from which you start investing without a local intermediary; details of the declarant.</li>
+          </ul>
+
+          <p><strong>SPB-10A: monthly report on securities</strong></p>
+
+          <ul>
+            <li>Legal basis: Art. 9(11)(1) of the Ordinance.</li>
+            <li>Deadline: <strong>by the end of the 7th working day</strong> of the following month (Art. 12(7)).</li>
+            <li>Reported per ISIN: opening and closing positions, purchases, sales, other changes, plus <strong>dividends and interest received</strong>.</li>
+            <li>Filed <strong>electronically only</strong> (Art. 14(2)).</li>
+            <li>Filed for as long as there are securities in the portfolio. Yes, every month. Yes, in August too.</li>
+          </ul>
+
+          <p><strong>SPB-10B: quarterly report on foreign equity funds</strong></p>
+
+          <ul>
+            <li>Legal basis: Art. 9(11)(2) of the Ordinance.</li>
+            <li>Deadline: <strong>within 55 calendar days</strong> after the end of the quarter (Art. 12(6)).</li>
+          </ul>
+
+          <blockquote>
+            <strong>Exception</strong><br />
+            Companies in the “financial corporations” sector do not file SPB-10 (Art. 6(5)). They report their securities under a separate regime (Art. 9(9)).
+          </blockquote>
+
+          <h3>3.2. An account with a foreign bank, payment institution or e-money institution</h3>
+
+          <p><strong>SPB-2: on opening the account, no threshold</strong></p>
+
+          <ul>
+            <li>Legal basis: Art. 7(5) CA; Art. 6(1)(2) of the Ordinance.</li>
+            <li>Deadline: <strong>15 working days</strong> from opening (here too the Act says 15 days, so the same advice applies).</li>
+            <li>It also covers accounts with a <strong>virtual bank</strong>, a <strong>payment institution</strong>, an <strong>e-money institution</strong>, and <strong>cash-pool/treasury</strong> accounts.</li>
+            <li>Changes or closure: a corrective SPB-2 or a change request in ISIS within <strong>15 working days</strong> (Art. 8(1) and (2)).</li>
+          </ul>
+
+          <p><strong>The periodic reports after that:</strong></p>
+
+          <ul>
+            <li><strong>SPB-5</strong> for accounts under a cash management agreement (cash pool). Filed <strong>quarterly, whatever the balance</strong> (Art. 9(1)(2)), by the 20th of the month after the quarter. For the fourth quarter the deadline is 25 January (Art. 12(2) and (3)).</li>
+            <li><strong>SPB-5A</strong> for all other accounts. Filed <strong>once a year</strong> if the total balance at year-end is <strong>EUR 25,000 or more</strong> (Art. 9(4)(3)), <strong>by 25 January</strong> (Art. 12(4)).</li>
+          </ul>
+
+          <h2>4. Cheat sheet: broker vs. bank</h2>
+
+          <p><strong>Individual</strong></p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Situation</th><th>Form</th><th>Threshold</th><th>Deadline</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Securities through a foreign broker</td><td>SPB-8</td><td>total assets ≥ €25,000 at 31 Dec</td><td>by 31 March</td></tr>
+                <tr><td>Account with a foreign bank</td><td>SPB-8</td><td>counts towards the same total threshold</td><td>by 31 March</td></tr>
+                <tr><td>Margin or other loan from a foreign person</td><td>SPB-8</td><td>liabilities ≥ €25,000 (separate threshold)</td><td>by 31 March</td></tr>
+                <tr><td>Just opening an account with a broker or bank</td><td>nothing</td><td>—</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>Company</strong></p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Situation</th><th>Initially</th><th>Threshold</th><th>Afterwards</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Securities through a foreign broker</td><td>SPB-10 within 15 working days</td><td>none</td><td>SPB-10A monthly / SPB-10B quarterly</td></tr>
+                <tr><td>Account with a foreign bank or payment institution</td><td>SPB-2 within 15 working days</td><td>none</td><td>SPB-5A annually if ≥ €25,000</td></tr>
+                <tr><td>Cash pool / cash management</td><td>SPB-2 within 15 working days</td><td>none</td><td>SPB-5 quarterly, whatever the balance</td></tr>
+                <tr><td>Transfer to the broker’s IBAN (the account is the broker’s)</td><td>usually not your account</td><td>—</td><td>check the agreement</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            The last row is my practical conclusion, not an explicit rule. What decides it is whether your company is the <strong>holder</strong> of the account or just transfers money to the broker’s account.
+          </p>
+
+          <h2>5. More thresholds for companies, so there are no surprises</h2>
+
+          <ul>
+            <li><strong>Financial loans from/to foreign persons of EUR 25,000 or more:</strong> SPB-1 within 15 working days (Art. 6(1)(1)).
+              <ul>
+                <li>from EUR 25,000 to EUR 250,000: then <strong>SPB-4A</strong> annually by 25 January (Art. 9(4)(1); Art. 12(4));</li>
+                <li>EUR 250,000 or more: <strong>SPB-4</strong> quarterly, by the 20th after the quarter and by 25 January for the fourth (Art. 9(1)(1); Art. 12(2) and (3)).</li>
+              </ul>
+            </li>
+            <li><strong>Trade receivables</strong> from foreign persons of <strong>EUR 100,000</strong> or more: <strong>SPB-6A</strong> quarterly (Art. 9(1)(3)).</li>
+            <li><strong>Trade payables</strong> to foreign persons of <strong>EUR 100,000</strong> or more: <strong>SPB-6B</strong> quarterly (Art. 9(1)(4)).</li>
+            <li><strong>Direct investment abroad:</strong> SPB-3 within 15 working days (Art. 6(1)(3)). Then <strong>SPB-7</strong> quarterly, or <strong>SPB-7B</strong> annually for real estate (Art. 10 of the Ordinance).</li>
+            <li><strong>Services, fees and unrequited payments (SPB-11)</strong> and <strong>foreign direct investment in your company (SPB-12):</strong> filed <strong>only if the BNB writes to you</strong> (Art. 9(1)(5) and (6)). No letter, no worries.</li>
+          </ul>
+
+          <h2>6. Interactive Brokers: three traps</h2>
+
+          <p>
+            <strong>1. “Interactive Brokers” is not enough.</strong> The group has several entities in different countries. Many EU clients, for example, are with Interactive Brokers Ireland Limited, but check <strong>your own</strong> agreement. You need the exact entity from the Client Agreement, the Account Confirmation or the annual statement.
+          </p>
+
+          <ul>
+            <li>In the <strong>company’s SPB-10</strong>, you enter the name and country of <strong>that</strong> entity.</li>
+            <li>In an <strong>individual’s SPB-8</strong>, the country is that of the <strong>issuer</strong> for securities and that of the <strong>institution holding the account</strong> for cash balances.</li>
+          </ul>
+
+          <p><strong>2. Margin.</strong></p>
+
+          <ul>
+            <li>Positive cash is an asset.</li>
+            <li>Negative cash may be a liability to a foreign person, i.e. row 02 “Financial loans received” in SPB-8.</li>
+            <li>Whether it is a “financial loan” depends on the agreement. Whatever the answer, <strong>do not deduct it</strong> from the value of your shares. Assets and liabilities are reported separately.</li>
+          </ul>
+
+          <p><strong>3. ETF vs. private fund.</strong></p>
+
+          <ul>
+            <li>For an individual, both usually go into row 04 as securities with an ISIN.</li>
+            <li>For a company, listed shares, bonds and ETFs go into <strong>SPB-10A</strong>, and foreign equity funds into <strong>SPB-10B</strong>.</li>
+          </ul>
+
+          <p>
+            And if you trade actively through Interactive Brokers, also check <a href="dds-registraciya-interactive-brokers.html">when that leads to VAT registration</a>. That one is about the NRA, not statistics.
+          </p>
+
+          <h2>7. What if I forget?</h2>
+
+          <p>The BNB does not charge interest, but it does issue penalty notices. The sanctions are under <strong>Art. 19 CA</strong>:</p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Who</th><th>First violation</th><th>Repeat violation (Art. 19(7))</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Individual (Art. 19(1))</td><td>fine of BGN 200–1,000 (≈ €102.26–511.29)</td><td>BGN 500–2,500 (≈ €255.65–1,278.23)</td></tr>
+                <tr><td>Company or sole trader (Art. 19(2))</td><td>pecuniary sanction of BGN 2,000–10,000 (≈ €1,022.58–5,112.92)</td><td>BGN 4,000–20,000 (≈ €2,045.17–10,225.84)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            The Act still states the amounts in leva. They apply converted at the fixed rate of 1.95583 (Art. 12 and § 5(1) of the Transitional and Final Provisions of the Act on the Introduction of the Euro in the Republic of Bulgaria).
+          </p>
+
+          <p>
+            Violations are established by BNB officials, and penalty decrees are issued by the BNB Governor or a person authorised by the Governor (Art. 19(8) CA).
+          </p>
+
+          <h2>8. The practical takeaway</h2>
+
+          <ul>
+            <li><strong>Investing personally?</strong> On 31 December, look at your portfolio, not just the Christmas tree. At EUR 25,000 or more, file SPB-8 by 31 March. For 2026 the deadline is <strong>31 March 2027</strong>.</li>
+            <li><strong>Investing through a company?</strong> Don’t wait for EUR 25,000. On the first purchase through a foreign broker, file SPB-10 (count 15 calendar days). Then SPB-10A every month. If the company also has its own account with a foreign bank or payment institution, file a separate SPB-2.</li>
+            <li><strong>Before you fill in anything for Interactive Brokers,</strong> check three things: which entity you contracted with, what the annual statement as at 31 December says, and how the cash or margin is classified. These three things most often change the form and the numbers.</li>
+          </ul>
+
+          <p>
+            If after all this you are thinking “no thanks, I’d rather someone else dealt with ISIS”, <a href="../booking/">book a meeting</a> and we’ll sort it out together. 😉
+          </p>
+
+          <p>
+            <em>This article is general information as of 5 October 2026 and is not a substitute for individual advice. That is especially true for margin accounts, cash held at the broker, or different contracting entities within the Interactive Brokers group.</em>
+          </p>
+
+          <h3>Legislation and sources</h3>
+
+          <ul>
+            <li>Currency Act: Art. 7(5); Art. 10(1) and (2); Art. 12(1); Art. 19.</li>
+            <li>BNB – <a href="https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/regulations_registrationinb_bg.pdf" target="_blank" rel="noopener">Ordinance No. 27 of the BNB of 13 March 2014</a> (in Bulgarian): Arts. 6, 8, 9, 10, 12, 13 and 14 (last amended State Gazette No. 30/2026, in force from 1 April 2026)</li>
+            <li>BNB – <a href="https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/au_lf_guidline_27-2026_bg.pdf" target="_blank" rel="noopener">Guidelines to Ordinance No. 27</a> (in Bulgarian), in force from 1 April 2026: Art. 5(11) and (13); § 3; filling-in instructions for SPB-2, SPB-5, SPB-5A, SPB-8, SPB-10, SPB-10A and SPB-10B</li>
+            <li>BNB – <a href="https://www.bnb.bg/AboutUs/AUFAQ/CONTR_ORDINANCE27_FAQ" target="_blank" rel="noopener">FAQ on Ordinance No. 27</a> (in Bulgarian)</li>
+            <li>BNB – <a href="https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/laws_euro_bg.pdf" target="_blank" rel="noopener">Act on the Introduction of the Euro in the Republic of Bulgaria</a> (in Bulgarian): Art. 12; § 5(1) of the Transitional and Final Provisions</li>
+            <li>Criminal Code: Art. 313</li>
+          </ul>
+
+        </div><!-- /lang-content en -->
+
+        <!-- SHARE (always visible) -->
+        <hr>
+        <div class="post-share">
+          <p class="share-label" data-key="share_label">Сподели</p>
+          <div class="share-buttons">
+
+            <button class="share-btn" id="shareNative" style="display:none;">
+              📤 <span data-key="share_native">Сподели</span>
+            </button>
+
+            <a href="#" class="share-btn" id="shareTwitter" target="_blank" rel="noopener">
+              ✕ Twitter
+            </a>
+
+            <a href="#" class="share-btn" id="shareFacebook" target="_blank" rel="noopener">
+              f Facebook
+            </a>
+
+            <a href="#" class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener">
+              in LinkedIn
+            </a>
+
+            <button class="share-btn" id="shareCopy" data-key="share_copy">
+              🔗 Копирай линк
+            </button>
+
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <a href="../donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
