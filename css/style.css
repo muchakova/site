@@ -1205,6 +1205,47 @@ img {
   color: var(--text);
 }
 
+.post-prompt {
+  position: relative;
+  margin: 28px 0 32px;
+  padding: 52px 22px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+}
+
+.post-prompt pre {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.post-prompt-copy {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.post-prompt-copy:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
 .post-content hr {
   border: none;
   border-top: 1px solid var(--border);
