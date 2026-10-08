@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tax-loss harvesting за физически лица в България: защо загубата трябва да е от облагаема сделка (извън регулиран пазар), чл. 33, ал. 3 и 4 ЗДДФЛ, wash sale в САЩ, Ирландия и UK, сезонност, отчети и къде минава границата с пазарната манипулация по MAR. — Марина Мучакова" />
+  <meta name="author" content="Марина Мучакова" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html" />
+
+  <title>Tax-loss harvesting по български — Марина Мучакова</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html" />
+  <meta property="og:title" content="Tax-loss harvesting по български" />
+  <meta property="og:description" content="Как да реализираме загуби в края на годината законно – и къде минава границата с пазарната манипулация." />
+  <meta property="og:image" content="https://muchakova.com/images/og-site.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Марина Мучакова — данъчен консултант" />
+  <meta property="og:locale" content="bg_BG" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="Марина Мучакова" />
+  <meta property="article:author" content="Марина Мучакова" />
+  <meta property="article:published_time" content="2026-10-08" />
+  <meta property="article:tag" content="Инвестиции" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@VestaConsult" />
+  <meta name="twitter:title" content="Tax-loss harvesting по български" />
+  <meta name="twitter:description" content="Загуба на регулиран сегмент в ЕС е данъчно безполезна за физическото лице. Кога, как и в какви рамки да „съберем“ загубите преди 31 декември." />
+  <meta name="twitter:image" content="https://muchakova.com/images/og-site.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Tax-loss harvesting по български",
+    "description": "Как физическо лице в България да реализира данъчни загуби в края на годината законно: чл. 33, ал. 3 и 4 ЗДДФЛ, облагаеми и необлагаеми сделки, wash sale правила в чужбина, сезонност и границата с пазарната манипулация по Регламент (ЕС) № 596/2014.",
+    "url": "https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html",
+    "datePublished": "2026-10-08",
+    "dateModified": "2026-10-08",
+    "image": "https://muchakova.com/images/og-site.jpg",
+    "inLanguage": ["bg", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Марина Мучакова",
+      "url": "https://muchakova.com"
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "url": "https://muchakova.com/blog.html"
+    },
+    "keywords": ["tax-loss harvesting", "данъчни загуби", "чл. 33 ЗДДФЛ", "wash sale", "регулиран пазар", "MIC код", "пазарна манипулация", "MAR", "КФН", "ЗПМПЗФИ", "Sell in May", "Santa Claus rally"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about"    data-key="nav_about">За мен</a></li>
+        <li><a href="../index.html#projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="../blog.html"           data-key="nav_blog">Блог</a></li>
+        <li><a href="../index.html#contact"  data-key="nav_contact">Контакти</a></li>
+        <li><a href="../game/" data-key="nav_game">Игра</a></li>
+        <li><a href="../booking/" class="nav-cta" data-key="nav_booking">Запази час</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- POST HEADER -->
+  <header class="post-header">
+    <div class="container">
+
+      <a href="../blog.html" class="post-back" data-key="post_back">← Обратно към блога</a>
+
+      <div class="post-tag">
+        <span class="lang-content" data-lang="bg">Инвестиции</span>
+        <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
+      </div>
+
+      <h1 class="post-title">
+        <span class="lang-content" data-lang="bg">Tax-loss harvesting по български</span>
+        <span class="lang-content" data-lang="en" style="display:none;">Tax-Loss Harvesting, the Bulgarian Way</span>
+      </h1>
+
+      <div class="post-meta">
+        <div class="post-author">
+          <img
+            src="../images/profile_9.jpg"
+            alt="Марина Мучакова"
+            class="post-author-img"
+          />
+          <span class="post-author-name" data-key="full_name">Марина Мучакова</span>
+        </div>
+        <span class="post-separator">·</span>
+        <time datetime="2026-10-08">
+          <span class="lang-content" data-lang="bg">8 октомври 2026</span>
+          <span class="lang-content" data-lang="en" style="display:none;">October 8, 2026</span>
+        </time>
+        <span class="post-separator">·</span>
+        <span>
+          <span class="lang-content" data-lang="bg">12 мин четене</span>
+          <span class="lang-content" data-lang="en" style="display:none;">12 min read</span>
+        </span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- POST BODY -->
+  <main class="post-body">
+    <div class="container">
+      <article class="post-content">
+
+        <!-- ═══════════════════════════════════════ BULGARIAN CONTENT ═══════════════════════════════════════ -->
+        <div class="lang-content" data-lang="bg">
+
+          <p>
+            <em>Как да реализираме загуби в края на годината законно – и къде минава границата с пазарната манипулация. Продължение на статията <a href="lichen-ili-firmen-akaunt-broker.html">„Личен или фирмен акаунт при брокер“</a> · Актуално към 8 октомври 2026 г.</em>
+          </p>
+
+          <p>
+            В предходната статия видяхме, че фирмата пренася данъчната си загуба до пет години (чл. 70 ЗКПО). Затова тя няма нужда да реализира загуби на всяка цена преди 31 декември. Физическото лице няма тази възможност: резултатът му от сделки с финансови активи се затваря в края на всяка календарна година. Оттук идва въпросът кога, как и в какви рамки инвеститорът в лично качество може да „събере“ загубите си, преди годината да свърши.
+          </p>
+
+          <h2>Какво е tax-loss harvesting</h2>
+
+          <p>
+            Tax-loss harvesting („жътва на данъчни загуби“) е съзнателната продажба на позиция, която към момента е на загуба. Целта е реализираната загуба да намали облагаемата печалба, вече реализирана през същата година. Ако инвеститорът продължава да вярва в актива, той го купува отново или купува близък заместител. Така позицията в портфейла се запазва, а загубата е „заключена“ за данъчни цели.
+          </p>
+
+          <p>
+            Важно е да се разбере какво <strong>не</strong> е tax-loss harvesting: той не създава загуба, която я няма. Пазарната загуба вече е налице, а продажбата само я реализира. Не е и безплатен обяд: при обратна покупка новата цена на придобиване е по-ниска, така че бъдещата печалба ще бъде по-голяма. В повечето случаи данъкът се отлага, а не изчезва. Изключенията ще видим по-долу.
+          </p>
+
+          <h2>Защо физическите лица в България имат нужда от него</h2>
+
+          <p>
+            По чл. 33, ал. 3 ЗДДФЛ облагаемият доход от продажба или замяна на акции, дялове и други финансови активи, както и от търговия с чуждестранна валута, е сумата от реализираните през годината печалби, намалена със сумата от реализираните през годината загуби. Печалбата и загубата се определят за всяка конкретна сделка. От 2024 г. положителният резултат се намалява и с 10% нормативно признати разходи.
+          </p>
+
+          <p>
+            Ключовите думи са <strong>„през годината“</strong>. Непокритата загуба от 2026 г. не може да намали печалба от 2027 г. Ако през годината сте реализирали печалби, а портфейлът ви носи нереализирани загуби, 31 декември е твърд срок. След него възможността за тази година изчезва.
+          </p>
+
+          <h3>Пример</h3>
+
+          <p>
+            Инвеститор е реализирал през 2026 г. печалба от 8 000 евро от продажба на американски акции, изпълнена извънборсово. В портфейла си държи ETF с нереализирана загуба от 5 000 евро и го продава преди края на годината извън регулиран пазар.
+          </p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Показател (EUR)</th><th>Без реализиране на загубата</th><th>С реализиране на загубата</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Реализирана печалба (американски акции, OTC)</strong></td><td>8 000</td><td>8 000</td></tr>
+                <tr><td><strong>Реализирана загуба (ETF, продаден извън регулиран пазар)</strong></td><td>0</td><td>−5 000</td></tr>
+                <tr><td><strong>Нетен резултат по чл. 33, ал. 3</strong></td><td>8 000</td><td>3 000</td></tr>
+                <tr><td><strong>10% нормативно признати разходи</strong></td><td>−800</td><td>−300</td></tr>
+                <tr><td><strong>Облагаем доход</strong></td><td>7 200</td><td>2 700</td></tr>
+                <tr><td><strong>Данък 10%</strong></td><td>720</td><td>270</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Икономията е 450 евро. Ако инвеститорът купи ETF-а обратно, цената му на придобиване вече е по-ниска с 5 000 евро. При бъдеща продажба на облагаемо място по-голямата печалба ще бъде обложена – данъкът е отложен. Ако обаче бъдещата продажба е на регулиран пазар в ЕС и инструментът е от изброените в § 1, т. 11 ДР ЗДДФЛ, печалбата ще е необлагаема. Тогава икономията става окончателна.
+          </p>
+
+          <h2>Защо загубата трябва да е на нерегулиран пазар</h2>
+
+          <p>
+            Това е връзката с предходната статия. Доходите от сделки по § 1, т. 11 ДР ЗДДФЛ – с акции, дялове на колективни инвестиционни схеми, права и държавни ценни книжа, извършени на регулиран пазар или пазар за растеж в ЕС/ЕИП – са необлагаеми по чл. 13, ал. 1, т. 3. Тези сделки са извън облагаемия доход по чл. 33, ал. 3. Затова и резултатът от тях не участва в нетирането, независимо дали е печалба или загуба. Така се прилага законът и в практиката.
+          </p>
+
+          <p>
+            Изводът е прост, но често се пропуска: <strong>загуба, реализирана на регулиран сегмент в ЕС, е данъчно безполезна за физическото лице.</strong> За да намали облагаемата печалба, продажбата трябва да е облагаема сделка. Това означава изпълнение <a href="razlika-borsov-segment-over-the-counter.html">извънборсово (OTC)</a>, на MTF сегмент или на пазар в трета държава, или сделка с инструмент извън списъка (ETN, ETC, деривати, CFD, криптоактиви).
+          </p>
+
+          <p>
+            Същата логика работи и в обратна посока. Ако инвеститорът иска печалбата да е необлагаема, той продава на регулиран сегмент. Ако иска загубата да е призната, продава извън него. Затова доказването на мястото на изпълнение (MIC кодът в trade confirmation) е толкова важно и при загубите. НАП може да откаже загуба, за която не е ясно къде е изпълнена сделката. Такава загуба може да се окаже необлагаема, т.е. неприспадаема.
+          </p>
+
+          <h2>ЕС срещу САЩ: правилото за wash sale</h2>
+
+          <p>
+            Често се казва, че „в ЕС tax-loss harvesting е разрешен, а в САЩ – не“. Това е неточно в две посоки. В САЩ harvesting е напълно законен. Ограничена е само обратната покупка на същия актив в близък период. В ЕС пък няма общо правило, защото прякото данъчно облагане на доходите е национална компетентност. Всяка държава членка решава сама и някои имат свои ограничения.
+          </p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Юрисдикция</th><th>Правило</th><th>Последица за загубата</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>САЩ</strong></td><td>26 U.S.C. § 1091 (wash sale): обратна покупка на „по същество идентични“ ценни книжа в прозорец от 30 дни преди до 30 дни след продажбата</td><td>Загубата не се признава, а се прибавя към цената на новите книжа (§ 1091(d)) – отлага се, не се губи</td></tr>
+                <tr><td><strong>Ирландия (ЕС)</strong></td><td>Section 581(3) TCA 1997: обратна покупка на акции от същия клас в рамките на 4 седмици след продажбата</td><td>Загубата може да се приспадне само от печалба при продажбата на обратно купените акции</td></tr>
+                <tr><td><strong>Обединено кралство (извън ЕС)</strong></td><td>30-дневно правило за съпоставяне (bed and breakfasting): продажбата се съпоставя с покупката в следващите 30 дни</td><td>Загубата на практика се неутрализира</td></tr>
+                <tr><td><strong>България</strong></td><td>Няма изрично правило, аналогично на горните</td><td>Загубата от облагаема сделка участва в годишния резултат по чл. 33, ал. 3 ЗДДФЛ</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            В българския ЗДДФЛ няма разпоредба, аналогична на американския § 1091 или на ирландското правило за четирите седмици. Продажбата и обратната покупка са две самостоятелни сделки, всяка със своя резултат. Американското правило засяга данъкоплатците в САЩ. За български местни лица, които не са данъчно задължени в САЩ, то е без значение.
+          </p>
+
+          <p>
+            Има обаче една българска особеност, която работи като естествена спирачка. По чл. 33, ал. 4 ЗДДФЛ при финансови активи от един вид, придобити на различни цени, цената на придобиване се определя като средно претеглена. Ако инвеститорът първо докупи и после продаде, загубата се „размива“ в средната цена. Затова редът е <strong>първо продажба, после покупка</strong>.
+          </p>
+
+          <h2>Защо точно последното тримесечие</h2>
+
+          <h3>Данъчният календар</h3>
+
+          <ul>
+            <li>До октомври вече е ясно какви печалби са реализирани през годината и какво може да се неутрализира.</li>
+            <li>По чл. 11, ал. 2 ЗДДФЛ доходът при продажба се смята за придобит към датата на прехвърлянето. В ЕС сетълментът е T+2, а от 11 октомври 2027 г. ще е T+1. В САЩ вече е T+1. Не оставяйте продажбите за последния работен ден на декември, когато брокерите и пазарите работят със съкратено време и ниска ликвидност.</li>
+            <li>От 2026 г. сделките във валута се преизчисляват в евро по курса на БНБ към датата на придобиване на дохода (чл. 10, ал. 3 ЗДДФЛ). Курсовата разлика може да увеличи или намали загубата в евро спрямо загубата в долари.</li>
+          </ul>
+
+          <h3>Сезонността на пазара</h3>
+
+          <p>Пазарните поговорки имат реална, макар и непостоянна, статистическа основа. Важно е обаче да ги цитираме точно:</p>
+
+          <ul>
+            <li><strong>„Sell in May and go away“.</strong> Поговорката не казва „купи през септември“. Пълният ѝ вариант е да се върнеш около Хелоуин, в края на октомври. Bouman и Jacobsen (American Economic Review, 2002) откриват, че доходността май–октомври е по-ниска от тази ноември–април в 36 от 37 изследвани пазара. Ефектът е особено силен в Европа.</li>
+            <li><strong>Септември.</strong> Исторически е най-слабият месец за S&amp;P 500: средна доходност −0,7% и положителен резултат едва в 44% от случаите от 1950 г. насам (LPL Financial).</li>
+            <li><strong>„Коледното рали“ (Santa Claus rally).</strong> По дефиницията на Stock Trader’s Almanac това са последните пет търговски дни на декември и първите два на януари, а не целите ноември и декември. Средният ръст на S&amp;P 500 за този период е около 1,3% от 1950 г.</li>
+          </ul>
+
+          <p>
+            За harvesting изводът е практичен. Ако загубата е реализирана в края на октомври или през ноември, а активът се купи обратно скоро след това, се хваща и сезонно по-силният период. Ако пък продажбата се отложи за последните дни на декември, рискът е цената вече да е тръгнала нагоре и загубата да се е стопила. Има и обратен ефект: масовите продажби на губещи позиции преди 31 декември натискат цените им надолу, а в началото на януари често следва отскок („януарски ефект“). Сезонността е статистическа тенденция, а не обещание. Тя не бива да е единственото основание за сделка.
+          </p>
+
+          <h3>Отчетите за третото тримесечие</h3>
+
+          <p>
+            Сезонът на отчетите за третото тримесечие в САЩ започва в средата на октомври с големите банки и продължава до средата на ноември. Тримесечният отчет (Form 10-Q) се подава до 40 дни след края на тримесечието от големите и ускорените емитенти и до 45 дни от останалите. През май 2026 г. SEC предложи възможност за полугодишно отчитане вместо тримесечно, но правилото още не е окончателно. В ЕС тримесечната отчетност не е задължителна от 2013 г. (Директива 2013/50/ЕС). Задължителни са годишният и шестмесечният отчет, но много емитенти публикуват тримесечни данни доброволно.
+          </p>
+
+          <p>
+            Отчетите дават информация за решението дали да задържите актива, или да го смените с друг. Те обаче носят и риск: цената може да скочи или да падне рязко в деня на публикуване. Ако планирате да продадете на загуба и да купите обратно, отчетът между двете сделки е допълнителен пазарен риск.
+          </p>
+
+          <blockquote>
+            <strong>Важно за вътрешни лица.</strong> Ако сте лице с ръководни функции при емитент, по чл. 19, параграф 11 MAR не можете да търгувате с негови финансови инструменти в продължение на 30 календарни дни преди обявяването на междинен или годишен отчет. Освен това всяка сделка, извършена при притежание на вътрешна информация, е забранена по чл. 14 MAR, независимо от данъчния мотив.
+          </blockquote>
+
+          <h2>Къде е границата с пазарната манипулация</h2>
+
+          <p>
+            Регламент (ЕС) № 596/2014 (MAR) се прилага за всички финансови инструменти, допуснати до търговия на регулиран пазар, MTF или OTF, както и за свързаните с тях инструменти. По чл. 2, параграф 3 това важи <strong>независимо дали сделката е извършена на място за търговия</strong>. Тоест продажбата извънборсово, която търсим заради данъка, не излиза извън обхвата на MAR.
+          </p>
+
+          <p>
+            По чл. 12, параграф 1, буква „а“ MAR манипулация е сделка или поръчка, която дава или има вероятност да даде неверни или подвеждащи сигнали за предлагането, търсенето или цената на финансов инструмент. Манипулация е и сделка, която поддържа или има вероятност да поддържа цената на анормално или изкуствено равнище. Изключението изисква лицето да докаже, че е действало по легитимни причини <strong>и</strong> в съответствие с приета пазарна практика (чл. 13 MAR). Данъчната оптимизация не е приета пазарна практика, така че това изключение не е защитата. Защитата е сделката изобщо да не дава подвеждащ сигнал.
+          </p>
+
+          <h3>Индикаторите, които регулаторът гледа</h3>
+
+          <p>Приложение I, раздел А от MAR и Делегиран регламент (ЕС) 2016/522 изброяват индикатори. Тези, които имат пряко отношение към harvesting, са:</p>
+
+          <ul>
+            <li><strong>Сделки без промяна в бенефициерното притежание</strong> (Приложение I, А, буква „в“ MAR) и т.нар. wash trades – договорености за покупка или продажба без промяна в бенефициерния интерес или пазарния риск, или с прехвърляне между лица, които действат съгласувано (Делегиран регламент 2016/522, Приложение II, раздел 1, т. 3, буква „а“).</li>
+            <li><strong>Обрат на позиции за кратък период</strong> (Приложение I, А, буква „г“ MAR), особено при значителен обем.</li>
+            <li><strong>Насрещни поръчки</strong> (improper matched orders) – поръчки за покупка и продажба, въведени почти по едно и също време, с почти еднакво количество и цена, от едно и също лице или от съгласувано действащи лица (т. 3, буква „в“).</li>
+            <li><strong>„Маркиране на затварянето“</strong> (marking the close) – търговия около референтен момент като затварянето на сесията, която влияе на референтната цена (т. 5, буква „г“). Последните дни на годината са точно такъв референтен момент – по тях се оценяват портфейли и фондове.</li>
+            <li><strong>Значителен дял от дневния обем</strong> (Приложение I, А, буква „а“) – особено при неликвидни книжа, например на Българската фондова борса, където и малка поръчка може да е голяма част от оборота.</li>
+          </ul>
+
+          <h3>Рамка за безопасен harvesting</h3>
+
+          <ol>
+            <li><strong>Истинска сделка с неопределен насрещен контрагент.</strong> Продажбата трябва да е реална, на пазарна цена, без предварителна уговорка с купувача.</li>
+            <li><strong>Никакво кръстосване между „ваши“ сметки.</strong> Не продавайте от личната сметка, за да купите същото количество в същия момент през фирмената сметка, сметката на съпруга или на свързано лице. Такава схема е класически пример за прехвърляне между съгласувано действащи лица.</li>
+            <li><strong>Разстояние във времето.</strong> Българският закон не изисква изчакване, но продажба и обратна покупка в рамките на минути, с еднакво количество, изглеждат като насрещни поръчки. Няколко дни разстояние означават реален пазарен риск, т.е. реална промяна в позицията. Алтернатива е обратна покупка на близък, но различен инструмент – например ETF върху същия индекс от друг емитент.</li>
+            <li><strong>Пропорционален обем.</strong> При неликвидни книжа разпределете продажбите, ползвайте лимитирани поръчки и не търгувайте в аукциона за затваряне.</li>
+            <li><strong>Не в последния момент.</strong> Избягвайте сделки на 30 и 31 декември, особено около затварянето.</li>
+            <li><strong>Документирайте мотива.</strong> Кратка бележка в деня на сделката – „реализиране на данъчна загуба, ребалансиране“ – не е изключение по чл. 12 MAR. Тя обаче е доказателство за добросъвестност и има значение за степента на вина при определяне на санкцията.</li>
+          </ol>
+
+          <p>
+            Брокерът е длъжен по чл. 16, параграф 2 MAR да разполага със системи за откриване на подозрителни поръчки и сделки и да уведомява компетентния орган без забавяне. Затова не разчитайте, че „никой няма да види“ – огледалните сделки се засичат автоматично.
+          </p>
+
+          <blockquote>
+            <strong>Криптоактиви.</strong> За криптоактивите важи аналогична забрана за пазарна манипулация по Регламент (ЕС) 2023/1114 (MiCA). Освобождаването за регулиран пазар по ЗДДФЛ не се прилага за тях, така че загубите им винаги участват в годишния резултат. Забраната за манипулация също важи и при тях.
+          </blockquote>
+
+          <h2>Ако все пак сбъркаме: санкциите</h2>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Вид</th><th>Основание</th><th>Размер / последица</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Административна (КФН)</strong></td><td>чл. 23, ал. 1, т. 2 ЗПМПЗФИ – нарушение на чл. 14 или 15 MAR, ако деянието не съставлява престъпление</td><td>Глоба 10 000 – 2 500 000 евро; при повторно нарушение 20 000 – 5 000 000 евро</td></tr>
+                <tr><td><strong>Административна – алтернатива</strong></td><td>чл. 23, ал. 8 ЗПМПЗФИ</td><td>Троен размер на получената печалба или избегнатата загуба, но не по-малко от минимума</td></tr>
+                <tr><td><strong>Публичност</strong></td><td>чл. 34 MAR</td><td>Решението се публикува със самоличността на лицето, освен ако това е непропорционално</td></tr>
+                <tr><td><strong>Наказателна</strong></td><td>чл. 260а – 260в НК</td><td>При умишлено деяние, което съставлява престъпление</td></tr>
+                <tr><td><strong>Данъчна (НАП)</strong></td><td>чл. 80 ЗДДФЛ</td><td>Глоба до 1000 лв. (511,29 евро) за деклариране на данни, водещи до по-нисък данък; до 500 лв. (255,65 евро) за неподадена в срок декларация; плюс дължимият данък и лихва</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Неволното нарушение не изключва отговорността. По чл. 7 ЗАНН административното нарушение е виновно, когато е извършено умишлено или непредпазливо. Непредпазливите деяния не се наказват само в изрично предвидените случаи. Самото определение в MAR е обективно – „има вероятност да даде“ подвеждащ сигнал. На практика неволното нарушение остава наказуемо, но е от значение за размера: по чл. 23, ал. 9 ЗПМПЗФИ КФН отчита обстоятелствата по чл. 31 MAR. Сред тях са тежестта и продължителността на нарушението, степента на отговорност, финансовото състояние на лицето, получената печалба или избегнатата загуба, сътрудничеството с органа, предишни нарушения и мерките срещу повторение. При маловажен случай чл. 28 ЗАНН позволява наказващият орган да отправи писмено предупреждение вместо наказание.
+          </p>
+
+          <p>
+            Наказателните постановления се издават от заместник-председателя на КФН (чл. 24 ЗПМПЗФИ). Те подлежат на съдебен контрол.
+          </p>
+
+          <p>
+            Отделно стои данъчният риск, който е по-вероятен от пазарния. Ако загуба е включена в Приложение № 5, но продажбата всъщност е изпълнена на регулиран сегмент, загубата не се признава. Тогава се дължат допълнителен данък и лихва, а за деклариране на данни, водещи до по-нисък данък, чл. 80 ЗДДФЛ предвижда глоба до 1000 лв. (511,29 евро). Подготвят се промени, с които от 2027 г. горните граници стават съответно 1000 и 500 евро. Самостоятелната корекция на декларацията, преди грешката да бъде установена от НАП, ограничава последиците.
+          </p>
+
+          <h2>Чеклист за последното тримесечие</h2>
+
+          <ol>
+            <li>Изтеглете отчет за реализираните печалби и загуби от началото на годината по брокери.</li>
+            <li>Отделете облагаемите от необлагаемите сделки по мястото на изпълнение (MIC код).</li>
+            <li>Изберете губещите позиции и проверете дали продажбата им ще е облагаема – извън регулиран сегмент или с инструмент извън § 1, т. 11 ДР ЗДДФЛ.</li>
+            <li>Продайте до средата на декември, с отчитане на сетълмента и празничните дни.</li>
+            <li>Ако купувате обратно, направете го след продажбата, с времево разстояние и без кръстосване между свързани сметки.</li>
+            <li>Запазете trade confirmation за всяка сделка и кратка бележка за мотива.</li>
+            <li>Ако сте вътрешно лице при емитент, проверете забранените периоди по чл. 19, параграф 11 MAR.</li>
+          </ol>
+
+          <h3>Нормативна база и източници</h3>
+
+          <ul>
+            <li>ЗДДФЛ – чл. 10, ал. 3; чл. 11, ал. 2; чл. 13, ал. 1, т. 3; чл. 33, ал. 3 и 4; чл. 80; § 1, т. 11 ДР.</li>
+            <li>ЗКПО – чл. 70.</li>
+            <li>Закон за прилагане на мерките срещу пазарните злоупотреби с финансови инструменти – чл. 23 и 24 (изм. ДВ, бр. 71 от 2026 г.).</li>
+            <li>ЗАНН – чл. 7 и 28; НК – чл. 260а – 260в.</li>
+            <li>Регламент (ЕС) № 596/2014 (MAR) – чл. 2, 12, 13, 14, 16, 19, 30, 31, 34 и Приложение I; Делегиран регламент (ЕС) 2016/522 – Приложение II. Текст: <a href="https://www.legislation.gov.uk/eur/2014/596/contents/adopted" target="_blank" rel="noopener">legislation.gov.uk (версия, приета от ЕС)</a>.</li>
+            <li>САЩ – <a href="https://www.law.cornell.edu/uscode/text/26/1091" target="_blank" rel="noopener">26 U.S.C. § 1091</a>; Ирландия – <a href="https://www.irishstatutebook.ie/1997/en/act/pub/0039/sec0581.html" target="_blank" rel="noopener">s. 581 TCA 1997</a>; Обединено кралство – <a href="https://www.gov.uk/hmrc-internal-manuals/capital-gains-manual/cg51560" target="_blank" rel="noopener">HMRC CG51560</a>.</li>
+            <li>Bouman, S., Jacobsen, B. (2002). The Halloween Indicator, „Sell in May and Go Away“: Another Puzzle. American Economic Review 92(5), 1618–1635. <a href="https://pure.eur.nl/en/publications/the-halloween-indicator-sell-in-may-and-go-away-another-puzzle/" target="_blank" rel="noopener">Резюме</a>.</li>
+            <li><a href="https://www.advisorperspectives.com/commentaries/2025/08/29/so-long-summer-look-september-seasonals" target="_blank" rel="noopener">LPL Financial – September seasonals (2025)</a>; <a href="https://stocktradersalmanac.com/Alert/20220104.aspx" target="_blank" rel="noopener">Stock Trader’s Almanac – Santa Claus Rally</a>.</li>
+            <li><a href="https://dart.deloitte.com/USDART/home/publications/deloitte/heads-up/2026/sec-proposes-semi-annual-reporting" target="_blank" rel="noopener">Deloitte – SEC proposal for optional semiannual reporting (май 2026)</a>; <a href="https://finance.ec.europa.eu/news/commission-welcomes-political-agreement-increasing-efficiency-eu-capital-markets-thanks-shorter-2025-06-19_en" target="_blank" rel="noopener">ЕК – преминаване към T+1</a>.</li>
+          </ul>
+
+          <p>
+            <em>Статията има информационен характер и не представлява индивидуална данъчна или правна консултация, нито инвестиционна препоръка. Нормативната уредба е отразена към 8 октомври 2026 г.</em>
+          </p>
+
+        </div><!-- /lang-content bg -->
+
+
+        <!-- ═══════════════════════════════════════ ENGLISH CONTENT ═══════════════════════════════════════ -->
+        <div class="lang-content" data-lang="en" style="display:none;">
+
+          <p>
+            <em>How to realise losses at year-end lawfully – and where the line with market manipulation runs. A follow-up to <a href="lichen-ili-firmen-akaunt-broker.html">“Personal or Company Brokerage Account”</a> · Up to date as of 8 October 2026.</em>
+          </p>
+
+          <p>
+            In the previous article we saw that a company carries its tax loss forward for up to five years (Art. 70 of the Corporate Income Tax Act, CITA). So it has no need to realise losses at all costs before 31 December. An individual has no such option: their result from transactions in financial assets is closed at the end of every calendar year. Hence the question of when, how and within what limits an investor acting personally can “harvest” their losses before the year is out.
+          </p>
+
+          <h2>What tax-loss harvesting is</h2>
+
+          <p>
+            Tax-loss harvesting is the deliberate sale of a position that is currently at a loss. The aim is for the realised loss to reduce taxable gains already realised in the same year. If the investor still believes in the asset, they buy it back or buy a close substitute. That way the position in the portfolio is kept, while the loss is “locked in” for tax purposes.
+          </p>
+
+          <p>
+            It is important to understand what tax-loss harvesting is <strong>not</strong>: it does not create a loss that isn’t there. The market loss already exists; the sale merely realises it. Nor is it a free lunch: on a buy-back, the new acquisition cost is lower, so the future gain will be bigger. In most cases the tax is deferred, not eliminated. We will look at the exceptions below.
+          </p>
+
+          <h2>Why individuals in Bulgaria need it</h2>
+
+          <p>
+            Under Art. 33(3) of the Personal Income Tax Act (PITA), taxable income from the sale or exchange of shares, units and other financial assets, and from trading in foreign currency, is the sum of the gains realised during the year less the sum of the losses realised during the year. The gain or loss is determined for each individual transaction. Since 2024, a positive result is also reduced by a 10% statutory expense deduction.
+          </p>
+
+          <p>
+            The key words are <strong>“during the year”</strong>. An uncovered loss from 2026 cannot reduce a gain from 2027. If you have realised gains during the year and your portfolio is carrying unrealised losses, 31 December is a hard deadline. After that, the opportunity for that year is gone.
+          </p>
+
+          <h3>Example</h3>
+
+          <p>
+            In 2026 an investor realised a gain of EUR 8,000 from selling US shares, executed over the counter. Their portfolio holds an ETF with an unrealised loss of EUR 5,000, which they sell before year-end outside a regulated market.
+          </p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Item (EUR)</th><th>Without realising the loss</th><th>With the loss realised</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Realised gain (US shares, OTC)</strong></td><td>8,000</td><td>8,000</td></tr>
+                <tr><td><strong>Realised loss (ETF sold outside a regulated market)</strong></td><td>0</td><td>−5,000</td></tr>
+                <tr><td><strong>Net result under Art. 33(3)</strong></td><td>8,000</td><td>3,000</td></tr>
+                <tr><td><strong>10% statutory expenses</strong></td><td>−800</td><td>−300</td></tr>
+                <tr><td><strong>Taxable income</strong></td><td>7,200</td><td>2,700</td></tr>
+                <tr><td><strong>Tax at 10%</strong></td><td>720</td><td>270</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            The saving is EUR 450. If the investor buys the ETF back, its acquisition cost is now EUR 5,000 lower. On a future sale on a taxable venue, the bigger gain will be taxed – the tax has been deferred. But if the future sale takes place on an EU regulated market and the instrument is one of those listed in § 1(11) of the Supplementary Provisions of PITA, the gain will be exempt. In that case the saving becomes permanent.
+          </p>
+
+          <h2>Why the loss has to be on a non-regulated market</h2>
+
+          <p>
+            This is the link to the previous article. Income from transactions under § 1(11) of the Supplementary Provisions of PITA – in shares, units of collective investment schemes, rights and government securities, carried out on a regulated market or SME growth market in the EU/EEA – is exempt under Art. 13(1)(3). These transactions fall outside taxable income under Art. 33(3). That is why their result does not take part in the netting, whether it is a gain or a loss. This is also how the law is applied in practice.
+          </p>
+
+          <p>
+            The conclusion is simple but often missed: <strong>a loss realised on an EU regulated segment is useless for tax purposes to an individual.</strong> To reduce taxable gains, the sale has to be a taxable transaction. That means execution <a href="razlika-borsov-segment-over-the-counter.html">over the counter (OTC)</a>, on an MTF segment or on a third-country market, or a transaction in an instrument outside the list (ETNs, ETCs, derivatives, CFDs, crypto-assets).
+          </p>
+
+          <p>
+            The same logic works the other way round. If the investor wants a gain to be exempt, they sell on a regulated segment. If they want a loss to be recognised, they sell outside it. That is why proving the place of execution (the MIC code in the trade confirmation) matters just as much for losses. The National Revenue Agency (NRA) may disallow a loss where it is unclear where the transaction was executed. Such a loss may turn out to be exempt, i.e. non-deductible.
+          </p>
+
+          <h2>EU versus US: the wash sale rule</h2>
+
+          <p>
+            It is often said that “tax-loss harvesting is allowed in the EU but not in the US”. That is inaccurate in two ways. In the US, harvesting is perfectly legal. Only buying back the same asset within a short period is restricted. In the EU, there is no common rule, because direct taxation of income is a national competence. Each member state decides for itself, and some have their own restrictions.
+          </p>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Jurisdiction</th><th>Rule</th><th>Consequence for the loss</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>United States</strong></td><td>26 U.S.C. § 1091 (wash sale): buying back “substantially identical” securities within a window from 30 days before to 30 days after the sale</td><td>The loss is disallowed and added to the basis of the new securities (§ 1091(d)) – deferred, not lost</td></tr>
+                <tr><td><strong>Ireland (EU)</strong></td><td>Section 581(3) TCA 1997: buying back shares of the same class within 4 weeks after the sale</td><td>The loss can only be set against a gain on the sale of the shares bought back</td></tr>
+                <tr><td><strong>United Kingdom (outside the EU)</strong></td><td>30-day matching rule (bed and breakfasting): the sale is matched with a purchase in the following 30 days</td><td>The loss is effectively neutralised</td></tr>
+                <tr><td><strong>Bulgaria</strong></td><td>No express rule similar to the above</td><td>A loss on a taxable transaction counts towards the annual result under Art. 33(3) PITA</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Bulgaria’s PITA has no provision similar to the US § 1091 or the Irish four-week rule. The sale and the buy-back are two separate transactions, each with its own result. The US rule affects US taxpayers. For Bulgarian residents who are not taxable in the US, it is irrelevant.
+          </p>
+
+          <p>
+            There is, however, one Bulgarian feature that acts as a natural brake. Under Art. 33(4) PITA, for financial assets of the same kind acquired at different prices, the acquisition cost is the weighted average. If the investor buys more first and sells afterwards, the loss gets “diluted” in the average price. So the order is <strong>sell first, buy afterwards</strong>.
+          </p>
+
+          <h2>Why the last quarter in particular</h2>
+
+          <h3>The tax calendar</h3>
+
+          <ul>
+            <li>By October it is already clear what gains have been realised during the year and what can be offset.</li>
+            <li>Under Art. 11(2) PITA, income from a sale is deemed to be earned on the date of transfer. In the EU, settlement is T+2, and from 11 October 2027 it will be T+1. In the US it is already T+1. Don’t leave sales to the last business day of December, when brokers and markets run shortened hours and liquidity is low.</li>
+            <li>From 2026, foreign-currency transactions are converted into euro at the BNB rate on the date the income is earned (Art. 10(3) PITA). The exchange-rate difference can increase or reduce the loss in euro compared with the loss in dollars.</li>
+          </ul>
+
+          <h3>Market seasonality</h3>
+
+          <p>Market sayings have a real, if inconsistent, statistical basis. But it is important to quote them accurately:</p>
+
+          <ul>
+            <li><strong>“Sell in May and go away”.</strong> The saying does not say “buy in September”. Its full version is to come back around Halloween, at the end of October. Bouman and Jacobsen (American Economic Review, 2002) found that May–October returns were lower than November–April returns in 36 of the 37 markets studied. The effect is particularly strong in Europe.</li>
+            <li><strong>September.</strong> Historically the weakest month for the S&amp;P 500: an average return of −0.7% and a positive result in only 44% of cases since 1950 (LPL Financial).</li>
+            <li><strong>The Santa Claus rally.</strong> As defined by the Stock Trader’s Almanac, it is the last five trading days of December and the first two of January – not the whole of November and December. The average S&amp;P 500 gain over this period has been about 1.3% since 1950.</li>
+          </ul>
+
+          <p>
+            For harvesting, the conclusion is practical. If the loss is realised at the end of October or in November and the asset is bought back soon after, you also catch the seasonally stronger period. If the sale is put off until the last days of December, the risk is that the price has already started rising and the loss has melted away. There is also a reverse effect: mass selling of losing positions before 31 December pushes their prices down, and a rebound often follows in early January (the “January effect”). Seasonality is a statistical tendency, not a promise. It should never be the only reason for a trade.
+          </p>
+
+          <h3>Third-quarter earnings</h3>
+
+          <p>
+            US third-quarter earnings season starts in mid-October with the big banks and runs until mid-November. The quarterly report (Form 10-Q) is due within 40 days of quarter-end for large and accelerated filers and within 45 days for everyone else. In May 2026 the SEC proposed an option for semi-annual instead of quarterly reporting, but the rule is not yet final. In the EU, quarterly reporting has not been mandatory since 2013 (Directive 2013/50/EU). Annual and half-yearly reports are mandatory, but many issuers publish quarterly figures voluntarily.
+          </p>
+
+          <p>
+            Earnings reports inform the decision whether to keep the asset or switch to another. But they also carry risk: the price can jump or drop sharply on the day of publication. If you plan to sell at a loss and buy back, an earnings release between the two trades is an additional market risk.
+          </p>
+
+          <blockquote>
+            <strong>Important for insiders.</strong> If you are a person discharging managerial responsibilities at an issuer, under Art. 19(11) MAR you may not trade in its financial instruments during the 30 calendar days before the announcement of an interim or year-end report. In addition, any trade made while in possession of inside information is prohibited under Art. 14 MAR, regardless of the tax motive.
+          </blockquote>
+
+          <h2>Where the line with market manipulation runs</h2>
+
+          <p>
+            Regulation (EU) No 596/2014 (MAR) applies to all financial instruments admitted to trading on a regulated market, MTF or OTF, and to related instruments. Under Art. 2(3), this applies <strong>irrespective of whether the transaction is carried out on a trading venue</strong>. In other words, the OTC sale we are after for tax reasons does not fall outside the scope of MAR.
+          </p>
+
+          <p>
+            Under Art. 12(1)(a) MAR, manipulation is a transaction or order that gives, or is likely to give, false or misleading signals as to the supply of, demand for or price of a financial instrument. A transaction that secures, or is likely to secure, the price at an abnormal or artificial level is also manipulation. The exception requires the person to prove they acted for legitimate reasons <strong>and</strong> in conformity with an accepted market practice (Art. 13 MAR). Tax optimisation is not an accepted market practice, so this exception is not your defence. Your defence is for the trade not to give a misleading signal in the first place.
+          </p>
+
+          <h3>The indicators the regulator looks at</h3>
+
+          <p>Annex I, Section A of MAR and Delegated Regulation (EU) 2016/522 list indicators. Those directly relevant to harvesting are:</p>
+
+          <ul>
+            <li><strong>Transactions with no change in beneficial ownership</strong> (Annex I, A(c) MAR) and so-called wash trades – arrangements to buy or sell with no change in beneficial interest or market risk, or with a transfer between parties acting in concert (Delegated Regulation 2016/522, Annex II, Section 1, point 3(a)).</li>
+            <li><strong>Position reversals in a short period</strong> (Annex I, A(d) MAR), especially in significant volume.</li>
+            <li><strong>Improper matched orders</strong> – buy and sell orders entered at almost the same time, with almost the same quantity and price, by the same person or by persons acting in concert (point 3(c)).</li>
+            <li><strong>Marking the close</strong> – trading around a reference time such as the close of the session that influences the reference price (point 5(d)). The last days of the year are exactly such a reference point – portfolios and funds are valued on them.</li>
+            <li><strong>A significant share of daily volume</strong> (Annex I, A(a)) – especially for illiquid securities, for example on the Bulgarian Stock Exchange, where even a small order can be a large share of turnover.</li>
+          </ul>
+
+          <h3>A framework for safe harvesting</h3>
+
+          <ol>
+            <li><strong>A genuine trade with an unknown counterparty.</strong> The sale must be real, at market price, with no prior arrangement with the buyer.</li>
+            <li><strong>No crossing between “your” accounts.</strong> Don’t sell from your personal account in order to buy the same quantity at the same moment through your company account, your spouse’s account or a related party’s account. Such a scheme is a textbook example of a transfer between persons acting in concert.</li>
+            <li><strong>Distance in time.</strong> Bulgarian law requires no waiting period, but a sale and buy-back within minutes, in the same quantity, look like matched orders. A few days’ gap means real market risk, i.e. a real change in the position. An alternative is to buy back a similar but different instrument – for example an ETF on the same index from another issuer.</li>
+            <li><strong>Proportionate volume.</strong> With illiquid securities, spread out your sales, use limit orders and don’t trade in the closing auction.</li>
+            <li><strong>Not at the last minute.</strong> Avoid trading on 30 and 31 December, especially around the close.</li>
+            <li><strong>Document your motive.</strong> A short note on the day of the trade – “realising a tax loss, rebalancing” – is not an exception under Art. 12 MAR. But it is evidence of good faith and matters for the degree of fault when the penalty is set.</li>
+          </ol>
+
+          <p>
+            Under Art. 16(2) MAR, the broker must have systems to detect suspicious orders and transactions and must notify the competent authority without delay. So don’t count on “nobody will notice” – mirror trades are flagged automatically.
+          </p>
+
+          <blockquote>
+            <strong>Crypto-assets.</strong> A similar ban on market manipulation applies to crypto-assets under Regulation (EU) 2023/1114 (MiCA). The PITA regulated-market exemption does not apply to them, so their losses always count towards the annual result. The ban on manipulation applies to them too.
+          </blockquote>
+
+          <h2>If we get it wrong anyway: the penalties</h2>
+
+          <div class="post-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Type</th><th>Legal basis</th><th>Amount / consequence</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Administrative (Financial Supervision Commission, FSC)</strong></td><td>Art. 23(1)(2) of the Act on the Measures against Market Abuse with Financial Instruments (ZPMPZFI) – breach of Art. 14 or 15 MAR, where the act is not a crime</td><td>Fine of EUR 10,000 – 2,500,000; for a repeat offence EUR 20,000 – 5,000,000</td></tr>
+                <tr><td><strong>Administrative – alternative</strong></td><td>Art. 23(8) ZPMPZFI</td><td>Three times the profit gained or loss avoided, but not less than the minimum</td></tr>
+                <tr><td><strong>Publicity</strong></td><td>Art. 34 MAR</td><td>The decision is published with the person’s identity, unless that would be disproportionate</td></tr>
+                <tr><td><strong>Criminal</strong></td><td>Arts. 260a – 260c of the Criminal Code</td><td>For an intentional act that constitutes a crime</td></tr>
+                <tr><td><strong>Tax (NRA)</strong></td><td>Art. 80 PITA</td><td>Fine of up to BGN 1,000 (EUR 511.29) for declaring data leading to lower tax; up to BGN 500 (EUR 255.65) for a return not filed on time; plus the tax due and interest</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            An unintentional breach does not rule out liability. Under Art. 7 of the Administrative Violations and Sanctions Act (ZANN), an administrative violation is culpable when committed intentionally or negligently. Negligent acts go unpunished only in expressly provided cases. The MAR definition itself is objective – “is likely to give” a misleading signal. In practice, an unintentional breach remains punishable, but it matters for the amount: under Art. 23(9) ZPMPZFI the FSC takes into account the circumstances in Art. 31 MAR. These include the gravity and duration of the breach, the degree of responsibility, the person’s financial strength, the profit gained or loss avoided, cooperation with the authority, previous breaches and measures to prevent recurrence. In a minor case, Art. 28 ZANN allows the sanctioning authority to issue a written warning instead of a penalty.
+          </p>
+
+          <p>
+            Penalty decrees are issued by the Deputy Chair of the FSC (Art. 24 ZPMPZFI). They are subject to judicial review.
+          </p>
+
+          <p>
+            Separate from all this is the tax risk, which is more likely than the market risk. If a loss is included in Appendix No. 5 but the sale was actually executed on a regulated segment, the loss is disallowed. Additional tax and interest are then due, and for declaring data leading to lower tax Art. 80 PITA provides for a fine of up to BGN 1,000 (EUR 511.29). Amendments are being prepared under which, from 2027, the upper limits become EUR 1,000 and EUR 500 respectively. Correcting the return yourself before the NRA spots the error limits the consequences.
+          </p>
+
+          <h2>Checklist for the last quarter</h2>
+
+          <ol>
+            <li>Download a year-to-date report of realised gains and losses, broker by broker.</li>
+            <li>Separate taxable from exempt transactions by place of execution (MIC code).</li>
+            <li>Pick the losing positions and check whether selling them will be a taxable transaction – outside a regulated segment, or with an instrument outside § 1(11) of the Supplementary Provisions of PITA.</li>
+            <li>Sell by mid-December, allowing for settlement and public holidays.</li>
+            <li>If you buy back, do it after the sale, with a gap in time and no crossing between related accounts.</li>
+            <li>Keep the trade confirmation for every trade and a short note on your motive.</li>
+            <li>If you are an insider at an issuer, check the closed periods under Art. 19(11) MAR.</li>
+          </ol>
+
+          <h3>Legislation and sources</h3>
+
+          <ul>
+            <li>PITA – Art. 10(3); Art. 11(2); Art. 13(1)(3); Art. 33(3) and (4); Art. 80; § 1(11) of the Supplementary Provisions.</li>
+            <li>CITA – Art. 70.</li>
+            <li>Act on the Implementation of the Measures against Market Abuse with Financial Instruments (ZPMPZFI) – Arts. 23 and 24 (amended State Gazette No. 71/2026).</li>
+            <li>Administrative Violations and Sanctions Act – Arts. 7 and 28; Criminal Code – Arts. 260a – 260c.</li>
+            <li>Regulation (EU) No 596/2014 (MAR) – Arts. 2, 12, 13, 14, 16, 19, 30, 31, 34 and Annex I; Delegated Regulation (EU) 2016/522 – Annex II. Text: <a href="https://www.legislation.gov.uk/eur/2014/596/contents/adopted" target="_blank" rel="noopener">legislation.gov.uk (version as adopted by the EU)</a>.</li>
+            <li>US – <a href="https://www.law.cornell.edu/uscode/text/26/1091" target="_blank" rel="noopener">26 U.S.C. § 1091</a>; Ireland – <a href="https://www.irishstatutebook.ie/1997/en/act/pub/0039/sec0581.html" target="_blank" rel="noopener">s. 581 TCA 1997</a>; United Kingdom – <a href="https://www.gov.uk/hmrc-internal-manuals/capital-gains-manual/cg51560" target="_blank" rel="noopener">HMRC CG51560</a>.</li>
+            <li>Bouman, S., Jacobsen, B. (2002). The Halloween Indicator, “Sell in May and Go Away”: Another Puzzle. American Economic Review 92(5), 1618–1635. <a href="https://pure.eur.nl/en/publications/the-halloween-indicator-sell-in-may-and-go-away-another-puzzle/" target="_blank" rel="noopener">Abstract</a>.</li>
+            <li><a href="https://www.advisorperspectives.com/commentaries/2025/08/29/so-long-summer-look-september-seasonals" target="_blank" rel="noopener">LPL Financial – September seasonals (2025)</a>; <a href="https://stocktradersalmanac.com/Alert/20220104.aspx" target="_blank" rel="noopener">Stock Trader’s Almanac – Santa Claus Rally</a>.</li>
+            <li><a href="https://dart.deloitte.com/USDART/home/publications/deloitte/heads-up/2026/sec-proposes-semi-annual-reporting" target="_blank" rel="noopener">Deloitte – SEC proposal for optional semiannual reporting (May 2026)</a>; <a href="https://finance.ec.europa.eu/news/commission-welcomes-political-agreement-increasing-efficiency-eu-capital-markets-thanks-shorter-2025-06-19_en" target="_blank" rel="noopener">European Commission – move to T+1</a>.</li>
+          </ul>
+
+          <p>
+            <em>This article is for information only and does not constitute individual tax or legal advice, nor an investment recommendation. The legislation is stated as of 8 October 2026.</em>
+          </p>
+
+        </div><!-- /lang-content en -->
+
+        <!-- SHARE (always visible) -->
+        <hr>
+        <div class="post-share">
+          <p class="share-label" data-key="share_label">Сподели</p>
+          <div class="share-buttons">
+
+            <button class="share-btn" id="shareNative" style="display:none;">
+              📤 <span data-key="share_native">Сподели</span>
+            </button>
+
+            <a href="#" class="share-btn" id="shareTwitter" target="_blank" rel="noopener">
+              ✕ Twitter
+            </a>
+
+            <a href="#" class="share-btn" id="shareFacebook" target="_blank" rel="noopener">
+              f Facebook
+            </a>
+
+            <a href="#" class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener">
+              in LinkedIn
+            </a>
+
+            <button class="share-btn" id="shareCopy" data-key="share_copy">
+              🔗 Копирай линк
+            </button>
+
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <a href="../donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
+      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
