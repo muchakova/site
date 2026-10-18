@@ -190,3 +190,25 @@ test("game: English page plays in English", async ({ page }) => {
   await page.locator("#snd").click();
   await expect(page.locator("#snd")).toHaveText("Unmute");
 });
+
+test("404: any missing address gets the bilingual page with status 404; search hands off to the blog", async ({ page }) => {
+  const res = await page.goto("/en/no-such-page/");
+  expect(res.status()).toBe(404);
+  await expect(page.locator("h1")).toHaveText("Тази страница не съществува");
+  await expect(page.locator('[lang="en"] h2')).toHaveText("This page doesn’t exist");
+  await expect(page.locator('link[rel="canonical"]')).toHaveCount(0);
+  await page.locator("#q-bg").fill("ETF");
+  await page.locator("#q-bg").press("Enter");
+  await expect(page).toHaveURL(/\/blog\.html\?q=ETF$/);
+  await expect(page.locator("#blog-search")).toHaveValue("ETF");
+  await expect(page.locator("[data-filter-status]")).toHaveText(/Показан/);
+});
+
+test("privacy and accessibility: contents list, marked open questions", async ({ page }) => {
+  for (const path of ["/privacy/", "/en/accessibility/"]) {
+    await page.goto(path);
+    const toc = page.locator(".toc-desktop nav.toc a, .toc-mobile nav.toc a");
+    expect(await toc.count()).toBeGreaterThanOrEqual(5);
+    await expect(page.locator(".doc-updated time")).toHaveAttribute("datetime", /^\d{4}-\d{2}-\d{2}$/);
+  }
+});

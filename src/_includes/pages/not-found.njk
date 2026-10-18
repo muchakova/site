@@ -1,0 +1,29 @@
+{%- set map = collections.i18nMap -%}
+{#- GitHub Pages serves this one page for every missing address, in either language,
+    so it carries both: BG first (the page language), EN marked with lang="en". -#}
+<section class="page-head not-found" aria-labelledby="page-title">
+  <div class="wrap not-found__grid">
+    {% for code in ["bg", "en"] %}
+    {% set N = i18n[code].notFound %}
+    <div class="not-found__block not-found__block--{{ code }} stack" style="--stack: var(--space-s)"{% if code != lang %} lang="{{ code }}"{% endif %}>
+      <p class="eyebrow">{{ N.eyebrow }}</p>
+      {% if code == lang %}<h1 id="page-title">{{ N.title }}</h1>{% else %}<h2 class="not-found__title">{{ N.title }}</h2>{% endif %}
+      <p class="lead">{{ N.text }}</p>
+      <form class="search-form" action="{{ 'blog' | urlFor(code, map, site.routes) }}" method="get" role="search" aria-label="{{ N.searchLabel }}">
+        <label for="q-{{ code }}">{{ N.searchLabel }}</label>
+        <div class="search-form__row">
+          <input id="q-{{ code }}" name="q" type="search" placeholder="{{ N.searchPlaceholder }}" autocomplete="off">
+          <button class="btn btn--primary btn--small" type="submit">{% icon "search" %}{{ N.searchButton }}</button>
+        </div>
+      </form>
+      <nav aria-label="{{ N.linksTitle }}">
+        <ul class="link-list" role="list">
+          {% for item in ["home", "services", "blog", "booking", "contact"] %}
+          <li><a class="link-arrow" href="{{ item | urlFor(code, map, site.routes) }}">{{ i18n[code].nav[item] }} {% icon "arrow-right" %}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    {% endfor %}
+  </div>
+</section>

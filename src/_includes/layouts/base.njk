@@ -15,7 +15,8 @@
   {% endif %}
   {% if i18nExempt %}<meta name="mm:i18n" content="bg-only">
   {% endif %}
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% if not is404 %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
   {% if alts.bg and alts.en %}
   <link rel="alternate" hreflang="bg" href="{{ site.url }}{{ alts.bg }}">
   <link rel="alternate" hreflang="en" href="{{ site.url }}{{ alts.en }}">
@@ -25,7 +26,8 @@
   <meta property="og:site_name" content="{{ T.site.name }}">
   <meta property="og:title" content="{{ title or T.home.title }}">
   <meta property="og:description" content="{{ pageDescription }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% if not is404 %}<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% endif %}
   <meta property="og:image" content="{{ site.url }}{{ ogImage or '/images/og-site.jpg' }}">
   <meta property="og:locale" content="{{ T.locale }}">
   <meta property="og:locale:alternate" content="{{ i18n[other].locale }}">

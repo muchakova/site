@@ -13,7 +13,7 @@ const PAGES = [
   "/blog/tax-loss-harvesting-po-balgarski.html", "/en/blog/tax-loss-harvesting-po-balgarski.html",
   "/blog/lichen-ili-firmen-akaunt-broker.html", "/en/blog/parviyat-balgarski-white-paper-esma.html",
   "/privacy/", "/en/privacy/", "/accessibility/", "/en/accessibility/",
-  "/styleguide/",
+  "/styleguide/", "/404.html",
 ];
 const AXE_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "best-practice"];
 
@@ -48,6 +48,17 @@ for (const path of PAGES) {
     expect(navNames.filter((n) => !n), "every visible <nav> is named").toEqual([]);
     expect(new Set(navNames).size, `nav names are unique: ${navNames.join(" / ")}`).toBe(navNames.length);
 
+    const sideways = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+    expect(sideways).toBeLessThanOrEqual(0);
+  });
+}
+
+// WCAG 1.4.10 Reflow: 400% zoom of a 1280 px window = 320 CSS px, no sideways scrolling
+for (const path of PAGES) {
+  test(`${path}: reflows at 320 px without sideways scroll`, async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== "desktop", "one viewport is enough");
+    await page.setViewportSize({ width: 320, height: 640 });
+    await page.goto(path);
     const sideways = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(sideways).toBeLessThanOrEqual(0);
   });

@@ -89,6 +89,7 @@
     var active = 'all';
     var params = new URLSearchParams(location.search);
     if (params.get('cat') && scope.querySelector('[data-filter="' + params.get('cat') + '"]')) active = params.get('cat');
+    if (search && params.get('q')) search.value = params.get('q');   // search from the 404 page: /blog.html?q=…
     function apply(announce) {
       var q = search ? search.value.trim().toLowerCase() : '';
       var shown = 0;
@@ -110,7 +111,7 @@
       var timer;
       search.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(function () { apply(true); }, 250); });
     }
-    apply(false);
+    apply(!!(search && search.value));
   });
 
   /* ---------- Copy to clipboard ----------

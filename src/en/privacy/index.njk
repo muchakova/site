@@ -1,7 +1,82 @@
 ---
 key: privacy
 section: privacy
+layout: layouts/doc.njk
 title: "Privacy policy"
-noindex: true
+description: "How muchakova.com handles personal data: hosting, booking a consultation, payment, contact, donations and videos. Your rights under the GDPR."
+lead: "What happens to your personal data when you browse the site, book a consultation, write to me or donate: what is collected, why, who else receives it and what rights you have."
+updated: 2026-10-19
 ---
-{% include "pages/stub.njk" %}
+<h2 id="summary">In short</h2>
+<ul>
+  <li>The site uses no cookies for tracking, advertising or visitor analytics.</li>
+  <li>There are no forms on the site itself. You write to me by email, phone or message, and booking and payment happen with external providers.</li>
+  <li>External content (the booking calendar, the videos) loads only after you act.</li>
+  <li>I do not sell personal data or use it for automated decisions or profiling.</li>
+</ul>
+
+<h2 id="controller">Who is responsible for your data</h2>
+<p>The controller of the personal data collected through this site is {% pending "13", T.pending.q13 %}</p>
+<p>For anything about your personal data, write to <a href="mailto:{{ site.email }}">{{ site.email }}</a> or call <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>.</p>
+
+<h2 id="browsing">When you browse the site</h2>
+<p><strong>Hosting.</strong> The site is hosted on GitHub Pages (GitHub). On every visit GitHub records your IP address in server logs for security purposes. I have no access to these logs. Legal basis: the legitimate interest in keeping the site secure and available (Art. 6(1)(f) GDPR).</p>
+<p><strong>Fonts and images</strong> load from the site itself, with no requests to Google or other providers.</p>
+<p><strong>Browser settings.</strong> If you choose the light or dark theme, your choice is stored in your browser (localStorage, key <code>mm-theme</code>). The site also remembers the language you read in (<code>mm-lang</code>). These entries contain no personal data, are never sent to me, and you can delete them in your browser settings.</p>
+<p><strong>Visitor analytics.</strong> The site uses no visitor analytics, advertising or social media “pixels”.</p>
+<p><strong>Social networks.</strong> The Facebook, LinkedIn, YouTube, TikTok and X icons are plain links. Nothing loads from these networks until you open the link.</p>
+
+<h2 id="booking">When you book a consultation</h2>
+<p><strong>Calendar.</strong> Booking runs on Cal.com. The calendar loads only after you choose a meeting format. You enter the details the form asks for (name, email and, if you like, a description of your question). Cal.com processes them on my behalf and sends them to me. Inside the calendar, Cal.com may use cookies and similar technologies under its own policy.</p>
+<p><strong>Payment.</strong> Payment is processed by Stripe. Your card details are entered with Stripe and never reach me. I only receive the payment details: amount, date and email.</p>
+<p><strong>The meeting</strong> takes place on Google Meet. I use the information and documents you share for the consultation only to advise you.</p>
+<p>Legal bases: the consultation contract (Art. 6(1)(b) GDPR) and legal obligations under accounting and tax law (Art. 6(1)(c)).</p>
+
+<h2 id="contact">When you write or call</h2>
+<p>When you email me, write on Viber, WhatsApp or Telegram, or call me, I process the data you send yourself (name, contact details, the content of the message) in order to reply. Legal basis: steps taken at your request before entering into a contract, or the legitimate interest in answering your enquiry (Art. 6(1)(b) and (f) GDPR).</p>
+<p>The messaging apps are provided by their own companies and process data under their own policies.</p>
+
+<h2 id="donations">When you donate</h2>
+<p>Donations go through Stripe (by card) or Revolut. They process the payment entirely. I receive the details the provider shows (a name or email and the amount) and use them only to record the donation. Legal basis: carrying out the donation and legal obligations under accounting law (Art. 6(1)(b) and (c) GDPR).</p>
+
+<h2 id="videos">Videos</h2>
+<p>The videos are on YouTube (Google). The player loads from youtube-nocookie.com only after you press “Play”. From then on, YouTube may store information in your browser and processes your IP address under Google’s privacy policy.</p>
+
+<h2 id="recipients">Who else receives data</h2>
+<ul>
+  <li><strong>GitHub</strong>: hosting the site;</li>
+  <li><strong>Cal.com</strong>: booking consultations;</li>
+  <li><strong>Stripe</strong>: card payments and donations;</li>
+  <li><strong>Revolut</strong>: donations via Revolut;</li>
+  <li><strong>Google</strong>: meetings on Google Meet and videos on YouTube (once you play them);</li>
+  <li><strong>Viber, WhatsApp, Telegram</strong>: only if you write to me there;</li>
+  <li><strong>public authorities</strong> (e.g. the National Revenue Agency), only where the law requires it.</li>
+</ul>
+
+<h2 id="transfers">Transfers outside the EU</h2>
+<p>Some of the providers (GitHub, Cal.com, Stripe, Google) are in the United States or transfer data there. This happens under the safeguards of Chapter V of the GDPR: the European Commission’s adequacy decision under the EU–US Data Privacy Framework, or standard contractual clauses.</p>
+
+<h2 id="retention">How long I keep data</h2>
+<ul>
+  <li><strong>Correspondence and consultation notes:</strong> {% pending "14", T.pending.q14 %}</li>
+  <li><strong>Accounting records</strong> (invoices, payment details): for the periods required by accounting and tax law.</li>
+  <li><strong>Server logs:</strong> under GitHub’s policy.</li>
+</ul>
+
+<h2 id="rights">Your rights</h2>
+<p>You have the right:</p>
+<ul>
+  <li>to access your data and get a copy of it (Art. 15 GDPR);</li>
+  <li>to have inaccurate data corrected (Art. 16);</li>
+  <li>to have your data erased (Art. 17), unless the law requires me to keep it;</li>
+  <li>to restrict processing (Art. 18);</li>
+  <li>to receive your data in a structured, machine-readable format (Art. 20);</li>
+  <li>to object to processing based on legitimate interest (Art. 21).</li>
+</ul>
+<p>Write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>. I will reply without undue delay and within one month at the latest (Art. 12(3) GDPR).</p>
+
+<h2 id="complaints">Right to complain</h2>
+<p>If you believe your data is processed unlawfully, you can complain to the Bulgarian Commission for Personal Data Protection: 2 Prof. Tsvetan Lazarov Blvd., Sofia 1592, <a href="https://www.cpdp.bg" target="_blank" rel="noopener">www.cpdp.bg<span class="sr-only"> {{ T.a11y.newTab }}</span></a>, or to the data protection authority in the EU country where you live or work.</p>
+
+<h2 id="changes">Changes to this policy</h2>
+<p>If I change how data is processed (for example, by adding visitor analytics), I will update this page and its last-updated date.</p>

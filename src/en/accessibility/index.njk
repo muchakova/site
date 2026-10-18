@@ -1,7 +1,43 @@
 ---
 key: accessibility
 section: accessibility
+layout: layouts/doc.njk
 title: "Accessibility statement"
-noindex: true
+description: "How accessible muchakova.com is: the WCAG 2.2 AA standard, what has been done, known limitations and how to report a problem."
+lead: "I want this site to work for as many people as possible, including people with impaired sight or hearing, and people with motor or cognitive difficulties."
+updated: 2026-10-19
 ---
-{% include "pages/stub.njk" %}
+<h2 id="standard">Standard and status</h2>
+<p>The aim is for the site to meet the <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">Web Content Accessibility Guidelines (WCAG) 2.2<span class="sr-only"> {{ T.a11y.newTab }}</span></a> at level AA.</p>
+<p>The site is <strong>partially conformant</strong>: most of the content meets the requirements, and the exceptions are listed under “Known limitations”.</p>
+
+<h2 id="done">What has been done</h2>
+<ul>
+  <li><strong>Structure.</strong> Headings are in the right order, pages have landmarks (header, navigation, main content, footer), and every page starts with a “Skip to content” link.</li>
+  <li><strong>Keyboard.</strong> Everything works with the keyboard alone and focus is always visible. On phones, the menu closes with Esc and returns focus to its button.</li>
+  <li><strong>Screen readers.</strong> Buttons and links have clear names, the current page is marked, the number of filter results is announced, and links that open a new tab say so.</li>
+  <li><strong>Text and colour.</strong> Text contrast is at least 4.5:1. There is a light and a dark theme (following your system setting or your own choice). At 400% zoom the content reflows without horizontal scrolling.</li>
+  <li><strong>Motion.</strong> With “Reduce motion” turned on, animations and smooth scrolling stop. Videos never start on their own and load only when you play them.</li>
+  <li><strong>Touch.</strong> Buttons and links are large enough and spaced apart.</li>
+  <li><strong>Language.</strong> Every page declares its language. The English version is separate, with addresses under <code>/en/</code>.</li>
+  <li><strong>Articles.</strong> Tables are named and scroll on their own, and images have text descriptions.</li>
+  <li><strong>Booking.</strong> The calendar loads only after you choose a format, and an email address and phone number are always shown next to it.</li>
+  <li><strong>The game</strong> has a pause (<kbd>P</kbd> or <kbd>Esc</kbd>), keyboard controls and a “Skip the game” link.</li>
+</ul>
+
+<h2 id="limitations">Known limitations</h2>
+<ul>
+  <li><strong>The booking calendar</strong> runs on Cal.com, and its accessibility depends on that provider. If it gets in your way, write or call me and we will book a time together.</li>
+  <li><strong>The videos</strong> are on YouTube and may not have hand-made captions. Each video comes with a written answer and a link to an article on the topic.</li>
+  <li><strong>The game</strong> uses real-time graphics and cannot be played with a screen reader.</li>
+  <li><strong>Photos of tax forms</strong> in some articles and the attached PDF document may not be fully accessible. If you need them in another format, write to me.</li>
+  <li><strong>The LoopForge synthesizer</strong> is a separate application and is not covered by this statement.</li>
+</ul>
+
+<h2 id="testing">How it was checked</h2>
+<p>By self-assessment. With every change the site goes through automated checks: axe-core on every page, in the light and dark themes, on desktop and on phone; Lighthouse; HTML validation. Keyboard-only use, text zoom, both themes and high-contrast mode were checked by hand.</p>
+<p>This statement is reviewed with every major change to the site.</p>
+
+<h2 id="feedback">Feedback</h2>
+<p>If you run into a problem or need content in another format, write to <a href="mailto:{{ site.email }}">{{ site.email }}</a> or call <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>. Describe the page and the problem, and I will help you get the information in a way that works for you.</p>
+<p>{% pending "9", T.pending.q9 %}</p>

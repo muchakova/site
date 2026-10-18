@@ -201,7 +201,9 @@
     "q9": "Reply time for messages: answer pending",
     "q10": "Tax returns and bookkeeping (refer to Vesta Consult?): answer pending",
     "q11": "New professional photos: answer pending",
-    "q12": "Official websites and logos of tax-invest and NativeArc: answer pending"
+    "q12": "Official websites and logos of tax-invest and NativeArc: answer pending",
+    "q13": "Data controller (you personally or Vesta Consult; name, company number, address): answer pending",
+    "q14": "Retention period for correspondence and consultation notes: answer pending"
   },
   "servicesPage": {
     "onThisPage": "On this page",
@@ -503,5 +505,21 @@
       "calmed": "Calmed",
       "appealed": "Appealed"
     }
+  },
+  "docPage": {
+    "updated": "Last updated:",
+    "toc": "Contents",
+    "tocNav": "Page contents"
+  },
+  "notFound": {
+    "pageTitle": "Page not found",
+    "eyebrow": "Error 404",
+    "title": "This page doesn’t exist",
+    "text": "The address may be wrong, or the page has moved. Try the home page or search the blog.",
+    "searchLabel": "Search the blog",
+    "searchPlaceholder": "e.g. ETF, VAT, MiCA",
+    "searchButton": "Search",
+    "linksTitle": "Useful pages",
+    "otherLang": "Български"
   }
 }

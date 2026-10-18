@@ -16,6 +16,8 @@
     transition: background-color var(--duration-fast), border-color var(--duration-fast), color var(--duration-fast), box-shadow var(--duration-fast);
   }
   .btn:hover { text-decoration: none; }
+  /* long labels may wrap on narrow screens (and at 400% zoom) instead of running off the page */
+  @media (max-width: 480px) { .btn { max-width: 100%; white-space: normal; text-align: center; padding-block: 6px; } }
   .btn--primary { background: var(--color-accent); color: var(--color-on-accent); box-shadow: var(--shadow-accent); }
   .btn--primary:hover { background: var(--color-accent-hover); color: var(--color-on-accent); }
   .btn--secondary { background: var(--color-surface); color: var(--color-fg); border-color: var(--color-line); }
@@ -263,6 +265,13 @@
   .format-option__check { position: absolute; top: var(--space-m); right: var(--space-m); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--color-line-strong); color: transparent; }
   .format-option:has(input:checked) .format-option__check { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
   @media (max-width: 560px) { .format-options { grid-template-columns: minmax(0, 1fr); } }
+  /* high contrast: "transparent" text is forced visible, so hide the tick explicitly until the option is chosen */
+  @media (forced-colors: active) {
+    .format-option__check .icon { visibility: hidden; }
+    .format-option:has(input:checked) { border: 3px solid Highlight; }
+    .format-option:has(input:checked) .format-option__check { forced-color-adjust: none; background: Highlight; border-color: Highlight; color: HighlightText; }
+    .format-option:has(input:checked) .format-option__check .icon { visibility: visible; }
+  }
 
   /* booking page: picker + calendar on the left, preparation notes on the right */
   .booking-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-xl); align-items: start; padding-bottom: var(--space-section); }
@@ -387,6 +396,24 @@
 
   /* ---------- Inner page heading (breadcrumb, eyebrow, h1, lead, on-page links) */
   .page-head { padding-block: var(--space-xl) var(--space-l); }
+
+  /* long documents (privacy, accessibility): article column + sticky contents */
+  .doc-updated { margin-top: var(--space-s); font-size: var(--step--1); }
+  .doc-layout { padding-bottom: var(--space-section); }
+
+  /* 404: one page for both languages, BG block first, EN block beside it */
+  .not-found { padding-bottom: var(--space-section); }
+  .not-found__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: var(--space-xl); align-items: start; }
+  .not-found__block--en { padding: var(--space-l); border-radius: var(--radius-xl); background: var(--color-surface); border: 1px solid var(--color-line); }
+  .not-found__title { font-size: var(--step-3); }
+  .not-found .lead { margin-top: 0; }
+  .search-form { display: flex; flex-direction: column; gap: 6px; }
+  .search-form label { font-size: var(--step--1); font-weight: var(--weight-semibold); color: var(--color-muted); }
+  .search-form__row { display: flex; flex-wrap: wrap; gap: var(--space-2xs); }
+  .search-form input { flex: 1 1 12rem; min-height: var(--tap); padding: 0 var(--space-s); border-radius: var(--radius-pill); border: 1px solid var(--color-line-strong); background: var(--color-surface); }
+  .search-form input::placeholder { color: var(--color-muted); opacity: 1; }
+  .search-form .btn { min-height: var(--tap); }
+  .link-list { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-m); list-style: none; margin: 0; padding: 0; }
   .page-head h1 { margin-top: var(--space-2xs); }
   .page-head .lead { margin-top: var(--space-s); }
   .page-nav ul { display: flex; flex-wrap: wrap; gap: 8px; margin: var(--space-m) 0 0; padding: 0; list-style: none; }
