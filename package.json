@@ -11,10 +11,11 @@
     "start": "eleventy --serve --port=8080",
     "clean": "rm -rf _site",
     "test": "npm run build && npm run test:static && npm run test:e2e",
-    "test:static": "node tests/static/links.mjs && node tests/static/legacy-urls.mjs && node tests/static/i18n.mjs && html-validate \"_site/{index,en/index}.html\" \"_site/{en/,}{services,about,contact,privacy,accessibility}/index.html\" \"_site/styleguide/index.html\"",
+    "test:static": "node tests/static/links.mjs && node tests/static/legacy-urls.mjs && node tests/static/i18n.mjs && node tests/static/pending.mjs && html-validate \"_site/{index,en/index}.html\" \"_site/{en/,}{services,about,contact,privacy,accessibility}/index.html\" \"_site/styleguide/index.html\"",
     "test:e2e": "playwright test",
     "test:lighthouse": "lhci autorun",
-    "serve": "node tools/serve.mjs _site 4173"
+    "serve": "node tools/serve.mjs _site 4173",
+    "test:launch": "npm run build && STRICT_PENDING=1 node tests/static/pending.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",

@@ -357,6 +357,43 @@
   .split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--space-xl); align-items: start; }
   @media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); gap: var(--space-l); } }
 
+  /* ---------- Inner page heading (breadcrumb, eyebrow, h1, lead, on-page links) */
+  .page-head { padding-block: var(--space-xl) var(--space-l); }
+  .page-head h1 { margin-top: var(--space-2xs); }
+  .page-head .lead { margin-top: var(--space-s); }
+  .page-nav ul { display: flex; flex-wrap: wrap; gap: 8px; margin: var(--space-m) 0 0; padding: 0; list-style: none; }
+  .page-nav a { display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 16px; border-radius: var(--radius-pill); border: 1px solid var(--color-line); background: var(--color-surface); color: var(--color-fg); text-decoration: none; font-weight: var(--weight-medium); font-size: .95rem; }
+  .page-nav a:hover { border-color: var(--color-accent); }
+
+  /* ---------- Service area (services page) */
+  .service-area__head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-s) var(--space-m); align-items: start; margin-bottom: var(--space-l); }
+  .service-area__head .lead { margin-top: var(--space-2xs); max-width: 60ch; }
+  .service-area__head .chips { margin-top: var(--space-s); }
+  .service-area__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-s); }
+  .service-area__grid > * { min-width: 0; }
+  .service-area__grid h3, .service-area__related h3 { font-size: var(--step-1); margin-bottom: var(--space-2xs); }
+  .service-area__related { margin-top: var(--space-l); }
+  .service-area__related .post-feed { margin-top: var(--space-xs); }
+  .service-area__cta { margin-top: var(--space-l); }
+  @media (max-width: 980px) { .service-area__grid { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 560px) { .service-area__head { grid-template-columns: minmax(0, 1fr); } }
+
+  /* list with drawn check marks */
+  .checklist { display: grid; gap: var(--space-2xs); margin: 0; padding: 0; list-style: none; }
+  .checklist li { position: relative; padding-left: 1.7em; }
+  .checklist li::before { content: ""; position: absolute; left: .2em; top: .5em; width: .65em; height: .35em; border-left: 2px solid var(--color-signal); border-bottom: 2px solid var(--color-signal); transform: rotate(-45deg); }
+
+  /* terms: definition list laid out as cards */
+  .terms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-s); margin: 0; }
+  .terms > div { display: flex; flex-direction: column; gap: var(--space-2xs); padding: var(--space-m); border-radius: var(--radius-xl); background: var(--color-surface); border: 1px solid var(--color-line); }
+  .terms dt { font-weight: var(--weight-semibold); font-size: var(--step-1); }
+  .terms dd { margin: 0; color: var(--color-muted); display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2xs); }
+  @media (max-width: 860px) { .terms { grid-template-columns: minmax(0, 1fr); } }
+
+  /* ---------- Pending answer (pre-launch only; the launch build refuses pages that contain one) */
+  .pending { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 6px; padding: 2px 10px; border: 1.5px dashed var(--color-warning); border-radius: var(--radius-s); background: var(--color-warning-soft); color: var(--color-warning); font-size: .9rem; font-weight: var(--weight-medium); line-height: 1.5; }
+  .pending--block { display: flex; padding: var(--space-xs) var(--space-s); border-radius: var(--radius-m); }
+
   /* ---------- Contact list ---------------------------------------- */
   .contact-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
   .contact-item { display: flex; align-items: center; gap: var(--space-xs); min-height: 56px; padding: var(--space-xs) var(--space-s); border-radius: var(--radius-l); background: var(--color-surface); border: 1px solid var(--color-line); color: var(--color-fg); text-decoration: none; font-variant-numeric: tabular-nums; }

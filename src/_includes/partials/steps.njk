@@ -1,0 +1,11 @@
+{# shared by the home and services pages; expects T, lang, site, collections #}
+{%- set H = T.home -%}
+{%- set bookingUrl = 'booking' | urlFor(lang, collections.i18nMap, site.routes) -%}
+<section class="section" aria-labelledby="steps-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">{{ H.stepsEyebrow }}</p><h2 id="steps-title">{{ H.stepsTitle }}</h2></div></div>
+    <ol class="steps">
+      {% for s in H.steps %}<li><h3>{{ s.title }}</h3><p>{{ s.text }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>

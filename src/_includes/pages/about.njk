@@ -1,0 +1,93 @@
+{%- set map = collections.i18nMap -%}
+{%- set A = T.aboutPage -%}
+{%- set H = T.home -%}
+{%- set home = 'home' | urlFor(lang, map, site.routes) -%}
+{%- set servicesUrl = 'services' | urlFor(lang, map, site.routes) -%}
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ home }}">{{ T.nav.home }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li></ol></nav>
+  </div>
+  <div class="wrap split" style="margin-top: var(--space-m); align-items: center">
+    <div class="stack" style="--stack: var(--space-s)">
+      <p class="eyebrow">{{ A.eyebrow }}</p>
+      <h1 id="page-title">{{ title }}</h1>
+      <p class="lead">{{ A.bio[0] }}</p>
+      {% for p in A.bio.slice(1) %}<p class="muted">{{ p }}</p>{% endfor %}
+      <div class="hero__actions" style="margin-top: var(--space-s)">
+        <a class="btn btn--primary" href="{{ 'booking' | urlFor(lang, map, site.routes) }}">{{ H.ctaBook }} {% icon "arrow-right" %}</a>
+        <a class="btn btn--secondary" href="{{ servicesUrl }}">{{ T.nav.services }}</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img class="portrait__img" src="/images/profile_3.jpg" alt="{{ T.site.name }}" eleventy:widths="320,500" sizes="(min-width: 860px) 440px, calc(100vw - 40px)" loading="eager" fetchpriority="high">
+      <p style="position: relative; margin-top: var(--space-s)">{% pending "11", T.pending.q11 %}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="ventures" aria-labelledby="ventures-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><h2 id="ventures-title">{{ A.venturesTitle }}</h2></div></div>
+    <ul class="grid" role="list" style="--grid-min: 18rem">
+      {% for v in site.ventures %}
+      <li>
+        <article class="card">
+          <p class="muted" style="font-size: var(--step--1)">{{ H.ventures[v.key].text }}</p>
+          <h3 class="card__title">
+            {% if v.external %}<a class="card__link" href="{{ v.url }}" target="_blank" rel="noopener">{{ H.ventures[v.key].name }}<span class="sr-only"> {{ T.a11y.newTab }}</span></a>
+            {% else %}<a class="card__link" href="{{ v.route | urlFor(lang, map, site.routes) }}{{ v.hash }}">{{ H.ventures[v.key].name }}</a>{% endif %}
+          </h3>
+          <p class="card__text">{{ A.ventures[v.key] }}</p>
+          {% set moreIcon = "external" if v.external else "arrow-right" %}<span class="card__more" aria-hidden="true">{{ H.more }} {% icon moreIcon %}</span>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+    <div style="margin-top: var(--space-m)">
+      <h3 style="font-size: var(--step-1); margin-bottom: var(--space-2xs)">{{ A.seminarsTitle }}</h3>
+      {% pending "6", T.pending.q6, true %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="expertise" aria-labelledby="expertise-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__text"><h2 id="expertise-title">{{ A.expertiseTitle }}</h2></div>
+      <a class="link-arrow" href="{{ servicesUrl }}">{{ T.nav.services }} {% icon "arrow-right" %}</a>
+    </div>
+    <ul class="grid" role="list" style="--grid-min: 16rem">
+      {% for s in services %}
+      <li><article class="card"><span class="service-card__icon">{% icon s.icon %}</span><h3 class="card__title"><a class="card__link" href="{{ servicesUrl }}#{{ s.id }}">{{ s.title[lang] }}</a></h3><span class="card__more" aria-hidden="true">{{ H.more }} {% icon "arrow-right" %}</span></article></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" id="credentials" aria-labelledby="credentials-title">
+  <div class="wrap split">
+    <div class="stack" style="--stack: var(--space-s)">
+      <h2 id="credentials-title">{{ A.credentialsTitle }}</h2>
+      {% pending "7", T.pending.q7, true %}
+    </div>
+    <div class="stack" style="--stack: var(--space-s)">
+      <h2 id="testimonials-title">{{ A.testimonialsTitle }}</h2>
+      {% pending "8", T.pending.q8, true %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="more" aria-labelledby="more-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><h2 id="more-title">{{ A.moreTitle }}</h2></div></div>
+    <ul class="grid" role="list" style="--grid-min: 26rem">
+      {% for item in ["projects", "partners"] %}
+      <li><article class="card"><h3 class="card__title"><a class="card__link" href="{{ item | urlFor(lang, map, site.routes) }}">{{ A[item].title }}</a></h3><p class="card__text">{{ A[item].text }}</p><span class="card__more" aria-hidden="true">{{ H.more }} {% icon "arrow-right" %}</span></article></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% set ctaId = "consult" %}
+{% include "partials/cta.njk" %}

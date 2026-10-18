@@ -78,11 +78,18 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("isoDate", (value) => (value instanceof Date ? value : new Date(`${value}T12:00:00Z`)).toISOString().slice(0, 10));
   eleventyConfig.addFilter("price", (amount, lang) => (lang === "bg" ? `${amount} €` : `€${amount}`));
   eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
+  // pick posts by URL, keeping the given order (curated "related articles")
+  eleventyConfig.addFilter("postsByUrl", (urls, posts) => (urls || []).map((u) => posts.find((p) => p.url === u)).filter(Boolean));
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
   // <svg> icon from the sprite; always decorative
   eleventyConfig.addShortcode("icon", (name, cls = "") =>
     `<svg class="icon${cls ? " " + cls : ""}" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#${name}"/></svg>`);
+
+  // Visible placeholder for an answer we are still waiting for (questions ⟨?N⟩ in docs/redesign).
+  // tests/static/pending.mjs lists them; the launch build fails while any remain.
+  eleventyConfig.addShortcode("pending", (n, label, block = false) =>
+    `<span class="pending${block ? " pending--block" : ""}" data-pending="?${n}"><strong>⟨?${n}⟩</strong> ${label}</span>`);
 
   // sitemap entries: indexable template pages with their language alternates
   eleventyConfig.addFilter("sitemapPages", (items) =>

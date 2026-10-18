@@ -3,44 +3,204 @@
     "id": "crypto",
     "icon": "coins",
     "blogCat": "crypto",
-    "title": { "bg": "Крипто данъци и MiCA", "en": "Crypto tax & MiCA" },
+    "title": {
+      "bg": "Крипто данъци и MiCA",
+      "en": "Crypto tax & MiCA"
+    },
     "desc": {
       "bg": "Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.",
       "en": "Taxation of crypto-assets, AML checks, CASP licensing and everything MiCA changed."
     },
-    "laws": { "bg": ["MiCA", "AML", "ЗДДС"], "en": ["MiCA", "AML", "VAT"] }
+    "laws": {
+      "bg": [
+        "MiCA",
+        "AML",
+        "ЗДДС"
+      ],
+      "en": [
+        "MiCA",
+        "AML",
+        "VAT"
+      ]
+    },
+    "forWhom": {
+      "bg": "Физически лица с крипто активи; компании, които приемат или търгуват крипто; CASP и проекти с токени.",
+      "en": "Individuals holding crypto; companies that accept or trade crypto; CASPs and token projects."
+    },
+    "questions": {
+      "bg": [
+        "Как се облага печалбата от продажба на криптовалута?",
+        "Трупат ли суаповете оборот за регистрация по ЗДДС?",
+        "Как да мина AML проверка на борса?",
+        "Какво изисква КФН за лиценз по MiCA?"
+      ],
+      "en": [
+        "How is profit from selling crypto taxed?",
+        "Do swaps count towards the VAT registration threshold?",
+        "How do I pass an exchange’s AML check?",
+        "What does the FSC require for a MiCA licence?"
+      ]
+    },
+    "outcome": {
+      "bg": "Анализ на конкретната ви ситуация спрямо ЗДДФЛ, ЗДДС и MiCA и практични следващи стъпки.",
+      "en": "An analysis of your situation under Bulgarian income tax and VAT law and MiCA, with practical next steps."
+    },
+    "posts": [
+      "/blog/kripto-borsi-cex-dex-oborot-zdds.html",
+      "/blog/parviyat-balgarski-white-paper-esma.html",
+      "/blog/kak-da-preminem-aml-proverka-kripto.html"
+    ]
   },
   {
     "id": "invest",
     "icon": "chart",
     "blogCat": "invest",
-    "title": { "bg": "Доходи от инвестиции", "en": "Investment income" },
+    "title": {
+      "bg": "Доходи от инвестиции",
+      "en": "Investment income"
+    },
     "desc": {
       "bg": "Акции, ETF, облигации и дивиденти — кога се дължи данък, колко е и къде се декларира.",
       "en": "Stocks, ETFs, bonds and dividends — when tax is due, how much, and where to declare it."
     },
-    "laws": { "bg": ["ЗДДФЛ", "ETF", "дивиденти"], "en": ["Income tax", "ETFs", "dividends"] }
+    "laws": {
+      "bg": [
+        "ЗДДФЛ",
+        "ETF",
+        "дивиденти"
+      ],
+      "en": [
+        "Income tax",
+        "ETFs",
+        "dividends"
+      ]
+    },
+    "forWhom": {
+      "bg": "Инвеститори с брокер в България или чужбина (Interactive Brokers, Revolut, Trading 212 и др.).",
+      "en": "Investors with a broker in Bulgaria or abroad (Interactive Brokers, Revolut, Trading 212 and others)."
+    },
+    "questions": {
+      "bg": [
+        "Облагаема ли е сделката, ако е на регулиран пазар?",
+        "Как се облагат ETF-ите и дивидентите?",
+        "Получих писмо от НАП. Какво да направя?",
+        "Личен или фирмен акаунт при брокер?"
+      ],
+      "en": [
+        "Is the trade taxable if it was on a regulated market?",
+        "How are ETFs and dividends taxed?",
+        "I received a letter from the tax authority. What now?",
+        "Personal or company brokerage account?"
+      ]
+    },
+    "outcome": {
+      "bg": "Ясен отговор кога и колко данък дължите, кои приложения от декларацията попълвате и как да документирате сделките.",
+      "en": "A clear answer on when and how much tax you owe, which annexes of the return to fill in, and how to document your trades."
+    },
+    "posts": [
+      "/blog/tax-loss-harvesting-po-balgarski.html",
+      "/blog/kak-se-oblagat-etf-ite-v-balgaria.html",
+      "/blog/lichen-ili-firmen-akaunt-broker.html"
+    ]
   },
   {
     "id": "international",
     "icon": "globe",
     "blogCat": "institutions",
-    "title": { "bg": "Международно облагане", "en": "International tax" },
+    "title": {
+      "bg": "Международно облагане",
+      "en": "International tax"
+    },
     "desc": {
       "bg": "Спогодби за избягване на двойното данъчно облагане, местно лице и чуждестранни брокери.",
       "en": "Double tax treaties, tax residence and foreign brokers."
     },
-    "laws": { "bg": ["СИДДО", "местно лице", "СПБ-8"], "en": ["Tax treaties", "residence", "SPB-8"] }
+    "laws": {
+      "bg": [
+        "СИДДО",
+        "местно лице",
+        "СПБ-8"
+      ],
+      "en": [
+        "Tax treaties",
+        "residence",
+        "SPB-8"
+      ]
+    },
+    "forWhom": {
+      "bg": "Хора, които живеят или работят в повече от една държава; получатели на доходи от чужбина; фирми с чуждестранни клиенти.",
+      "en": "People living or working in more than one country; recipients of foreign income; companies with foreign clients."
+    },
+    "questions": {
+      "bg": [
+        "Местно лице на коя държава съм?",
+        "Как работи спогодбата за избягване на двойното облагане в моя случай?",
+        "Трябва ли да подам СПБ-8 към БНБ?"
+      ],
+      "en": [
+        "Which country am I tax resident in?",
+        "How does the double tax treaty apply to me?",
+        "Do I have to file SPB-8 with the Bulgarian National Bank?"
+      ]
+    },
+    "outcome": {
+      "bg": "Определяне на местното лице и на държавата, която има право да облага, и стъпки за избягване на двойния данък.",
+      "en": "Your tax residence, which country may tax which income, and the steps to avoid paying twice."
+    },
+    "posts": [
+      "/blog/siddo-dvoyno-mestno-lice.html",
+      "/blog/spb-8-bnb-interactive-brokers.html",
+      "/blog/dds-registraciya-interactive-brokers.html"
+    ]
   },
   {
     "id": "business",
     "icon": "building",
     "blogCat": "business",
-    "title": { "bg": "Бизнес структуриране", "en": "Business structuring" },
+    "title": {
+      "bg": "Бизнес структуриране",
+      "en": "Business structuring"
+    },
     "desc": {
       "bg": "Субстанция, ДДС и планиране, с което маржът расте, а данъчната тежест — не.",
       "en": "Substance, VAT and planning that grows your margin — not your tax burden."
     },
-    "laws": { "bg": ["ЗКПО", "ЗДДС", "субстанция"], "en": ["Corporate tax", "VAT", "substance"] }
+    "laws": {
+      "bg": [
+        "ЗКПО",
+        "ЗДДС",
+        "субстанция"
+      ],
+      "en": [
+        "Corporate tax",
+        "VAT",
+        "substance"
+      ]
+    },
+    "forWhom": {
+      "bg": "Собственици на фирми, стартъпи, фрийлансъри, които обмислят фирма.",
+      "en": "Business owners, start-ups, freelancers considering a company."
+    },
+    "questions": {
+      "bg": [
+        "Кога трябва да се регистрирам по ДДС?",
+        "Каква „субстанция“ трябва да има компанията ми?",
+        "9% или 20% ДДС за моята услуга?"
+      ],
+      "en": [
+        "When do I have to register for VAT?",
+        "What “substance” does my company need?",
+        "9% or 20% VAT for my service?"
+      ]
+    },
+    "outcome": {
+      "bg": "Оценка на текущата структура, рисковете и законните възможности за по-ниска данъчна тежест.",
+      "en": "An assessment of your current structure, its risks and the lawful ways to lower your tax burden."
+    },
+    "posts": [
+      "/blog/substancia-kompania-zashto-vazhno.html",
+      "/blog/natrupvane-oborot-registraciya-dds-2026.html",
+      "/blog/dds-turisticheska-usluga-9-ili-20.html"
+    ]
   }
 ]

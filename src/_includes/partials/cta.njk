@@ -1,0 +1,22 @@
+{# shared by the home and services pages; expects T, lang, site, collections #}
+{%- set H = T.home -%}
+{%- set bookingUrl = 'booking' | urlFor(lang, collections.i18nMap, site.routes) -%}
+{# id="contact" stays on the home page for old links; other pages pass ctaId #}
+<section class="section" id="{{ ctaId or 'contact' }}" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2 id="cta-title">{{ H.ctaTitle }}</h2>
+        <p>{{ H.ctaText }}</p>
+        <a class="btn btn--on-navy" href="{{ bookingUrl }}">{{ H.ctaButton }} {% icon "arrow-right" %}</a>
+      </div>
+      <ul class="contact-list" aria-label="{{ T.a11y.directContact }}">
+        <li><a class="contact-item" href="mailto:{{ site.email }}">{% icon "mail" %}{{ site.email }}</a></li>
+        <li><a class="contact-item" href="tel:{{ site.phone }}">{% icon "phone" %}{{ site.phoneDisplay }}</a></li>
+        {% for m in site.messengers %}
+        <li><a class="contact-item" href="{{ m.url }}"{% if m.url.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{% icon m.icon %}{{ m.name }}{% if m.url.startsWith('http') %}<span class="sr-only"> {{ T.a11y.newTab }}</span>{% endif %}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

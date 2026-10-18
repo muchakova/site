@@ -54,6 +54,39 @@ for a in soup.select("a.blog-card[data-cats]"):
         "excerpt": bilingual(a.select_one(".blog-card-excerpt")),
         "minutes": int(re.search(r"\d+", minutes).group()) if re.search(r"\d+", minutes) else None,
     })
+# Six of the oldest cards have no English tag/excerpt in blog.html (the old site showed
+# Bulgarian there even in English mode). Fill them from the post itself.
+CYR = re.compile(r"[\u0400-\u04FF]")
+TAGS_EN = {"ДДС": "VAT", "Данъчно право": "Tax law", "Данъци": "Taxes", "Бизнес": "Business",
+           "Инвестиции": "Investing", "Икономика": "Economy"}
+
+
+def first_sentences(text, limit=220):
+    text = re.sub(r"\s+", " ", text).strip()
+    out = ""
+    for sentence in re.split(r"(?<=[.!?])\s+", text):
+        if out and len(out) + len(sentence) > limit:
+            break
+        out = (out + " " + sentence).strip()
+    return out
+
+
+for post in posts:
+    if not any(CYR.search(post[f]["en"]) for f in ("tag", "title", "excerpt")):
+        continue
+    page = BeautifulSoup((ROOT / post["url"].lstrip("/")).read_text(encoding="utf-8"), "lxml")
+    if CYR.search(post["title"]["en"]):
+        post["title"]["en"] = bilingual(page.select_one(".post-title"))["en"]
+    if CYR.search(post["excerpt"]["en"]):
+        body = page.select_one('.post-content > .lang-content[data-lang="en"]')
+        para = next((p for p in body.find_all("p") if len(p.get_text(strip=True)) > 60 and not re.match(r"\s*Hello\b", p.get_text())), None) if body else None  # skip the greeting
+        post["excerpt"]["en"] = first_sentences(para.get_text(" ", strip=True)) if para else ""
+    if CYR.search(post["tag"]["en"]):
+        post["tag"]["en"] = TAGS_EN.get(post["tag"]["bg"], post["tag"]["en"])
+    left = [f for f in ("tag", "title", "excerpt") if CYR.search(post[f]["en"]) or not post[f]["en"]]
+    if left:
+        print("still Bulgarian or empty in English:", post["url"], left)
+
 posts.sort(key=lambda p: (p["date"], p["pop"]), reverse=True)
 (ROOT / "src/_data/legacyPosts.json").write_text(json.dumps(posts, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 

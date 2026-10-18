@@ -188,5 +188,124 @@
   "stub": {
     "notice": "This page is being built as part of the redesign.",
     "back": "Back to the home page"
+  },
+  "pending": {
+    "q1": "VAT and invoice: answer pending",
+    "q2": "Cancellation and rescheduling terms: answer pending",
+    "q3": "Consultation language (BG / EN): answer pending",
+    "q4": "What the client receives after the meeting (summary, documents in advance): answer pending",
+    "q5": "Online only, or also in person in Sofia: answer pending",
+    "q6": "Whether to show the seminar appearances separately: decision pending",
+    "q7": "Education, qualifications, memberships, media: answer pending",
+    "q8": "Client testimonials: answer pending",
+    "q9": "Reply time for messages: answer pending",
+    "q10": "Tax returns and bookkeeping (refer to Vesta Consult?): answer pending",
+    "q11": "New professional photos: answer pending"
+  },
+  "servicesPage": {
+    "onThisPage": "On this page",
+    "forWhom": "For whom",
+    "questions": "Typical questions",
+    "outcome": "What you get",
+    "related": "Related articles",
+    "bookTopic": "Book a consultation on this topic",
+    "termsTitle": "Consultation terms",
+    "termsEyebrow": "Consultations",
+    "nav": {
+      "pricing": "Pricing",
+      "terms": "Terms",
+      "faq": "Questions"
+    },
+    "terms": [
+      {
+        "title": "Payment",
+        "text": "The consultation is paid when booking, by card, via Stripe.",
+        "pending": "q1"
+      },
+      {
+        "title": "Cancelling and rescheduling",
+        "text": "",
+        "pending": "q2"
+      },
+      {
+        "title": "Format",
+        "text": "The meeting is online on Google Meet. You receive the link by email after booking.",
+        "pending": ""
+      },
+      {
+        "title": "Scope",
+        "text": "The consultation is an analysis of your specific case.",
+        "pending": "q10"
+      }
+    ],
+    "faq": [
+      {
+        "q": "How does the consultation work?",
+        "a": "Online, on Google Meet, at the time you chose. We go through your case and finish with concrete next steps.",
+        "pending": ""
+      },
+      {
+        "q": "Which consultation should I choose?",
+        "a": "30 minutes is enough for one clearly defined question. If you have several income types, foreign accounts or a company, choose 60 minutes.",
+        "pending": ""
+      },
+      {
+        "q": "How do I pay?",
+        "a": "By card when you book. Payment is processed securely by Stripe.",
+        "pending": ""
+      },
+      {
+        "q": "Can I reschedule?",
+        "a": "",
+        "pending": "q2"
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "A short description of your question, the years concerned, and your broker or exchange statements, if any.",
+        "pending": "q4"
+      },
+      {
+        "q": "Do I get an invoice?",
+        "a": "",
+        "pending": "q1"
+      },
+      {
+        "q": "Do you prepare tax returns?",
+        "a": "",
+        "pending": "q10"
+      },
+      {
+        "q": "Do you consult in English?",
+        "a": "",
+        "pending": "q3"
+      }
+    ]
+  },
+  "aboutPage": {
+    "eyebrow": "Marina Muchakova",
+    "bio": [
+      "My name is Marina Muchakova and I am a tax consultant with a law degree and over 15 years of experience in tax law.",
+      "My specialisations include crypto taxation, investment income taxation, application of Double Taxation Avoidance Treaties, business structuring and planning aimed at achieving the highest possible profit margin and minimum tax rates — leading to maximum profitability.",
+      "My primary goal is to keep as much capital concentrated within the business as possible. I achieve this through in-depth analysis of tax rules and legislation and finding flexible, effective solutions."
+    ],
+    "venturesTitle": "I work across three projects",
+    "ventures": {
+      "vesta": "An accounting firm and consultancy focused on corporate clients and individuals, specialising in crypto accounting, investment fund bookkeeping, translations and document legalisation.",
+      "academy": "An educational crypto and blockchain project running seminars in partnership with UNWE, Expert Events, Themida Training Centre, Kitov Centre, Finance Academy, Invest Pro, Invest Club and others.",
+      "nabi": "National Association for Blockchain and Innovation — a non-profit organisation bridging the gap between business and public administration in the technology sector, with a mission to create a favourable environment for investment and a technology crypto hub in Bulgaria."
+    },
+    "seminarsTitle": "Speaking engagements",
+    "expertiseTitle": "How I can help",
+    "credentialsTitle": "Education and qualifications",
+    "testimonialsTitle": "What clients say",
+    "moreTitle": "Projects and partners",
+    "projects": {
+      "title": "Projects",
+      "text": "Vesta Consult, The Crypto Academy, NABI and personal projects: a browser game and a music synthesizer."
+    },
+    "partners": {
+      "title": "Partners",
+      "text": "The companies I work with: NX0 · NativeArc and tax-invest."
+    }
   }
 }

@@ -85,35 +85,9 @@
   </div>
 </section>
 
-{# ---------------------------------------------------------------- How it works #}
-<section class="section" aria-labelledby="steps-title">
-  <div class="wrap">
-    <div class="section-head"><div class="section-head__text"><p class="eyebrow">{{ H.stepsEyebrow }}</p><h2 id="steps-title">{{ H.stepsTitle }}</h2></div></div>
-    <ol class="steps">
-      {% for s in H.steps %}<li><h3>{{ s.title }}</h3><p>{{ s.text }}</p></li>{% endfor %}
-    </ol>
-  </div>
-</section>
+{% include "partials/steps.njk" %}
 
-{# ---------------------------------------------------------------- Pricing #}
-<section class="section section--alt" id="pricing" aria-labelledby="pricing-title">
-  <div class="wrap">
-    <div class="section-head" style="justify-content: center; text-align: center"><div class="section-head__text" style="align-items: center"><p class="eyebrow">{{ H.pricingEyebrow }}</p><h2 id="pricing-title">{{ H.pricingTitle }}</h2><p class="lead">{{ H.pricingSub }}</p></div></div>
-    <div class="plans">
-      {% for minutes in ["30", "60"] %}
-      {% set P = H.plans[minutes] %}
-      {% set featured = minutes == "60" %}
-      <article class="plan{% if featured %} plan--featured{% endif %}" aria-labelledby="plan-{{ minutes }}">
-        <div class="plan__top"><h3 class="plan__name" id="plan-{{ minutes }}">{{ P.name }}</h3>{% if featured %}<span class="chip">{{ H.recommended }}</span>{% endif %}</div>
-        <p class="price"><strong>{{ site.prices[minutes] | price(lang) }}</strong><span>{{ T.units.per }} {{ P.duration }}</span></p>
-        <p class="plan__fit">{{ P.fit }}</p>
-        <ul>{% for f in H.planFeatures %}<li>{% icon "check" %}{{ f }}</li>{% endfor %}</ul>
-        <a class="btn {{ 'btn--on-navy' if featured else 'btn--secondary' }}" href="{{ bookingUrl }}?format={{ minutes }}" aria-describedby="plan-{{ minutes }}">{{ P.cta }}{% if featured %} {% icon "arrow-right" %}{% endif %}</a>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% include "partials/pricing.njk" %}
 
 {# ---------------------------------------------------------------- Latest articles (#blog) #}
 {%- set lead = legacyPosts[0] -%}
@@ -181,22 +155,4 @@
   </div>
 </section>
 
-{# ---------------------------------------------------------------- Final CTA (#contact kept for old links) #}
-<section class="section" id="contact" aria-labelledby="cta-title">
-  <div class="wrap">
-    <div class="cta-band">
-      <div>
-        <h2 id="cta-title">{{ H.ctaTitle }}</h2>
-        <p>{{ H.ctaText }}</p>
-        <a class="btn btn--on-navy" href="{{ bookingUrl }}">{{ H.ctaButton }} {% icon "arrow-right" %}</a>
-      </div>
-      <ul class="contact-list" aria-label="{{ T.a11y.directContact }}">
-        <li><a class="contact-item" href="mailto:{{ site.email }}">{% icon "mail" %}{{ site.email }}</a></li>
-        <li><a class="contact-item" href="tel:{{ site.phone }}">{% icon "phone" %}{{ site.phoneDisplay }}</a></li>
-        {% for m in site.messengers %}
-        <li><a class="contact-item" href="{{ m.url }}"{% if m.url.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{% icon m.icon %}{{ m.name }}{% if m.url.startsWith('http') %}<span class="sr-only"> {{ T.a11y.newTab }}</span>{% endif %}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</section>
+{% include "partials/cta.njk" %}

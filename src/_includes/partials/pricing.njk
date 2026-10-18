@@ -1,0 +1,21 @@
+{# shared by the home and services pages; expects T, lang, site, collections #}
+{%- set H = T.home -%}
+{%- set bookingUrl = 'booking' | urlFor(lang, collections.i18nMap, site.routes) -%}
+<section class="section section--alt" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="section-head" style="justify-content: center; text-align: center"><div class="section-head__text" style="align-items: center"><p class="eyebrow">{{ H.pricingEyebrow }}</p><h2 id="pricing-title">{{ H.pricingTitle }}</h2><p class="lead">{{ H.pricingSub }}</p></div></div>
+    <div class="plans">
+      {% for minutes in ["30", "60"] %}
+      {% set P = H.plans[minutes] %}
+      {% set featured = minutes == "60" %}
+      <article class="plan{% if featured %} plan--featured{% endif %}" aria-labelledby="plan-{{ minutes }}">
+        <div class="plan__top"><h3 class="plan__name" id="plan-{{ minutes }}">{{ P.name }}</h3>{% if featured %}<span class="chip">{{ H.recommended }}</span>{% endif %}</div>
+        <p class="price"><strong>{{ site.prices[minutes] | price(lang) }}</strong><span>{{ T.units.per }} {{ P.duration }}</span></p>
+        <p class="plan__fit">{{ P.fit }}</p>
+        <ul>{% for f in H.planFeatures %}<li>{% icon "check" %}{{ f }}</li>{% endfor %}</ul>
+        <a class="btn {{ 'btn--on-navy' if featured else 'btn--secondary' }}" href="{{ bookingUrl }}?format={{ minutes }}" aria-describedby="plan-{{ minutes }}">{{ P.cta }}{% if featured %} {% icon "arrow-right" %}{% endif %}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
