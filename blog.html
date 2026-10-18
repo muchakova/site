@@ -37,6 +37,10 @@
     rel="stylesheet"
   />
 
+  <!-- LAYOUT:HEAD -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;display=swap" />
+  <script>try{var t=localStorage.getItem('mm-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- /LAYOUT:HEAD -->
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Structured Data -->
@@ -151,31 +155,41 @@
 <body>
 
   <!-- NAVIGATION -->
-  <nav class="navbar" id="navbar" role="navigation">
+  <!-- LAYOUT:NAV -->
+  <a href="#main" class="skip-link" data-key="skip_link">Към съдържанието</a>
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Главна навигация">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">Marina <span>M.</span></a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#about"    data-key="nav_about">За мен</a></li>
-        <li><a href="index.html#projects" data-key="nav_projects">Проекти</a></li>
-        <li><a href="blog.html"           data-key="nav_blog">Блог</a></li>
-        <li><a href="index.html#contact"  data-key="nav_contact">Контакти</a></li>
-        <li><a href="game/" data-key="nav_game">Игра</a></li>
-        <li><a href="booking/"            class="nav-cta" data-key="nav_booking">Запази час</a></li>
+        <li><a href="index.html#about" data-nav="about" data-key="nav_about">За мен</a></li>
+        <li><a href="blog.html" data-nav="blog" aria-current="page" data-key="nav_blog">Блог</a></li>
+        <li><a href="vlog/" data-nav="vlog" data-key="nav_vlog">Влог</a></li>
+        <li><a href="projects/" data-nav="projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="partners/" data-nav="partners" data-key="nav_partners">Партньори</a></li>
+        <li><a href="index.html#contact" data-nav="contact" data-key="nav_contact">Контакти</a></li>
+        <li><a href="booking/" data-nav="booking" class="nav-cta" data-key="nav_booking">Запази час</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
-        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Светла / тъмна тема" title="Светла / тъмна тема">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="images/icons.svg#moon"/></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="images/icons.svg#sun"/></svg>
+        </button>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Меню" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
+  <span id="main" tabindex="-1"></span>
+  <!-- /LAYOUT:NAV -->
 
   <!-- PAGE HEADER -->
-  <header class="page-hero section-soft">
+  <header class="page-hero">
     <div class="container">
+      <p class="section-eyebrow" data-key="blog_eyebrow">Блог</p>
       <h1 class="section-title" data-key="blog_page_title">Блог</h1>
       <p class="page-hero-subtitle" data-key="blog_page_subtitle">Статии и обновления</p>
     </div>
@@ -199,7 +213,7 @@
            data-date = дата на публикуване (YYYY-MM-DD)
            data-pop  = ранг за "Популярни" (1 = най-четена)
            ========================================= -->
-      <div class="blog-toolbar" id="blogToolbar">
+      <div class="blog-toolbar" id="blogToolbar" data-filter-toolbar=".blog-list-grid" data-empty="#blogEmpty">
         <div class="blog-filters" role="group" aria-label="Филтър по тема">
           <button class="filter-chip active" data-cat="all"          data-key="filter_all">Всички</button>
           <button class="filter-chip" data-cat="taxes"        data-key="filter_taxes">Данъци</button>
@@ -209,10 +223,16 @@
           <button class="filter-chip" data-cat="business"     data-key="filter_business">Предприемачество и бизнес</button>
           <button class="filter-chip" data-cat="institutions" data-key="filter_institutions">Какво знаят институциите</button>
         </div>
-        <div class="blog-sort" role="group" aria-label="Подредба">
-          <button class="sort-btn active" data-sort="newest"  data-key="sort_newest">Най-нови</button>
-          <button class="sort-btn" data-sort="oldest"  data-key="sort_oldest">Най-стари</button>
-          <button class="sort-btn" data-sort="popular" data-key="sort_popular">Популярни</button>
+        <div class="blog-toolbar-right">
+          <label class="blog-search">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#search"/></svg>
+            <input type="search" data-key-placeholder="search_placeholder" placeholder="Търси в статиите…" aria-label="Търсене" />
+          </label>
+          <div class="blog-sort" role="group" aria-label="Подредба">
+            <button class="sort-btn active" data-sort="newest"  data-key="sort_newest">Най-нови</button>
+            <button class="sort-btn" data-sort="oldest"  data-key="sort_oldest">Най-стари</button>
+            <button class="sort-btn" data-sort="popular" data-key="sort_popular">Популярни</button>
+          </div>
         </div>
       </div>
 
@@ -229,6 +249,7 @@
               <span class="lang-content" data-lang="bg">Инвестиции</span>
               <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">15 мин</span><span class="lang-content" data-lang="en" style="display:none;">15 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Tax-loss harvesting по български</span>
@@ -252,6 +273,7 @@
               <span class="lang-content" data-lang="bg">Инвестиции</span>
               <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">15 мин</span><span class="lang-content" data-lang="en" style="display:none;">15 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Личен или фирмен акаунт при брокер</span>
@@ -275,6 +297,7 @@
               <span class="lang-content" data-lang="bg">Отчетност пред БНБ</span>
               <span class="lang-content" data-lang="en" style="display:none;">BNB reporting</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">15 мин</span><span class="lang-content" data-lang="en" style="display:none;">15 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Скъпа БНБ, имам акции в Interactive Brokers</span>
@@ -298,6 +321,7 @@
               <span class="lang-content" data-lang="bg">СИДДО</span>
               <span class="lang-content" data-lang="en" style="display:none;">Tax treaties</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">21 мин</span><span class="lang-content" data-lang="en" style="display:none;">21 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Местно лице на половин Европа (и на един кораб)</span>
@@ -321,6 +345,7 @@
               <span class="lang-content" data-lang="bg">Крипто</span>
               <span class="lang-content" data-lang="en" style="display:none;">Crypto</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">5 мин</span><span class="lang-content" data-lang="en" style="display:none;">5 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Първият български White Paper в ESMA: Пробив за Web3 у нас или просто регулаторна формалност?</span>
@@ -344,6 +369,7 @@
               <span class="lang-content" data-lang="bg">ДДС</span>
               <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">14 мин</span><span class="lang-content" data-lang="en" style="display:none;">14 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът по ЗДДС</span>
@@ -367,6 +393,7 @@
               <span class="lang-content" data-lang="bg">Данъци</span>
               <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">9 мин</span><span class="lang-content" data-lang="en" style="display:none;">9 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Получи ли писмо от НАП за доходите си от инвестиции?</span>
@@ -390,6 +417,7 @@
               <span class="lang-content" data-lang="bg">ДДС</span>
               <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">13 мин</span><span class="lang-content" data-lang="en" style="display:none;">13 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">9% или 20% ДДС за еднодневния тур?</span>
@@ -413,6 +441,7 @@
               <span class="lang-content" data-lang="bg">Крипто</span>
               <span class="lang-content" data-lang="en" style="display:none;">Crypto</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">6 мин</span><span class="lang-content" data-lang="en" style="display:none;">6 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">MEXC е в „черния списък“ на ESMA. Какво означава това и какво става с активите ти</span>
@@ -436,6 +465,7 @@
               <span class="lang-content" data-lang="bg">ДДС</span>
               <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">27 мин</span><span class="lang-content" data-lang="en" style="display:none;">27 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">ДДС регистрация при търговия с акции чрез Interactive Brokers</span>
@@ -459,6 +489,7 @@
               <span class="lang-content" data-lang="bg">Данъци</span>
               <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">20 мин</span><span class="lang-content" data-lang="en" style="display:none;">20 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Как се облагат ETF-ите в България? (И защо инвеститорите бъркат най-важното)</span>
@@ -482,6 +513,7 @@
               <span class="lang-content" data-lang="bg">Данъци</span>
               <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">19 мин</span><span class="lang-content" data-lang="en" style="display:none;">19 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">5 данъчни грешки, които допускат инвеститорите — Част 2 (За ценители)</span>
@@ -505,6 +537,7 @@
               <span class="lang-content" data-lang="bg">Данъци</span>
               <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">5 мин</span><span class="lang-content" data-lang="en" style="display:none;">5 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">5 данъчни грешки, които допускат инвеститорите! (И които после им струват скъпо)</span>
@@ -528,6 +561,7 @@
               <span class="lang-content" data-lang="bg">DeFi</span>
               <span class="lang-content" data-lang="en" style="display:none;">DeFi</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">4 мин</span><span class="lang-content" data-lang="en" style="display:none;">4 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Смарт контракти и DeFi: Какво реално означава това за вашия бизнес?</span>
@@ -551,6 +585,7 @@
               <span class="lang-content" data-lang="bg">AML</span>
               <span class="lang-content" data-lang="en" style="display:none;">AML</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">5 мин</span><span class="lang-content" data-lang="en" style="display:none;">5 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence)</span>
@@ -574,6 +609,7 @@
               <span class="lang-content" data-lang="bg">AML</span>
               <span class="lang-content" data-lang="en" style="display:none;">AML</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">5 мин</span><span class="lang-content" data-lang="en" style="display:none;">5 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Наръчник: Как успешно да преминем AML проверка при крипто транзакции</span>
@@ -597,6 +633,7 @@
               <span class="lang-content" data-lang="bg">Данъци</span>
               <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">8 мин</span><span class="lang-content" data-lang="en" style="display:none;">8 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Данъчен наръчник за инвеститори в България</span>
@@ -620,6 +657,7 @@
               <span class="lang-content" data-lang="bg">Икономика</span>
               <span class="lang-content" data-lang="en" style="display:none;">Economy</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">9 мин</span><span class="lang-content" data-lang="en" style="display:none;">9 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Моите 5 стотинки за Проектобюджет 2026</span>
@@ -643,6 +681,7 @@
               <span class="lang-content" data-lang="bg">MiCA</span>
               <span class="lang-content" data-lang="en" style="display:none;">MiCA</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">3 мин</span><span class="lang-content" data-lang="en" style="display:none;">3 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">MetaMask CL Card вече преминава под MiCA: зад крипто услугите вече стои MoonPay Europe</span>
@@ -666,6 +705,7 @@
               <span class="lang-content" data-lang="bg">Инвестиции</span>
               <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
             </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">5 мин</span><span class="lang-content" data-lang="en" style="display:none;">5 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Разлика между търговия на борсов сегмент и over-the-counter</span>
@@ -683,6 +723,7 @@
           <div class="blog-meta">
             <span class="blog-date" data-key="blog_post_8_date">29 май 2026</span>
             <span class="blog-tag" data-key="blog_post_8_tag">ДДС</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">5 мин</span><span class="lang-content" data-lang="en" style="display:none;">5 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Кога сделките с ценни книжа СА икономическа дейност?</span>
@@ -699,6 +740,7 @@
           <div class="blog-meta">
             <span class="blog-date" data-key="blog_post_7_date">28 май 2026</span>
             <span class="blog-tag" data-key="blog_post_7_tag">MiCA</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">7 мин</span><span class="lang-content" data-lang="en" style="display:none;">7 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Затрудненията пред CASP-овете при MiCA лиценз пред КФН</span>
@@ -715,6 +757,7 @@
           <div class="blog-meta">
             <span class="blog-date" data-key="blog_post_6_date">28 май 2026</span>
             <span class="blog-tag" data-key="blog_post_6_tag">Криптоикономика</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">9 мин</span><span class="lang-content" data-lang="en" style="display:none;">9 min</span></span>
           </div>
           <h2 class="blog-card-title">
             <span class="lang-content" data-lang="bg">Какво не пише в white paper-ите</span>
@@ -731,6 +774,7 @@
           <div class="blog-meta">
             <span class="blog-date">4 март 2026</span>
             <span class="blog-tag">Данъчно право</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">2 мин</span><span class="lang-content" data-lang="en" style="display:none;">2 min</span></span>
           </div>
           <h2 class="blog-card-title" data-key="blog_page_post_5_title">Какво е „субстанция“ на една компания и защо това е важно?</h2>
           <p class="blog-card-excerpt">
@@ -744,6 +788,7 @@
           <div class="blog-meta">
             <span class="blog-date">4 март 2026</span>
             <span class="blog-tag">ДДС</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">2 мин</span><span class="lang-content" data-lang="en" style="display:none;">2 min</span></span>
           </div>
           <h2 class="blog-card-title" data-key="blog_page_post_4_title">Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.</h2>
           <p class="blog-card-excerpt">
@@ -757,6 +802,7 @@
           <div class="blog-meta">
             <span class="blog-date">4 март 2026</span>
             <span class="blog-tag">ДДС</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">2 мин</span><span class="lang-content" data-lang="en" style="display:none;">2 min</span></span>
           </div>
           <h2 class="blog-card-title" data-key="blog_page_post_0_title">Обобщение на промените в режима на ДДС след 1.1.2026</h2>
           <p class="blog-card-excerpt">
@@ -770,6 +816,7 @@
           <div class="blog-meta">
             <span class="blog-date">4 март 2026</span>
             <span class="blog-tag">ДДС</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">2 мин</span><span class="lang-content" data-lang="en" style="display:none;">2 min</span></span>
           </div>
           <h2 class="blog-card-title" data-key="blog_page_post_1_title">Промени в ДДС при електронна търговия и онлайн събития</h2>
           <p class="blog-card-excerpt">
@@ -783,6 +830,7 @@
           <div class="blog-meta">
             <span class="blog-date">14 февруари 2026</span>
             <span class="blog-tag">Данъци</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">3 мин</span><span class="lang-content" data-lang="en" style="display:none;">3 min</span></span>
           </div>
           <h2 class="blog-card-title">ДЦК и как не се облагат с данъци</h2>
           <p class="blog-card-excerpt">
@@ -796,6 +844,7 @@
           <div class="blog-meta">
             <span class="blog-date">28 февруари 2026</span>
             <span class="blog-tag">Бизнес</span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">2 мин</span><span class="lang-content" data-lang="en" style="display:none;">2 min</span></span>
           </div>
           <h2 class="blog-card-title">Размерът има значение!</h2>
           <p class="blog-card-excerpt">
@@ -828,16 +877,58 @@
         -->
 
       </div>
+      <p class="blog-empty" id="blogEmpty" data-key="blog_empty">Няма статии, които отговарят на търсенето.</p>
     </div>
   </main>
 
   <!-- FOOTER -->
+  <!-- LAYOUT:FOOTER -->
   <footer class="footer">
     <div class="container">
-      <a href="donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
-      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Marina <span>M.</span></a>
+          <p class="footer-tagline" data-key="footer_tagline">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+          <a href="donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading" data-key="footer_nav">Навигация</p>
+          <a href="index.html#about" data-key="nav_about">За мен</a>
+          <a href="projects/" data-key="nav_projects">Проекти</a>
+          <a href="partners/" data-key="nav_partners">Партньори</a>
+          <a href="booking/" data-key="nav_booking">Запази час</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading" data-key="footer_resources">Ресурси</p>
+          <a href="blog.html" data-key="nav_blog">Блог</a>
+          <a href="vlog/" data-key="nav_vlog">Влог</a>
+          <a href="game/" data-key="nav_game">Игра</a>
+          <a href="projects/#pet" data-key="footer_synth">Синтезатор</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading" data-key="footer_contact">Контакт</p>
+          <a href="mailto:office@vesta-bg.eu">office@vesta-bg.eu</a>
+          <a href="tel:+359887460907">+359 887 460 907</a>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/muchakova" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#facebook"/></svg></a>
+            <a href="https://www.linkedin.com/in/vestaconsult/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#linkedin"/></svg></a>
+            <a href="https://www.tiktok.com/@muchakova" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#tiktok"/></svg></a>
+            <a href="https://www.youtube.com/@TheCryptoAcademy375" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#youtube"/></svg></a>
+            <a href="https://x.com/VestaConsult" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#x"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+      </div>
     </div>
   </footer>
+  <!-- /LAYOUT:FOOTER -->
 
   <script src="js/main.js"></script>
 </body>

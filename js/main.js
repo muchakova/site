@@ -1,6 +1,6 @@
 /* =============================================
    Marina Muchakova — main.js
-   Handles: language toggle, navbar, mobile menu, share
+   Handles: language, theme, navbar, mobile menu, share, filters, video, post extras
    ============================================= */
 
 // ============ TRANSLATIONS ============
@@ -35,7 +35,7 @@ const translations = {
 
     // Projects
     projects_title:    'Проекти',
-    projects_subtitle: 'Избрани проекти и работа',
+    projects_subtitle: 'Професионални проекти и лични експерименти',
     proj_cat_1:        'Корпоративен сайт',
     proj_cat_2:        'Образователна платформа',
     proj_cat_3:        'Асоциация',
@@ -44,7 +44,7 @@ const translations = {
     proj_title_3:      'НАБИ - Национална Асоциация по Блокчейн и Иновации',
     proj_desc_1:       'Онлайн присъствие на Веста Консулт с ясно представяне на услуги, бизнес профил и контактна информация.',
     proj_desc_2:       'Образователен проект за крипто и блокчейн с фокус върху достъпно съдържание и практическо обучение.',
-    proj_desc_3:       'Официалният сайт е в процес на разработка (under construction). Скоро ще бъде публикуван.',
+    proj_desc_3:       'Сдружение с нестопанска цел, което изгражда мост между бизнеса и администрацията в технологичния сектор. Официалният сайт предстои.',
     proj_link:         'Виж повече →',
 
     // Blog
@@ -117,7 +117,7 @@ const translations = {
 
     // Blog page
     blog_page_title:    'Блог',
-    blog_page_subtitle: 'Статии и обновления',
+    blog_page_subtitle: 'Анализи на данъчни, инвестиционни и крипто теми — на български и английски.',
     filter_all:          'Всички',
     filter_taxes:        'Данъци',
     filter_crypto:       'Крипто и MiCA',
@@ -190,6 +190,84 @@ const translations = {
     share_copy:      'Копирай линк',
     share_copied:    '✓ Копирано!',
     share_native:    'Сподели',
+
+    // Navigation (2026-10 redesign)
+    nav_vlog:       'Влог',
+    nav_partners:   'Партньори',
+    skip_link:      'Към съдържанието',
+
+    // Home — hero
+    hero_cta_book:  'Запази консултация',
+    hero_cta_blog:  'Прочети блога',
+    stat_1_label:   'години опит в данъчното право',
+    stat_2_label:   'статии за данъци, инвестиции и крипто',
+    stat_3_label:   'крипто регулации и данъци',
+    hero_badge_title: 'Онлайн консултации',
+    hero_badge_sub: 'Запазете час директно от сайта',
+    logos_label:    'Партньори',
+
+    // Home — services
+    services_eyebrow:  'Експертиза',
+    services_title:    'С какво помагам',
+    services_subtitle: 'Законни решения, които оставят повече капитал в бизнеса и в портфейла ви.',
+    svc_crypto_title:  'Крипто данъци и MiCA',
+    svc_crypto_desc:   'Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.',
+    svc_invest_title:  'Доходи от инвестиции',
+    svc_invest_desc:   'Акции, ETF, облигации и дивиденти — кога се дължи данък, колко е и къде се декларира.',
+    svc_treaty_title:  'Международно облагане',
+    svc_treaty_desc:   'Спогодби за избягване на двойното данъчно облагане, местно лице и чуждестранни брокери.',
+    svc_business_title:'Бизнес структуриране',
+    svc_business_desc: 'Субстанция, ДДС и планиране, с което маржът расте, а данъчната тежест — не.',
+    svc_articles:      'Статии →',
+    svc_book:          'Консултация →',
+
+    // Home — blog / vlog / projects / partners teasers
+    blog_eyebrow:      'Блог',
+    blog_latest_title: 'Последни статии',
+    featured_label:    'Най-ново',
+    vlog_eyebrow:      'Влог',
+    vlog_home_title:   'Видео отговори на въпросите на инвеститорите',
+    vlog_see_all:      'Всички видеа',
+    about_eyebrow:     'За мен',
+    venture_vesta:     'Счетоводна кантора и консултантска къща',
+    venture_academy:   'Обучения по крипто и блокчейн',
+    venture_nabi:      'Асоциация по блокчейн и иновации',
+    projects_eyebrow:  'Проекти',
+    projects_see_all:  'Всички проекти',
+    pet_label:         'Pet project',
+    proj_open:         'Отвори',
+    proj_play:         'Играй',
+    soon:              'Скоро',
+    partners_eyebrow:  'Партньори',
+    partners_home_title: 'С кого работя',
+    partners_see_all:  'Всички партньори',
+    contact_eyebrow:   'Контакти',
+
+    // Vlog / video cards
+    video_soon:        'Видеото идва скоро',
+    video_play:        'Пусни видеото',
+    video_watch_yt:    'Гледай в YouTube',
+    video_read_article:'Прочети статията →',
+
+    // Blog page tools
+    search_placeholder:'Търси в статиите…',
+    blog_empty:        'Няма статии, които отговарят на търсенето.',
+    search_videos:     'Търси във въпросите…',
+    vlog_empty:        'Няма видеа, които отговарят на търсенето.',
+
+    // Post page extras
+    toc_title:         'Съдържание',
+    post_consult_title:'Имате конкретен казус?',
+    post_consult_sub:  'Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.',
+    post_consult_btn:  'Запази час',
+    related_title:     'Още по темата',
+
+    // Footer (2026-10 redesign)
+    footer_tagline:    'Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.',
+    footer_nav:        'Навигация',
+    footer_resources:  'Ресурси',
+    footer_contact:    'Контакт',
+    footer_synth:      'Синтезатор',
   },
 
   en: {
@@ -222,7 +300,7 @@ const translations = {
 
     // Projects
     projects_title:    'Projects',
-    projects_subtitle: 'Selected projects and work',
+    projects_subtitle: 'Professional ventures and personal experiments',
     proj_cat_1:        'Corporate website',
     proj_cat_2:        'Educational platform',
     proj_cat_3:        'Association',
@@ -231,7 +309,7 @@ const translations = {
     proj_title_3:      'NABI - National Association for Blockchain and Innovation',
     proj_desc_1:       'Online presence for Vesta Consult with clear presentation of services, company profile, and contact details.',
     proj_desc_2:       'Educational crypto and blockchain project focused on accessible content and practical learning.',
-    proj_desc_3:       'The official website is currently under construction and will be published soon.',
+    proj_desc_3:       'A non-profit bridging business and public administration in the technology sector. The official website is on its way.',
     proj_link:         'View more →',
 
     // Blog
@@ -304,7 +382,7 @@ const translations = {
 
     // Blog page
     blog_page_title:    'Blog',
-    blog_page_subtitle: 'Articles and updates',
+    blog_page_subtitle: 'In-depth analysis of tax, investing and crypto — in Bulgarian and English.',
     filter_all:          'All',
     filter_taxes:        'Taxes',
     filter_crypto:       'Crypto & MiCA',
@@ -377,33 +455,130 @@ const translations = {
     share_copy:      'Copy link',
     share_copied:    '✓ Copied!',
     share_native:    'Share',
+
+    // Navigation (2026-10 redesign)
+    nav_vlog:       'Vlog',
+    nav_partners:   'Partners',
+    skip_link:      'Skip to content',
+
+    // Home — hero
+    hero_cta_book:  'Book a consultation',
+    hero_cta_blog:  'Read the blog',
+    stat_1_label:   'years of experience in tax law',
+    stat_2_label:   'articles on tax, investing and crypto',
+    stat_3_label:   'crypto regulation and tax',
+    hero_badge_title: 'Online consultations',
+    hero_badge_sub: 'Book a slot right on the site',
+    logos_label:    'Partners',
+
+    // Home — services
+    services_eyebrow:  'Expertise',
+    services_title:    'How I can help',
+    services_subtitle: 'Lawful solutions that keep more capital in your business and your portfolio.',
+    svc_crypto_title:  'Crypto tax & MiCA',
+    svc_crypto_desc:   'Taxation of crypto-assets, AML checks, CASP licensing and everything MiCA changed.',
+    svc_invest_title:  'Investment income',
+    svc_invest_desc:   'Stocks, ETFs, bonds and dividends — when tax is due, how much, and where to declare it.',
+    svc_treaty_title:  'International tax',
+    svc_treaty_desc:   'Double tax treaties, tax residence and foreign brokers.',
+    svc_business_title:'Business structuring',
+    svc_business_desc: 'Substance, VAT and planning that grows your margin — not your tax burden.',
+    svc_articles:      'Articles →',
+    svc_book:          'Consultation →',
+
+    // Home — blog / vlog / projects / partners teasers
+    blog_eyebrow:      'Blog',
+    blog_latest_title: 'Latest articles',
+    featured_label:    'Latest',
+    vlog_eyebrow:      'Vlog',
+    vlog_home_title:   'Video answers to investors’ questions',
+    vlog_see_all:      'All videos',
+    about_eyebrow:     'About',
+    venture_vesta:     'Accounting firm and consultancy',
+    venture_academy:   'Crypto and blockchain education',
+    venture_nabi:      'Blockchain and innovation association',
+    projects_eyebrow:  'Projects',
+    projects_see_all:  'All projects',
+    pet_label:         'Pet project',
+    proj_open:         'Open',
+    proj_play:         'Play',
+    soon:              'Coming soon',
+    partners_eyebrow:  'Partners',
+    partners_home_title: 'Who I work with',
+    partners_see_all:  'All partners',
+    contact_eyebrow:   'Contact',
+
+    // Vlog / video cards
+    video_soon:        'Video coming soon',
+    video_play:        'Play the video',
+    video_watch_yt:    'Watch on YouTube',
+    video_read_article:'Read the article →',
+
+    // Blog page tools
+    search_placeholder:'Search articles…',
+    blog_empty:        'No articles match your search.',
+    search_videos:     'Search the questions…',
+    vlog_empty:        'No videos match your search.',
+
+    // Post page extras
+    toc_title:         'Contents',
+    post_consult_title:'Have a specific case?',
+    post_consult_sub:  'Every situation is different. Book an online consultation and we will go through it together.',
+    post_consult_btn:  'Book a meeting',
+    related_title:     'Related reading',
+
+    // Footer (2026-10 redesign)
+    footer_tagline:    'Tax consultant. I help individuals and businesses hack their taxes — legally.',
+    footer_nav:        'Navigation',
+    footer_resources:  'Resources',
+    footer_contact:    'Contact',
+    footer_synth:      'Synthesizer',
   }
 };
 
 // ============ STATE ============
-let currentLang = localStorage.getItem('mm-lang') || 'bg';
+let currentLang = 'bg';
+try { currentLang = localStorage.getItem('mm-lang') || 'bg'; } catch (e) { /* storage blocked */ }
 
 // ============ APPLY LANGUAGE ============
-function applyLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem('mm-lang', lang);
-  document.documentElement.setAttribute('lang', lang);
-
+// Translate one subtree (used for the page and for content injected later)
+function applyTranslations(scope, lang) {
   const t = translations[lang];
   if (!t) return;
 
-  // Update all elements with data-key
-  document.querySelectorAll('[data-key]').forEach(el => {
+  // Text of elements with data-key
+  scope.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
     if (t[key] !== undefined) {
       el.textContent = t[key];
     }
   });
 
-  // Show/hide bilingual content blocks in blog posts
-  document.querySelectorAll('.lang-content').forEach(el => {
+  // Placeholders / aria-labels with data-key-placeholder / data-key-aria
+  scope.querySelectorAll('[data-key-placeholder]').forEach(el => {
+    const v = t[el.getAttribute('data-key-placeholder')];
+    if (v !== undefined) el.setAttribute('placeholder', v);
+  });
+  scope.querySelectorAll('[data-key-aria]').forEach(el => {
+    const v = t[el.getAttribute('data-key-aria')];
+    if (v !== undefined) el.setAttribute('aria-label', v);
+  });
+
+  // Show/hide bilingual content blocks
+  scope.querySelectorAll('.lang-content').forEach(el => {
     el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
   });
+}
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  try { localStorage.setItem('mm-lang', lang); } catch (e) { /* storage blocked */ }
+  document.documentElement.setAttribute('lang', lang);
+
+  const t = translations[lang];
+  if (!t) return;
+
+  applyTranslations(document, lang);
 
   // Update language toggle button text
   const langBtn = document.getElementById('langToggle');
@@ -429,6 +604,39 @@ function applyLanguage(lang) {
 
   // Let page-specific scripts (e.g. the game) follow the language toggle.
   document.dispatchEvent(new CustomEvent('mm:lang', { detail: lang }));
+}
+
+// ============ THEME (light / dark) ============
+function initThemeToggle() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+
+  const systemDark = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const current = () => document.documentElement.getAttribute('data-theme') || (systemDark() ? 'dark' : 'light');
+
+  btn.addEventListener('click', () => {
+    const next = current() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('mm-theme', next); } catch (e) { /* storage blocked */ }
+  });
+}
+
+// ============ SCROLL REVEAL ============
+function initReveal() {
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.documentElement.classList.add('js-reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  items.forEach(el => io.observe(el));
 }
 
 // ============ NAVBAR SCROLL EFFECT ============
@@ -537,17 +745,31 @@ function initShare() {
   if (linkedinBtn) linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
 }
 
-// ============ BLOG SORT & FILTER (blog.html) ============
-function initBlogControls() {
-  const toolbar = document.getElementById('blogToolbar');
-  const grid    = document.querySelector('.blog-list-grid');
+
+// ============ FILTER / SORT / SEARCH GRIDS (blog.html, vlog/) ============
+// Markup: a toolbar with data-filter-toolbar="<grid selector>" containing
+// .filter-chip[data-cat], optional .sort-btn[data-sort] and input[type=search].
+// Grid items carry data-cats (space separated), data-date and data-pop.
+// ?cat=<name> in the URL preselects a category chip.
+function initFilterGrid(toolbar, grid) {
   if (!toolbar || !grid) return;
 
   // Original DOM order is the tie-breaker for equal dates/ranks
-  const cards = Array.from(grid.querySelectorAll('.blog-card'));
+  const cards  = Array.from(grid.children).filter(el => el.dataset.cats !== undefined);
+  const search = toolbar.querySelector('input[type="search"]');
+  const empty  = document.querySelector(toolbar.dataset.empty || '.blog-empty');
+  const chips  = toolbar.querySelectorAll('.filter-chip');
 
   let activeCat  = 'all';
   let activeSort = 'newest';
+  let query      = '';
+
+  const wanted = new URLSearchParams(window.location.search).get('cat');
+  if (wanted && toolbar.querySelector(`.filter-chip[data-cat="${CSS.escape(wanted)}"]`)) {
+    activeCat = wanted;
+  }
+
+  const normalize = s => s.toLowerCase().replace(/\s+/g, ' ');
 
   function apply() {
     const sorted = [...cards].sort((a, b) => {
@@ -561,17 +783,25 @@ function initBlogControls() {
       return (b.dataset.date || '').localeCompare(a.dataset.date || '');
     });
 
+    let shown = 0;
     sorted.forEach(card => {
       const cats = (card.dataset.cats || '').split(/\s+/);
-      card.style.display = (activeCat === 'all' || cats.includes(activeCat)) ? '' : 'none';
+      const catOk = activeCat === 'all' || cats.includes(activeCat);
+      const textOk = !query || normalize(card.textContent).includes(query);
+      const visible = catOk && textOk;
+      card.style.display = visible ? '' : 'none';
+      if (visible) shown++;
       grid.appendChild(card); // re-append in sorted order
     });
+
+    if (empty) empty.style.display = shown ? 'none' : 'block';
   }
 
-  toolbar.querySelectorAll('.filter-chip').forEach(btn => {
+  chips.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.cat === activeCat);
     btn.addEventListener('click', () => {
       activeCat = btn.dataset.cat;
-      toolbar.querySelectorAll('.filter-chip').forEach(b => b.classList.toggle('active', b === btn));
+      chips.forEach(b => b.classList.toggle('active', b === btn));
       apply();
     });
   });
@@ -584,11 +814,162 @@ function initBlogControls() {
     });
   });
 
+  if (search) {
+    search.addEventListener('input', () => {
+      query = normalize(search.value.trim());
+      apply();
+    });
+  }
+
   apply();
+}
+
+function initFilterGrids() {
+  document.querySelectorAll('[data-filter-toolbar]').forEach(toolbar => {
+    initFilterGrid(toolbar, document.querySelector(toolbar.dataset.filterToolbar));
+  });
+}
+
+// ============ VIDEO CARDS (lite YouTube embed) ============
+// <article class="video-card" data-yt="VIDEO_ID"> … <div class="video-thumb"></div>
+// Nothing loads from YouTube until the visitor clicks play (youtube-nocookie).
+// Cards without data-yt show a "video coming soon" placeholder.
+function initVideos() {
+  document.querySelectorAll('.video-card').forEach(card => {
+    const thumb = card.querySelector('.video-thumb');
+    if (!thumb || thumb.dataset.ready) return;
+    thumb.dataset.ready = '1';
+    const id = (card.dataset.yt || '').trim();
+
+    if (!id) {
+      thumb.insertAdjacentHTML('beforeend',
+        '<div class="video-soon"><svg class="icon" aria-hidden="true"><use href="' + iconHref('play') + '"/></svg>' +
+        '<span data-key="video_soon">Видеото идва скоро</span></div>');
+      return;
+    }
+
+    thumb.style.backgroundImage = `url("https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg")`;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.setAttribute('data-key-aria', 'video_play');
+    btn.setAttribute('aria-label', 'Пусни видеото');
+    btn.innerHTML = '<span class="video-play"><svg class="icon" aria-hidden="true"><use href="' + iconHref('play') + '"/></svg></span>';
+    btn.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0`;
+      iframe.title = card.querySelector('.video-title')?.textContent.trim() || 'YouTube';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      thumb.innerHTML = '';
+      thumb.appendChild(iframe);
+    });
+    thumb.appendChild(btn);
+  });
+}
+
+// Path to the icon sprite relative to the current page (same as the stylesheet)
+function iconHref(name) {
+  const css = document.querySelector('link[href$="css/style.css"]');
+  const root = css ? css.getAttribute('href').replace(/css\/style\.css$/, '') : '';
+  return `${root}images/icons.svg#${name}`;
+}
+
+// ============ BLOG POST EXTRAS (blog/*.html) ============
+// Reading progress bar, table of contents for long posts, consultation box
+// and related posts (read from blog.html, so no per-post markup is needed).
+function initPostExtras() {
+  const content = document.querySelector('.post-content');
+  if (!content || !document.querySelector('.post-header')) return;
+
+  // Reading progress
+  const bar = document.createElement('div');
+  bar.className = 'read-progress';
+  document.body.appendChild(bar);
+  const onScroll = () => {
+    const rect = content.getBoundingClientRect();
+    const total = rect.height - window.innerHeight * 0.6;
+    const progress = total > 0 ? Math.min(1, Math.max(0, -rect.top / total)) : 0;
+    bar.style.transform = `scaleX(${progress})`;
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Table of contents — one per language block, only when there are 4+ sections
+  content.querySelectorAll('.lang-content').forEach(block => {
+    const heads = Array.from(block.querySelectorAll(':scope > h2'));
+    if (heads.length < 4) return;
+    const lang = block.dataset.lang === 'en' ? 'en' : 'bg';
+    const items = heads.map((h, i) => {
+      if (!h.id) h.id = `${lang}-${i + 1}`;
+      return `<li><a href="#${h.id}">${h.textContent.trim()}</a></li>`;
+    }).join('');
+    const toc = document.createElement('nav');
+    toc.className = 'post-toc';
+    toc.setAttribute('aria-label', translations[lang].toc_title);
+    toc.innerHTML = `<p class="post-toc-title">${translations[lang].toc_title}</p><ol>${items}</ol>`;
+    heads[0].before(toc);
+  });
+
+  // Consultation call-to-action before the share block
+  const share = content.querySelector('.post-share');
+  if (share && !content.querySelector('.post-consult')) {
+    const box = document.createElement('div');
+    box.className = 'post-consult';
+    box.innerHTML =
+      '<div><p data-key="post_consult_title">Имате конкретен казус?</p>' +
+      '<p data-key="post_consult_sub">Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</p></div>' +
+      '<a href="../booking/" class="btn"><span data-key="post_consult_btn">Запази час</span>' +
+      '<svg class="icon" aria-hidden="true"><use href="../images/icons.svg#arrow-right"/></svg></a>';
+    const anchor = share.previousElementSibling?.tagName === 'HR' ? share.previousElementSibling : share;
+    anchor.before(box);
+    applyTranslations(box, currentLang);
+  }
+
+  initRelatedPosts();
+}
+
+function initRelatedPosts() {
+  const body = document.querySelector('.post-body .container');
+  if (!body || !window.fetch || !window.DOMParser) return;
+  const self = window.location.pathname.split('/').pop();
+
+  fetch('../blog.html')
+    .then(r => (r.ok ? r.text() : Promise.reject()))
+    .then(html => {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const cards = Array.from(doc.querySelectorAll('.blog-list-grid .blog-card[data-cats]'));
+      const own = cards.find(c => c.getAttribute('href').endsWith('/' + self));
+      if (!own) return;
+      const ownCats = own.dataset.cats.split(/\s+/);
+      const picks = cards
+        .filter(c => c !== own)
+        .map(c => ({ c, score: c.dataset.cats.split(/\s+/).filter(x => ownCats.includes(x)).length }))
+        .filter(x => x.score > 0)
+        .sort((a, b) => b.score - a.score || (b.c.dataset.date || '').localeCompare(a.c.dataset.date || ''))
+        .slice(0, 3);
+      if (!picks.length) return;
+
+      const section = document.createElement('section');
+      section.className = 'related-posts';
+      section.innerHTML = '<h2 class="section-title" data-key="related_title">Още по темата</h2><div class="blog-grid"></div>';
+      const grid = section.querySelector('.blog-grid');
+      picks.forEach(({ c }) => {
+        const card = document.importNode(c, true);
+        card.setAttribute('href', c.getAttribute('href').replace(/^blog\//, ''));
+        grid.appendChild(card);
+      });
+      body.appendChild(section);
+      applyTranslations(section, currentLang);
+    })
+    .catch(() => { /* offline or opened from disk — no related posts */ });
 }
 
 // ============ INIT ============
 document.addEventListener('DOMContentLoaded', () => {
+  // Content that injects translatable markup runs before the language pass
+  initVideos();
+  initPostExtras();
+
   // Language
   applyLanguage(currentLang);
 
@@ -597,8 +978,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // UI
+  initThemeToggle();
   initNavbar();
   initMobileMenu();
   initShare();
-  initBlogControls();
+  initFilterGrids();
+  initReveal();
 });

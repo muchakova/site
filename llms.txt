@@ -22,6 +22,9 @@ She works across three main projects:
 - Homepage: https://muchakova.com/
 - Blog: https://muchakova.com/blog.html
 - Book a consultation: https://muchakova.com/booking/
+- Vlog — short video answers to investors' most common tax questions (NRA letters, ETFs, SPB-8, VAT, crypto), each with a text summary and a link to the full article: https://muchakova.com/vlog/
+- Projects — Vesta Consult, The Crypto Academy, NABI, plus pet projects (music synthesizer, browser game): https://muchakova.com/projects/
+- Partners — tax-invest, NX0 / NativeArc, and the organisations The Crypto Academy runs seminars with (UNWE, Expert Events, Themida, Kitov Centre, Finance Academy, Invest Pro, Invest Club): https://muchakova.com/partners/
 - Game "Marina vs the Tax Zombies" (3-minute browser game, BG + EN): https://muchakova.com/game/
 - Language: Bulgarian (primary) + English (toggle available on every page)
 

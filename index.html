@@ -38,6 +38,10 @@
     rel="stylesheet"
   />
 
+  <!-- LAYOUT:HEAD -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;display=swap" />
+  <script>try{var t=localStorage.getItem('mm-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <!-- /LAYOUT:HEAD -->
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Structured Data -->
@@ -89,32 +93,36 @@
   <!-- =========================================
        NAVIGATION
        ========================================= -->
+  <!-- LAYOUT:NAV -->
+  <a href="#main" class="skip-link" data-key="skip_link">Към съдържанието</a>
   <nav class="navbar" id="navbar" role="navigation" aria-label="Главна навигация">
     <div class="nav-container">
-
       <a href="index.html" class="nav-logo">Marina <span>M.</span></a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about"    data-key="nav_about">За мен</a></li>
-        <li><a href="#projects" data-key="nav_projects">Проекти</a></li>
-        <li><a href="#blog"     data-key="nav_blog">Блог</a></li>
-        <li><a href="#contact"  data-key="nav_contact">Контакти</a></li>
-        <li><a href="game/" data-key="nav_game">Игра</a></li>
-        <li><a href="booking/" class="nav-cta" data-key="nav_booking">Запази час</a></li>
+        <li><a href="index.html#about" data-nav="about" data-key="nav_about">За мен</a></li>
+        <li><a href="blog.html" data-nav="blog" data-key="nav_blog">Блог</a></li>
+        <li><a href="vlog/" data-nav="vlog" data-key="nav_vlog">Влог</a></li>
+        <li><a href="projects/" data-nav="projects" data-key="nav_projects">Проекти</a></li>
+        <li><a href="partners/" data-nav="partners" data-key="nav_partners">Партньори</a></li>
+        <li><a href="index.html#contact" data-nav="contact" data-key="nav_contact">Контакти</a></li>
+        <li><a href="booking/" data-nav="booking" class="nav-cta" data-key="nav_booking">Запази час</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button class="lang-toggle" id="langToggle" aria-label="Смени езика">EN</button>
-        <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Светла / тъмна тема" title="Светла / тъмна тема">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="images/icons.svg#moon"/></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="images/icons.svg#sun"/></svg>
+        </button>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Смени езика">EN</button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </div>
-
     </div>
   </nav>
-
+  <span id="main" tabindex="-1"></span>
+  <!-- /LAYOUT:NAV -->
 
   <!-- =========================================
        HERO
@@ -123,15 +131,23 @@
     <div class="hero-content">
 
       <div class="hero-text">
-        <p class="hero-greeting" data-key="hero_greeting">Здравей, аз съм</p>
+        <p class="hero-greeting" data-key="hero_greeting">Здравейте, Данъчни Хакери, аз съм</p>
         <h1 class="hero-name" data-key="full_name">Марина Мучакова</h1>
         <p class="hero-title" data-key="hero_title">Данъчен консултант</p>
         <p class="hero-desc" data-key="hero_desc">
           Помагам на хора и бизнеси да минат НАП без НАП да ги мине, чрез законни данъчни оптимизации и стратегии.
         </p>
         <div class="hero-cta">
-          <a href="#about"   class="btn btn-primary"  data-key="hero_cta_about">За мен</a>
-          <a href="#contact" class="btn btn-outline"  data-key="hero_cta_contact">Свържи се с мен</a>
+          <a href="booking/" class="btn btn-primary">
+            <span data-key="hero_cta_book">Запази консултация</span>
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#arrow-right"/></svg>
+          </a>
+          <a href="blog.html" class="btn btn-outline" data-key="hero_cta_blog">Прочети блога</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>15+</strong><span data-key="stat_1_label">години опит в данъчното право</span></div>
+          <div class="hero-stat"><strong>25+</strong><span data-key="stat_2_label">статии за данъци, инвестиции и крипто</span></div>
+          <div class="hero-stat"><strong>MiCA</strong><span data-key="stat_3_label">крипто регулации и данъци</span></div>
         </div>
       </div>
 
@@ -142,8 +158,317 @@
             alt="Марина Мучакова"
             class="profile-photo"
             loading="eager"
+            fetchpriority="high"
           />
+          <a href="booking/" class="hero-badge">
+            <span class="hero-badge-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#calendar"/></svg></span>
+            <span><strong data-key="hero_badge_title">Онлайн консултации</strong><span data-key="hero_badge_sub">Запазете час директно от сайта</span></span>
+          </a>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       PARTNER LOGO STRIP
+       Добавяне на партньор: нов .logo-item и в двата .logo-set
+       (вторият е копие за безкрайното плъзгане). Лого: <img src="images/partners/x.svg" alt="">
+       ========================================= -->
+  <div class="logo-strip" aria-label="Партньори">
+    <div class="logo-strip-inner">
+      <a href="partners/" class="logo-strip-label" data-key="logos_label">Партньори</a>
+      <div class="logo-marquee">
+        <div class="logo-track">
+          <div class="logo-set">
+            <a href="partners/#tax-invest" class="logo-item"><span class="monogram">TI</span>tax-invest</a>
+            <a href="partners/#nx0" class="logo-item"><span class="monogram">NX</span>NX0 · NativeArc</a>
+            <a href="partners/#unss" class="logo-item"><span class="monogram">УН</span>УНСС</a>
+            <a href="partners/#expert-events" class="logo-item"><span class="monogram">ЕИ</span>Експерт Ивентс</a>
+            <a href="partners/#temida" class="logo-item"><span class="monogram">Т</span>Темида</a>
+            <a href="partners/#kitov" class="logo-item"><span class="monogram">К</span>Китов Център</a>
+            <a href="partners/#finance-academy" class="logo-item"><span class="monogram">ФА</span>Финанс Академи</a>
+            <a href="partners/#invest-pro" class="logo-item"><span class="monogram">ИП</span>Инвест Про</a>
+            <a href="partners/#invest-club" class="logo-item"><span class="monogram">ИК</span>Инвест Клуб</a>
+          </div>
+          <div class="logo-set" aria-hidden="true">
+            <a href="partners/#tax-invest" class="logo-item" tabindex="-1"><span class="monogram">TI</span>tax-invest</a>
+            <a href="partners/#nx0" class="logo-item" tabindex="-1"><span class="monogram">NX</span>NX0 · NativeArc</a>
+            <a href="partners/#unss" class="logo-item" tabindex="-1"><span class="monogram">УН</span>УНСС</a>
+            <a href="partners/#expert-events" class="logo-item" tabindex="-1"><span class="monogram">ЕИ</span>Експерт Ивентс</a>
+            <a href="partners/#temida" class="logo-item" tabindex="-1"><span class="monogram">Т</span>Темида</a>
+            <a href="partners/#kitov" class="logo-item" tabindex="-1"><span class="monogram">К</span>Китов Център</a>
+            <a href="partners/#finance-academy" class="logo-item" tabindex="-1"><span class="monogram">ФА</span>Финанс Академи</a>
+            <a href="partners/#invest-pro" class="logo-item" tabindex="-1"><span class="monogram">ИП</span>Инвест Про</a>
+            <a href="partners/#invest-club" class="logo-item" tabindex="-1"><span class="monogram">ИК</span>Инвест Клуб</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================
+       SERVICES / С КАКВО ПОМАГАМ
+       Линковете „Статии“ отварят блога с филтър: blog.html?cat=crypto
+       ========================================= -->
+  <section class="section" id="services">
+    <div class="container">
+
+      <div class="section-header section-header-center reveal">
+        <div>
+          <p class="section-eyebrow" data-key="services_eyebrow">Експертиза</p>
+          <h2 class="section-title" data-key="services_title">С какво помагам</h2>
+          <p class="section-subtitle" data-key="services_subtitle">Законни решения, които оставят повече капитал в бизнеса и в портфейла ви.</p>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#coins"/></svg></span>
+          <h3 data-key="svc_crypto_title">Крипто данъци и MiCA</h3>
+          <p data-key="svc_crypto_desc">Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.</p>
+          <div class="service-links">
+            <a href="blog.html?cat=crypto" data-key="svc_articles">Статии →</a>
+            <a href="booking/" data-key="svc_book">Консултация →</a>
+          </div>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chart"/></svg></span>
+          <h3 data-key="svc_invest_title">Доходи от инвестиции</h3>
+          <p data-key="svc_invest_desc">Акции, ETF, облигации и дивиденти — кога се дължи данък, колко е и къде се декларира.</p>
+          <div class="service-links">
+            <a href="blog.html?cat=invest" data-key="svc_articles">Статии →</a>
+            <a href="booking/" data-key="svc_book">Консултация →</a>
+          </div>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#globe"/></svg></span>
+          <h3 data-key="svc_treaty_title">Международно облагане</h3>
+          <p data-key="svc_treaty_desc">Спогодби за избягване на двойното данъчно облагане, местно лице и чуждестранни брокери.</p>
+          <div class="service-links">
+            <a href="blog.html?cat=institutions" data-key="svc_articles">Статии →</a>
+            <a href="booking/" data-key="svc_book">Консултация →</a>
+          </div>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#building"/></svg></span>
+          <h3 data-key="svc_business_title">Бизнес структуриране</h3>
+          <p data-key="svc_business_desc">Субстанция, ДДС и планиране, с което маржът расте, а данъчната тежест — не.</p>
+          <div class="service-links">
+            <a href="blog.html?cat=business" data-key="svc_articles">Статии →</a>
+            <a href="booking/" data-key="svc_book">Консултация →</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       BLOG PREVIEW / БЛОГ
+       Нова статия: сменете .blog-featured с най-новата, а предишната
+       преместете като първа .blog-card в .blog-list (там стоят 3 карти).
+       Пълният списък е в blog.html.
+       ========================================= -->
+  <section class="section section-soft" id="blog">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <div>
+          <p class="section-eyebrow" data-key="blog_eyebrow">Блог</p>
+          <h2 class="section-title" data-key="blog_latest_title">Последни статии</h2>
+        </div>
+        <a href="blog.html" class="see-all"><span data-key="blog_see_all">Всички статии →</span></a>
+      </div>
+
+      <div class="blog-home">
+
+        <a href="blog/tax-loss-harvesting-po-balgarski.html" class="blog-featured reveal">
+          <p class="blog-featured-label" data-key="featured_label">Най-ново</p>
+          <div class="blog-meta">
+            <span class="blog-tag">
+              <span class="lang-content" data-lang="bg">Инвестиции</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
+            </span>
+            <span class="blog-date">
+              <span class="lang-content" data-lang="bg">8 октомври 2026</span>
+              <span class="lang-content" data-lang="en" style="display:none;">October 8, 2026</span>
+            </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">15 мин</span><span class="lang-content" data-lang="en" style="display:none;">15 min</span></span>
+          </div>
+          <h3 class="blog-featured-title">
+            <span class="lang-content" data-lang="bg">Tax-loss harvesting по български</span>
+            <span class="lang-content" data-lang="en" style="display:none;">Tax-Loss Harvesting, the Bulgarian Way</span>
+          </h3>
+          <p class="blog-featured-excerpt">
+            <span class="lang-content" data-lang="bg">Как да „съберем“ данъчните загуби преди 31 декември законно – и къде минава границата с пазарната манипулация.</span>
+            <span class="lang-content" data-lang="en" style="display:none;">How to harvest tax losses before 31 December lawfully – and where the line with market manipulation runs.</span>
+          </p>
+          <span class="blog-read-more" data-key="read_more">Прочети →</span>
+        </a>
+
+        <div class="blog-list">
+          <a href="blog/lichen-ili-firmen-akaunt-broker.html" class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date">
+                <span class="lang-content" data-lang="bg">8 октомври 2026</span>
+                <span class="lang-content" data-lang="en" style="display:none;">October 8, 2026</span>
+              </span>
+              <span class="blog-tag">
+                <span class="lang-content" data-lang="bg">Инвестиции</span>
+                <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
+              </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">15 мин</span><span class="lang-content" data-lang="en" style="display:none;">15 min</span></span>
+          </div>
+            <h3 class="blog-card-title">
+              <span class="lang-content" data-lang="bg">Личен или фирмен акаунт при брокер</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Personal or Company Brokerage Account</span>
+            </h3>
+            <p class="blog-card-excerpt">
+              <span class="lang-content" data-lang="bg">Какво се променя, когато прочетем закона буква по буква: загуби, пазари в САЩ, разходи, изтегляне на парите и наследяване. И защо AI често казва само „Зависи“.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">What changes when we read the law letter by letter: losses, US markets, expenses, taking the money out and inheritance. And why AI often just says “It depends”.</span>
+            </p>
+            <span class="blog-read-more" data-key="read_more">Прочети →</span>
+          </a>
+          <a href="blog/spb-8-bnb-interactive-brokers.html" class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date">
+                <span class="lang-content" data-lang="bg">5 октомври 2026</span>
+                <span class="lang-content" data-lang="en" style="display:none;">October 5, 2026</span>
+              </span>
+              <span class="blog-tag">
+                <span class="lang-content" data-lang="bg">Отчетност пред БНБ</span>
+                <span class="lang-content" data-lang="en" style="display:none;">BNB reporting</span>
+              </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">15 мин</span><span class="lang-content" data-lang="en" style="display:none;">15 min</span></span>
+          </div>
+            <h3 class="blog-card-title">
+              <span class="lang-content" data-lang="bg">Скъпа БНБ, имам акции в Interactive Brokers</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Dear BNB, I Have Shares at Interactive Brokers</span>
+            </h3>
+            <p class="blog-card-excerpt">
+              <span class="lang-content" data-lang="bg">СПБ-8, прагът от 25 000 € и защо ценните книжа се пишат в брой, а не в евро. Плюс какво подава фирма с чуждестранен брокер.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">SPB-8, the €25,000 threshold and why securities go in as a quantity, not in euro. Plus what a company with a foreign broker files.</span>
+            </p>
+            <span class="blog-read-more" data-key="read_more">Прочети →</span>
+          </a>
+          <a href="blog/siddo-dvoyno-mestno-lice.html" class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date">
+                <span class="lang-content" data-lang="bg">2 октомври 2026</span>
+                <span class="lang-content" data-lang="en" style="display:none;">October 2, 2026</span>
+              </span>
+              <span class="blog-tag">
+                <span class="lang-content" data-lang="bg">СИДДО</span>
+                <span class="lang-content" data-lang="en" style="display:none;">Tax treaties</span>
+              </span>
+            <span class="blog-read-time"><span class="lang-content" data-lang="bg">21 мин</span><span class="lang-content" data-lang="en" style="display:none;">21 min</span></span>
+          </div>
+            <h3 class="blog-card-title">
+              <span class="lang-content" data-lang="bg">Местно лице на половин Европа (и на един кораб)</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Tax Resident of Half of Europe (and of One Ship)</span>
+            </h3>
+            <p class="blog-card-excerpt">
+              <span class="lang-content" data-lang="bg">СИДДО, двойно местно лице и тай-брейкър правилата — с казус от пет държави и един кораб под панамски флаг.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Double tax treaties, dual residence and the tie-breaker rules — with a case spanning five countries and a ship under the Panamanian flag.</span>
+            </p>
+            <span class="blog-read-more" data-key="read_more">Прочети →</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       VLOG PREVIEW / ВЛОГ
+       Показва първите 3 карти от vlog/index.html. Когато видеото е в YouTube,
+       попълнете data-yt="ID_НА_ВИДЕОТО" (частта след watch?v=).
+       ========================================= -->
+  <section class="section" id="vlog">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <div>
+          <p class="section-eyebrow" data-key="vlog_eyebrow">Влог</p>
+          <h2 class="section-title" data-key="vlog_home_title">Видео отговори на въпросите на инвеститорите</h2>
+        </div>
+        <a href="vlog/" class="see-all"><span data-key="vlog_see_all">Всички видеа</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#arrow-right"/></svg></a>
+      </div>
+
+      <div class="video-grid">
+        <article class="video-card reveal" id="pismo-ot-nap" data-yt="" data-cats="nap invest" data-date="2026-10-18">
+          <div class="video-thumb"></div>
+          <div class="video-body">
+            <div class="blog-meta">
+              <span class="blog-tag">
+                <span class="lang-content" data-lang="bg">Декларации и отчетност</span>
+                <span class="lang-content" data-lang="en" style="display:none;">Returns & reporting</span>
+              </span>
+            </div>
+            <h3 class="video-title">
+              <span class="lang-content" data-lang="bg">Получих писмо от НАП за доходите от инвестиции. Какво правя?</span>
+              <span class="lang-content" data-lang="en" style="display:none;">I got a letter from the NRA about my investment income. What now?</span>
+            </h3>
+            <p class="video-answer">
+              <span class="lang-content" data-lang="bg">Без паника. Как да намерите счетоводител или да се справите сами и в кое приложение на годишната декларация се вписва всеки вид инвестиционен доход.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Don’t panic. How to find an accountant or handle it yourself, and which annex of the annual tax return each type of investment income goes into.</span>
+            </p>
+            <div class="video-links">
+              <a href="blog/nap-pismo-dohodi-investicii.html" data-key="video_read_article">Прочети статията →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card reveal" id="etf-danaci" data-yt="" data-cats="invest" data-date="2026-10-17">
+          <div class="video-thumb"></div>
+          <div class="video-body">
+            <div class="blog-meta">
+              <span class="blog-tag">
+                <span class="lang-content" data-lang="bg">Инвестиции</span>
+                <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
+              </span>
+            </div>
+            <h3 class="video-title">
+              <span class="lang-content" data-lang="bg">Как се облагат ETF-ите в България?</span>
+              <span class="lang-content" data-lang="en" style="display:none;">How are ETFs taxed in Bulgaria?</span>
+            </h3>
+            <p class="video-answer">
+              <span class="lang-content" data-lang="bg">ETF, ETN или ETC — правната форма на инструмента решава как се облага печалбата. Това е разликата, която инвеститорите най-често пропускат.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">ETF, ETN or ETC — the instrument’s legal form decides how the gain is taxed. It is the difference investors most often miss.</span>
+            </p>
+            <div class="video-links">
+              <a href="blog/kak-se-oblagat-etf-ite-v-balgaria.html" data-key="video_read_article">Прочети статията →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card reveal" id="spb-8" data-yt="" data-cats="nap invest" data-date="2026-10-16">
+          <div class="video-thumb"></div>
+          <div class="video-body">
+            <div class="blog-meta">
+              <span class="blog-tag">
+                <span class="lang-content" data-lang="bg">Декларации и отчетност</span>
+                <span class="lang-content" data-lang="en" style="display:none;">Returns & reporting</span>
+              </span>
+            </div>
+            <h3 class="video-title">
+              <span class="lang-content" data-lang="bg">Трябва ли да подам СПБ-8 към БНБ за сметка в Interactive Brokers?</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Do I need to file SPB-8 with the BNB for an Interactive Brokers account?</span>
+            </h3>
+            <p class="video-answer">
+              <span class="lang-content" data-lang="bg">Прагът от 25 000 €, какво точно се отчита и защо ценните книжа се пишат в брой, а не в евро.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">The €25,000 threshold, what exactly is reported and why securities go in as a quantity, not in euro.</span>
+            </p>
+            <div class="video-links">
+              <a href="blog/spb-8-bnb-interactive-brokers.html" data-key="video_read_article">Прочети статията →</a>
+            </div>
+          </div>
+        </article>
       </div>
 
     </div>
@@ -157,7 +482,7 @@
     <div class="container">
       <div class="about-grid">
 
-        <div class="about-image">
+        <div class="about-image reveal">
           <img
             src="images/profile_9.jpg"
             alt="Марина Мучакова"
@@ -165,16 +490,34 @@
           />
         </div>
 
-        <div class="about-text">
+        <div class="about-text reveal">
+          <p class="section-eyebrow" data-key="about_eyebrow">За мен</p>
           <h2 class="section-title" data-key="about_title">За мен</h2>
           <div class="about-bio">
             <p data-key="about_bio_1"></p>
             <p data-key="about_bio_2"></p>
             <p data-key="about_bio_3"></p>
-            <p data-key="about_bio_4"></p>
+          </div>
+          <div class="about-ventures">
+            <a href="https://vesta-bg.eu" target="_blank" rel="noopener noreferrer" class="venture">
+              <strong data-key="proj_title_1">Веста Консулт</strong>
+              <span data-key="venture_vesta">Счетоводна кантора и консултантска къща</span>
+            </a>
+            <a href="https://thecrypto.academy" target="_blank" rel="noopener noreferrer" class="venture">
+              <strong data-key="proj_title_2">Крипто Академията</strong>
+              <span data-key="venture_academy">Обучения по крипто и блокчейн</span>
+            </a>
+            <a href="projects/#nabi" class="venture">
+              <strong>НАБИ</strong>
+              <span data-key="venture_nabi">Асоциация по блокчейн и иновации</span>
+            </a>
           </div>
           <div class="about-links">
-            <a href="#contact" class="btn btn-primary" data-key="about_contact">Свържи се с мен</a>
+            <a href="booking/" class="btn btn-primary">
+              <span data-key="hero_cta_book">Запази консултация</span>
+              <svg class="icon" aria-hidden="true"><use href="images/icons.svg#arrow-right"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline" data-key="about_contact">Свържи се с мен</a>
           </div>
         </div>
 
@@ -184,655 +527,71 @@
 
 
   <!-- =========================================
-       PROJECTS / ПРОЕКТИ
+       PROJECTS / ПРОЕКТИ (тийзър — пълният списък е в projects/)
        ========================================= -->
   <section class="section" id="projects">
     <div class="container">
 
-      <div class="section-header">
+      <div class="section-header reveal">
         <div>
+          <p class="section-eyebrow" data-key="projects_eyebrow">Проекти</p>
           <h2 class="section-title" data-key="projects_title">Проекти</h2>
-          <p class="section-subtitle" data-key="projects_subtitle">Избрани проекти и работа</p>
+          <p class="section-subtitle" data-key="projects_subtitle">Професионални проекти и лични експерименти</p>
         </div>
+        <a href="projects/" class="see-all"><span data-key="projects_see_all">Всички проекти</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#arrow-right"/></svg></a>
       </div>
 
-      <div class="projects-grid">
+      <div class="projects-grid projects-grid-4">
 
-        <!-- Проект 1 — копирайте блока за нов проект -->
-        <article class="project-card">
+        <a href="https://vesta-bg.eu" target="_blank" rel="noopener noreferrer" class="project-card reveal">
           <div class="project-category" data-key="proj_cat_1">Корпоративен сайт</div>
           <h3 class="project-name" data-key="proj_title_1">Веста Консулт</h3>
-          <p class="project-desc" data-key="proj_desc_1">
-            Онлайн присъствие на Веста Консулт с ясно представяне на услуги,
-            бизнес профил и контактна информация.
-          </p>
-          <a href="https://vesta-bg.eu" target="_blank" rel="noopener noreferrer" class="project-link" data-key="proj_link">Виж повече →</a>
-        </article>
+          <p class="project-desc" data-key="proj_desc_1">Онлайн присъствие на Веста Консулт с ясно представяне на услуги, бизнес профил и контактна информация.</p>
+          <span class="project-link"><span data-key="proj_open">Отвори</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external"/></svg></span>
+        </a>
 
-        <!-- Проект 2 -->
-        <article class="project-card">
+        <a href="https://thecrypto.academy" target="_blank" rel="noopener noreferrer" class="project-card reveal">
           <div class="project-category" data-key="proj_cat_2">Образователна платформа</div>
           <h3 class="project-name" data-key="proj_title_2">Крипто Академията</h3>
-          <p class="project-desc" data-key="proj_desc_2">
-            Образователен проект за крипто и блокчейн с фокус върху достъпно
-            съдържание и практическо обучение.
-          </p>
-          <a href="https://thecrypto.academy" target="_blank" rel="noopener noreferrer" class="project-link" data-key="proj_link">Виж повече →</a>
-        </article>
-
-        <!-- Проект 3 -->
-        <article class="project-card">
-          <div class="project-category" data-key="proj_cat_3">Асоциация</div>
-          <h3 class="project-name" data-key="proj_title_3">НАБИ - Национална Асоциация по Блокчейн и Иновации</h3>
-          <p class="project-desc" data-key="proj_desc_3">
-            Официалният сайт е в процес на разработка (under construction).
-            Скоро ще бъде публикуван.
-          </p>
-          <span class="project-link" data-key="proj_link">Виж повече →</span>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- =========================================
-       BLOG PREVIEW / БЛОГ
-       ========================================= -->
-  <section class="section section-soft" id="blog">
-    <div class="container">
-
-      <div class="section-header">
-        <h2 class="section-title" data-key="blog_title">Блог</h2>
-        <a href="blog.html" class="see-all" data-key="blog_see_all">Всички статии →</a>
-      </div>
-
-      <div class="blog-grid">
-
-        <!-- Статия 29 -->
-        <a href="blog/tax-loss-harvesting-po-balgarski.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">8 октомври 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">October 8, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Инвестиции</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Tax-loss harvesting по български</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Tax-Loss Harvesting, the Bulgarian Way</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Как да „съберем“ данъчните загуби преди 31 декември законно – и къде минава границата с пазарната манипулация.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">How to harvest tax losses before 31 December lawfully – and where the line with market manipulation runs.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
+          <p class="project-desc" data-key="proj_desc_2">Образователен проект за крипто и блокчейн с фокус върху достъпно съдържание и практическо обучение.</p>
+          <span class="project-link"><span data-key="proj_open">Отвори</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external"/></svg></span>
         </a>
 
-        <!-- Статия 28 -->
-        <a href="blog/lichen-ili-firmen-akaunt-broker.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">8 октомври 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">October 8, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Инвестиции</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
-            </span>
+        <a href="projects/#synth" class="project-card pet-card reveal">
+          <div class="pet-preview pet-preview-synth">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#music"/></svg>
+            <div class="pet-keys" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
           </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Личен или фирмен акаунт при брокер</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Personal or Company Brokerage Account</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Какво се променя, когато прочетем закона буква по буква: загуби, пазари в САЩ, разходи, изтегляне на парите и наследяване. И защо AI често казва само „Зависи“.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">What changes when we read the law letter by letter: losses, US markets, expenses, taking the money out and inheritance. And why AI often just says “It depends”.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
+          <div class="pet-body">
+            <div class="project-category" data-key="pet_label">Pet project</div>
+            <h3 class="project-name">
+              <span class="lang-content" data-lang="bg">Синтезатор за музика</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Music Synthesizer</span>
+            </h3>
+            <p class="project-desc">
+              <span class="lang-content" data-lang="bg">Моят музикален експеримент — синтезатор за създаване на музика направо в браузъра.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">My musical experiment — a synthesizer for making music right in the browser.</span>
+            </p>
+            <span class="badge-soon" data-key="soon">Скоро</span>
+          </div>
         </a>
 
-        <!-- Статия 27 -->
-        <a href="blog/spb-8-bnb-interactive-brokers.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">5 октомври 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">October 5, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Отчетност пред БНБ</span>
-              <span class="lang-content" data-lang="en" style="display:none;">BNB reporting</span>
-            </span>
+        <a href="game/" class="project-card pet-card reveal">
+          <div class="pet-preview pet-preview-game">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#gamepad"/></svg>
           </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Скъпа БНБ, имам акции в Interactive Brokers</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Dear BNB, I Have Shares at Interactive Brokers</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">СПБ-8, прагът от 25 000 € и защо ценните книжа се пишат в брой, а не в евро. Плюс какво подава фирма с чуждестранен брокер.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">SPB-8, the €25,000 threshold and why securities go in as a quantity, not in euro. Plus what a company with a foreign broker files.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 26 -->
-        <a href="blog/siddo-dvoyno-mestno-lice.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">2 октомври 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">October 2, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">СИДДО</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Tax treaties</span>
-            </span>
+          <div class="pet-body">
+            <div class="project-category" data-key="pet_label">Pet project</div>
+            <h3 class="project-name">
+              <span class="lang-content" data-lang="bg">Марина срещу данъчните зомбита</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Marina vs the Tax Zombies</span>
+            </h3>
+            <p class="project-desc">
+              <span class="lang-content" data-lang="bg">3-минутна браузърна игра: Марина спасява гражданите от данъчните зомбита. На български и английски.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">A 3-minute browser game: Marina rescues citizens from the tax zombies. In Bulgarian and English.</span>
+            </p>
+            <span class="project-link"><span data-key="proj_play">Играй</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#arrow-right"/></svg></span>
           </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Местно лице на половин Европа (и на един кораб)</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Tax Resident of Half of Europe (and of One Ship)</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">СИДДО, двойно местно лице и тай-брейкър правилата — с казус от пет държави и един кораб под панамски флаг.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Double tax treaties, dual residence and the tie-breaker rules — with a case spanning five countries and a ship under the Panamanian flag.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 25 -->
-        <a href="blog/parviyat-balgarski-white-paper-esma.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">1 октомври 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">October 1, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Крипто</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Crypto</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Първият български White Paper в ESMA: Пробив за Web3 у нас или просто регулаторна формалност?</span>
-            <span class="lang-content" data-lang="en" style="display:none;">The First Bulgarian White Paper in ESMA’s Register: A Web3 Breakthrough or Just a Regulatory Formality?</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Токенът NX0 на NativeArc в регистъра на ESMA — защо нотификацията по MiCA не е лиценз и какво вписването не доказва.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">NativeArc’s NX0 token in ESMA’s register — why a MiCA notification is not a licence and what the entry does not prove.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 24 -->
-        <a href="blog/kripto-borsi-cex-dex-oborot-zdds.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">1 октомври 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">October 1, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">ДДС</span>
-              <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът по ЗДДС</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Whose Turnover Is It — the Exchange’s or Ours? Crypto Trades via CEX and DEX and the VAT Threshold</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Instant Sell, order book или Uniswap — кои продажби на криптоактиви участват в прага от 51 130 евро за регистрация по ЗДДС и кои „отиват при борсата“.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Instant Sell, order book or Uniswap — which crypto sales count towards the €51,130 VAT registration threshold and which “go to the exchange”.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 23 -->
-        <a href="blog/nap-pismo-dohodi-investicii.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">18 септември 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">September 18, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Данъци</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Получи ли писмо от НАП за доходите си от инвестиции?</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Got a Letter from the NRA About Your Investment Income?</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Кратко и по същество — как да намериш счетоводител, как да се справиш сам и къде точно се декларира всеки вид инвестиционен доход за 2025 г.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Short and to the point — how to find an accountant, how to handle it yourself, and exactly where each type of investment income is declared for 2025.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 22 -->
-        <a href="blog/dds-turisticheska-usluga-9-ili-20.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">31 август 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">August 31, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">ДДС</span>
-              <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">9% или 20% ДДС за еднодневния тур?</span>
-            <span class="lang-content" data-lang="en" style="display:none;">9% or 20% VAT on a One-Day Tour?</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Туристическа разходка, продавана през платформи като GetYourGuide, Viator или Airbnb Experiences — коя ставка ДДС се дължи, кога има „обща туристическа услуга“ и върху каква основа. Защо 9% вече не съществува.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">A tour sold through platforms like GetYourGuide, Viator or Airbnb Experiences — which VAT rate applies, when there's a “general tourist service,” and on what base. Why 9% no longer exists.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 21 -->
-        <a href="blog/esma-non-compliant-mexc.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">6 август 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">August 6, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Крипто</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Crypto</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">MEXC е в „черния списък“ на ESMA. Какво означава това и какво става с активите ти</span>
-            <span class="lang-content" data-lang="en" style="display:none;">MEXC Is on ESMA's “Blacklist”. What It Means and What Happens to Your Assets</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">MEXC е вписан в регистъра на ESMA за non-compliant entities по MiCA. Каква е разликата с отнет лиценз и какво реално става с активите ти, ако тръгнеш да ги местиш през частен адрес.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">MEXC is listed in ESMA's register of non-compliant entities under MiCA. How it differs from a revoked license, and what actually happens to your assets if you move them through a private address.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 20 -->
-        <a href="blog/dds-registraciya-interactive-brokers.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">5 август 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">August 5, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">ДДС</span>
-              <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">ДДС регистрация при търговия с акции чрез Interactive Brokers</span>
-            <span class="lang-content" data-lang="en" style="display:none;">VAT Registration When Trading Shares via Interactive Brokers</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Кога оборотът от финансови инструменти през чуждестранен брокер НЕ формира оборот за регистрация по чл. 96 ЗДДС — мястото на изпълнение и примерен отговор на ИПДПОЗЛ с реален акт за отказ.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">When turnover from financial instruments through a foreign broker does NOT count toward Art. 96 VAT registration — place of supply and a sample NRA response with a real refusal act.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 19 -->
-        <a href="blog/kak-se-oblagat-etf-ite-v-balgaria.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">21 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 21, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Данъци</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Как се облагат ETF-ите в България? (И защо инвеститорите бъркат най-важното)</span>
-            <span class="lang-content" data-lang="en" style="display:none;">How Are ETFs Taxed in Bulgaria? (And Why Investors Get the Most Important Part Wrong)</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">ETF, ETN или ETC — правната форма решава всичко. Плюс инвестиране през ЕООД, ирландските UCITS фондове, наследяването и masterclass по ДДС.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">ETF, ETN or ETC — the legal form decides everything. Plus investing through a company, Irish UCITS funds, inheritance, and a VAT masterclass.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 18 -->
-        <a href="blog/5-danachni-greshki-investitori-chast-2.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">17 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 17, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Данъци</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">5 данъчни грешки, които допускат инвеститорите — Част 2 (За ценители)</span>
-            <span class="lang-content" data-lang="en" style="display:none;">5 Tax Mistakes Investors Make — Part 2 (For Connoisseurs)</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Разширената версия: регулиран пазар срещу квалифициран пазар за растеж, ETF/ETC/ETN/ADR/GDR, tax-loss harvesting и MAR, и кога инвеститорът прилича на търговец.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">The expanded version: regulated market vs. qualifying growth market, ETF/ETC/ETN/ADR/GDR, tax-loss harvesting and MAR, and when an investor looks like a trader.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 17 -->
-        <a href="blog/5-danachni-greshki-investitori.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">15 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 15, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Данъци</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">5 данъчни грешки, които допускат инвеститорите! (И които после им струват скъпо)</span>
-            <span class="lang-content" data-lang="en" style="display:none;">5 Tax Mistakes Investors Make! (That Later Cost Them Dearly)</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Регулиран пазар срещу европейски пазар, ETF срещу ETC/ETP, Tax Loss Harvesting и скритият риск от регистрация по ДДС.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Regulated vs. European market, ETF vs. ETC/ETP, Tax Loss Harvesting and the hidden risk of VAT registration.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 16 -->
-        <a href="blog/smart-kontrakti-defi-biznes.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">10 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 10, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">DeFi</span>
-              <span class="lang-content" data-lang="en" style="display:none;">DeFi</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Смарт контракти и DeFi: Какво реално означава това за вашия бизнес?</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Smart Contracts and DeFi: What Does This Actually Mean for Your Business?</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Защо кодът не е закон, кои движения в DeFi са данъчни събития и какво променя MiCA за вашия бизнес.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Why code is not law, which DeFi movements are taxable events, and what MiCA changes for your business.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 15 -->
-        <a href="blog/aml-pragove-stepeni-due-diligence.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">10 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 10, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">AML</span>
-              <span class="lang-content" data-lang="en" style="display:none;">AML</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence)</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Addendum: Thresholds and Levels of Due Diligence</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Законовите прагове от 1 000, 10 000 и 15 000 евро, трите степени на проверка (SDD, CDD, EDD) и защо няма „магическо число“ за AML проверките.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">The statutory thresholds of EUR 1,000, 10,000 and 15,000, the three levels of due diligence (SDD, CDD, EDD), and why there is no "magic number" for AML checks.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 14 -->
-        <a href="blog/kak-da-preminem-aml-proverka-kripto.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">10 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 10, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">AML</span>
-              <span class="lang-content" data-lang="en" style="display:none;">AML</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Наръчник: Как успешно да преминем AML проверка при крипто транзакции</span>
-            <span class="lang-content" data-lang="en" style="display:none;">A Guide to Successfully Passing an AML Check on Crypto Transactions</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Как мислят AML анализаторите, каква е разликата между произход на средствата и източник на богатството и как да подготвите досието си за проверката.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">How AML analysts think, the difference between source of funds and source of wealth, and how to prepare your file for the check.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 13 -->
-        <a href="blog/danachen-narachnik-za-investitori.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">8 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 8, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Данъци</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Taxes</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Данъчен наръчник за инвеститори в България</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Tax Guide for Investors in Bulgaria</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Крипто, акции, ETF, дивиденти, злато и имоти — кога се дължи данък, колко е той и къде се декларира. Кратка справка за индивидуалния инвеститор.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Crypto, stocks, ETFs, dividends, gold and real estate — when tax is due, how much, and where to declare it. A quick reference for the individual investor.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 12 -->
-        <a href="blog/moite-5-stotinki-za-proektobyudzhet-2026.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">8 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 8, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Икономика</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Economy</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Моите 5 стотинки за Проектобюджет 2026</span>
-            <span class="lang-content" data-lang="en" style="display:none;">My Two Cents on Draft Budget 2026</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Истинският дефицит не е бюджетният, а дефицитът на реформи. За административната тежест, скрития данък върху предприемачеството и цената на изгубеното време.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">The real deficit is not fiscal — it is a deficit of reforms. On the administrative burden, the hidden tax on entrepreneurship, and the cost of lost time.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 11 -->
-        <a href="blog/metamask-cl-card-mica-moonpay.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">8 юли 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">July 8, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">MiCA</span>
-              <span class="lang-content" data-lang="en" style="display:none;">MiCA</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">MetaMask CL Card вече преминава под MiCA: зад крипто услугите вече стои MoonPay Europe</span>
-            <span class="lang-content" data-lang="en" style="display:none;">MetaMask CL Card Now Moves Under MiCA: MoonPay Europe Is Behind the Crypto Services</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">От 1 юли 2026 г. крипто услугите по картата се предоставят от MoonPay Europe — MiCA-лицензиран CASP. Какво означава това за потребителите и какво ще знаят институциите.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">From 1 July 2026 the card's crypto services are powered by MoonPay Europe — a MiCA-licensed CASP. What this means for users and what the authorities will know.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 10 -->
-        <a href="blog/razlika-borsov-segment-over-the-counter.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">
-              <span class="lang-content" data-lang="bg">11 юни 2026</span>
-              <span class="lang-content" data-lang="en" style="display:none;">June 11, 2026</span>
-            </span>
-            <span class="blog-tag">
-              <span class="lang-content" data-lang="bg">Инвестиции</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
-            </span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Разлика между търговия на борсов сегмент и over-the-counter</span>
-            <span class="lang-content" data-lang="en" style="display:none;">The Difference Between Exchange Trading and Over-the-Counter Trading</span>
-          </h3>
-          <p class="blog-card-excerpt">
-            <span class="lang-content" data-lang="bg">Какво означава OTC, как се различава от борсовото търгуване и защо fractional shares изискват по-внимателен прочит на trade confirmation.</span>
-            <span class="lang-content" data-lang="en" style="display:none;">What OTC means, how it differs from exchange trading, and why fractional shares require a closer reading of the trade confirmation.</span>
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 8 -->
-        <a href="blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date" data-key="blog_post_8_date">29 май 2026</span>
-            <span class="blog-tag" data-key="blog_post_8_tag">ДДС</span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Кога сделките с ценни книжа СА икономическа дейност?</span>
-            <span class="lang-content" data-lang="en" style="display:none;">When Are Securities Transactions an Economic Activity?</span>
-          </h3>
-          <p class="blog-card-excerpt" data-key="blog_post_8_excerpt">
-            Анализ на практиката на Съда на ЕС относно сделките с ценни книжа като икономическа дейност и приложението й в България.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 7 -->
-        <a href="blog/zatrudnenia-casp-mica-licenz-kfn.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date" data-key="blog_post_7_date">28 май 2026</span>
-            <span class="blog-tag" data-key="blog_post_7_tag">MiCA</span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Затрудненията пред CASP-овете при MiCA лиценз пред КФН</span>
-            <span class="lang-content" data-lang="en" style="display:none;">CASP Challenges in Bulgaria During MiCA Licensing Before the FSC</span>
-          </h3>
-          <p class="blog-card-excerpt" data-key="blog_post_7_excerpt">
-            Практически преглед на най-честите препъни камъни пред CASP компаниите в България при кандидатстване за MiCA лиценз.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 6 -->
-        <a href="blog/kakvo-ne-pishe-v-white-paperite.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date" data-key="blog_post_6_date">28 май 2026</span>
-            <span class="blog-tag" data-key="blog_post_6_tag">Криптоикономика</span>
-          </div>
-          <h3 class="blog-card-title">
-            <span class="lang-content" data-lang="bg">Какво не пише в white paper-ите</span>
-            <span class="lang-content" data-lang="en" style="display:none;">What White Papers Do Not Say</span>
-          </h3>
-          <p class="blog-card-excerpt" data-key="blog_post_6_excerpt">
-            Защо Bitcoin, Ethereum, DeFi, Layer 2 и bridge-овете са нова инфраструктура за стари икономически закони.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 5 -->
-        <a href="blog/substancia-kompania-zashto-vazhno.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">4 март 2026</span>
-            <span class="blog-tag" data-key="blog_post_5_tag">Данъчно право</span>
-          </div>
-          <h3 class="blog-card-title" data-key="blog_post_5_title">Какво е „субстанция“ на една компания и защо това е важно?</h3>
-          <p class="blog-card-excerpt" data-key="blog_post_5_excerpt">
-            Реалната субстанция на бизнеса определя къде може да се дължат данъци, независимо къде е формално регистрирана компанията.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 4 -->
-        <a href="blog/natrupvane-oborot-registraciya-dds-2026.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">4 март 2026</span>
-            <span class="blog-tag" data-key="blog_post_4_tag">ДДС</span>
-          </div>
-          <h3 class="blog-card-title" data-key="blog_post_4_title">Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.</h3>
-          <p class="blog-card-excerpt" data-key="blog_post_4_excerpt">
-            Прагът е 51 130 евро, но регистрацията възниква автоматично след преминаването му и носи задължения още преди издаване на акта.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 0 -->
-        <a href="blog/obobshtenie-promeni-zdds-2026.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">4 март 2026</span>
-            <span class="blog-tag" data-key="blog_post_0_tag">ДДС</span>
-          </div>
-          <h3 class="blog-card-title" data-key="blog_post_0_title">Обобщение на промените в режима на ДДС след 1.1.2026</h3>
-          <p class="blog-card-excerpt" data-key="blog_post_0_excerpt">
-            Пълен практически преглед на новите режими SME/OSS, EX номера, отчетността и ефекта върху регистрациите по ЗДДС след 1 януари 2026 г.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 1 -->
-        <a href="blog/dds-promeni-2026.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">4 март 2026</span>
-            <span class="blog-tag" data-key="blog_post_1_tag">ДДС</span>
-          </div>
-          <h3 class="blog-card-title" data-key="blog_post_1_title">Промени в ДДС при електронна търговия и онлайн събития</h3>
-          <p class="blog-card-excerpt" data-key="blog_post_1_excerpt">
-            Какво се променя за онлайн бизнеса, дигиталните услуги и трансграничните продажби в ЕС от 1 януари 2026 г.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 2 -->
-        <a href="blog/dck-obligacii-danaci.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">14 февруари 2026</span>
-            <span class="blog-tag" data-key="blog_post_2_tag">Данъци</span>
-          </div>
-          <h3 class="blog-card-title" data-key="blog_post_2_title">ДЦК и как не се облагат с данъци</h3>
-          <p class="blog-card-excerpt" data-key="blog_post_2_excerpt">
-            Купони, отстъпки и капиталови печалби — пълното данъчно ръководство за физически лица, инвестиращи в ДЦК и облигации.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
-        </a>
-
-        <!-- Статия 3 -->
-        <a href="blog/razmer-ima-znachenie.html" class="blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">28 февруари 2026</span>
-            <span class="blog-tag" data-key="blog_post_3_tag">Бизнес</span>
-          </div>
-          <h3 class="blog-card-title" data-key="blog_post_3_title">Размерът има значение!</h3>
-          <p class="blog-card-excerpt" data-key="blog_post_3_excerpt">
-            Истината, която финансистите няма да ти разкрият безвъзмездно — размерът на стартовия капитал понякога е границата между фалита и успеха.
-          </p>
-          <span class="blog-read-more" data-key="read_more">Прочети →</span>
         </a>
 
       </div>
@@ -843,28 +602,29 @@
   <!-- =========================================
        CONTACT / КОНТАКТИ
        ========================================= -->
-  <section class="section" id="contact">
+  <section class="section section-soft" id="contact">
     <div class="container">
 
-      <div class="section-header" style="justify-content: center; text-align: center;">
+      <div class="section-header section-header-center reveal">
         <div>
+          <p class="section-eyebrow" data-key="contact_eyebrow">Контакти</p>
           <h2 class="section-title" data-key="contact_title">Контакти</h2>
           <p class="section-subtitle" data-key="contact_subtitle">Свържете се с мен</p>
         </div>
       </div>
 
-      <div class="contact-layout">
+      <div class="contact-layout reveal">
 
         <!-- Primary action: online consultation booking -->
         <a href="booking/" class="contact-cta">
-          <span class="contact-cta-icon" aria-hidden="true">📅</span>
+          <span class="contact-cta-icon" aria-hidden="true"><svg class="icon"><use href="images/icons.svg#calendar"/></svg></span>
           <span class="contact-cta-body">
             <span class="contact-cta-eyebrow" data-key="contact_group_booking">Онлайн консултация</span>
             <span class="contact-cta-title" data-key="contact_booking_link">Запази час за консултация</span>
             <span class="contact-cta-sub" data-key="contact_booking_sub">Изберете удобен ден и час за лична онлайн среща.</span>
             <span class="contact-cta-link">
               <span data-key="contact_cta_action">Запази час</span>
-              <span class="contact-cta-arrow" aria-hidden="true">→</span>
+              <svg class="icon contact-cta-arrow" aria-hidden="true"><use href="images/icons.svg#arrow-right"/></svg>
             </span>
           </span>
         </a>
@@ -875,11 +635,11 @@
           <div class="contact-block">
             <p class="contact-block-label" data-key="contact_group_direct">Директен контакт</p>
             <a href="mailto:office@vesta-bg.eu" class="contact-line">
-              <span class="contact-line-icon" aria-hidden="true">✉</span>
+              <span class="contact-line-icon" aria-hidden="true"><svg class="icon"><use href="images/icons.svg#mail"/></svg></span>
               <span>office@vesta-bg.eu</span>
             </a>
             <a href="tel:+359887460907" class="contact-line">
-              <span class="contact-line-icon" aria-hidden="true">☎</span>
+              <span class="contact-line-icon" aria-hidden="true"><svg class="icon"><use href="images/icons.svg#phone"/></svg></span>
               <span>+359 887 460 907</span>
             </a>
           </div>
@@ -888,13 +648,13 @@
             <p class="contact-block-label" data-key="contact_group_messaging">Съобщения</p>
             <div class="contact-chips">
               <a href="viber://chat?number=%2B359887460907" class="contact-chip">
-                <span class="contact-chip-icon" aria-hidden="true">📲</span><span>Viber</span>
+                <span class="contact-chip-icon" aria-hidden="true"><svg class="icon"><use href="images/icons.svg#viber"/></svg></span><span>Viber</span>
               </a>
               <a href="https://wa.me/359887460907" class="contact-chip" target="_blank" rel="noopener">
-                <span class="contact-chip-icon" aria-hidden="true">💬</span><span>WhatsApp</span>
+                <span class="contact-chip-icon" aria-hidden="true"><svg class="icon"><use href="images/icons.svg#whatsapp"/></svg></span><span>WhatsApp</span>
               </a>
               <a href="https://t.me/+359887460907" class="contact-chip" target="_blank" rel="noopener">
-                <span class="contact-chip-icon" aria-hidden="true">✈</span><span>Telegram</span>
+                <span class="contact-chip-icon" aria-hidden="true"><svg class="icon"><use href="images/icons.svg#telegram"/></svg></span><span>Telegram</span>
               </a>
             </div>
           </div>
@@ -902,11 +662,11 @@
           <div class="contact-block">
             <p class="contact-block-label" data-key="contact_group_social">Социални мрежи</p>
             <div class="contact-socials">
-              <a href="https://www.facebook.com/muchakova" class="contact-social" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">f</a>
-              <a href="https://www.linkedin.com/in/vestaconsult/" class="contact-social" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
-              <a href="https://www.tiktok.com/@muchakova" class="contact-social" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">♪</a>
-              <a href="https://www.youtube.com/@TheCryptoAcademy375" class="contact-social" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">▶</a>
-              <a href="https://x.com/VestaConsult" class="contact-social" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)">𝕏</a>
+              <a href="https://www.facebook.com/muchakova" class="contact-social" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#facebook"/></svg></a>
+              <a href="https://www.linkedin.com/in/vestaconsult/" class="contact-social" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#linkedin"/></svg></a>
+              <a href="https://www.tiktok.com/@muchakova" class="contact-social" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#tiktok"/></svg></a>
+              <a href="https://www.youtube.com/@TheCryptoAcademy375" class="contact-social" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#youtube"/></svg></a>
+              <a href="https://x.com/VestaConsult" class="contact-social" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#x"/></svg></a>
             </div>
           </div>
 
@@ -917,15 +677,53 @@
   </section>
 
 
-  <!-- =========================================
-       FOOTER
-       ========================================= -->
+<!-- LAYOUT:FOOTER -->
   <footer class="footer">
     <div class="container">
-      <a href="donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
-      <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Marina <span>M.</span></a>
+          <p class="footer-tagline" data-key="footer_tagline">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+          <a href="donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading" data-key="footer_nav">Навигация</p>
+          <a href="index.html#about" data-key="nav_about">За мен</a>
+          <a href="projects/" data-key="nav_projects">Проекти</a>
+          <a href="partners/" data-key="nav_partners">Партньори</a>
+          <a href="booking/" data-key="nav_booking">Запази час</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading" data-key="footer_resources">Ресурси</p>
+          <a href="blog.html" data-key="nav_blog">Блог</a>
+          <a href="vlog/" data-key="nav_vlog">Влог</a>
+          <a href="game/" data-key="nav_game">Игра</a>
+          <a href="projects/#pet" data-key="footer_synth">Синтезатор</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading" data-key="footer_contact">Контакт</p>
+          <a href="mailto:office@vesta-bg.eu">office@vesta-bg.eu</a>
+          <a href="tel:+359887460907">+359 887 460 907</a>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/muchakova" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#facebook"/></svg></a>
+            <a href="https://www.linkedin.com/in/vestaconsult/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#linkedin"/></svg></a>
+            <a href="https://www.tiktok.com/@muchakova" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#tiktok"/></svg></a>
+            <a href="https://www.youtube.com/@TheCryptoAcademy375" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#youtube"/></svg></a>
+            <a href="https://x.com/VestaConsult" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#x"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+      </div>
     </div>
   </footer>
+  <!-- /LAYOUT:FOOTER -->
 
   <script src="js/main.js"></script>
 </body>
