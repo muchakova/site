@@ -153,6 +153,9 @@
   .card__link:hover { color: inherit; }
   .card:has(.card__link:focus-visible) { outline: 3px solid var(--color-focus); outline-offset: 3px; }
   .card__link:focus-visible { outline: none; }
+  .card__more { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: var(--space-2xs); color: var(--color-accent); font-weight: var(--weight-semibold); font-size: .95rem; }
+  .card:hover .card__more .icon { transform: translateX(3px); }
+  .card__more .icon { transition: transform var(--duration-fast) var(--ease); }
 
   /* service card: icon tile + title + text + law chips + link */
   .service-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px var(--space-s); padding: var(--space-l) var(--space-m); }
@@ -182,10 +185,16 @@
   /* video card: lite embed. The play control is a real <button> with
      aria-label="Пусни видео: <заглавие>"; YouTube loads only after the click. */
   .video-card { padding: 0; overflow: hidden; }
-  .video-card__media { position: relative; aspect-ratio: 16 / 9; background: var(--color-navy) center / cover no-repeat; }
-  .video-card__play { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; border: 0; background: linear-gradient(180deg, transparent 40%, rgb(8 12 25 / .55)); color: #FFFFFF; }
-  .video-card__play span { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: rgb(255 255 255 / .92); color: var(--color-navy); box-shadow: var(--shadow-2); transition: transform var(--duration-fast) var(--ease); }
-  .video-card__play:hover span { transform: scale(1.06); }
+  .video-card__media { position: relative; aspect-ratio: 16 / 9; background-color: var(--color-navy); background-image: radial-gradient(70% 90% at 100% 0%, var(--color-halo-1), transparent 70%), radial-gradient(50% 70% at 0% 100%, var(--color-halo-2), transparent 70%); }
+  /* branded poster: avatar + name + topic; nothing is requested from YouTube until the click */
+  .video-card__poster { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: var(--space-s); color: var(--color-on-navy); }
+  .video-card__brand { display: flex; align-items: center; gap: 10px; max-width: calc(100% - 70px); font-size: .85rem; line-height: 1.3; }
+  .video-card__brand strong { display: block; font-size: .95rem; font-weight: var(--weight-semibold); }
+  .video-card__topic { color: var(--color-on-navy-muted); }
+  .video-card__avatar { width: 44px; height: 44px; flex: none; border-radius: 50%; object-fit: cover; object-position: 50% 25%; border: 2px solid var(--color-on-navy); }
+  .video-card__play { position: absolute; inset: 0; display: block; width: 100%; padding: 0; border: 0; background: transparent; color: var(--color-navy); }
+  .video-card__play span { position: absolute; top: 42%; left: 50%; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: rgb(255 255 255 / .94); box-shadow: var(--shadow-2); transform: translate(-50%, -50%); transition: transform var(--duration-fast) var(--ease); }
+  .video-card__play:hover span { transform: translate(-50%, -50%) scale(1.07); }
   .video-card__duration { position: absolute; right: 10px; bottom: 10px; padding: 2px 8px; border-radius: 6px; background: rgb(8 12 25 / .8); color: #FFFFFF; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
   .video-card__media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .video-card__body { display: flex; flex-direction: column; gap: var(--space-xs); padding: var(--space-m); }

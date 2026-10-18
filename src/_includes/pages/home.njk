@@ -77,6 +77,7 @@
           <h3 class="card__title"><a class="card__link" href="{{ servicesUrl }}#{{ s.id }}">{{ s.title[lang] }}</a></h3>
           <p class="card__text">{{ s.desc[lang] }}</p>
           <ul class="chips" aria-label="{{ T.a11y.topics }}">{% for l in s.laws[lang] %}<li class="chip chip--signal">{{ l }}</li>{% endfor %}</ul>
+          <span class="card__more" aria-hidden="true">{{ H.more }} {% icon "arrow-right" %}</span>
         </article>
       </li>
       {% endfor %}
@@ -107,7 +108,7 @@
         <p class="price"><strong>{{ site.prices[minutes] | price(lang) }}</strong><span>{{ T.units.per }} {{ P.duration }}</span></p>
         <p class="plan__fit">{{ P.fit }}</p>
         <ul>{% for f in H.planFeatures %}<li>{% icon "check" %}{{ f }}</li>{% endfor %}</ul>
-        <a class="btn {{ 'btn--on-navy' if featured else 'btn--secondary' }}" href="{{ bookingUrl }}" aria-describedby="plan-{{ minutes }}">{{ P.cta }}{% if featured %} {% icon "arrow-right" %}{% endif %}</a>
+        <a class="btn {{ 'btn--on-navy' if featured else 'btn--secondary' }}" href="{{ bookingUrl }}?format={{ minutes }}" aria-describedby="plan-{{ minutes }}">{{ P.cta }}{% if featured %} {% icon "arrow-right" %}{% endif %}</a>
       </article>
       {% endfor %}
     </div>
@@ -152,11 +153,14 @@
       <li>
         <article class="card video-card">
           <div class="video-card__media">
+            <div class="video-card__poster" aria-hidden="true">
+              <span class="video-card__brand"><img class="video-card__avatar" src="/images/profile_9.jpg" alt="" eleventy:widths="96"><span><strong>{{ T.site.name }}</strong><span class="video-card__topic">{{ H.videoPoster }}</span></span></span>
+            </div>
             <button class="video-card__play" type="button" data-yt="{{ v.yt }}" data-title="{{ v.title[lang] }}" aria-label="{{ T.a11y.playVideo }}: {{ v.title[lang] }}"><span>{% icon "play" %}</span></button>
             <span class="video-card__duration"><span aria-hidden="true">{{ v.duration }}</span><span class="sr-only">{{ T.a11y.duration }}: {{ v.duration }}</span></span>
           </div>
           <div class="video-card__body">
-            <p class="card__meta"><span class="cat">{{ v.tag[lang] }}</span><time datetime="{{ v.date }}">{{ v.date | date(lang) }}</time>{% if v.shorts %}<span class="chip chip--outline">Shorts</span>{% endif %}</p>
+            <p class="card__meta"><span class="cat">{{ v.tag[lang] }}</span><time datetime="{{ v.date }}">{{ v.date | date(lang) }}</time>{% if v.shorts %}<span>Shorts</span>{% endif %}</p>
             <h3 class="card__title">{{ v.title[lang] }}</h3>
             {% if v.article %}<a class="link-arrow" href="{{ v.article }}">{{ H.readArticle }} {% icon "arrow-right" %}</a>{% endif %}
           </div>

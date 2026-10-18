@@ -95,7 +95,8 @@
   .section { padding-block: var(--space-section); }
   .section + .section { padding-top: 0; }
   .section--alt { background: var(--color-surface-2); border-block: 1px solid var(--color-line); }
-  .section--alt + .section { padding-top: var(--space-section); }
+  /* a coloured band always keeps its own top padding, and so does the section after it */
+  .section + .section--alt, .section--alt + .section { padding-top: var(--space-section); }
 
   /* vertical rhythm */
   .stack { display: flex; flex-direction: column; gap: var(--stack, var(--space-s)); }

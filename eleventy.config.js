@@ -27,8 +27,8 @@ function hashDir(dir) {
 }
 
 const DATE_FORMATS = {
-  long: { day: "numeric", month: "long", year: "numeric" },
-  short: { day: "2-digit", month: "2-digit", year: "numeric" },
+  long: { bg: { day: "numeric", month: "long", year: "numeric" }, en: { day: "numeric", month: "long", year: "numeric" } },
+  short: { bg: { day: "2-digit", month: "2-digit", year: "numeric" }, en: { day: "numeric", month: "short", year: "numeric" } },
 };
 
 export default function (eleventyConfig) {
@@ -72,7 +72,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("date", (value, lang = "bg", style = "long") => {
     const d = value instanceof Date ? value : new Date(`${value}T12:00:00Z`);
-    const s = new Intl.DateTimeFormat(lang === "bg" ? "bg-BG" : "en-GB", { ...DATE_FORMATS[style], timeZone: "UTC" }).format(d);
+    const s = new Intl.DateTimeFormat(lang === "bg" ? "bg-BG" : "en-GB", { ...DATE_FORMATS[style][lang === "bg" ? "bg" : "en"], timeZone: "UTC" }).format(d);
     return s.replace(/\s?г\.$/, ""); // "8 октомври 2026 г." → "8 октомври 2026"
   });
   eleventyConfig.addFilter("isoDate", (value) => (value instanceof Date ? value : new Date(`${value}T12:00:00Z`)).toISOString().slice(0, 10));
