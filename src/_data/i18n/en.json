@@ -185,10 +185,6 @@
     "ctaButton": "Book a meeting",
     "videoPoster": "YouTube video"
   },
-  "stub": {
-    "notice": "This page is being built as part of the redesign.",
-    "back": "Back to the home page"
-  },
   "pending": {
     "q1": "VAT and invoice: answer pending",
     "q2": "Cancellation and rescheduling terms: answer pending",
