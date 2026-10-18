@@ -21,6 +21,7 @@
   --b-signal: #047857; --b-signal-soft: #DFF5EC;
   --b-navy: #0E1838; --b-navy-raised: #18244D; --b-on-navy: #EEF1FF; --b-on-navy-muted: #AEB7DB; --b-navy-line: #27346A;
   --b-halo-1: #6366F133; --b-halo-2: #10B98126; --b-glass: #F2F4FAD9;
+  --b-glow: #A5B4FC; --b-on-glow: #0E1838; --b-grid: #4338CA0D;
   /* type */
   --font-a: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-b: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -40,7 +41,7 @@
     --b-accent: #A5B4FC; --b-accent-hover: #C7D2FE; --b-on-accent: #10153A; --b-accent-soft: #1A2150;
     --b-signal: #34D399; --b-signal-soft: #0B2A21;
     --b-navy: #141D40; --b-navy-raised: #1E2A55; --b-navy-line: #2C3A73;
-    --b-halo-1: #6366F140; --b-halo-2: #10B98126; --b-glass: #080C19D9;
+    --b-halo-1: #6366F140; --b-halo-2: #10B98126; --b-glass: #080C19D9; --b-grid: #A5B4FC0F; --b-on-glow: #10153A;
   }
 }
 :root[data-theme="dark"] {
@@ -53,7 +54,7 @@
   --b-accent: #A5B4FC; --b-accent-hover: #C7D2FE; --b-on-accent: #10153A; --b-accent-soft: #1A2150;
   --b-signal: #34D399; --b-signal-soft: #0B2A21;
   --b-navy: #141D40; --b-navy-raised: #1E2A55; --b-navy-line: #2C3A73;
-  --b-halo-1: #6366F140; --b-halo-2: #10B98126; --b-glass: #080C19D9;
+  --b-halo-1: #6366F140; --b-halo-2: #10B98126; --b-glass: #080C19D9; --b-grid: #A5B4FC0F; --b-on-glow: #10153A;
 }
 
 * { box-sizing: border-box; }
@@ -79,6 +80,7 @@ a { color: inherit; }
 .review-tabs a, .review-theme button { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--shell-line); background: var(--shell-chip); color: var(--shell-fg); text-decoration: none; font: 600 14px var(--font-ui); cursor: pointer; }
 .review-tabs a[aria-current="page"], .review-theme button[aria-pressed="true"] { background: var(--shell-on); color: var(--shell-on-fg); border-color: var(--shell-on); }
 .review-theme { margin-left: auto; }
+.review-hero { margin-left: 0; }
 .review-note { flex-basis: 100%; margin: 0; color: var(--shell-muted); }
 
 /* ============================================================
@@ -223,6 +225,39 @@ a { color: inherit; }
 .ca-footer .tag { color: var(--a-muted); margin-top: 10px; max-width: 34ch; }
 .ca-donate { display: inline-flex; margin-top: 16px; padding: 8px 14px; border-radius: 999px; background: var(--a-accent-soft); color: var(--a-accent) !important; font-weight: 600; font-size: .9rem; }
 .ca-legal { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; padding-block: 18px 32px; border-top: 1px solid var(--a-line); color: var(--a-muted); font-size: .85rem; }
+
+
+/* ============================================================
+   CONCEPT C — hybrid: A's layout, B's colours. It reuses every .ca rule and
+   remaps A's tokens to B's palette. No element ever sits on top of the photo.
+   ============================================================ */
+.cc {
+  --a-bg: var(--b-bg); --a-surface: var(--b-surface); --a-fg: var(--b-fg); --a-muted: var(--b-muted); --a-line: var(--b-line);
+  --a-accent: var(--b-accent); --a-accent-hover: var(--b-accent-hover); --a-on-accent: var(--b-on-accent); --a-accent-soft: var(--b-accent-soft);
+  --a-ink: var(--b-navy); --a-ink-raised: var(--b-navy-raised); --a-on-ink: var(--b-on-navy); --a-on-ink-muted: var(--b-on-navy-muted); --a-ink-line: var(--b-navy-line);
+  --a-glow: var(--b-glow); --a-on-glow: var(--b-on-glow); --a-grid: #A5B4FC12;
+  font-family: var(--font-b);
+}
+/* light hero + glass header (default); the navy variant keeps A's dark hero */
+.cc:not(.hero-navy) .ca-hero, .cc:not(.hero-navy) .ca-header {
+  --a-ink: var(--b-bg); --a-ink-raised: var(--b-surface); --a-on-ink: var(--b-fg); --a-on-ink-muted: var(--b-muted); --a-ink-line: var(--b-line);
+  --a-glow: var(--b-accent); --a-on-glow: var(--b-on-accent); --a-grid: var(--b-grid);
+}
+.cc:not(.hero-navy) .ca-header { background: var(--b-glass); -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4); }
+.cc:not(.hero-navy) .ca-stats dd { color: var(--b-accent); }
+.cc .ca-hero { background-image: radial-gradient(55% 70% at 88% 12%, var(--b-halo-1), transparent 70%), radial-gradient(40% 50% at 70% 95%, var(--b-halo-2), transparent 70%), linear-gradient(var(--a-grid) 1px, transparent 1px), linear-gradient(90deg, var(--a-grid) 1px, transparent 1px); background-size: auto, auto, 56px 56px, 56px 56px; }
+.cc .ca-cta { background-image: radial-gradient(50% 80% at 10% 100%, var(--b-halo-1), transparent 70%); }
+.cc .ca-facts li::before { background: var(--b-signal); }
+.cc .ca-topics li { background: var(--b-signal-soft); color: var(--b-signal); }
+.cc .ca-hero h1 { letter-spacing: -0.03em; }
+/* portrait: photo on top, booking strip attached below it (never over the face) */
+.cc-portrait { justify-self: end; width: min(100%, 420px); border-radius: 22px; box-shadow: 0 30px 60px -32px #0E153066; }
+.cc-portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 22px 22px 0 0; }
+.cc-strip { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px; padding: 16px 20px; border-radius: 0 0 22px 22px; background: var(--a-ink-raised); border: 1px solid var(--a-ink-line); border-top: 0; font-variant-numeric: tabular-nums; }
+.cc-strip-label { display: block; font-size: .82rem; color: var(--a-on-ink-muted); }
+.cc-strip-price { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.02em; color: var(--a-on-ink); }
+.cc-strip-price span { font-size: .9rem; font-weight: 500; color: var(--a-on-ink-muted); }
+.cc-strip a { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 16px; border-radius: 10px; background: var(--a-glow); color: var(--a-on-glow); font-weight: 600; font-size: .95rem; text-decoration: none; white-space: nowrap; }
 
 /* ============================================================
    CONCEPT B — light fintech (Onest)
@@ -396,7 +431,7 @@ a { color: inherit; }
   .ca-nav ul, .cb-nav ul { flex-direction: column; gap: 2px; }
   .ca-nav ul a, .cb-nav ul a { display: block; padding: 10px 0; font-size: 1.05rem; }
   .ca-hero-grid, .cb-hero-grid, .ca-about, .ca-posts, .ca-cta-grid, .cb-cta { grid-template-columns: minmax(0, 1fr); }
-  .ca-portrait, .cb-visual { justify-self: start; width: min(100%, 360px); }
+  .ca-portrait, .cb-visual, .cc-portrait { justify-self: start; width: min(100%, 360px); }
   .ca-ticket { left: auto; right: -12px; bottom: 18px; }
   .cb-widget.w1 { left: -10px; } .cb-widget.w2 { right: -10px; }
   .ca-post.lead { grid-row: auto; }
@@ -443,22 +478,218 @@ a { color: inherit; }
     <p class="review-title">muchakova.com <span>· Фаза 2: визуални концепции</span></p>
     <nav aria-label="Концепции">
       <ul class="review-tabs">
+        <li><a href="#c" data-tab="c">C · Хибрид</a></li>
         <li><a href="#a" data-tab="a">A · Мастило и тюркоаз</a></li>
         <li><a href="#b" data-tab="b">B · Светъл финтех</a></li>
         <li><a href="#fonts" data-tab="fonts">Шрифтове</a></li>
       </ul>
     </nav>
+    <div class="review-theme review-hero" role="group" aria-label="Горна част на C" data-hero-switch>
+      <button type="button" data-hero="light" aria-pressed="true">Светъл hero</button>
+      <button type="button" data-hero="navy" aria-pressed="false">Тъмносин hero</button>
+    </div>
     <div class="review-theme" role="group" aria-label="Тема на прегледа">
       <button type="button" data-set-theme="system" aria-pressed="true">Системна</button>
       <button type="button" data-set-theme="light" aria-pressed="false">Светла</button>
       <button type="button" data-set-theme="dark" aria-pressed="false">Тъмна</button>
     </div>
-    <p class="review-note">Концепциите показват посоката: цветове, типография, ритъм и характер. Текстовете са от одобрените чернови. Линковете водят само в рамките на прегледа.</p>
+    <p class="review-note"><strong>C</strong> съчетава оформлението на A с цветовете на B. Върху снимката няма нищо: информацията за консултацията е закачена под нея. A и B остават за сравнение. Текстовете са от одобрените чернови, линковете водят само в рамките на прегледа.</p>
   </div>
 </div>
 
+<!-- =========================================================== CONCEPT C (hybrid) -->
+<div class="concept ca cc" id="c" data-view>
+  <a class="skip" href="#c-main">Към съдържанието</a>
+  <header class="ca-header">
+    <div class="wrap ca-header-in">
+      <a class="ca-logo" href="#c">Marina <span>M.</span></a>
+      <nav class="ca-nav" id="c-nav" aria-label="Главна навигация">
+        <ul>
+          <li><a href="#c-services">Услуги</a></li>
+          <li><a href="#c-about">За мен</a></li>
+          <li><a href="#c-blog">Блог</a></li>
+          <li><a href="#c-contact">Контакти</a></li>
+        </ul>
+        <div class="ca-tools">
+          <a class="ca-tool" href="#c" lang="en" hreflang="en">EN<span class="sr"> · English version</span></a>
+          <button class="ca-tool" type="button" data-theme-toggle aria-pressed="false"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><span class="sr">Тъмна тема</span></button>
+        </div>
+      </nav>
+      <a class="btn-a glow small" href="#c-pricing">Запази час</a>
+      <button class="ca-menu" type="button" data-menu aria-expanded="false" aria-controls="c-nav"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg><span data-menu-label>Меню</span></button>
+    </div>
+  </header>
+
+  <main id="c-main" tabindex="-1">
+    <section class="ca-hero" aria-labelledby="c-h1">
+      <div class="wrap ca-hero-grid">
+        <div>
+          <p class="ca-kicker">Здравейте, Данъчни Хакери, аз съм</p>
+          <h1 id="c-h1">Марина Мучакова</h1>
+          <p class="ca-role">Данъчен консултант</p>
+          <p class="ca-lede">Помагам на хора и бизнеси да минат НАП без НАП да ги мине, чрез законни данъчни оптимизации и стратегии.</p>
+          <div class="ca-actions">
+            <a class="btn-a glow" href="#c-pricing">Запази консултация <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+            <a class="btn-a ghost-ink" href="#c-services">Услуги и цени</a>
+          </div>
+          <ul class="ca-facts" aria-label="Формат">
+            <li>Онлайн</li><li>Google Meet</li><li>от 130 €</li>
+          </ul>
+        </div>
+        <div class="cc-portrait">
+          <img src="img/profile_3.jpg" alt="Марина Мучакова" width="500" height="500">
+          <div class="cc-strip">
+            <p><span class="cc-strip-label">Онлайн консултация</span><span class="cc-strip-price">230 € <span>/ 60 мин</span></span></p>
+            <a href="#c-pricing">Избери час <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="wrap">
+        <dl class="ca-stats">
+          <div><dt>години опит в данъчното право</dt><dd>15+</dd></div>
+          <div><dt>статии за данъци, инвестиции и крипто</dt><dd>29</dd></div>
+          <div><dt>крипто регулации и данъци</dt><dd>MiCA</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="ca-section" id="c-about" aria-labelledby="c-about-title">
+      <div class="wrap ca-about">
+        <div>
+          <p class="ca-eyebrow">Марина Мучакова</p>
+          <h2 class="ca-h2" id="c-about-title">За мен</h2>
+          <div class="ca-about-text" style="margin-top:18px">
+            <p>Казвам се Марина Мучакова и съм данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p>
+            <p>Основната ми цел е колкото се може повече капитали да останат съсредоточени в бизнеса. Постигам я чрез задълбочен анализ на данъчните правила и законодателство и намиране на гъвкави, ефективни решения.</p>
+          </div>
+          <ul class="ca-topics" aria-label="Закони и теми, с които работя">
+            <li>ЗДДФЛ</li><li>ЗКПО</li><li>ЗДДС</li><li>СИДДО</li><li>MiCA</li><li>AML</li>
+          </ul>
+        </div>
+        <ul class="ca-ventures" aria-label="Проекти">
+          <li><a href="https://vesta-bg.eu" target="_blank" rel="noopener"><span><strong>Веста Консулт</strong><span>Счетоводна кантора и консултантска къща</span></span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="sr">(отваря се в нов раздел)</span></a></li>
+          <li><a href="https://thecrypto.academy" target="_blank" rel="noopener"><span><strong>Крипто Академията</strong><span>Обучения по крипто и блокчейн</span></span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="sr">(отваря се в нов раздел)</span></a></li>
+          <li><a href="#c-about"><span><strong>НАБИ</strong><span>Асоциация по блокчейн и иновации</span></span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ca-section" id="c-services" aria-labelledby="c-services-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="ca-head">
+          <div>
+            <p class="ca-eyebrow">Експертиза</p>
+            <h2 class="ca-h2" id="c-services-title">С какво помагам</h2>
+            <p class="ca-sub">Законни решения, които оставят повече капитал в бизнеса и в портфейла ви.</p>
+          </div>
+        </div>
+        <ul class="ca-services">
+          <li><article class="ca-service"><span class="ca-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-coins"/></svg></span><h3>Крипто данъци и MiCA</h3><p>Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.</p><p class="laws">MiCA · AML · ЗДДС</p><a href="#c-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за крипто данъци и MiCA</span></a></article></li>
+          <li><article class="ca-service"><span class="ca-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-chart"/></svg></span><h3>Доходи от инвестиции</h3><p>Акции, ETF, облигации и дивиденти — кога се дължи данък, колко е и къде се декларира.</p><p class="laws">ЗДДФЛ · ETF · дивиденти</p><a href="#c-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за доходи от инвестиции</span></a></article></li>
+          <li><article class="ca-service"><span class="ca-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg></span><h3>Международно облагане</h3><p>Спогодби за избягване на двойното данъчно облагане, местно лице и чуждестранни брокери.</p><p class="laws">СИДДО · местно лице · СПБ-8</p><a href="#c-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за международно облагане</span></a></article></li>
+          <li><article class="ca-service"><span class="ca-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-building"/></svg></span><h3>Бизнес структуриране</h3><p>Субстанция, ДДС и планиране, с което маржът расте, а данъчната тежест — не.</p><p class="laws">ЗКПО · ЗДДС · субстанция</p><a href="#c-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за бизнес структуриране</span></a></article></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ca-section" aria-labelledby="c-steps-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="ca-head"><div><p class="ca-eyebrow">Процес</p><h2 class="ca-h2" id="c-steps-title">Как работим</h2></div></div>
+        <ol class="ca-steps">
+          <li><h3>Изберете формат</h3><p>30 минути за конкретен въпрос или 60 минути за по-сложен казус.</p></li>
+          <li><h3>Запазете час и платете онлайн</h3><p>Изберете удобен ден в календара. Плащането е с карта, чрез Stripe.</p></li>
+          <li><h3>Подгответе въпроса си</h3><p>Изпратете кратко описание и документите предварително.</p></li>
+          <li><h3>Срещаме се онлайн</h3><p>Разговаряме в Google Meet и получавате ясни следващи стъпки.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ca-section ca-pricing" id="c-pricing" aria-labelledby="c-pricing-title">
+      <div class="wrap">
+        <div class="ca-head"><div><p class="ca-eyebrow">Консултации</p><h2 class="ca-h2" id="c-pricing-title">Цени</h2><p class="ca-sub">Онлайн в Google Meet · плащане с карта при записване.</p></div></div>
+        <div class="ca-plans">
+          <article class="ca-plan" aria-labelledby="c-plan-30">
+            <div class="ca-plan-top"><div><h3 id="c-plan-30">Бърза консултация</h3><p class="dur">30 минути</p></div></div>
+            <p class="ca-price">130 €</p>
+            <p class="fit">За един конкретен, ясно формулиран въпрос: кога се дължи данък, как се декларира даден доход, коя ставка се прилага.</p>
+            <ul><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Онлайн в Google Meet</li><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Плащане с карта при записване</li></ul>
+            <a class="btn-a outline" href="#c-pricing">Избери 30 минути</a>
+          </article>
+          <article class="ca-plan featured" aria-labelledby="c-plan-60">
+            <div class="ca-plan-top"><div><h3 id="c-plan-60">Онлайн консултация</h3><p class="dur">60 минути</p></div><span class="ca-badge">Препоръчана</span></div>
+            <p class="ca-price">230 €</p>
+            <p class="fit">За по-сложен казус: няколко вида доходи, чуждестранни брокери, структуриране на бизнес, MiCA и регулаторни въпроси.</p>
+            <ul><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Онлайн в Google Meet</li><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Плащане с карта при записване</li></ul>
+            <a class="btn-a glow" href="#c-pricing">Избери 60 минути <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+        <p class="ca-note">⟨?1⟩ ДДС и фактура · ⟨?3⟩ на български или английски · условия за отказ ⟨?2⟩</p>
+      </div>
+    </section>
+
+    <section class="ca-section" id="c-blog" aria-labelledby="c-blog-title">
+      <div class="wrap">
+        <div class="ca-head">
+          <div><p class="ca-eyebrow">Блог</p><h2 class="ca-h2" id="c-blog-title">Последни статии</h2></div>
+          <a class="ca-more" href="#c-blog">Всички статии <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="ca-posts">
+          <a class="ca-post lead" href="#c-blog">
+            <p class="ca-meta"><span class="cat">Инвестиции</span><time datetime="2026-10-08">8 октомври 2026</time><span>12 мин четене</span></p>
+            <h3><span lang="en">Tax-loss harvesting</span> по български</h3>
+            <p>Как да „съберем“ данъчните загуби преди 31 декември законно – и къде минава границата с пазарната манипулация.</p>
+            <span class="ca-more">Прочети <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="ca-post" href="#c-blog">
+            <p class="ca-meta"><span class="cat">Инвестиции</span><time datetime="2026-10-08">8 окт 2026</time><span>15 мин</span></p>
+            <h3>Личен или фирмен акаунт при брокер</h3>
+            <p>Загуби, пазари в САЩ, разходи, изтегляне на парите и наследяване.</p>
+          </a>
+          <a class="ca-post" href="#c-blog">
+            <p class="ca-meta"><span class="cat">Отчетност пред БНБ</span><time datetime="2026-10-05">5 окт 2026</time><span>15 мин</span></p>
+            <h3>Скъпа БНБ, имам акции в Interactive Brokers</h3>
+            <p>СПБ-8, прагът от 25 000 € и защо ценните книжа се пишат в брой.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ca-cta" id="c-contact" aria-labelledby="c-cta-title">
+      <div class="wrap ca-cta-grid">
+        <div>
+          <h2 id="c-cta-title">Имате конкретен казус?</h2>
+          <p>Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</p>
+          <a class="btn-a glow" href="#c-pricing">Запази час <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="ca-contacts" aria-label="Директен контакт">
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>office@vesta-bg.eu</span></li>
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>+359 887 460 907</span></li>
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Viber · WhatsApp · Telegram</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ca-footer">
+    <div class="wrap">
+      <div class="ca-footer-grid">
+        <div>
+          <a class="ca-logo" href="#c">Marina <span style="color:var(--a-accent)">M.</span></a>
+          <p class="tag">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+          <a class="ca-donate" href="#c">💛 Подкрепи ме</a>
+        </div>
+        <nav aria-labelledby="c-f1"><h2 id="c-f1">Навигация</h2><ul><li><a href="#c-services">Услуги</a></li><li><a href="#c-about">За мен</a></li><li><a href="#c-blog">Блог</a></li><li><a href="#c-blog">Видео</a></li><li><a href="#c-contact">Контакти</a></li></ul></nav>
+        <nav aria-labelledby="c-f2"><h2 id="c-f2">Ресурси</h2><ul><li><a href="#c">Проекти</a></li><li><a href="#c">Партньори</a></li><li><a href="#c">Игра</a></li><li><a href="#c">Синтезатор</a></li><li><a href="#c">RSS</a></li></ul></nav>
+        <div><h2>Контакт</h2><ul><li>office@vesta-bg.eu</li><li>+359 887 460 907</li><li>Facebook · LinkedIn · YouTube · TikTok · X</li></ul></div>
+      </div>
+      <div class="ca-legal"><span>© 2026 Марина Мучакова · Поверителност · Достъпност</span><span>Съдържанието не е индивидуална данъчна или правна консултация.</span></div>
+    </div>
+  </footer>
+</div>
+
+
 <!-- =========================================================== CONCEPT A -->
-<div class="concept ca" id="a" data-view>
+<div class="concept ca" id="a" data-view hidden>
   <a class="skip" href="#a-main">Към съдържанието</a>
   <header class="ca-header">
     <div class="wrap ca-header-in">
@@ -845,7 +1076,7 @@ a { color: inherit; }
 
 <script>
 (function () {
-  const views = ['a', 'b', 'fonts'];
+  const views = ['c', 'a', 'b', 'fonts'];
   const root = document.documentElement;
 
   // ---- view switching via bare #a / #b / #fonts (or any id inside a view)
@@ -857,11 +1088,13 @@ a { color: inherit; }
       const host = target && target.closest('[data-view]');
       if (host) view = host.id;
     }
-    view = view || 'a';
+    view = view || 'c';
     document.querySelectorAll('[data-view]').forEach(v => { v.hidden = v.id !== view; });
     document.querySelectorAll('[data-tab]').forEach(t => {
       if (t.dataset.tab === view) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
     });
+    const heroSwitch = document.querySelector('[data-hero-switch]');
+    if (heroSwitch) heroSwitch.hidden = view !== 'c';
     if (views.includes(id)) window.scrollTo(0, 0);
   }
   window.addEventListener('hashchange', show);
@@ -888,6 +1121,12 @@ a { color: inherit; }
   document.querySelectorAll('[data-set-theme]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.setTheme)));
   document.querySelectorAll('[data-theme-toggle]').forEach(b => b.addEventListener('click', () => setTheme(effectiveDark() ? 'light' : 'dark')));
   mq.addEventListener('change', () => syncThemeUI(root.getAttribute('data-theme') || 'system'));
+
+  // ---- concept C: light or navy hero
+  document.querySelectorAll('[data-hero]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById('c').classList.toggle('hero-navy', b.dataset.hero === 'navy');
+    document.querySelectorAll('[data-hero]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  }));
 
   // ---- mobile menu (disclosure pattern): Esc closes and returns focus
   document.querySelectorAll('[data-menu]').forEach(btn => {
