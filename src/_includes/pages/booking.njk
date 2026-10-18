@@ -1,0 +1,72 @@
+{%- set map = collections.i18nMap -%}
+{%- set B = T.bookingPage -%}
+{%- set H = T.home -%}
+{%- set home = 'home' | urlFor(lang, map, site.routes) -%}
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ home }}">{{ T.nav.home }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li></ol></nav>
+    <h1 id="page-title" style="margin-top: var(--space-m)">{{ title }}</h1>
+    <p class="lead measure">{{ B.subtitle }}</p>
+  </div>
+</section>
+
+<div class="wrap booking-layout" data-booking data-cal-origin="https://cal.com" data-cal-30="{{ site.cal.events['30'] }}" data-cal-60="{{ site.cal.events['60'] }}">
+  <div class="stack" style="--stack: var(--space-xl)">
+    <fieldset class="format-picker">
+      <legend>{{ B.step1 }}</legend>
+      <div class="format-options">
+        {% for minutes in ["30", "60"] %}
+        {% set P = H.plans[minutes] %}
+        <label class="format-option">
+          <input type="radio" name="format" value="{{ minutes }}" id="format-{{ minutes }}">
+          <span class="format-option__check" aria-hidden="true">{% icon "check" %}</span>
+          <span class="format-option__name">{{ P.name }}</span>
+          <span class="format-option__meta">{{ P.duration }} · {{ site.prices[minutes] | price(lang) }}</span>
+          <span class="format-option__fit">{{ P.fit }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+
+    <section aria-labelledby="calendar-title">
+      <h2 id="calendar-title" class="booking-step-title">{{ B.step2 }}</h2>
+      <p class="booking-hint" data-cal-hint>{{ B.chooseFirst }}</p>
+      <p class="sr-only" role="status" data-cal-status data-loading="{{ B.loading }}" data-loaded="{{ B.loaded }}"></p>
+      {% for minutes in ["30", "60"] %}
+      <div class="embed-slot" id="cal-{{ minutes }}" data-cal-panel="{{ minutes }}" data-cal-title="{{ B.calTitle }} · {{ H.plans[minutes].name }}" hidden>
+        <div class="embed-slot__status" aria-hidden="true">
+          <span class="skeleton" style="width: 220px; height: 14px; margin-inline: auto"></span>
+          <span class="skeleton" style="width: 160px; height: 14px; margin-inline: auto"></span>
+          <p>{{ B.loading }}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="callout callout--warning" role="alert" data-cal-fallback hidden>
+        {% icon "alert" %}
+        <div><p class="callout__title">{{ B.fallbackTitle }}</p><p>{{ B.fallbackText }} <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a></p></div>
+      </div>
+      <noscript><p class="callout callout--warning">{{ B.noscript }} <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a></p></noscript>
+      <p class="muted booking-alt">{{ B.alternative }} <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a></p>
+    </section>
+  </div>
+
+  <div class="booking-aside stack" style="--stack: var(--space-s)">
+    <div class="card">
+      <h2 id="prepare-title" class="booking-aside__title">{{ B.prepareTitle }}</h2>
+      <ul class="checklist">{% for p in B.prepare %}<li>{{ p }}</li>{% endfor %}</ul>
+      <p>{% pending "4", T.pending.q4 %}</p>
+    </div>
+    <div class="card">
+      <h2 class="booking-aside__title">{{ B.nextTitle }}</h2>
+      <ul class="checklist">{% for n in B.next %}<li>{{ n }}</li>{% endfor %}</ul>
+    </div>
+    <div class="card">
+      <h2 class="booking-aside__title">{{ B.payTitle }}</h2>
+      <p class="card__text">{{ B.pay }}</p>
+      <p>{% pending "1", T.pending.q1 %}</p>
+      <p>{% pending "2", T.pending.q2 %}</p>
+    </div>
+    <p class="muted" style="font-size: .9rem">{{ B.privacy }} <a href="{{ 'privacy' | urlFor(lang, map, site.routes) }}">{{ B.privacyLink }}</a></p>
+  </div>
+</div>

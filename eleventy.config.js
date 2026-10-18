@@ -11,7 +11,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 // Old pages that are not redesigned yet are copied unchanged, so every legacy URL
 // keeps working at every step. Remove an entry once its new template exists.
 const LEGACY_PASSTHROUGH = [
-  "blog.html", "blog", "booking", "vlog", "projects", "partners", "donate", "game", "meet",
+  "blog.html", "blog", "vlog", "projects", "partners", "donate", "game", "meet",
   "files", "css", "js", "robots.txt", "llms.txt", "CNAME",
 ];
 

@@ -24,7 +24,7 @@
   <meta property="og:title" content="{{ title or T.home.title }}">
   <meta property="og:description" content="{{ pageDescription }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ site.url }}/images/og-site.jpg">
+  <meta property="og:image" content="{{ site.url }}{{ ogImage or '/images/og-site.jpg' }}">
   <meta property="og:locale" content="{{ T.locale }}">
   <meta property="og:locale:alternate" content="{{ i18n[other].locale }}">
   <meta name="twitter:card" content="summary_large_image">

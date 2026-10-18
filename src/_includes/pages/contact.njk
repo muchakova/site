@@ -1,0 +1,60 @@
+{%- set map = collections.i18nMap -%}
+{%- set C = T.contactPage -%}
+{%- set H = T.home -%}
+{%- set home = 'home' | urlFor(lang, map, site.routes) -%}
+{%- set bookingUrl = 'booking' | urlFor(lang, map, site.routes) -%}
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ home }}">{{ T.nav.home }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li></ol></nav>
+    <h1 id="page-title" style="margin-top: var(--space-m)">{{ title }}</h1>
+    <p class="lead measure">{{ C.lead }}</p>
+    <p style="margin-top: var(--space-xs)">{% pending "9", T.pending.q9 %}</p>
+  </div>
+</section>
+
+<div class="wrap contact-layout">
+  <section class="cta-band contact-book" aria-labelledby="book-title">
+    <div>
+      <h2 id="book-title">{{ C.bookTitle }}</h2>
+      <p>{{ C.bookText }}</p>
+      <dl class="contact-prices">
+        {% for minutes in ["30", "60"] %}
+        <div><dt>{{ H.plans[minutes].name }}</dt><dd><strong>{{ site.prices[minutes] | price(lang) }}</strong> {{ T.units.per }} {{ H.plans[minutes].duration }}</dd></div>
+        {% endfor %}
+      </dl>
+      <a class="btn btn--on-navy" href="{{ bookingUrl }}">{{ H.ctaBook }} {% icon "arrow-right" %}</a>
+    </div>
+  </section>
+
+  <div class="stack" style="--stack: var(--space-l)">
+    <section aria-labelledby="direct-title">
+      <h2 id="direct-title" class="contact-group__title">{{ C.direct }}</h2>
+      <ul class="contact-list">
+        <li><a class="contact-item" href="mailto:{{ site.email }}">{% icon "mail" %}{{ site.email }}</a></li>
+        <li><a class="contact-item" href="tel:{{ site.phone }}">{% icon "phone" %}{{ site.phoneDisplay }}</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="messaging-title">
+      <h2 id="messaging-title" class="contact-group__title">{{ C.messaging }}</h2>
+      <ul class="contact-list contact-list--row">
+        {% for m in site.messengers %}
+        <li><a class="contact-item" href="{{ m.url }}"{% if m.url.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{% icon m.icon %}{{ m.name }}{% if m.url.startsWith('http') %}<span class="sr-only"> {{ T.a11y.newTab }}</span>{% endif %}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section aria-labelledby="social-title">
+      <h2 id="social-title" class="contact-group__title">{{ C.social }}</h2>
+      <ul class="contact-list contact-list--row">
+        {% for s in site.socials %}
+        <li><a class="contact-item" href="{{ s.url }}" target="_blank" rel="noopener">{% icon s.icon %}{{ s.name }}<span class="sr-only"> {{ T.a11y.newTab }}</span></a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section aria-labelledby="location-title">
+      <h2 id="location-title" class="contact-group__title">{{ C.location }}</h2>
+      <p class="contact-item contact-item--static">{% icon "map-pin" %}{{ C.locationText }}</p>
+      <p style="margin-top: var(--space-xs)">{% pending "5", T.pending.q5 %}</p>
+    </section>
+  </div>
+</div>

@@ -307,5 +307,43 @@
       "title": "Partners",
       "text": "The companies I work with: NX0 · NativeArc and tax-invest."
     }
+  },
+  "bookingPage": {
+    "subtitle": "Pick a convenient day and time for a personal consultation with Marina Muchakova.",
+    "step1": "1. Choose a format",
+    "step2": "2. Pick a day and time",
+    "chooseFirst": "Choose a format above and its calendar will appear here.",
+    "loading": "Loading the calendar…",
+    "loaded": "The calendar has loaded.",
+    "fallbackTitle": "The calendar didn’t load.",
+    "fallbackText": "Email or call me and we will find a convenient time.",
+    "alternative": "If the calendar doesn’t work:",
+    "calTitle": "Booking calendar",
+    "prepareTitle": "How to prepare",
+    "prepare": [
+      "A short description of your question.",
+      "The years concerned.",
+      "Your broker or exchange statements, if any."
+    ],
+    "nextTitle": "What happens next",
+    "next": [
+      "A confirmation email right after you book.",
+      "A Google Meet link for the meeting."
+    ],
+    "payTitle": "Payment and cancellation",
+    "pay": "You pay by card when you book, processed securely by Stripe.",
+    "privacy": "Bookings are handled by Cal.com and payments by Stripe. The calendar only loads after you choose a format.",
+    "privacyLink": "Privacy policy",
+    "noscript": "The calendar needs JavaScript. Email or call me:"
+  },
+  "contactPage": {
+    "lead": "The fastest way is to book a consultation. For a quick question, message me however suits you.",
+    "bookTitle": "Online consultation",
+    "bookText": "Choose a format and a convenient time. Payment is by card when you book.",
+    "direct": "Direct contact",
+    "messaging": "Messaging",
+    "social": "Social media",
+    "location": "Location",
+    "locationText": "Sofia, Bulgaria · consultations online"
   }
 }

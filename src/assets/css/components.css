@@ -142,7 +142,8 @@
 
   /* ---------- Cards (shared shell) ------------------------------------ */
   .card { position: relative; display: flex; flex-direction: column; gap: var(--space-xs); height: 100%; padding: var(--space-m); border-radius: var(--radius-xl); background: var(--color-surface); border: 1px solid var(--color-line); transition: border-color var(--duration-fast), box-shadow var(--duration-fast); }
-  .card:hover { border-color: var(--color-accent); box-shadow: var(--shadow-2); }
+  /* only cards that are links react to hover (static cards must not look clickable) */
+  .card:has(.card__link):hover { border-color: var(--color-accent); box-shadow: var(--shadow-2); }
   .card__title { font-size: var(--step-1); line-height: 1.3; }
   .card__text { color: var(--color-muted); }
   .card__meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--step--1); color: var(--color-muted); }
@@ -154,7 +155,7 @@
   .card:has(.card__link:focus-visible) { outline: 3px solid var(--color-focus); outline-offset: 3px; }
   .card__link:focus-visible { outline: none; }
   .card__more { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: var(--space-2xs); color: var(--color-accent); font-weight: var(--weight-semibold); font-size: .95rem; }
-  .card:hover .card__more .icon { transform: translateX(3px); }
+  .card:has(.card__link):hover .card__more .icon { transform: translateX(3px); }
   .card__more .icon { transition: transform var(--duration-fast) var(--ease); }
 
   /* service card: icon tile + title + text + law chips + link */
@@ -245,6 +246,16 @@
   .format-option__check { position: absolute; top: var(--space-m); right: var(--space-m); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--color-line-strong); color: transparent; }
   .format-option:has(input:checked) .format-option__check { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
   @media (max-width: 560px) { .format-options { grid-template-columns: minmax(0, 1fr); } }
+
+  /* booking page: picker + calendar on the left, preparation notes on the right */
+  .booking-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-xl); align-items: start; padding-bottom: var(--space-section); }
+  .booking-step-title { font-size: var(--step-2); margin-bottom: var(--space-s); }
+  .booking-hint { padding: var(--space-l) var(--space-m); border-radius: var(--radius-xl); border: 1px dashed var(--color-line-strong); color: var(--color-muted); text-align: center; }
+  .booking-alt { margin-top: var(--space-s); font-size: .92rem; }
+  .booking-aside__title { font-size: var(--step-1); margin-bottom: var(--space-2xs); }
+  .booking-aside .card { gap: var(--space-xs); }
+  .format-option__fit { margin-top: var(--space-2xs); color: var(--color-muted); font-size: .92rem; }
+  @media (max-width: 980px) { .booking-layout { grid-template-columns: minmax(0, 1fr); } }
 
   /* embed slot for the calendar: reserved height (no layout shift), loading + fallback states */
   .embed-slot { position: relative; min-height: 640px; border-radius: var(--radius-xl); background: var(--color-surface); border: 1px solid var(--color-line); overflow: hidden; }
@@ -399,6 +410,19 @@
   .contact-item { display: flex; align-items: center; gap: var(--space-xs); min-height: 56px; padding: var(--space-xs) var(--space-s); border-radius: var(--radius-l); background: var(--color-surface); border: 1px solid var(--color-line); color: var(--color-fg); text-decoration: none; font-variant-numeric: tabular-nums; }
   a.contact-item:hover { border-color: var(--color-accent); color: var(--color-fg); }
   .contact-item .icon { color: var(--color-accent); }
+
+  /* contact page */
+  .contact-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--space-xl); align-items: start; padding-bottom: var(--space-section); }
+  .cta-band.contact-book { grid-template-columns: minmax(0, 1fr); position: sticky; top: calc(var(--header-height) + var(--space-m)); }  /* beats the 2-column .cta-band below */
+  .contact-prices { display: grid; gap: var(--space-2xs); margin: var(--space-m) 0 0; padding: var(--space-s) 0 0; border-top: 1px solid var(--color-navy-line); }
+  .contact-prices > div { display: flex; justify-content: space-between; gap: var(--space-s); }
+  .contact-prices dt { color: var(--color-on-navy-muted); }
+  .contact-prices dd { margin: 0; font-variant-numeric: tabular-nums; color: var(--color-on-navy-muted); }
+  .contact-prices strong { color: var(--color-on-navy); font-size: 1.1rem; }
+  .contact-group__title { font-size: var(--step-1); margin-bottom: var(--space-xs); }
+  .contact-list--row { grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr)); }
+  .contact-item--static { border-style: dashed; }
+  @media (max-width: 860px) { .contact-layout { grid-template-columns: minmax(0, 1fr); } .cta-band.contact-book { position: static; } }
 
   /* ---------- Navy CTA band  <section aria-labelledby> ---------------- */
   .cta-band { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--space-l); align-items: center; padding: clamp(1.75rem, 5vw, 3.5rem); border-radius: var(--radius-2xl); background: var(--color-navy); color: var(--color-on-navy); background-image: radial-gradient(50% 90% at 100% 0%, var(--color-halo-1), transparent 70%); }

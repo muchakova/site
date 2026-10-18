@@ -6,6 +6,7 @@ import AxeBuilder from "@axe-core/playwright";
 const PAGES = [
   "/", "/en/",
   "/services/", "/en/services/", "/about/", "/en/about/", "/contact/", "/en/contact/",
+  "/booking/", "/en/booking/",
   "/privacy/", "/en/privacy/", "/accessibility/", "/en/accessibility/",
   "/styleguide/",
 ];

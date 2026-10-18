@@ -7,7 +7,9 @@
         "http://localhost/en/index.html",
         "http://localhost/services/index.html",
         "http://localhost/about/index.html",
-        "http://localhost/en/services/index.html"
+        "http://localhost/en/services/index.html",
+        "http://localhost/booking/index.html",
+        "http://localhost/contact/index.html"
       ],
       "numberOfRuns": 3,
       "settings": {

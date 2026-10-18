@@ -76,3 +76,36 @@ test("copy button announces success", async ({ page, context, browserName }) => 
   await page.locator('[data-copy-target="sg-prompt"]').click();
   await expect(page.locator("[data-copy-target='sg-prompt']").locator("xpath=ancestor::*[@data-copy-scope][1]").locator("[data-copy-status]")).toHaveText("Копирано");
 });
+
+test("booking: nothing loads from Cal.com until a format is chosen; fallback if it fails", async ({ page }) => {
+  const cal = [];
+  await page.route(/cal\.com/, (route) => { cal.push(route.request().url()); route.abort(); });
+  await page.goto("/booking/");
+  await expect(page.locator("[data-cal-hint]")).toBeVisible();
+  expect(cal, "no Cal.com requests before a choice").toEqual([]);
+  await page.locator('label:has(input[value="30"])').click();
+  await expect(page.locator("#format-30")).toBeChecked();
+  await expect.poll(() => cal.length, { message: "Cal.com is requested after the choice" }).toBeGreaterThan(0);
+  await expect(page.locator("[data-cal-fallback]")).toBeVisible();   // embed.js was blocked → contacts shown
+});
+
+test("booking: ?format=60 preselects the 60-minute consultation", async ({ page }) => {
+  await page.route(/cal\.com/, (route) => route.abort());
+  await page.goto("/booking/?format=60");
+  await expect(page.locator("#format-60")).toBeChecked();
+  await expect(page.locator("[data-cal-hint]")).toBeHidden();
+  // the queued Cal.com instruction must point at the 60-minute event type
+  const inline = await page.evaluate(() => (window.Cal.ns.f60.q || []).find((i) => i[0] === "inline")?.[1]);
+  expect(inline.calLink).toBe("marina-muchakova-dxmkoe/60-min-meeting");
+  expect(inline.elementOrSelector).toBe("#cal-60");
+});
+
+test("booking: format options are keyboard-operable radios", async ({ page }) => {
+  await page.route(/cal\.com/, (route) => route.abort());
+  await page.goto("/booking/");
+  await page.locator("#format-30").focus();
+  await page.keyboard.press("Space");
+  await expect(page.locator("#format-30")).toBeChecked();
+  await page.keyboard.press("ArrowRight");
+  await expect(page.locator("#format-60")).toBeChecked();
+});
