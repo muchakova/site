@@ -1,0 +1,28 @@
+---
+permalink: /en/feed.xml
+layout: null
+eleventyExcludeFromCollections: true
+---
+{%- set map = collections.i18nMap -%}
+{%- set posts = collections.postIndex -%}
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ T.feed.title }}</title>
+    <link>{{ site.url }}{{ 'blog' | urlFor(lang, map, site.routes) }}</link>
+    <atom:link href="{{ site.url }}{{ page.url }}" rel="self" type="application/rss+xml"/>
+    <description>{{ T.feed.description }}</description>
+    <language>{{ lang }}</language>
+    <lastBuildDate>{{ posts[0].date | rfc822 }}</lastBuildDate>
+    {% for p in posts %}
+    <item>
+      <title>{{ p.title[lang] }}</title>
+      <link>{{ site.url }}{{ p | postUrl(lang) }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ p | postUrl(lang) }}</guid>
+      <pubDate>{{ p.date | rfc822 }}</pubDate>
+      <category>{{ p.tag[lang] }}</category>
+      <description>{{ p.excerpt[lang] }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

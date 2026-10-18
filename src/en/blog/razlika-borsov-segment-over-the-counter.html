@@ -1,0 +1,164 @@
+---
+title: "The Difference Between Exchange Trading and Over-the-Counter Trading"
+description: "What OTC means, how it differs from exchange trading, and why fractional shares require a closer reading of the trade confirmation."
+date: "2026-06-11"
+tag: "Investing"
+cats: ["invest", "taxes"]
+ogImage: "/images/img_0725.jpg"
+keywords: ["OTC", "over-the-counter", "борсово търгуване", "fractional shares", "MiFID II", "MiFIR", "systematic internaliser", "ATS", "NASDAQ", "Xetra"]
+---
+<p>
+            An interesting discussion formed under my video on whether Revolut is a regulated market.
+            The topic matters for tax treatment, so I think more information is useful here.
+            Awareness and education are always an advantage.
+          </p>
+<figure class="post-cover">
+<img alt="The difference between exchange and OTC execution" eleventy:widths="680,1360" sizes="(min-width: 980px) 680px, calc(100vw - 40px)" src="/images/img_0725.jpg"/>
+</figure>
+<h2 id="en-1">What does an OTC sale of shares mean?</h2>
+<p>
+            OTC stands for <em>over-the-counter</em>. In simple terms, it means that the transaction
+            does not pass through the central exchange "shop window", where everyone can see buy and
+            sell orders in a common order book.
+          </p>
+<p>
+            Instead, the transaction is executed off exchange: for example directly against a broker,
+            a market maker, a systematic internaliser, or another professional counterparty.
+          </p>
+<blockquote>
+            OTC does not automatically mean "illegal", "grey", or "unregulated". It means "outside the exchange order book".
+          </blockquote>
+<p>
+            The execution can still be fully regulated, with best execution rules, reporting obligations,
+            and publication of trade information. That is why it is important to look not only at the
+            instrument, but also at how the order was actually executed.
+          </p>
+<h2 id="en-2">How is it different from exchange trading?</h2>
+<p>
+            In exchange trading, there is an organised market: for example NASDAQ, NYSE, Xetra,
+            Euronext, the Bulgarian Stock Exchange, and others. There is a central system, an order
+            book, access rules, order-matching rules, and a publicly visible market price.
+          </p>
+<p>
+            In an OTC transaction, there is usually no such central order book. The client sends an
+            order to an intermediary, and the intermediary may execute it against a market maker, via
+            a systematic internaliser, through an alternative system, internally against its own
+            position, or by aggregating it with other client orders.
+          </p>
+<h2 id="en-3">Can a listed share be bought or sold OTC?</h2>
+<p>
+            Yes, it can, but this depends on the instrument, the jurisdiction, the intermediary's
+            status, and the applicable rules. There is one important distinction here.
+          </p>
+<ol>
+<li>
+<strong>OTC stock or OTC security.</strong> The instrument itself is not listed on a
+              major national exchange and is traded outside one.
+            </li>
+<li>
+<strong>OTC execution or off-exchange execution.</strong> The instrument may be listed
+              on an exchange, but the specific client trade may be executed outside the exchange order
+              book: for example through an ATS, a market maker, a systematic internaliser, or another
+              off-exchange mechanism.
+            </li>
+</ol>
+<p>
+            For example, a share may be listed on NASDAQ, while the specific client order is executed
+            by a market maker or by the broker acting as principal, rather than necessarily entering
+            NASDAQ's order book directly.
+          </p>
+<h2 id="en-4">For the EU: what do MiFID II and MiFIR say?</h2>
+<p>
+            In the EU, a "trading venue" under MiFID II includes a regulated market, an MTF, and an
+            OTF. For shares, MiFIR is more specific: for shares with an EEA ISIN that are traded on a
+            trading venue, investment firms must generally ensure that trades are executed on a
+            regulated market, an MTF, a systematic internaliser, or an equivalent third-country venue,
+            except where an express exception applies.
+          </p>
+<p>
+            In other words, Europe is not a place where one simply "does OTC however one decides".
+            A systematic internaliser is not an exchange, but it is an allowed MiFIR channel for
+            executing certain share trades. MiFID II defines it as an investment firm which, on an
+            organised, frequent, and systematic basis, deals on own account when executing client
+            orders outside a regulated market, MTF, or OTF.
+          </p>
+<p>
+            Xetra is a classic example of transparent exchange or organised execution: it has an
+            order book and price-formation rules that are predetermined and public.
+          </p>
+<h2 id="en-5">In the US: why can a listed share trade off exchange?</h2>
+<p>
+            In the US, the fact that META is listed on NASDAQ does not mean that every client order
+            necessarily enters the NASDAQ order book directly. Listed securities may have off-exchange
+            execution, including through ATSs and other off-exchange venues.
+          </p>
+<p>
+            FINRA publishes OTC statistics for trades reported by ATSs and member firms, including
+            OTC activity outside ATSs. So "the share is listed" and "my specific order was executed
+            on the exchange" are not the same statement.
+          </p>
+<h2 id="en-6">Example: buying 8.456 fractional shares of META</h2>
+<p>
+            Most likely, the entire transaction does not pass as one ordinary exchange trade for
+            8.456 shares, because exchanges generally do not trade shares in quantities below one
+            whole share.
+          </p>
+<p>The usual model looks like this:</p>
+<ul>
+<li>
+              the whole-share portion of the order, for example 8 shares, may be executed on an
+              exchange, against a market maker, through an ATS, or another venue depending on the
+              broker's routing policy;
+            </li>
+<li>
+              the fractional component, for example 0.456 of a share, is often handled internally:
+              the broker may act as counterparty, aggregate fractional orders from many clients, or
+              hold a whole share and allocate economic rights over parts of it.
+            </li>
+</ul>
+<p>
+            That is why, with fractional shares, the client often has economic exposure to a fraction
+            of a share, but that fractional component may not be transferable to another broker and
+            may have to be sold when the portfolio is transferred.
+          </p>
+<blockquote>
+            When you buy "8.456 META shares" through an app, you should not automatically imagine
+            that 8.456 shares entered the NASDAQ order book as one single order.
+          </blockquote>
+<h2 id="en-7">What should be checked?</h2>
+<p>
+            Before making a tax, accounting, or legal statement about what exactly was purchased,
+            the documents and the specific intermediary's terms must be reviewed.
+          </p>
+<ul>
+<li>the trade confirmation or contract note;</li>
+<li>the execution venue;</li>
+<li>the broker's capacity: agent, principal, or riskless principal;</li>
+<li>the fractional share terms;</li>
+<li>whether the client has direct ownership, a contractual/economic right against the broker, an omnibus holding, or an internally allocated part of a whole share.</li>
+</ul>
+<p>
+            This detail matters for transfers to another broker, corporate actions, voting, dividends,
+            and tax documentation.
+          </p>
+<h2 id="en-8">The more precise wording</h2>
+<p>
+            For client, accounting, or tax purposes, I would not automatically write "shares were
+            purchased on NASDAQ". A more precise formulation is:
+          </p>
+<blockquote>
+            The client acquired exposure/a position in META through an investment intermediary; the
+            specific place and method of execution should be established from the trade confirmation,
+            contract note, execution venue report, and the intermediary's fractional share terms.
+          </blockquote>
+<p>
+            This publication is for informational purposes only and does not constitute legal, tax,
+            or investment advice.
+          </p>
+<h2 id="en-9">Sources and useful references</h2>
+<ul>
+<li><a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/over-counter-otc-securities" rel="noopener" target="_blank">SEC Investor.gov: Over-The-Counter (OTC) Securities<span class="sr-only"> (opens in a new tab)</span></a></li>
+<li><a href="https://www.finra.org/filing-reporting/otc-transparency" rel="noopener" target="_blank">FINRA: OTC (ATS &amp; Non-ATS) Transparency<span class="sr-only"> (opens in a new tab)</span></a></li>
+<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014R0600" rel="noopener" target="_blank">Regulation (EU) No 600/2014 (MiFIR)<span class="sr-only"> (opens in a new tab)</span></a></li>
+<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0065" rel="noopener" target="_blank">Directive 2014/65/EU (MiFID II)<span class="sr-only"> (opens in a new tab)</span></a></li>
+</ul>

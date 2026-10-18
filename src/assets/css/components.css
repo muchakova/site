@@ -463,6 +463,12 @@
   /* tall images (portrait photos, document scans) never take more than most of a screen */
   .prose figure img { width: auto; max-width: 100%; max-height: min(75vh, 680px); margin-inline: auto; object-fit: contain; }
   .prose .post-cover-compact img { max-width: 480px; }
+  /* scanned document pages: collapsed; opened, each page uses the full column width */
+  .prose .page-gallery { border: 1px solid var(--color-line); border-radius: var(--radius-l); background: var(--color-surface); }
+  .prose .page-gallery summary { padding: var(--space-s) var(--space-m); font-weight: var(--weight-semibold); cursor: pointer; }
+  .prose .page-gallery__pages { display: grid; gap: var(--space-s); padding: 0 var(--space-m) var(--space-m); }
+  .prose .page-gallery__page { margin: 0; }
+  .prose .page-gallery__page img { width: 100%; max-height: none; border: 1px solid var(--color-line); }
   .prose .table-wrap { margin-block: 1.4em; }
   .download-link { display: inline-flex; align-items: center; gap: 8px; font-weight: var(--weight-semibold); }
   .prose .disclosure { margin-top: 0; }

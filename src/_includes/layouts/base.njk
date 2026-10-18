@@ -35,6 +35,7 @@
   <meta name="theme-color" content="#F2F4FA" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#080C19" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ T.feed.title }}" href="{{ '/feed.xml' if lang == 'bg' else '/en/feed.xml' }}">
   <script>try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   {% if lang == "bg" %}<link rel="preload" href="/assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>{% endif %}

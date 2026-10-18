@@ -21,14 +21,14 @@ layout: layouts/base.njk
     <div class="post-main">
       <details class="toc-mobile">
         <summary>{{ D.toc }}</summary>
-        <nav class="toc" aria-label="{{ D.tocNav }}"><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol></nav>
+        <nav class="toc" aria-label="{{ D.tocNav }}"><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.label | safe }}</a></li>{% endfor %}</ol></nav>
       </details>
       <div class="prose">
 {{ body | safe }}
       </div>
     </div>
     <div class="toc-desktop">
-      <nav class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title">{{ D.toc }}</p><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol></nav>
+      <nav class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title">{{ D.toc }}</p><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.label | safe }}</a></li>{% endfor %}</ol></nav>
     </div>
   </div>
 </article>

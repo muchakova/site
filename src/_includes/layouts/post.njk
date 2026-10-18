@@ -7,7 +7,6 @@ layout: layouts/base.njk
 {%- set postAlts = map[key] or {} -%}
 {%- set body = content | localizeLinks(lang, map) -%}
 {%- set headings = body | toc -%}
-{%- set minutes = body | readingTime -%}
 {%- set blogUrl = 'blog' | urlFor(lang, map, site.routes) -%}
 {%- set bookingUrl = 'booking' | urlFor(lang, map, site.routes) -%}
 {%- set shareUrl = (site.url + page.url) | encodeUri -%}
@@ -32,7 +31,7 @@ layout: layouts/base.njk
       {% if headings.length >= 3 %}
       <details class="toc-mobile">
         <summary>{{ P.toc }}</summary>
-        <nav class="toc" aria-label="{{ P.tocNav }}"><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol></nav>
+        <nav class="toc" aria-label="{{ P.tocNav }}"><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.label | safe }}</a></li>{% endfor %}</ol></nav>
       </details>
       {% endif %}
       <div class="prose">
@@ -56,14 +55,14 @@ layout: layouts/base.njk
     </div>
     {% if headings.length >= 3 %}
     <div class="toc-desktop">
-      <nav class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title">{{ P.toc }}</p><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol></nav>
+      <nav class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title">{{ P.toc }}</p><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.label | safe }}</a></li>{% endfor %}</ol></nav>
       <a class="btn btn--primary btn--small btn--block" href="{{ bookingUrl }}" style="margin-top: var(--space-m)">{{ P.ctaButton }}</a>
     </div>
     {% endif %}
   </div>
 </article>
 
-{%- set related = legacyPosts | relatedPosts("/blog/" + page.fileSlug + ".html", cats) -%}
+{%- set related = collections.postIndex | relatedPosts("/blog/" + page.fileSlug + ".html", cats) -%}
 {% if related.length %}
 <section class="section post-related" aria-labelledby="related-title">
   <div class="wrap">
@@ -71,7 +70,7 @@ layout: layouts/base.njk
     <div class="post-feed">
       <ul class="post-rows">
         {% for p in related %}
-        <li><article class="post-row"><time datetime="{{ p.date }}">{{ p.date | date(lang, "short") }}</time><div><span class="cat">{{ p.tag[lang] }}</span><h3 class="post-row__title"><a class="card__link" href="{{ p | postUrl(lang, map) }}">{{ p.title[lang] }}</a></h3></div><span class="len">{{ p.minutes[lang] }} {{ T.units.min }}</span></article></li>
+        <li><article class="post-row"><time datetime="{{ p.date }}">{{ p.date | date(lang, "short") }}</time><div><span class="cat">{{ p.tag[lang] }}</span><h3 class="post-row__title"><a class="card__link" href="{{ p | postUrl(lang) }}">{{ p.title[lang] }}</a></h3></div><span class="len">{{ p.minutes[lang] }} {{ T.units.min }}</span></article></li>
         {% endfor %}
       </ul>
     </div>

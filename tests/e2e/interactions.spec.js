@@ -212,3 +212,23 @@ test("privacy and accessibility: contents list, marked open questions", async ({
     await expect(page.locator(".doc-updated time")).toHaveAttribute("datetime", /^\d{4}-\d{2}-\d{2}$/);
   }
 });
+
+test("RSS feeds: well-formed, one item per article, links open the article in the feed's language", async ({ page, request }) => {
+  for (const [path, lang] of [["/feed.xml", "bg"], ["/en/feed.xml", "en"]]) {
+    const xml = await (await request.get(path)).text();
+    await page.goto("/");
+    const feed = await page.evaluate((text) => {
+      const doc = new DOMParser().parseFromString(text, "application/xml");
+      return { error: !!doc.querySelector("parsererror"), lang: doc.querySelector("language")?.textContent,
+        links: [...doc.querySelectorAll("item > link")].map((l) => new URL(l.textContent).pathname) };
+    }, xml);
+    expect(feed.error).toBe(false);
+    expect(feed.lang).toBe(lang);
+    expect(feed.links.length).toBe(29);
+    for (const link of feed.links.slice(0, 3)) {
+      expect((await request.get(link)).status()).toBe(200);
+      if (lang === "en") expect(link).toMatch(/^\/en\/blog\//);
+    }
+  }
+  await expect(page.locator('link[rel="alternate"][type="application/rss+xml"]')).toHaveAttribute("href", "/feed.xml");
+});

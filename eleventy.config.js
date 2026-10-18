@@ -7,6 +7,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { plainText as plain, readingMinutes } from "./lib/text.js";
 
 // Old pages that are not redesigned yet are copied unchanged, so every legacy URL
 // keeps working at every step. Remove an entry once its new template exists.
@@ -64,6 +65,28 @@ export default function (eleventyConfig) {
     defaultAttributes: { loading: "lazy", decoding: "async", sizes: "(min-width: 860px) 440px, 100vw" },
   });
 
+  // ---------- post list: one entry per article with both languages, built from the post files ----------
+  // Used by the home page, the blog, services, related posts and the feeds. Newest first;
+  // posts published on the same day are ordered by `order` (higher first).
+  eleventyConfig.addCollection("postIndex", (api) => {
+    const byKey = new Map();
+    for (const item of api.getFilteredByTag("posts")) {
+      const { key, lang } = item.data;
+      if (!byKey.has(key)) byKey.set(key, { key, urls: {}, title: {}, tag: {}, excerpt: {}, minutes: {} });
+      const p = byKey.get(key);
+      p.urls[lang] = item.url;
+      p.title[lang] = item.data.title;
+      p.tag[lang] = item.data.tag;
+      p.excerpt[lang] = item.data.excerpt || item.data.description;
+      p.minutes[lang] = item.data.minutes;
+      if (lang === "bg") {
+        Object.assign(p, { url: item.url, date: item.date.toISOString().slice(0, 10), cats: item.data.cats || [], order: item.data.order || 0 });
+      }
+    }
+    return [...byKey.values()].filter((p) => p.url)
+      .sort((a, b) => b.date.localeCompare(a.date) || b.order - a.order);
+  });
+
   // ---------- language map: collections.i18nMap[key][lang] = url ----------
   eleventyConfig.addCollection("i18nMap", (api) => {
     const map = {};
@@ -84,6 +107,7 @@ export default function (eleventyConfig) {
     const s = new Intl.DateTimeFormat(lang === "bg" ? "bg-BG" : "en-GB", { ...DATE_FORMATS[style][lang === "bg" ? "bg" : "en"], timeZone: "UTC" }).format(d);
     return s.replace(/\s?г\.$/, ""); // "8 октомври 2026 г." → "8 октомври 2026"
   });
+  eleventyConfig.addFilter("rfc822", (value) => new Date(`${value}T12:00:00Z`).toUTCString());   // RSS dates
   eleventyConfig.addFilter("isoDate", (value) => (value instanceof Date ? value : new Date(`${value}T12:00:00Z`)).toISOString().slice(0, 10));
   eleventyConfig.addFilter("price", (amount, lang) => (lang === "bg" ? `${amount} €` : `€${amount}`));
   eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
@@ -92,12 +116,19 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
   // ---------- posts ----------
-  const WORDS_PER_MINUTE = 200;
-  const plain = (html) => String(html).replace(/<(script|style)[\s\S]*?<\/\1>/g, " ").replace(/<[^>]+>/g, " ");
-  eleventyConfig.addFilter("readingTime", (html) => Math.max(1, Math.ceil((plain(html).match(/[\p{L}\p{N}]+/gu) || []).length / WORDS_PER_MINUTE)));
+  eleventyConfig.addFilter("readingTime", readingMinutes);
   // table of contents from the <h2 id> headings of a post body
+  // (`label` keeps <span lang="…"> so foreign terms in a heading are still pronounced right in the contents)
   eleventyConfig.addFilter("toc", (html) => [...String(html).matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)]
-    .map((m) => ({ id: m[1], text: plain(m[2]).replace(/\s+/g, " ").trim() })));
+    .map((m) => ({
+      id: m[1],
+      text: plain(m[2]).replace(/\s+/g, " ").trim(),
+      label: m[2]
+        .replace(/<span[^>]*\slang="([^"]+)"[^>]*>([^<]*)<\/span>/g, "\u0001$1\u0002$2\u0003")   // park language marks
+        .replace(/<[^>]+>/g, " ")                                                            // drop every other tag
+        .replace(/\u0001([^\u0002]+)\u0002([^\u0003]*)\u0003/g, '<span lang="$1">$2</span>')
+        .replace(/\s+/g, " ").trim(),
+    })));
   // links point to the page in the reader's language when it exists
   function localUrl(path, lang, map) {
     if (lang === "bg" || !map) return null;
@@ -123,11 +154,8 @@ export default function (eleventyConfig) {
         embedUrl: `https://www.youtube-nocookie.com/embed/${v.yt}`, contentUrl: `https://www.youtube.com/watch?v=${v.yt}`, inLanguage: "bg" },
     })),
   }).replace(/</g, "\\u003c"));
-  // URL of a listed post in the reader's language (migrated posts have an EN page)
-  eleventyConfig.addFilter("postUrl", (post, lang, map) => {
-    const key = "post-" + post.url.replace(/^\/blog\//, "").replace(/\.html$/, "");
-    return map?.[key]?.[lang] ?? map?.[key]?.bg ?? post.url;
-  });
+  // URL of a listed post in the reader's language (falls back to the BG article)
+  eleventyConfig.addFilter("postUrl", (post, lang) => post.urls?.[lang] ?? post.url);
   // related posts: most shared categories first, then newest
   eleventyConfig.addFilter("relatedPosts", (posts, url, cats, n = 3) => (posts || [])
     .filter((p) => p.url !== url)

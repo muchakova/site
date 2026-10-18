@@ -44,7 +44,8 @@
     "game": "Game",
     "synth": "Synthesizer",
     "privacy": "Privacy",
-    "accessibility": "Accessibility"
+    "accessibility": "Accessibility",
+    "rss": "RSS feed"
   },
   "footer": {
     "navHeading": "Navigation",
@@ -517,5 +518,10 @@
     "searchButton": "Search",
     "linksTitle": "Useful pages",
     "otherLang": "Български"
+  },
+  "feed": {
+    "title": "Marina Muchakova — Blog",
+    "description": "Articles on tax, investing, crypto and VAT by Marina Muchakova, tax consultant.",
+    "link": "Subscribe via RSS"
   }
 }

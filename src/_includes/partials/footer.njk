@@ -22,6 +22,7 @@
           <li><a href="{{ item | urlFor(lang, map, site.routes) }}">{{ T.nav[item] }}</a></li>
           {% endfor %}
           <li><a href="{{ site.synth }}" target="_blank" rel="noopener">{{ T.nav.synth }}<span class="sr-only"> {{ T.a11y.newTab }}</span></a></li>
+          <li><a href="{{ '/feed.xml' if lang == 'bg' else '/en/feed.xml' }}" type="application/rss+xml">{{ T.nav.rss }}</a></li>
         </ul>
       </nav>
       <div>

@@ -23,9 +23,22 @@ BY_URL = {p["url"]: p for p in LEGACY}
 
 TEXT = {
     "bg": {"table": "Таблица", "prompt": "Промпт", "copied": "Копирано", "copyFailed": "Изберете текста и копирайте ръчно",
-           "newTab": "(отваря се в нов раздел)"},
+           "newTab": "(отваря се в нов раздел)", "gallery": "Покажи всички {n} страници"},
     "en": {"table": "Table", "prompt": "Prompt", "copied": "Copied", "copyFailed": "Select the text and copy it manually",
-           "newTab": "(opens in a new tab)"},
+           "newTab": "(opens in a new tab)", "gallery": "Show all {n} pages"},
+}
+# short titles for the browser tab / search results where the full title is over 70 characters
+SEO_TITLES = {
+    "5-danachni-greshki-investitori": {"bg": "5 данъчни грешки, които допускат инвеститорите"},
+    "aml-pragove-stepeni-due-diligence": {"bg": "AML прагове и степени на комплексна проверка"},
+    "esma-non-compliant-mexc": {"bg": "MEXC в „черния списък“ на ESMA: какво става с активите",
+                                "en": "MEXC on ESMA’s “Blacklist”: What Happens to Your Assets"},
+    "kak-se-oblagat-etf-ite-v-balgaria": {"bg": "Как се облагат ETF-ите в България", "en": "How Are ETFs Taxed in Bulgaria?"},
+    "kripto-borsi-cex-dex-oborot-zdds": {"bg": "Крипто сделки през CEX и DEX и прагът по ЗДДС",
+                                         "en": "Crypto Trades via CEX and DEX and the VAT Threshold"},
+    "metamask-cl-card-mica-moonpay": {"bg": "MetaMask CL Card под MiCA: услугите вече са на MoonPay",
+                                      "en": "MetaMask CL Card Moves Under MiCA via MoonPay Europe"},
+    "smart-kontrakti-defi-biznes": {"en": "Smart Contracts and DeFi: What They Mean for Your Business"},
 }
 ICON = '<svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#{}"/></svg>'
 
@@ -61,13 +74,33 @@ def convert(block, lang, slug, soup):
         img["eleventy:widths"] = "680,1360"
         if img["src"].lower().endswith(".png"):
             img["eleventy:formats"] = "webp,png"  # screenshots with text stay sharp
+    # a gallery of scanned pages: collapsed, so the article stays readable (images load only when opened);
+    # scans of text stay sharp as WebP/JPEG
+    for gallery in block.select(".ib-agreement-gallery"):
+        pages = gallery.select("figure")
+        for img in gallery.select("img"):
+            img["eleventy:formats"] = "webp,jpeg"
+        details = soup.new_tag("details", attrs={"class": "page-gallery"})
+        summary = soup.new_tag("summary")
+        summary.string = t["gallery"].format(n=len(pages))
+        inner = soup.new_tag("div", attrs={"class": "page-gallery__pages"})
+        for fig in pages:
+            fig["class"] = ["page-gallery__page"]
+            inner.append(fig.extract())
+        details.append(summary)
+        details.append(inner)
+        gallery.replace_with(details)
     # h2 ids keep the old table-of-contents anchors (#bg-1, #en-2 …)
     for i, h2 in enumerate(block.find_all("h2"), 1):
         h2["id"] = h2.get("id") or f"{lang}-{i}"
-    # tables → focusable, named region
+    # tables → focusable, named region (names must be unique on the page)
+    used = {}
     for n, wrap in enumerate(block.select(".post-table-wrap"), 1):
         heading = wrap.find_previous(["h2", "h3"])
         label = f"{t['table']}: {heading.get_text(' ', strip=True)}" if heading else f"{t['table']} {n}"
+        used[label] = used.get(label, 0) + 1
+        if used[label] > 1:
+            label = f"{label} ({used[label]})"
         wrap.name = "section"
         wrap.attrs = {"class": "table-wrap", "tabindex": "0", "aria-label": label}
     # prompt box with copy button (the site script handles copying and the announcement)
@@ -91,7 +124,36 @@ def convert(block, lang, slug, soup):
         a["class"] = "download-link"
         a.insert(0, BeautifulSoup(ICON.format("download"), "html.parser"))
         dl.replace_with(BeautifulSoup(f'<p>{a}</p>', "html.parser"))
+    if lang == "en":
+        mark_bulgarian(block, soup)
     return block
+
+
+CYRILLIC = re.compile(r"[\u0400-\u04FF]+(?:[\s\-–.,/№0-9]*[\u0400-\u04FF]+)*(?:[\-–][0-9]+)?")
+
+
+def mark_bulgarian(block, soup):
+    """Bulgarian terms in the English text (ЗДДС, ЗМИП …) get lang="bg", so screen readers pronounce them right."""
+    for node in list(block.find_all(string=CYRILLIC)):
+        inside = []  # ancestors up to the block (the legacy page itself is <html lang="bg">)
+        for parent in node.parents:
+            if parent is block:
+                break
+            inside.append(parent)
+        if any(a.get("lang") for a in inside) or node.parent.name in ("script", "style"):
+            continue
+        parts, last = [], 0
+        for m in CYRILLIC.finditer(node):
+            parts.append(node[last:m.start()])
+            span = soup.new_tag("span", attrs={"lang": "bg"})
+            span.string = m.group(0)
+            parts.append(span)
+            last = m.end()
+        parts.append(node[last:])
+        for part in parts:
+            if part != "":
+                node.insert_before(part)
+        node.extract()
 
 
 def migrate(slug):
@@ -123,6 +185,7 @@ def migrate(slug):
             body = f'<p class="disclosure">{note.decode_contents()}</p>\n\n' + body
         front = {
             "title": legacy["title"][lang],
+            **({"seoTitle": SEO_TITLES[slug][lang]} if lang in SEO_TITLES.get(slug, {}) else {}),
             "description": (soup.find("meta", attrs={"name": "description"})["content"] if lang == "bg" else legacy["excerpt"][lang]),
             "date": date,
             "tag": legacy["tag"][lang],
