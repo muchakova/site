@@ -1,0 +1,1893 @@
+{
+ "translation_keys": {
+  "bg": 205,
+  "en": 205,
+  "missing_in_en": [],
+  "missing_in_bg": [],
+  "used_in_html": 158,
+  "used_but_undefined": [],
+  "defined_but_unused_in_html": [
+   "about_bio_4",
+   "blog_page_post_6_title",
+   "blog_page_post_7_title",
+   "blog_page_post_8_title",
+   "blog_post_0_excerpt",
+   "blog_post_0_tag",
+   "blog_post_0_title",
+   "blog_post_1_excerpt",
+   "blog_post_1_tag",
+   "blog_post_1_title",
+   "blog_post_2_excerpt",
+   "blog_post_2_tag",
+   "blog_post_2_title",
+   "blog_post_3_excerpt",
+   "blog_post_3_tag",
+   "blog_post_3_title",
+   "blog_post_4_excerpt",
+   "blog_post_4_tag",
+   "blog_post_4_title",
+   "blog_post_5_excerpt",
+   "blog_post_5_tag",
+   "blog_post_5_title",
+   "blog_post_6_title",
+   "blog_post_7_title",
+   "blog_post_8_title",
+   "blog_title",
+   "casp_mica_title",
+   "contact_donate_link",
+   "contact_group_donate",
+   "contact_text",
+   "cryptoeco_title",
+   "hero_cta_about",
+   "hero_cta_contact",
+   "lang_btn",
+   "partners_eyebrow",
+   "partners_home_title",
+   "partners_see_all",
+   "post_consult_btn",
+   "post_consult_sub",
+   "post_consult_title",
+   "proj_link",
+   "related_title",
+   "securities_vat_title",
+   "share_copied",
+   "toc_title",
+   "video_play",
+   "video_soon"
+  ]
+ },
+ "pages": [
+  {
+   "path": "blog/5-danachni-greshki-investitori-chast-2.html",
+   "title": "5 данъчни грешки, които допускат инвеститорите — Част 2 (За ценители) — Марина Мучакова",
+   "description": "Част 2 „За ценители“: разширен и редактиран разбор на 5-те данъчни грешки на инвеститорите — регулиран пазар срещу квалифициран пазар за растеж, ETF/ETC/ETN/ADR/GDR, tax-loss harvesting и MAR, рискът по ДДС и кога инвеститорът вече прилича на търговец.",
+   "canonical": "https://muchakova.com/blog/5-danachni-greshki-investitori-chast-2.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 20,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 3620,
+   "words_en": 4044,
+   "post": {
+    "title_bg": "5 данъчни грешки, които допускат инвеститорите — Част 2 (За ценители)",
+    "title_en": "5 Tax Mistakes Investors Make — Part 2 (For Connoisseurs)",
+    "date": "2026-07-17",
+    "body_words_bg": 3603,
+    "body_words_en": 4028,
+    "has_en_body": true,
+    "paragraphs_bg": 220,
+    "paragraphs_en": 220,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "invest"
+    ],
+    "pop": "18"
+   }
+  },
+  {
+   "path": "blog/5-danachni-greshki-investitori.html",
+   "title": "5 данъчни грешки, които допускат инвеститорите! (И които после им струват скъпо) — Марина Мучакова",
+   "description": "5-те най-чести и най-скъпи данъчни грешки на инвеститорите в България: регулиран пазар срещу европейски пазар, ETF/ETC/ETP, Tax Loss Harvesting, декемврийските промени в законите и рискът от регистрация по ДДС.",
+   "canonical": "https://muchakova.com/blog/5-danachni-greshki-investitori.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 12,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 1064,
+   "words_en": 1147,
+   "post": {
+    "title_bg": "5 данъчни грешки, които допускат инвеститорите! (И които после им струват скъпо)",
+    "title_en": "5 Tax Mistakes Investors Make! (That Later Cost Them Dearly)",
+    "date": "2026-07-15",
+    "body_words_bg": 1045,
+    "body_words_en": 1130,
+    "has_en_body": true,
+    "paragraphs_bg": 20,
+    "paragraphs_en": 20,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "invest"
+    ],
+    "pop": "17"
+   }
+  },
+  {
+   "path": "blog/aml-pragove-stepeni-due-diligence.html",
+   "title": "Допълнение: Прагове и степени на комплексна проверка (Due Diligence) — Марина Мучакова",
+   "description": "Допълнение към AML наръчника: законовите прагове от 1 000, 10 000 и 15 000 евро, трите степени на комплексна проверка (SDD, CDD, EDD) и защо алгоритмите определят динамични прагове за всеки клиент.",
+   "canonical": "https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 8,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 941,
+   "words_en": 1043,
+   "post": {
+    "title_bg": "Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence)",
+    "title_en": "Addendum: Thresholds and Levels of Due Diligence",
+    "date": "2026-07-10",
+    "body_words_bg": 924,
+    "body_words_en": 1029,
+    "has_en_body": true,
+    "paragraphs_bg": 24,
+    "paragraphs_en": 24,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "crypto",
+     "institutions"
+    ],
+    "pop": "15"
+   }
+  },
+  {
+   "path": "blog/danachen-narachnik-za-investitori.html",
+   "title": "Данъчен наръчник за инвеститори в България — Марина Мучакова",
+   "description": "Данъчен наръчник за инвеститори в България: крипто, акции, ETF, дивиденти, деривати, злато и недвижими имоти — кога се дължи данък, колко е той и къде се декларира.",
+   "canonical": "https://muchakova.com/blog/danachen-narachnik-za-investitori.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 12,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 1599,
+   "words_en": 1743,
+   "post": {
+    "title_bg": "Данъчен наръчник за инвеститори в България",
+    "title_en": "Tax Guide for Investors in Bulgaria",
+    "date": "2026-07-08",
+    "body_words_bg": 1586,
+    "body_words_en": 1730,
+    "has_en_body": true,
+    "paragraphs_bg": 57,
+    "paragraphs_en": 57,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "invest",
+     "crypto"
+    ],
+    "pop": "13"
+   }
+  },
+  {
+   "path": "blog/dck-obligacii-danaci.html",
+   "title": "ДЦК и как не се облагат с данъци — Марина Мучакова",
+   "description": "Купони, отстъпки и капиталови печалби — пълното данъчно ръководство за физически лица, инвестиращи в ДЦК и облигации в България.",
+   "canonical": "https://muchakova.com/blog/dck-obligacii-danaci.html",
+   "og_image": "https://muchakova.com/images/razmer-ima-znachenie-cover.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 14,
+   "data_key_count": 30,
+   "lang_blocks_bg": 1,
+   "lang_blocks_en": 1,
+   "words_bg": 621,
+   "words_en": 687,
+   "post": {
+    "title_bg": "ДЦК и как не се облагат с данъци  [NOT SPLIT BY LANGUAGE]",
+    "title_en": "ДЦК и как не се облагат с данъци  [NOT SPLIT BY LANGUAGE]",
+    "date": "2026-02-14",
+    "body_words_bg": 621,
+    "body_words_en": 687,
+    "has_en_body": true,
+    "paragraphs_bg": 31,
+    "paragraphs_en": 31,
+    "components": [
+     "post-cover",
+     "post-cover-compact"
+    ],
+    "tables": 0,
+    "images": 2,
+    "blockquotes": 2,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "invest"
+    ],
+    "pop": "3"
+   }
+  },
+  {
+   "path": "blog/dds-promeni-2026.html",
+   "title": "Промени в ДДС при електронна търговия и онлайн събития — Марина Мучакова",
+   "description": "Промени в ДДС от 1 януари 2026 г.: място на доставка за дигитални услуги, нов режим за малки предприятия, EX статус и отражение върху OSS.",
+   "canonical": "https://muchakova.com/blog/dds-promeni-2026.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 8,
+   "data_key_count": 30,
+   "lang_blocks_bg": 1,
+   "lang_blocks_en": 1,
+   "words_bg": 311,
+   "words_en": 334,
+   "post": {
+    "title_bg": "Промени в ДДС при електронна търговия и онлайн събития  [NOT SPLIT BY LANGUAGE]",
+    "title_en": "Промени в ДДС при електронна търговия и онлайн събития  [NOT SPLIT BY LANGUAGE]",
+    "date": "2026-03-04",
+    "body_words_bg": 311,
+    "body_words_en": 334,
+    "has_en_body": true,
+    "paragraphs_bg": 17,
+    "paragraphs_en": 17,
+    "components": [
+     "post-cover",
+     "post-cover-compact"
+    ],
+    "tables": 0,
+    "images": 2,
+    "blockquotes": 4,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "business"
+    ],
+    "pop": "7"
+   }
+  },
+  {
+   "path": "blog/dds-registraciya-interactive-brokers.html",
+   "title": "ДДС регистрация при търговия с акции чрез Interactive Brokers — Марина Мучакова",
+   "description": "ДДС регистрация при търговия с акции и финансови инструменти чрез Interactive Brokers — къде е мястото на изпълнение, чл. 21, ал. 2 ЗДДС, ролята на брокера и примерен отговор на ИПДПОЗЛ, довел до акт за отказ от регистрация.",
+   "canonical": "https://muchakova.com/blog/dds-registraciya-interactive-brokers.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 29,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 5191,
+   "words_en": 5764,
+   "post": {
+    "title_bg": "ДДС регистрация при търговия с акции и финансови инструменти чрез Interactive Brokers",
+    "title_en": "VAT Registration When Trading Shares and Financial Instruments via Interactive Brokers",
+    "date": "2026-08-05",
+    "body_words_bg": 5172,
+    "body_words_en": 5746,
+    "has_en_body": true,
+    "paragraphs_bg": 189,
+    "paragraphs_en": 188,
+    "components": [
+     "post-cover",
+     "post-download"
+    ],
+    "tables": 0,
+    "images": 34,
+    "blockquotes": 4,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "invest"
+    ],
+    "pop": "20"
+   }
+  },
+  {
+   "path": "blog/dds-turisticheska-usluga-9-ili-20.html",
+   "title": "9% или 20% ДДС за еднодневния тур? — Марина Мучакова",
+   "description": "Еднодневна туристическа разходка, продавана през платформи като GetYourGuide, Viator или Airbnb Experiences — 9% или 20% ДДС? Защо намалената ставка вече не съществува, кога има „обща туристическа услуга“ и върху каква основа се начислява данъкът. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/dds-turisticheska-usluga-9-ili-20.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 20,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 2454,
+   "words_en": 2762,
+   "post": {
+    "title_bg": "9% или 20% ДДС за еднодневния тур?",
+    "title_en": "9% or 20% VAT on a One-Day Tour?",
+    "date": "2026-08-31",
+    "body_words_bg": 2440,
+    "body_words_en": 2746,
+    "has_en_body": true,
+    "paragraphs_bg": 45,
+    "paragraphs_en": 45,
+    "components": [
+     "post-table-wrap"
+    ],
+    "tables": 6,
+    "images": 0,
+    "blockquotes": 8,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "business"
+    ],
+    "pop": "22"
+   }
+  },
+  {
+   "path": "blog/esma-non-compliant-mexc.html",
+   "title": "MEXC в „черния списък“ на ESMA — какво означава и какво става с активите ти — Марина Мучакова",
+   "description": "MEXC е вписан в регистъра на ESMA за non-compliant entities по MiCA. Какво означава това, каква е разликата с отнет лиценз и какво става с активите ти, ако ги местиш. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/esma-non-compliant-mexc.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 22,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 1189,
+   "words_en": 1323,
+   "post": {
+    "title_bg": "MEXC е в „черния списък“ на ESMA. Какво означава това и какво става с активите ти",
+    "title_en": "MEXC Is on ESMA's “Blacklist”. What It Means and What Happens to Your Assets",
+    "date": "2026-08-06",
+    "body_words_bg": 1164,
+    "body_words_en": 1300,
+    "has_en_body": true,
+    "paragraphs_bg": 60,
+    "paragraphs_en": 60,
+    "components": [
+     "post-table-wrap"
+    ],
+    "tables": 2,
+    "images": 0,
+    "blockquotes": 4,
+    "inline_scripts": 1,
+    "cats": [
+     "crypto",
+     "institutions"
+    ],
+    "pop": "21"
+   }
+  },
+  {
+   "path": "blog/kak-da-preminem-aml-proverka-kripto.html",
+   "title": "Наръчник: Как успешно да преминем AML проверка при крипто транзакции — Марина Мучакова",
+   "description": "Наръчник: как успешно да преминем AML проверка при крипто транзакции — как мислят AML анализаторите, разликата между произход на средствата и източник на богатството и как да подготвим досието си.",
+   "canonical": "https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 10,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 973,
+   "words_en": 1114,
+   "post": {
+    "title_bg": "Наръчник: Как успешно да преминем AML проверка при крипто транзакции",
+    "title_en": "A Guide to Successfully Passing an AML Check on Crypto Transactions",
+    "date": "2026-07-10",
+    "body_words_bg": 956,
+    "body_words_en": 1096,
+    "has_en_body": true,
+    "paragraphs_bg": 35,
+    "paragraphs_en": 35,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "crypto",
+     "institutions"
+    ],
+    "pop": "14"
+   }
+  },
+  {
+   "path": "blog/kak-se-oblagat-etf-ite-v-balgaria.html",
+   "title": "Как се облагат ETF-ите в България? (И защо инвеститорите бъркат най-важното) — Марина Мучакова",
+   "description": "Освободени ли са ETF-ите от данък в България? Разликата между ETF, ETN и ETC, кумулиращи срещу дистрибутиращи фондове, инвестиране през ЕООД, ирландските UCITS фондове и данък наследство, деклариране пред НАП и БНБ, плюс masterclass по ДДС и финансовите активи.",
+   "canonical": "https://muchakova.com/blog/kak-se-oblagat-etf-ite-v-balgaria.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 18,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 3835,
+   "words_en": 4130,
+   "post": {
+    "title_bg": "Как се облагат ETF-ите в България? (И защо инвеститорите бъркат най-важното)",
+    "title_en": "How Are ETFs Taxed in Bulgaria? (And Why Investors Get the Most Important Part Wrong)",
+    "date": "2026-07-21",
+    "body_words_bg": 3815,
+    "body_words_en": 4108,
+    "has_en_body": true,
+    "paragraphs_bg": 80,
+    "paragraphs_en": 80,
+    "components": [
+     "post-table-wrap"
+    ],
+    "tables": 2,
+    "images": 0,
+    "blockquotes": 2,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "invest"
+    ],
+    "pop": "19"
+   }
+  },
+  {
+   "path": "blog/kakvo-ne-pishe-v-white-paperite.html",
+   "title": "Какво не пише в white paper-ите — Марина Мучакова",
+   "description": "Криптоикономиката на блокчейна през очите на икономист: Bitcoin, Ethereum, DeFi, Layer 2, bridge-ове и регулация отвъд white paper-ите.",
+   "canonical": "https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 18,
+   "data_key_count": 30,
+   "lang_blocks_bg": 2,
+   "lang_blocks_en": 2,
+   "words_bg": 1769,
+   "words_en": 1958,
+   "post": {
+    "title_bg": "Какво не пише в white paper-ите",
+    "title_en": "What White Papers Do Not Say",
+    "date": "2026-05-28",
+    "body_words_bg": 1762,
+    "body_words_en": 1952,
+    "has_en_body": true,
+    "paragraphs_bg": 135,
+    "paragraphs_en": 135,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 16,
+    "inline_scripts": 1,
+    "cats": [
+     "crypto",
+     "economy"
+    ],
+    "pop": "11"
+   }
+  },
+  {
+   "path": "blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html",
+   "title": "Кога сделките с ценни книжа СА икономическа дейност? — Марина Мучакова",
+   "description": "Кога сделките с акции и ценни книжа са икономическа дейност за целите на ДДС: практика на СЕС, активен холдинг и приложение в България.",
+   "canonical": "https://muchakova.com/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 10,
+   "data_key_count": 30,
+   "lang_blocks_bg": 2,
+   "lang_blocks_en": 2,
+   "words_bg": 1079,
+   "words_en": 1166,
+   "post": {
+    "title_bg": "Кога сделките с ценни книжа СА икономическа дейност?",
+    "title_en": "When Are Securities Transactions an Economic Activity?",
+    "date": "2026-05-29",
+    "body_words_bg": 1071,
+    "body_words_en": 1159,
+    "has_en_body": true,
+    "paragraphs_bg": 23,
+    "paragraphs_en": 23,
+    "components": [
+     "post-table-wrap"
+    ],
+    "tables": 2,
+    "images": 0,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "invest"
+    ],
+    "pop": "8"
+   }
+  },
+  {
+   "path": "blog/kripto-borsi-cex-dex-oborot-zdds.html",
+   "title": "Чий е оборотът: на борсата или наш? — Марина Мучакова",
+   "description": "Продажбите на криптоактиви през Instant Sell и Convert, през order book и през DEX като Uniswap имат различно място на изпълнение — и затова не всички участват в прага от 51 130 евро за регистрация по ЗДДС. Анализ по чл. 21 и чл. 168в ЗДДС, чл. 18 от Регламент 282/2011 и MiCA. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/kripto-borsi-cex-dex-oborot-zdds.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 22,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 2753,
+   "words_en": 2963,
+   "post": {
+    "title_bg": "Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът за регистрация по ЗДДС",
+    "title_en": "Whose Turnover Is It — the Exchange’s or Ours? Crypto Trades via CEX and DEX and the VAT Registration Threshold",
+    "date": "2026-10-01",
+    "body_words_bg": 2727,
+    "body_words_en": 2936,
+    "has_en_body": true,
+    "paragraphs_bg": 48,
+    "paragraphs_en": 48,
+    "components": [
+     "post-table-wrap"
+    ],
+    "tables": 4,
+    "images": 0,
+    "blockquotes": 8,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "crypto"
+    ],
+    "pop": "24"
+   }
+  },
+  {
+   "path": "blog/lichen-ili-firmen-akaunt-broker.html",
+   "title": "Личен или фирмен акаунт при брокер — Марина Мучакова",
+   "description": "Личен или фирмен акаунт при брокер: ЗДДФЛ срещу ЗКПО буква по буква. Регулиран пазар срещу „регулирана борса“, MIC код и сегмент (XETA/XETB), пренасяне на загуби, пазари в САЩ, разходи, дивидент от 5% и US estate tax. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/lichen-ili-firmen-akaunt-broker.html",
+   "og_image": "https://muchakova.com/images/og-lichen-firmen-akaunt.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 12,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 2788,
+   "words_en": 3153,
+   "post": {
+    "title_bg": "Личен или фирмен акаунт при брокер",
+    "title_en": "Personal or Company Brokerage Account",
+    "date": "2026-10-08",
+    "body_words_bg": 2775,
+    "body_words_en": 3141,
+    "has_en_body": true,
+    "paragraphs_bg": 62,
+    "paragraphs_en": 62,
+    "components": [
+     "post-cover",
+     "post-prompt",
+     "post-prompt-copy",
+     "post-table-wrap"
+    ],
+    "tables": 2,
+    "images": 2,
+    "blockquotes": 4,
+    "inline_scripts": 2,
+    "cats": [
+     "invest",
+     "taxes",
+     "business"
+    ],
+    "pop": "28"
+   }
+  },
+  {
+   "path": "blog/metamask-cl-card-mica-moonpay.html",
+   "title": "MetaMask CL Card вече преминава под MiCA — Марина Мучакова",
+   "description": "От 1 юли 2026 г. крипто услугите по MetaMask CL Card се предоставят от MoonPay Europe — MiCA-лицензиран CASP. Какво означава това за потребителите.",
+   "canonical": "https://muchakova.com/blog/metamask-cl-card-mica-moonpay.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 12,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 547,
+   "words_en": 598,
+   "post": {
+    "title_bg": "MetaMask CL Card вече преминава под MiCA: зад крипто услугите вече стои MoonPay Europe",
+    "title_en": "MetaMask CL Card Now Moves Under MiCA: MoonPay Europe Is Behind the Crypto Services",
+    "date": "2026-07-08",
+    "body_words_bg": 526,
+    "body_words_en": 577,
+    "has_en_body": true,
+    "paragraphs_bg": 37,
+    "paragraphs_en": 37,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 4,
+    "inline_scripts": 1,
+    "cats": [
+     "crypto",
+     "taxes",
+     "institutions"
+    ],
+    "pop": "2"
+   }
+  },
+  {
+   "path": "blog/moite-5-stotinki-za-proektobyudzhet-2026.html",
+   "title": "Моите 5 стотинки за Проектобюджет 2026 — Марина Мучакова",
+   "description": "Истинският дефицит в Проектобюджет 2026 не е бюджетният, а дефицитът на реформи. За административната тежест и скрития данък върху предприемачеството.",
+   "canonical": "https://muchakova.com/blog/moite-5-stotinki-za-proektobyudzhet-2026.html",
+   "og_image": "https://muchakova.com/images/proektobyudzhet-2026-cover.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 0,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 1776,
+   "words_en": 2035,
+   "post": {
+    "title_bg": "Моите 5 стотинки за Проектобюджет 2026",
+    "title_en": "My Two Cents on Draft Budget 2026",
+    "date": "2026-07-08",
+    "body_words_bg": 1763,
+    "body_words_en": 2021,
+    "has_en_body": true,
+    "paragraphs_bg": 277,
+    "paragraphs_en": 277,
+    "components": [
+     "post-cover"
+    ],
+    "tables": 0,
+    "images": 2,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "economy",
+     "business"
+    ],
+    "pop": "4"
+   }
+  },
+  {
+   "path": "blog/nap-pismo-dohodi-investicii.html",
+   "title": "Получи ли писмо от НАП за доходите си от инвестиции? — Марина Мучакова",
+   "description": "Получи ли писмо от НАП за доходи от инвестиции? Как да намериш счетоводител, как да се справиш сам, какви документи ти трябват и къде точно се декларира всеки вид доход (акции, ДЦК, крипто, лихви, дивиденти) за данъчна година 2025. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/nap-pismo-dohodi-investicii.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 12,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 1673,
+   "words_en": 1904,
+   "post": {
+    "title_bg": "Получи ли писмо от НАП за доходите си от инвестиции?",
+    "title_en": "Got a Letter from the NRA About Your Investment Income?",
+    "date": "2026-09-18",
+    "body_words_bg": 1656,
+    "body_words_en": 1887,
+    "has_en_body": true,
+    "paragraphs_bg": 42,
+    "paragraphs_en": 42,
+    "components": [
+     "post-cover"
+    ],
+    "tables": 0,
+    "images": 12,
+    "blockquotes": 8,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "invest",
+     "crypto"
+    ],
+    "pop": "23"
+   }
+  },
+  {
+   "path": "blog/natrupvane-oborot-registraciya-dds-2026.html",
+   "title": "Натрупване на оборот за регистрация по ДДС след 01.01.2026 г. — Марина Мучакова",
+   "description": "Натрупване на оборот за регистрация по ДДС след 01.01.2026 г. — праг, срокове, предполагаема регистрация и практически рискове.",
+   "canonical": "https://muchakova.com/blog/natrupvane-oborot-registraciya-dds-2026.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 13,
+   "data_key_count": 30,
+   "lang_blocks_bg": 1,
+   "lang_blocks_en": 1,
+   "words_bg": 514,
+   "words_en": 154,
+   "post": {
+    "title_bg": "Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.  [NOT SPLIT BY LANGUAGE]",
+    "title_en": "Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.  [NOT SPLIT BY LANGUAGE]",
+    "date": "2026-03-04",
+    "body_words_bg": 514,
+    "body_words_en": 154,
+    "has_en_body": true,
+    "paragraphs_bg": 35,
+    "paragraphs_en": 9,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 2,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "business"
+    ],
+    "pop": "6"
+   }
+  },
+  {
+   "path": "blog/obobshtenie-promeni-zdds-2026.html",
+   "title": "Обобщение на промените в режима на ДДС след 1.1.2026 — Марина Мучакова",
+   "description": "Обобщение на промените в режима на ДДС след 1.1.2026: нови SME режими, EX номер, ново отчитане и връзката между SME и OSS.",
+   "canonical": "https://muchakova.com/blog/obobshtenie-promeni-zdds-2026.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 15,
+   "data_key_count": 30,
+   "lang_blocks_bg": 1,
+   "lang_blocks_en": 1,
+   "words_bg": 559,
+   "words_en": 192,
+   "post": {
+    "title_bg": "Обобщение на промените в режима на ДДС след 1.1.2026  [NOT SPLIT BY LANGUAGE]",
+    "title_en": "Обобщение на промените в режима на ДДС след 1.1.2026  [NOT SPLIT BY LANGUAGE]",
+    "date": "2026-03-04",
+    "body_words_bg": 559,
+    "body_words_en": 192,
+    "has_en_body": true,
+    "paragraphs_bg": 43,
+    "paragraphs_en": 17,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes"
+    ],
+    "pop": "1"
+   }
+  },
+  {
+   "path": "blog/parviyat-balgarski-white-paper-esma.html",
+   "title": "Първият български White Paper в ESMA — Марина Мучакова",
+   "description": "За първи път изцяло български White Paper е нотифициран и вписан в регистъра на ESMA — токенът NX0 на NativeArc. Какво означава това, каква е разликата между нотификация и лиценз по MiCA и какво вписването не доказва. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/parviyat-balgarski-white-paper-esma.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 10,
+   "data_key_count": 27,
+   "lang_blocks_bg": 6,
+   "lang_blocks_en": 6,
+   "words_bg": 1010,
+   "words_en": 1120,
+   "post": {
+    "title_bg": "Първият български White Paper в ESMA: Пробив за Web3 у нас или просто регулаторна формалност?",
+    "title_en": "The First Bulgarian White Paper in ESMA’s Register: A Web3 Breakthrough or Just a Regulatory Formality?",
+    "date": "2026-10-01",
+    "body_words_bg": 970,
+    "body_words_en": 1076,
+    "has_en_body": true,
+    "paragraphs_bg": 38,
+    "paragraphs_en": 38,
+    "components": [
+     "post-disclosure",
+     "post-table-wrap"
+    ],
+    "tables": 2,
+    "images": 0,
+    "blockquotes": 8,
+    "inline_scripts": 1,
+    "cats": [
+     "crypto",
+     "institutions"
+    ],
+    "pop": "25"
+   }
+  },
+  {
+   "path": "blog/razlika-borsov-segment-over-the-counter.html",
+   "title": "Разлика между търговия на борсов сегмент и over-the-counter — Марина Мучакова",
+   "description": "Практическо разграничение между борсово изпълнение и over-the-counter сделки, включително fractional shares, MiFID II / MiFIR и off-exchange изпълнение.",
+   "canonical": "https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html",
+   "og_image": "https://muchakova.com/images/img_0725.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 18,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 931,
+   "words_en": 1045,
+   "post": {
+    "title_bg": "Разлика между търговия на борсов сегмент и over-the-counter",
+    "title_en": "The Difference Between Exchange Trading and Over-the-Counter Trading",
+    "date": "2026-06-11",
+    "body_words_bg": 914,
+    "body_words_en": 1028,
+    "has_en_body": true,
+    "paragraphs_bg": 33,
+    "paragraphs_en": 33,
+    "components": [
+     "post-cover"
+    ],
+    "tables": 0,
+    "images": 2,
+    "blockquotes": 6,
+    "inline_scripts": 1,
+    "cats": [
+     "invest",
+     "taxes"
+    ],
+    "pop": "5"
+   }
+  },
+  {
+   "path": "blog/razmer-ima-znachenie.html",
+   "title": "Размерът има значение! — Марина Мучакова",
+   "description": "Истината за стартовия капитал — размерът понякога е границата между фалита и успеха. Стрес тестове, MiCA, бизнес модели и пруденциални буфери.",
+   "canonical": "https://muchakova.com/blog/razmer-ima-znachenie.html",
+   "og_image": "https://muchakova.com/images/razmer.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 6,
+   "data_key_count": 30,
+   "lang_blocks_bg": 1,
+   "lang_blocks_en": 1,
+   "words_bg": 303,
+   "words_en": 339,
+   "post": {
+    "title_bg": "Размерът има значение!  [NOT SPLIT BY LANGUAGE]",
+    "title_en": "Размерът има значение!  [NOT SPLIT BY LANGUAGE]",
+    "date": "2026-02-28",
+    "body_words_bg": 303,
+    "body_words_en": 339,
+    "has_en_body": true,
+    "paragraphs_bg": 11,
+    "paragraphs_en": 11,
+    "components": [
+     "post-cover"
+    ],
+    "tables": 0,
+    "images": 2,
+    "blockquotes": 2,
+    "inline_scripts": 1,
+    "cats": [
+     "business",
+     "economy"
+    ],
+    "pop": "12"
+   }
+  },
+  {
+   "path": "blog/sample-post.html",
+   "title": "ЗАГЛАВИЕ НА СТАТИЯТА — Марина Мучакова",
+   "description": "КРАТКО ОПИСАНИЕ НА СТАТИЯТА (до 160 знака) — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/SLUG.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 4,
+   "data_key_count": 27,
+   "lang_blocks_bg": 1,
+   "lang_blocks_en": 1,
+   "words_bg": 42,
+   "words_en": 46
+  },
+  {
+   "path": "blog/siddo-dvoyno-mestno-lice.html",
+   "title": "Местно лице на половин Европа (и на един кораб) — Марина Мучакова",
+   "description": "Как работят СИДДО, когато няколко държави едновременно ви смятат за местно лице: чл. 4 ЗДДФЛ, тай-брейкър правилата, методите за избягване на двойното облагане, прагът от 255 645,94 € по ДОПК и казус с Великобритания, Германия, Кипър, Барбадос и кораб под панамски флаг. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/siddo-dvoyno-mestno-lice.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 18,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 3868,
+   "words_en": 4458,
+   "post": {
+    "title_bg": "Местно лице на половин Европа (и на един кораб)",
+    "title_en": "Tax Resident of Half of Europe (and of One Ship)",
+    "date": "2026-10-02",
+    "body_words_bg": 3852,
+    "body_words_en": 4440,
+    "has_en_body": true,
+    "paragraphs_bg": 96,
+    "paragraphs_en": 96,
+    "components": [
+     "post-table-wrap"
+    ],
+    "tables": 4,
+    "images": 0,
+    "blockquotes": 8,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "institutions"
+    ],
+    "pop": "26"
+   }
+  },
+  {
+   "path": "blog/smart-kontrakti-defi-biznes.html",
+   "title": "Смарт контракти и DeFi: Какво реално означава това за вашия бизнес? — Марина Мучакова",
+   "description": "Смарт контракти и DeFi през призмата на правото, данъците и бизнес риска: защо кодът не е закон, невидимите данъчни събития при swap и ликвидност, MiCA и реалната бизнес стойност.",
+   "canonical": "https://muchakova.com/blog/smart-kontrakti-defi-biznes.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 10,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 738,
+   "words_en": 864,
+   "post": {
+    "title_bg": "Смарт контракти и DeFi: Какво реално означава това за вашия бизнес?",
+    "title_en": "Smart Contracts and DeFi: What Does This Actually Mean for Your Business?",
+    "date": "2026-07-10",
+    "body_words_bg": 720,
+    "body_words_en": 845,
+    "has_en_body": true,
+    "paragraphs_bg": 20,
+    "paragraphs_en": 20,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 0,
+    "inline_scripts": 1,
+    "cats": [
+     "crypto",
+     "business",
+     "taxes"
+    ],
+    "pop": "16"
+   }
+  },
+  {
+   "path": "blog/spb-8-bnb-interactive-brokers.html",
+   "title": "Скъпа БНБ, имам акции в Interactive Brokers — Марина Мучакова",
+   "description": "Кога инвеститор с Interactive Brokers подава СПБ-8 пред БНБ: прагът от 25 000 евро към 31 декември, какво точно се попълва (ISIN, брой, държава на емитента), СПБ-10 и СПБ-10А за фирми, СПБ-2, глобите по чл. 19 от Валутния закон. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/spb-8-bnb-interactive-brokers.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 16,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 2986,
+   "words_en": 3254,
+   "post": {
+    "title_bg": "Скъпа БНБ, имам акции в Interactive Brokers",
+    "title_en": "Dear BNB, I Have Shares at Interactive Brokers",
+    "date": "2026-10-05",
+    "body_words_bg": 2970,
+    "body_words_en": 3238,
+    "has_en_body": true,
+    "paragraphs_bg": 118,
+    "paragraphs_en": 119,
+    "components": [
+     "post-table-wrap"
+    ],
+    "tables": 8,
+    "images": 0,
+    "blockquotes": 10,
+    "inline_scripts": 1,
+    "cats": [
+     "invest",
+     "institutions",
+     "business"
+    ],
+    "pop": "27"
+   }
+  },
+  {
+   "path": "blog/substancia-kompania-zashto-vazhno.html",
+   "title": "Какво е „субстанция“ на една компания и защо това е важно? — Марина Мучакова",
+   "description": "Какво е субстанция на компанията, защо е ключова при международно данъчно облагане и какви рискове носи липсата на реално икономическо присъствие.",
+   "canonical": "https://muchakova.com/blog/substancia-kompania-zashto-vazhno.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 9,
+   "data_key_count": 30,
+   "lang_blocks_bg": 1,
+   "lang_blocks_en": 1,
+   "words_bg": 388,
+   "words_en": 219,
+   "post": {
+    "title_bg": "Какво е „субстанция“ на една компания и защо това е важно?  [NOT SPLIT BY LANGUAGE]",
+    "title_en": "Какво е „субстанция“ на една компания и защо това е важно?  [NOT SPLIT BY LANGUAGE]",
+    "date": "2026-03-04",
+    "body_words_bg": 388,
+    "body_words_en": 219,
+    "has_en_body": true,
+    "paragraphs_bg": 29,
+    "paragraphs_en": 13,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 2,
+    "inline_scripts": 1,
+    "cats": [
+     "taxes",
+     "business"
+    ],
+    "pop": "9"
+   }
+  },
+  {
+   "path": "blog/tax-loss-harvesting-po-balgarski.html",
+   "title": "Tax-loss harvesting по български — Марина Мучакова",
+   "description": "Tax-loss harvesting за физически лица в България: защо загубата трябва да е от облагаема сделка (извън регулиран пазар), чл. 33, ал. 3 и 4 ЗДДФЛ, wash sale в САЩ, Ирландия и UK, сезонност, отчети и къде минава границата с пазарната манипулация по MAR. — Марина Мучакова",
+   "canonical": "https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 16,
+   "data_key_count": 27,
+   "lang_blocks_bg": 5,
+   "lang_blocks_en": 5,
+   "words_bg": 2868,
+   "words_en": 3216,
+   "post": {
+    "title_bg": "Tax-loss harvesting по български",
+    "title_en": "Tax-Loss Harvesting, the Bulgarian Way",
+    "date": "2026-10-08",
+    "body_words_bg": 2856,
+    "body_words_en": 3203,
+    "has_en_body": true,
+    "paragraphs_bg": 59,
+    "paragraphs_en": 59,
+    "components": [
+     "post-table-wrap"
+    ],
+    "tables": 6,
+    "images": 0,
+    "blockquotes": 4,
+    "inline_scripts": 1,
+    "cats": [
+     "invest",
+     "taxes"
+    ],
+    "pop": "29"
+   }
+  },
+  {
+   "path": "blog/zatrudnenia-casp-mica-licenz-kfn.html",
+   "title": "Затрудненията пред CASP-овете при MiCA лиценз пред КФН — Марина Мучакова",
+   "description": "Практически преглед на най-честите затруднения пред CASP компаниите в България при кандидатстване за MiCA лиценз пред КФН.",
+   "canonical": "https://muchakova.com/blog/zatrudnenia-casp-mica-licenz-kfn.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "shareCopy",
+    "shareFacebook",
+    "shareLinkedIn",
+    "shareNative",
+    "shareTwitter",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 24,
+   "data_key_count": 30,
+   "lang_blocks_bg": 2,
+   "lang_blocks_en": 2,
+   "words_bg": 1396,
+   "words_en": 1456,
+   "post": {
+    "title_bg": "Затрудненията пред CASP-овете при MiCA лиценз пред КФН",
+    "title_en": "CASP Challenges in Bulgaria During MiCA Licensing Before the FSC",
+    "date": "2026-05-28",
+    "body_words_bg": 1387,
+    "body_words_en": 1446,
+    "has_en_body": true,
+    "paragraphs_bg": 54,
+    "paragraphs_en": 54,
+    "components": [],
+    "tables": 0,
+    "images": 0,
+    "blockquotes": 4,
+    "inline_scripts": 1,
+    "cats": [
+     "crypto",
+     "business"
+    ],
+    "pop": "10"
+   }
+  },
+  {
+   "path": "blog.html",
+   "title": "Блог — Марина Мучакова",
+   "description": "Блог на Марина Мучакова — статии за данъчно право, крипто данъци, инвестиции и бизнес структуриране.",
+   "canonical": "https://muchakova.com/blog.html",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Blog",
+    "BlogPosting",
+    "Person"
+   ],
+   "ids": [
+    "blogEmpty",
+    "blogToolbar",
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 29,
+   "data_key_count": 72,
+   "lang_blocks_bg": 112,
+   "lang_blocks_en": 112,
+   "words_bg": 1031,
+   "words_en": 1082
+  },
+  {
+   "path": "booking/index.html",
+   "title": "Запази час — Марина Мучакова",
+   "description": "Запазете си час за консултация с Марина Мучакова — данъчен консултант. Изберете удобен ден и час директно в онлайн календара.",
+   "canonical": "https://muchakova.com/booking/",
+   "og_image": "https://muchakova.com/images/og-booking.jpg",
+   "jsonld_types": [],
+   "ids": [
+    "cal-booking",
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 0,
+   "data_key_count": 24,
+   "lang_blocks_bg": 0,
+   "lang_blocks_en": 0,
+   "words_bg": 0,
+   "words_en": 0
+  },
+  {
+   "path": "donate/index.html",
+   "title": "Подкрепи ме — Марина Мучакова",
+   "description": "Подкрепете работата на Марина Мучакова — данъчен консултант. Дарение с карта през Stripe или през Revolut.",
+   "canonical": "https://muchakova.com/donate/",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 0,
+   "data_key_count": 31,
+   "lang_blocks_bg": 0,
+   "lang_blocks_en": 0,
+   "words_bg": 0,
+   "words_en": 0
+  },
+  {
+   "path": "game/index.html",
+   "title": "Марина срещу данъчните зомбита — игра",
+   "description": "Кратка безплатна игра: Марина Мучакова спасява граждани от данъчни зомбита, ревизии и глоби. Превърта се за 3 минути.",
+   "canonical": "https://muchakova.com/game/",
+   "og_image": "https://muchakova.com/game/og-game.png",
+   "jsonld_types": [],
+   "ids": [
+    "bossbar",
+    "bossfill",
+    "cabinet",
+    "card",
+    "game",
+    "hamburger",
+    "hud",
+    "hudChips",
+    "hudLvl",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "overlay",
+    "snd",
+    "stage",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 0,
+   "data_key_count": 22,
+   "lang_blocks_bg": 0,
+   "lang_blocks_en": 0,
+   "words_bg": 0,
+   "words_en": 0
+  },
+  {
+   "path": "index.html",
+   "title": "Марина Мучакова — Данъчен консултант",
+   "description": "Марина Мучакова — данъчен консултант с над 15 години опит в данъчното право. Специализация: крипто данъци, инвестиционни доходи, бизнес структуриране.",
+   "canonical": "https://muchakova.com/",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "Organization",
+    "Person",
+    "WebSite"
+   ],
+   "ids": [
+    "about",
+    "blog",
+    "contact",
+    "hamburger",
+    "hero",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "oborot-dds-kripto",
+    "projects",
+    "reguliran-pazar-gettex",
+    "services",
+    "themeToggle",
+    "vlog",
+    "zagubi-finansovi-instrumenti"
+   ],
+   "h1": 1,
+   "h2": 6,
+   "data_key_count": 108,
+   "lang_blocks_bg": 36,
+   "lang_blocks_en": 36,
+   "words_bg": 289,
+   "words_en": 320
+  },
+  {
+   "path": "meet/index.html",
+   "title": "Пренасочване… | Марина Мучакова",
+   "description": "",
+   "canonical": "https://muchakova.com/booking/",
+   "og_image": "",
+   "jsonld_types": [],
+   "ids": [],
+   "h1": 0,
+   "h2": 0,
+   "data_key_count": 0,
+   "lang_blocks_bg": 0,
+   "lang_blocks_en": 0,
+   "words_bg": 0,
+   "words_en": 0
+  },
+  {
+   "path": "partners/index.html",
+   "title": "Партньори — Марина Мучакова",
+   "description": "Партньорите на Марина Мучакова — tax-invest и NX0 / NativeArc.",
+   "canonical": "https://muchakova.com/partners/",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "nx0",
+    "tax-invest",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 1,
+   "data_key_count": 22,
+   "lang_blocks_bg": 10,
+   "lang_blocks_en": 10,
+   "words_bg": 81,
+   "words_en": 83
+  },
+  {
+   "path": "projects/index.html",
+   "title": "Проекти — Марина Мучакова",
+   "description": "Проектите на Марина Мучакова — Веста Консулт, Крипто Академията, НАБИ — и личните ѝ експерименти: синтезатор за музика и браузърна игра.",
+   "canonical": "https://muchakova.com/projects/",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [],
+   "ids": [
+    "game",
+    "hamburger",
+    "langToggle",
+    "main",
+    "nabi",
+    "navLinks",
+    "navbar",
+    "pet",
+    "synth",
+    "themeToggle"
+   ],
+   "h1": 1,
+   "h2": 2,
+   "data_key_count": 36,
+   "lang_blocks_bg": 13,
+   "lang_blocks_en": 13,
+   "words_bg": 129,
+   "words_en": 134
+  },
+  {
+   "path": "vlog/index.html",
+   "title": "Влог — Марина Мучакова",
+   "description": "Видео отговори на най-честите данъчни въпроси на инвеститорите — НАП, ETF, Interactive Brokers, ДДС и крипто. Влог на Марина Мучакова.",
+   "canonical": "https://muchakova.com/vlog/",
+   "og_image": "https://muchakova.com/images/og-site.jpg",
+   "jsonld_types": [
+    "ItemList",
+    "ListItem",
+    "VideoObject"
+   ],
+   "ids": [
+    "hamburger",
+    "langToggle",
+    "main",
+    "navLinks",
+    "navbar",
+    "oborot-dds-kripto",
+    "reguliran-pazar-gettex",
+    "themeToggle",
+    "vlogEmpty",
+    "zagubi-finansovi-instrumenti"
+   ],
+   "h1": 1,
+   "h2": 0,
+   "data_key_count": 31,
+   "lang_blocks_bg": 21,
+   "lang_blocks_en": 21,
+   "words_bg": 152,
+   "words_en": 170
+  }
+ ]
+}

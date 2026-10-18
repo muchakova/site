@@ -1,0 +1,96 @@
+[
+ {
+  "page": "blog",
+  "url": "https://muchakova.com/blog.html",
+  "perf": 91,
+  "a11y": 100,
+  "bp": 96,
+  "seo": 100,
+  "fcp_s": 1.84,
+  "lcp_s": 1.84,
+  "tbt_ms": 0,
+  "cls": 0.162,
+  "kb": 103,
+  "requests": 8,
+  "failing": [
+   "best-practices:errors-in-console",
+   "performance:cumulative-layout-shift",
+   "performance:first-contentful-paint"
+  ]
+ },
+ {
+  "page": "booking",
+  "url": "https://muchakova.com/booking/",
+  "perf": 96,
+  "a11y": 100,
+  "bp": 75,
+  "seo": 100,
+  "fcp_s": 1.79,
+  "lcp_s": 1.79,
+  "tbt_ms": 0,
+  "cls": 0.102,
+  "kb": 1717,
+  "requests": 84,
+  "failing": [
+   "best-practices:errors-in-console",
+   "best-practices:inspector-issues",
+   "best-practices:third-party-cookies",
+   "performance:cumulative-layout-shift"
+  ]
+ },
+ {
+  "page": "home",
+  "url": "https://muchakova.com/",
+  "perf": 91,
+  "a11y": 100,
+  "bp": 96,
+  "seo": 100,
+  "fcp_s": 2.73,
+  "lcp_s": 2.8,
+  "tbt_ms": 0,
+  "cls": 0.011,
+  "kb": 191,
+  "requests": 12,
+  "failing": [
+   "best-practices:errors-in-console",
+   "performance:first-contentful-paint",
+   "performance:largest-contentful-paint"
+  ]
+ },
+ {
+  "page": "post",
+  "url": "https://muchakova.com/blog/dds-registraciya-interactive-brokers.html",
+  "perf": 98,
+  "a11y": 100,
+  "bp": 96,
+  "seo": 100,
+  "fcp_s": 1.83,
+  "lcp_s": 1.83,
+  "tbt_ms": 0,
+  "cls": 0.001,
+  "kb": 198,
+  "requests": 12,
+  "failing": [
+   "best-practices:errors-in-console",
+   "performance:first-contentful-paint"
+  ]
+ },
+ {
+  "page": "vlog",
+  "url": "https://muchakova.com/vlog/",
+  "perf": 99,
+  "a11y": 98,
+  "bp": 96,
+  "seo": 100,
+  "fcp_s": 1.66,
+  "lcp_s": 1.66,
+  "tbt_ms": 0,
+  "cls": 0.026,
+  "kb": 132,
+  "requests": 11,
+  "failing": [
+   "accessibility:heading-order",
+   "best-practices:errors-in-console"
+  ]
+ }
+]
