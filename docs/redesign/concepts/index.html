@@ -1,0 +1,906 @@
+<title>Концепции за muchakova.com</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Фаза 2: две визуални концепции в посока „Модерен финтех“ и сравнение на шрифтове.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700&display=swap">
+<style>
+/* Layout concept: a review shell on top; below it one full mini-site per concept (A: dark ink hero over light content,
+   B: airy light fintech with navy accent cards) and a font comparison grid. All colours are tokens; both themes defined. */
+:root {
+  /* review shell */
+  --shell-bg: #E9EDF1; --shell-fg: #111827; --shell-muted: #4B5563; --shell-line: #CBD3DC; --shell-chip: #FFFFFF; --shell-on: #111827; --shell-on-fg: #FFFFFF;
+  /* concept A: ink & teal */
+  --a-bg: #F3F6F6; --a-surface: #FFFFFF; --a-fg: #0D1B24; --a-muted: #4B5D68; --a-line: #D8E2E4;
+  --a-accent: #0F766E; --a-accent-hover: #115E59; --a-on-accent: #FFFFFF; --a-accent-soft: #DDF1EE;
+  --a-ink: #08131D; --a-ink-raised: #0F1F2C; --a-on-ink: #EAF2F4; --a-on-ink-muted: #9DB2BC; --a-ink-line: #1D3240;
+  --a-glow: #2DD4BF; --a-on-glow: #04211E; --a-grid: #2DD4BF14;
+  /* concept B: light fintech */
+  --b-bg: #F2F4FA; --b-surface: #FFFFFF; --b-fg: #0E1530; --b-muted: #4A5372; --b-line: #DFE3EE;
+  --b-accent: #4338CA; --b-accent-hover: #3730A3; --b-on-accent: #FFFFFF; --b-accent-soft: #ECEEFF;
+  --b-signal: #047857; --b-signal-soft: #DFF5EC;
+  --b-navy: #0E1838; --b-navy-raised: #18244D; --b-on-navy: #EEF1FF; --b-on-navy-muted: #AEB7DB; --b-navy-line: #27346A;
+  --b-halo-1: #6366F133; --b-halo-2: #10B98126; --b-glass: #F2F4FAD9;
+  /* type */
+  --font-a: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-b: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-c: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --gutter-l: max(20px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(20px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --shell-bg: #04070B; --shell-fg: #E5E7EB; --shell-muted: #9CA3AF; --shell-line: #253040; --shell-chip: #0D141D; --shell-on: #E5E7EB; --shell-on-fg: #0B1017;
+    --a-bg: #08111A; --a-surface: #0F1C27; --a-fg: #E4EDF0; --a-muted: #9CB0B9; --a-line: #1F313D;
+    --a-accent: #2DD4BF; --a-accent-hover: #5EEAD4; --a-on-accent: #04211E; --a-accent-soft: #0E2F2D;
+    --a-ink: #050C13; --a-ink-raised: #0D1A25; --a-ink-line: #1A2C39; --a-grid: #2DD4BF10;
+    --b-bg: #080C19; --b-surface: #10172B; --b-fg: #E6E9F6; --b-muted: #A2A9C8; --b-line: #222B46;
+    --b-accent: #A5B4FC; --b-accent-hover: #C7D2FE; --b-on-accent: #10153A; --b-accent-soft: #1A2150;
+    --b-signal: #34D399; --b-signal-soft: #0B2A21;
+    --b-navy: #141D40; --b-navy-raised: #1E2A55; --b-navy-line: #2C3A73;
+    --b-halo-1: #6366F140; --b-halo-2: #10B98126; --b-glass: #080C19D9;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --shell-bg: #04070B; --shell-fg: #E5E7EB; --shell-muted: #9CA3AF; --shell-line: #253040; --shell-chip: #0D141D; --shell-on: #E5E7EB; --shell-on-fg: #0B1017;
+  --a-bg: #08111A; --a-surface: #0F1C27; --a-fg: #E4EDF0; --a-muted: #9CB0B9; --a-line: #1F313D;
+  --a-accent: #2DD4BF; --a-accent-hover: #5EEAD4; --a-on-accent: #04211E; --a-accent-soft: #0E2F2D;
+  --a-ink: #050C13; --a-ink-raised: #0D1A25; --a-ink-line: #1A2C39; --a-grid: #2DD4BF10;
+  --b-bg: #080C19; --b-surface: #10172B; --b-fg: #E6E9F6; --b-muted: #A2A9C8; --b-line: #222B46;
+  --b-accent: #A5B4FC; --b-accent-hover: #C7D2FE; --b-on-accent: #10153A; --b-accent-soft: #1A2150;
+  --b-signal: #34D399; --b-signal-soft: #0B2A21;
+  --b-navy: #141D40; --b-navy-raised: #1E2A55; --b-navy-line: #2C3A73;
+  --b-halo-1: #6366F140; --b-halo-2: #10B98126; --b-glass: #080C19D9;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--shell-bg); color: var(--shell-fg); font-family: var(--font-ui); }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.i { width: 1.15em; height: 1.15em; flex: none; vertical-align: -0.18em; }
+:focus-visible { outline: 3px solid var(--a-glow); outline-offset: 3px; border-radius: 4px; }
+.cb :focus-visible { outline-color: var(--b-accent); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+.concept [id] { scroll-margin-top: 84px; }
+.wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 50; padding: 10px 14px; border-radius: 8px; background: var(--shell-on); color: var(--shell-on-fg); font-weight: 600; text-decoration: none; }
+.skip:focus { top: calc(12px + env(safe-area-inset-top, 0px)); }
+
+/* ============ review shell ============ */
+.review { border-bottom: 1px solid var(--shell-line); font-size: 14px; }
+.review .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-block: 12px; }
+.review-title { font-weight: 700; margin: 0; }
+.review-title span { color: var(--shell-muted); font-weight: 500; }
+.review-tabs, .review-theme { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.review-tabs a, .review-theme button { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--shell-line); background: var(--shell-chip); color: var(--shell-fg); text-decoration: none; font: 600 14px var(--font-ui); cursor: pointer; }
+.review-tabs a[aria-current="page"], .review-theme button[aria-pressed="true"] { background: var(--shell-on); color: var(--shell-on-fg); border-color: var(--shell-on); }
+.review-theme { margin-left: auto; }
+.review-note { flex-basis: 100%; margin: 0; color: var(--shell-muted); }
+
+/* ============================================================
+   CONCEPT A — ink & teal (Inter)
+   ============================================================ */
+.ca { font-family: var(--font-a); background: var(--a-bg); color: var(--a-fg); font-size: 1.0625rem; line-height: 1.65; }
+.ca h1, .ca h2, .ca h3 { text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+.ca p { margin: 0; }
+.ca-eyebrow { font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--a-accent); margin: 0 0 10px; }
+.ca-h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); line-height: 1.15; }
+.ca-sub { color: var(--a-muted); max-width: 60ch; margin-top: 12px; }
+.ca-section { padding-block: clamp(56px, 8vw, 96px); }
+.ca-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 36px; }
+
+.btn-a { white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 12px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 1.5px solid transparent; transition: background-color .15s, color .15s, border-color .15s, transform .15s; }
+.btn-a:hover { transform: translateY(-1px); }
+.btn-a.primary { background: var(--a-accent); color: var(--a-on-accent); }
+.btn-a.primary:hover { background: var(--a-accent-hover); }
+.btn-a.glow { background: var(--a-glow); color: var(--a-on-glow); }
+.btn-a.ghost-ink { border-color: var(--a-ink-line); color: var(--a-on-ink); background: var(--a-ink-raised); }
+.btn-a.ghost-ink:hover { border-color: var(--a-glow); }
+.btn-a.outline { border-color: var(--a-line); color: var(--a-fg); background: var(--a-surface); }
+.btn-a.outline:hover { border-color: var(--a-accent); }
+.btn-a.small { min-height: 40px; padding: 0 16px; font-size: .95rem; border-radius: 10px; }
+
+/* header */
+.ca-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--a-ink); color: var(--a-on-ink); border-bottom: 1px solid var(--a-ink-line); }
+.ca-header-in { display: flex; align-items: center; gap: 20px; min-height: 68px; }
+.ca-logo { font-weight: 700; font-size: 1.15rem; text-decoration: none; letter-spacing: -0.01em; }
+.ca-logo span { color: var(--a-glow); }
+.ca-nav { display: flex; align-items: center; gap: 28px; margin-left: auto; }
+.ca-nav ul { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; }
+.ca-nav a { text-decoration: none; color: var(--a-on-ink-muted); font-weight: 500; font-size: .98rem; }
+.ca-nav a:hover { color: var(--a-on-ink); }
+.ca-tools { display: flex; align-items: center; gap: 8px; }
+.ca-tool { display: inline-grid; place-items: center; min-width: 40px; height: 40px; padding: 0 10px; border-radius: 10px; border: 1px solid var(--a-ink-line); background: transparent; color: var(--a-on-ink); font: 600 .85rem var(--font-a); text-decoration: none; cursor: pointer; }
+.ca-tool:hover { border-color: var(--a-glow); }
+.ca-menu { display: none; }
+
+/* hero */
+.ca-hero { background-color: var(--a-ink); color: var(--a-on-ink); background-image: radial-gradient(60% 70% at 85% 10%, #2DD4BF26, transparent 70%), linear-gradient(var(--a-grid) 1px, transparent 1px), linear-gradient(90deg, var(--a-grid) 1px, transparent 1px); background-size: auto, 56px 56px, 56px 56px; }
+.ca-hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(32px, 6vw, 80px); align-items: center; padding-block: clamp(48px, 8vw, 104px) clamp(40px, 6vw, 72px); }
+.ca-kicker { display: inline-flex; align-items: center; gap: 10px; font-size: .95rem; color: var(--a-on-ink-muted); margin-bottom: 18px; }
+.ca-kicker::before { content: ""; width: 28px; height: 2px; background: var(--a-glow); }
+.ca-hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.75rem); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; color: var(--a-on-ink); }
+.ca-role { margin-top: 14px; font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 600; color: var(--a-glow); }
+.ca-lede { margin-top: 20px; font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--a-on-ink-muted); max-width: 46ch; }
+.ca-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.ca-facts { display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; margin: 26px 0 0; padding: 0; font-size: .92rem; color: var(--a-on-ink-muted); }
+.ca-facts li { display: inline-flex; align-items: center; gap: 8px; }
+.ca-facts li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--a-glow); }
+.ca-portrait { position: relative; margin: 0; justify-self: end; width: min(100%, 420px); }
+.ca-portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 20px; border: 1px solid var(--a-ink-line); box-shadow: 0 30px 80px -30px #000; }
+.ca-ticket { position: absolute; left: -36px; bottom: 28px; width: 236px; padding: 16px 18px; border-radius: 14px; background: var(--a-ink-raised); border: 1px solid var(--a-ink-line); box-shadow: 0 20px 40px -20px #000; font-variant-numeric: tabular-nums; }
+.ca-ticket-label { font-size: .8rem; color: var(--a-on-ink-muted); }
+.ca-ticket-price { margin-top: 2px; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; }
+.ca-ticket-price span { font-size: .9rem; font-weight: 500; color: var(--a-on-ink-muted); }
+.ca-ticket a { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; color: var(--a-glow); font-weight: 600; font-size: .92rem; text-decoration: none; }
+.ca-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--a-ink-line); }
+.ca-stats div { display: flex; flex-direction: column-reverse; gap: 4px; padding: 26px 24px 30px 0; }
+.ca-stats div + div { padding-left: 24px; border-left: 1px solid var(--a-ink-line); }
+.ca-stats dd { margin: 0; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; color: var(--a-on-ink); }
+.ca-stats dt { color: var(--a-on-ink-muted); font-size: .92rem; }
+
+/* about / trust */
+.ca-about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.ca-about p + p { margin-top: 14px; }
+.ca-about-text { color: var(--a-muted); }
+.ca-ventures { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.ca-ventures a { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 12px; border: 1px solid var(--a-line); background: var(--a-surface); text-decoration: none; }
+.ca-ventures a:hover { border-color: var(--a-accent); }
+.ca-ventures strong { display: block; }
+.ca-ventures span { color: var(--a-muted); font-size: .92rem; }
+.ca-topics { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+.ca-topics li { padding: 5px 11px; border-radius: 8px; background: var(--a-accent-soft); color: var(--a-accent); font-size: .85rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* services */
+.ca-services { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+.ca-service { display: flex; flex-direction: column; gap: 12px; height: 100%; padding: 24px; border-radius: 16px; background: var(--a-surface); border: 1px solid var(--a-line); transition: border-color .15s, transform .15s; }
+.ca-service:hover { border-color: var(--a-accent); transform: translateY(-2px); }
+.ca-service-icon { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--a-accent-soft); color: var(--a-accent); }
+.ca-service h3 { font-size: 1.15rem; }
+.ca-service p { color: var(--a-muted); font-size: .98rem; }
+.ca-service .laws { margin-top: auto; font-size: .8rem; font-weight: 600; letter-spacing: .02em; color: var(--a-muted); }
+.ca-service a { display: inline-flex; align-items: center; gap: 6px; color: var(--a-accent); font-weight: 600; text-decoration: none; font-size: .95rem; }
+
+/* steps */
+.ca-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; list-style: none; margin: 0; padding: 0; counter-reset: step; }
+.ca-steps li { position: relative; padding-top: 58px; }
+.ca-steps li::before { counter-increment: step; content: counter(step); position: absolute; top: 0; left: 0; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--a-ink); color: var(--a-glow); font-weight: 700; }
+.ca-steps li::after { content: ""; position: absolute; top: 20px; left: 52px; right: -12px; height: 1px; background: var(--a-line); }
+.ca-steps li:last-child::after { display: none; }
+.ca-steps h3 { font-size: 1.08rem; margin-bottom: 6px; }
+.ca-steps p { color: var(--a-muted); font-size: .97rem; }
+
+/* pricing */
+.ca-pricing { background: var(--a-surface); border-block: 1px solid var(--a-line); }
+.ca-plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 920px; }
+.ca-plan { display: flex; flex-direction: column; gap: 16px; padding: 28px; border-radius: 18px; border: 1px solid var(--a-line); background: var(--a-bg); }
+.ca-plan.featured { background: var(--a-ink); color: var(--a-on-ink); border-color: var(--a-ink); }
+.ca-plan-top { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.ca-plan h3 { font-size: 1.2rem; }
+.ca-plan .dur { color: var(--a-muted); font-size: .95rem; }
+.ca-plan.featured .dur, .ca-plan.featured .fit, .ca-plan.featured li { color: var(--a-on-ink-muted); }
+.ca-badge { padding: 4px 10px; border-radius: 999px; font-size: .78rem; font-weight: 700; background: var(--a-glow); color: var(--a-on-glow); white-space: nowrap; }
+.ca-price { font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.ca-plan .fit { color: var(--a-muted); }
+.ca-plan ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: .95rem; color: var(--a-muted); }
+.ca-plan li { display: flex; gap: 10px; }
+.ca-plan li svg { color: var(--a-accent); margin-top: 4px; }
+.ca-plan.featured li svg { color: var(--a-glow); }
+.ca-plan .btn-a { margin-top: auto; justify-content: center; }
+.ca-note { margin-top: 18px; color: var(--a-muted); font-size: .92rem; }
+
+/* blog */
+.ca-posts { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 20px; }
+.ca-post { display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 16px; background: var(--a-surface); border: 1px solid var(--a-line); text-decoration: none; transition: border-color .15s; }
+.ca-post:hover { border-color: var(--a-accent); }
+.ca-post.lead { grid-row: span 2; padding: 32px; justify-content: end; background-image: linear-gradient(160deg, var(--a-accent-soft), transparent 55%); }
+.ca-post.lead h3 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.15; }
+.ca-post h3 { font-size: 1.15rem; line-height: 1.3; }
+.ca-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .85rem; color: var(--a-muted); font-variant-numeric: tabular-nums; }
+.ca-meta .cat { color: var(--a-accent); font-weight: 600; }
+.ca-post p { color: var(--a-muted); font-size: .98rem; }
+.ca-more { display: inline-flex; align-items: center; gap: 6px; color: var(--a-accent); font-weight: 600; text-decoration: none; }
+
+/* final CTA + footer */
+.ca-cta { background: var(--a-ink); color: var(--a-on-ink); background-image: radial-gradient(50% 80% at 10% 100%, #2DD4BF1F, transparent 70%); }
+.ca-cta-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: center; padding-block: clamp(56px, 8vw, 88px); }
+.ca-cta h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); }
+.ca-cta p { color: var(--a-on-ink-muted); margin-top: 12px; max-width: 48ch; }
+.ca-cta .btn-a { margin-top: 24px; }
+.ca-contacts { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.ca-contacts a, .ca-contacts span { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 12px; background: var(--a-ink-raised); border: 1px solid var(--a-ink-line); text-decoration: none; font-variant-numeric: tabular-nums; }
+.ca-contacts svg { color: var(--a-glow); }
+.ca-footer { background: var(--a-bg); border-top: 1px solid var(--a-line); font-size: .95rem; }
+.ca-footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 28px; padding-block: 48px 28px; }
+.ca-footer h2 { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--a-muted); margin: 0 0 12px; }
+.ca-footer ul { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.ca-footer a { text-decoration: none; color: var(--a-fg); }
+.ca-footer a:hover { color: var(--a-accent); }
+.ca-footer .tag { color: var(--a-muted); margin-top: 10px; max-width: 34ch; }
+.ca-donate { display: inline-flex; margin-top: 16px; padding: 8px 14px; border-radius: 999px; background: var(--a-accent-soft); color: var(--a-accent) !important; font-weight: 600; font-size: .9rem; }
+.ca-legal { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; padding-block: 18px 32px; border-top: 1px solid var(--a-line); color: var(--a-muted); font-size: .85rem; }
+
+/* ============================================================
+   CONCEPT B — light fintech (Onest)
+   ============================================================ */
+.cb { font-family: var(--font-b); background: var(--b-bg); color: var(--b-fg); font-size: 1.0625rem; line-height: 1.65; }
+.cb h1, .cb h2, .cb h3 { text-wrap: balance; margin: 0; letter-spacing: -0.02em; font-weight: 600; }
+.cb p { margin: 0; }
+.cb-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; font-weight: 600; color: var(--b-accent); margin: 0 0 12px; }
+.cb-h2 { font-size: clamp(1.75rem, 3vw, 2.4rem); line-height: 1.15; }
+.cb-sub { color: var(--b-muted); max-width: 58ch; margin-top: 12px; }
+.cb-section { padding-block: clamp(56px, 8vw, 96px); }
+.cb-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 36px; }
+.btn-b { white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 1.5px solid transparent; transition: background-color .15s, border-color .15s, box-shadow .15s; }
+.btn-b.primary { background: var(--b-accent); color: var(--b-on-accent); box-shadow: 0 10px 24px -12px var(--b-accent); }
+.btn-b.primary:hover { background: var(--b-accent-hover); }
+.btn-b.light { background: var(--b-surface); color: var(--b-fg); border-color: var(--b-line); }
+.btn-b.light:hover { border-color: var(--b-accent); }
+.btn-b.on-navy { background: var(--b-on-navy); color: var(--b-navy); }
+.btn-b.small { min-height: 40px; padding: 0 18px; font-size: .95rem; }
+
+.cb-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--b-glass); -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4); border-bottom: 1px solid var(--b-line); }
+.cb-header-in { display: flex; align-items: center; gap: 20px; min-height: 68px; }
+.cb-logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.1rem; text-decoration: none; }
+.cb-logo b { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--b-navy); color: var(--b-on-navy); font-size: .9rem; font-weight: 700; }
+.cb-nav { display: flex; align-items: center; gap: 24px; margin-left: auto; }
+.cb-nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.cb-nav ul a { display: inline-flex; padding: 8px 14px; border-radius: 999px; text-decoration: none; color: var(--b-muted); font-weight: 500; }
+.cb-nav ul a:hover { background: var(--b-accent-soft); color: var(--b-fg); }
+.cb-tools { display: flex; gap: 6px; }
+.cb-tool { display: inline-grid; place-items: center; min-width: 40px; height: 40px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-fg); font: 600 .85rem var(--font-b); text-decoration: none; cursor: pointer; }
+.cb-tool:hover { border-color: var(--b-accent); }
+.cb-menu { display: none; }
+
+.cb-hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 80px); align-items: center; padding-block: clamp(48px, 7vw, 96px) clamp(40px, 6vw, 72px); }
+.cb-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 10px; border-radius: 999px; background: var(--b-surface); border: 1px solid var(--b-line); font-size: .9rem; color: var(--b-muted); }
+.cb-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--b-signal); box-shadow: 0 0 0 4px var(--b-signal-soft); }
+.cb-greet { margin-top: 22px; color: var(--b-muted); font-size: 1.05rem; }
+.cb-hero h1 { margin-top: 6px; font-size: clamp(2.6rem, 6.2vw, 4.5rem); line-height: 1.03; letter-spacing: -0.035em; }
+.cb-role { margin-top: 12px; font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 600; color: var(--b-accent); }
+.cb-lede { margin-top: 18px; font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--b-muted); max-width: 46ch; }
+.cb-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.cb-trustline { margin-top: 28px; font-size: .92rem; color: var(--b-muted); }
+.cb-trustline strong { color: var(--b-fg); font-weight: 600; }
+.cb-visual { position: relative; justify-self: end; width: min(100%, 440px); }
+.cb-visual::before { content: ""; position: absolute; inset: 8% -6% -4% 6%; border-radius: 40px; background: radial-gradient(60% 60% at 30% 30%, var(--b-halo-1), transparent 70%), radial-gradient(60% 60% at 80% 80%, var(--b-halo-2), transparent 70%); filter: blur(24px); }
+.cb-visual img { position: relative; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 25%; border-radius: 28px; border: 6px solid var(--b-surface); box-shadow: 0 30px 60px -30px #0E153066; }
+.cb-widget { position: absolute; display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 16px; background: var(--b-surface); border: 1px solid var(--b-line); box-shadow: 0 18px 40px -20px #0E153059; font-size: .9rem; font-variant-numeric: tabular-nums; }
+.cb-widget .ico { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: var(--b-accent-soft); color: var(--b-accent); }
+.cb-widget strong { display: block; font-size: 1.05rem; }
+.cb-widget span { color: var(--b-muted); }
+.cb-widget.w1 { left: -28px; top: 14%; }
+.cb-widget.w2 { right: -20px; bottom: 10%; }
+
+.cb-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 8px; border-radius: 20px; background: var(--b-surface); border: 1px solid var(--b-line); }
+.cb-stats div { display: flex; flex-direction: column-reverse; gap: 4px; padding: 20px 24px; }
+.cb-stats div + div { border-left: 1px solid var(--b-line); }
+.cb-stats dd { margin: 0; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1; color: var(--b-accent); font-variant-numeric: tabular-nums; }
+.cb-stats dt { color: var(--b-muted); font-size: .92rem; }
+
+.cb-services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; list-style: none; margin: 0; padding: 0; }
+.cb-service { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 18px; height: 100%; padding: 28px; border-radius: 22px; background: var(--b-surface); border: 1px solid var(--b-line); transition: border-color .15s, box-shadow .15s; }
+.cb-service:hover { border-color: var(--b-accent); box-shadow: 0 20px 40px -28px var(--b-accent); }
+.cb-service-icon { grid-row: span 4; display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--b-accent-soft); color: var(--b-accent); }
+.cb-service h3 { font-size: 1.25rem; }
+.cb-service p { color: var(--b-muted); }
+.cb-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; padding: 0; list-style: none; }
+.cb-chips li { padding: 3px 10px; border-radius: 999px; background: var(--b-signal-soft); color: var(--b-signal); font-size: .8rem; font-weight: 600; }
+.cb-service a { display: inline-flex; align-items: center; gap: 6px; color: var(--b-accent); font-weight: 600; text-decoration: none; }
+
+.cb-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; list-style: none; margin: 0; padding: 0; counter-reset: step; }
+.cb-steps li { padding: 24px; border-radius: 20px; background: var(--b-surface); border: 1px solid var(--b-line); }
+.cb-steps li::before { counter-increment: step; content: counter(step); display: block; font-size: 2.2rem; font-weight: 600; line-height: 1; color: var(--b-accent); margin-bottom: 18px; font-variant-numeric: tabular-nums; }
+.cb-steps h3 { font-size: 1.08rem; margin-bottom: 6px; }
+.cb-steps p { color: var(--b-muted); font-size: .97rem; }
+
+.cb-plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 940px; margin-inline: auto; }
+.cb-plan { display: flex; flex-direction: column; gap: 14px; padding: 32px; border-radius: 26px; background: var(--b-surface); border: 1px solid var(--b-line); }
+.cb-plan.featured { background: var(--b-navy); color: var(--b-on-navy); border-color: var(--b-navy); box-shadow: 0 30px 60px -36px #0E1838; }
+.cb-plan-top { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.cb-plan h3 { font-size: 1.2rem; }
+.cb-badge { padding: 4px 12px; border-radius: 999px; font-size: .8rem; font-weight: 600; background: var(--b-accent-soft); color: var(--b-accent); }
+.cb-plan.featured .cb-badge { background: var(--b-navy-raised); color: var(--b-on-navy); border: 1px solid var(--b-navy-line); }
+.cb-price { display: flex; align-items: baseline; gap: 10px; font-variant-numeric: tabular-nums; }
+.cb-price strong { font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+.cb-price span { color: var(--b-muted); }
+.cb-plan.featured .cb-price span, .cb-plan.featured .fit, .cb-plan.featured li { color: var(--b-on-navy-muted); }
+.cb-plan .fit { color: var(--b-muted); }
+.cb-plan ul { display: grid; gap: 8px; margin: 4px 0 0; padding: 18px 0 0; border-top: 1px solid var(--b-line); list-style: none; font-size: .95rem; color: var(--b-muted); }
+.cb-plan.featured ul { border-color: var(--b-navy-line); }
+.cb-plan li { display: flex; gap: 10px; }
+.cb-plan li svg { color: var(--b-signal); margin-top: 4px; }
+.cb-plan .btn-b { margin-top: auto; justify-content: center; }
+.cb-note { text-align: center; margin-top: 18px; color: var(--b-muted); font-size: .92rem; }
+
+.cb-feed { border-radius: 24px; background: var(--b-surface); border: 1px solid var(--b-line); overflow: hidden; }
+.cb-feed-lead { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: end; padding: clamp(24px, 4vw, 40px); text-decoration: none; background-image: linear-gradient(120deg, var(--b-accent-soft), transparent 60%); border-bottom: 1px solid var(--b-line); }
+.cb-feed-lead h3 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); line-height: 1.15; margin-top: 8px; }
+.cb-feed-lead p { color: var(--b-muted); margin-top: 10px; max-width: 62ch; }
+.cb-feed-lead .go { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--b-accent); color: var(--b-on-accent); }
+.cb-rows { list-style: none; margin: 0; padding: 0; }
+.cb-rows a { display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 18px clamp(20px, 4vw, 40px); text-decoration: none; border-top: 1px solid var(--b-line); font-variant-numeric: tabular-nums; }
+.cb-rows li:first-child a { border-top: 0; }
+.cb-rows a:hover { background: var(--b-bg); }
+.cb-rows time { color: var(--b-muted); font-size: .9rem; }
+.cb-rows strong { display: block; font-weight: 600; line-height: 1.35; }
+.cb-rows .cat { color: var(--b-accent); font-size: .85rem; font-weight: 600; }
+.cb-rows .len { color: var(--b-muted); font-size: .9rem; white-space: nowrap; }
+.cb-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .88rem; color: var(--b-muted); font-variant-numeric: tabular-nums; }
+.cb-meta .cat { color: var(--b-accent); font-weight: 600; }
+.cb-more { display: inline-flex; align-items: center; gap: 6px; color: var(--b-accent); font-weight: 600; text-decoration: none; }
+
+.cb-cta { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: center; padding: clamp(28px, 5vw, 56px); border-radius: 28px; background: var(--b-navy); color: var(--b-on-navy); background-image: radial-gradient(50% 90% at 100% 0%, #6366F14D, transparent 70%); }
+.cb-cta h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); }
+.cb-cta p { color: var(--b-on-navy-muted); margin-top: 12px; max-width: 46ch; }
+.cb-cta .btn-b { margin-top: 24px; }
+.cb-contacts { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.cb-contacts a, .cb-contacts span { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 16px; background: var(--b-navy-raised); border: 1px solid var(--b-navy-line); text-decoration: none; font-variant-numeric: tabular-nums; }
+.cb-footer { border-top: 1px solid var(--b-line); background: var(--b-surface); font-size: .95rem; margin-top: clamp(56px, 8vw, 96px); }
+.cb-footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 28px; padding-block: 48px 28px; }
+.cb-footer h2 { font-size: .9rem; font-weight: 600; color: var(--b-fg); margin: 0 0 12px; letter-spacing: 0; }
+.cb-footer ul { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.cb-footer a { text-decoration: none; color: var(--b-muted); }
+.cb-footer a:hover { color: var(--b-accent); }
+.cb-footer .tag { color: var(--b-muted); margin-top: 10px; max-width: 34ch; }
+.cb-donate { display: inline-flex; margin-top: 16px; padding: 8px 14px; border-radius: 999px; background: var(--b-accent-soft); color: var(--b-accent) !important; font-weight: 600; font-size: .9rem; }
+.cb-legal { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; padding-block: 18px 32px; border-top: 1px solid var(--b-line); color: var(--b-muted); font-size: .85rem; }
+
+/* ============================================================
+   FONT COMPARISON
+   ============================================================ */
+.cf { padding-block: 40px 72px; }
+.cf h1 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin: 0 0 10px; letter-spacing: -0.02em; }
+.cf-intro { color: var(--shell-muted); max-width: 70ch; margin: 0 0 28px; line-height: 1.6; }
+.cf-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.cf-card { min-width: 0; padding: 26px; border-radius: 18px; background: var(--shell-chip); border: 1px solid var(--shell-line); color: var(--shell-fg); }
+.cf-card header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 1px solid var(--shell-line); }
+.cf-card header h2 { font: 700 1.05rem var(--font-ui); margin: 0; }
+.cf-card header span { color: var(--shell-muted); font: 500 .85rem var(--font-ui); }
+.cf-card .s-h1 { font-size: 2.3rem; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; margin: 0; }
+.cf-card .s-h2 { font-size: 1.45rem; font-weight: 600; line-height: 1.2; letter-spacing: -0.015em; margin: 18px 0 8px; }
+.cf-card .s-p { font-size: 1.0625rem; line-height: 1.65; margin: 0 0 12px; }
+.cf-card .s-num { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 1.5rem; font-weight: 600; font-variant-numeric: tabular-nums; margin: 16px 0; }
+.cf-card .s-glyph { font-size: 1.3rem; letter-spacing: .02em; margin: 12px 0; }
+.cf-card .s-small { font-size: .85rem; color: var(--shell-muted); margin: 10px 0 0; }
+.cf-table { overflow-x: auto; margin-top: 12px; }
+.cf-card table { width: 100%; border-collapse: collapse; font-size: .95rem; font-variant-numeric: tabular-nums; }
+.cf-card th, .cf-card td { text-align: right; padding: 7px 8px; border-bottom: 1px solid var(--shell-line); }
+.cf-card th:first-child, .cf-card td:first-child { text-align: left; }
+.cf-card thead th { font-weight: 600; color: var(--shell-muted); font-size: .85rem; }
+.cf-inter { font-family: var(--font-a); } .cf-onest { font-family: var(--font-b); } .cf-manrope { font-family: var(--font-c); }
+.cf-criteria { margin-top: 28px; padding: 22px 26px; border-radius: 16px; border: 1px dashed var(--shell-line); color: var(--shell-muted); line-height: 1.6; }
+.cf-criteria strong { color: var(--shell-fg); }
+
+/* ============ responsive ============ */
+@media (max-width: 980px) {
+  .ca-services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ca-steps, .cb-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ca-steps li::after { display: none; }
+  .ca-footer-grid, .cb-footer-grid { grid-template-columns: 1fr 1fr; }
+  .cf-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 860px) {
+  .ca-menu, .cb-menu { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 10px; font-weight: 600; font-size: .95rem; cursor: pointer; }
+  .ca-menu { border: 1px solid var(--a-ink-line); background: transparent; color: var(--a-on-ink); font-family: var(--font-a); }
+  .cb-menu { border: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-fg); border-radius: 999px; font-family: var(--font-b); }
+  .ca-header-in > .btn-a, .cb-header-in > .btn-b { margin-left: auto; }
+  .ca-nav, .cb-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 16px; padding: 16px var(--gutter-r) 22px var(--gutter-l); }
+  .ca-nav { background: var(--a-ink); border-bottom: 1px solid var(--a-ink-line); }
+  .cb-nav { background: var(--b-surface); border-bottom: 1px solid var(--b-line); }
+  .ca-nav[data-open], .cb-nav[data-open] { display: flex; }
+  .ca-nav ul, .cb-nav ul { flex-direction: column; gap: 2px; }
+  .ca-nav ul a, .cb-nav ul a { display: block; padding: 10px 0; font-size: 1.05rem; }
+  .ca-hero-grid, .cb-hero-grid, .ca-about, .ca-posts, .ca-cta-grid, .cb-cta { grid-template-columns: minmax(0, 1fr); }
+  .ca-portrait, .cb-visual { justify-self: start; width: min(100%, 360px); }
+  .ca-ticket { left: auto; right: -12px; bottom: 18px; }
+  .cb-widget.w1 { left: -10px; } .cb-widget.w2 { right: -10px; }
+  .ca-post.lead { grid-row: auto; }
+  .ca-plans, .cb-plans, .cb-services { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .cb-header .cb-logo-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+@media (max-width: 560px) {
+  .ca-header-in, .cb-header-in { gap: 10px; }
+  .ca-header-in > .btn-a, .cb-header-in > .btn-b { padding: 0 12px; }
+  .ca-services, .ca-steps, .cb-steps, .ca-footer-grid, .cb-footer-grid { grid-template-columns: minmax(0, 1fr); }
+  .ca-stats, .cb-stats { grid-template-columns: minmax(0, 1fr); }
+  .ca-stats div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--a-ink-line); }
+  .ca-stats div { padding: 18px 0; }
+  .cb-stats div + div { border-left: 0; border-top: 1px solid var(--b-line); }
+  .cb-rows a { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .cb-feed-lead { grid-template-columns: minmax(0, 1fr); }
+  .cb-widget { position: static; margin-top: 10px; }
+  .ca-ticket { position: static; width: auto; margin-top: 12px; }
+  .cb-service { grid-template-columns: minmax(0, 1fr); }
+  .cb-service-icon { grid-row: auto; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-coins" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.1 10.4A6 6 0 1 1 10.3 18M7 6h1v4M16.7 13.9l.7.7-2.8 2.8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4z"/></symbol>
+</svg>
+
+<div class="review">
+  <div class="wrap">
+    <p class="review-title">muchakova.com <span>· Фаза 2: визуални концепции</span></p>
+    <nav aria-label="Концепции">
+      <ul class="review-tabs">
+        <li><a href="#a" data-tab="a">A · Мастило и тюркоаз</a></li>
+        <li><a href="#b" data-tab="b">B · Светъл финтех</a></li>
+        <li><a href="#fonts" data-tab="fonts">Шрифтове</a></li>
+      </ul>
+    </nav>
+    <div class="review-theme" role="group" aria-label="Тема на прегледа">
+      <button type="button" data-set-theme="system" aria-pressed="true">Системна</button>
+      <button type="button" data-set-theme="light" aria-pressed="false">Светла</button>
+      <button type="button" data-set-theme="dark" aria-pressed="false">Тъмна</button>
+    </div>
+    <p class="review-note">Концепциите показват посоката: цветове, типография, ритъм и характер. Текстовете са от одобрените чернови. Линковете водят само в рамките на прегледа.</p>
+  </div>
+</div>
+
+<!-- =========================================================== CONCEPT A -->
+<div class="concept ca" id="a" data-view>
+  <a class="skip" href="#a-main">Към съдържанието</a>
+  <header class="ca-header">
+    <div class="wrap ca-header-in">
+      <a class="ca-logo" href="#a">Marina <span>M.</span></a>
+      <nav class="ca-nav" id="a-nav" aria-label="Главна навигация">
+        <ul>
+          <li><a href="#a-services">Услуги</a></li>
+          <li><a href="#a-about">За мен</a></li>
+          <li><a href="#a-blog">Блог</a></li>
+          <li><a href="#a-contact">Контакти</a></li>
+        </ul>
+        <div class="ca-tools">
+          <a class="ca-tool" href="#a" lang="en" hreflang="en">EN<span class="sr"> · English version</span></a>
+          <button class="ca-tool" type="button" data-theme-toggle aria-pressed="false"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><span class="sr">Тъмна тема</span></button>
+        </div>
+      </nav>
+      <a class="btn-a glow small" href="#a-pricing">Запази час</a>
+      <button class="ca-menu" type="button" data-menu aria-expanded="false" aria-controls="a-nav"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg><span data-menu-label>Меню</span></button>
+    </div>
+  </header>
+
+  <main id="a-main" tabindex="-1">
+    <section class="ca-hero" aria-labelledby="a-h1">
+      <div class="wrap ca-hero-grid">
+        <div>
+          <p class="ca-kicker">Здравейте, Данъчни Хакери, аз съм</p>
+          <h1 id="a-h1">Марина Мучакова</h1>
+          <p class="ca-role">Данъчен консултант</p>
+          <p class="ca-lede">Помагам на хора и бизнеси да минат НАП без НАП да ги мине, чрез законни данъчни оптимизации и стратегии.</p>
+          <div class="ca-actions">
+            <a class="btn-a glow" href="#a-pricing">Запази консултация <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+            <a class="btn-a ghost-ink" href="#a-services">Услуги и цени</a>
+          </div>
+          <ul class="ca-facts" aria-label="Формат">
+            <li>Онлайн</li><li>Google Meet</li><li>от 130 €</li>
+          </ul>
+        </div>
+        <figure class="ca-portrait">
+          <img src="img/profile_3.jpg" alt="Марина Мучакова" width="500" height="500">
+          <div class="ca-ticket">
+            <p class="ca-ticket-label">Онлайн консултация</p>
+            <p class="ca-ticket-price">230 € <span>/ 60 мин</span></p>
+            <a href="#a-pricing">Избери час <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+        </figure>
+      </div>
+      <div class="wrap">
+        <dl class="ca-stats">
+          <div><dt>години опит в данъчното право</dt><dd>15+</dd></div>
+          <div><dt>статии за данъци, инвестиции и крипто</dt><dd>29</dd></div>
+          <div><dt>крипто регулации и данъци</dt><dd>MiCA</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="ca-section" id="a-about" aria-labelledby="a-about-title">
+      <div class="wrap ca-about">
+        <div>
+          <p class="ca-eyebrow">Марина Мучакова</p>
+          <h2 class="ca-h2" id="a-about-title">За мен</h2>
+          <div class="ca-about-text" style="margin-top:18px">
+            <p>Казвам се Марина Мучакова и съм данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p>
+            <p>Основната ми цел е колкото се може повече капитали да останат съсредоточени в бизнеса. Постигам я чрез задълбочен анализ на данъчните правила и законодателство и намиране на гъвкави, ефективни решения.</p>
+          </div>
+          <ul class="ca-topics" aria-label="Закони и теми, с които работя">
+            <li>ЗДДФЛ</li><li>ЗКПО</li><li>ЗДДС</li><li>СИДДО</li><li>MiCA</li><li>AML</li>
+          </ul>
+        </div>
+        <ul class="ca-ventures" aria-label="Проекти">
+          <li><a href="https://vesta-bg.eu" target="_blank" rel="noopener"><span><strong>Веста Консулт</strong><span>Счетоводна кантора и консултантска къща</span></span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="sr">(отваря се в нов раздел)</span></a></li>
+          <li><a href="https://thecrypto.academy" target="_blank" rel="noopener"><span><strong>Крипто Академията</strong><span>Обучения по крипто и блокчейн</span></span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="sr">(отваря се в нов раздел)</span></a></li>
+          <li><a href="#a-about"><span><strong>НАБИ</strong><span>Асоциация по блокчейн и иновации</span></span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ca-section" id="a-services" aria-labelledby="a-services-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="ca-head">
+          <div>
+            <p class="ca-eyebrow">Експертиза</p>
+            <h2 class="ca-h2" id="a-services-title">С какво помагам</h2>
+            <p class="ca-sub">Законни решения, които оставят повече капитал в бизнеса и в портфейла ви.</p>
+          </div>
+        </div>
+        <ul class="ca-services">
+          <li><article class="ca-service"><span class="ca-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-coins"/></svg></span><h3>Крипто данъци и MiCA</h3><p>Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.</p><p class="laws">MiCA · AML · ЗДДС</p><a href="#a-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за крипто данъци и MiCA</span></a></article></li>
+          <li><article class="ca-service"><span class="ca-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-chart"/></svg></span><h3>Доходи от инвестиции</h3><p>Акции, ETF, облигации и дивиденти — кога се дължи данък, колко е и къде се декларира.</p><p class="laws">ЗДДФЛ · ETF · дивиденти</p><a href="#a-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за доходи от инвестиции</span></a></article></li>
+          <li><article class="ca-service"><span class="ca-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg></span><h3>Международно облагане</h3><p>Спогодби за избягване на двойното данъчно облагане, местно лице и чуждестранни брокери.</p><p class="laws">СИДДО · местно лице · СПБ-8</p><a href="#a-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за международно облагане</span></a></article></li>
+          <li><article class="ca-service"><span class="ca-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-building"/></svg></span><h3>Бизнес структуриране</h3><p>Субстанция, ДДС и планиране, с което маржът расте, а данъчната тежест — не.</p><p class="laws">ЗКПО · ЗДДС · субстанция</p><a href="#a-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за бизнес структуриране</span></a></article></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ca-section" aria-labelledby="a-steps-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="ca-head"><div><p class="ca-eyebrow">Процес</p><h2 class="ca-h2" id="a-steps-title">Как работим</h2></div></div>
+        <ol class="ca-steps">
+          <li><h3>Изберете формат</h3><p>30 минути за конкретен въпрос или 60 минути за по-сложен казус.</p></li>
+          <li><h3>Запазете час и платете онлайн</h3><p>Изберете удобен ден в календара. Плащането е с карта, чрез Stripe.</p></li>
+          <li><h3>Подгответе въпроса си</h3><p>Изпратете кратко описание и документите предварително.</p></li>
+          <li><h3>Срещаме се онлайн</h3><p>Разговаряме в Google Meet и получавате ясни следващи стъпки.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ca-section ca-pricing" id="a-pricing" aria-labelledby="a-pricing-title">
+      <div class="wrap">
+        <div class="ca-head"><div><p class="ca-eyebrow">Консултации</p><h2 class="ca-h2" id="a-pricing-title">Цени</h2><p class="ca-sub">Онлайн в Google Meet · плащане с карта при записване.</p></div></div>
+        <div class="ca-plans">
+          <article class="ca-plan" aria-labelledby="a-plan-30">
+            <div class="ca-plan-top"><div><h3 id="a-plan-30">Бърза консултация</h3><p class="dur">30 минути</p></div></div>
+            <p class="ca-price">130 €</p>
+            <p class="fit">За един конкретен, ясно формулиран въпрос: кога се дължи данък, как се декларира даден доход, коя ставка се прилага.</p>
+            <ul><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Онлайн в Google Meet</li><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Плащане с карта при записване</li></ul>
+            <a class="btn-a outline" href="#a-pricing">Избери 30 минути</a>
+          </article>
+          <article class="ca-plan featured" aria-labelledby="a-plan-60">
+            <div class="ca-plan-top"><div><h3 id="a-plan-60">Онлайн консултация</h3><p class="dur">60 минути</p></div><span class="ca-badge">Препоръчана</span></div>
+            <p class="ca-price">230 €</p>
+            <p class="fit">За по-сложен казус: няколко вида доходи, чуждестранни брокери, структуриране на бизнес, MiCA и регулаторни въпроси.</p>
+            <ul><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Онлайн в Google Meet</li><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Плащане с карта при записване</li></ul>
+            <a class="btn-a glow" href="#a-pricing">Избери 60 минути <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+        <p class="ca-note">⟨?1⟩ ДДС и фактура · ⟨?3⟩ на български или английски · условия за отказ ⟨?2⟩</p>
+      </div>
+    </section>
+
+    <section class="ca-section" id="a-blog" aria-labelledby="a-blog-title">
+      <div class="wrap">
+        <div class="ca-head">
+          <div><p class="ca-eyebrow">Блог</p><h2 class="ca-h2" id="a-blog-title">Последни статии</h2></div>
+          <a class="ca-more" href="#a-blog">Всички статии <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="ca-posts">
+          <a class="ca-post lead" href="#a-blog">
+            <p class="ca-meta"><span class="cat">Инвестиции</span><time datetime="2026-10-08">8 октомври 2026</time><span>12 мин четене</span></p>
+            <h3><span lang="en">Tax-loss harvesting</span> по български</h3>
+            <p>Как да „съберем“ данъчните загуби преди 31 декември законно – и къде минава границата с пазарната манипулация.</p>
+            <span class="ca-more">Прочети <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="ca-post" href="#a-blog">
+            <p class="ca-meta"><span class="cat">Инвестиции</span><time datetime="2026-10-08">8 окт 2026</time><span>15 мин</span></p>
+            <h3>Личен или фирмен акаунт при брокер</h3>
+            <p>Загуби, пазари в САЩ, разходи, изтегляне на парите и наследяване.</p>
+          </a>
+          <a class="ca-post" href="#a-blog">
+            <p class="ca-meta"><span class="cat">Отчетност пред БНБ</span><time datetime="2026-10-05">5 окт 2026</time><span>15 мин</span></p>
+            <h3>Скъпа БНБ, имам акции в Interactive Brokers</h3>
+            <p>СПБ-8, прагът от 25 000 € и защо ценните книжа се пишат в брой.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ca-cta" id="a-contact" aria-labelledby="a-cta-title">
+      <div class="wrap ca-cta-grid">
+        <div>
+          <h2 id="a-cta-title">Имате конкретен казус?</h2>
+          <p>Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</p>
+          <a class="btn-a glow" href="#a-pricing">Запази час <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="ca-contacts" aria-label="Директен контакт">
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>office@vesta-bg.eu</span></li>
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>+359 887 460 907</span></li>
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Viber · WhatsApp · Telegram</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ca-footer">
+    <div class="wrap">
+      <div class="ca-footer-grid">
+        <div>
+          <a class="ca-logo" href="#a">Marina <span style="color:var(--a-accent)">M.</span></a>
+          <p class="tag">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+          <a class="ca-donate" href="#a">💛 Подкрепи ме</a>
+        </div>
+        <nav aria-labelledby="a-f1"><h2 id="a-f1">Навигация</h2><ul><li><a href="#a-services">Услуги</a></li><li><a href="#a-about">За мен</a></li><li><a href="#a-blog">Блог</a></li><li><a href="#a-blog">Видео</a></li><li><a href="#a-contact">Контакти</a></li></ul></nav>
+        <nav aria-labelledby="a-f2"><h2 id="a-f2">Ресурси</h2><ul><li><a href="#a">Проекти</a></li><li><a href="#a">Партньори</a></li><li><a href="#a">Игра</a></li><li><a href="#a">Синтезатор</a></li><li><a href="#a">RSS</a></li></ul></nav>
+        <div><h2>Контакт</h2><ul><li>office@vesta-bg.eu</li><li>+359 887 460 907</li><li>Facebook · LinkedIn · YouTube · TikTok · X</li></ul></div>
+      </div>
+      <div class="ca-legal"><span>© 2026 Марина Мучакова · Поверителност · Достъпност</span><span>Съдържанието не е индивидуална данъчна или правна консултация.</span></div>
+    </div>
+  </footer>
+</div>
+
+<!-- =========================================================== CONCEPT B -->
+<div class="concept cb" id="b" data-view hidden>
+  <a class="skip" href="#b-main">Към съдържанието</a>
+  <header class="cb-header">
+    <div class="wrap cb-header-in">
+      <a class="cb-logo" href="#b"><b aria-hidden="true">MM</b><span class="cb-logo-text">Марина Мучакова</span></a>
+      <nav class="cb-nav" id="b-nav" aria-label="Главна навигация">
+        <ul>
+          <li><a href="#b-services">Услуги</a></li>
+          <li><a href="#b-about">За мен</a></li>
+          <li><a href="#b-blog">Блог</a></li>
+          <li><a href="#b-contact">Контакти</a></li>
+        </ul>
+        <div class="cb-tools">
+          <a class="cb-tool" href="#b" lang="en" hreflang="en">EN<span class="sr"> · English version</span></a>
+          <button class="cb-tool" type="button" data-theme-toggle aria-pressed="false"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><span class="sr">Тъмна тема</span></button>
+        </div>
+      </nav>
+      <a class="btn-b primary small" href="#b-pricing">Запази час</a>
+      <button class="cb-menu" type="button" data-menu aria-expanded="false" aria-controls="b-nav"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg><span data-menu-label>Меню</span></button>
+    </div>
+  </header>
+
+  <main id="b-main" tabindex="-1">
+    <section class="cb-hero" aria-labelledby="b-h1">
+      <div class="wrap cb-hero-grid">
+        <div>
+          <p class="cb-pill">Онлайн консултации · Google Meet</p>
+          <p class="cb-greet">Здравейте, Данъчни Хакери, аз съм</p>
+          <h1 id="b-h1">Марина Мучакова</h1>
+          <p class="cb-role">Данъчен консултант</p>
+          <p class="cb-lede">Помагам на хора и бизнеси да минат НАП без НАП да ги мине, чрез законни данъчни оптимизации и стратегии.</p>
+          <div class="cb-actions">
+            <a class="btn-b primary" href="#b-pricing">Запази консултация <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+            <a class="btn-b light" href="#b-services">Услуги и цени</a>
+          </div>
+          <p class="cb-trustline" id="b-about">Основател и партньор в <strong>Веста Консулт</strong>, <strong>Крипто Академията</strong> и <strong>НАБИ</strong></p>
+        </div>
+        <div class="cb-visual">
+          <img src="img/profile_9.jpg" alt="Марина Мучакова" width="1050" height="1400">
+          <div class="cb-widget w1"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span><p><strong>от 130 €</strong><span>30 или 60 минути</span></p></div>
+          <div class="cb-widget w2"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-video"/></svg></span><p><strong>Google Meet</strong><span>BG · EN ⟨?3⟩</span></p></div>
+        </div>
+      </div>
+      <div class="wrap">
+        <dl class="cb-stats">
+          <div><dt>години опит в данъчното право</dt><dd>15+</dd></div>
+          <div><dt>статии за данъци, инвестиции и крипто</dt><dd>29</dd></div>
+          <div><dt>крипто регулации и данъци</dt><dd>MiCA</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="cb-section" id="b-services" aria-labelledby="b-services-title">
+      <div class="wrap">
+        <div class="cb-head"><div><p class="cb-eyebrow">Експертиза</p><h2 class="cb-h2" id="b-services-title">С какво помагам</h2><p class="cb-sub">Законни решения, които оставят повече капитал в бизнеса и в портфейла ви.</p></div></div>
+        <ul class="cb-services">
+          <li><article class="cb-service"><span class="cb-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-coins"/></svg></span><h3>Крипто данъци и MiCA</h3><p>Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.</p><ul class="cb-chips" aria-label="Теми"><li>MiCA</li><li>AML</li><li>ЗДДС</li></ul><a href="#b-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за крипто данъци и MiCA</span></a></article></li>
+          <li><article class="cb-service"><span class="cb-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-chart"/></svg></span><h3>Доходи от инвестиции</h3><p>Акции, ETF, облигации и дивиденти — кога се дължи данък, колко е и къде се декларира.</p><ul class="cb-chips" aria-label="Теми"><li>ЗДДФЛ</li><li>ETF</li><li>дивиденти</li></ul><a href="#b-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за доходи от инвестиции</span></a></article></li>
+          <li><article class="cb-service"><span class="cb-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg></span><h3>Международно облагане</h3><p>Спогодби за избягване на двойното данъчно облагане, местно лице и чуждестранни брокери.</p><ul class="cb-chips" aria-label="Теми"><li>СИДДО</li><li>местно лице</li><li>СПБ-8</li></ul><a href="#b-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за международно облагане</span></a></article></li>
+          <li><article class="cb-service"><span class="cb-service-icon"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-building"/></svg></span><h3>Бизнес структуриране</h3><p>Субстанция, ДДС и планиране, с което маржът расте, а данъчната тежест — не.</p><ul class="cb-chips" aria-label="Теми"><li>ЗКПО</li><li>ЗДДС</li><li>субстанция</li></ul><a href="#b-services">Повече <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr"> за бизнес структуриране</span></a></article></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cb-section" id="b-steps" aria-labelledby="b-steps-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="cb-head"><div><p class="cb-eyebrow">Процес</p><h2 class="cb-h2" id="b-steps-title">Как работим</h2></div></div>
+        <ol class="cb-steps">
+          <li><h3>Изберете формат</h3><p>30 минути за конкретен въпрос или 60 минути за по-сложен казус.</p></li>
+          <li><h3>Запазете и платете онлайн</h3><p>Удобен ден в календара, плащане с карта чрез Stripe.</p></li>
+          <li><h3>Подгответе въпроса си</h3><p>Кратко описание и документи предварително.</p></li>
+          <li><h3>Срещаме се онлайн</h3><p>Google Meet и ясни следващи стъпки.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cb-section" id="b-pricing" aria-labelledby="b-pricing-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="cb-head" style="justify-content:center;text-align:center"><div><p class="cb-eyebrow">Консултации</p><h2 class="cb-h2" id="b-pricing-title">Цени</h2></div></div>
+        <div class="cb-plans">
+          <article class="cb-plan" aria-labelledby="b-plan-30">
+            <div class="cb-plan-top"><h3 id="b-plan-30">Бърза консултация</h3></div>
+            <p class="cb-price"><strong>130 €</strong><span>/ 30 мин</span></p>
+            <p class="fit">За един конкретен, ясно формулиран въпрос: кога се дължи данък, как се декларира даден доход, коя ставка се прилага.</p>
+            <ul><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Онлайн в Google Meet</li><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Плащане с карта при записване</li></ul>
+            <a class="btn-b light" href="#b-pricing">Избери 30 минути</a>
+          </article>
+          <article class="cb-plan featured" aria-labelledby="b-plan-60">
+            <div class="cb-plan-top"><h3 id="b-plan-60">Онлайн консултация</h3><span class="cb-badge">Препоръчана</span></div>
+            <p class="cb-price"><strong>230 €</strong><span>/ 60 мин</span></p>
+            <p class="fit">За по-сложен казус: няколко вида доходи, чуждестранни брокери, структуриране на бизнес, MiCA и регулаторни въпроси.</p>
+            <ul><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Онлайн в Google Meet</li><li><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Плащане с карта при записване</li></ul>
+            <a class="btn-b on-navy" href="#b-pricing">Избери 60 минути <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+        <p class="cb-note">⟨?1⟩ ДДС и фактура · ⟨?3⟩ на български или английски · условия за отказ ⟨?2⟩</p>
+      </div>
+    </section>
+
+    <section class="cb-section" id="b-blog" aria-labelledby="b-blog-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="cb-head"><div><p class="cb-eyebrow">Блог</p><h2 class="cb-h2" id="b-blog-title">Последни статии</h2></div><a class="cb-more" href="#b-blog">Всички статии <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></div>
+        <div class="cb-feed">
+          <a class="cb-feed-lead" href="#b-blog">
+            <div>
+              <p class="cb-meta"><span class="cat">Инвестиции</span><time datetime="2026-10-08">8 октомври 2026</time><span>12 мин четене</span></p>
+              <h3><span lang="en">Tax-loss harvesting</span> по български</h3>
+              <p>Как да „съберем“ данъчните загуби преди 31 декември законно – и къде минава границата с пазарната манипулация.</p>
+            </div>
+            <span class="go" aria-hidden="true"><svg class="i" focusable="false"><use href="#i-arrow"/></svg></span>
+          </a>
+          <ul class="cb-rows">
+            <li><a href="#b-blog"><time datetime="2026-10-08">08.10.2026</time><span><span class="cat">Инвестиции</span><strong>Личен или фирмен акаунт при брокер</strong></span><span class="len">15 мин</span></a></li>
+            <li><a href="#b-blog"><time datetime="2026-10-05">05.10.2026</time><span><span class="cat">Отчетност пред БНБ</span><strong>Скъпа БНБ, имам акции в Interactive Brokers</strong></span><span class="len">15 мин</span></a></li>
+            <li><a href="#b-blog"><time datetime="2026-10-02">02.10.2026</time><span><span class="cat">СИДДО</span><strong>Местно лице на половин Европа (и на един кораб)</strong></span><span class="len">21 мин</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="b-contact" aria-labelledby="b-cta-title">
+      <div class="cb-cta">
+        <div>
+          <h2 id="b-cta-title">Имате конкретен казус?</h2>
+          <p>Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</p>
+          <a class="btn-b on-navy" href="#b-pricing">Запази час <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="cb-contacts" aria-label="Директен контакт">
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>office@vesta-bg.eu</span></li>
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>+359 887 460 907</span></li>
+          <li><span><svg class="i" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Viber · WhatsApp · Telegram</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer">
+    <div class="wrap">
+      <div class="cb-footer-grid">
+        <div>
+          <a class="cb-logo" href="#b"><b>MM</b>Марина Мучакова</a>
+          <p class="tag">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+          <a class="cb-donate" href="#b">💛 Подкрепи ме</a>
+        </div>
+        <nav aria-labelledby="b-f1"><h2 id="b-f1">Навигация</h2><ul><li><a href="#b-services">Услуги</a></li><li><a href="#b-about">За мен</a></li><li><a href="#b-blog">Блог</a></li><li><a href="#b-blog">Видео</a></li><li><a href="#b-contact">Контакти</a></li></ul></nav>
+        <nav aria-labelledby="b-f2"><h2 id="b-f2">Ресурси</h2><ul><li><a href="#b">Проекти</a></li><li><a href="#b">Партньори</a></li><li><a href="#b">Игра</a></li><li><a href="#b">Синтезатор</a></li><li><a href="#b">RSS</a></li></ul></nav>
+        <div><h2>Контакт</h2><ul><li>office@vesta-bg.eu</li><li>+359 887 460 907</li><li>Facebook · LinkedIn · YouTube · TikTok · X</li></ul></div>
+      </div>
+      <div class="cb-legal"><span>© 2026 Марина Мучакова · Поверителност · Достъпност</span><span>Съдържанието не е индивидуална данъчна или правна консултация.</span></div>
+    </div>
+  </footer>
+</div>
+
+<!-- =========================================================== FONTS -->
+<main class="cf" id="fonts" data-view hidden>
+  <div class="wrap">
+    <h1>Сравнение на шрифтовете</h1>
+    <p class="cf-intro">Един и същ текст в трите кандидата: заглавия, абзац на български и английски, цени, таблица и знаци, които се бъркат лесно. Размерите и теглата са еднакви, разликата е само в шрифта.</p>
+    <div class="cf-grid">
+      <section class="cf-card cf-inter" aria-labelledby="f-inter"><header><h2 id="f-inter">Inter</h2><span>в концепция A</span></header>
+        <p class="s-h1">Марина Мучакова</p>
+        <p class="s-h2">Доходи от инвестиции</p>
+        <p class="s-p">Казвам се Марина Мучакова и съм данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p>
+        <p class="s-p" lang="en">My name is Marina Muchakova and I am a tax consultant with a law degree and over 15 years of experience in tax law.</p>
+        <p class="s-num"><span>130 €</span><span>230 €</span><span>51 130 €</span><span>2026</span></p>
+        <div class="cf-table"><table><thead><tr><th scope="col">Показател (EUR)</th><th scope="col">Без</th><th scope="col">С</th></tr></thead><tbody><tr><td>Печалба</td><td>8 000</td><td>8 000</td></tr><tr><td>Загуба</td><td>0</td><td>−5 000</td></tr><tr><td>Нетен резултат</td><td>8 000</td><td>3 000</td></tr></tbody></table></div>
+        <p class="s-glyph">Il1 · 0O · ДдЛлЖжФфЩщ · „Данъчни хакери“</p>
+        <p class="s-small">Неутрален и изпитан на екран, много разпространен в банкови и финтех приложения. Сигурен избор, но най-малко отличим. Стандартни форми на кирилицата.</p>
+      </section>
+      <section class="cf-card cf-onest" aria-labelledby="f-onest"><header><h2 id="f-onest">Onest</h2><span>в концепция B</span></header>
+        <p class="s-h1">Марина Мучакова</p>
+        <p class="s-h2">Доходи от инвестиции</p>
+        <p class="s-p">Казвам се Марина Мучакова и съм данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p>
+        <p class="s-p" lang="en">My name is Marina Muchakova and I am a tax consultant with a law degree and over 15 years of experience in tax law.</p>
+        <p class="s-num"><span>130 €</span><span>230 €</span><span>51 130 €</span><span>2026</span></p>
+        <div class="cf-table"><table><thead><tr><th scope="col">Показател (EUR)</th><th scope="col">Без</th><th scope="col">С</th></tr></thead><tbody><tr><td>Печалба</td><td>8 000</td><td>8 000</td></tr><tr><td>Загуба</td><td>0</td><td>−5 000</td></tr><tr><td>Нетен резултат</td><td>8 000</td><td>3 000</td></tr></tbody></table></div>
+        <p class="s-glyph">Il1 · 0O · ДдЛлЖжФфЩщ · „Данъчни хакери“</p>
+        <p class="s-small">По-кръгъл и по-топъл от Inter, с отворени форми и добра четимост на малък размер. Стандартни форми на кирилицата.</p>
+      </section>
+      <section class="cf-card cf-manrope" aria-labelledby="f-manrope"><header><h2 id="f-manrope">Manrope</h2><span>алтернатива</span></header>
+        <p class="s-h1">Марина Мучакова</p>
+        <p class="s-h2">Доходи от инвестиции</p>
+        <p class="s-p">Казвам се Марина Мучакова и съм данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p>
+        <p class="s-p" lang="en">My name is Marina Muchakova and I am a tax consultant with a law degree and over 15 years of experience in tax law.</p>
+        <p class="s-num"><span>130 €</span><span>230 €</span><span>51 130 €</span><span>2026</span></p>
+        <div class="cf-table"><table><thead><tr><th scope="col">Показател (EUR)</th><th scope="col">Без</th><th scope="col">С</th></tr></thead><tbody><tr><td>Печалба</td><td>8 000</td><td>8 000</td></tr><tr><td>Загуба</td><td>0</td><td>−5 000</td></tr><tr><td>Нетен резултат</td><td>8 000</td><td>3 000</td></tr></tbody></table></div>
+        <p class="s-glyph">Il1 · 0O · ДдЛлЖжФфЩщ · „Данъчни хакери“</p>
+        <p class="s-small">Геометричен, с подчертан „технологичен“ характер. На български показва <strong>българските форми</strong> на буквите (в, д, т, и, л, както в ръкописа). Силен в заглавия, в дълъг текст е по-широк.</p>
+      </section>
+    </div>
+    <div class="cf-criteria"><p style="margin:0 0 10px"><strong>Как да изберете:</strong> прочетете абзаца на български на телефона си. Изберете шрифта, при който четете най-леко и който „звучи“ като вас. Шрифтът е независим от концепцията: концепция A може да е с Onest, а B с Inter.</p><p style="margin:0"><strong>Българска или стандартна кирилица?</strong> Българските форми (Manrope) изглеждат по-модерно и по-„наши“, но част от читателите, особено по-възрастните, са свикнали със стандартните (Inter, Onest). За масова аудитория препоръчвам стандартните форми.</p></div>
+  </div>
+</main>
+
+<script>
+(function () {
+  const views = ['a', 'b', 'fonts'];
+  const root = document.documentElement;
+
+  // ---- view switching via bare #a / #b / #fonts (or any id inside a view)
+  function show() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    let view = views.includes(id) ? id : null;
+    if (!view && id) {
+      const target = document.getElementById(id);
+      const host = target && target.closest('[data-view]');
+      if (host) view = host.id;
+    }
+    view = view || 'a';
+    document.querySelectorAll('[data-view]').forEach(v => { v.hidden = v.id !== view; });
+    document.querySelectorAll('[data-tab]').forEach(t => {
+      if (t.dataset.tab === view) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+    });
+    if (views.includes(id)) window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+
+  // ---- theme: system / light / dark (remembered per viewer when storage works)
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function effectiveDark() {
+    const t = root.getAttribute('data-theme');
+    return t ? t === 'dark' : mq.matches;
+  }
+  function syncThemeUI(choice) {
+    document.querySelectorAll('[data-set-theme]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setTheme === choice)));
+    document.querySelectorAll('[data-theme-toggle]').forEach(b => b.setAttribute('aria-pressed', String(effectiveDark())));
+  }
+  function setTheme(choice) {
+    if (choice === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', choice);
+    try { localStorage.setItem('mm-concept-theme', choice); } catch (e) {}
+    syncThemeUI(choice);
+  }
+  let saved = null;
+  try { saved = localStorage.getItem('mm-concept-theme'); } catch (e) {}
+  setTheme(saved === 'light' || saved === 'dark' ? saved : (root.getAttribute('data-theme') || 'system'));
+  document.querySelectorAll('[data-set-theme]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.setTheme)));
+  document.querySelectorAll('[data-theme-toggle]').forEach(b => b.addEventListener('click', () => setTheme(effectiveDark() ? 'light' : 'dark')));
+  mq.addEventListener('change', () => syncThemeUI(root.getAttribute('data-theme') || 'system'));
+
+  // ---- mobile menu (disclosure pattern): Esc closes and returns focus
+  document.querySelectorAll('[data-menu]').forEach(btn => {
+    const nav = document.getElementById(btn.getAttribute('aria-controls'));
+    const label = btn.querySelector('[data-menu-label]');
+    function set(open) {
+      btn.setAttribute('aria-expanded', String(open));
+      label.textContent = open ? 'Затвори' : 'Меню';
+      if (open) nav.setAttribute('data-open', ''); else nav.removeAttribute('data-open');
+    }
+    btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
+    nav.addEventListener('click', e => { if (e.target.closest('a')) set(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { set(false); btn.focus(); } });
+  });
+})();
+</script>
