@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Скелетни схеми · Фаза 1</title>
+<style>
+  :root { --ink:#27272a; --mute:#71717a; --line:#a1a1aa; --soft:#e4e4e7; --bg:#f4f4f5; --card:#fff; --lm:#6d28d9; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .switch { position:sticky; top:0; z-index:9; display:flex; gap:6px; flex-wrap:wrap; padding:10px 16px; background:#18181b; }
+  .switch a { color:#fff; text-decoration:none; padding:6px 12px; border-radius:999px; border:1px solid #52525b; font-size:14px; }
+  .switch a[aria-current] { background:#fff; color:#18181b; }
+  .legend { max-width:1200px; margin:14px auto 0; padding:0 16px; color:var(--mute); font-size:13px; }
+  .shot .switch, .shot .legend { display:none; }
+  .page { display:none; max-width:1200px; margin:0 auto; padding:16px; container-type:inline-size; }
+  .page.phone { max-width:390px; background:var(--bg); }
+  .page.on { display:block; }
+  .box { position:relative; background:var(--card); border:1.5px dashed var(--line); border-radius:10px; padding:28px 18px 18px; margin:0 0 14px; }
+  .box.dark { background:#3f3f46; color:#fff; border-color:#3f3f46; }
+  .box.dark .ln { background:#71717a; }
+  .tag { position:absolute; top:-1px; left:-1px; background:var(--soft); color:var(--ink); font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:3px 8px; border-radius:10px 0 8px 0; }
+  .box.dark .tag { background:#52525b; color:#fff; }
+  .lm { display:inline-block; max-width:100%; overflow-wrap:anywhere; font:11px/1.4 ui-monospace,Menlo,monospace; color:var(--lm); border:1px solid var(--lm); border-radius:4px; padding:1px 6px; margin:0 0 8px; background:#f5f3ff; }
+  .box.dark .lm { background:#2e1065; color:#ddd6fe; border-color:#a78bfa; }
+  .opt { border-style:dotted; opacity:.75; }
+  h1,h2,h3,h4 { margin:.2em 0 .4em; line-height:1.2; }
+  h1 { font-size:clamp(28px,4vw,44px); } h2 { font-size:clamp(20px,2.4vw,26px); } h3 { font-size:17px; }
+  p { margin:.3em 0 .6em; } .mute { color:var(--mute); } .small { font-size:13px; }
+  .ln { height:9px; border-radius:5px; background:var(--soft); margin:8px 0; } .ln.s { width:60%; } .ln.xs { width:35%; }
+  .img { background-color:var(--soft); background-image:linear-gradient(to top right,transparent calc(50% - 1px),var(--line) 50%,transparent calc(50% + 1px)),linear-gradient(to top left,transparent calc(50% - 1px),var(--line) 50%,transparent calc(50% + 1px)); border-radius:8px; min-height:120px; display:flex; align-items:flex-end; padding:8px; font-size:12px; color:var(--mute); }
+  .btn { display:inline-block; background:var(--ink); color:#fff; border-radius:999px; padding:10px 18px; font-weight:600; font-size:14px; margin:4px 6px 4px 0; }
+  .btn.ghost { background:transparent; color:var(--ink); border:1.5px solid var(--ink); }
+  .box.dark .btn { background:#fff; color:#18181b; }
+  .chip { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:3px 10px; font-size:13px; margin:2px 4px 2px 0; background:#fafafa; }
+  .row { display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+  .between { justify-content:space-between; }
+  .g2,.g3,.g4,.split,.article,.booking { display:grid; gap:14px; }
+  .g2 { grid-template-columns:repeat(2,1fr); } .g3 { grid-template-columns:repeat(3,1fr); } .g4 { grid-template-columns:repeat(4,1fr); }
+  .split { grid-template-columns:1.25fr 1fr; align-items:center; }
+  .article { grid-template-columns:minmax(0,1fr) 260px; align-items:start; }
+  .booking { grid-template-columns:minmax(0,1fr) 300px; align-items:start; }
+  .card { border:1.5px solid var(--soft); border-radius:8px; padding:14px; background:#fff; }
+  .card.sel { border:2.5px solid var(--ink); }
+  .num { display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:13px; }
+  .faq { border-top:1px solid var(--soft); padding:10px 0; display:flex; justify-content:space-between; }
+  .nav-d { display:flex; gap:18px; } .nav-m { display:none; }
+  .sticky { position:sticky; top:60px; }
+  .toc-m { display:none; }
+  table { width:100%; border-collapse:collapse; font-size:13px; } td,th { border:1px solid var(--soft); padding:6px; text-align:left; }
+  /* Container queries, so a 390 px phone frame works even where the window can't be that narrow */
+  @container (max-width: 860px) {
+    .g4 { grid-template-columns:repeat(2,1fr); }
+    .g3,.split,.article,.booking { grid-template-columns:1fr; }
+    .nav-d { display:none; } .nav-m { display:flex; }
+    .toc-d { display:none; } .toc-m { display:block; }
+  }
+  @container (max-width: 520px) { .g2,.g4 { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<nav class="switch" aria-label="Схеми">
+  <a href="?p=home" data-p="home">Начало</a>
+  <a href="?p=services" data-p="services">Услуги</a>
+  <a href="?p=article" data-p="article">Статия</a>
+  <a href="?p=booking" data-p="booking">Запази час</a>
+</nav>
+<p class="legend">Скелетна схема (без цветове и шрифтове, те идват във Фаза 2). Сиво = текст или изображение · тъмно = бутон · <span class="lm">лилав етикет</span> = ориентир за екранни четци (ARIA) · пунктир = по избор / зависи от ваш отговор.</p>
+
+<!-- ============ shared header / footer templates (cloned by JS) ============ -->
+<template id="hdr">
+  <div class="box"><span class="tag">Горна лента</span>
+    <span class="lm">&lt;header&gt; + &lt;nav aria-label="Главна навигация"&gt;</span>
+    <div class="row between">
+      <strong>Marina M.</strong>
+      <div class="nav-d"><span>Услуги</span><span>За мен</span><span>Блог</span><span>Контакти</span></div>
+      <div class="row nav-d"><span class="chip">EN</span><span class="chip">◐ тема</span><span class="btn">Запази час</span></div>
+      <div class="row nav-m"><span class="btn">Запази час</span><span class="btn ghost">☰ Меню</span></div>
+    </div>
+  </div>
+</template>
+<template id="ftr">
+  <div class="box dark"><span class="tag">12 · Футър</span>
+    <span class="lm">&lt;footer&gt; + &lt;nav aria-label="Връзки във футъра"&gt;</span>
+    <div class="g4">
+      <div><strong>Марина Мучакова</strong><div class="ln"></div><div class="ln s"></div><span class="chip" style="color:#18181b">💛 Подкрепи ме</span></div>
+      <div><strong>Навигация</strong><p class="small">Услуги · За мен · Блог · Видео · Контакти · Запази час</p></div>
+      <div><strong>Ресурси</strong><p class="small">Проекти · Партньори · Игра · Синтезатор · RSS</p></div>
+      <div><strong>Контакт</strong><p class="small">имейл · телефон<br>f · in · ♪ · ▶ · 𝕏</p></div>
+    </div>
+    <p class="small" style="border-top:1px solid #71717a;padding-top:10px;margin-top:10px">© 2026 · Поверителност · Достъпност · Съдържанието не е индивидуална данъчна или правна консултация.</p>
+  </div>
+</template>
+<template id="pricing">
+  <div class="box"><span class="tag">Цени</span>
+    <span class="lm">&lt;section aria-labelledby="pricing-title"&gt;</span>
+    <h2 id="pricing-title">Цени</h2>
+    <div class="g2">
+      <div class="card"><h3>Бърза консултация</h3><p class="mute">30 мин</p><h2>€130</h2><p class="small">За един конкретен, ясно формулиран въпрос.</p><span class="btn ghost">Избери този формат</span></div>
+      <div class="card sel"><span class="chip">Препоръчана</span><h3>Онлайн консултация</h3><p class="mute">60 мин</p><h2>€230</h2><p class="small">За по-сложен казус: няколко дохода, чужди брокери, бизнес, MiCA.</p><span class="btn">Избери този формат</span></div>
+    </div>
+    <p class="small mute">Онлайн в Google Meet · плащане с карта при записване · ⟨?1⟩ ДДС · ⟨?3⟩ BG / EN</p>
+  </div>
+</template>
+<template id="steps">
+  <div class="box"><span class="tag">Как работим</span>
+    <span class="lm">&lt;section aria-labelledby&gt; + &lt;ol&gt;</span>
+    <h2>Как работим</h2>
+    <div class="g4">
+      <div><span class="num">1</span><h3>Изберете формат</h3><div class="ln"></div><div class="ln s"></div></div>
+      <div><span class="num">2</span><h3>Запазете и платете</h3><div class="ln"></div><div class="ln s"></div></div>
+      <div><span class="num">3</span><h3>Подгответе въпроса</h3><div class="ln"></div><div class="ln s"></div></div>
+      <div><span class="num">4</span><h3>Срещаме се онлайн</h3><div class="ln"></div><div class="ln s"></div></div>
+    </div>
+  </div>
+</template>
+<template id="cta">
+  <div class="box dark"><span class="tag">Финален CTA · #contact</span>
+    <span class="lm">&lt;section id="contact" aria-labelledby&gt;</span>
+    <div class="split">
+      <div><h2>Имате конкретен казус?</h2><p>Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</p><span class="btn">Запази час</span></div>
+      <div><p class="small">✉ office@vesta-bg.eu<br>☎ +359 887 460 907</p><span class="chip" style="color:#18181b">Viber</span><span class="chip" style="color:#18181b">WhatsApp</span><span class="chip" style="color:#18181b">Telegram</span></div>
+    </div>
+  </div>
+</template>
+<template id="postcards">
+  <div class="g3">
+    <div class="card"><div class="img" style="min-height:90px">корица (по избор)</div><p class="small mute">Инвестиции · 8 окт 2026 · 15 мин</p><h3>Заглавие на статия</h3><div class="ln"></div><div class="ln s"></div></div>
+    <div class="card"><div class="img" style="min-height:90px"></div><p class="small mute">ДДС · 1 окт 2026 · 12 мин</p><h3>Заглавие на статия</h3><div class="ln"></div><div class="ln s"></div></div>
+    <div class="card"><div class="img" style="min-height:90px"></div><p class="small mute">СИДДО · 2 окт 2026 · 21 мин</p><h3>Заглавие на статия</h3><div class="ln"></div><div class="ln s"></div></div>
+  </div>
+</template>
+
+<!-- ================================ HOME ================================ -->
+<section class="page" id="home">
+  <div data-use="hdr"></div>
+  <span class="lm">&lt;main id="main"&gt;</span>
+  <div class="box"><span class="tag">1 · Hero</span>
+    <div class="split">
+      <div>
+        <span class="chip">Здравейте, Данъчни Хакери, аз съм</span>
+        <h1>Марина Мучакова</h1>
+        <h3>Данъчен консултант</h3>
+        <p>Помагам на хора и бизнеси да минат НАП без НАП да ги мине, чрез законни данъчни оптимизации и стратегии.</p>
+        <span class="btn">Запази консултация →</span><span class="btn ghost">Услуги и цени</span>
+        <p class="small mute">Онлайн · Google Meet · от €130</p>
+      </div>
+      <div class="img" style="min-height:300px">снимка (profile_3)</div>
+    </div>
+  </div>
+  <div class="box"><span class="tag">2 · Цифри</span><span class="lm">&lt;dl&gt;</span>
+    <div class="g3"><div><h2>15+</h2><p class="small">години опит в данъчното право</p></div><div><h2>29</h2><p class="small">статии (автоматично)</p></div><div><h2>MiCA</h2><p class="small">крипто регулации и данъци</p></div></div>
+  </div>
+  <div class="box"><span class="tag">3 · Доверие</span>
+    <p class="small mute">Основател и партньор в:</p>
+    <div class="row"><strong>Веста Консулт</strong><strong>Крипто Академията</strong><strong>НАБИ</strong></div>
+    <div class="box opt" style="margin:12px 0 0"><span class="tag">⟨?6⟩ по избор</span><p class="small">Лектор в семинари с УНСС, Експерт Ивентс, Темида, Китов Център, Финанс Академи, Инвест Про, Инвест Клуб</p></div>
+  </div>
+  <div class="box"><span class="tag">4 · Услуги</span><span class="lm">&lt;section aria-labelledby="services-title"&gt;</span>
+    <h2 id="services-title">С какво помагам</h2>
+    <div class="g4">
+      <div class="card"><span class="chip">◇</span><h3>Крипто данъци и MiCA</h3><div class="ln"></div><div class="ln s"></div><p class="small">Повече →</p></div>
+      <div class="card"><span class="chip">◇</span><h3>Доходи от инвестиции</h3><div class="ln"></div><div class="ln s"></div><p class="small">Повече →</p></div>
+      <div class="card"><span class="chip">◇</span><h3>Международно облагане</h3><div class="ln"></div><div class="ln s"></div><p class="small">Повече →</p></div>
+      <div class="card"><span class="chip">◇</span><h3>Бизнес структуриране</h3><div class="ln"></div><div class="ln s"></div><p class="small">Повече →</p></div>
+    </div>
+  </div>
+  <div data-use="steps" data-tag="5 · Как работим"></div>
+  <div data-use="pricing" data-tag="6 · Цени"></div>
+  <div class="box"><span class="tag">7 · За мен · #about</span><span class="lm">&lt;section id="about" aria-labelledby&gt;</span>
+    <div class="split">
+      <div class="img" style="min-height:240px">снимка (profile_9)</div>
+      <div><h2>За мен</h2><div class="ln"></div><div class="ln"></div><div class="ln s"></div><div class="ln"></div><div class="ln xs"></div>
+        <div class="row"><span class="chip">Веста Консулт ↗</span><span class="chip">Крипто Академията ↗</span><span class="chip">НАБИ</span></div>
+        <span class="btn ghost">Повече за мен →</span></div>
+    </div>
+  </div>
+  <div class="box"><span class="tag">8 · Последни статии</span><span class="lm">&lt;section aria-labelledby&gt;</span>
+    <div class="row between"><h2>Последни статии</h2><span>Всички статии →</span></div>
+    <div class="card" style="margin-bottom:14px"><p class="small mute">Най-ново · Инвестиции · 8 окт 2026 · 15 мин</p><h3>Tax-loss harvesting по български</h3><div class="ln"></div><div class="ln s"></div></div>
+    <div data-use="postcards"></div>
+  </div>
+  <div class="box"><span class="tag">9 · Видео</span><span class="lm">&lt;section aria-labelledby&gt;</span>
+    <div class="split"><div class="img" style="min-height:200px">▶ видео (зарежда YouTube едва след клик)</div><div><h2>Видео отговори</h2><h3>Деклариране на загуби от търговия…</h3><div class="ln"></div><div class="ln s"></div><p class="small">Прочети статията → · Всички видеа →</p></div></div>
+  </div>
+  <div class="box"><span class="tag">10 · ЧЗВ</span><span class="lm">&lt;details&gt;&lt;summary&gt;</span>
+    <h2>Често задавани въпроси</h2>
+    <div class="faq"><span>Как протича консултацията?</span><span>+</span></div>
+    <div class="faq"><span>Коя консултация да избера?</span><span>+</span></div>
+    <div class="faq"><span>Как плащам?</span><span>+</span></div>
+    <div class="faq"><span>Мога ли да пренасроча?</span><span>+</span></div>
+    <div class="faq"><span>Какво да подготвя?</span><span>+</span></div>
+    <p class="small">Всички въпроси →</p>
+  </div>
+  <div data-use="cta" data-tag="11 · Финален CTA · #contact"></div>
+  <div data-use="ftr"></div>
+</section>
+
+<!-- ============================== SERVICES ============================== -->
+<section class="page" id="services">
+  <div data-use="hdr"></div>
+  <span class="lm">&lt;nav aria-label="Път"&gt;</span> <span class="small mute">Начало › Услуги</span>
+  <span class="lm">&lt;main id="main"&gt;</span>
+  <div class="box"><span class="tag">Заглавие</span>
+    <h1>Услуги</h1><p>Законни решения, които оставят повече капитал в бизнеса и в портфейла ви.</p>
+    <span class="lm">&lt;nav aria-label="На тази страница"&gt;</span><br>
+    <span class="chip">Крипто и MiCA</span><span class="chip">Инвестиции</span><span class="chip">Международно</span><span class="chip">Бизнес</span><span class="chip">Цени</span><span class="chip">ЧЗВ</span>
+  </div>
+  <div class="box"><span class="tag">Област 1 (#crypto)</span><span class="lm">&lt;section id="crypto" aria-labelledby&gt;</span>
+    <h2>Крипто данъци и MiCA</h2><p>Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.</p>
+    <div class="g2">
+      <div class="card"><h3>За кого</h3><p class="small">Физически лица с крипто · компании, които приемат или търгуват крипто · CASP и проекти с токени</p></div>
+      <div class="card"><h3>Типични въпроси</h3><p class="small">• Как се облага печалбата от крипто?<br>• Трупат ли суаповете оборот по ЗДДС?<br>• Как да мина AML проверка?<br>• Какво изисква КФН по MiCA?</p></div>
+    </div>
+    <div class="card" style="margin:14px 0"><h3>Какво получавате</h3><div class="ln"></div><div class="ln s"></div></div>
+    <h3>Свързани статии <span class="small mute">(автоматично, по поле service)</span></h3>
+    <div data-use="postcards"></div>
+    <p><span class="btn">Запази консултация по тази тема</span></p>
+  </div>
+  <div class="g3">
+    <div class="box"><span class="tag">Област 2 (#invest)</span><h3>Доходи от инвестиции</h3><p class="small mute">същата структура</p></div>
+    <div class="box"><span class="tag">Област 3 (#international)</span><h3>Международно облагане</h3><p class="small mute">същата структура</p></div>
+    <div class="box"><span class="tag">Област 4 (#business)</span><h3>Бизнес структуриране</h3><p class="small mute">същата структура</p></div>
+  </div>
+  <div data-use="pricing" data-tag="Цени (#pricing)"></div>
+  <div data-use="steps"></div>
+  <div class="box"><span class="tag">Условия</span><span class="lm">&lt;section aria-labelledby&gt; + &lt;dl&gt;</span>
+    <h2>Условия на консултацията</h2>
+    <div class="g2"><div><h3>Плащане</h3><p class="small">⟨?1⟩ ДДС, фактура</p></div><div><h3>Отказ и пренасрочване</h3><p class="small">⟨?2⟩</p></div><div><h3>Формат</h3><p class="small">Google Meet, линк по имейл</p></div><div><h3>Обхват</h3><p class="small">⟨?10⟩</p></div></div>
+  </div>
+  <div class="box"><span class="tag">ЧЗВ (#faq)</span><h2>Често задавани въпроси</h2>
+    <div class="faq"><span>Как протича консултацията?</span><span>+</span></div><div class="faq"><span>Коя консултация да избера?</span><span>+</span></div><div class="faq"><span>Получавам ли фактура?</span><span>+</span></div><div class="faq"><span>Изготвяте ли декларации?</span><span>+</span></div>
+  </div>
+  <div data-use="cta" data-tag="Финален CTA"></div>
+  <div data-use="ftr"></div>
+</section>
+
+<!-- ============================== ARTICLE =============================== -->
+<section class="page" id="article">
+  <div data-use="hdr"></div>
+  <div class="box" style="padding:10px 18px"><span class="lm">лента за прогрес · aria-hidden="true"</span><div class="ln s" style="background:var(--ink);height:4px"></div></div>
+  <span class="lm">&lt;nav aria-label="Път"&gt;</span> <span class="small mute">Начало › Блог › Инвестиции</span>
+  <span class="lm">&lt;main id="main"&gt;&lt;article&gt;</span>
+  <div class="box"><span class="tag">Заглавна част</span>
+    <span class="chip">Инвестиции</span>
+    <h1>Tax-loss harvesting по български</h1>
+    <div class="row small mute"><span class="chip">●</span> Марина Мучакова · 8 октомври 2026 · обновена на … · 12 мин четене · <u>Read in English</u></div>
+    <div class="img" style="min-height:220px;margin-top:12px">корица (по избор) + &lt;figcaption&gt;</div>
+  </div>
+  <div class="box toc-m"><span class="tag">Съдържание (телефон)</span><span class="lm">&lt;nav aria-label="Съдържание на статията"&gt;&lt;details&gt;</span><div class="faq"><span>Съдържание</span><span>+</span></div></div>
+  <div class="article">
+    <div class="box"><span class="tag">Текст · ~68 знака на ред</span>
+      <p><em>Как да реализираме загуби в края на годината законно…</em></p>
+      <div class="ln"></div><div class="ln"></div><div class="ln s"></div>
+      <h2>Какво е tax-loss harvesting</h2><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln xs"></div>
+      <h2>Защо физическите лица имат нужда от него</h2><div class="ln"></div><div class="ln"></div><div class="ln s"></div>
+      <span class="lm">&lt;div role="region" aria-labelledby tabindex="0"&gt;&lt;table&gt;</span>
+      <table><tr><th scope="col">Показател (EUR)</th><th scope="col">Без</th><th scope="col">С</th></tr><tr><td>Печалба</td><td>8 000</td><td>8 000</td></tr><tr><td>Загуба</td><td>0</td><td>−5 000</td></tr></table>
+      <div class="card" style="margin:14px 0;border-left:4px solid var(--ink)"><strong>Важно</strong><div class="ln"></div><div class="ln s"></div></div>
+      <h2>Wash sale правила в чужбина</h2><div class="ln"></div><div class="ln"></div><div class="ln s"></div>
+    </div>
+    <div class="box sticky toc-d"><span class="tag">Съдържание (компютър)</span><span class="lm">&lt;nav aria-label="Съдържание на статията"&gt;</span>
+      <p class="small"><strong>Какво е tax-loss harvesting</strong><br>Защо физическите лица…<br>Пример<br>Wash sale правила<br>Сезонност<br>Пазарна манипулация</p>
+      <span class="btn" style="font-size:13px">Запази консултация</span>
+    </div>
+  </div>
+  <div class="box"><span class="tag">Дисклеймър</span><p class="small">Статията е с информационна цел и отразява законодателството към датата на публикуване. Тя не е индивидуална данъчна или правна консултация.</p></div>
+  <div class="box"><span class="tag">Автор + CTA</span><span class="lm">&lt;aside aria-labelledby="author-title"&gt;</span>
+    <div class="split"><div class="row"><div class="img" style="min-height:72px;width:72px;border-radius:50%"></div><div><h3 id="author-title">Марина Мучакова</h3><p class="small">Данъчен консултант с юридическо образование и над 15 години опит.</p></div></div>
+    <div><h3>Имате конкретен казус?</h3><span class="btn">Запази консултация</span></div></div>
+  </div>
+  <div class="box"><span class="tag">Споделяне</span><div class="row"><span class="chip">Сподели…</span><span class="chip">f</span><span class="chip">in</span><span class="chip">𝕏</span><span class="chip">Копирай линка</span></div><p class="small mute">„Копирано“ се обявява чрез role="status"</p></div>
+  <div class="box"><span class="tag">Свързани статии</span><span class="lm">&lt;aside aria-labelledby="related-title"&gt;</span><h2 id="related-title">Свързани статии</h2><div data-use="postcards"></div></div>
+  <div data-use="ftr"></div>
+</section>
+
+<!-- ============================== BOOKING =============================== -->
+<section class="page" id="booking">
+  <div data-use="hdr"></div>
+  <span class="lm">&lt;nav aria-label="Път"&gt;</span> <span class="small mute">Начало › Запази час</span>
+  <span class="lm">&lt;main id="main"&gt;</span>
+  <div class="box"><span class="tag">Заглавие</span><h1>Запази час</h1><p>Изберете удобен ден и час за лична консултация с Марина Мучакова.</p></div>
+  <div class="booking">
+    <div>
+      <div class="box"><span class="tag">Стъпка 1</span><span class="lm">&lt;fieldset&gt;&lt;legend&gt; + radio</span>
+        <h2>1. Изберете формат</h2>
+        <div class="g2">
+          <div class="card"><h3>Бърза консултация</h3><p class="small mute">30 мин · €130</p><p class="small">За един конкретен въпрос.</p></div>
+          <div class="card sel"><h3>Онлайн консултация ✓</h3><p class="small mute">60 мин · €230</p><p class="small">За по-сложен казус.</p></div>
+        </div>
+      </div>
+      <div class="box"><span class="tag">Стъпка 2</span><span class="lm">&lt;section aria-labelledby&gt; + iframe title="Календар за записване на час"</span>
+        <h2>2. Изберете ден и час</h2>
+        <div class="img" style="min-height:420px">Cal.com календар за избрания формат · резервирано място (без „подскачане“) · „Календарът се зарежда…“</div>
+        <p class="small mute">Ако календарът не зареди: имейл и телефон като алтернатива.</p>
+      </div>
+    </div>
+    <div>
+      <div class="box"><span class="tag">Как да се подготвите</span><div class="ln"></div><div class="ln s"></div><div class="ln"></div><div class="ln xs"></div></div>
+      <div class="box"><span class="tag">Какво следва</span><p class="small">✓ Потвърждение по имейл<br>✓ Линк за Google Meet<br>⟨?4⟩ Резюме след срещата</p></div>
+      <div class="box"><span class="tag">Плащане и отказ</span><div class="faq"><span>Как плащам?</span><span>+</span></div><div class="faq"><span>Мога ли да пренасроча?</span><span>+</span></div></div>
+      <p class="small mute">Записването се обработва от Cal.com, а плащането от Stripe. Политика за поверителност →</p>
+    </div>
+  </div>
+  <div data-use="ftr"></div>
+</section>
+
+<script>
+  // Clone the shared blocks, then show the page named in ?p= (default: home).
+  document.querySelectorAll('[data-use]').forEach(slot => {
+    const frag = document.getElementById(slot.dataset.use).content.cloneNode(true);
+    if (slot.dataset.tag) { const t = frag.querySelector('.tag'); if (t) t.textContent = slot.dataset.tag; }
+    slot.replaceWith(frag);
+  });
+  const params = new URLSearchParams(location.search);
+  const page = params.get('p') || 'home';
+  if (params.has('shot')) document.body.classList.add('shot');
+  document.getElementById(page).classList.add('on');
+  if (params.get('w') === 'phone') document.getElementById(page).classList.add('phone');
+  document.querySelector(`.switch [data-p="${page}"]`).setAttribute('aria-current', 'page');
+  // Screenshot mode reports the page height in the title (read by the capture script).
+  if (params.has('shot')) document.title = 'H:' + document.documentElement.scrollHeight;
+</script>
+</body>
+</html>
