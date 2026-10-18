@@ -1,0 +1,72 @@
+{%- set map = collections.i18nMap -%}
+{%- set P = T.projectsPage -%}
+{%- set H = T.home -%}
+{%- set home = 'home' | urlFor(lang, map, site.routes) -%}
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ home }}">{{ T.nav.home }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li></ol></nav>
+    <p class="eyebrow" style="margin-top: var(--space-m)">{{ P.eyebrow }}</p>
+    <h1 id="page-title">{{ P.h1 }}</h1>
+    <p class="lead measure">{{ P.lead }}</p>
+  </div>
+</section>
+
+<section class="section" id="pro" aria-labelledby="pro-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">{{ P.proEyebrow }}</p><h2 id="pro-title">{{ P.proTitle }}</h2></div></div>
+    <ul class="grid" role="list" style="--grid-min: 18rem">
+      {% for v in site.ventures %}
+      {% set item = P.items[v.key] %}
+      <li{% if not v.external %} id="{{ v.key }}"{% endif %}>
+        <article class="card project-card">
+          <div class="cluster" style="--cluster: var(--space-s)">
+            <span class="logo-tile" aria-hidden="true">{{ item.mono }}</span>
+            <p class="muted project-card__cat">{{ item.cat }}</p>
+          </div>
+          <h3 class="card__title">
+            {% if v.external %}<a class="card__link" href="{{ v.url }}" target="_blank" rel="noopener">{{ H.ventures[v.key].name }}<span class="sr-only"> {{ T.a11y.newTab }}</span></a>
+            {% else %}{{ item.name }}{% endif %}
+          </h3>
+          <p class="card__text">{{ item.desc }}</p>
+          {% if v.external %}<span class="card__more" aria-hidden="true">{{ P.openSite }} {% icon "external" %}</span>
+          {% else %}<p class="project-card__foot"><span class="chip chip--outline">{% icon "clock" %}{{ P.soon }}</span></p>{% endif %}
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" id="pet" aria-labelledby="pet-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">{{ P.petEyebrow }}</p><h2 id="pet-title">{{ P.petTitle }}</h2><p class="muted">{{ P.petLead }}</p></div></div>
+    <ul class="grid" role="list" style="--grid-min: 26rem">
+      <li id="synth">
+        <article class="card project-card project-card--media">
+          <img class="project-card__img" src="/images/pet-loopforge.jpg" alt="{{ P.items.synth.alt }}" eleventy:widths="400,800" sizes="(min-width: 980px) 580px, calc(100vw - 40px)">
+          <div class="project-card__body">
+            <p><span class="chip">{% icon "music" %}{{ P.petLabel }}</span></p>
+            <h3 class="card__title"><a class="card__link" href="{{ site.synth }}" target="_blank" rel="noopener">{{ P.items.synth.title }}<span class="sr-only"> {{ T.a11y.newTab }}</span></a></h3>
+            <p class="card__text">{{ P.items.synth.desc }}</p>
+            <span class="card__more" aria-hidden="true">{{ P.open }} {% icon "external" %}</span>
+          </div>
+        </article>
+      </li>
+      <li id="game">
+        <article class="card project-card project-card--media">
+          <img class="project-card__img" src="/images/og-game.png" alt="{{ P.items.game.alt }}" eleventy:widths="400,800" eleventy:formats="avif,webp,jpeg" sizes="(min-width: 980px) 580px, calc(100vw - 40px)">
+          <div class="project-card__body">
+            <p><span class="chip">{% icon "gamepad" %}{{ P.petLabel }}</span></p>
+            <h3 class="card__title"><a class="card__link" href="{{ 'game' | urlFor(lang, map, site.routes) }}">{{ P.items.game.title }}</a></h3>
+            <p class="card__text">{{ P.items.game.desc }}</p>
+            <span class="card__more" aria-hidden="true">{{ P.play }} {% icon "arrow-right" %}</span>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% set ctaId = "consult" %}
+{% include "partials/cta.njk" %}

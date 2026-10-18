@@ -13,7 +13,11 @@
         "http://localhost/blog.html",
         "http://localhost/blog/tax-loss-harvesting-po-balgarski.html",
         "http://localhost/en/blog/lichen-ili-firmen-akaunt-broker.html",
-        "http://localhost/vlog/index.html"
+        "http://localhost/vlog/index.html",
+        "http://localhost/projects/index.html",
+        "http://localhost/partners/index.html",
+        "http://localhost/donate/index.html",
+        "http://localhost/game/index.html"
       ],
       "numberOfRuns": 3,
       "settings": {

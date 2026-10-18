@@ -1,0 +1,30 @@
+{%- set map = collections.i18nMap -%}
+{%- set D = T.donatePage -%}
+{%- set home = 'home' | urlFor(lang, map, site.routes) -%}
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ home }}">{{ T.nav.home }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li></ol></nav>
+    <h1 id="page-title" style="margin-top: var(--space-m)">{{ title }}</h1>
+    <p class="lead measure">{{ D.lead }}</p>
+  </div>
+</section>
+
+<div class="section" style="padding-top: 0">
+  <div class="wrap stack" style="--stack: var(--space-l)">
+    <ul class="grid donate-options" role="list" style="--grid-min: 20rem">
+      {% for way in site.donate %}
+      {% set item = D[way.key] %}
+      <li>
+        <section class="card donate-option" aria-labelledby="donate-{{ way.key }}">
+          <span class="service-card__icon" aria-hidden="true">{% icon way.icon %}</span>
+          <h2 id="donate-{{ way.key }}" class="card__title">{{ item.title }}</h2>
+          <p class="card__text">{{ item.text }}</p>
+          <a class="btn {{ 'btn--primary' if loop.first else 'btn--secondary' }} donate-option__btn" href="{{ way.url }}" target="_blank" rel="noopener">{{ item.button }} {% icon "external" %}<span class="sr-only"> {{ T.a11y.newTab }}</span></a>
+        </section>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="muted measure">{{ D.note }}</p>
+  </div>
+</div>

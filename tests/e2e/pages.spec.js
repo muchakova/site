@@ -9,6 +9,7 @@ const PAGES = [
   "/booking/", "/en/booking/",
   "/blog.html", "/en/blog.html",
   "/vlog/", "/en/vlog/",
+  "/projects/", "/en/projects/", "/partners/", "/en/partners/", "/donate/", "/en/donate/", "/game/", "/en/game/",
   "/blog/tax-loss-harvesting-po-balgarski.html", "/en/blog/tax-loss-harvesting-po-balgarski.html",
   "/blog/lichen-ili-firmen-akaunt-broker.html", "/en/blog/parviyat-balgarski-white-paper-esma.html",
   "/privacy/", "/en/privacy/", "/accessibility/", "/en/accessibility/",

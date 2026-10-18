@@ -200,7 +200,8 @@
     "q8": "Client testimonials: answer pending",
     "q9": "Reply time for messages: answer pending",
     "q10": "Tax returns and bookkeeping (refer to Vesta Consult?): answer pending",
-    "q11": "New professional photos: answer pending"
+    "q11": "New professional photos: answer pending",
+    "q12": "Official websites and logos of tax-invest and NativeArc: answer pending"
   },
   "servicesPage": {
     "onThisPage": "On this page",
@@ -403,5 +404,104 @@
     "emptyHint": "Try another topic or another word.",
     "watch": "Watch on YouTube",
     "articles": "Articles"
+  },
+  "projectsPage": {
+    "eyebrow": "Projects",
+    "h1": "Projects & experiments",
+    "lead": "The organisations I work in, and the things I build for fun.",
+    "proEyebrow": "Professional",
+    "proTitle": "Where I work",
+    "petEyebrow": "Pet projects",
+    "petTitle": "Just for fun",
+    "petLead": "Personal experiments where code, music and tax meet.",
+    "petLabel": "Pet project",
+    "openSite": "Visit the website",
+    "open": "Open",
+    "play": "Play",
+    "soon": "Coming soon",
+    "items": {
+      "vesta": {
+        "mono": "VC",
+        "cat": "Corporate website",
+        "desc": "An accounting firm and consultancy for corporate clients and individuals — crypto accounting, investment fund bookkeeping, translations and document legalisation."
+      },
+      "academy": {
+        "mono": "CA",
+        "cat": "Educational platform",
+        "desc": "An educational crypto and blockchain project, running seminars in partnership with UNWE, Expert Events, Themida, Kitov Centre, Finance Academy, Invest Pro, Invest Club and others."
+      },
+      "nabi": {
+        "mono": "NA",
+        "cat": "Association",
+        "name": "NABI - National Association for Blockchain and Innovation",
+        "desc": "A non-profit bridging business and public administration in the technology sector. The official website is on its way."
+      },
+      "synth": {
+        "title": "LoopForge — a music synthesizer",
+        "alt": "LoopForge — tracks, synthesizers and a piano roll",
+        "desc": "A loop studio in the browser: synths, a drum machine and a piano roll, with WAV export. The built-in tutorial gets you to your own loop in about 15 minutes — no musical knowledge needed."
+      },
+      "game": {
+        "title": "Marina vs the Tax Zombies",
+        "alt": "Marina throws law sections at tax zombies outside the archive",
+        "desc": "A 3-minute browser game: Marina rescues citizens from the tax zombies. In Bulgarian and English."
+      }
+    }
+  },
+  "partnersPage": {
+    "eyebrow": "Partners",
+    "h1": "Who I work with",
+    "lead": "The businesses and organisations I partner with and help.",
+    "groupTitle": "Fintech & crypto",
+    "newPartnership": "New partnership",
+    "items": {
+      "tax-invest": {
+        "mono": "TI",
+        "name": "tax-invest",
+        "desc": "A collaboration in investor taxation."
+      },
+      "nx0": {
+        "mono": "NX",
+        "name": "NX0 · NativeArc",
+        "desc": "NativeArc’s utility token — the first fully Bulgarian white paper notified and entered in ESMA’s register under MiCA.",
+        "link": "Read the analysis"
+      }
+    },
+    "transparencyTitle": "Transparency.",
+    "transparency": "Partnerships do not change how I write. When an article concerns a partner, this is disclosed in the article itself. Content on the blog and vlog is for information only and is not investment advice."
+  },
+  "donatePage": {
+    "lead": "If the articles and materials on this blog are useful to you, you can support my work with a voluntary donation.",
+    "stripe": {
+      "title": "By card",
+      "text": "A one-off donation with a debit or credit card. Secure payment processed by Stripe.",
+      "button": "Donate by card"
+    },
+    "revolut": {
+      "title": "Via Revolut",
+      "text": "A quick donation via Revolut — free of charge between Revolut users.",
+      "button": "Donate via Revolut"
+    },
+    "note": "Donations are entirely voluntary and do not constitute payment for consulting services. Thank you for your support! 💛"
+  },
+  "gamePage": {
+    "eyebrow": "muchakova.com · a 3-minute game",
+    "titleA": "Marina vs",
+    "titleB": "the Tax Zombies",
+    "skip": "Skip the game",
+    "cabinet": "Game",
+    "canvas": "Playing field: a night street outside the archive",
+    "controls": "Controls: <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd> or <kbd>WASD</kbd>. With a mouse or finger: press and drag. Marina fires on her own. Pause: <kbd>P</kbd> or <kbd>Esc</kbd>.",
+    "disclaimer": "A humorous game. The zombies and the Chief Auditor are made up, and the real NRA staff are people just doing their jobs. The tips in the game are general information, not legal advice.",
+    "noscript": "The game needs JavaScript.",
+    "sound": "Mute",
+    "pause": "Pause",
+    "intro": "<div class=\"meta\"><span>Ref. No. 2026-10/01 · Sofia</span><span class=\"stampmark\">URGENT</span></div>\n<h2 id=\"card-title\">Marina vs the Tax Zombies</h2>\n<p>The last week of the quarter. Tax zombies pour out of the archive and pelt citizens with audits, fines and penalty notices. People don’t know what to file, by when, or where.</p>\n<p>Only one person knows the Tax Procedure Code, the VAT Act and the Personal Income Tax Act by heart. Marina grabs her coffee, her cape and her code book and heads out into the street.</p>\n<ul class=\"howto\">\n<li><b>Move</b><span>Arrow keys or WASD. With a mouse or finger: press and drag.</span></li>\n<li><b>Attack</b><span>Marina throws § sections at the nearest zombie on her own.</span></li>\n<li><b>Rescue</b><span>Walk through a citizen and they leave reassured.</span></li>\n<li><b>Documents</b><span>They can’t hurt Marina. If she catches one, she appeals it.</span></li>\n<li><b>Espresso</b><span>Grab the coffee and the sections fly twice as fast.</span></li>\n</ul>\n<div class=\"actions\"><button type=\"button\" class=\"btn\" data-go>Start the mission</button><span class=\"note\">2 levels and a final boss · you can’t lose</span></div>",
+    "hud": {
+      "hudMission": "Mission: save the citizens",
+      "rescued": "Rescued",
+      "calmed": "Calmed",
+      "appealed": "Appealed"
+    }
   }
 }

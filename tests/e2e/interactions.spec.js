@@ -141,3 +141,52 @@ test("videos: topic filter, singular/plural announcement, anchors from the old p
   await page.locator('[data-filter="all"]').click();
   await expect(page.locator("[data-filter-status]")).toHaveText("Показани са 3 видеа");
 });
+
+test("projects and partners keep the anchors of the old pages", async ({ page }) => {
+  await page.goto("/projects/");
+  await expect(page.locator("#nabi, #pet, #synth, #game")).toHaveCount(4);
+  await page.goto("/partners/");
+  await expect(page.locator("#tax-invest, #nx0")).toHaveCount(2);
+  await page.goto("/en/partners/");
+  await expect(page.locator("#nx0 a")).toHaveAttribute("href", "/en/blog/parviyat-balgarski-white-paper-esma.html");
+});
+
+test("game: start, keyboard focus, pause and resume with P, skip link", async ({ page }) => {
+  await page.goto("/game/");
+  const card = page.locator("#card");
+  await expect(card).toHaveAttribute("role", "dialog");
+  await expect(card).toHaveAccessibleName("Марина срещу данъчните зомбита");
+  await expect(page.locator("#pauseBtn")).toBeHidden();
+
+  await card.locator("[data-go]").click();
+  await expect(page.locator("#overlay")).toBeHidden();
+  await expect(page.locator("#cabinet")).toBeFocused();         // focus is not lost on the hidden card
+  await expect(page.locator("#hudLvl")).toHaveText(/Ниво 1/);  // live region with the level name
+  await expect(page.locator("#pauseBtn")).toBeVisible();
+
+  await page.keyboard.press("p");
+  await expect(card).toHaveAccessibleName("Пауза");
+  await expect(card.locator("[data-resume]")).toBeFocused();
+  await page.keyboard.press("p");
+  await expect(page.locator("#overlay")).toBeHidden();
+  await expect(page.locator("#cabinet")).toBeFocused();
+
+  await page.locator("#pauseBtn").click();
+  await expect(card).toHaveAccessibleName("Пауза");
+  await page.keyboard.press("Escape");
+  await expect(page.locator("#overlay")).toBeHidden();
+
+  // the skip link appears on focus and moves focus past the game
+  await page.locator(".skip-game").focus();
+  await expect(page.locator(".skip-game")).toBeVisible();
+  await page.keyboard.press("Enter");
+  await expect(page.locator("#game-after")).toBeFocused();
+});
+
+test("game: English page plays in English", async ({ page }) => {
+  await page.goto("/en/game/");
+  await expect(page.locator("#card")).toHaveAccessibleName("Marina vs the Tax Zombies");
+  await expect(page.locator("#snd")).toHaveText("Mute");
+  await page.locator("#snd").click();
+  await expect(page.locator("#snd")).toHaveText("Unmute");
+});

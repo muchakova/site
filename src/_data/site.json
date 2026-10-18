@@ -96,5 +96,17 @@
     "privacy": "/privacy/",
     "accessibility": "/accessibility/"
   },
-  "synth": "https://muchakova.github.io/looper/"
+  "synth": "https://muchakova.github.io/looper/",
+  "donate": [
+    {
+      "key": "stripe",
+      "icon": "shield",
+      "url": "https://donate.stripe.com/aFa7sN2Ee3eEfThaEmcs800"
+    },
+    {
+      "key": "revolut",
+      "icon": "coins",
+      "url": "https://revolut.me/marinarahv"
+    }
+  ]
 }

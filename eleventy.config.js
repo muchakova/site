@@ -11,8 +11,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 // Old pages that are not redesigned yet are copied unchanged, so every legacy URL
 // keeps working at every step. Remove an entry once its new template exists.
 const LEGACY_PASSTHROUGH = [
-  "projects", "partners", "donate", "game", "meet",
-  "files", "css", "js", "robots.txt", "llms.txt", "CNAME",
+  "meet", "files", "css", "js", "robots.txt", "llms.txt", "CNAME",
 ];
 
 // cache-busting version for /assets (changes whenever a source asset changes)
@@ -43,8 +42,15 @@ export default function (eleventyConfig) {
     "src/assets/icons.svg": "assets/icons.svg",
     "src/assets/favicon.svg": "favicon.svg",
     "src/assets/css/styleguide.css": "assets/css/styleguide.css",
+    "src/assets/css/game.css": "assets/css/game.css",
+    "src/images/og-game.png": "game/og-game.png",   // the game's share image keeps its old URL
     "node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": "assets/fonts/inter-latin.woff2",
     "node_modules/@fontsource-variable/inter/files/inter-cyrillic-wght-normal.woff2": "assets/fonts/inter-cyrillic.woff2",
+    // the game's display and typewriter fonts (only /game/ loads them)
+    "node_modules/@fontsource/russo-one/files/russo-one-latin-400-normal.woff2": "assets/fonts/russo-one-latin.woff2",
+    "node_modules/@fontsource/russo-one/files/russo-one-cyrillic-400-normal.woff2": "assets/fonts/russo-one-cyrillic.woff2",
+    "node_modules/@fontsource/pt-mono/files/pt-mono-latin-400-normal.woff2": "assets/fonts/pt-mono-latin.woff2",
+    "node_modules/@fontsource/pt-mono/files/pt-mono-cyrillic-400-normal.woff2": "assets/fonts/pt-mono-cyrillic.woff2",
   });
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addGlobalData("assetVersion", () => hashDir("src/assets"));

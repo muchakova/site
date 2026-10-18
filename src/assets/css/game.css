@@ -1,0 +1,100 @@
+/* "Марина срещу данъчните зомбита" (/game/, /en/game/).
+   Unlayered on purpose: these rules are scoped to .mg and beat the site's layered styles (.btn, .chip, headings).
+   One game "cabinet" (HUD strip + night-street stage); every menu screen is an official paper document with a stamp.
+   Fonts are self-hosted (no requests to Google); the body text uses the site font. */
+@font-face{font-family:"Russo One";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/russo-one-cyrillic.woff2") format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Russo One";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/russo-one-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"PT Mono";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/pt-mono-cyrillic.woff2") format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"PT Mono";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/pt-mono-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+.mg{
+    --night:#121729; --street:#1b2240; --line:#2e3863; --lamp:#f2b544; --paper:#f3eee0; --paper-2:#e9e1cb;
+    --ink:#1d2236; --ink-2:#5a5f75; --stamp:#c9443a; --sage:#93ab8c; --hero:#5b8def; --muted:#a3abcb;
+    --display:"Russo One","Arial Black",system-ui,sans-serif;
+    --body:var(--font-sans);
+    --mono:"PT Mono",ui-monospace,"Courier New",monospace;
+    color-scheme:dark;
+    background:var(--night);color:var(--paper);
+    font-family:var(--body);font-size:16px;line-height:1.5;
+  }
+  .mg a{color:inherit}
+  .mg h1,.mg h2,.mg h3{letter-spacing:normal}
+  .mg .wrap{padding-block:20px 36px;display:flex;flex-direction:column;gap:14px}  /* width and gutters from the site .wrap */
+  .mg .top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .mg .top>div{min-width:0}
+  .mg .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lamp)}
+  .mg h1{font-family:var(--display);font-weight:400;font-size:clamp(24px,4.6vw,42px);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+  .mg h1 span{color:var(--sage)}
+  .mg .iconbtn{font-family:var(--mono);font-size:13px;color:var(--paper);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+  .mg .iconbtn:hover{border-color:var(--muted)}
+  .mg .iconbtn:focus-visible,.mg .btn:focus-visible{outline:3px solid var(--hero);outline-offset:2px}
+  .mg .cabinet{scroll-margin-top:calc(var(--header-height) + 8px);border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--street);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+  .mg .hud{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:13px;min-height:46px}
+  .mg .hud .lvl{color:var(--lamp);letter-spacing:.04em}
+  .mg .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .mg .chip{padding:3px 10px;border-radius:999px;background:rgba(243,238,224,.08);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .mg .chip.done{background:var(--sage);color:var(--ink)}
+  .mg .bossbar{flex:1 1 160px;max-width:340px;height:12px;border-radius:6px;background:rgba(243,238,224,.12);overflow:hidden;border:1px solid rgba(201,68,58,.6)}
+  .mg .bossbar i{display:block;height:100%;width:100%;background:var(--stamp);transition:width .15s}
+  /* Fit the whole cabinet on screen below the site navbar */
+  .mg .stage{position:relative;height:clamp(420px,calc(100svh - 230px),660px)}
+  .mg canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+  .mg .overlay{position:absolute;inset:0;display:grid;place-items:center;padding:14px;background:rgba(18,23,41,.72);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+  .mg .doc{background:var(--paper);color:var(--ink);width:min(580px,100%);max-height:100%;overflow:auto;border-radius:4px;padding:20px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.5);background-image:linear-gradient(transparent 31px,rgba(29,34,54,.05) 32px);background-size:100% 32px}
+  .mg .meta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px dashed #b7ad94;padding-bottom:9px;margin-bottom:14px}
+  .mg .stampmark{display:inline-block;transform:rotate(-6deg);border:2.5px solid var(--stamp);color:var(--stamp);font-family:var(--display);font-size:14px;letter-spacing:.08em;padding:2px 10px;border-radius:5px}
+  .mg .doc h2{font-family:var(--display);font-weight:400;font-size:clamp(21px,3.6vw,29px);line-height:1.1;margin:0 0 12px;text-wrap:balance}
+  .mg .doc h3{font-family:var(--display);font-weight:400;font-size:clamp(18px,3vw,23px);line-height:1.15;margin:0 0 8px;text-wrap:balance}
+  .mg .doc p{margin:0 0 10px;max-width:64ch}
+  .mg .howto{list-style:none;margin:6px 0 4px;padding:0;display:grid;gap:6px;font-size:14.5px}
+  .mg .howto li{display:grid;grid-template-columns:96px 1fr;gap:10px}
+  .mg .howto b{font-family:var(--mono);font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--stamp);padding-top:2px}
+  .mg .law{border:1.5px dashed #b3a27e;border-radius:6px;padding:10px 12px;background:var(--paper-2);font-size:14.5px;margin:12px 0}
+  .mg .law b{display:block;font-family:var(--mono);font-weight:400;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin-bottom:2px}
+  .mg .goal{font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+  .mg .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
+  .mg .btn{font-family:var(--body);font-weight:700;font-size:15px;line-height:1.2;padding:11px 18px;border-radius:7px;border:2px solid var(--ink);background:var(--lamp);color:var(--ink);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:normal;transition:transform .15s}
+  .mg .btn:hover{transform:translateY(-1px)}
+  .mg .btn.ghost{background:transparent}
+  .mg .btn.ink{background:var(--ink);color:var(--paper)}
+  .mg .note{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+  .mg .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:10px;margin:4px 0 16px}
+  .mg .stats div{border-top:2px solid var(--ink);padding-top:6px}
+  .mg .stats strong{display:block;font-family:var(--display);font-weight:400;font-size:26px;font-variant-numeric:tabular-nums;line-height:1.1}
+  .mg .stats span{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
+  .mg .cta{border-top:1px dashed #b7ad94;padding-top:16px;margin-top:6px}
+  .mg .contacts{font-family:var(--mono);font-size:13px;margin-top:12px;user-select:text}
+  .mg .under{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;font-size:14px;color:var(--muted)}
+  .mg .under p{margin:0;max-width:70ch}
+  .mg .under kbd{font-family:var(--mono);font-size:12px;border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--paper)}
+  .mg [hidden]{display:none!important}
+  @media (max-width:480px){.mg .howto li{grid-template-columns:1fr;gap:0}.mg .doc{padding:16px}}
+  @media (prefers-reduced-motion:reduce){.mg .btn:hover{transform:none}.mg .bossbar i{transition:none}}
+
+/* ---------- site integration and accessibility ---------- */
+.mg :focus-visible{outline-color:var(--hero)}
+.mg .breadcrumb ol,.mg .breadcrumb li+li::before,.mg .breadcrumb a{color:var(--muted)}
+.mg .breadcrumb a[aria-current="page"]{color:var(--paper)}
+.mg .breadcrumb{margin-bottom:4px}
+.mg .tools{display:flex;gap:8px;flex-wrap:wrap}
+/* "Пропусни играта": hidden until focused, then shown over the top of the cabinet */
+.mg .play-area{position:relative}
+.mg .skip-game{position:absolute;left:12px;top:12px;z-index:5;padding:8px 14px;border-radius:7px;background:var(--paper);color:var(--ink);font-weight:700;text-decoration:none}
+.mg .skip-game:not(:focus){width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+/* focus lands on the cabinet while a level runs (keys go to the game); show where it is */
+.mg .cabinet:focus{outline:none}
+.mg .cabinet:focus-visible{outline:3px solid var(--hero);outline-offset:3px}
+.mg .doc:focus{outline:none}
+.mg .under:focus{outline:none}
+.mg noscript p{padding:14px;border:1px dashed var(--line);border-radius:8px}
+@media (forced-colors:active){.mg .chip.done{border:1px solid CanvasText}.mg .bossbar i{background:Highlight}}
+/* the dark game area runs straight into the footer */
+main:has(> .mg:last-child) + .site-footer{margin-top:0}
+/* the site's own .btn, .chip(s), .eyebrow and .stats components share these class names: reset what leaks in */
+.mg .btn{min-height:44px;justify-content:flex-start}
+.mg .chip{display:inline-block;color:var(--paper);font-size:inherit;font-weight:400}
+.mg .chip.done{color:var(--ink)}
+.mg .chips{margin:0;padding:0}
+.mg .eyebrow{font-weight:400}
+.mg .stats{padding:0;background:none;border:0;border-radius:0}
+.mg .stats div{display:block;padding:6px 0 0;border-left:0}

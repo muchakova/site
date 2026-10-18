@@ -44,7 +44,7 @@
 
   /* ---------- Site header -------------------------------------------
      <header class="site-header"> = banner landmark.
-     <nav aria-label="Главна навигация">; current page link has aria-current="page".
+     <nav aria-label="Главна навигация">; current page link has aria-current="page", a link to the section of a sub-page has aria-current="true".
      Mobile: <button aria-expanded aria-controls="site-menu"> (disclosure); Esc closes, focus returns. */
   .site-header {
     position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40;
@@ -59,7 +59,7 @@
   .site-nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
   .site-nav a { display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 14px; border-radius: var(--radius-pill); color: var(--color-muted); font-weight: var(--weight-medium); text-decoration: none; }
   .site-nav a:hover { background: var(--color-accent-soft); color: var(--color-fg); }
-  .site-nav a[aria-current="page"] { color: var(--color-fg); background: var(--color-accent-soft); }
+  .site-nav a[aria-current] { color: var(--color-fg); background: var(--color-accent-soft); }
   .header-tools { display: flex; align-items: center; gap: 6px; }
   .icon-btn {
     display: inline-grid; place-items: center; min-width: var(--tap); height: var(--tap); padding: 0 10px;
@@ -204,6 +204,21 @@
 
   /* project / partner card: logo or monogram tile */
   .logo-tile { display: inline-grid; place-items: center; width: 56px; height: 56px; border-radius: var(--radius-l); background: var(--color-navy); color: var(--color-on-navy); font-weight: var(--weight-bold); }
+  .project-card { gap: var(--space-s); }
+  .project-card__cat { font-size: var(--step--1); }
+  .project-card__foot { margin-top: auto; justify-self: start; align-self: flex-start; }
+  /* pet project: preview image on top, the same card below it */
+  .project-card--media { padding: 0; overflow: hidden; gap: 0; }
+  .project-card__img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-bottom: 1px solid var(--color-line); }
+  .project-card__body { flex: 1; display: flex; flex-direction: column; gap: var(--space-xs); padding: var(--space-m); }
+  .title-with-icon { display: flex; align-items: center; gap: var(--space-xs); }
+  .title-with-icon .icon { width: .85em; height: .85em; color: var(--color-accent); }
+
+  /* donation: two equal options, the button sits at the bottom of each */
+  .donate-option { gap: var(--space-xs); }
+  .donate-option .service-card__icon { margin-bottom: var(--space-2xs); }
+  .donate-option__btn { margin-top: auto; align-self: flex-start; }
+  .donate-option .card__text { margin-bottom: var(--space-s); }
 
   /* ---------- Steps  <ol class="steps"> (real sequence → numbered) ------ */
   .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-s); list-style: none; margin: 0; padding: 0; counter-reset: step; }

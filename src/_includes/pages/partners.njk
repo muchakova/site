@@ -1,0 +1,39 @@
+{%- set map = collections.i18nMap -%}
+{%- set P = T.partnersPage -%}
+{%- set home = 'home' | urlFor(lang, map, site.routes) -%}
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ home }}">{{ T.nav.home }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li></ol></nav>
+    <p class="eyebrow" style="margin-top: var(--space-m)">{{ P.eyebrow }}</p>
+    <h1 id="page-title">{{ P.h1 }}</h1>
+    <p class="lead measure">{{ P.lead }}</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="fintech-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><h2 id="fintech-title" class="title-with-icon">{% icon "handshake" %}{{ P.groupTitle }}</h2></div></div>
+    <ul class="grid" role="list" style="--grid-min: 26rem">
+      {% for id in ["tax-invest", "nx0"] %}
+      {% set item = P.items[id] %}
+      <li id="{{ id }}">
+        <article class="card project-card">
+          <div class="cluster" style="--cluster: var(--space-s)">
+            <span class="logo-tile" aria-hidden="true">{{ item.mono }}</span>
+            <span class="chip chip--signal">{{ P.newPartnership }}</span>
+          </div>
+          <h3 class="card__title">{{ item.name }}</h3>
+          <p class="card__text">{{ item.desc }}</p>
+          {% if item.link %}<a class="link-arrow project-card__foot" href="{{ 'post-parviyat-balgarski-white-paper-esma' | urlFor(lang, map, site.routes) }}">{{ item.link }}<span class="sr-only">: {{ item.name }}</span> {% icon "arrow-right" %}</a>{% endif %}
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+    <p style="margin-top: var(--space-s)">{% pending "12", T.pending.q12 %}</p>
+    <p class="disclosure measure" style="margin-top: var(--space-l)"><strong>{{ P.transparencyTitle }}</strong> {{ P.transparency }}</p>
+  </div>
+</section>
+
+{% set ctaId = "consult" %}
+{% include "partials/cta.njk" %}

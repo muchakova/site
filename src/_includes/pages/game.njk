@@ -1,0 +1,45 @@
+{%- set map = collections.i18nMap -%}
+{%- set G = T.gamePage -%}
+{#- The game runs in src/assets/js/game.js (its in-game texts live there, per language);
+    styles are in src/assets/css/game.css, scoped to .mg. -#}
+<div class="mg">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol>
+      <li><a href="{{ 'home' | urlFor(lang, map, site.routes) }}">{{ T.nav.home }}</a></li>
+      <li><a href="{{ 'projects' | urlFor(lang, map, site.routes) }}#pet">{{ T.nav.projects }}</a></li>
+      <li><a href="{{ page.url }}" aria-current="page">{{ T.nav.game }}</a></li>
+    </ol></nav>
+    <header class="top">
+      <div>
+        <p class="eyebrow">{{ G.eyebrow }}</p>
+        <h1 id="page-title">{{ G.titleA }} <span>{{ G.titleB }}</span></h1>
+      </div>
+      <div class="tools">
+        <button class="iconbtn" id="pauseBtn" type="button" hidden>{{ G.pause }}</button>
+        <button class="iconbtn" id="snd" type="button">{{ G.sound }}</button>
+      </div>
+    </header>
+
+    <div class="play-area">
+      <a class="skip-game" href="#game-after">{{ G.skip }}</a>
+      <section class="cabinet" id="cabinet" aria-label="{{ G.cabinet }}" tabindex="-1">
+        {# the HUD is filled in here, so nothing moves when the script takes over; 0/4 and 0/5 are the level-1 goals (WAVES[0] in game.js) #}
+        <div class="hud" id="hud" data-labels="{{ G.hud | json }}">
+          <span class="lvl" id="hudLvl" role="status">{{ G.hud.hudMission }}</span>
+          <div class="bossbar" id="bossbar" hidden><i id="bossfill"></i></div>
+          <span class="chips" id="hudChips"><span class="chip">{{ G.hud.rescued }} 0/4</span><span class="chip">{{ G.hud.calmed }} 0/5</span><span class="chip">{{ G.hud.appealed }} 0</span></span>
+        </div>
+        <div class="stage" id="stage">
+          <canvas id="game" role="img" aria-label="{{ G.canvas }}" aria-describedby="game-controls"></canvas>
+          <div class="overlay" id="overlay"><div class="doc" id="card" role="dialog" tabindex="-1" aria-labelledby="card-title">{{ G.intro | safe }}</div></div>
+        </div>
+      </section>
+    </div>
+    <noscript><p>{{ G.noscript }}</p></noscript>
+
+    <div class="under" id="game-after" tabindex="-1">
+      <p id="game-controls">{{ G.controls | safe }}</p>
+      <p>{{ G.disclaimer }}</p>
+    </div>
+  </div>
+</div>

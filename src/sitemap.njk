@@ -1,7 +1,6 @@
 ---
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
-legacyPages: ["/projects/", "/partners/", "/donate/", "/game/"]
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -15,10 +14,6 @@ legacyPages: ["/projects/", "/partners/", "/donate/", "/game/"]
     <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alts.bg }}"/>
     {% endif %}
   </url>
-{% endfor %}
-{# pages not redesigned yet (copied unchanged); removed from this list as they get templates #}
-{% for url in legacyPages %}
-  <url><loc>{{ site.url }}{{ url }}</loc></url>
 {% endfor %}
 {% for p in legacyPosts %}
 {% if not collections.i18nMap["post-" + (p.url | replace("/blog/", "") | replace(".html", ""))] %}
