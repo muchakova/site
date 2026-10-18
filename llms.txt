@@ -23,7 +23,7 @@ She works across three main projects:
 - Blog: https://muchakova.com/blog.html
 - Book a consultation: https://muchakova.com/booking/
 - Vlog — short videos on investors' tax questions (declaring trading losses, VAT registration turnover from crypto sales and swaps, checking whether a market such as Gettex is regulated), each with a summary and a link to the related article: https://muchakova.com/vlog/
-- Projects — Vesta Consult, The Crypto Academy, NABI, plus pet projects (music synthesizer, browser game): https://muchakova.com/projects/
+- Projects — Vesta Consult, The Crypto Academy, NABI, plus pet projects (LoopForge music synthesizer / loop studio: https://muchakova.github.io/looper/ , browser game): https://muchakova.com/projects/
 - Partners — tax-invest and NX0 / NativeArc: https://muchakova.com/partners/
 - Game "Marina vs the Tax Zombies" (3-minute browser game, BG + EN): https://muchakova.com/game/
 - Language: Bulgarian (primary) + English (toggle available on every page)
