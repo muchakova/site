@@ -11,7 +11,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 // Old pages that are not redesigned yet are copied unchanged, so every legacy URL
 // keeps working at every step. Remove an entry once its new template exists.
 const LEGACY_PASSTHROUGH = [
-  "vlog", "projects", "partners", "donate", "game", "meet",
+  "projects", "partners", "donate", "game", "meet",
   "files", "css", "js", "robots.txt", "llms.txt", "CNAME",
 ];
 
@@ -92,17 +92,31 @@ export default function (eleventyConfig) {
   // table of contents from the <h2 id> headings of a post body
   eleventyConfig.addFilter("toc", (html) => [...String(html).matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)]
     .map((m) => ({ id: m[1], text: plain(m[2]).replace(/\s+/g, " ").trim() })));
-  // links inside content point to the page in the reader's language when it exists
-  eleventyConfig.addFilter("localizeLinks", (html, lang, map) => {
-    if (lang === "bg" || !map) return html;
+  // links point to the page in the reader's language when it exists
+  function localUrl(path, lang, map) {
+    if (lang === "bg" || !map) return null;
     const byUrl = {};
     for (const [key, urls] of Object.entries(map)) if (urls.bg) byUrl[urls.bg] = key;
-    return String(html).replace(/href="(\/[^"#?]*)([^"]*)"/g, (all, path, rest) => {
-      const key = byUrl[path] || (path.startsWith("/blog/") ? "post-" + path.slice(6).replace(/\.html$/, "") : null);
-      const target = key && map[key]?.[lang];
-      return target ? `href="${target}${rest}"` : all;
-    });
+    const key = byUrl[path] || (path.startsWith("/blog/") ? "post-" + path.slice(6).replace(/\.html$/, "") : null);
+    return (key && map[key]?.[lang]) || null;
+  }
+  eleventyConfig.addFilter("localizeLinks", (html, lang, map) => String(html).replace(/href="(\/[^"#?]*)([^"]*)"/g,
+    (all, path, rest) => { const t = localUrl(path, lang, map); return t ? `href="${t}${rest}"` : all; }));
+  eleventyConfig.addFilter("localizeLinkUrl", (url, lang, map) => {
+    const [path, rest = ""] = String(url).split(/(?=[#?])/);
+    return (localUrl(path, lang, map) || path) + rest;
   });
+  // schema.org ItemList of VideoObject for the videos page
+  eleventyConfig.addFilter("videoListLd", (videos, lang, siteUrl) => JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: videos.map((v, i) => ({
+      "@type": "ListItem", position: i + 1, url: `${siteUrl}${lang === "en" ? "/en" : ""}/vlog/#${v.id}`,
+      item: { "@type": "VideoObject", name: v.title[lang], description: v.answer[lang],
+        thumbnailUrl: `https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg`, uploadDate: v.uploadDate, duration: v.isoDuration,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${v.yt}`, contentUrl: `https://www.youtube.com/watch?v=${v.yt}`, inLanguage: "bg" },
+    })),
+  }).replace(/</g, "\\u003c"));
   // URL of a listed post in the reader's language (migrated posts have an EN page)
   eleventyConfig.addFilter("postUrl", (post, lang, map) => {
     const key = "post-" + post.url.replace(/^\/blog\//, "").replace(/\.html$/, "");

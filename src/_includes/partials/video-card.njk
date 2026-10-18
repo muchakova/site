@@ -1,0 +1,19 @@
+{# one video card; set videoAnswers / videoAnchors before including for the full version #}
+<article class="card video-card"{% if videoAnchors %} id="{{ v.id }}"{% endif %}>
+  <div class="video-card__media">
+    <div class="video-card__poster" aria-hidden="true">
+      <span class="video-card__brand"><img class="video-card__avatar" src="/images/profile_9.jpg" alt="" eleventy:widths="96"><span><strong>{{ T.site.name }}</strong><span class="video-card__topic">{{ T.home.videoPoster }}</span></span></span>
+    </div>
+    <button class="video-card__play" type="button" data-yt="{{ v.yt }}" data-title="{{ v.title[lang] }}" aria-label="{{ T.a11y.playVideo }}: {{ v.title[lang] }}"><span>{% icon "play" %}</span></button>
+    <span class="video-card__duration"><span aria-hidden="true">{{ v.duration }}</span><span class="sr-only">{{ T.a11y.duration }}: {{ v.duration }}</span></span>
+  </div>
+  <div class="video-card__body">
+    <p class="card__meta"><span class="cat">{{ v.tag[lang] }}</span><time datetime="{{ v.date }}">{{ v.date | date(lang) }}</time>{% if v.shorts %}<span>Shorts</span>{% endif %}</p>
+    <{{ videoHeading or "h3" }} class="card__title">{{ v.title[lang] }}</{{ videoHeading or "h3" }}>
+    {% if videoAnswers %}<p class="card__text">{{ v.answer[lang] }}</p>{% endif %}
+    <div class="video-card__links">
+      {% if v.article %}<a class="link-arrow" href="{{ v.article | localizeLinkUrl(lang, collections.i18nMap) }}">{{ T.home.readArticle }} {% icon "arrow-right" %}</a>{% endif %}
+      {% if videoAnswers and v.watch %}<a class="link-arrow" href="{{ v.watch }}" target="_blank" rel="noopener">{{ T.vlogPage.watch }} {% icon "external" %}<span class="sr-only"> {{ T.a11y.newTab }}</span></a>{% endif %}
+    </div>
+  </div>
+</article>

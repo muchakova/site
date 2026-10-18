@@ -1,0 +1,40 @@
+{%- set map = collections.i18nMap -%}
+{%- set V = T.vlogPage -%}
+{%- set blogUrl = 'blog' | urlFor(lang, map, site.routes) -%}
+<script type="application/ld+json">{{ videos | videoListLd(lang, site.url) | safe }}</script>
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ 'home' | urlFor(lang, map, site.routes) }}">{{ T.nav.home }}</a></li><li><a href="{{ blogUrl }}">{{ T.nav.blog }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ T.nav.vlog }}</a></li></ol></nav>
+    <p class="eyebrow" style="margin-top: var(--space-m)">{{ T.nav.vlog }}</p>
+    <h1 id="page-title">{{ V.heading }}</h1>
+    <p class="lead measure">{{ V.lead }}</p>
+    {% if T.home.videoLanguageNote %}<p class="muted">{{ T.home.videoLanguageNote }}</p>{% endif %}
+    <p style="margin-top: var(--space-xs)"><a class="link-arrow" href="{{ blogUrl }}">{{ V.articles }} {% icon "arrow-right" %}</a></p>
+  </div>
+</section>
+
+<div class="wrap" data-filter-scope style="padding-bottom: var(--space-section)">
+  <div class="toolbar">
+    <div class="filters" role="group" aria-label="{{ V.filterLabel }}">
+      {% for f, label in V.filters %}<button class="filter" type="button" data-filter="{{ f }}" aria-pressed="{{ 'true' if f == 'all' else 'false' }}">{{ label }}</button>{% endfor %}
+    </div>
+    <search class="search" role="search">
+      <label for="vlog-search">{{ V.searchLabel }}</label>
+      <input id="vlog-search" type="search" data-filter-search placeholder="{{ V.searchPlaceholder }}" autocomplete="off">
+      {% icon "search" %}
+    </search>
+  </div>
+  <p class="result-status" role="status" data-filter-status data-one="{{ V.statusOne }}" data-many="{{ V.statusMany }}" data-none="{{ V.statusNone }}"></p>
+  {% set videoAnswers = true %}{% set videoAnchors = true %}{% set videoHeading = "h2" %}
+  <ul class="grid" role="list" data-filter-list style="--grid-min: 20rem; margin-top: var(--space-s)">
+    {% for v in videos %}
+    <li data-cats="{{ v.cats | join(' ') }}">{% include "partials/video-card.njk" %}</li>
+    {% endfor %}
+  </ul>
+  {# id="vlogEmpty" kept from the old page (its anchor is in the legacy URL list) #}
+  <div class="empty-state" id="vlogEmpty" data-filter-empty hidden><p><strong>{{ V.empty }}</strong></p><p>{{ V.emptyHint }}</p></div>
+</div>
+
+{% set ctaId = "consult" %}
+{% include "partials/cta.njk" %}

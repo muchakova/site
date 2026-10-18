@@ -132,3 +132,12 @@ test("blog: ?cat= preselects a topic and the count is announced", async ({ page 
   await page.locator('[data-filter="all"]').click();
   await expect(page.locator("[data-filter-status]")).toHaveText(/Показани са 29 статии/);
 });
+
+test("videos: topic filter, singular/plural announcement, anchors from the old page", async ({ page }) => {
+  await page.goto("/vlog/");
+  await expect(page.locator("#zagubi-finansovi-instrumenti, #oborot-dds-kripto, #reguliran-pazar-gettex")).toHaveCount(3);
+  await page.locator('[data-filter="vat"]').click();
+  await expect(page.locator("[data-filter-status]")).toHaveText("Показано е 1 видео");
+  await page.locator('[data-filter="all"]').click();
+  await expect(page.locator("[data-filter-status]")).toHaveText("Показани са 3 видеа");
+});

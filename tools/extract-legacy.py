@@ -121,6 +121,15 @@ for art in vsoup.select("article.video-card[data-yt]"):
         "article": "/" + re.sub(r"^(\.\./)+", "", article) if article else None,
         "watch": watch,
     })
+# upload date and ISO duration from the old page's VideoObject data (for structured data)
+for sc in vsoup.select('script[type="application/ld+json"]'):
+    data = json.loads(sc.string)
+    for item in data.get("itemListElement", []):
+        obj = item.get("item", {})
+        for v in videos:
+            if v["yt"] in obj.get("embedUrl", ""):
+                v["uploadDate"] = obj.get("uploadDate")
+                v["isoDuration"] = obj.get("duration")
 videos.sort(key=lambda v: v["date"], reverse=True)
 (ROOT / "src/_data/videos.json").write_text(json.dumps(videos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 

@@ -382,5 +382,26 @@
       "business": "Business & Entrepreneurship",
       "institutions": "What the Authorities Know"
     }
+  },
+  "vlogPage": {
+    "heading": "Investor tax, on video",
+    "lead": "Short answers to the questions investors ask me most often. Every video comes with a text summary and a link to an in-depth article.",
+    "filters": {
+      "all": "All",
+      "invest": "Investing",
+      "crypto": "Crypto",
+      "nap": "Returns & reporting",
+      "vat": "VAT"
+    },
+    "filterLabel": "Filter by topic",
+    "searchLabel": "Search the videos",
+    "searchPlaceholder": "Search the questions…",
+    "statusOne": "Showing {n} video",
+    "statusMany": "Showing {n} videos",
+    "statusNone": "No videos match your search.",
+    "empty": "No videos match your search.",
+    "emptyHint": "Try another topic or another word.",
+    "watch": "Watch on YouTube",
+    "articles": "Articles"
   }
 }

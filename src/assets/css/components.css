@@ -198,7 +198,9 @@
   .video-card__play:hover span { transform: translate(-50%, -50%) scale(1.07); }
   .video-card__duration { position: absolute; right: 10px; bottom: 10px; padding: 2px 8px; border-radius: 6px; background: rgb(8 12 25 / .8); color: #FFFFFF; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
   .video-card__media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .video-card__body { display: flex; flex-direction: column; gap: var(--space-xs); padding: var(--space-m); }
+  .video-card__body { flex: 1; display: flex; flex-direction: column; gap: var(--space-xs); padding: var(--space-m); }
+  /* links sit at the bottom of every card, so they line up across a row */
+  .video-card__links { display: flex; flex-wrap: wrap; gap: 0 var(--space-m); margin-top: auto; }
 
   /* project / partner card: logo or monogram tile */
   .logo-tile { display: inline-grid; place-items: center; width: 56px; height: 56px; border-radius: var(--radius-l); background: var(--color-navy); color: var(--color-on-navy); font-weight: var(--weight-bold); }

@@ -12,7 +12,8 @@
         "http://localhost/contact/index.html",
         "http://localhost/blog.html",
         "http://localhost/blog/tax-loss-harvesting-po-balgarski.html",
-        "http://localhost/en/blog/lichen-ili-firmen-akaunt-broker.html"
+        "http://localhost/en/blog/lichen-ili-firmen-akaunt-broker.html",
+        "http://localhost/vlog/index.html"
       ],
       "numberOfRuns": 3,
       "settings": {
