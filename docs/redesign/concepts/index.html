@@ -236,7 +236,7 @@ a { color: inherit; }
   --a-accent: var(--b-accent); --a-accent-hover: var(--b-accent-hover); --a-on-accent: var(--b-on-accent); --a-accent-soft: var(--b-accent-soft);
   --a-ink: var(--b-navy); --a-ink-raised: var(--b-navy-raised); --a-on-ink: var(--b-on-navy); --a-on-ink-muted: var(--b-on-navy-muted); --a-ink-line: var(--b-navy-line);
   --a-glow: var(--b-glow); --a-on-glow: var(--b-on-glow); --a-grid: #A5B4FC12;
-  font-family: var(--font-b);
+  font-family: var(--font-a);
 }
 /* light hero + glass header (default); the navy variant keeps A's dark hero */
 .cc:not(.hero-navy) .ca-hero, .cc:not(.hero-navy) .ca-header {
@@ -262,7 +262,7 @@ a { color: inherit; }
 /* ============================================================
    CONCEPT B — light fintech (Onest)
    ============================================================ */
-.cb { font-family: var(--font-b); background: var(--b-bg); color: var(--b-fg); font-size: 1.0625rem; line-height: 1.65; }
+.cb { font-family: var(--font-a); background: var(--b-bg); color: var(--b-fg); font-size: 1.0625rem; line-height: 1.65; }
 .cb h1, .cb h2, .cb h3 { text-wrap: balance; margin: 0; letter-spacing: -0.02em; font-weight: 600; }
 .cb p { margin: 0; }
 .cb-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; font-weight: 600; color: var(--b-accent); margin: 0 0 12px; }
@@ -287,7 +287,7 @@ a { color: inherit; }
 .cb-nav ul a { display: inline-flex; padding: 8px 14px; border-radius: 999px; text-decoration: none; color: var(--b-muted); font-weight: 500; }
 .cb-nav ul a:hover { background: var(--b-accent-soft); color: var(--b-fg); }
 .cb-tools { display: flex; gap: 6px; }
-.cb-tool { display: inline-grid; place-items: center; min-width: 40px; height: 40px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-fg); font: 600 .85rem var(--font-b); text-decoration: none; cursor: pointer; }
+.cb-tool { display: inline-grid; place-items: center; min-width: 40px; height: 40px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-fg); font: 600 .85rem var(--font-a); text-decoration: none; cursor: pointer; }
 .cb-tool:hover { border-color: var(--b-accent); }
 .cb-menu { display: none; }
 
@@ -304,12 +304,11 @@ a { color: inherit; }
 .cb-visual { position: relative; justify-self: end; width: min(100%, 440px); }
 .cb-visual::before { content: ""; position: absolute; inset: 8% -6% -4% 6%; border-radius: 40px; background: radial-gradient(60% 60% at 30% 30%, var(--b-halo-1), transparent 70%), radial-gradient(60% 60% at 80% 80%, var(--b-halo-2), transparent 70%); filter: blur(24px); }
 .cb-visual img { position: relative; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 25%; border-radius: 28px; border: 6px solid var(--b-surface); box-shadow: 0 30px 60px -30px #0E153066; }
-.cb-widget { position: absolute; display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 16px; background: var(--b-surface); border: 1px solid var(--b-line); box-shadow: 0 18px 40px -20px #0E153059; font-size: .9rem; font-variant-numeric: tabular-nums; }
+.cb-widgets { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+.cb-widget { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 16px; background: var(--b-surface); border: 1px solid var(--b-line); box-shadow: 0 18px 40px -20px #0E153059; font-size: .9rem; font-variant-numeric: tabular-nums; }
 .cb-widget .ico { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: var(--b-accent-soft); color: var(--b-accent); }
 .cb-widget strong { display: block; font-size: 1.05rem; }
 .cb-widget span { color: var(--b-muted); }
-.cb-widget.w1 { left: -28px; top: 14%; }
-.cb-widget.w2 { right: -20px; bottom: 10%; }
 
 .cb-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 8px; border-radius: 20px; background: var(--b-surface); border: 1px solid var(--b-line); }
 .cb-stats div { display: flex; flex-direction: column-reverse; gap: 4px; padding: 20px 24px; }
@@ -422,7 +421,7 @@ a { color: inherit; }
 @media (max-width: 860px) {
   .ca-menu, .cb-menu { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 10px; font-weight: 600; font-size: .95rem; cursor: pointer; }
   .ca-menu { border: 1px solid var(--a-ink-line); background: transparent; color: var(--a-on-ink); font-family: var(--font-a); }
-  .cb-menu { border: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-fg); border-radius: 999px; font-family: var(--font-b); }
+  .cb-menu { border: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-fg); border-radius: 999px; font-family: var(--font-a); }
   .ca-header-in > .btn-a, .cb-header-in > .btn-b { margin-left: auto; }
   .ca-nav, .cb-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 16px; padding: 16px var(--gutter-r) 22px var(--gutter-l); }
   .ca-nav { background: var(--a-ink); border-bottom: 1px solid var(--a-ink-line); }
@@ -433,7 +432,6 @@ a { color: inherit; }
   .ca-hero-grid, .cb-hero-grid, .ca-about, .ca-posts, .ca-cta-grid, .cb-cta { grid-template-columns: minmax(0, 1fr); }
   .ca-portrait, .cb-visual, .cc-portrait { justify-self: start; width: min(100%, 360px); }
   .ca-ticket { left: auto; right: -12px; bottom: 18px; }
-  .cb-widget.w1 { left: -10px; } .cb-widget.w2 { right: -10px; }
   .ca-post.lead { grid-row: auto; }
   .ca-plans, .cb-plans, .cb-services { grid-template-columns: minmax(0, 1fr); }
 }
@@ -450,7 +448,7 @@ a { color: inherit; }
   .cb-stats div + div { border-left: 0; border-top: 1px solid var(--b-line); }
   .cb-rows a { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .cb-feed-lead { grid-template-columns: minmax(0, 1fr); }
-  .cb-widget { position: static; margin-top: 10px; }
+  .cb-widgets { grid-template-columns: minmax(0, 1fr); }
   .ca-ticket { position: static; width: auto; margin-top: 12px; }
   .cb-service { grid-template-columns: minmax(0, 1fr); }
   .cb-service-icon { grid-row: auto; }
@@ -478,9 +476,9 @@ a { color: inherit; }
     <p class="review-title">muchakova.com <span>· Фаза 2: визуални концепции</span></p>
     <nav aria-label="Концепции">
       <ul class="review-tabs">
+        <li><a href="#b" data-tab="b">B · Светъл финтех ✓</a></li>
         <li><a href="#c" data-tab="c">C · Хибрид</a></li>
         <li><a href="#a" data-tab="a">A · Мастило и тюркоаз</a></li>
-        <li><a href="#b" data-tab="b">B · Светъл финтех</a></li>
         <li><a href="#fonts" data-tab="fonts">Шрифтове</a></li>
       </ul>
     </nav>
@@ -493,12 +491,12 @@ a { color: inherit; }
       <button type="button" data-set-theme="light" aria-pressed="false">Светла</button>
       <button type="button" data-set-theme="dark" aria-pressed="false">Тъмна</button>
     </div>
-    <p class="review-note"><strong>C</strong> съчетава оформлението на A с цветовете на B. Върху снимката няма нищо: информацията за консултацията е закачена под нея. A и B остават за сравнение. Текстовете са от одобрените чернови, линковете водят само в рамките на прегледа.</p>
+    <p class="review-note"><strong>Избрана посока: B · Светъл финтех</strong>, шрифт Inter, темата следва системните настройки (с бутон за ръчна смяна). Върху снимката няма нищо: информацията е под нея. A и C остават за сравнение.</p>
   </div>
 </div>
 
 <!-- =========================================================== CONCEPT C (hybrid) -->
-<div class="concept ca cc" id="c" data-view>
+<div class="concept ca cc" id="c" data-view hidden>
   <a class="skip" href="#c-main">Към съдържанието</a>
   <header class="ca-header">
     <div class="wrap ca-header-in">
@@ -880,7 +878,7 @@ a { color: inherit; }
 </div>
 
 <!-- =========================================================== CONCEPT B -->
-<div class="concept cb" id="b" data-view hidden>
+<div class="concept cb" id="b" data-view>
   <a class="skip" href="#b-main">Към съдържанието</a>
   <header class="cb-header">
     <div class="wrap cb-header-in">
@@ -919,8 +917,10 @@ a { color: inherit; }
         </div>
         <div class="cb-visual">
           <img src="img/profile_9.jpg" alt="Марина Мучакова" width="1050" height="1400">
-          <div class="cb-widget w1"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span><p><strong>от 130 €</strong><span>30 или 60 минути</span></p></div>
-          <div class="cb-widget w2"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-video"/></svg></span><p><strong>Google Meet</strong><span>BG · EN ⟨?3⟩</span></p></div>
+          <div class="cb-widgets">
+          <div class="cb-widget"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg></span><p><strong>от 130 €</strong><span>30 или 60 минути</span></p></div>
+          <div class="cb-widget"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-video"/></svg></span><p><strong>Google Meet</strong><span>BG · EN ⟨?3⟩</span></p></div>
+          </div>
         </div>
       </div>
       <div class="wrap">
@@ -1039,7 +1039,7 @@ a { color: inherit; }
     <h1>Сравнение на шрифтовете</h1>
     <p class="cf-intro">Един и същ текст в трите кандидата: заглавия, абзац на български и английски, цени, таблица и знаци, които се бъркат лесно. Размерите и теглата са еднакви, разликата е само в шрифта.</p>
     <div class="cf-grid">
-      <section class="cf-card cf-inter" aria-labelledby="f-inter"><header><h2 id="f-inter">Inter</h2><span>в концепция A</span></header>
+      <section class="cf-card cf-inter" aria-labelledby="f-inter"><header><h2 id="f-inter">Inter</h2><span>избран ✓</span></header>
         <p class="s-h1">Марина Мучакова</p>
         <p class="s-h2">Доходи от инвестиции</p>
         <p class="s-p">Казвам се Марина Мучакова и съм данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p>
@@ -1049,7 +1049,7 @@ a { color: inherit; }
         <p class="s-glyph">Il1 · 0O · ДдЛлЖжФфЩщ · „Данъчни хакери“</p>
         <p class="s-small">Неутрален и изпитан на екран, много разпространен в банкови и финтех приложения. Сигурен избор, но най-малко отличим. Стандартни форми на кирилицата.</p>
       </section>
-      <section class="cf-card cf-onest" aria-labelledby="f-onest"><header><h2 id="f-onest">Onest</h2><span>в концепция B</span></header>
+      <section class="cf-card cf-onest" aria-labelledby="f-onest"><header><h2 id="f-onest">Onest</h2><span>алтернатива</span></header>
         <p class="s-h1">Марина Мучакова</p>
         <p class="s-h2">Доходи от инвестиции</p>
         <p class="s-p">Казвам се Марина Мучакова и съм данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p>
@@ -1076,7 +1076,7 @@ a { color: inherit; }
 
 <script>
 (function () {
-  const views = ['c', 'a', 'b', 'fonts'];
+  const views = ['b', 'c', 'a', 'fonts'];
   const root = document.documentElement;
 
   // ---- view switching via bare #a / #b / #fonts (or any id inside a view)
@@ -1088,7 +1088,7 @@ a { color: inherit; }
       const host = target && target.closest('[data-view]');
       if (host) view = host.id;
     }
-    view = view || 'c';
+    view = view || 'b';
     document.querySelectorAll('[data-view]').forEach(v => { v.hidden = v.id !== view; });
     document.querySelectorAll('[data-tab]').forEach(t => {
       if (t.dataset.tab === view) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
