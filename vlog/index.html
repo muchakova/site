@@ -44,75 +44,55 @@
   <!-- /LAYOUT:HEAD -->
   <link rel="stylesheet" href="../css/style.css" />
 
-  <!-- Structured Data: FAQ (въпросите и кратките отговори от картите).
-       Когато добавите видео, може да добавите и VideoObject. -->
+  <!-- Structured Data: списък с видеата (VideoObject). -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@type": "ItemList",
+    "itemListElement": [
       {
-        "@type": "Question",
-        "name": "Получих писмо от НАП за доходите от инвестиции. Какво правя?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Без паника. Как да намерите счетоводител или да се справите сами и в кое приложение на годишната декларация се вписва всеки вид инвестиционен доход."
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Деклариране на загуби от търговия с финансови инструменти — защо и как",
+          "description": "Защо си струва да декларирате загубите от търговия с финансови инструменти и как точно се прави.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/ils7hXF-NGU/hqdefault.jpg",
+          "uploadDate": "2026-10-15T14:12:01-07:00",
+          "duration": "PT4M11S",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ils7hXF-NGU",
+          "contentUrl": "https://www.youtube.com/watch?v=ils7hXF-NGU",
+          "inLanguage": "bg"
         }
       },
       {
-        "@type": "Question",
-        "name": "Как се облагат ETF-ите в България?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ETF, ETN или ETC — правната форма на инструмента решава как се облага печалбата. Това е разликата, която инвеститорите най-често пропускат."
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)",
+          "description": "Кои продажби и суапове на криптовалути трупат оборот за регистрация по ЗДДС — и кои не.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aLl--h5-LL4/hqdefault.jpg",
+          "uploadDate": "2026-10-13T07:58:29-07:00",
+          "duration": "PT12M29S",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/aLl--h5-LL4",
+          "contentUrl": "https://www.youtube.com/watch?v=aLl--h5-LL4",
+          "inLanguage": "bg"
         }
       },
       {
-        "@type": "Question",
-        "name": "Трябва ли да подам СПБ-8 към БНБ за сметка в Interactive Brokers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Прагът от 25 000 €, какво точно се отчита и защо ценните книжа се пишат в брой, а не в евро."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Мога ли законно да „събера“ данъчни загуби преди 31 декември?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Как работи tax-loss harvesting по български и къде минава границата с пазарната манипулация."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Личен или фирмен акаунт при брокер — кое е по-изгодно?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Какво се променя при загубите, пазарите в САЩ, разходите, изтеглянето на парите и наследяването. И защо отговорът често е „зависи“."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Трябва ли да се регистрирам по ДДС, ако търгувам с акции през Interactive Brokers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Кога оборотът от финансови инструменти през чуждестранен брокер не формира оборот за регистрация по чл. 96 ЗДДС — с реален акт за отказ."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Влизат ли продажбите на крипто в прага за ДДС регистрация?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Instant Sell, order book или DEX — кои продажби участват в прага от 51 130 € и кои „отиват при борсата“."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Как да мина AML проверка при крипто транзакция?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Как мислят AML анализаторите, каква е разликата между произход на средствата и източник на богатството и как да подготвите досието си."
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VideoObject",
+          "name": "Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex",
+          "description": "Кратко видео: стъпка по стъпка проверяваме дали Gettex е регулиран пазар. Защо статутът на пазара е важен за данъците — в статията.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FB5gS9jWRzM/hqdefault.jpg",
+          "uploadDate": "2026-10-12T10:44:09-07:00",
+          "duration": "PT1M34S",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/FB5gS9jWRzM",
+          "contentUrl": "https://www.youtube.com/watch?v=FB5gS9jWRzM",
+          "inLanguage": "bg"
         }
       }
     ]
@@ -175,8 +155,9 @@
        Добавяне на видео:
        1. Копирайте една <article class="video-card"> по-долу.
        2. id = кратък адрес за споделяне (muchakova.com/vlog/#id).
-       3. data-yt = ID на YouTube видеото (частта след watch?v=).
+       3. data-yt = ID на YouTube видеото (youtu.be/ID или youtube.com/shorts/ID).
           Празно data-yt="" показва „Видеото идва скоро“.
+          .video-duration = продължителност; за Shorts добавете <span class="chip chip-gold">Shorts</span>.
        4. data-cats = invest crypto nap vat (с интервал); data-date = YYYY-MM-DD.
        5. Попълнете въпроса, краткия отговор (БГ + EN) и линка към статията.
        ========================================= -->
@@ -212,186 +193,87 @@
       </div>
 
       <div class="video-grid">
-        <article class="video-card reveal" id="pismo-ot-nap" data-yt="" data-cats="nap invest" data-date="2026-10-18">
-          <div class="video-thumb"></div>
+        <article class="video-card reveal" id="zagubi-finansovi-instrumenti" data-yt="ils7hXF-NGU" data-cats="nap invest" data-date="2026-10-15">
+          <div class="video-thumb"><span class="video-duration">4:11</span></div>
           <div class="video-body">
             <div class="blog-meta">
               <span class="blog-tag">
                 <span class="lang-content" data-lang="bg">Декларации и отчетност</span>
                 <span class="lang-content" data-lang="en" style="display:none;">Returns & reporting</span>
               </span>
-            </div>
-            <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Получих писмо от НАП за доходите от инвестиции. Какво правя?</span>
-              <span class="lang-content" data-lang="en" style="display:none;">I got a letter from the NRA about my investment income. What now?</span>
-            </h3>
-            <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Без паника. Как да намерите счетоводител или да се справите сами и в кое приложение на годишната декларация се вписва всеки вид инвестиционен доход.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Don’t panic. How to find an accountant or handle it yourself, and which annex of the annual tax return each type of investment income goes into.</span>
-            </p>
-            <div class="video-links">
-              <a href="../blog/nap-pismo-dohodi-investicii.html" data-key="video_read_article">Прочети статията →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="video-card reveal" id="etf-danaci" data-yt="" data-cats="invest" data-date="2026-10-17">
-          <div class="video-thumb"></div>
-          <div class="video-body">
-            <div class="blog-meta">
-              <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">Инвестиции</span>
-                <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
+              <span class="blog-date">
+                <span class="lang-content" data-lang="bg">15 октомври 2026</span>
+                <span class="lang-content" data-lang="en" style="display:none;">October 15, 2026</span>
               </span>
             </div>
             <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Как се облагат ETF-ите в България?</span>
-              <span class="lang-content" data-lang="en" style="display:none;">How are ETFs taxed in Bulgaria?</span>
+              <span class="lang-content" data-lang="bg">Деклариране на загуби от търговия с финансови инструменти — защо и как</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Declaring Losses from Trading Financial Instruments — Why and How</span>
             </h3>
             <p class="video-answer">
-              <span class="lang-content" data-lang="bg">ETF, ETN или ETC — правната форма на инструмента решава как се облага печалбата. Това е разликата, която инвеститорите най-често пропускат.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">ETF, ETN or ETC — the instrument’s legal form decides how the gain is taxed. It is the difference investors most often miss.</span>
-            </p>
-            <div class="video-links">
-              <a href="../blog/kak-se-oblagat-etf-ite-v-balgaria.html" data-key="video_read_article">Прочети статията →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="video-card reveal" id="spb-8" data-yt="" data-cats="nap invest" data-date="2026-10-16">
-          <div class="video-thumb"></div>
-          <div class="video-body">
-            <div class="blog-meta">
-              <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">Декларации и отчетност</span>
-                <span class="lang-content" data-lang="en" style="display:none;">Returns & reporting</span>
-              </span>
-            </div>
-            <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Трябва ли да подам СПБ-8 към БНБ за сметка в Interactive Brokers?</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Do I need to file SPB-8 with the BNB for an Interactive Brokers account?</span>
-            </h3>
-            <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Прагът от 25 000 €, какво точно се отчита и защо ценните книжа се пишат в брой, а не в евро.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">The €25,000 threshold, what exactly is reported and why securities go in as a quantity, not in euro.</span>
-            </p>
-            <div class="video-links">
-              <a href="../blog/spb-8-bnb-interactive-brokers.html" data-key="video_read_article">Прочети статията →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="video-card reveal" id="tax-loss-harvesting" data-yt="" data-cats="invest" data-date="2026-10-15">
-          <div class="video-thumb"></div>
-          <div class="video-body">
-            <div class="blog-meta">
-              <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">Инвестиции</span>
-                <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
-              </span>
-            </div>
-            <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Мога ли законно да „събера“ данъчни загуби преди 31 декември?</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Can I lawfully harvest tax losses before 31 December?</span>
-            </h3>
-            <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Как работи tax-loss harvesting по български и къде минава границата с пазарната манипулация.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">How tax-loss harvesting works in Bulgaria and where the line with market manipulation runs.</span>
+              <span class="lang-content" data-lang="bg">Защо си струва да декларирате загубите от търговия с финансови инструменти и как точно се прави.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Why it pays to declare your losses from trading financial instruments, and exactly how to do it. Video in Bulgarian.</span>
             </p>
             <div class="video-links">
               <a href="../blog/tax-loss-harvesting-po-balgarski.html" data-key="video_read_article">Прочети статията →</a>
+              <a href="https://youtu.be/ils7hXF-NGU" target="_blank" rel="noopener"><span data-key="video_watch_yt">Гледай в YouTube</span></a>
             </div>
           </div>
         </article>
 
-        <article class="video-card reveal" id="lichen-ili-firmen" data-yt="" data-cats="invest" data-date="2026-10-14">
-          <div class="video-thumb"></div>
-          <div class="video-body">
-            <div class="blog-meta">
-              <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">Инвестиции</span>
-                <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
-              </span>
-            </div>
-            <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Личен или фирмен акаунт при брокер — кое е по-изгодно?</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Personal or company brokerage account — which works better?</span>
-            </h3>
-            <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Какво се променя при загубите, пазарите в САЩ, разходите, изтеглянето на парите и наследяването. И защо отговорът често е „зависи“.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">What changes for losses, US markets, expenses, taking the money out and inheritance. And why the answer is often “it depends”.</span>
-            </p>
-            <div class="video-links">
-              <a href="../blog/lichen-ili-firmen-akaunt-broker.html" data-key="video_read_article">Прочети статията →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="video-card reveal" id="dds-interactive-brokers" data-yt="" data-cats="vat invest" data-date="2026-10-13">
-          <div class="video-thumb"></div>
+        <article class="video-card reveal" id="oborot-dds-kripto" data-yt="aLl--h5-LL4" data-cats="vat crypto" data-date="2026-10-13">
+          <div class="video-thumb"><span class="video-duration">12:29</span></div>
           <div class="video-body">
             <div class="blog-meta">
               <span class="blog-tag">
                 <span class="lang-content" data-lang="bg">ДДС</span>
                 <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
               </span>
-            </div>
-            <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Трябва ли да се регистрирам по ДДС, ако търгувам с акции през Interactive Brokers?</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Do I need to register for VAT if I trade shares via Interactive Brokers?</span>
-            </h3>
-            <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Кога оборотът от финансови инструменти през чуждестранен брокер не формира оборот за регистрация по чл. 96 ЗДДС — с реален акт за отказ.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">When turnover from financial instruments through a foreign broker does not count toward Art. 96 VAT registration — with a real refusal act.</span>
-            </p>
-            <div class="video-links">
-              <a href="../blog/dds-registraciya-interactive-brokers.html" data-key="video_read_article">Прочети статията →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="video-card reveal" id="kripto-dds-prag" data-yt="" data-cats="vat crypto" data-date="2026-10-12">
-          <div class="video-thumb"></div>
-          <div class="video-body">
-            <div class="blog-meta">
-              <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">Крипто</span>
-                <span class="lang-content" data-lang="en" style="display:none;">Crypto</span>
+              <span class="blog-date">
+                <span class="lang-content" data-lang="bg">13 октомври 2026</span>
+                <span class="lang-content" data-lang="en" style="display:none;">October 13, 2026</span>
               </span>
             </div>
             <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Влизат ли продажбите на крипто в прага за ДДС регистрация?</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Do crypto sales count toward the VAT registration threshold?</span>
+              <span class="lang-content" data-lang="bg">Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Building Up VAT Registration Turnover from Crypto (Sales and Swaps)</span>
             </h3>
             <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Instant Sell, order book или DEX — кои продажби участват в прага от 51 130 € и кои „отиват при борсата“.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Instant Sell, order book or DEX — which sales count toward the €51,130 threshold and which “go to the exchange”.</span>
+              <span class="lang-content" data-lang="bg">Кои продажби и суапове на криптовалути трупат оборот за регистрация по ЗДДС — и кои не.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">Which crypto sales and swaps count towards VAT registration turnover — and which do not. Video in Bulgarian.</span>
             </p>
             <div class="video-links">
               <a href="../blog/kripto-borsi-cex-dex-oborot-zdds.html" data-key="video_read_article">Прочети статията →</a>
+              <a href="https://youtu.be/aLl--h5-LL4" target="_blank" rel="noopener"><span data-key="video_watch_yt">Гледай в YouTube</span></a>
             </div>
           </div>
         </article>
 
-        <article class="video-card reveal" id="aml-proverka" data-yt="" data-cats="crypto" data-date="2026-10-11">
-          <div class="video-thumb"></div>
+        <article class="video-card reveal" id="reguliran-pazar-gettex" data-yt="FB5gS9jWRzM" data-cats="invest" data-date="2026-10-12">
+          <div class="video-thumb"><span class="video-duration">1:34</span></div>
           <div class="video-body">
             <div class="blog-meta">
               <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">Крипто</span>
-                <span class="lang-content" data-lang="en" style="display:none;">Crypto</span>
+                <span class="lang-content" data-lang="bg">Инвестиции</span>
+                <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
+              </span>
+              <span class="chip chip-gold">Shorts</span>
+              <span class="blog-date">
+                <span class="lang-content" data-lang="bg">12 октомври 2026</span>
+                <span class="lang-content" data-lang="en" style="display:none;">October 12, 2026</span>
               </span>
             </div>
             <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Как да мина AML проверка при крипто транзакция?</span>
-              <span class="lang-content" data-lang="en" style="display:none;">How do I pass an AML check on a crypto transaction?</span>
+              <span class="lang-content" data-lang="bg">Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex</span>
+              <span class="lang-content" data-lang="en" style="display:none;">How Do We Check Whether a Market Is Regulated? Let’s Check Gettex Together</span>
             </h3>
             <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Как мислят AML анализаторите, каква е разликата между произход на средствата и източник на богатството и как да подготвите досието си.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">How AML analysts think, the difference between source of funds and source of wealth, and how to prepare your file.</span>
+              <span class="lang-content" data-lang="bg">Кратко видео: стъпка по стъпка проверяваме дали Gettex е регулиран пазар. Защо статутът на пазара е важен за данъците — в статията.</span>
+              <span class="lang-content" data-lang="en" style="display:none;">A short video: step by step, we check whether Gettex is a regulated market. Why a market’s status matters for tax — in the article. Video in Bulgarian.</span>
             </p>
             <div class="video-links">
-              <a href="../blog/kak-da-preminem-aml-proverka-kripto.html" data-key="video_read_article">Прочети статията →</a>
+              <a href="../blog/5-danachni-greshki-investitori.html" data-key="video_read_article">Прочети статията →</a>
+              <a href="https://www.youtube.com/shorts/FB5gS9jWRzM" target="_blank" rel="noopener"><span data-key="video_watch_yt">Гледай в YouTube</span></a>
             </div>
           </div>
         </article>
@@ -402,8 +284,8 @@
       <div class="vlog-cta reveal">
         <p>
           <strong>
-            <span class="lang-content" data-lang="bg">Нов въпрос всяка седмица</span>
-            <span class="lang-content" data-lang="en" style="display:none;">A new question every week</span>
+            <span class="lang-content" data-lang="bg">Още видеа предстоят</span>
+            <span class="lang-content" data-lang="en" style="display:none;">More videos are on the way</span>
           </strong>
           <span class="lang-content" data-lang="bg">Абонирайте се в YouTube, за да не пропуснете новите видеа — или запазете консултация за вашия конкретен случай.</span>
           <span class="lang-content" data-lang="en" style="display:none;">Subscribe on YouTube so you don’t miss new videos — or book a consultation for your specific case.</span>

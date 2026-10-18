@@ -675,7 +675,9 @@ img {
 .logo-strip-inner {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 40px;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
@@ -1366,6 +1368,7 @@ img {
 
 .video-duration {
   position: absolute;
+  z-index: 1;
   right: 10px;
   bottom: 10px;
   padding: 2px 8px;
