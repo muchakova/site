@@ -1,0 +1,132 @@
+{
+  "locale": "en_GB",
+  "langName": "English",
+  "dateLocale": "en-GB",
+  "site": {
+    "name": "Marina Muchakova",
+    "role": "Tax Consultant",
+    "tagline": "Tax consultant. I help individuals and businesses hack their taxes — legally.",
+    "description": "Marina Muchakova — tax consultant with a law degree and over 15 years of experience. Crypto tax and MiCA, investment income, international tax, business structuring."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "mainNav": "Main navigation",
+    "langNav": "Language",
+    "otherLangShort": "BG",
+    "otherLangName": "Българска версия",
+    "breadcrumb": "Breadcrumb",
+    "themeDark": "Dark theme",
+    "menu": "Menu",
+    "menuClose": "Close",
+    "newTab": "(opens in a new tab)",
+    "socials": "Social media",
+    "directContact": "Direct contact",
+    "theme": "Theme",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDarkShort": "Dark",
+    "playVideo": "Play video",
+    "duration": "Duration",
+    "facts": "Consultations at a glance",
+    "topics": "Topics"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "booking": "Book a meeting",
+    "vlog": "Videos",
+    "projects": "Projects",
+    "partners": "Partners",
+    "donate": "Support me",
+    "game": "Game",
+    "synth": "Synthesizer",
+    "privacy": "Privacy",
+    "accessibility": "Accessibility"
+  },
+  "footer": {
+    "navHeading": "Navigation",
+    "resHeading": "Resources",
+    "contactHeading": "Contact",
+    "copyright": "© 2026 Marina Muchakova",
+    "disclaimer": "The content of this site is not individual tax or legal advice."
+  },
+  "units": { "min": "min", "minRead": "min read", "per": "/" },
+  "home": {
+    "title": "Marina Muchakova — Tax Consultant",
+    "pill": "Online consultations · Google Meet",
+    "greeting": "Hello, Tax Hackers, I'm",
+    "lede": "I help individuals and businesses to hack their taxes through legal optimisations and strategies.",
+    "ctaBook": "Book a consultation",
+    "ctaServices": "Services & pricing",
+    "trustPrefix": "Founder and partner at",
+    "trustAnd": "and",
+    "factPriceTitle": "from €130",
+    "factPriceText": "30 or 60 minutes",
+    "factMeetTitle": "Google Meet",
+    "factMeetText": "online, at a time that suits you",
+    "stats": [
+      { "value": "15+", "label": "years of experience in tax law" },
+      { "value": "{posts}", "label": "articles on tax, investing and crypto" },
+      { "value": "MiCA", "label": "crypto regulation and tax" }
+    ],
+    "aboutEyebrow": "Marina Muchakova",
+    "aboutTitle": "About me",
+    "aboutBio": [
+      "My name is Marina Muchakova and I am a tax consultant with a law degree and over 15 years of experience in tax law.",
+      "My primary goal is to keep as much capital concentrated within the business as possible. I achieve this through in-depth analysis of tax rules and legislation and finding flexible, effective solutions."
+    ],
+    "aboutMore": "More about me",
+    "ventures": {
+      "vesta": { "name": "Vesta Consult", "text": "Accounting firm and consultancy" },
+      "academy": { "name": "The Crypto Academy", "text": "Crypto and blockchain education" },
+      "nabi": { "name": "NABI", "text": "Blockchain and innovation association" }
+    },
+    "servicesEyebrow": "Expertise",
+    "servicesTitle": "How I can help",
+    "servicesSub": "Lawful solutions that keep more capital in your business and your portfolio.",
+    "more": "More",
+    "moreAbout": "about",
+    "stepsEyebrow": "Process",
+    "stepsTitle": "How it works",
+    "steps": [
+      { "title": "Choose a format", "text": "30 minutes for a specific question, or 60 minutes for a more complex case." },
+      { "title": "Book and pay online", "text": "Pick a convenient day in the calendar. Payment is by card, processed securely by Stripe." },
+      { "title": "Prepare your question", "text": "A short description of your case and the documents related to it." },
+      { "title": "We meet online", "text": "We talk on Google Meet and you leave with clear next steps." }
+    ],
+    "pricingEyebrow": "Consultations",
+    "pricingTitle": "Pricing",
+    "pricingSub": "Online on Google Meet · card payment when booking.",
+    "recommended": "Recommended",
+    "plans": {
+      "30": { "name": "Quick consultation", "duration": "30 min", "fit": "For one specific, clearly defined question: when tax is due, how to declare a given income, which rate applies.", "cta": "Choose 30 minutes" },
+      "60": { "name": "Online consultation", "duration": "60 min", "fit": "For a more complex case: several income types, foreign brokers, business structuring, MiCA and regulatory questions.", "cta": "Choose 60 minutes" }
+    },
+    "planFeatures": ["Online on Google Meet", "Card payment when booking"],
+    "blogEyebrow": "Blog",
+    "blogTitle": "Latest articles",
+    "allPosts": "All articles",
+    "videoEyebrow": "Videos",
+    "videoTitle": "Video answers to investors’ questions",
+    "allVideos": "All videos",
+    "readArticle": "Read the article",
+    "videoLanguageNote": "Videos are in Bulgarian.",
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      { "q": "How does the consultation work?", "a": "Online, on Google Meet, at the time you chose. We go through your case and finish with concrete next steps." },
+      { "q": "Which consultation should I choose?", "a": "30 minutes is enough for one clearly defined question. If you have several income types, foreign accounts or a company, choose 60 minutes." },
+      { "q": "How do I pay?", "a": "By card when you book. Payment is processed securely by Stripe." },
+      { "q": "What should I prepare?", "a": "A short description of your question, the years concerned, and your broker or exchange statements, if any." }
+    ],
+    "ctaTitle": "Have a specific case?",
+    "ctaText": "Every situation is different. Book an online consultation and we will go through it together.",
+    "ctaButton": "Book a meeting"
+  },
+  "stub": {
+    "notice": "This page is being built as part of the redesign.",
+    "back": "Back to the home page"
+  }
+}

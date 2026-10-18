@@ -1,0 +1,26 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+legacyPages: ["/blog.html", "/booking/", "/vlog/", "/projects/", "/partners/", "/donate/", "/game/"]
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% for item in collections.all | sitemapPages %}
+{% set alts = collections.i18nMap[item.data.key] if item.data.key else {} %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    {% if alts.bg and alts.en %}
+    <xhtml:link rel="alternate" hreflang="bg" href="{{ site.url }}{{ alts.bg }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ alts.en }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alts.bg }}"/>
+    {% endif %}
+  </url>
+{% endfor %}
+{# pages not redesigned yet (copied unchanged); removed from this list as they get templates #}
+{% for url in legacyPages %}
+  <url><loc>{{ site.url }}{{ url }}</loc></url>
+{% endfor %}
+{% for p in legacyPosts %}
+  <url><loc>{{ site.url }}{{ p.url }}</loc><lastmod>{{ p.date }}</lastmod></url>
+{% endfor %}
+</urlset>

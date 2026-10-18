@@ -1,0 +1,100 @@
+{
+  "url": "https://muchakova.com",
+  "languages": [
+    "bg",
+    "en"
+  ],
+  "defaultLanguage": "bg",
+  "email": "office@vesta-bg.eu",
+  "phone": "+359887460907",
+  "phoneDisplay": "+359 887 460 907",
+  "cal": {
+    "link": "marina-muchakova-dxmkoe",
+    "events": {
+      "30": "marina-muchakova-dxmkoe/30-min-meeting",
+      "60": "marina-muchakova-dxmkoe/60-min-meeting"
+    }
+  },
+  "prices": {
+    "30": 130,
+    "60": 230
+  },
+  "socials": [
+    {
+      "name": "Facebook",
+      "icon": "facebook",
+      "url": "https://www.facebook.com/muchakova"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/vestaconsult/"
+    },
+    {
+      "name": "YouTube",
+      "icon": "youtube",
+      "url": "https://www.youtube.com/@TheCryptoAcademy375"
+    },
+    {
+      "name": "TikTok",
+      "icon": "tiktok",
+      "url": "https://www.tiktok.com/@muchakova"
+    },
+    {
+      "name": "X",
+      "icon": "x",
+      "url": "https://x.com/VestaConsult"
+    }
+  ],
+  "messengers": [
+    {
+      "name": "Viber",
+      "icon": "viber",
+      "url": "viber://chat?number=%2B359887460907"
+    },
+    {
+      "name": "WhatsApp",
+      "icon": "whatsapp",
+      "url": "https://wa.me/359887460907"
+    },
+    {
+      "name": "Telegram",
+      "icon": "telegram",
+      "url": "https://t.me/+359887460907"
+    }
+  ],
+  "ventures": [
+    {
+      "key": "vesta",
+      "url": "https://vesta-bg.eu",
+      "external": true
+    },
+    {
+      "key": "academy",
+      "url": "https://thecrypto.academy",
+      "external": true
+    },
+    {
+      "key": "nabi",
+      "route": "projects",
+      "hash": "#nabi",
+      "external": false
+    }
+  ],
+  "routes": {
+    "home": "/",
+    "services": "/services/",
+    "about": "/about/",
+    "blog": "/blog.html",
+    "contact": "/contact/",
+    "booking": "/booking/",
+    "vlog": "/vlog/",
+    "projects": "/projects/",
+    "partners": "/partners/",
+    "donate": "/donate/",
+    "game": "/game/",
+    "privacy": "/privacy/",
+    "accessibility": "/accessibility/"
+  },
+  "synth": "https://muchakova.github.io/looper/"
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "crypto",
+    "icon": "coins",
+    "blogCat": "crypto",
+    "title": { "bg": "Крипто данъци и MiCA", "en": "Crypto tax & MiCA" },
+    "desc": {
+      "bg": "Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.",
+      "en": "Taxation of crypto-assets, AML checks, CASP licensing and everything MiCA changed."
+    },
+    "laws": { "bg": ["MiCA", "AML", "ЗДДС"], "en": ["MiCA", "AML", "VAT"] }
+  },
+  {
+    "id": "invest",
+    "icon": "chart",
+    "blogCat": "invest",
+    "title": { "bg": "Доходи от инвестиции", "en": "Investment income" },
+    "desc": {
+      "bg": "Акции, ETF, облигации и дивиденти — кога се дължи данък, колко е и къде се декларира.",
+      "en": "Stocks, ETFs, bonds and dividends — when tax is due, how much, and where to declare it."
+    },
+    "laws": { "bg": ["ЗДДФЛ", "ETF", "дивиденти"], "en": ["Income tax", "ETFs", "dividends"] }
+  },
+  {
+    "id": "international",
+    "icon": "globe",
+    "blogCat": "institutions",
+    "title": { "bg": "Международно облагане", "en": "International tax" },
+    "desc": {
+      "bg": "Спогодби за избягване на двойното данъчно облагане, местно лице и чуждестранни брокери.",
+      "en": "Double tax treaties, tax residence and foreign brokers."
+    },
+    "laws": { "bg": ["СИДДО", "местно лице", "СПБ-8"], "en": ["Tax treaties", "residence", "SPB-8"] }
+  },
+  {
+    "id": "business",
+    "icon": "building",
+    "blogCat": "business",
+    "title": { "bg": "Бизнес структуриране", "en": "Business structuring" },
+    "desc": {
+      "bg": "Субстанция, ДДС и планиране, с което маржът расте, а данъчната тежест — не.",
+      "en": "Substance, VAT and planning that grows your margin — not your tax burden."
+    },
+    "laws": { "bg": ["ЗКПО", "ЗДДС", "субстанция"], "en": ["Corporate tax", "VAT", "substance"] }
+  }
+]

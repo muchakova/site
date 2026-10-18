@@ -1,0 +1,50 @@
+{%- set other = "en" if lang == "bg" else "bg" -%}
+{%- set alts = collections.i18nMap[key] if key else {} -%}
+{%- set pageTitle = (title + " — " + T.site.name) if title else T.home.title -%}
+{%- set pageDescription = description or T.site.description -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  {% if noindex %}<meta name="robots" content="noindex, follow">
+  {% endif %}
+  {% if i18nExempt %}<meta name="mm:i18n" content="bg-only">
+  {% endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% if alts.bg and alts.en %}
+  <link rel="alternate" hreflang="bg" href="{{ site.url }}{{ alts.bg }}">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ alts.en }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alts.bg }}">
+  {% endif %}
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  <meta property="og:site_name" content="{{ T.site.name }}">
+  <meta property="og:title" content="{{ title or T.home.title }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/images/og-site.jpg">
+  <meta property="og:locale" content="{{ T.locale }}">
+  <meta property="og:locale:alternate" content="{{ i18n[other].locale }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F2F4FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080C19" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  {% if lang == "bg" %}<link rel="preload" href="/assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
+  <link rel="stylesheet" href="/assets/css/site.css?v={{ assetVersion }}">
+  {% for href in extraCss or [] %}<link rel="stylesheet" href="{{ href }}?v={{ assetVersion }}">{% endfor %}
+  <script src="/assets/js/site.js?v={{ assetVersion }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">{{ T.a11y.skip }}</a>
+  {% include "partials/header.njk" %}
+  <main id="main" tabindex="-1">
+{{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% for src in extraJs or [] %}<script src="{{ src }}?v={{ assetVersion }}" defer></script>{% endfor %}
+</body>
+</html>

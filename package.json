@@ -1,0 +1,28 @@
+{
+  "name": "muchakova-site",
+  "private": true,
+  "description": "muchakova.com — personal site of Marina Muchakova, tax consultant (BG/EN)",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --port=8080",
+    "clean": "rm -rf _site",
+    "test": "npm run build && npm run test:static && npm run test:e2e",
+    "test:static": "node tests/static/links.mjs && node tests/static/legacy-urls.mjs && node tests/static/i18n.mjs && html-validate \"_site/{index,en/index}.html\" \"_site/{en/,}{services,about,contact,privacy,accessibility}/index.html\" \"_site/styleguide/index.html\"",
+    "test:e2e": "playwright test",
+    "test:lighthouse": "lhci autorun",
+    "serve": "node tools/serve.mjs _site 4173"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7",
+    "@11ty/eleventy-img": "6.0.4",
+    "@axe-core/playwright": "4.14.0",
+    "@fontsource-variable/inter": "5.3.0",
+    "@lhci/cli": "0.15.1",
+    "@playwright/test": "1.64.1",
+    "html-validate": "9.7.1"
+  }
+}

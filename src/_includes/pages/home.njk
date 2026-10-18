@@ -1,0 +1,198 @@
+{%- set map = collections.i18nMap -%}
+{%- set H = T.home -%}
+{%- set bookingUrl = 'booking' | urlFor(lang, map, site.routes) -%}
+{%- set servicesUrl = 'services' | urlFor(lang, map, site.routes) -%}
+
+{# ---------------------------------------------------------------- Hero #}
+<section class="hero" id="hero" aria-labelledby="hero-name">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="status-dot">{{ H.pill }}</p>
+      <p class="hero__greet">{{ H.greeting }}</p>
+      <h1 class="hero__name" id="hero-name">{{ T.site.name }}</h1>
+      <p class="hero__role">{{ T.site.role }}</p>
+      <p class="hero__lede">{{ H.lede }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ bookingUrl }}">{{ H.ctaBook }} {% icon "arrow-right" %}</a>
+        <a class="btn btn--secondary" href="#pricing">{{ H.ctaServices }}</a>
+      </div>
+      <p class="hero__trust">{{ H.trustPrefix }} <strong>{{ H.ventures.vesta.name }}</strong>, <strong>{{ H.ventures.academy.name }}</strong> {{ H.trustAnd }} <strong>{{ H.ventures.nabi.name }}</strong></p>
+    </div>
+    <div class="portrait">
+      <img class="portrait__img" src="/images/profile_9.jpg" alt="{{ T.site.name }}" eleventy:widths="440,880,1050" loading="eager" fetchpriority="high" sizes="(min-width: 860px) 440px, calc(100vw - 40px)">
+      <ul class="portrait__facts" aria-label="{{ T.a11y.facts }}">
+        <li class="fact"><span class="fact__icon">{% icon "calendar" %}</span><p><strong>{{ H.factPriceTitle }}</strong><span>{{ H.factPriceText }}</span></p></li>
+        <li class="fact"><span class="fact__icon">{% icon "video" %}</span><p><strong>{{ H.factMeetTitle }}</strong><span>{{ H.factMeetText }}</span></p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <dl class="stats">
+      {% for s in H.stats %}
+      <div><dt>{{ s.label }}</dt><dd>{{ legacyPosts.length if s.value == "{posts}" else s.value }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- About (#about kept for old links) #}
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap split">
+    <div class="stack" style="--stack: var(--space-s)">
+      <p class="eyebrow">{{ H.aboutEyebrow }}</p>
+      <h2 id="about-title">{{ H.aboutTitle }}</h2>
+      {% for p in H.aboutBio %}<p class="muted">{{ p }}</p>{% endfor %}
+      <p><a class="link-arrow" href="{{ 'about' | urlFor(lang, map, site.routes) }}">{{ H.aboutMore }} {% icon "arrow-right" %}</a></p>
+    </div>
+    <ul class="contact-list" aria-label="{{ T.nav.projects }}">
+      {% for v in site.ventures %}
+      {% set V = H.ventures[v.key] %}
+      <li>
+        {% if v.external %}
+        <a class="contact-item" href="{{ v.url }}" target="_blank" rel="noopener"><span class="stack" style="--stack: 2px; flex: 1"><strong>{{ V.name }}</strong><span class="muted" style="font-size: .92rem">{{ V.text }}</span></span>{% icon "external" %}<span class="sr-only"> {{ T.a11y.newTab }}</span></a>
+        {% else %}
+        <a class="contact-item" href="{{ v.route | urlFor(lang, map, site.routes) }}{{ v.hash }}"><span class="stack" style="--stack: 2px; flex: 1"><strong>{{ V.name }}</strong><span class="muted" style="font-size: .92rem">{{ V.text }}</span></span>{% icon "arrow-right" %}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- Services #}
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__text">
+        <p class="eyebrow">{{ H.servicesEyebrow }}</p>
+        <h2 id="services-title">{{ H.servicesTitle }}</h2>
+        <p class="lead">{{ H.servicesSub }}</p>
+      </div>
+    </div>
+    <ul class="grid" role="list" style="--grid-min: 26rem">
+      {% for s in services %}
+      <li>
+        <article class="card service-card">
+          <span class="service-card__icon">{% icon s.icon %}</span>
+          <h3 class="card__title"><a class="card__link" href="{{ servicesUrl }}#{{ s.id }}">{{ s.title[lang] }}</a></h3>
+          <p class="card__text">{{ s.desc[lang] }}</p>
+          <ul class="chips" aria-label="{{ T.a11y.topics }}">{% for l in s.laws[lang] %}<li class="chip chip--signal">{{ l }}</li>{% endfor %}</ul>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- How it works #}
+<section class="section" aria-labelledby="steps-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">{{ H.stepsEyebrow }}</p><h2 id="steps-title">{{ H.stepsTitle }}</h2></div></div>
+    <ol class="steps">
+      {% for s in H.steps %}<li><h3>{{ s.title }}</h3><p>{{ s.text }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- Pricing #}
+<section class="section section--alt" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="section-head" style="justify-content: center; text-align: center"><div class="section-head__text" style="align-items: center"><p class="eyebrow">{{ H.pricingEyebrow }}</p><h2 id="pricing-title">{{ H.pricingTitle }}</h2><p class="lead">{{ H.pricingSub }}</p></div></div>
+    <div class="plans">
+      {% for minutes in ["30", "60"] %}
+      {% set P = H.plans[minutes] %}
+      {% set featured = minutes == "60" %}
+      <article class="plan{% if featured %} plan--featured{% endif %}" aria-labelledby="plan-{{ minutes }}">
+        <div class="plan__top"><h3 class="plan__name" id="plan-{{ minutes }}">{{ P.name }}</h3>{% if featured %}<span class="chip">{{ H.recommended }}</span>{% endif %}</div>
+        <p class="price"><strong>{{ site.prices[minutes] | price(lang) }}</strong><span>{{ T.units.per }} {{ P.duration }}</span></p>
+        <p class="plan__fit">{{ P.fit }}</p>
+        <ul>{% for f in H.planFeatures %}<li>{% icon "check" %}{{ f }}</li>{% endfor %}</ul>
+        <a class="btn {{ 'btn--on-navy' if featured else 'btn--secondary' }}" href="{{ bookingUrl }}" aria-describedby="plan-{{ minutes }}">{{ P.cta }}{% if featured %} {% icon "arrow-right" %}{% endif %}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- Latest articles (#blog) #}
+{%- set lead = legacyPosts[0] -%}
+<section class="section" id="blog" aria-labelledby="blog-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__text"><p class="eyebrow">{{ H.blogEyebrow }}</p><h2 id="blog-title">{{ H.blogTitle }}</h2></div>
+      <a class="link-arrow" href="{{ 'blog' | urlFor(lang, map, site.routes) }}">{{ H.allPosts }} {% icon "arrow-right" %}</a>
+    </div>
+    <div class="post-feed">
+      <article class="post-lead">
+        <div>
+          <p class="card__meta"><span class="cat">{{ lead.tag[lang] }}</span><time datetime="{{ lead.date }}">{{ lead.date | date(lang) }}</time><span>{{ lead.minutes }} {{ T.units.minRead }}</span></p>
+          <h3 class="post-lead__title"><a class="card__link" href="{{ lead.url }}">{{ lead.title[lang] }}</a></h3>
+          <p>{{ lead.excerpt[lang] }}</p>
+        </div>
+        <span class="post-lead__go" aria-hidden="true">{% icon "arrow-right" %}</span>
+      </article>
+      <ul class="post-rows">
+        {% for p in legacyPosts.slice(1, 4) %}
+        <li><article class="post-row"><time datetime="{{ p.date }}">{{ p.date | date(lang, "short") }}</time><div><span class="cat">{{ p.tag[lang] }}</span><h3 class="post-row__title"><a class="card__link" href="{{ p.url }}">{{ p.title[lang] }}</a></h3></div><span class="len">{{ p.minutes }} {{ T.units.min }}</span></article></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- Videos (#vlog) #}
+<section class="section" id="vlog" aria-labelledby="vlog-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__text"><p class="eyebrow">{{ H.videoEyebrow }}</p><h2 id="vlog-title">{{ H.videoTitle }}</h2>{% if H.videoLanguageNote %}<p class="muted">{{ H.videoLanguageNote }}</p>{% endif %}</div>
+      <a class="link-arrow" href="{{ 'vlog' | urlFor(lang, map, site.routes) }}">{{ H.allVideos }} {% icon "arrow-right" %}</a>
+    </div>
+    <ul class="grid" role="list" style="--grid-min: 18rem">
+      {% for v in videos %}
+      <li>
+        <article class="card video-card">
+          <div class="video-card__media">
+            <button class="video-card__play" type="button" data-yt="{{ v.yt }}" data-title="{{ v.title[lang] }}" aria-label="{{ T.a11y.playVideo }}: {{ v.title[lang] }}"><span>{% icon "play" %}</span></button>
+            <span class="video-card__duration"><span aria-hidden="true">{{ v.duration }}</span><span class="sr-only">{{ T.a11y.duration }}: {{ v.duration }}</span></span>
+          </div>
+          <div class="video-card__body">
+            <p class="card__meta"><span class="cat">{{ v.tag[lang] }}</span><time datetime="{{ v.date }}">{{ v.date | date(lang) }}</time>{% if v.shorts %}<span class="chip chip--outline">Shorts</span>{% endif %}</p>
+            <h3 class="card__title">{{ v.title[lang] }}</h3>
+            {% if v.article %}<a class="link-arrow" href="{{ v.article }}">{{ H.readArticle }} {% icon "arrow-right" %}</a>{% endif %}
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- FAQ #}
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><h2 id="faq-title">{{ H.faqTitle }}</h2></div></div>
+    <div class="faq measure">
+      {% for f in H.faq %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ---------------------------------------------------------------- Final CTA (#contact kept for old links) #}
+<section class="section" id="contact" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2 id="cta-title">{{ H.ctaTitle }}</h2>
+        <p>{{ H.ctaText }}</p>
+        <a class="btn btn--on-navy" href="{{ bookingUrl }}">{{ H.ctaButton }} {% icon "arrow-right" %}</a>
+      </div>
+      <ul class="contact-list" aria-label="{{ T.a11y.directContact }}">
+        <li><a class="contact-item" href="mailto:{{ site.email }}">{% icon "mail" %}{{ site.email }}</a></li>
+        <li><a class="contact-item" href="tel:{{ site.phone }}">{% icon "phone" %}{{ site.phoneDisplay }}</a></li>
+        {% for m in site.messengers %}
+        <li><a class="contact-item" href="{{ m.url }}"{% if m.url.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{% icon m.icon %}{{ m.name }}{% if m.url.startsWith('http') %}<span class="sr-only"> {{ T.a11y.newTab }}</span>{% endif %}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

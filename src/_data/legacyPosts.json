@@ -1,0 +1,645 @@
+[
+ {
+  "url": "/blog/tax-loss-harvesting-po-balgarski.html",
+  "date": "2026-10-08",
+  "cats": [
+   "invest",
+   "taxes"
+  ],
+  "pop": 29,
+  "tag": {
+   "bg": "Инвестиции",
+   "en": "Investing"
+  },
+  "title": {
+   "bg": "Tax-loss harvesting по български",
+   "en": "Tax-Loss Harvesting, the Bulgarian Way"
+  },
+  "excerpt": {
+   "bg": "Как да реализираме загуби преди 31 декември законно: защо загубата на регулиран сегмент в ЕС е данъчно безполезна (чл. 33, ал. 3 ЗДДФЛ), wash sale в САЩ, Ирландия и UK, сезонност и къде минава границата с пазарната манипулация по MAR.",
+   "en": "How to realise losses before 31 December lawfully: why a loss on an EU regulated segment is useless for tax (Art. 33(3) PITA), wash sale rules in the US, Ireland and the UK, seasonality, and where the line with market manipulation under MAR runs."
+  },
+  "minutes": 15
+ },
+ {
+  "url": "/blog/lichen-ili-firmen-akaunt-broker.html",
+  "date": "2026-10-08",
+  "cats": [
+   "invest",
+   "taxes",
+   "business"
+  ],
+  "pop": 28,
+  "tag": {
+   "bg": "Инвестиции",
+   "en": "Investing"
+  },
+  "title": {
+   "bg": "Личен или фирмен акаунт при брокер",
+   "en": "Personal or Company Brokerage Account"
+  },
+  "excerpt": {
+   "bg": "ЗДДФЛ срещу ЗКПО буква по буква: листване не е изпълнение, „регулирана борса“ не е регулиран пазар (XETA срещу XETB), пренасяне на загуби, пазари в САЩ, реални разходи, 5% дивидент и US estate tax. Плюс промпт, с който AI не отговаря само „Зависи“.",
+   "en": "PITA versus CITA, letter by letter: listing is not execution, a “regulated exchange” is not a regulated market (XETA vs XETB), loss carry-forward, US markets, actual expenses, the 5% dividend tax and US estate tax. Plus a prompt that stops AI from just saying “It depends”."
+  },
+  "minutes": 15
+ },
+ {
+  "url": "/blog/spb-8-bnb-interactive-brokers.html",
+  "date": "2026-10-05",
+  "cats": [
+   "invest",
+   "institutions",
+   "business"
+  ],
+  "pop": 27,
+  "tag": {
+   "bg": "Отчетност пред БНБ",
+   "en": "BNB reporting"
+  },
+  "title": {
+   "bg": "Скъпа БНБ, имам акции в Interactive Brokers",
+   "en": "Dear BNB, I Have Shares at Interactive Brokers"
+  },
+  "excerpt": {
+   "bg": "БНБ не иска данък, иска статистика. Кога се подава СПБ-8 (прагът от 25 000 € към 31 декември, чл. 10, ал. 2 ВЗ), защо ценните книжа се пишат по ISIN и в брой, а не в евро, и какво подават фирмите: СПБ-10, СПБ-10А, СПБ-2.",
+   "en": "The BNB wants statistics, not tax. When SPB-8 is due (the €25,000 threshold at 31 December, Art. 10(2) of the Currency Act), why securities go in by ISIN and quantity rather than in euro, and what companies file: SPB-10, SPB-10A, SPB-2."
+  },
+  "minutes": 15
+ },
+ {
+  "url": "/blog/siddo-dvoyno-mestno-lice.html",
+  "date": "2026-10-02",
+  "cats": [
+   "taxes",
+   "institutions"
+  ],
+  "pop": 26,
+  "tag": {
+   "bg": "СИДДО",
+   "en": "Tax treaties"
+  },
+  "title": {
+   "bg": "Местно лице на половин Европа (и на един кораб)",
+   "en": "Tax Resident of Half of Europe (and of One Ship)"
+  },
+  "excerpt": {
+   "bg": "Когато няколко държави едновременно ви смятат за местно лице: чл. 4 ЗДДФЛ, тай-брейкър правилата по СИДДО, данъчен кредит срещу освобождаване, прагът от 255 645,94 € по ДОПК — и казус с Великобритания, Германия, Кипър, Барбадос и кораб под панамски флаг.",
+   "en": "When several countries treat you as resident at once: Art. 4 PITA, the DTT tie-breaker rules, tax credit vs. exemption, the €255,645.94 TSSPC threshold — and a case involving the UK, Germany, Cyprus, Barbados and a ship under the Panamanian flag."
+  },
+  "minutes": 21
+ },
+ {
+  "url": "/blog/parviyat-balgarski-white-paper-esma.html",
+  "date": "2026-10-01",
+  "cats": [
+   "crypto",
+   "institutions"
+  ],
+  "pop": 25,
+  "tag": {
+   "bg": "Крипто",
+   "en": "Crypto"
+  },
+  "title": {
+   "bg": "Първият български White Paper в ESMA: Пробив за Web3 у нас или просто регулаторна формалност?",
+   "en": "The First Bulgarian White Paper in ESMA’s Register: A Web3 Breakthrough or Just a Regulatory Formality?"
+  },
+  "excerpt": {
+   "bg": "Токенът NX0 на NativeArc е първият изцяло български White Paper, вписан в регистъра на ESMA. Какво представлява проектът, защо нотификацията по Title II от MiCA не е лиценз, какво вписването доказва и какво — не.",
+   "en": "NativeArc’s NX0 token is the first fully Bulgarian White Paper entered in ESMA’s register. What the project is, why a Title II MiCA notification is not a licence, and what the register entry does — and does not — prove."
+  },
+  "minutes": 5
+ },
+ {
+  "url": "/blog/kripto-borsi-cex-dex-oborot-zdds.html",
+  "date": "2026-10-01",
+  "cats": [
+   "taxes",
+   "crypto"
+  ],
+  "pop": 24,
+  "tag": {
+   "bg": "ДДС",
+   "en": "VAT"
+  },
+  "title": {
+   "bg": "Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът по ЗДДС",
+   "en": "Whose Turnover Is It — the Exchange’s or Ours? Crypto Trades via CEX and DEX and the VAT Threshold"
+  },
+  "excerpt": {
+   "bg": "Instant Sell и Convert, order book или Uniswap — кои продажби на криптоактиви участват в прага от 51 130 евро за регистрация по ЗДДС и кои „отиват при борсата“. Мястото на изпълнение по чл. 21 ЗДДС, презумпциите по чл. 18 от Регламент 282/2011 и разделението на услугите в MiCA.",
+   "en": "Instant Sell and Convert, order book or Uniswap — which crypto sales count towards the €51,130 VAT registration threshold and which “go to the exchange”. Place of supply under Art. 21 of the VAT Act, the presumptions in Art. 18 of Regulation 282/2011, and the split of services under MiCA."
+  },
+  "minutes": 14
+ },
+ {
+  "url": "/blog/nap-pismo-dohodi-investicii.html",
+  "date": "2026-09-18",
+  "cats": [
+   "taxes",
+   "invest",
+   "crypto"
+  ],
+  "pop": 23,
+  "tag": {
+   "bg": "Данъци",
+   "en": "Taxes"
+  },
+  "title": {
+   "bg": "Получи ли писмо от НАП за доходите си от инвестиции?",
+   "en": "Got a Letter from the NRA About Your Investment Income?"
+  },
+  "excerpt": {
+   "bg": "Кратко и по същество — как да намериш счетоводител, как да се справиш сам, какви документи ти трябват и къде точно се декларира всеки вид доход (акции, ДЦК, крипто, лихви, дивиденти) за данъчна година 2025.",
+   "en": "Short and to the point — how to find an accountant, how to handle it yourself, what documents you need, and exactly where each type of income (shares, government securities, crypto, interest, dividends) is declared for tax year 2025."
+  },
+  "minutes": 9
+ },
+ {
+  "url": "/blog/dds-turisticheska-usluga-9-ili-20.html",
+  "date": "2026-08-31",
+  "cats": [
+   "taxes",
+   "business"
+  ],
+  "pop": 22,
+  "tag": {
+   "bg": "ДДС",
+   "en": "VAT"
+  },
+  "title": {
+   "bg": "9% или 20% ДДС за еднодневния тур?",
+   "en": "9% or 20% VAT on a One-Day Tour?"
+  },
+  "excerpt": {
+   "bg": "Еднодневна туристическа разходка, продавана през платформи като GetYourGuide, Viator или Airbnb Experiences — коя ставка ДДС се дължи, кога има „обща туристическа услуга“ по чл. 136 ЗДДС и върху каква основа се начислява данъкът. Защо намалената ставка от 9% вече не съществува.",
+   "en": "A one-day tour sold through platforms like GetYourGuide, Viator or Airbnb Experiences — which VAT rate applies, when there's a “general tourist service” under Art. 136, and what the tax is charged on. Why the 9% reduced rate no longer exists."
+  },
+  "minutes": 13
+ },
+ {
+  "url": "/blog/esma-non-compliant-mexc.html",
+  "date": "2026-08-06",
+  "cats": [
+   "crypto",
+   "institutions"
+  ],
+  "pop": 21,
+  "tag": {
+   "bg": "Крипто",
+   "en": "Crypto"
+  },
+  "title": {
+   "bg": "MEXC е в „черния списък“ на ESMA. Какво означава това и какво става с активите ти",
+   "en": "MEXC Is on ESMA's “Blacklist”. What It Means and What Happens to Your Assets"
+  },
+  "excerpt": {
+   "bg": "MEXC е вписан в регистъра на ESMA за non-compliant entities по MiCA. Каква е разликата с отнет лиценз, защо преходният период вече изтече и какво реално става с активите ти, ако тръгнеш да ги местиш през частен адрес.",
+   "en": "MEXC is listed in ESMA's register of non-compliant entities under MiCA. How it differs from a revoked license, why the transition period has expired, and what actually happens to your assets if you move them through a private address."
+  },
+  "minutes": 6
+ },
+ {
+  "url": "/blog/dds-registraciya-interactive-brokers.html",
+  "date": "2026-08-05",
+  "cats": [
+   "taxes",
+   "invest"
+  ],
+  "pop": 20,
+  "tag": {
+   "bg": "ДДС",
+   "en": "VAT"
+  },
+  "title": {
+   "bg": "ДДС регистрация при търговия с акции чрез Interactive Brokers",
+   "en": "VAT Registration When Trading Shares via Interactive Brokers"
+  },
+  "excerpt": {
+   "bg": "Кога оборотът от финансови инструменти през чуждестранен брокер НЕ формира оборот за регистрация по чл. 96 ЗДДС — мястото на изпълнение, чл. 21, ал. 2 ЗДДС и примерен отговор на ИПДПОЗЛ с реален акт за отказ.",
+   "en": "When turnover from financial instruments through a foreign broker does NOT count toward Art. 96 VAT registration — place of supply, Art. 21(2), and a sample response to the NRA with a real refusal act."
+  },
+  "minutes": 27
+ },
+ {
+  "url": "/blog/kak-se-oblagat-etf-ite-v-balgaria.html",
+  "date": "2026-07-21",
+  "cats": [
+   "taxes",
+   "invest"
+  ],
+  "pop": 19,
+  "tag": {
+   "bg": "Данъци",
+   "en": "Taxes"
+  },
+  "title": {
+   "bg": "Как се облагат ETF-ите в България? (И защо инвеститорите бъркат най-важното)",
+   "en": "How Are ETFs Taxed in Bulgaria? (And Why Investors Get the Most Important Part Wrong)"
+  },
+  "excerpt": {
+   "bg": "ETF, ETN или ETC — правната форма решава всичко. Плюс кумулиращи срещу дистрибутиращи фондове, инвестиране през ЕООД, ирландските UCITS фондове, наследяването и masterclass по ДДС.",
+   "en": "ETF, ETN or ETC — the legal form decides everything. Plus accumulating vs. distributing funds, investing through a company, Irish UCITS funds, inheritance, and a VAT masterclass."
+  },
+  "minutes": 20
+ },
+ {
+  "url": "/blog/5-danachni-greshki-investitori-chast-2.html",
+  "date": "2026-07-17",
+  "cats": [
+   "taxes",
+   "invest"
+  ],
+  "pop": 18,
+  "tag": {
+   "bg": "Данъци",
+   "en": "Taxes"
+  },
+  "title": {
+   "bg": "5 данъчни грешки, които допускат инвеститорите — Част 2 (За ценители)",
+   "en": "5 Tax Mistakes Investors Make — Part 2 (For Connoisseurs)"
+  },
+  "excerpt": {
+   "bg": "Разширената и редактирана версия: регулиран пазар срещу квалифициран пазар за растеж, ETF/ETC/ETN/ADR/GDR, tax-loss harvesting и MAR, рискът по ДДС и кога инвеститорът вече прилича на търговец.",
+   "en": "The expanded, edited version: regulated market vs. qualifying growth market, ETF/ETC/ETN/ADR/GDR, tax-loss harvesting and MAR, the VAT risk, and when an investor already looks like a trader."
+  },
+  "minutes": 19
+ },
+ {
+  "url": "/blog/5-danachni-greshki-investitori.html",
+  "date": "2026-07-15",
+  "cats": [
+   "taxes",
+   "invest"
+  ],
+  "pop": 17,
+  "tag": {
+   "bg": "Данъци",
+   "en": "Taxes"
+  },
+  "title": {
+   "bg": "5 данъчни грешки, които допускат инвеститорите! (И които после им струват скъпо)",
+   "en": "5 Tax Mistakes Investors Make! (That Later Cost Them Dearly)"
+  },
+  "excerpt": {
+   "bg": "Регулиран пазар срещу европейски пазар, ETF срещу ETC/ETP, Tax Loss Harvesting, декемврийските промени в законите и скритият риск от регистрация по ДДС — 5 капана, които заличават доходността ви.",
+   "en": "Regulated market vs. European market, ETF vs. ETC/ETP, Tax Loss Harvesting, the December law changes and the hidden risk of VAT registration — 5 traps that wipe out your returns."
+  },
+  "minutes": 5
+ },
+ {
+  "url": "/blog/smart-kontrakti-defi-biznes.html",
+  "date": "2026-07-10",
+  "cats": [
+   "crypto",
+   "business",
+   "taxes"
+  ],
+  "pop": 16,
+  "tag": {
+   "bg": "DeFi",
+   "en": "DeFi"
+  },
+  "title": {
+   "bg": "Смарт контракти и DeFi: Какво реално означава това за вашия бизнес?",
+   "en": "Smart Contracts and DeFi: What Does This Actually Mean for Your Business?"
+  },
+  "excerpt": {
+   "bg": "Защо кодът не е закон, кои технически движения в DeFi са данъчни събития по ЗКПО и ЗДДФЛ, какво променя MiCA и какви стъпки трябва да предприеме всеки бизнес лидер.",
+   "en": "Why code is not law, which technical movements in DeFi are taxable events under Bulgarian tax law, what MiCA changes, and what steps every business leader should take."
+  },
+  "minutes": 4
+ },
+ {
+  "url": "/blog/aml-pragove-stepeni-due-diligence.html",
+  "date": "2026-07-10",
+  "cats": [
+   "crypto",
+   "institutions"
+  ],
+  "pop": 15,
+  "tag": {
+   "bg": "AML",
+   "en": "AML"
+  },
+  "title": {
+   "bg": "Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence)",
+   "en": "Addendum: Thresholds and Levels of Due Diligence"
+  },
+  "excerpt": {
+   "bg": "Законовите прагове от 1 000, 10 000 и 15 000 евро, трите степени на проверка (SDD, CDD, EDD) и защо няма „магическо число“, под което сте невидими за AML проверките.",
+   "en": "The statutory thresholds of EUR 1,000, 10,000 and 15,000, the three levels of due diligence (SDD, CDD, EDD), and why there is no \"magic number\" below which you are invisible to AML checks."
+  },
+  "minutes": 5
+ },
+ {
+  "url": "/blog/kak-da-preminem-aml-proverka-kripto.html",
+  "date": "2026-07-10",
+  "cats": [
+   "crypto",
+   "institutions"
+  ],
+  "pop": 14,
+  "tag": {
+   "bg": "AML",
+   "en": "AML"
+  },
+  "title": {
+   "bg": "Наръчник: Как успешно да преминем AML проверка при крипто транзакции",
+   "en": "A Guide to Successfully Passing an AML Check on Crypto Transactions"
+  },
+  "excerpt": {
+   "bg": "Как мислят AML анализаторите, каква е разликата между произход на средствата и източник на богатството и как да подготвите досието си, така че проверката да мине бързо и безпроблемно.",
+   "en": "How AML analysts think, the difference between source of funds and source of wealth, and how to prepare your file so the check goes quickly and smoothly."
+  },
+  "minutes": 5
+ },
+ {
+  "url": "/blog/danachen-narachnik-za-investitori.html",
+  "date": "2026-07-08",
+  "cats": [
+   "taxes",
+   "invest",
+   "crypto"
+  ],
+  "pop": 13,
+  "tag": {
+   "bg": "Данъци",
+   "en": "Taxes"
+  },
+  "title": {
+   "bg": "Данъчен наръчник за инвеститори в България",
+   "en": "Tax Guide for Investors in Bulgaria"
+  },
+  "excerpt": {
+   "bg": "Крипто, акции, ETF, дивиденти, злато и имоти — кога се дължи данък, колко е той и къде се декларира. Кратка справка за индивидуалния инвеститор.",
+   "en": "Crypto, stocks, ETFs, dividends, gold and real estate — when tax is due, how much, and where to declare it. A quick reference for the individual investor."
+  },
+  "minutes": 8
+ },
+ {
+  "url": "/blog/moite-5-stotinki-za-proektobyudzhet-2026.html",
+  "date": "2026-07-08",
+  "cats": [
+   "economy",
+   "business"
+  ],
+  "pop": 4,
+  "tag": {
+   "bg": "Икономика",
+   "en": "Economy"
+  },
+  "title": {
+   "bg": "Моите 5 стотинки за Проектобюджет 2026",
+   "en": "My Two Cents on Draft Budget 2026"
+  },
+  "excerpt": {
+   "bg": "Истинският дефицит не е бюджетният, а дефицитът на реформи. За административната тежест, скрития данък върху предприемачеството и цената на изгубеното време.",
+   "en": "The real deficit is not fiscal — it is a deficit of reforms. On the administrative burden, the hidden tax on entrepreneurship, and the cost of lost time."
+  },
+  "minutes": 9
+ },
+ {
+  "url": "/blog/metamask-cl-card-mica-moonpay.html",
+  "date": "2026-07-08",
+  "cats": [
+   "crypto",
+   "taxes",
+   "institutions"
+  ],
+  "pop": 2,
+  "tag": {
+   "bg": "MiCA",
+   "en": "MiCA"
+  },
+  "title": {
+   "bg": "MetaMask CL Card вече преминава под MiCA: зад крипто услугите вече стои MoonPay Europe",
+   "en": "MetaMask CL Card Now Moves Under MiCA: MoonPay Europe Is Behind the Crypto Services"
+  },
+  "excerpt": {
+   "bg": "От 1 юли 2026 г. крипто услугите по картата се предоставят от MoonPay Europe — MiCA-лицензиран CASP. Какво означава това за потребителите и какво ще знаят институциите.",
+   "en": "From 1 July 2026 the card's crypto services are powered by MoonPay Europe — a MiCA-licensed CASP. What this means for users and what the authorities will know."
+  },
+  "minutes": 3
+ },
+ {
+  "url": "/blog/razlika-borsov-segment-over-the-counter.html",
+  "date": "2026-06-11",
+  "cats": [
+   "invest",
+   "taxes"
+  ],
+  "pop": 5,
+  "tag": {
+   "bg": "Инвестиции",
+   "en": "Investing"
+  },
+  "title": {
+   "bg": "Разлика между търговия на борсов сегмент и over-the-counter",
+   "en": "The Difference Between Exchange Trading and Over-the-Counter Trading"
+  },
+  "excerpt": {
+   "bg": "Какво означава OTC, как се различава от борсовото търгуване и защо fractional shares изискват по-внимателен прочит на trade confirmation.",
+   "en": "What OTC means, how it differs from exchange trading, and why fractional shares require a closer reading of the trade confirmation."
+  },
+  "minutes": 5
+ },
+ {
+  "url": "/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html",
+  "date": "2026-05-29",
+  "cats": [
+   "taxes",
+   "invest"
+  ],
+  "pop": 8,
+  "tag": {
+   "bg": "ДДС",
+   "en": "VAT"
+  },
+  "title": {
+   "bg": "Кога сделките с ценни книжа СА икономическа дейност?",
+   "en": "When Are Securities Transactions an Economic Activity?"
+  },
+  "excerpt": {
+   "bg": "Анализ на практиката на Съда на ЕС относно сделките с ценни книжа като икономическа дейност и приложението й в България.",
+   "en": "An analysis of CJEU case law on securities transactions as an economic activity and its application in Bulgaria."
+  },
+  "minutes": 5
+ },
+ {
+  "url": "/blog/kakvo-ne-pishe-v-white-paperite.html",
+  "date": "2026-05-28",
+  "cats": [
+   "crypto",
+   "economy"
+  ],
+  "pop": 11,
+  "tag": {
+   "bg": "Криптоикономика",
+   "en": "Cryptoeconomics"
+  },
+  "title": {
+   "bg": "Какво не пише в white paper-ите",
+   "en": "What White Papers Do Not Say"
+  },
+  "excerpt": {
+   "bg": "Защо Bitcoin, Ethereum, DeFi, Layer 2 и bridge-овете са нова инфраструктура за стари икономически закони.",
+   "en": "Why Bitcoin, Ethereum, DeFi, Layer 2, and bridges are new infrastructure for old economic laws."
+  },
+  "minutes": 9
+ },
+ {
+  "url": "/blog/zatrudnenia-casp-mica-licenz-kfn.html",
+  "date": "2026-05-28",
+  "cats": [
+   "crypto",
+   "business"
+  ],
+  "pop": 10,
+  "tag": {
+   "bg": "MiCA",
+   "en": "MiCA"
+  },
+  "title": {
+   "bg": "Затрудненията пред CASP-овете при MiCA лиценз пред КФН",
+   "en": "CASP Challenges in Bulgaria During MiCA Licensing Before the FSC"
+  },
+  "excerpt": {
+   "bg": "Практически преглед на най-честите препъни камъни пред CASP компаниите в България при кандидатстване за MiCA лиценз.",
+   "en": "A practical overview of the common stumbling blocks Bulgarian CASP companies face when applying for a MiCA licence."
+  },
+  "minutes": 7
+ },
+ {
+  "url": "/blog/substancia-kompania-zashto-vazhno.html",
+  "date": "2026-03-04",
+  "cats": [
+   "taxes",
+   "business"
+  ],
+  "pop": 9,
+  "tag": {
+   "bg": "Данъчно право",
+   "en": "Данъчно право"
+  },
+  "title": {
+   "bg": "Какво е „субстанция“ на една компания и защо това е важно?",
+   "en": "What Is Company Substance and Why Does It Matter?"
+  },
+  "excerpt": {
+   "bg": "Субстанцията показва къде реално се създава икономическата стойност и в коя държава може да се дължат данъци при международна структура.",
+   "en": "Субстанцията показва къде реално се създава икономическата стойност и в коя държава може да се дължат данъци при международна структура."
+  },
+  "minutes": 2
+ },
+ {
+  "url": "/blog/dds-promeni-2026.html",
+  "date": "2026-03-04",
+  "cats": [
+   "taxes",
+   "business"
+  ],
+  "pop": 7,
+  "tag": {
+   "bg": "ДДС",
+   "en": "ДДС"
+  },
+  "title": {
+   "bg": "Промени в ДДС при електронна търговия и онлайн събития",
+   "en": "VAT Changes for E-commerce and Online Events"
+  },
+  "excerpt": {
+   "bg": "Какво се променя за онлайн бизнеса, дигиталните услуги и трансграничните продажби в ЕС, и кога OSS остава по-добрата опция.",
+   "en": "Какво се променя за онлайн бизнеса, дигиталните услуги и трансграничните продажби в ЕС, и кога OSS остава по-добрата опция."
+  },
+  "minutes": 2
+ },
+ {
+  "url": "/blog/natrupvane-oborot-registraciya-dds-2026.html",
+  "date": "2026-03-04",
+  "cats": [
+   "taxes",
+   "business"
+  ],
+  "pop": 6,
+  "tag": {
+   "bg": "ДДС",
+   "en": "ДДС"
+  },
+  "title": {
+   "bg": "Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.",
+   "en": "VAT Registration Turnover Accumulation After 01.01.2026"
+  },
+  "excerpt": {
+   "bg": "Как се натрупва оборотът след 01.01.2026, кога възниква предполагаема регистрация и какви задължения започват преди получаване на акта.",
+   "en": "Как се натрупва оборотът след 01.01.2026, кога възниква предполагаема регистрация и какви задължения започват преди получаване на акта."
+  },
+  "minutes": 2
+ },
+ {
+  "url": "/blog/obobshtenie-promeni-zdds-2026.html",
+  "date": "2026-03-04",
+  "cats": [
+   "taxes"
+  ],
+  "pop": 1,
+  "tag": {
+   "bg": "ДДС",
+   "en": "ДДС"
+  },
+  "title": {
+   "bg": "Обобщение на промените в режима на ДДС след 1.1.2026",
+   "en": "Summary of VAT Regime Changes After 1.1.2026"
+  },
+  "excerpt": {
+   "bg": "Пълен практически преглед на новите режими SME/OSS, EX номера, отчетността и ефекта върху регистрациите по ЗДДС след 1 януари 2026 г.",
+   "en": "Пълен практически преглед на новите режими SME/OSS, EX номера, отчетността и ефекта върху регистрациите по ЗДДС след 1 януари 2026 г."
+  },
+  "minutes": 2
+ },
+ {
+  "url": "/blog/razmer-ima-znachenie.html",
+  "date": "2026-02-28",
+  "cats": [
+   "business",
+   "economy"
+  ],
+  "pop": 12,
+  "tag": {
+   "bg": "Бизнес",
+   "en": "Бизнес"
+  },
+  "title": {
+   "bg": "Размерът има значение!",
+   "en": "Размерът има значение!"
+  },
+  "excerpt": {
+   "bg": "Истината, която финансистите няма да ти разкрият безвъзмездно —\n            размерът на стартовия капитал понякога е границата между фалита и успеха.",
+   "en": "Истината, която финансистите няма да ти разкрият безвъзмездно —\n            размерът на стартовия капитал понякога е границата между фалита и успеха."
+  },
+  "minutes": 2
+ },
+ {
+  "url": "/blog/dck-obligacii-danaci.html",
+  "date": "2026-02-14",
+  "cats": [
+   "taxes",
+   "invest"
+  ],
+  "pop": 3,
+  "tag": {
+   "bg": "Данъци",
+   "en": "Данъци"
+  },
+  "title": {
+   "bg": "ДЦК и как не се облагат с данъци",
+   "en": "ДЦК и как не се облагат с данъци"
+  },
+  "excerpt": {
+   "bg": "Купони, отстъпки и капиталови печалби — пълното данъчно ръководство за физически лица, инвестиращи в държавни ценни книжа и облигации на регулирани пазари.",
+   "en": "Купони, отстъпки и капиталови печалби — пълното данъчно ръководство за физически лица, инвестиращи в държавни ценни книжа и облигации на регулирани пазари."
+  },
+  "minutes": 3
+ }
+]

@@ -123,6 +123,7 @@
   @media (max-width: 860px) {
     .hero__grid { grid-template-columns: minmax(0, 1fr); }
     .portrait { justify-self: start; width: min(100%, 380px); }
+    .portrait::before { inset: 4% 0 8% 0; } /* keep the glow inside the gutter: no sideways scroll */
   }
   @media (max-width: 560px) { .portrait__facts { grid-template-columns: minmax(0, 1fr); } }
 
@@ -281,7 +282,8 @@
   .prose figcaption { margin-top: var(--space-2xs); font-size: var(--step--1); color: var(--color-muted); }
   .prose hr { border: 0; border-top: 1px solid var(--color-line); margin-block: 2em; }
 
-  /* tables: wrapper is a focusable, labelled region so keyboard users can scroll it */
+  /* tables: wrapper is <section class="table-wrap" aria-labelledby="caption-id" tabindex="0"> —
+     a focusable, labelled region so keyboard users can scroll wide tables on phones */
   .table-wrap { overflow-x: auto; border-radius: var(--radius-l); border: 1px solid var(--color-line); background: var(--color-surface); }
   .table-wrap:focus-visible { outline-offset: 2px; }
   .table-wrap table { width: 100%; min-width: 520px; font-size: 0.95rem; line-height: 1.45; }
@@ -341,6 +343,10 @@
   .share__label { font-size: var(--step--1); color: var(--color-muted); margin-right: 4px; }
 
   .disclaimer { font-size: var(--step--1); color: var(--color-muted); padding: var(--space-s) var(--space-m); border-radius: var(--radius-l); background: var(--color-surface-2); border: 1px solid var(--color-line); }
+
+  /* two-column content split (text + list/media) → one column on tablets and phones */
+  .split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--space-xl); align-items: start; }
+  @media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); gap: var(--space-l); } }
 
   /* ---------- Contact list ---------------------------------------- */
   .contact-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }

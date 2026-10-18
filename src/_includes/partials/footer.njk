@@ -1,0 +1,53 @@
+{%- set map = collections.i18nMap -%}
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="{{ 'home' | urlFor(lang, map, site.routes) }}"><span class="brand__mark" aria-hidden="true">MM</span><span>{{ T.site.name }}</span></a>
+        <p class="site-footer__tag">{{ T.site.tagline }}</p>
+        <a class="donate-link" href="{{ 'donate' | urlFor(lang, map, site.routes) }}">{% icon "heart" %}{{ T.nav.donate }}</a>
+      </div>
+      <nav aria-labelledby="footer-nav">
+        <h2 id="footer-nav">{{ T.footer.navHeading }}</h2>
+        <ul>
+          {% for item in ["services", "about", "blog", "vlog", "contact", "booking"] %}
+          <li><a href="{{ item | urlFor(lang, map, site.routes) }}">{{ T.nav[item] }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-res">
+        <h2 id="footer-res">{{ T.footer.resHeading }}</h2>
+        <ul>
+          {% for item in ["projects", "partners", "game"] %}
+          <li><a href="{{ item | urlFor(lang, map, site.routes) }}">{{ T.nav[item] }}</a></li>
+          {% endfor %}
+          <li><a href="{{ site.synth }}" target="_blank" rel="noopener">{{ T.nav.synth }}<span class="sr-only"> {{ T.a11y.newTab }}</span></a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="footer-contact">{{ T.footer.contactHeading }}</h2>
+        <ul>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a></li>
+        </ul>
+        <ul class="socials" aria-label="{{ T.a11y.socials }}">
+          {% for s in site.socials %}
+          <li><a class="icon-btn" href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }} {{ T.a11y.newTab }}">{% icon s.icon %}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>{{ T.footer.copyright }} · <a href="{{ 'privacy' | urlFor(lang, map, site.routes) }}">{{ T.nav.privacy }}</a> · <a href="{{ 'accessibility' | urlFor(lang, map, site.routes) }}">{{ T.nav.accessibility }}</a></p>
+      <fieldset class="theme-switch">
+        <legend>{{ T.a11y.theme }}</legend>
+        <div class="theme-switch__options">
+          <label><input type="radio" name="theme" value="system" checked>{{ T.a11y.themeSystem }}</label>
+          <label><input type="radio" name="theme" value="light">{{ T.a11y.themeLight }}</label>
+          <label><input type="radio" name="theme" value="dark">{{ T.a11y.themeDarkShort }}</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="muted" style="font-size: .85rem; padding-bottom: var(--space-l)">{{ T.footer.disclaimer }}</p>
+  </div>
+</footer>

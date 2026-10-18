@@ -1,0 +1,26 @@
+{%- set map = collections.i18nMap -%}
+{%- set otherUrl = alts[other] if alts and alts[other] else ("/en/" if other == "en" else "/") -%}
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="{{ 'home' | urlFor(lang, map, site.routes) }}"><span class="brand__mark" aria-hidden="true">MM</span><span class="brand__name">{{ T.site.name }}</span></a>
+    <div class="site-menu" id="site-menu">
+      <nav class="site-nav" aria-label="{{ T.a11y.mainNav }}">
+        <ul>
+          {% for item in ["services", "about", "blog", "contact"] %}
+          <li><a href="{{ item | urlFor(lang, map, site.routes) }}"{% if section == item %} aria-current="page"{% endif %}>{{ T.nav[item] }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <nav aria-label="{{ T.a11y.langNav }}"><a class="icon-btn" href="{{ otherUrl }}" hreflang="{{ other }}" lang="{{ other }}">{{ T.a11y.otherLangShort }}<span class="sr-only"> · {{ T.a11y.otherLangName }}</span></a></nav>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+          {% icon "moon", "icon-moon" %}{% icon "sun", "icon-sun" %}<span class="sr-only">{{ T.a11y.themeDark }}</span>
+        </button>
+      </div>
+    </div>
+    <a class="btn btn--primary btn--small" href="{{ 'booking' | urlFor(lang, map, site.routes) }}">{{ T.nav.booking }}</a>
+    <button class="menu-btn" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu" data-label-open="{{ T.a11y.menu }}" data-label-close="{{ T.a11y.menuClose }}">
+      {% icon "menu" %}<span data-menu-label>{{ T.a11y.menu }}</span>
+    </button>
+  </div>
+</header>

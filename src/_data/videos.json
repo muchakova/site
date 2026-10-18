@@ -1,0 +1,76 @@
+[
+ {
+  "id": "zagubi-finansovi-instrumenti",
+  "yt": "Dba4_JBF_4o",
+  "date": "2026-10-18",
+  "cats": [
+   "nap",
+   "invest"
+  ],
+  "duration": "4:11",
+  "shorts": false,
+  "tag": {
+   "bg": "Декларации и отчетност",
+   "en": "Returns & reporting"
+  },
+  "title": {
+   "bg": "Деклариране на загуби от търговия с финансови инструменти — защо и как",
+   "en": "Declaring Losses from Trading Financial Instruments — Why and How"
+  },
+  "answer": {
+   "bg": "Защо си струва да декларирате загубите от търговия с финансови инструменти и как точно се прави.",
+   "en": "Why it pays to declare your losses from trading financial instruments, and exactly how to do it. Video in Bulgarian."
+  },
+  "article": "/blog/tax-loss-harvesting-po-balgarski.html",
+  "watch": "https://youtu.be/Dba4_JBF_4o"
+ },
+ {
+  "id": "oborot-dds-kripto",
+  "yt": "aLl--h5-LL4",
+  "date": "2026-10-13",
+  "cats": [
+   "vat",
+   "crypto"
+  ],
+  "duration": "12:29",
+  "shorts": false,
+  "tag": {
+   "bg": "ДДС",
+   "en": "VAT"
+  },
+  "title": {
+   "bg": "Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)",
+   "en": "Building Up VAT Registration Turnover from Crypto (Sales and Swaps)"
+  },
+  "answer": {
+   "bg": "Кои продажби и суапове на криптовалути трупат оборот за регистрация по ЗДДС — и кои не.",
+   "en": "Which crypto sales and swaps count towards VAT registration turnover — and which do not. Video in Bulgarian."
+  },
+  "article": "/blog/kripto-borsi-cex-dex-oborot-zdds.html",
+  "watch": "https://youtu.be/aLl--h5-LL4"
+ },
+ {
+  "id": "reguliran-pazar-gettex",
+  "yt": "FB5gS9jWRzM",
+  "date": "2026-10-12",
+  "cats": [
+   "invest"
+  ],
+  "duration": "1:34",
+  "shorts": true,
+  "tag": {
+   "bg": "Инвестиции",
+   "en": "Investing"
+  },
+  "title": {
+   "bg": "Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex",
+   "en": "How Do We Check Whether a Market Is Regulated? Let’s Check Gettex Together"
+  },
+  "answer": {
+   "bg": "Кратко видео: стъпка по стъпка проверяваме дали Gettex е регулиран пазар. Защо статутът на пазара е важен за данъците — в статията.",
+   "en": "A short video: step by step, we check whether Gettex is a regulated market. Why a market’s status matters for tax — in the article. Video in Bulgarian."
+  },
+  "article": "/blog/5-danachni-greshki-investitori.html",
+  "watch": "https://www.youtube.com/shorts/FB5gS9jWRzM"
+ }
+]
