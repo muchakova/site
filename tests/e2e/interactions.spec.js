@@ -109,3 +109,26 @@ test("booking: format options are keyboard-operable radios", async ({ page }) =>
   await page.keyboard.press("ArrowRight");
   await expect(page.locator("#format-60")).toBeChecked();
 });
+
+test("old shared anchor #en-2 on a Bulgarian post opens the English post", async ({ page }) => {
+  await page.goto("/blog/tax-loss-harvesting-po-balgarski.html#en-2");
+  await expect(page).toHaveURL(/\/en\/blog\/tax-loss-harvesting-po-balgarski\.html#en-2$/);
+  await expect(page.locator("#en-2")).toHaveCount(1);
+});
+
+test("article: table of contents, reading time and language link", async ({ page }) => {
+  await page.goto("/blog/tax-loss-harvesting-po-balgarski.html");
+  const toc = page.locator(".toc-desktop nav.toc a, .toc-mobile nav.toc a");
+  expect(await toc.count()).toBeGreaterThanOrEqual(6);
+  await expect(page.locator(".post-meta")).toContainText(/\d+ мин четене/);
+  await expect(page.locator('.post-meta a[hreflang="en"]')).toHaveAttribute("href", "/en/blog/tax-loss-harvesting-po-balgarski.html");
+});
+
+test("blog: ?cat= preselects a topic and the count is announced", async ({ page }) => {
+  await page.goto("/blog.html?cat=crypto");
+  await expect(page.locator('[data-filter="crypto"]')).toHaveAttribute("aria-pressed", "true");
+  const visible = await page.locator("[data-filter-list] > li:visible").count();
+  expect(visible).toBeGreaterThan(0);
+  await page.locator('[data-filter="all"]').click();
+  await expect(page.locator("[data-filter-status]")).toHaveText(/Показани са 29 статии/);
+});

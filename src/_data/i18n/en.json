@@ -345,5 +345,42 @@
     "social": "Social media",
     "location": "Location",
     "locationText": "Sofia, Bulgaria · consultations online"
+  },
+  "postPage": {
+    "updated": "Updated on",
+    "readOther": "Прочетете на български",
+    "toc": "Contents",
+    "tocNav": "Table of contents",
+    "disclaimer": "This article is for information only and reflects the law as of its publication date. It is not individual tax or legal advice.",
+    "author": "Author",
+    "authorBio": "Tax consultant with a law degree and over 15 years of experience in tax law.",
+    "ctaTitle": "Have a specific case?",
+    "ctaText": "Every situation is different. Book an online consultation and we will go through it together.",
+    "ctaButton": "Book a consultation",
+    "share": "Share:",
+    "shareNative": "Share…",
+    "shareOn": "Share on",
+    "copyLink": "Copy link",
+    "copied": "Link copied",
+    "related": "Related reading",
+    "blogLead": "In-depth analysis of tax, investing and crypto — in Bulgarian and English.",
+    "filterLabel": "Filter by topic",
+    "searchLabel": "Search articles",
+    "searchPlaceholder": "e.g. ETF, VAT, MiCA",
+    "statusOne": "Showing {n} article",
+    "statusMany": "Showing {n} articles",
+    "statusNone": "No articles match this filter",
+    "emptyTitle": "No articles match this filter.",
+    "emptyText": "Try another topic or another word.",
+    "videosLink": "Video answers",
+    "filters": {
+      "all": "All",
+      "taxes": "Taxes",
+      "crypto": "Crypto & MiCA",
+      "invest": "Investing",
+      "economy": "Economy",
+      "business": "Business & Entrepreneurship",
+      "institutions": "What the Authorities Know"
+    }
   }
 }

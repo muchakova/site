@@ -1,6 +1,8 @@
 {%- set other = "en" if lang == "bg" else "bg" -%}
 {%- set alts = collections.i18nMap[key] if key else {} -%}
-{%- set pageTitle = (title + " — " + T.site.name) if title else T.home.title -%}
+{%- set shortTitle = seoTitle or title -%}
+{%- set pageTitle = (shortTitle + " — " + T.site.name) if shortTitle else T.home.title -%}
+{%- if pageTitle.length > 65 %}{% set pageTitle = shortTitle %}{% endif -%}
 {%- set pageDescription = description or T.site.description -%}
 <!doctype html>
 <html lang="{{ lang }}">

@@ -6,6 +6,17 @@
   'use strict';
   var root = document.documentElement;
 
+  /* ---------- Transition from the old single-URL bilingual site ----------
+     Old links shared one URL for both languages with #bg-N / #en-N anchors: open the matching page.
+     The old pages (still copied until migrated) read mm-lang, so remember the reader's language. */
+  var lang = root.lang === 'en' ? 'en' : 'bg';
+  try { localStorage.setItem('mm-lang', lang); } catch (e) {}
+  var oldAnchor = location.hash.match(/^#(bg|en)-\d+$/);
+  if (oldAnchor && oldAnchor[1] !== lang) {
+    var alt = document.querySelector('link[rel="alternate"][hreflang="' + oldAnchor[1] + '"]');
+    if (alt) location.replace(alt.getAttribute('href').replace(/^https?:\/\/[^/]+/, '') + location.hash);
+  }
+
   /* ---------- Theme: system by default, manual override remembered ----------
      Header: <button data-theme-toggle aria-pressed> (pressed = dark).
      Footer: radios name="theme" value="system|light|dark".

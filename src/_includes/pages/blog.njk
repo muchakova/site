@@ -1,0 +1,36 @@
+{%- set map = collections.i18nMap -%}
+{%- set P = T.postPage -%}
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ 'home' | urlFor(lang, map, site.routes) }}">{{ T.nav.home }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li></ol></nav>
+    <h1 id="page-title" style="margin-top: var(--space-m)">{{ title }}</h1>
+    <p class="lead measure">{{ P.blogLead }}</p>
+    <p style="margin-top: var(--space-xs)"><a class="link-arrow" href="{{ 'vlog' | urlFor(lang, map, site.routes) }}">{% icon "video" %} {{ P.videosLink }} {% icon "arrow-right" %}</a></p>
+  </div>
+</section>
+
+<div class="wrap" data-filter-scope style="padding-bottom: var(--space-section)">
+  <div class="toolbar">
+    <div class="filters" role="group" aria-label="{{ P.filterLabel }}">
+      {% for f, label in P.filters %}<button class="filter" type="button" data-filter="{{ f }}" aria-pressed="{{ 'true' if f == 'all' else 'false' }}">{{ label }}</button>{% endfor %}
+    </div>
+    <search class="search" role="search">
+      <label for="blog-search">{{ P.searchLabel }}</label>
+      <input id="blog-search" type="search" data-filter-search placeholder="{{ P.searchPlaceholder }}" autocomplete="off">
+      {% icon "search" %}
+    </search>
+  </div>
+  <p class="result-status" role="status" data-filter-status data-one="{{ P.statusOne }}" data-many="{{ P.statusMany }}" data-none="{{ P.statusNone }}"></p>
+  <ul class="post-grid" data-filter-list style="margin-top: var(--space-s)">
+    {% for p in legacyPosts %}
+    <li data-cats="{{ p.cats | join(' ') }}">
+      <article class="card post-card">
+        <p class="card__meta"><span class="cat">{{ p.tag[lang] }}</span><time datetime="{{ p.date }}">{{ p.date | date(lang) }}</time><span>{{ p.minutes[lang] }} {{ T.units.min }}</span></p>
+        <h2 class="card__title"><a class="card__link" href="{{ p | postUrl(lang, map) }}">{{ p.title[lang] }}</a></h2>
+        <p class="card__excerpt">{{ p.excerpt[lang] }}</p>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="empty-state" data-filter-empty hidden><p><strong>{{ P.emptyTitle }}</strong></p><p>{{ P.emptyText }}</p></div>
+</div>

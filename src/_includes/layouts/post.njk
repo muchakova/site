@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+---
+{%- set map = collections.i18nMap -%}
+{%- set P = T.postPage -%}
+{%- set otherLang = "en" if lang == "bg" else "bg" -%}
+{%- set postAlts = map[key] or {} -%}
+{%- set body = content | localizeLinks(lang, map) -%}
+{%- set headings = body | toc -%}
+{%- set minutes = body | readingTime -%}
+{%- set blogUrl = 'blog' | urlFor(lang, map, site.routes) -%}
+{%- set bookingUrl = 'booking' | urlFor(lang, map, site.routes) -%}
+{%- set shareUrl = (site.url + page.url) | encodeUri -%}
+{%- set shareTitle = title | encodeUri -%}
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<article class="post" data-article aria-labelledby="post-title">
+  <header class="wrap post-header">
+    <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ 'home' | urlFor(lang, map, site.routes) }}">{{ T.nav.home }}</a></li><li><a href="{{ blogUrl }}">{{ T.nav.blog }}</a></li><li><a href="{{ blogUrl }}?cat={{ cats[0] }}">{{ tag }}</a></li></ol></nav>
+    <p class="post-header__tag"><span class="chip">{{ tag }}</span></p>
+    <h1 id="post-title" class="post-title">{{ title }}</h1>
+    <div class="post-meta">
+      <span class="post-meta__author"><img class="avatar" src="/images/profile_9.jpg" alt="" eleventy:widths="72">{{ T.site.name }}</span>
+      <time datetime="{{ date | isoDate }}">{{ date | date(lang) }}</time>
+      {% if updated %}<span>{{ P.updated }} <time datetime="{{ updated | isoDate }}">{{ updated | date(lang) }}</time></span>{% endif %}
+      <span>{{ minutes }} {{ T.units.minRead }}</span>
+      {% if postAlts[otherLang] %}<a href="{{ postAlts[otherLang] }}" hreflang="{{ otherLang }}" lang="{{ otherLang }}">{{ P.readOther }}</a>{% endif %}
+    </div>
+  </header>
+
+  <div class="wrap post-layout">
+    <div class="post-main">
+      {% if headings.length >= 3 %}
+      <details class="toc-mobile">
+        <summary>{{ P.toc }}</summary>
+        <nav class="toc" aria-label="{{ P.tocNav }}"><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol></nav>
+      </details>
+      {% endif %}
+      <div class="prose">
+{{ body | safe }}
+      </div>
+      <p class="disclaimer">{{ P.disclaimer }}</p>
+      <section class="author-card" aria-labelledby="author-title">
+        <img class="avatar" src="/images/profile_9.jpg" alt="" eleventy:widths="144">
+        <div><p class="muted" style="font-size: var(--step--1)">{{ P.author }}</p><h2 id="author-title" style="font-size: var(--step-1)">{{ T.site.name }}</h2><p class="muted" style="font-size: .95rem">{{ P.authorBio }}</p></div>
+        <div class="author-card__cta"><p><strong>{{ P.ctaTitle }}</strong> <span class="muted">{{ P.ctaText }}</span></p><a class="btn btn--primary btn--small" href="{{ bookingUrl }}">{{ P.ctaButton }}</a></div>
+      </section>
+      <div class="share" data-copy-scope>
+        <span class="share__label">{{ P.share }}</span>
+        <button class="icon-btn" type="button" data-share-native hidden aria-label="{{ P.shareNative }}">{% icon "share" %}</button>
+        <a class="icon-btn" href="https://www.facebook.com/sharer/sharer.php?u={{ shareUrl }}" target="_blank" rel="noopener" aria-label="{{ P.shareOn }} Facebook {{ T.a11y.newTab }}">{% icon "facebook" %}</a>
+        <a class="icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ shareUrl }}" target="_blank" rel="noopener" aria-label="{{ P.shareOn }} LinkedIn {{ T.a11y.newTab }}">{% icon "linkedin" %}</a>
+        <a class="icon-btn" href="https://x.com/intent/post?url={{ shareUrl }}&amp;text={{ shareTitle }}" target="_blank" rel="noopener" aria-label="{{ P.shareOn }} X {{ T.a11y.newTab }}">{% icon "x" %}</a>
+        <button class="icon-btn" type="button" data-copy-url data-copied="{{ P.copied }}" aria-label="{{ P.copyLink }}">{% icon "link" %}</button>
+        <span class="copy-status" role="status" data-copy-status></span>
+      </div>
+    </div>
+    {% if headings.length >= 3 %}
+    <div class="toc-desktop">
+      <nav class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title">{{ P.toc }}</p><ol>{% for h in headings %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol></nav>
+      <a class="btn btn--primary btn--small btn--block" href="{{ bookingUrl }}" style="margin-top: var(--space-m)">{{ P.ctaButton }}</a>
+    </div>
+    {% endif %}
+  </div>
+</article>
+
+{%- set related = legacyPosts | relatedPosts("/blog/" + page.fileSlug + ".html", cats) -%}
+{% if related.length %}
+<section class="section post-related" aria-labelledby="related-title">
+  <div class="wrap">
+    <h2 id="related-title" style="font-size: var(--step-2); margin-bottom: var(--space-s)">{{ P.related }}</h2>
+    <div class="post-feed">
+      <ul class="post-rows">
+        {% for p in related %}
+        <li><article class="post-row"><time datetime="{{ p.date }}">{{ p.date | date(lang, "short") }}</time><div><span class="cat">{{ p.tag[lang] }}</span><h3 class="post-row__title"><a class="card__link" href="{{ p | postUrl(lang, map) }}">{{ p.title[lang] }}</a></h3></div><span class="len">{{ p.minutes[lang] }} {{ T.units.min }}</span></article></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endif %}

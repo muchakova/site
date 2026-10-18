@@ -9,7 +9,10 @@
         "http://localhost/about/index.html",
         "http://localhost/en/services/index.html",
         "http://localhost/booking/index.html",
-        "http://localhost/contact/index.html"
+        "http://localhost/contact/index.html",
+        "http://localhost/blog.html",
+        "http://localhost/blog/tax-loss-harvesting-po-balgarski.html",
+        "http://localhost/en/blog/lichen-ili-firmen-akaunt-broker.html"
       ],
       "numberOfRuns": 3,
       "settings": {

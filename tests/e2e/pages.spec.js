@@ -7,6 +7,9 @@ const PAGES = [
   "/", "/en/",
   "/services/", "/en/services/", "/about/", "/en/about/", "/contact/", "/en/contact/",
   "/booking/", "/en/booking/",
+  "/blog.html", "/en/blog.html",
+  "/blog/tax-loss-harvesting-po-balgarski.html", "/en/blog/tax-loss-harvesting-po-balgarski.html",
+  "/blog/lichen-ili-firmen-akaunt-broker.html", "/en/blog/parviyat-balgarski-white-paper-esma.html",
   "/privacy/", "/en/privacy/", "/accessibility/", "/en/accessibility/",
   "/styleguide/",
 ];

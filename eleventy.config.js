@@ -4,14 +4,14 @@
 // languages share a `key` in their front matter, which links them for hreflang and
 // the language switch.
 import { createHash } from "node:crypto";
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 // Old pages that are not redesigned yet are copied unchanged, so every legacy URL
 // keeps working at every step. Remove an entry once its new template exists.
 const LEGACY_PASSTHROUGH = [
-  "blog.html", "blog", "vlog", "projects", "partners", "donate", "game", "meet",
+  "vlog", "projects", "partners", "donate", "game", "meet",
   "files", "css", "js", "robots.txt", "llms.txt", "CNAME",
 ];
 
@@ -34,6 +34,9 @@ const DATE_FORMATS = {
 export default function (eleventyConfig) {
   // ---------- static files ----------
   for (const p of LEGACY_PASSTHROUGH) eleventyConfig.addPassthroughCopy(p);
+  // legacy posts are copied one by one until tools/migrate-posts.py turns them into templates
+  const migrated = new Set(existsSync("src/bg/blog") ? readdirSync("src/bg/blog").filter((f) => f.endsWith(".html")) : []);
+  for (const f of readdirSync("blog")) if (!migrated.has(f)) eleventyConfig.addPassthroughCopy(`blog/${f}`);
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",            // originals stay at /images/… (old pages, OG images)
     "src/assets/js": "assets/js",
@@ -82,6 +85,38 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("postsByUrl", (urls, posts) => (urls || []).map((u) => posts.find((p) => p.url === u)).filter(Boolean));
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
+  // ---------- posts ----------
+  const WORDS_PER_MINUTE = 200;
+  const plain = (html) => String(html).replace(/<(script|style)[\s\S]*?<\/\1>/g, " ").replace(/<[^>]+>/g, " ");
+  eleventyConfig.addFilter("readingTime", (html) => Math.max(1, Math.ceil((plain(html).match(/[\p{L}\p{N}]+/gu) || []).length / WORDS_PER_MINUTE)));
+  // table of contents from the <h2 id> headings of a post body
+  eleventyConfig.addFilter("toc", (html) => [...String(html).matchAll(/<h2[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)]
+    .map((m) => ({ id: m[1], text: plain(m[2]).replace(/\s+/g, " ").trim() })));
+  // links inside content point to the page in the reader's language when it exists
+  eleventyConfig.addFilter("localizeLinks", (html, lang, map) => {
+    if (lang === "bg" || !map) return html;
+    const byUrl = {};
+    for (const [key, urls] of Object.entries(map)) if (urls.bg) byUrl[urls.bg] = key;
+    return String(html).replace(/href="(\/[^"#?]*)([^"]*)"/g, (all, path, rest) => {
+      const key = byUrl[path] || (path.startsWith("/blog/") ? "post-" + path.slice(6).replace(/\.html$/, "") : null);
+      const target = key && map[key]?.[lang];
+      return target ? `href="${target}${rest}"` : all;
+    });
+  });
+  // URL of a listed post in the reader's language (migrated posts have an EN page)
+  eleventyConfig.addFilter("postUrl", (post, lang, map) => {
+    const key = "post-" + post.url.replace(/^\/blog\//, "").replace(/\.html$/, "");
+    return map?.[key]?.[lang] ?? map?.[key]?.bg ?? post.url;
+  });
+  // related posts: most shared categories first, then newest
+  eleventyConfig.addFilter("relatedPosts", (posts, url, cats, n = 3) => (posts || [])
+    .filter((p) => p.url !== url)
+    .map((p) => ({ p, score: p.cats.filter((c) => (cats || []).includes(c)).length }))
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score || b.p.date.localeCompare(a.p.date))
+    .slice(0, n).map((x) => x.p));
+  eleventyConfig.addFilter("encodeUri", (s) => encodeURIComponent(s));
+
   // <svg> icon from the sprite; always decorative
   eleventyConfig.addShortcode("icon", (name, cls = "") =>
     `<svg class="icon${cls ? " " + cls : ""}" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#${name}"/></svg>`);
@@ -99,7 +134,7 @@ export default function (eleventyConfig) {
 
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
-    templateFormats: ["njk", "11ty.js"],
+    templateFormats: ["njk", "html", "11ty.js"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
   };

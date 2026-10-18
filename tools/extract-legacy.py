@@ -87,6 +87,17 @@ for post in posts:
     if left:
         print("still Bulgarian or empty in English:", post["url"], left)
 
+# Reading time from the article text itself, per language — the same rule as the
+# Eleventy "readingTime" filter (letters/digits runs, 200 words per minute, rounded up).
+WORDS = re.compile(r"[^\W_]+")
+for post in posts:
+    page = BeautifulSoup((ROOT / post["url"].lstrip("/")).read_text(encoding="utf-8"), "lxml")
+    post["minutes"] = {}
+    for lang in ("bg", "en"):
+        body = page.select_one(f'.post-content > .lang-content[data-lang="{lang}"]')
+        words = len(WORDS.findall(body.get_text(" "))) if body else 0
+        post["minutes"][lang] = max(1, -(-words // 200))
+
 posts.sort(key=lambda p: (p["date"], p["pop"]), reverse=True)
 (ROOT / "src/_data/legacyPosts.json").write_text(json.dumps(posts, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
