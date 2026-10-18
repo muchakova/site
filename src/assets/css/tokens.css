@@ -1,0 +1,167 @@
+/* =====================================================================
+   muchakova.com — design tokens ("Светъл финтех", Inter, system theme)
+   Every colour is a token. Light values live on :root; dark values are
+   applied when the OS asks for dark (and no explicit choice was made) or
+   when the visitor picks dark with the theme switch ([data-theme]).
+   Breakpoints (CSS can't read variables in media queries):
+     480px  small phone · 560px phone · 860px tablet / mobile nav · 980px small laptop
+   ===================================================================== */
+
+@layer tokens {
+  :root {
+    color-scheme: light;
+
+    /* ---- colour: surfaces & text ---- */
+    --color-bg: #F2F4FA;            /* page background, cool off-white */
+    --color-surface: #FFFFFF;       /* cards, header menu */
+    --color-surface-2: #F7F8FC;     /* alternate sections, table stripes */
+    --color-fg: #0E1530;            /* body text, headings */
+    --color-muted: #4A5372;         /* secondary text (≥ 7:1 on bg) */
+    --color-line: #DFE3EE;          /* hairlines, card borders */
+    --color-line-strong: #C3CADB;   /* input borders, dividers that must be seen */
+
+    /* ---- colour: brand ---- */
+    --color-accent: #4338CA;        /* indigo: buttons, links, numbers */
+    --color-accent-hover: #3730A3;
+    --color-on-accent: #FFFFFF;
+    --color-accent-soft: #ECEEFF;   /* icon tiles, soft chips */
+    --color-signal: #047857;        /* emerald: "online", positive notes */
+    --color-signal-soft: #DFF5EC;
+    --color-warning: #92400E;       /* amber text for "Внимание" callouts */
+    --color-warning-soft: #FEF3C7;
+    --color-danger: #B91C1C;
+    --color-danger-soft: #FEE2E2;
+
+    /* ---- colour: navy panels (featured price, CTA band) — dark in both themes ---- */
+    --color-navy: #0E1838;
+    --color-navy-raised: #18244D;
+    --color-navy-line: #2B3870;
+    --color-on-navy: #EEF1FF;
+    --color-on-navy-muted: #B4BCE0;
+    --color-on-navy-accent: #A5B4FC;
+
+    /* ---- colour: effects ---- */
+    --color-focus: #4338CA;
+    --color-glass: #F2F4FAD9;       /* sticky header behind backdrop blur */
+    --color-halo-1: #6366F133;      /* soft glows behind the portrait */
+    --color-halo-2: #10B98126;
+    --color-shadow: 14 21 48;       /* rgb triplet used inside shadows */
+    --shadow-1: 0 1px 2px rgb(var(--color-shadow) / .06), 0 1px 1px rgb(var(--color-shadow) / .04);
+    --shadow-2: 0 18px 40px -22px rgb(var(--color-shadow) / .38);
+    --shadow-3: 0 30px 60px -30px rgb(var(--color-shadow) / .45);
+    --shadow-accent: 0 10px 24px -12px var(--color-accent);
+
+    /* ---- type ---- */
+    --font-sans: "Inter", "Inter var", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-features: "cv05" 1, "cv08" 1;   /* Inter: l with tail, I with serifs → l / I / 1 never look alike */
+    --step--1: clamp(0.84rem, 0.82rem + 0.1vw, 0.9rem);      /* 13.4–14.4 px: meta, captions */
+    --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);      /* 16–17 px: UI and body */
+    --step-article: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); /* 17–19 px: long-form reading */
+    --step-1: clamp(1.15rem, 1.08rem + 0.35vw, 1.3rem);      /* lead text, card titles */
+    --step-2: clamp(1.35rem, 1.2rem + 0.7vw, 1.75rem);       /* h3 */
+    --step-3: clamp(1.75rem, 1.45rem + 1.4vw, 2.5rem);       /* h2 */
+    --step-4: clamp(2.1rem, 1.6rem + 2.4vw, 3.25rem);        /* page h1 */
+    --step-5: clamp(2.6rem, 1.8rem + 4vw, 4.5rem);           /* hero name */
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --leading-tight: 1.05;
+    --leading-snug: 1.3;
+    --leading-body: 1.65;
+    --tracking-display: -0.035em;
+    --tracking-heading: -0.02em;
+    --measure: 68ch;                 /* comfortable line length for articles */
+
+    /* ---- space (4 px grid) ---- */
+    --space-3xs: 0.25rem;  /*  4 */
+    --space-2xs: 0.5rem;   /*  8 */
+    --space-xs: 0.75rem;   /* 12 */
+    --space-s: 1rem;       /* 16 */
+    --space-m: 1.5rem;     /* 24 */
+    --space-l: 2rem;       /* 32 */
+    --space-xl: 3rem;      /* 48 */
+    --space-2xl: 4rem;     /* 64 */
+    --space-3xl: 6rem;     /* 96 */
+    --space-section: clamp(3.5rem, 2rem + 6vw, 6rem);
+    --container: 1200px;
+    --gutter-left: max(20px, env(safe-area-inset-left, 0px));
+    --gutter-right: max(20px, env(safe-area-inset-right, 0px));
+    --header-height: 68px;
+
+    /* ---- shape ---- */
+    --radius-s: 8px;
+    --radius-m: 12px;
+    --radius-l: 16px;
+    --radius-xl: 22px;
+    --radius-2xl: 28px;
+    --radius-pill: 999px;
+    --tap: 44px;                     /* minimum touch target */
+
+    /* ---- motion ---- */
+    --duration-fast: 150ms;
+    --duration: 250ms;
+    --ease: cubic-bezier(.2, .7, .2, 1);
+  }
+
+  /* dark values: OS preference (unless the visitor chose light) … */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --color-bg: #080C19;
+      --color-surface: #10172B;
+      --color-surface-2: #0C1222;
+      --color-fg: #E6E9F6;
+      --color-muted: #A7AED0;
+      --color-line: #222B46;
+      --color-line-strong: #34405F;
+      --color-accent: #A5B4FC;
+      --color-accent-hover: #C7D2FE;
+      --color-on-accent: #10153A;
+      --color-accent-soft: #1A2150;
+      --color-signal: #34D399;
+      --color-signal-soft: #0B2A21;
+      --color-warning: #FCD34D;
+      --color-warning-soft: #2A1F07;
+      --color-danger: #FCA5A5;
+      --color-danger-soft: #2A0F12;
+      --color-navy: #141D40;
+      --color-navy-raised: #1E2A55;
+      --color-navy-line: #2C3A73;
+      --color-focus: #A5B4FC;
+      --color-glass: #080C19D9;
+      --color-halo-1: #6366F140;
+      --color-halo-2: #10B98126;
+      --color-shadow: 0 0 0;
+    }
+  }
+  /* … or an explicit choice from the theme switch */
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --color-bg: #080C19;
+    --color-surface: #10172B;
+    --color-surface-2: #0C1222;
+    --color-fg: #E6E9F6;
+    --color-muted: #A7AED0;
+    --color-line: #222B46;
+    --color-line-strong: #34405F;
+    --color-accent: #A5B4FC;
+    --color-accent-hover: #C7D2FE;
+    --color-on-accent: #10153A;
+    --color-accent-soft: #1A2150;
+    --color-signal: #34D399;
+    --color-signal-soft: #0B2A21;
+    --color-warning: #FCD34D;
+    --color-warning-soft: #2A1F07;
+    --color-danger: #FCA5A5;
+    --color-danger-soft: #2A0F12;
+    --color-navy: #141D40;
+    --color-navy-raised: #1E2A55;
+    --color-navy-line: #2C3A73;
+    --color-focus: #A5B4FC;
+    --color-glass: #080C19D9;
+    --color-halo-1: #6366F140;
+    --color-halo-2: #10B98126;
+    --color-shadow: 0 0 0;
+  }
+}

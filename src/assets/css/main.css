@@ -1,0 +1,6 @@
+/* muchakova.com — entry stylesheet. Layer order decides the cascade, not file order.
+   In production (Phase 4) Eleventy bundles these into one minified file. */
+@layer reset, tokens, base, layout, components, utilities;
+@import url("tokens.css");
+@import url("base.css");
+@import url("components.css");
