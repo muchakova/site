@@ -24,7 +24,7 @@
 /blog/parviyat-balgarski-white-paper-esma.html
 /blog/razlika-borsov-segment-over-the-counter.html
 /blog/razmer-ima-znachenie.html
-/blog/sample-post.html
+# retired in Phase 6 (the old article template, not an article): /blog/sample-post.html
 /blog/siddo-dvoyno-mestno-lice.html
 /blog/smart-kontrakti-defi-biznes.html
 /blog/spb-8-bnb-interactive-brokers.html
@@ -33,7 +33,7 @@
 /blog/zatrudnenia-casp-mica-licenz-kfn.html
 /booking/
 /booking/index.html
-/css/style.css
+# retired in Phase 6 (the old site's own stylesheet): /css/style.css
 /donate/
 /donate/index.html
 /files/ib-client-agreement.pdf
@@ -102,7 +102,7 @@
 /images/razmer-ima-znachenie-cover.jpg
 /images/razmer.jpg
 /index.html
-/js/main.js
+# retired in Phase 6 (the old site's own script): /js/main.js
 /llms.txt
 /meet/
 /meet/index.html

@@ -26,7 +26,7 @@ She works across three main projects:
 - Projects — Vesta Consult, The Crypto Academy, NABI, plus pet projects (LoopForge music synthesizer / loop studio: https://muchakova.github.io/looper/ , browser game): https://muchakova.com/projects/
 - Partners — tax-invest and NX0 / NativeArc: https://muchakova.com/partners/
 - Game "Marina vs the Tax Zombies" (3-minute browser game, BG + EN): https://muchakova.com/game/
-- Language: Bulgarian (primary) + English (toggle available on every page)
+- Language: Bulgarian at the root, English under /en/ (every page links to its counterpart in the other language)
 
 ## Blog Articles
 

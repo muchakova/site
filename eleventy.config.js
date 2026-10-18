@@ -4,16 +4,13 @@
 // languages share a `key` in their front matter, which links them for hreflang and
 // the language switch.
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { plainText as plain, readingMinutes } from "./lib/text.js";
 
-// Old pages that are not redesigned yet are copied unchanged, so every legacy URL
-// keeps working at every step. Remove an entry once its new template exists.
-const LEGACY_PASSTHROUGH = [
-  "meet", "files", "css", "js", "robots.txt", "llms.txt", "CNAME",
-];
+// Files published as they are: the /meet/ redirect, downloadable files, crawler files, the domain.
+const STATIC_FILES = ["meet", "files", "robots.txt", "llms.txt", "CNAME"];
 
 // cache-busting version for /assets (changes whenever a source asset changes)
 function hashDir(dir) {
@@ -33,10 +30,7 @@ const DATE_FORMATS = {
 
 export default function (eleventyConfig) {
   // ---------- static files ----------
-  for (const p of LEGACY_PASSTHROUGH) eleventyConfig.addPassthroughCopy(p);
-  // legacy posts are copied one by one until tools/migrate-posts.py turns them into templates
-  const migrated = new Set(existsSync("src/bg/blog") ? readdirSync("src/bg/blog").filter((f) => f.endsWith(".html")) : []);
-  for (const f of readdirSync("blog")) if (!migrated.has(f)) eleventyConfig.addPassthroughCopy(`blog/${f}`);
+  for (const p of STATIC_FILES) eleventyConfig.addPassthroughCopy(p);
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",            // originals stay at /images/… (old pages, OG images)
     "src/assets/js": "assets/js",

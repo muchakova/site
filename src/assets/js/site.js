@@ -6,11 +6,9 @@
   'use strict';
   var root = document.documentElement;
 
-  /* ---------- Transition from the old single-URL bilingual site ----------
-     Old links shared one URL for both languages with #bg-N / #en-N anchors: open the matching page.
-     The old pages (still copied until migrated) read mm-lang, so remember the reader's language. */
+  /* ---------- Links shared from the old single-URL bilingual site ----------
+     Both languages used one URL with #bg-N / #en-N anchors: open the page in the anchor's language. */
   var lang = root.lang === 'en' ? 'en' : 'bg';
-  try { localStorage.setItem('mm-lang', lang); } catch (e) {}
   var oldAnchor = location.hash.match(/^#(bg|en)-\d+$/);
   if (oldAnchor && oldAnchor[1] !== lang) {
     var alt = document.querySelector('link[rel="alternate"][hreflang="' + oldAnchor[1] + '"]');
