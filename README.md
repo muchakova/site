@@ -21,7 +21,7 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | `src/bg/` | Българските страници. Публикуват се в **корена** на сайта, на старите адреси (`/`, `/services/`, `/blog.html` …). |
 | `src/en/` | Английските страници. Публикуват се под **`/en/`** със същите пътища. |
 | `src/_includes/layouts/base.njk` | Общата рамка: `<head>`, `hreflang`, хедър, футър. |
-| `src/_includes/partials/` | Хедър и футър. |
+| `src/_includes/partials/` | Хедър, футър и общите блокове (цени, стъпки, призив, карта на видео). |
 | `src/_includes/layouts/` | `base.njk` (рамката), `post.njk` (статия), `doc.njk` (дълъг документ със съдържание: Поверителност, Достъпност). |
 | `src/_includes/pages/` | Съдържание, общо за двата езика (напр. `home.njk`). Страниците в `bg/` и `en/` само го включват. |
 | `src/_data/i18n/{bg,en}.json` | **Всички текстове на интерфейса**, включително етикетите за екранни четци. Двата файла трябва да имат еднакви ключове (тестът го проверява). |
@@ -29,6 +29,8 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | `src/_data/services.json` | Четирите услуги на двата езика. |
 | `src/_data/videos.json` | Видеата (заглавие, отговор, статия, дата и продължителност за Google). |
 | `src/assets/` | Дизайн системата: `css/` (токени, база, компоненти), `js/site.js`, `icons.svg`, `favicon.svg`. Живият наръчник е на `/styleguide/`. Играта има свои `css/game.css` и `js/game.js` (текстовете в самата игра са в `game.js`). |
+| `lib/` | Код за build-а: време за четене (`text.js`), структурирани данни за Google (`structured-data.js`), картинка за споделяне на страница (`og.js`). |
+| `tools/` | `og-images.mjs` (`npm run og`: картинките за споделяне в `src/images/og/`), `icons.mjs` (иконките), `fonts.mjs` (шрифтът Inter с ясни l / I / 1), `serve.mjs` (локален сървър за тестовете). |
 | `src/images/` | Оригиналните изображения. Публикуват се на `/images/…`, а в новите страници се превръщат автоматично в AVIF/WebP/JPEG в няколко размера. |
 | `meet/`, `files/`, `robots.txt`, `CNAME` в корена | Публикуват се както са (`STATIC_FILES` в `eleventy.config.js`): пренасочването `/meet/` → `/booking/`, файловете за изтегляне, `robots.txt` и домейна. `llms.txt` (карта на сайта за AI асистенти) се генерира от данните: `src/llms.njk`. Старият сайт е в историята на git (таг `pre-redesign-2026`). |
 
@@ -73,9 +75,11 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | Всички вътрешни връзки, изображения и `#котви` водят някъде | `tests/static/links.mjs` |
 | Всеки адрес на стария сайт (`docs/redesign/legacy-urls.txt`) още работи | `tests/static/legacy-urls.mjs` |
 | Еднакви ключове в `bg.json`/`en.json`; всяка страница има двойка с взаимен `hreflang`; няма български текст в EN страниците | `tests/static/i18n.mjs` |
-| Валиден HTML | `html-validate` (правила в `.htmlvalidate.json`) |
+| Структурирани данни за Google на всяка страница; картинка за споделяне на всяка индексирана страница | `tests/static/structured-data.mjs` |
+| Каноничен адрес, заглавие ≤ 70 и описание 70–160 знака, без повторения, всичко в `sitemap.xml` | `tests/static/seo.mjs` |
+| Валиден HTML | `tests/static/html.mjs` (правила в `.htmlvalidate.json`) |
 | axe (WCAG 2.2 AA) в светла и тъмна тема, конзола без грешки, един `<main>` и `<h1>`, заглавия без прескачане, без хоризонтален скрол; на компютър и на телефон | `tests/e2e/pages.spec.js` |
-| Смяна на език и тема, мобилно меню с клавиатура, видео, филтри, копиране, записване, играта, 404, RSS | `tests/e2e/interactions.spec.js` |
+| Смяна на език и тема, мобилно меню с клавиатура, видео, филтри, копиране, записване, играта, 404, RSS, статистиката (без бисквитки) | `tests/e2e/interactions.spec.js` |
 | Lighthouse: скорост ≥ 95, достъпност 100, добри практики ≥ 95, SEO 100, LCP < 2 s, CLS < 0,05 | `lighthouserc.json` |
 
 ## Публикуване
