@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marina Muchakova — Blog</title>
+    <link>https://muchakova.com/en/blog.html</link>
+    <atom:link href="https://muchakova.com/en/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Articles on tax, investing, crypto and VAT by Marina Muchakova, tax consultant.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 08 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Tax-Loss Harvesting, the Bulgarian Way</title>
+      <link>https://muchakova.com/en/blog/tax-loss-harvesting-po-balgarski.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/tax-loss-harvesting-po-balgarski.html</guid>
+      <pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Investing</category>
+      <description>How to realise losses before 31 December lawfully: why a loss on an EU regulated segment is useless for tax (Art. 33(3) PITA), wash sale rules in the US, Ireland and the UK, seasonality, and where the line with market manipulation under MAR runs.</description>
+    </item>
+    <item>
+      <title>Personal or Company Brokerage Account</title>
+      <link>https://muchakova.com/en/blog/lichen-ili-firmen-akaunt-broker.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/lichen-ili-firmen-akaunt-broker.html</guid>
+      <pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Investing</category>
+      <description>PITA versus CITA, letter by letter: listing is not execution, a “regulated exchange” is not a regulated market (XETA vs XETB), loss carry-forward, US markets, actual expenses, the 5% dividend tax and US estate tax. Plus a prompt that stops AI from just saying “It depends”.</description>
+    </item>
+    <item>
+      <title>Dear BNB, I Have Shares at Interactive Brokers</title>
+      <link>https://muchakova.com/en/blog/spb-8-bnb-interactive-brokers.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/spb-8-bnb-interactive-brokers.html</guid>
+      <pubDate>Mon, 05 Oct 2026 12:00:00 GMT</pubDate>
+      <category>BNB reporting</category>
+      <description>The BNB wants statistics, not tax. When SPB-8 is due (the €25,000 threshold at 31 December, Art. 10(2) of the Currency Act), why securities go in by ISIN and quantity rather than in euro, and what companies file: SPB-10, SPB-10A, SPB-2.</description>
+    </item>
+    <item>
+      <title>Tax Resident of Half of Europe (and of One Ship)</title>
+      <link>https://muchakova.com/en/blog/siddo-dvoyno-mestno-lice.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/siddo-dvoyno-mestno-lice.html</guid>
+      <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Tax treaties</category>
+      <description>When several countries treat you as resident at once: Art. 4 PITA, the DTT tie-breaker rules, tax credit vs. exemption, the €255,645.94 TSSPC threshold — and a case involving the UK, Germany, Cyprus, Barbados and a ship under the Panamanian flag.</description>
+    </item>
+    <item>
+      <title>The First Bulgarian White Paper in ESMA’s Register: A Web3 Breakthrough or Just a Regulatory Formality?</title>
+      <link>https://muchakova.com/en/blog/parviyat-balgarski-white-paper-esma.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/parviyat-balgarski-white-paper-esma.html</guid>
+      <pubDate>Thu, 01 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Crypto</category>
+      <description>NativeArc’s NX0 token is the first fully Bulgarian White Paper entered in ESMA’s register. What the project is, why a Title II MiCA notification is not a licence, and what the register entry does — and does not — prove.</description>
+    </item>
+    <item>
+      <title>Whose Turnover Is It — the Exchange’s or Ours? Crypto Trades via CEX and DEX and the VAT Threshold</title>
+      <link>https://muchakova.com/en/blog/kripto-borsi-cex-dex-oborot-zdds.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/kripto-borsi-cex-dex-oborot-zdds.html</guid>
+      <pubDate>Thu, 01 Oct 2026 12:00:00 GMT</pubDate>
+      <category>VAT</category>
+      <description>Instant Sell and Convert, order book or Uniswap — which crypto sales count towards the €51,130 VAT registration threshold and which “go to the exchange”. Place of supply under Art. 21 of the VAT Act, the presumptions in Art. 18 of Regulation 282/2011, and the split of services under MiCA.</description>
+    </item>
+    <item>
+      <title>Got a Letter from the NRA About Your Investment Income?</title>
+      <link>https://muchakova.com/en/blog/nap-pismo-dohodi-investicii.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/nap-pismo-dohodi-investicii.html</guid>
+      <pubDate>Fri, 18 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Taxes</category>
+      <description>Short and to the point — how to find an accountant, how to handle it yourself, what documents you need, and exactly where each type of income (shares, government securities, crypto, interest, dividends) is declared for tax year 2025.</description>
+    </item>
+    <item>
+      <title>9% or 20% VAT on a One-Day Tour?</title>
+      <link>https://muchakova.com/en/blog/dds-turisticheska-usluga-9-ili-20.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/dds-turisticheska-usluga-9-ili-20.html</guid>
+      <pubDate>Mon, 31 Aug 2026 12:00:00 GMT</pubDate>
+      <category>VAT</category>
+      <description>A one-day tour sold through platforms like GetYourGuide, Viator or Airbnb Experiences — which VAT rate applies, when there&#39;s a “general tourist service” under Art. 136, and what the tax is charged on. Why the 9% reduced rate no longer exists.</description>
+    </item>
+    <item>
+      <title>MEXC Is on ESMA&#39;s “Blacklist”. What It Means and What Happens to Your Assets</title>
+      <link>https://muchakova.com/en/blog/esma-non-compliant-mexc.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/esma-non-compliant-mexc.html</guid>
+      <pubDate>Thu, 06 Aug 2026 12:00:00 GMT</pubDate>
+      <category>Crypto</category>
+      <description>MEXC is listed in ESMA&#39;s register of non-compliant entities under MiCA. How it differs from a revoked license, why the transition period has expired, and what actually happens to your assets if you move them through a private address.</description>
+    </item>
+    <item>
+      <title>VAT Registration When Trading Shares via Interactive Brokers</title>
+      <link>https://muchakova.com/en/blog/dds-registraciya-interactive-brokers.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/dds-registraciya-interactive-brokers.html</guid>
+      <pubDate>Wed, 05 Aug 2026 12:00:00 GMT</pubDate>
+      <category>VAT</category>
+      <description>When turnover from financial instruments through a foreign broker does NOT count toward Art. 96 VAT registration — place of supply, Art. 21(2), and a sample response to the NRA with a real refusal act.</description>
+    </item>
+    <item>
+      <title>How Are ETFs Taxed in Bulgaria? (And Why Investors Get the Most Important Part Wrong)</title>
+      <link>https://muchakova.com/en/blog/kak-se-oblagat-etf-ite-v-balgaria.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/kak-se-oblagat-etf-ite-v-balgaria.html</guid>
+      <pubDate>Tue, 21 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Taxes</category>
+      <description>ETF, ETN or ETC — the legal form decides everything. Plus accumulating vs. distributing funds, investing through a company, Irish UCITS funds, inheritance, and a VAT masterclass.</description>
+    </item>
+    <item>
+      <title>5 Tax Mistakes Investors Make — Part 2 (For Connoisseurs)</title>
+      <link>https://muchakova.com/en/blog/5-danachni-greshki-investitori-chast-2.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/5-danachni-greshki-investitori-chast-2.html</guid>
+      <pubDate>Fri, 17 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Taxes</category>
+      <description>The expanded, edited version: regulated market vs. qualifying growth market, ETF/ETC/ETN/ADR/GDR, tax-loss harvesting and MAR, the VAT risk, and when an investor already looks like a trader.</description>
+    </item>
+    <item>
+      <title>5 Tax Mistakes Investors Make! (That Later Cost Them Dearly)</title>
+      <link>https://muchakova.com/en/blog/5-danachni-greshki-investitori.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/5-danachni-greshki-investitori.html</guid>
+      <pubDate>Wed, 15 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Taxes</category>
+      <description>Regulated market vs. European market, ETF vs. ETC/ETP, Tax Loss Harvesting, the December law changes and the hidden risk of VAT registration — 5 traps that wipe out your returns.</description>
+    </item>
+    <item>
+      <title>Smart Contracts and DeFi: What Does This Actually Mean for Your Business?</title>
+      <link>https://muchakova.com/en/blog/smart-kontrakti-defi-biznes.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/smart-kontrakti-defi-biznes.html</guid>
+      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
+      <category>DeFi</category>
+      <description>Why code is not law, which technical movements in DeFi are taxable events under Bulgarian tax law, what MiCA changes, and what steps every business leader should take.</description>
+    </item>
+    <item>
+      <title>Addendum: Thresholds and Levels of Due Diligence</title>
+      <link>https://muchakova.com/en/blog/aml-pragove-stepeni-due-diligence.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/aml-pragove-stepeni-due-diligence.html</guid>
+      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
+      <category>AML</category>
+      <description>The statutory thresholds of EUR 1,000, 10,000 and 15,000, the three levels of due diligence (SDD, CDD, EDD), and why there is no &quot;magic number&quot; below which you are invisible to AML checks.</description>
+    </item>
+    <item>
+      <title>A Guide to Successfully Passing an AML Check on Crypto Transactions</title>
+      <link>https://muchakova.com/en/blog/kak-da-preminem-aml-proverka-kripto.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/kak-da-preminem-aml-proverka-kripto.html</guid>
+      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
+      <category>AML</category>
+      <description>How AML analysts think, the difference between source of funds and source of wealth, and how to prepare your file so the check goes quickly and smoothly.</description>
+    </item>
+    <item>
+      <title>Tax Guide for Investors in Bulgaria</title>
+      <link>https://muchakova.com/en/blog/danachen-narachnik-za-investitori.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/danachen-narachnik-za-investitori.html</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Taxes</category>
+      <description>Crypto, stocks, ETFs, dividends, gold and real estate — when tax is due, how much, and where to declare it. A quick reference for the individual investor.</description>
+    </item>
+    <item>
+      <title>My Two Cents on Draft Budget 2026</title>
+      <link>https://muchakova.com/en/blog/moite-5-stotinki-za-proektobyudzhet-2026.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/moite-5-stotinki-za-proektobyudzhet-2026.html</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Economy</category>
+      <description>The real deficit is not fiscal — it is a deficit of reforms. On the administrative burden, the hidden tax on entrepreneurship, and the cost of lost time.</description>
+    </item>
+    <item>
+      <title>MetaMask CL Card Now Moves Under MiCA: MoonPay Europe Is Behind the Crypto Services</title>
+      <link>https://muchakova.com/en/blog/metamask-cl-card-mica-moonpay.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/metamask-cl-card-mica-moonpay.html</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <category>MiCA</category>
+      <description>From 1 July 2026 the card&#39;s crypto services are powered by MoonPay Europe — a MiCA-licensed CASP. What this means for users and what the authorities will know.</description>
+    </item>
+    <item>
+      <title>The Difference Between Exchange Trading and Over-the-Counter Trading</title>
+      <link>https://muchakova.com/en/blog/razlika-borsov-segment-over-the-counter.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/razlika-borsov-segment-over-the-counter.html</guid>
+      <pubDate>Thu, 11 Jun 2026 12:00:00 GMT</pubDate>
+      <category>Investing</category>
+      <description>What OTC means, how it differs from exchange trading, and why fractional shares require a closer reading of the trade confirmation.</description>
+    </item>
+    <item>
+      <title>When Are Securities Transactions an Economic Activity?</title>
+      <link>https://muchakova.com/en/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html</guid>
+      <pubDate>Fri, 29 May 2026 12:00:00 GMT</pubDate>
+      <category>VAT</category>
+      <description>An analysis of CJEU case law on securities transactions as an economic activity and its application in Bulgaria.</description>
+    </item>
+    <item>
+      <title>What White Papers Do Not Say</title>
+      <link>https://muchakova.com/en/blog/kakvo-ne-pishe-v-white-paperite.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/kakvo-ne-pishe-v-white-paperite.html</guid>
+      <pubDate>Thu, 28 May 2026 12:00:00 GMT</pubDate>
+      <category>Cryptoeconomics</category>
+      <description>Why Bitcoin, Ethereum, DeFi, Layer 2, and bridges are new infrastructure for old economic laws.</description>
+    </item>
+    <item>
+      <title>CASP Challenges in Bulgaria During MiCA Licensing Before the FSC</title>
+      <link>https://muchakova.com/en/blog/zatrudnenia-casp-mica-licenz-kfn.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/zatrudnenia-casp-mica-licenz-kfn.html</guid>
+      <pubDate>Thu, 28 May 2026 12:00:00 GMT</pubDate>
+      <category>MiCA</category>
+      <description>A practical overview of the common stumbling blocks Bulgarian CASP companies face when applying for a MiCA licence.</description>
+    </item>
+    <item>
+      <title>What Is Company Substance and Why Does It Matter?</title>
+      <link>https://muchakova.com/en/blog/substancia-kompania-zashto-vazhno.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/substancia-kompania-zashto-vazhno.html</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <category>Tax law</category>
+      <description>Substance means a company&#39;s real economic presence in a given country. In practice, it answers whether the company genuinely operates there or is only registered on paper.</description>
+    </item>
+    <item>
+      <title>VAT Changes for E-commerce and Online Events</title>
+      <link>https://muchakova.com/en/blog/dds-promeni-2026.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/dds-promeni-2026.html</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <category>VAT</category>
+      <description>As of January 1, 2026, several major VAT changes are now in effect, with the strongest impact on online businesses, digital services, and cross-border sales within the EU.</description>
+    </item>
+    <item>
+      <title>VAT Registration Turnover Accumulation After 01.01.2026</title>
+      <link>https://muchakova.com/en/blog/natrupvane-oborot-registraciya-dds-2026.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/natrupvane-oborot-registraciya-dds-2026.html</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <category>VAT</category>
+      <description>As of January 1, 2026, the VAT registration threshold in Bulgaria remains EUR 51,130, but turnover monitoring shifts to a calendar-year basis.</description>
+    </item>
+    <item>
+      <title>Summary of VAT Regime Changes After 1.1.2026</title>
+      <link>https://muchakova.com/en/blog/obobshtenie-promeni-zdds-2026.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/obobshtenie-promeni-zdds-2026.html</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <category>VAT</category>
+      <description>As of January 1, 2026, substantial amendments to the Bulgarian VAT Act enter into force, transposing Directive (EU) 2020/285 on the special scheme for small enterprises.</description>
+    </item>
+    <item>
+      <title>Size Matters!</title>
+      <link>https://muchakova.com/en/blog/razmer-ima-znachenie.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/razmer-ima-znachenie.html</guid>
+      <pubDate>Sat, 28 Feb 2026 12:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>If someone tells you otherwise, they&#39;re probably lying. Or financially illiterate.</description>
+    </item>
+    <item>
+      <title>Government Bonds and How They Are NOT Taxed</title>
+      <link>https://muchakova.com/en/blog/dck-obligacii-danaci.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/dck-obligacii-danaci.html</guid>
+      <pubDate>Sat, 14 Feb 2026 12:00:00 GMT</pubDate>
+      <category>Taxes</category>
+      <description>Government securities are financial instruments issued by a country&#39;s government to finance its operations or projects.</description>
+    </item>
+  </channel>
+</rss>

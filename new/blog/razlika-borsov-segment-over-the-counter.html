@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Разлика между търговия на борсов сегмент и over-the-counter</title>
+  <meta name="description" content="Практическо разграничение между борсово изпълнение и over-the-counter сделки, включително fractional shares, MiFID II / MiFIR и off-exchange изпълнение.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html">
+  <link rel="alternate" hreflang="bg" href="https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html">
+  <link rel="alternate" hreflang="en" href="https://muchakova.com/en/blog/razlika-borsov-segment-over-the-counter.html">
+  <link rel="alternate" hreflang="x-default" href="https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Марина Мучакова">
+  <meta property="og:title" content="Разлика между търговия на борсов сегмент и over-the-counter">
+  <meta property="og:description" content="Практическо разграничение между борсово изпълнение и over-the-counter сделки, включително fractional shares, MiFID II / MiFIR и off-exchange изпълнение.">
+<meta property="og:url" content="https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html">
+  <meta property="og:image" content="https://muchakova.com/images/img_0725.jpg">
+<meta property="og:image:alt" content="Разлика между търговия на борсов сегмент и over-the-counter">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F2F4FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080C19" media="(prefers-color-scheme: dark)">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html#article","url":"https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html","mainEntityOfPage":"https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html","headline":"Разлика между търговия на борсов сегмент и over-the-counter","description":"Практическо разграничение между борсово изпълнение и over-the-counter сделки, включително fractional shares, MiFID II / MiFIR и off-exchange изпълнение.","image":["https://muchakova.com/images/img_0725.jpg"],"datePublished":"2026-06-11","dateModified":"2026-06-11","inLanguage":"bg","author":{"@type":"Person","@id":"https://muchakova.com/#person","name":"Марина Мучакова","url":"https://muchakova.com/"},"publisher":{"@type":"Person","@id":"https://muchakova.com/#person","name":"Марина Мучакова","url":"https://muchakova.com/"},"isPartOf":{"@type":"Blog","@id":"https://muchakova.com/blog.html#blog","url":"https://muchakova.com/blog.html"},"articleSection":"Инвестиции","keywords":["OTC","over-the-counter","борсово търгуване","fractional shares","MiFID II","MiFIR","systematic internaliser","ATS","NASDAQ","Xetra"]}]}</script>
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="Марина Мучакова — Блог" href="../feed.xml">
+  <script>try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin="">  <link rel="stylesheet" href="../assets/css/site.css?v=f729985235">
+  <script src="../assets/js/site.js?v=f729985235" defer=""></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Начало","item":"https://muchakova.com/"},{"@type":"ListItem","position":2,"name":"Блог","item":"https://muchakova.com/blog.html"},{"@type":"ListItem","position":3,"name":"Инвестиции","item":"https://muchakova.com/blog.html?cat=invest"},{"@type":"ListItem","position":4,"name":"Разлика между търговия на борсов сегмент и over-the-counter"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Към съдържанието</a>
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">MM</span><span class="brand__name">Марина Мучакова</span></a>
+    <div class="site-menu" id="site-menu">
+      <nav class="site-nav" aria-label="Главна навигация">
+        <ul>
+          
+          <li><a href="../services/">Услуги</a></li>
+          
+          <li><a href="../about/">За мен</a></li>
+          
+          <li><a href="../blog.html" aria-current="true">Блог</a></li>
+          
+          <li><a href="../contact/">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <nav aria-label="Избор на език"><a class="icon-btn" href="../en/blog/razlika-borsov-segment-over-the-counter.html" data-lang-switch="" hreflang="en" lang="en">EN<span class="sr-only"> · English version</span></a></nav>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle="" aria-pressed="false">
+<svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#sun"></use></svg><span class="sr-only">Тъмна тема</span>
+        </button>
+      </div>
+    </div>
+    <a class="btn btn--primary btn--small" href="../booking/">Запази час</a>
+    <button class="menu-btn" type="button" data-menu-button="" aria-expanded="false" aria-controls="site-menu" data-label-open="Меню" data-label-close="Затвори">
+<svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#menu"></use></svg><span data-menu-label="">Меню</span>
+    </button>
+  </div>
+</header>
+  <main id="main" tabindex="-1">
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<article class="post" data-article="" aria-labelledby="post-title">
+  <header class="wrap post-header">
+    <nav class="breadcrumb" aria-label="Път"><ol><li><a href="../">Начало</a></li><li><a href="../blog.html">Блог</a></li><li><a href="../blog.html?cat=invest">Инвестиции</a></li></ol></nav>
+    <p class="post-header__tag"><span class="chip">Инвестиции</span></p>
+    <h1 id="post-title" class="post-title">Разлика между търговия на борсов сегмент и over-the-counter</h1>
+    <div class="post-meta">
+      <span class="post-meta__author"><picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-72.avif 72w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-72.webp 72w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="avatar" src="../img/profile-9-RfR76xxzeh-72.jpeg" alt="" width="72" height="96"></picture>Марина Мучакова</span>
+      <time datetime="2026-06-11">11 юни 2026</time>
+      <span>5 мин четене</span>
+<a href="../en/blog/razlika-borsov-segment-over-the-counter.html" hreflang="en" lang="en">Read in English</a>    </div>
+  </header>
+
+  <div class="wrap post-layout">
+    <div class="post-main">
+      <details class="toc-mobile">
+        <summary>Съдържание</summary>
+        <nav class="toc" aria-label="Съдържание на статията"><ol><li><a href="#bg-1">Какво значи OTC продажба на акции?</a></li><li><a href="#bg-2">Как се различава от борсовото търгуване?</a></li><li><a href="#bg-3">Може ли листната акция да се купи или продаде OTC?</a></li><li><a href="#bg-4">За ЕС: какво казват MiFID II и MiFIR?</a></li><li><a href="#bg-5">САЩ: защо листната акция може да мине извън борса?</a></li><li><a href="#bg-6">Пример: купувам 8.456 fractional shares на META</a></li><li><a href="#bg-7">Какво трябва да се провери?</a></li><li><a href="#bg-8">По-точният израз</a></li><li><a href="#bg-9">Източници и полезни препратки</a></li></ol></nav>
+      </details>
+      <div class="prose">
+<p>
+            Заформи се интересен спор под клипа ми на тема „Revolut регулиран пазар ли е?“.
+            Темата е важна за данъците ни, затова според мен повече информация тук е полезна.
+            Осведомеността и образованието винаги са предимство.
+          </p>
+<figure class="post-cover">
+<picture><source type="image/avif" srcset="../img/img-0725-_6rTkT6OZq-680.avif 680w, ../img/img-0725-_6rTkT6OZq-1360.avif 1360w" sizes="(min-width: 980px) 680px, calc(100vw - 40px)"><source type="image/webp" srcset="../img/img-0725-_6rTkT6OZq-680.webp 680w, ../img/img-0725-_6rTkT6OZq-1360.webp 1360w" sizes="(min-width: 980px) 680px, calc(100vw - 40px)"><img loading="lazy" decoding="async" alt="Разлика между борсово и OTC изпълнение" src="../img/img-0725-_6rTkT6OZq-680.jpeg" width="1360" height="907" srcset="../img/img-0725-_6rTkT6OZq-680.jpeg 680w, ../img/img-0725-_6rTkT6OZq-1360.jpeg 1360w" sizes="(min-width: 980px) 680px, calc(100vw - 40px)"></picture>
+</figure>
+<h2 id="bg-1">Какво значи OTC продажба на акции?</h2>
+<p>
+            OTC идва от <em>over-the-counter</em>. Най-просто казано, това означава, че сделката
+            не минава през централната борсова „витрина“, където всички виждат поръчките купува/продава
+            в обща книга с поръчки.
+          </p>
+<p>
+            Вместо това сделката се изпълнява извън борсата: например директно срещу брокер,
+            маркет мейкър, систематичен участник или друг професионален контрагент.
+          </p>
+<blockquote>
+            OTC не значи автоматично „нелегално“, „сиво“ или „нерегулирано“. Значи „извън борсовата книга“.
+          </blockquote>
+<p>
+            Възможно е изпълнението да е напълно регулирано, с правила за най-добро изпълнение,
+            отчетност и публикуване на информация за сделката. Затова е важно да се гледа не само
+            какъв е инструментът, а и как точно е изпълнена поръчката.
+          </p>
+<h2 id="bg-2">Как се различава от борсовото търгуване?</h2>
+<p>
+            При борсовото търгуване имаме организиран пазар: например NASDAQ, NYSE, Xetra,
+            Euronext, Българска фондова борса и други. Има централизирана система, книга с поръчки,
+            правила за достъп, правила за съпоставяне на поръчките и публична пазарна цена.
+          </p>
+<p>
+            При OTC сделка обикновено няма такава централна книга с поръчки. Клиентът подава
+            поръчка към посредник, а посредникът може да я изпълни срещу маркет мейкър, през
+            систематичен участник, през алтернативна система, вътрешно срещу собствена позиция
+            или чрез агрегиране с други клиентски поръчки.
+          </p>
+<h2 id="bg-3">Може ли листната акция да се купи или продаде OTC?</h2>
+<p>
+            Да, може, но зависи от инструмента, юрисдикцията, статута на посредника и приложимите
+            правила. Тук има една важна разлика.
+          </p>
+<ol>
+<li>
+<strong>OTC акция или OTC security.</strong> Самият инструмент не е листнат на голяма
+              национална борса и се търгува извън нея.
+            </li>
+<li>
+<strong>OTC изпълнение или off-exchange execution.</strong> Инструментът може да е
+              листнат на борса, но конкретната клиентска сделка да бъде изпълнена извън борсовата
+              книга: например чрез ATS, маркет мейкър, systematic internaliser или друг off-exchange
+              механизъм.
+            </li>
+</ol>
+<p>
+            Например акцията може да е листната на NASDAQ, но конкретната клиентска поръчка да бъде
+            изпълнена от маркет мейкър или от брокер като принципал, а не непременно директно в
+            борсовата книга на NASDAQ.
+          </p>
+<h2 id="bg-4">За ЕС: какво казват MiFID II и MiFIR?</h2>
+<p>
+            В ЕС „място на търговия“ по MiFID II включва регулиран пазар, MTF и OTF. За акции
+            MiFIR е още по-конкретен: при акции с ЕИП ISIN, които се търгуват на място на търговия,
+            инвестиционните посредници по принцип трябва да изпълняват сделките на регулиран пазар,
+            MTF, systematic internaliser или еквивалентно място в трета държава, освен при изрично
+            предвидени изключения.
+          </p>
+<p>
+            Тоест в Европа не е просто „правим си OTC както решим“. Systematic internaliser не е
+            борса, но е допустим канал по MiFIR за изпълнение на определени сделки с акции.
+            MiFID II го дефинира като инвестиционен посредник, който организирано, често и систематично
+            търгува за собствена сметка, изпълнявайки клиентски поръчки извън regulated market,
+            MTF или OTF.
+          </p>
+<p>
+            Xetra е класически пример за прозрачно борсово/организирано изпълнение: има книга с
+            поръчки и правила за формиране на цената, които са предварително определени и публични.
+          </p>
+<h2 id="bg-5">САЩ: защо листната акция може да мине извън борса?</h2>
+<p>
+            В САЩ фактът, че META е листната на NASDAQ, не означава, че всяка клиентска поръчка
+            непременно влиза директно в NASDAQ order book. Листнати ценни книжа могат да имат
+            off-exchange изпълнение, включително през ATS и други off-exchange venues.
+          </p>
+<p>
+            FINRA публикува OTC статистика за сделки, докладвани от ATS-и и фирми членове, включително
+            за OTC активност извън ATS. Затова „акцията е листната“ и „моята конкретна поръчка е
+            изпълнена на борсата“ не са едно и също твърдение.
+          </p>
+<h2 id="bg-6">Пример: купувам 8.456 fractional shares на META</h2>
+<p>
+            Най-вероятно не цялата сделка минава като една нормална борсова сделка за 8.456 акции,
+            защото борсите по принцип не търгуват акции в дробни количества под една акция.
+          </p>
+<p>Обичайният модел е следният:</p>
+<ul>
+<li>
+              цялата част от поръчката, например 8 акции, може да бъде изпълнена на борса, срещу
+              маркет мейкър, през ATS или друг venue според routing политиката на брокера;
+            </li>
+<li>
+              дробната част, например 0.456 акция, най-често се урежда вътрешно: брокерът може да
+              действа като насрещна страна, да агрегира дробни поръчки на много клиенти или да държи
+              цяла акция и да разпределя икономически права върху части от нея.
+            </li>
+</ul>
+<p>
+            Затова при fractional shares клиентът често реално има икономическа експозиция към
+            дробна част от акция, но тази дробна част може да не е прехвърляема към друг брокер и
+            може да трябва да бъде продадена при трансфер на портфейла.
+          </p>
+<blockquote>
+            Когато купуваш през приложение „8.456 акции META“, не трябва автоматично да си представяш,
+            че 8.456 акции са влезли като една поръчка в NASDAQ order book.
+          </blockquote>
+<h2 id="bg-7">Какво трябва да се провери?</h2>
+<p>
+            Преди да се твърди данъчно, счетоводно или правно какво точно е купено, трябва да се
+            видят документите и условията на конкретния посредник.
+          </p>
+<ul>
+<li>trade confirmation или contract note;</li>
+<li>execution venue;</li>
+<li>capacity на брокера: agent, principal или riskless principal;</li>
+<li>условията за fractional shares;</li>
+<li>дали клиентът има пряка собственост, договорно/икономическо право срещу брокера, omnibus holding или вътрешно разпределена част от цяла акция.</li>
+</ul>
+<p>
+            Този детайл има значение при прехвърляне към друг брокер, корпоративни действия, гласуване,
+            дивиденти и данъчно документиране.
+          </p>
+<h2 id="bg-8">По-точният израз</h2>
+<p>
+            За клиентски, счетоводни или данъчни цели не бих писала автоматично „купени са акции на
+            NASDAQ“. По-точно е:
+          </p>
+<blockquote>
+            Клиентът е придобил експозиция/позиция в META чрез инвестиционен посредник; конкретното
+            място и начин на изпълнение следва да се установят от trade confirmation, contract note,
+            execution venue report и условията за fractional shares на посредника.
+          </blockquote>
+<p>
+            Настоящата публикация има информационен характер и не представлява правна, данъчна или
+            инвестиционна консултация.
+          </p>
+<h2 id="bg-9">Източници и полезни препратки</h2>
+<ul>
+<li><a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/over-counter-otc-securities" rel="noopener" target="_blank">SEC Investor.gov: Over-The-Counter (OTC) Securities<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+<li><a href="https://www.finra.org/filing-reporting/otc-transparency" rel="noopener" target="_blank">FINRA: OTC (ATS &amp; Non-ATS) Transparency<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+<li><a href="https://eur-lex.europa.eu/legal-content/BG/TXT/?uri=CELEX%3A32014R0600" rel="noopener" target="_blank">Регламент (ЕС) No 600/2014 (MiFIR)<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+<li><a href="https://eur-lex.europa.eu/legal-content/BG/TXT/?uri=CELEX%3A32014L0065" rel="noopener" target="_blank">Директива 2014/65/ЕС (MiFID II)<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+</ul>
+
+      </div>
+      <p class="disclaimer">Статията е с информационна цел и отразява законодателството към датата на публикуване. Тя не е индивидуална данъчна или правна консултация.</p>
+      <section class="author-card" aria-labelledby="author-title">
+        <picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-144.avif 144w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-144.webp 144w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="avatar" src="../img/profile-9-RfR76xxzeh-144.jpeg" alt="" width="144" height="192"></picture>
+        <div><p class="muted" style="font-size: var(--step--1)">Автор</p><h2 id="author-title" style="font-size: var(--step-1)">Марина Мучакова</h2><p class="muted" style="font-size: .95rem">Данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p></div>
+        <div class="author-card__cta"><p><strong>Имате конкретен казус?</strong> <span class="muted">Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</span></p><a class="btn btn--primary btn--small" href="../booking/">Запази консултация</a></div>
+      </section>
+      <div class="share" data-copy-scope="">
+        <span class="share__label">Сподели:</span>
+        <button class="icon-btn" type="button" data-share-native="" hidden="" aria-label="Сподели…"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#share"></use></svg></button>
+        <a class="icon-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmuchakova.com%2Fblog%2Frazlika-borsov-segment-over-the-counter.html" target="_blank" rel="noopener" aria-label="Сподели в Facebook (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#facebook"></use></svg></a>
+        <a class="icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmuchakova.com%2Fblog%2Frazlika-borsov-segment-over-the-counter.html" target="_blank" rel="noopener" aria-label="Сподели в LinkedIn (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#linkedin"></use></svg></a>
+        <a class="icon-btn" href="https://x.com/intent/post?url=https%3A%2F%2Fmuchakova.com%2Fblog%2Frazlika-borsov-segment-over-the-counter.html&amp;text=%D0%A0%D0%B0%D0%B7%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%BC%D0%B5%D0%B6%D0%B4%D1%83%20%D1%82%D1%8A%D1%80%D0%B3%D0%BE%D0%B2%D0%B8%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%BE%D1%80%D1%81%D0%BE%D0%B2%20%D1%81%D0%B5%D0%B3%D0%BC%D0%B5%D0%BD%D1%82%20%D0%B8%20over-the-counter" target="_blank" rel="noopener" aria-label="Сподели в X (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#x"></use></svg></a>
+        <button class="icon-btn" type="button" data-copy-url="" data-copied="Връзката е копирана" aria-label="Копирай връзката"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#link"></use></svg></button>
+        <span class="copy-status" role="status" data-copy-status=""></span>
+      </div>
+    </div>
+    <div class="toc-desktop">
+      <nav class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title">Съдържание</p><ol><li><a href="#bg-1">Какво значи OTC продажба на акции?</a></li><li><a href="#bg-2">Как се различава от борсовото търгуване?</a></li><li><a href="#bg-3">Може ли листната акция да се купи или продаде OTC?</a></li><li><a href="#bg-4">За ЕС: какво казват MiFID II и MiFIR?</a></li><li><a href="#bg-5">САЩ: защо листната акция може да мине извън борса?</a></li><li><a href="#bg-6">Пример: купувам 8.456 fractional shares на META</a></li><li><a href="#bg-7">Какво трябва да се провери?</a></li><li><a href="#bg-8">По-точният израз</a></li><li><a href="#bg-9">Източници и полезни препратки</a></li></ol></nav>
+      <a class="btn btn--primary btn--small btn--block" href="../booking/" style="margin-top: var(--space-m)">Запази консултация</a>
+    </div>
+  </div>
+</article><section class="section post-related" aria-labelledby="related-title">
+  <div class="wrap">
+    <h2 id="related-title" style="font-size: var(--step-2); margin-bottom: var(--space-s)">Още по темата</h2>
+    <div class="post-feed">
+      <ul class="post-rows">
+        <li><article class="post-row"><time datetime="2026-10-08">08.10.2026</time><div><span class="cat">Инвестиции</span><h3 class="post-row__title"><a class="card__link" href="../blog/tax-loss-harvesting-po-balgarski.html">Tax-loss harvesting по български</a></h3></div><span class="len">15 мин</span></article></li>
+        <li><article class="post-row"><time datetime="2026-10-08">08.10.2026</time><div><span class="cat">Инвестиции</span><h3 class="post-row__title"><a class="card__link" href="../blog/lichen-ili-firmen-akaunt-broker.html">Личен или фирмен акаунт при брокер</a></h3></div><span class="len">15 мин</span></article></li>
+        <li><article class="post-row"><time datetime="2026-09-18">18.09.2026</time><div><span class="cat">Данъци</span><h3 class="post-row__title"><a class="card__link" href="../blog/nap-pismo-dohodi-investicii.html">Получи ли писмо от НАП за доходите си от инвестиции?</a></h3></div><span class="len">9 мин</span></article></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">MM</span><span>Марина Мучакова</span></a>
+        <p class="site-footer__tag">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+        <a class="donate-link" href="../donate/"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#heart"></use></svg>Подкрепи ме</a>
+      </div>
+      <nav aria-labelledby="footer-nav">
+        <h2 id="footer-nav">Навигация</h2>
+        <ul>
+          <li><a href="../services/">Услуги</a></li>
+          <li><a href="../about/">За мен</a></li>
+          <li><a href="../blog.html">Блог</a></li>
+          <li><a href="../vlog/">Видео</a></li>
+          <li><a href="../contact/">Контакти</a></li>
+          <li><a href="../booking/">Запази час</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-res">
+        <h2 id="footer-res">Ресурси</h2>
+        <ul>
+          <li><a href="../projects/">Проекти</a></li>
+          <li><a href="../partners/">Партньори</a></li>
+          <li><a href="../game/">Игра</a></li>
+          <li><a href="https://muchakova.github.io/looper/" target="_blank" rel="noopener">Синтезатор<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+          <li><a href="../feed.xml" type="application/rss+xml">RSS абонамент</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="footer-contact">Контакт</h2>
+        <ul>
+          <li><a href="mailto:office@vesta-bg.eu">office@vesta-bg.eu</a></li>
+          <li><a href="tel:+359887460907">+359 887 460 907</a></li>
+        </ul>
+        <ul class="socials" aria-label="Социални мрежи">
+          <li><a class="icon-btn" href="https://www.facebook.com/muchakova" target="_blank" rel="noopener" aria-label="Facebook (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#facebook"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.linkedin.com/in/vestaconsult/" target="_blank" rel="noopener" aria-label="LinkedIn (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#linkedin"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.youtube.com/@TheCryptoAcademy375" target="_blank" rel="noopener" aria-label="YouTube (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#youtube"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.tiktok.com/@muchakova" target="_blank" rel="noopener" aria-label="TikTok (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#tiktok"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://x.com/VestaConsult" target="_blank" rel="noopener" aria-label="X (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#x"></use></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>© 2026 Марина Мучакова · <a href="../privacy/">Поверителност</a> · <a href="../accessibility/">Достъпност</a></p>
+      <fieldset class="theme-switch">
+        <legend>Тема</legend>
+        <div class="theme-switch__options">
+          <label><input type="radio" name="theme" value="system" checked="">Системна</label>
+          <label><input type="radio" name="theme" value="light">Светла</label>
+          <label><input type="radio" name="theme" value="dark">Тъмна</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="muted" style="font-size: .85rem; padding-bottom: var(--space-l)">Съдържанието на сайта не е индивидуална данъчна или правна консултация.</p>
+  </div>
+</footer>
+</body>
+</html>

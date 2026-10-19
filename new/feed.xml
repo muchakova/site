@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Марина Мучакова — Блог</title>
+    <link>https://muchakova.com/blog.html</link>
+    <atom:link href="https://muchakova.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Статии за данъци, инвестиции, крипто и ДДС от Марина Мучакова, данъчен консултант.</description>
+    <language>bg</language>
+    <lastBuildDate>Thu, 08 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Tax-loss harvesting по български</title>
+      <link>https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html</guid>
+      <pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Инвестиции</category>
+      <description>Как да реализираме загуби преди 31 декември законно: защо загубата на регулиран сегмент в ЕС е данъчно безполезна (чл. 33, ал. 3 ЗДДФЛ), wash sale в САЩ, Ирландия и UK, сезонност и къде минава границата с пазарната манипулация по MAR.</description>
+    </item>
+    <item>
+      <title>Личен или фирмен акаунт при брокер</title>
+      <link>https://muchakova.com/blog/lichen-ili-firmen-akaunt-broker.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/lichen-ili-firmen-akaunt-broker.html</guid>
+      <pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Инвестиции</category>
+      <description>ЗДДФЛ срещу ЗКПО буква по буква: листване не е изпълнение, „регулирана борса“ не е регулиран пазар (XETA срещу XETB), пренасяне на загуби, пазари в САЩ, реални разходи, 5% дивидент и US estate tax. Плюс промпт, с който AI не отговаря само „Зависи“.</description>
+    </item>
+    <item>
+      <title>Скъпа БНБ, имам акции в Interactive Brokers</title>
+      <link>https://muchakova.com/blog/spb-8-bnb-interactive-brokers.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/spb-8-bnb-interactive-brokers.html</guid>
+      <pubDate>Mon, 05 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Отчетност пред БНБ</category>
+      <description>БНБ не иска данък, иска статистика. Кога се подава СПБ-8 (прагът от 25 000 € към 31 декември, чл. 10, ал. 2 ВЗ), защо ценните книжа се пишат по ISIN и в брой, а не в евро, и какво подават фирмите: СПБ-10, СПБ-10А, СПБ-2.</description>
+    </item>
+    <item>
+      <title>Местно лице на половин Европа (и на един кораб)</title>
+      <link>https://muchakova.com/blog/siddo-dvoyno-mestno-lice.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/siddo-dvoyno-mestno-lice.html</guid>
+      <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
+      <category>СИДДО</category>
+      <description>Когато няколко държави едновременно ви смятат за местно лице: чл. 4 ЗДДФЛ, тай-брейкър правилата по СИДДО, данъчен кредит срещу освобождаване, прагът от 255 645,94 € по ДОПК — и казус с Великобритания, Германия, Кипър, Барбадос и кораб под панамски флаг.</description>
+    </item>
+    <item>
+      <title>Първият български White Paper в ESMA: Пробив за Web3 у нас или просто регулаторна формалност?</title>
+      <link>https://muchakova.com/blog/parviyat-balgarski-white-paper-esma.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/parviyat-balgarski-white-paper-esma.html</guid>
+      <pubDate>Thu, 01 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Крипто</category>
+      <description>Токенът NX0 на NativeArc е първият изцяло български White Paper, вписан в регистъра на ESMA. Какво представлява проектът, защо нотификацията по Title II от MiCA не е лиценз, какво вписването доказва и какво — не.</description>
+    </item>
+    <item>
+      <title>Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът по ЗДДС</title>
+      <link>https://muchakova.com/blog/kripto-borsi-cex-dex-oborot-zdds.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/kripto-borsi-cex-dex-oborot-zdds.html</guid>
+      <pubDate>Thu, 01 Oct 2026 12:00:00 GMT</pubDate>
+      <category>ДДС</category>
+      <description>Instant Sell и Convert, order book или Uniswap — кои продажби на криптоактиви участват в прага от 51 130 евро за регистрация по ЗДДС и кои „отиват при борсата“. Мястото на изпълнение по чл. 21 ЗДДС, презумпциите по чл. 18 от Регламент 282/2011 и разделението на услугите в MiCA.</description>
+    </item>
+    <item>
+      <title>Получи ли писмо от НАП за доходите си от инвестиции?</title>
+      <link>https://muchakova.com/blog/nap-pismo-dohodi-investicii.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/nap-pismo-dohodi-investicii.html</guid>
+      <pubDate>Fri, 18 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>Кратко и по същество — как да намериш счетоводител, как да се справиш сам, какви документи ти трябват и къде точно се декларира всеки вид доход (акции, ДЦК, крипто, лихви, дивиденти) за данъчна година 2025.</description>
+    </item>
+    <item>
+      <title>9% или 20% ДДС за еднодневния тур?</title>
+      <link>https://muchakova.com/blog/dds-turisticheska-usluga-9-ili-20.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/dds-turisticheska-usluga-9-ili-20.html</guid>
+      <pubDate>Mon, 31 Aug 2026 12:00:00 GMT</pubDate>
+      <category>ДДС</category>
+      <description>Еднодневна туристическа разходка, продавана през платформи като GetYourGuide, Viator или Airbnb Experiences — коя ставка ДДС се дължи, кога има „обща туристическа услуга“ по чл. 136 ЗДДС и върху каква основа се начислява данъкът. Защо намалената ставка от 9% вече не съществува.</description>
+    </item>
+    <item>
+      <title>MEXC е в „черния списък“ на ESMA. Какво означава това и какво става с активите ти</title>
+      <link>https://muchakova.com/blog/esma-non-compliant-mexc.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/esma-non-compliant-mexc.html</guid>
+      <pubDate>Thu, 06 Aug 2026 12:00:00 GMT</pubDate>
+      <category>Крипто</category>
+      <description>MEXC е вписан в регистъра на ESMA за non-compliant entities по MiCA. Каква е разликата с отнет лиценз, защо преходният период вече изтече и какво реално става с активите ти, ако тръгнеш да ги местиш през частен адрес.</description>
+    </item>
+    <item>
+      <title>ДДС регистрация при търговия с акции чрез Interactive Brokers</title>
+      <link>https://muchakova.com/blog/dds-registraciya-interactive-brokers.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/dds-registraciya-interactive-brokers.html</guid>
+      <pubDate>Wed, 05 Aug 2026 12:00:00 GMT</pubDate>
+      <category>ДДС</category>
+      <description>Кога оборотът от финансови инструменти през чуждестранен брокер НЕ формира оборот за регистрация по чл. 96 ЗДДС — мястото на изпълнение, чл. 21, ал. 2 ЗДДС и примерен отговор на ИПДПОЗЛ с реален акт за отказ.</description>
+    </item>
+    <item>
+      <title>Как се облагат ETF-ите в България? (И защо инвеститорите бъркат най-важното)</title>
+      <link>https://muchakova.com/blog/kak-se-oblagat-etf-ite-v-balgaria.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/kak-se-oblagat-etf-ite-v-balgaria.html</guid>
+      <pubDate>Tue, 21 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>ETF, ETN или ETC — правната форма решава всичко. Плюс кумулиращи срещу дистрибутиращи фондове, инвестиране през ЕООД, ирландските UCITS фондове, наследяването и masterclass по ДДС.</description>
+    </item>
+    <item>
+      <title>5 данъчни грешки, които допускат инвеститорите — Част 2 (За ценители)</title>
+      <link>https://muchakova.com/blog/5-danachni-greshki-investitori-chast-2.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/5-danachni-greshki-investitori-chast-2.html</guid>
+      <pubDate>Fri, 17 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>Разширената и редактирана версия: регулиран пазар срещу квалифициран пазар за растеж, ETF/ETC/ETN/ADR/GDR, tax-loss harvesting и MAR, рискът по ДДС и кога инвеститорът вече прилича на търговец.</description>
+    </item>
+    <item>
+      <title>5 данъчни грешки, които допускат инвеститорите! (И които после им струват скъпо)</title>
+      <link>https://muchakova.com/blog/5-danachni-greshki-investitori.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/5-danachni-greshki-investitori.html</guid>
+      <pubDate>Wed, 15 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>Регулиран пазар срещу европейски пазар, ETF срещу ETC/ETP, Tax Loss Harvesting, декемврийските промени в законите и скритият риск от регистрация по ДДС — 5 капана, които заличават доходността ви.</description>
+    </item>
+    <item>
+      <title>Смарт контракти и DeFi: Какво реално означава това за вашия бизнес?</title>
+      <link>https://muchakova.com/blog/smart-kontrakti-defi-biznes.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/smart-kontrakti-defi-biznes.html</guid>
+      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
+      <category>DeFi</category>
+      <description>Защо кодът не е закон, кои технически движения в DeFi са данъчни събития по ЗКПО и ЗДДФЛ, какво променя MiCA и какви стъпки трябва да предприеме всеки бизнес лидер.</description>
+    </item>
+    <item>
+      <title>Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence)</title>
+      <link>https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html</guid>
+      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
+      <category>AML</category>
+      <description>Законовите прагове от 1 000, 10 000 и 15 000 евро, трите степени на проверка (SDD, CDD, EDD) и защо няма „магическо число“, под което сте невидими за AML проверките.</description>
+    </item>
+    <item>
+      <title>Наръчник: Как успешно да преминем AML проверка при крипто транзакции</title>
+      <link>https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html</guid>
+      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
+      <category>AML</category>
+      <description>Как мислят AML анализаторите, каква е разликата между произход на средствата и източник на богатството и как да подготвите досието си, така че проверката да мине бързо и безпроблемно.</description>
+    </item>
+    <item>
+      <title>Данъчен наръчник за инвеститори в България</title>
+      <link>https://muchakova.com/blog/danachen-narachnik-za-investitori.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/danachen-narachnik-za-investitori.html</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>Крипто, акции, ETF, дивиденти, злато и имоти — кога се дължи данък, колко е той и къде се декларира. Кратка справка за индивидуалния инвеститор.</description>
+    </item>
+    <item>
+      <title>Моите 5 стотинки за Проектобюджет 2026</title>
+      <link>https://muchakova.com/blog/moite-5-stotinki-za-proektobyudzhet-2026.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/moite-5-stotinki-za-proektobyudzhet-2026.html</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Икономика</category>
+      <description>Истинският дефицит не е бюджетният, а дефицитът на реформи. За административната тежест, скрития данък върху предприемачеството и цената на изгубеното време.</description>
+    </item>
+    <item>
+      <title>MetaMask CL Card вече преминава под MiCA: зад крипто услугите вече стои MoonPay Europe</title>
+      <link>https://muchakova.com/blog/metamask-cl-card-mica-moonpay.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/metamask-cl-card-mica-moonpay.html</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <category>MiCA</category>
+      <description>От 1 юли 2026 г. крипто услугите по картата се предоставят от MoonPay Europe — MiCA-лицензиран CASP. Какво означава това за потребителите и какво ще знаят институциите.</description>
+    </item>
+    <item>
+      <title>Разлика между търговия на борсов сегмент и over-the-counter</title>
+      <link>https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html</guid>
+      <pubDate>Thu, 11 Jun 2026 12:00:00 GMT</pubDate>
+      <category>Инвестиции</category>
+      <description>Какво означава OTC, как се различава от борсовото търгуване и защо fractional shares изискват по-внимателен прочит на trade confirmation.</description>
+    </item>
+    <item>
+      <title>Кога сделките с ценни книжа СА икономическа дейност?</title>
+      <link>https://muchakova.com/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html</guid>
+      <pubDate>Fri, 29 May 2026 12:00:00 GMT</pubDate>
+      <category>ДДС</category>
+      <description>Анализ на практиката на Съда на ЕС относно сделките с ценни книжа като икономическа дейност и приложението й в България.</description>
+    </item>
+    <item>
+      <title>Какво не пише в white paper-ите</title>
+      <link>https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html</guid>
+      <pubDate>Thu, 28 May 2026 12:00:00 GMT</pubDate>
+      <category>Криптоикономика</category>
+      <description>Защо Bitcoin, Ethereum, DeFi, Layer 2 и bridge-овете са нова инфраструктура за стари икономически закони.</description>
+    </item>
+    <item>
+      <title>Затрудненията пред CASP-овете при MiCA лиценз пред КФН</title>
+      <link>https://muchakova.com/blog/zatrudnenia-casp-mica-licenz-kfn.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/zatrudnenia-casp-mica-licenz-kfn.html</guid>
+      <pubDate>Thu, 28 May 2026 12:00:00 GMT</pubDate>
+      <category>MiCA</category>
+      <description>Практически преглед на най-честите препъни камъни пред CASP компаниите в България при кандидатстване за MiCA лиценз.</description>
+    </item>
+    <item>
+      <title>Какво е „субстанция“ на една компания и защо това е важно?</title>
+      <link>https://muchakova.com/blog/substancia-kompania-zashto-vazhno.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/substancia-kompania-zashto-vazhno.html</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <category>Данъчно право</category>
+      <description>Субстанцията показва къде реално се създава икономическата стойност и в коя държава може да се дължат данъци при международна структура.</description>
+    </item>
+    <item>
+      <title>Промени в ДДС при електронна търговия и онлайн събития</title>
+      <link>https://muchakova.com/blog/dds-promeni-2026.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/dds-promeni-2026.html</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <category>ДДС</category>
+      <description>Какво се променя за онлайн бизнеса, дигиталните услуги и трансграничните продажби в ЕС, и кога OSS остава по-добрата опция.</description>
+    </item>
+    <item>
+      <title>Натрупване на оборот за регистрация по ДДС след 01.01.2026 г.</title>
+      <link>https://muchakova.com/blog/natrupvane-oborot-registraciya-dds-2026.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/natrupvane-oborot-registraciya-dds-2026.html</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <category>ДДС</category>
+      <description>Как се натрупва оборотът след 01.01.2026, кога възниква предполагаема регистрация и какви задължения започват преди получаване на акта.</description>
+    </item>
+    <item>
+      <title>Обобщение на промените в режима на ДДС след 1.1.2026</title>
+      <link>https://muchakova.com/blog/obobshtenie-promeni-zdds-2026.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/obobshtenie-promeni-zdds-2026.html</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <category>ДДС</category>
+      <description>Пълен практически преглед на новите режими SME/OSS, EX номера, отчетността и ефекта върху регистрациите по ЗДДС след 1 януари 2026 г.</description>
+    </item>
+    <item>
+      <title>Размерът има значение!</title>
+      <link>https://muchakova.com/blog/razmer-ima-znachenie.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/razmer-ima-znachenie.html</guid>
+      <pubDate>Sat, 28 Feb 2026 12:00:00 GMT</pubDate>
+      <category>Бизнес</category>
+      <description>Истината, която финансистите няма да ти разкрият безвъзмездно —
+            размерът на стартовия капитал понякога е границата между фалита и успеха.</description>
+    </item>
+    <item>
+      <title>ДЦК и как не се облагат с данъци</title>
+      <link>https://muchakova.com/blog/dck-obligacii-danaci.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/dck-obligacii-danaci.html</guid>
+      <pubDate>Sat, 14 Feb 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>Купони, отстъпки и капиталови печалби — пълното данъчно ръководство за физически лица, инвестиращи в държавни ценни книжа и облигации на регулирани пазари.</description>
+    </item>
+  </channel>
+</rss>

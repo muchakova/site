@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Дизайн система — Марина Мучакова</title>
+  <meta name="description" content="Токени, компоненти и правила за достъпност на muchakova.com.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="mm:i18n" content="bg-only">
+<link rel="canonical" href="https://muchakova.com/styleguide/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Марина Мучакова">
+  <meta property="og:title" content="Дизайн система">
+  <meta property="og:description" content="Токени, компоненти и правила за достъпност на muchakova.com.">
+<meta property="og:url" content="https://muchakova.com/styleguide/">
+  <meta property="og:image" content="https://muchakova.com/images/og-site.jpg">
+<meta property="og:image:alt" content="Дизайн система">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F2F4FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080C19" media="(prefers-color-scheme: dark)">
+  
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="Марина Мучакова — Блог" href="../feed.xml">
+  <script>try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin="">  <link rel="stylesheet" href="../assets/css/site.css?v=f729985235">
+<link rel="stylesheet" href="../assets/css/styleguide.css?v=f729985235">  <script src="../assets/js/site.js?v=f729985235" defer=""></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Начало","item":"https://muchakova.com/"},{"@type":"ListItem","position":2,"name":"Дизайн система","item":"https://muchakova.com/styleguide/"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Към съдържанието</a>
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">MM</span><span class="brand__name">Марина Мучакова</span></a>
+    <div class="site-menu" id="site-menu">
+      <nav class="site-nav" aria-label="Главна навигация">
+        <ul>
+          
+          <li><a href="../services/">Услуги</a></li>
+          
+          <li><a href="../about/">За мен</a></li>
+          
+          <li><a href="../blog.html">Блог</a></li>
+          
+          <li><a href="../contact/">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <nav aria-label="Избор на език"><a class="icon-btn" href="../en/" data-lang-switch="" hreflang="en" lang="en">EN<span class="sr-only"> · English version</span></a></nav>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle="" aria-pressed="false">
+<svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#sun"></use></svg><span class="sr-only">Тъмна тема</span>
+        </button>
+      </div>
+    </div>
+    <a class="btn btn--primary btn--small" href="../booking/">Запази час</a>
+    <button class="menu-btn" type="button" data-menu-button="" aria-expanded="false" aria-controls="site-menu" data-label-open="Меню" data-label-close="Затвори">
+<svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#menu"></use></svg><span data-menu-label="">Меню</span>
+    </button>
+  </div>
+</header>
+  <main id="main" tabindex="-1">
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<!-- ============================== INTRO ============================== -->
+<section class="sg-section" aria-labelledby="sg-title" style="padding-top: var(--space-xl)">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Път"><ol><li><a href="../">Начало</a></li><li><a href="../styleguide/" aria-current="page">Дизайн система</a></li></ol></nav>
+    <p class="eyebrow" style="margin-top: var(--space-m)">Фаза 3 · за одобрение</p>
+    <h1 id="sg-title">Дизайн система</h1>
+    <p class="lead measure" style="margin-top: var(--space-xs)">„Светъл финтех“ с шрифт Inter. Темата следва настройката на устройството, а бутонът в горната лента и изборът във футъра я сменят ръчно. Всеки компонент е показан жив, с бележка как работи с клавиатура и екранен четец.</p>
+    <ul class="chips" style="margin-top: var(--space-m)" aria-label="Основни правила">
+      <li class="chip">WCAG 2.2 AA</li><li class="chip">Inter</li><li class="chip">Системна тема</li><li class="chip chip--signal">Нищо върху лицето на снимката</li><li class="chip chip--signal">Цифрите на една линия</li>
+    </ul>
+    <nav aria-label="Раздели на дизайн системата">
+      <ul class="sg-toc">
+        <li><a href="#colors">Цветове</a></li><li><a href="#type">Типография</a></li><li><a href="#space">Отстояния и форми</a></li><li><a href="#icons">Иконки</a></li>
+        <li><a href="#buttons">Бутони</a></li><li><a href="#navigation">Навигация</a></li><li><a href="#hero">Hero</a></li><li><a href="#cards">Карти</a></li>
+        <li><a href="#booking">Цени и записване</a></li><li><a href="#faq">ЧЗВ</a></li><li><a href="#filters">Филтри</a></li><li><a href="#article">Статия</a></li>
+        <li><a href="#contact">Контакт</a></li><li><a href="#landmarks">Ориентири (ARIA)</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<!-- ============================== COLOURS ============================== -->
+<section class="sg-section" id="colors" aria-labelledby="colors-title">
+  <div class="wrap">
+    <h2 id="colors-title">Цветове</h2>
+    <p class="sg-lead">Хладна светла основа, индиго за действия, изумрудено за „онлайн“ и положителни бележки, тъмносиньо за акцентните панели. Стойностите по-долу се четат живо от текущата тема: сменете темата и таблицата се преизчислява.</p>
+    <ul class="sg-swatches" data-swatches="">
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-bg)"></div><div class="sg-swatch__body"><strong>Фон</strong><code>--color-bg</code><code data-hex="--color-bg"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-surface)"></div><div class="sg-swatch__body"><strong>Повърхност</strong><code>--color-surface</code><code data-hex="--color-surface"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-fg)"></div><div class="sg-swatch__body"><strong>Текст</strong><code>--color-fg</code><code data-hex="--color-fg"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-muted)"></div><div class="sg-swatch__body"><strong>Вторичен текст</strong><code>--color-muted</code><code data-hex="--color-muted"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-line)"></div><div class="sg-swatch__body"><strong>Линии</strong><code>--color-line</code><code data-hex="--color-line"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-accent)"></div><div class="sg-swatch__body"><strong>Акцент (индиго)</strong><code>--color-accent</code><code data-hex="--color-accent"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-accent-soft)"></div><div class="sg-swatch__body"><strong>Мек акцент</strong><code>--color-accent-soft</code><code data-hex="--color-accent-soft"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-signal)"></div><div class="sg-swatch__body"><strong>Сигнал (изумрудено)</strong><code>--color-signal</code><code data-hex="--color-signal"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-warning-soft)"></div><div class="sg-swatch__body"><strong>Внимание (фон)</strong><code>--color-warning-soft</code><code data-hex="--color-warning-soft"></code></div></li>
+      <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--color-navy)"></div><div class="sg-swatch__body"><strong>Тъмносин панел</strong><code>--color-navy</code><code data-hex="--color-navy"></code></div></li>
+    </ul>
+
+    <div class="sg-block">
+      <p class="sg-label" id="contrast-caption">Контраст на текстовите двойки (изчислен живо, WCAG 2.2)</p>
+      <section class="table-wrap" aria-labelledby="contrast-caption" tabindex="0">
+        <table class="sg-contrast">
+          <thead><tr><th scope="col">Двойка</th><th scope="col">Пример</th><th scope="col" class="num">Контраст</th><th scope="col">Ниво</th></tr></thead>
+          <tbody data-contrast="">
+            <tr data-fg="--color-fg" data-bg="--color-bg"><th scope="row">Текст / фон</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-muted" data-bg="--color-bg"><th scope="row">Вторичен текст / фон</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-muted" data-bg="--color-surface"><th scope="row">Вторичен текст / повърхност</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-accent" data-bg="--color-surface"><th scope="row">Връзка / повърхност</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-on-accent" data-bg="--color-accent"><th scope="row">Бутон / акцент</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-accent" data-bg="--color-accent-soft"><th scope="row">Чип / мек акцент</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-signal" data-bg="--color-signal-soft"><th scope="row">Сигнал / мек сигнал</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-warning" data-bg="--color-warning-soft"><th scope="row">Внимание / фон</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-on-navy" data-bg="--color-navy"><th scope="row">Текст / тъмносин панел</th><td></td><td class="num"></td><td></td></tr>
+            <tr data-fg="--color-on-navy-muted" data-bg="--color-navy"><th scope="row">Вторичен / тъмносин панел</th><td></td><td class="num"></td><td></td></tr>
+          </tbody>
+        </table>
+        </section>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TYPE ============================== -->
+<section class="sg-section" id="type" aria-labelledby="type-title">
+  <div class="wrap">
+    <h2 id="type-title">Типография</h2>
+    <p class="sg-lead">Inter за всичко, с флуидна скала: размерите растат плавно от телефон към голям екран. Включени са варианти, при които „l“, „I“ и „1“ не си приличат. Цифрите в цени и таблици са с еднаква ширина.</p>
+    <div class="sg-type-row"><code>--step-5 · hero</code><p style="font-size: var(--step-5); line-height: var(--leading-tight); letter-spacing: var(--tracking-display); font-weight: 600">Марина Мучакова</p></div>
+    <div class="sg-type-row"><code>--step-4 · h1</code><p style="font-size: var(--step-4); line-height: 1.12; letter-spacing: var(--tracking-heading); font-weight: 600">Tax-loss harvesting по български</p></div>
+    <div class="sg-type-row"><code>--step-3 · h2</code><p style="font-size: var(--step-3); line-height: 1.15; letter-spacing: var(--tracking-heading); font-weight: 600">С какво помагам</p></div>
+    <div class="sg-type-row"><code>--step-2 · h3</code><p style="font-size: var(--step-2); font-weight: 600; letter-spacing: var(--tracking-heading)">Доходи от инвестиции</p></div>
+    <div class="sg-type-row"><code>--step-1 · lead</code><p class="lead">Законни решения, които оставят повече капитал в бизнеса и в портфейла ви.</p></div>
+    <div class="sg-type-row"><code>--step-0 · текст</code><p>Казвам се Марина Мучакова и съм данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p></div>
+    <div class="sg-type-row"><code>--step--1 · мета</code><p class="muted" style="font-size: var(--step--1)">8 октомври 2026 · 12 мин четене</p></div>
+    <div class="sg-type-row"><code>цифри</code><p class="num" style="font-size: var(--step-2); font-weight: 600">130 € · 230 € · 51 130 € · 8 000 · −5 000</p></div>
+    <div class="sg-type-row"><code>различими знаци</code><p style="font-size: var(--step-2)">Il1 · 0O · rn m · „Данъчни хакери“</p></div>
+  </div>
+</section>
+
+<!-- ============================== SPACE & SHAPE ============================== -->
+<section class="sg-section" id="space" aria-labelledby="space-title">
+  <div class="wrap">
+    <h2 id="space-title">Отстояния и форми</h2>
+    <p class="sg-lead">Мрежа от 4 px. Секциите имат флуидно вертикално отстояние. Закръгленията растат с размера на елемента.</p>
+    <div class="sg-two">
+      <div class="sg-scale" aria-label="Скала на отстоянията" role="img">
+        <div><code>3xs · 4</code><span style="width: var(--space-3xs)"></span></div><div><code>2xs · 8</code><span style="width: var(--space-2xs)"></span></div>
+        <div><code>xs · 12</code><span style="width: var(--space-xs)"></span></div><div><code>s · 16</code><span style="width: var(--space-s)"></span></div>
+        <div><code>m · 24</code><span style="width: var(--space-m)"></span></div><div><code>l · 32</code><span style="width: var(--space-l)"></span></div>
+        <div><code>xl · 48</code><span style="width: var(--space-xl)"></span></div><div><code>2xl · 64</code><span style="width: var(--space-2xl)"></span></div>
+        <div><code>3xl · 96</code><span style="width: var(--space-3xl)"></span></div>
+      </div>
+      <div class="sg-shapes">
+        <div class="sg-shape" style="border-radius: var(--radius-s)">radius-s · 8</div>
+        <div class="sg-shape" style="border-radius: var(--radius-l)">radius-l · 16</div>
+        <div class="sg-shape" style="border-radius: var(--radius-2xl)">radius-2xl · 28</div>
+        <div class="sg-shape" style="border-radius: var(--radius-l); box-shadow: var(--shadow-1)">shadow-1</div>
+        <div class="sg-shape" style="border-radius: var(--radius-l); box-shadow: var(--shadow-2)">shadow-2</div>
+        <div class="sg-shape" style="border-radius: var(--radius-l); box-shadow: var(--shadow-3)">shadow-3</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ICONS ============================== -->
+<section class="sg-section" id="icons" aria-labelledby="icons-title">
+  <div class="wrap">
+    <h2 id="icons-title">Иконки</h2>
+    <p class="sg-lead">Един SVG спрайт, линеен стил 24×24, дебелина 2 px. Иконите винаги са декоративни (<code class="sg-code">aria-hidden="true"</code>); смисълът се носи от текста до тях или от <code class="sg-code">aria-label</code> на бутона.</p>
+    <ul class="sg-icons" data-icon-list=""></ul>
+  </div>
+</section>
+
+<!-- ============================== BUTTONS ============================== -->
+<section class="sg-section" id="buttons" aria-labelledby="buttons-title">
+  <div class="wrap">
+    <h2 id="buttons-title">Бутони, връзки и чипове</h2>
+    <p class="sg-lead">Минимална височина 48 px (44 px за малкия), видим фокус с 3 px рамка. <code class="sg-code">&lt;a&gt;</code> води към страница, <code class="sg-code">&lt;button&gt;</code> извършва действие.</p>
+    <div class="sg-demo cluster" style="--cluster: var(--space-s)">
+      <a class="btn btn--primary" href="#buttons">Запази консултация <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a>
+      <a class="btn btn--secondary" href="#buttons">Услуги и цени</a>
+      <a class="btn btn--ghost" href="#buttons">Прочети статията</a>
+      <a class="btn btn--primary btn--small" href="#buttons">Запази час</a>
+      <button class="btn btn--secondary" type="button" aria-disabled="true">Неактивен</button>
+      <a class="link-arrow" href="#buttons">Всички статии <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a>
+    </div>
+    <div class="sg-demo cluster navy" style="--cluster: var(--space-s); margin-top: var(--space-s); background: var(--color-navy); border-color: var(--color-navy)">
+      <a class="btn btn--on-navy" href="#buttons">Избери 60 минути <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a>
+      <span class="chip" style="background: var(--color-navy-raised); color: var(--color-on-navy)">Препоръчана</span>
+    </div>
+    <div class="sg-demo cluster" style="margin-top: var(--space-s)">
+      <span class="chip">Инвестиции</span><span class="chip chip--signal">ЗДДФЛ</span><span class="chip chip--outline">Shorts</span><span class="status-dot">Онлайн консултации · Google Meet</span>
+    </div>
+    <details class="sg-a11y"><summary><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#shield"></use></svg>Достъпност</summary>
+      <dl>
+        <dt>Елемент</dt><dd><code>&lt;a class="btn"&gt;</code> за навигация, <code>&lt;button type="button"&gt;</code> за действие.</dd>
+        <dt>Неактивен</dt><dd><code>aria-disabled="true"</code> (остава фокусируем и обяснява защо) вместо скрит бутон.</dd>
+        <dt>Клавиатура</dt><dd>Tab до бутона; Enter (връзка) или Enter/Space (бутон).</dd>
+        <dt>Иконки</dt><dd><code>aria-hidden="true" focusable="false"</code>; текстът на бутона е името му.</dd>
+        <dt>Размер</dt><dd>≥ 44×44 px (WCAG 2.5.8 изисква 24, ползваме 44 за телефон).</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<!-- ============================== NAVIGATION ============================== -->
+<section class="sg-section" id="navigation" aria-labelledby="nav-title">
+  <div class="wrap">
+    <h2 id="nav-title">Навигация</h2>
+    <p class="sg-lead">Горната лента на тази страница е истинският компонент. Стеснете прозореца под 860 px, за да видите мобилното меню. Под 480 px остава само знакът „MM“, а името се чете от екранния четец.</p>
+    <div class="sg-demo">
+      <p class="sg-label">Път (breadcrumb)</p>
+      <nav class="breadcrumb" aria-label="Път (пример)"><ol><li><a href="#navigation">Начало</a></li><li><a href="#navigation">Блог</a></li><li><a href="#navigation" aria-current="page">Tax-loss harvesting по български</a></li></ol></nav>
+    </div>
+    <details class="sg-a11y"><summary><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#shield"></use></svg>Достъпност</summary>
+      <dl>
+        <dt>Първи елемент</dt><dd>Връзка „Към съдържанието“ / „Skip to content“, видима при фокус, води към <code>&lt;main id="main"&gt;</code>.</dd>
+        <dt>Лента</dt><dd><code>&lt;header&gt;</code> (banner) + <code>&lt;nav aria-label="Главна навигация"&gt;</code> / „Main navigation“. Текущата страница: <code>aria-current="page"</code>.</dd>
+        <dt>Език</dt><dd><code>&lt;nav aria-label="Избор на език"&gt;</code>; връзката е с <code>hreflang="en" lang="en"</code> и име „EN · English version“, видимото „EN“ е част от името (WCAG 2.5.3).</dd>
+        <dt>Тема</dt><dd><code>&lt;button aria-pressed&gt;</code> „Тъмна тема“ / „Dark theme“. Натиснат = тъмна. Пълният избор (системна/светла/тъмна) е във футъра.</dd>
+        <dt>Мобилно меню</dt><dd>Модел „Disclosure“: <code>&lt;button aria-expanded aria-controls="site-menu"&gt;</code>, етикет „Меню“ / „Затвори“. При отваряне фокусът влиза в менюто; Esc го затваря и връща фокуса на бутона; клик извън него също го затваря.</dd>
+        <dt>Път</dt><dd><code>&lt;nav aria-label="Път"&gt;&lt;ol&gt;</code>, последният елемент с <code>aria-current="page"</code>.</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<!-- ============================== HERO ============================== -->
+<section class="sg-section" id="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <h2 id="hero-title">Hero и цифри</h2>
+    <p class="sg-lead">Правило: нищо не стои върху лицето. Карточките с цена и формат са под снимката, а на телефон се подреждат една под друга.</p>
+  </div>
+  <div class="wrap hero__grid" style="padding-top: var(--space-m)">
+    <div class="hero__text">
+      <p class="status-dot">Онлайн консултации · Google Meet</p>
+      <p class="hero__greet">Здравейте, Данъчни Хакери, аз съм</p>
+      <p class="hero__name" style="font-weight: 600">Марина Мучакова</p>
+      <p class="hero__role">Данъчен консултант</p>
+      <p class="hero__lede">Помагам на хора и бизнеси да минат НАП без НАП да ги мине, чрез законни данъчни оптимизации и стратегии.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#booking">Запази консултация <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a>
+        <a class="btn btn--secondary" href="#booking">Услуги и цени</a>
+      </div>
+      <p class="hero__trust">Основател и партньор в <strong>Веста Консулт</strong>, <strong>Крипто Академията</strong> и <strong>НАБИ</strong></p>
+    </div>
+    <div class="portrait">
+      <picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-440.avif 440w, ../img/profile-9-RfR76xxzeh-880.avif 880w, ../img/profile-9-RfR76xxzeh-1050.avif 1050w" sizes="(min-width: 860px) 440px, calc(100vw - 40px)"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-440.webp 440w, ../img/profile-9-RfR76xxzeh-880.webp 880w, ../img/profile-9-RfR76xxzeh-1050.webp 1050w" sizes="(min-width: 860px) 440px, calc(100vw - 40px)"><img loading="lazy" decoding="async" class="portrait__img" src="../img/profile-9-RfR76xxzeh-440.jpeg" alt="Марина Мучакова" width="1050" height="1400" srcset="../img/profile-9-RfR76xxzeh-440.jpeg 440w, ../img/profile-9-RfR76xxzeh-880.jpeg 880w, ../img/profile-9-RfR76xxzeh-1050.jpeg 1050w" sizes="(min-width: 860px) 440px, calc(100vw - 40px)"></picture>
+      <ul class="portrait__facts" aria-label="Накратко за консултациите">
+        <li class="fact"><span class="fact__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#calendar"></use></svg></span><p><strong>от 130 €</strong><span>30 или 60 минути</span></p></li>
+        <li class="fact"><span class="fact__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#video"></use></svg></span><p><strong>Google Meet</strong><span>BG · EN ⟨?3⟩</span></p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <dl class="stats">
+      <div><dt>години опит в данъчното право</dt><dd>15+</dd></div>
+      <div><dt>статии за данъци, инвестиции и крипто</dt><dd>29</dd></div>
+      <div><dt>крипто регулации и данъци</dt><dd>MiCA</dd></div>
+    </dl>
+    <details class="sg-a11y"><summary><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#shield"></use></svg>Достъпност</summary>
+      <dl>
+        <dt>Заглавие</dt><dd>На началото името е единственото <code>&lt;h1&gt;</code> (тук е <code>&lt;p&gt;</code>, защото страницата вече има h1).</dd>
+        <dt>Снимка</dt><dd><code>alt="Марина Мучакова"</code> / „Marina Muchakova“; с width/height за нулево „подскачане“ (CLS).</dd>
+        <dt>Карточки</dt><dd>Списък <code>&lt;ul aria-label="Накратко за консултациите"&gt;</code>, никога върху снимката.</dd>
+        <dt>Цифри</dt><dd><code>&lt;dl&gt;</code>: етикетът (<code>dt</code>) е първи в кода, числото се показва първо визуално; клетките са подравнени горе, затова числата са на една линия.</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<!-- ============================== CARDS ============================== -->
+<section class="sg-section" id="cards" aria-labelledby="cards-title">
+  <div class="wrap">
+    <h2 id="cards-title">Карти</h2>
+    <p class="sg-lead">Цялата карта е кликаема, но връзката е само заглавието. Така има една спирка с Tab и екранният четец прочита смислено име.</p>
+
+    <p class="sg-label">Услуга</p>
+    <ul class="grid" style="--grid-min: 26rem; list-style: none; margin: 0; padding: 0">
+      <li><article class="card service-card">
+        <span class="service-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#coins"></use></svg></span>
+        <h3 class="card__title"><a class="card__link" href="#cards">Крипто данъци и MiCA</a></h3>
+        <p class="card__text">Облагане на криптоактиви, AML проверки, CASP лицензи и всичко, което MiCA промени.</p>
+        <ul class="chips" aria-label="Теми"><li class="chip chip--signal">MiCA</li><li class="chip chip--signal">AML</li><li class="chip chip--signal">ЗДДС</li></ul>
+      </article></li>
+      <li><article class="card service-card">
+        <span class="service-card__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#chart"></use></svg></span>
+        <h3 class="card__title"><a class="card__link" href="#cards">Доходи от инвестиции</a></h3>
+        <p class="card__text">Акции, ETF, облигации и дивиденти — кога се дължи данък, колко е и къде се декларира.</p>
+        <ul class="chips" aria-label="Теми"><li class="chip chip--signal">ЗДДФЛ</li><li class="chip chip--signal">ETF</li><li class="chip chip--signal">дивиденти</li></ul>
+      </article></li>
+    </ul>
+
+    <p class="sg-label" style="margin-top: var(--space-l)">Статии: водеща + редове (като банково извлечение)</p>
+    <div class="post-feed">
+      <article class="post-lead">
+        <div>
+          <p class="card__meta"><span class="cat">Инвестиции</span><time datetime="2026-10-08">8 октомври 2026</time><span>12 мин четене</span></p>
+          <h3 class="post-lead__title"><a class="card__link" href="#cards"><span lang="en">Tax-loss harvesting</span> по български</a></h3>
+          <p>Как да „съберем“ данъчните загуби преди 31 декември законно – и къде минава границата с пазарната манипулация.</p>
+        </div>
+        <span class="post-lead__go" aria-hidden="true"><svg class="icon" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></span>
+      </article>
+      <ul class="post-rows">
+        <li><article class="post-row"><time datetime="2026-10-08">08.10.2026</time><div><span class="cat">Инвестиции</span><h3 class="post-row__title"><a class="card__link" href="#cards">Личен или фирмен акаунт при брокер</a></h3></div><span class="len">15 мин</span></article></li>
+        <li><article class="post-row"><time datetime="2026-10-05">05.10.2026</time><div><span class="cat">Отчетност пред БНБ</span><h3 class="post-row__title"><a class="card__link" href="#cards">Скъпа БНБ, имам акции в Interactive Brokers</a></h3></div><span class="len">15 мин</span></article></li>
+        <li><article class="post-row"><time datetime="2026-10-02">02.10.2026</time><div><span class="cat">СИДДО</span><h3 class="post-row__title"><a class="card__link" href="#cards">Местно лице на половин Европа (и на един кораб)</a></h3></div><span class="len">21 мин</span></article></li>
+      </ul>
+    </div>
+
+    <div class="sg-two" style="margin-top: var(--space-l)">
+      <div>
+        <p class="sg-label">Видео (YouTube се зарежда едва след клик)</p>
+        <article class="card video-card">
+          <div class="video-card__media">
+            <button class="video-card__play" type="button" data-yt="Dba4_JBF_4o" data-title="Деклариране на загуби от търговия с финансови инструменти — защо и как" aria-label="Пусни видео: Деклариране на загуби от търговия с финансови инструменти — защо и как"><span><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#play"></use></svg></span></button>
+            <span class="video-card__duration"><span aria-hidden="true">4:11</span><span class="sr-only">Продължителност: 4 минути и 11 секунди</span></span>
+          </div>
+          <div class="video-card__body">
+            <p class="card__meta"><span class="cat">Декларации и отчетност</span><time datetime="2026-10-18">18 октомври 2026</time></p>
+            <h3 class="card__title">Деклариране на загуби от търговия с финансови инструменти — защо и как</h3>
+            <p class="card__text">Защо си струва да декларирате загубите от търговия с финансови инструменти и как точно се прави.</p>
+            <a class="link-arrow" href="#cards">Прочети статията <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a>
+          </div>
+        </article>
+      </div>
+      <div class="stack">
+        <p class="sg-label">Проект / партньор</p>
+        <article class="card">
+          <div class="cluster"><span class="logo-tile" aria-hidden="true">ВК</span><div><p class="muted" style="font-size: var(--step--1)">Корпоративен сайт</p><h3 class="card__title"><a class="card__link" href="https://vesta-bg.eu" target="_blank" rel="noopener">Веста Консулт<span class="sr-only"> (отваря се в нов раздел)</span></a></h3></div></div>
+          <p class="card__text">Онлайн присъствие на Веста Консулт с ясно представяне на услуги, бизнес профил и контактна информация.</p>
+        </article>
+        <article class="card">
+          <div class="cluster"><span class="logo-tile" aria-hidden="true">TI</span><div><p class="muted" style="font-size: var(--step--1)">Партньор</p><h3 class="card__title"><a class="card__link" href="#cards">tax-invest</a></h3></div></div>
+          <p class="card__text">Без лого засега: монограм, докато получим официалното.</p>
+        </article>
+      </div>
+    </div>
+    <details class="sg-a11y"><summary><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#shield"></use></svg>Достъпност</summary>
+      <dl>
+        <dt>Структура</dt><dd>Списък от <code>&lt;article&gt;</code>, всяка с заглавие (h3) и връзка в него; разширена зона за клик чрез <code>::after</code>, фокусът се показва около цялата карта.</dd>
+        <dt>Видео</dt><dd><code>&lt;button aria-label="Пусни видео: …"&gt;</code>; след клик <code>&lt;iframe title="…"&gt;</code> от youtube-nocookie и фокус върху плейъра. Продължителността е „4:11“ визуално и „4 минути и 11 секунди“ за четеца (скрит текст).</dd>
+        <dt>Външни връзки</dt><dd>Визуално скрит текст „(отваря се в нов раздел)“ / „(opens in a new tab)“.</dd>
+        <dt>Чужди думи</dt><dd><code>&lt;span lang="en"&gt;Tax-loss harvesting&lt;/span&gt;</code>, за да се произнесе правилно.</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<!-- ============================== BOOKING ============================== -->
+<section class="sg-section" id="booking" aria-labelledby="booking-title">
+  <div class="wrap">
+    <h2 id="booking-title">Стъпки, цени и записване</h2>
+    <p class="sg-lead">Стъпките са номерирани, защото са истинска последователност. Цената стои преди календара.</p>
+    <ol class="steps">
+      <li><h3>Изберете формат</h3><p>30 минути за конкретен въпрос или 60 минути за по-сложен казус.</p></li>
+      <li><h3>Запазете час и платете онлайн</h3><p>Изберете удобен ден в календара. Плащането е с карта, чрез Stripe.</p></li>
+      <li><h3>Подгответе въпроса си</h3><p>Изпратете кратко описание и документите предварително.</p></li>
+      <li><h3>Срещаме се онлайн</h3><p>Разговаряме в Google Meet и получавате ясни следващи стъпки.</p></li>
+    </ol>
+
+    <div class="plans" style="margin-top: var(--space-xl)">
+      <article class="plan" aria-labelledby="plan-30">
+        <div class="plan__top"><h3 class="plan__name" id="plan-30">Бърза консултация</h3></div>
+        <p class="price"><strong>130 €</strong><span>/ 30 мин</span></p>
+        <p class="plan__fit">За един конкретен, ясно формулиран въпрос: кога се дължи данък, как се декларира даден доход, коя ставка се прилага.</p>
+        <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#check"></use></svg>Онлайн в Google Meet</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#check"></use></svg>Плащане с карта при записване</li></ul>
+        <a class="btn btn--secondary" href="#format-30" aria-describedby="plan-30">Избери 30 минути</a>
+      </article>
+      <article class="plan plan--featured" aria-labelledby="plan-60">
+        <div class="plan__top"><h3 class="plan__name" id="plan-60">Онлайн консултация</h3><span class="chip">Препоръчана</span></div>
+        <p class="price"><strong>230 €</strong><span>/ 60 мин</span></p>
+        <p class="plan__fit">За по-сложен казус: няколко вида доходи, чуждестранни брокери, структуриране на бизнес, MiCA и регулаторни въпроси.</p>
+        <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#check"></use></svg>Онлайн в Google Meet</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#check"></use></svg>Плащане с карта при записване</li></ul>
+        <a class="btn btn--on-navy" href="#format-60" aria-describedby="plan-60">Избери 60 минути <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a>
+      </article>
+    </div>
+    <p class="muted center" style="font-size: .92rem; margin-top: var(--space-s)">⟨?1⟩ ДДС и фактура · ⟨?3⟩ на български или английски · условия за отказ ⟨?2⟩</p>
+
+    <div class="sg-two" style="margin-top: var(--space-xl)">
+      <fieldset class="format-picker">
+        <legend>1. Изберете формат</legend>
+        <div class="format-options">
+          <label class="format-option"><input type="radio" name="format" value="30" id="format-30"><span class="format-option__check" aria-hidden="true"><svg class="icon" focusable="false"><use href="../assets/icons.svg#check"></use></svg></span><span class="format-option__name">Бърза консултация</span><span class="format-option__meta">30 мин · 130 €</span></label>
+          <label class="format-option"><input type="radio" name="format" value="60" id="format-60" checked=""><span class="format-option__check" aria-hidden="true"><svg class="icon" focusable="false"><use href="../assets/icons.svg#check"></use></svg></span><span class="format-option__name">Онлайн консултация</span><span class="format-option__meta">60 мин · 230 €</span></label>
+        </div>
+      </fieldset>
+      <section aria-labelledby="slot-title">
+        <h3 id="slot-title" style="font-size: var(--step-2); margin-bottom: var(--space-s)">2. Изберете ден и час</h3>
+        <div class="embed-slot" style="min-height: 260px">
+          <div class="embed-slot__status" role="status">
+            <span class="skeleton" style="width: 220px; height: 14px; margin-inline: auto"></span>
+            <span class="skeleton" style="width: 160px; height: 14px; margin-inline: auto"></span>
+            <p>Календарът се зарежда…</p>
+          </div>
+        </div>
+        <p class="muted" style="font-size: .9rem; margin-top: var(--space-xs)">Ако календарът не се зареди: office@vesta-bg.eu · +359&nbsp;887&nbsp;460&nbsp;907</p>
+      </section>
+    </div>
+    <details class="sg-a11y"><summary><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#shield"></use></svg>Достъпност</summary>
+      <dl>
+        <dt>Стъпки</dt><dd><code>&lt;ol&gt;</code>: номерата идват от списъка, четецът казва „списък, 4 елемента“.</dd>
+        <dt>Цени</dt><dd>Всеки план е <code>&lt;article aria-labelledby&gt;</code>; бутонът е свързан с името на плана чрез <code>aria-describedby</code>, за да не е просто „Избери“.</dd>
+        <dt>Избор на формат</dt><dd>Истински радиобутони в <code>&lt;fieldset&gt;&lt;legend&gt;</code>: стрелките сменят избора, четецът казва „1 от 2, избрано“.</dd>
+        <dt>Календар</dt><dd>Резервирано място (без „подскачане“); състояние „Календарът се зарежда…“ в <code>role="status"</code>; iframe с <code>title="Календар за записване на час"</code>; видима алтернатива с имейл и телефон.</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section class="sg-section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title">Често задавани въпроси</h2>
+    <p class="sg-lead">Нативни <code class="sg-code">&lt;details&gt;</code>: работят с клавиатура и екранен четец без допълнителен код и се отпечатват отворени.</p>
+    <div class="faq measure">
+      <details><summary>Как протича консултацията?</summary><p>Онлайн, в Google Meet, в избрания от вас час. Разглеждаме вашия случай и завършваме с конкретни следващи стъпки.</p></details>
+      <details><summary>Коя консултация да избера?</summary><p>30 минути стигат за един ясно формулиран въпрос. Ако имате няколко вида доходи, чуждестранни сметки или фирма, изберете 60 минути.</p></details>
+      <details><summary>Как плащам?</summary><p>С карта при записването. Плащането се обработва сигурно от Stripe.</p></details>
+      <details><summary>Мога ли да пренасроча?</summary><p>⟨?2⟩ Текстът зависи от вашите условия за отказ.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FILTERS ============================== -->
+<section class="sg-section" id="filters" aria-labelledby="filters-title">
+  <div class="wrap" data-filter-scope="">
+    <h2 id="filters-title">Филтри и търсене</h2>
+    <p class="sg-lead">Изберете тема или напишете дума. Броят резултати се обявява на екранния четец, без да мести фокуса.</p>
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Филтър по тема">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">Всички</button>
+        <button class="filter" type="button" data-filter="crypto" aria-pressed="false">Крипто и MiCA</button>
+        <button class="filter" type="button" data-filter="invest" aria-pressed="false">Инвестиции</button>
+        <button class="filter" type="button" data-filter="business" aria-pressed="false">Бизнес</button>
+      </div>
+      <search class="search" role="search">
+        <label for="sg-search">Търсене в статиите</label>
+        <input id="sg-search" type="search" data-filter-search="" placeholder="напр. ETF" autocomplete="off">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#search"></use></svg>
+      </search>
+    </div>
+    <p class="result-status" role="status" data-filter-status="" data-one="Показана е {n} статия" data-many="Показани са {n} статии" data-none="Няма статии по този филтър"></p>
+    <ul class="grid" data-filter-list="" style="--grid-min: 18rem; list-style: none; margin: var(--space-s) 0 0; padding: 0">
+      <li data-cats="invest taxes"><article class="card"><p class="card__meta"><span class="cat">Инвестиции</span><time datetime="2026-10-08">8 окт 2026</time></p><h3 class="card__title"><a class="card__link" href="#filters">Личен или фирмен акаунт при брокер</a></h3></article></li>
+      <li data-cats="invest taxes"><article class="card"><p class="card__meta"><span class="cat">Инвестиции</span><time datetime="2026-07-21">21 юли 2026</time></p><h3 class="card__title"><a class="card__link" href="#filters">Как се облагат ETF-ите в България</a></h3></article></li>
+      <li data-cats="crypto taxes"><article class="card"><p class="card__meta"><span class="cat">ДДС</span><time datetime="2026-10-01">1 окт 2026</time></p><h3 class="card__title"><a class="card__link" href="#filters">Чий е оборотът: на борсата или наш?</a></h3></article></li>
+      <li data-cats="crypto institutions"><article class="card"><p class="card__meta"><span class="cat">MiCA</span><time datetime="2026-10-01">1 окт 2026</time></p><h3 class="card__title"><a class="card__link" href="#filters">Първият български White Paper в ESMA</a></h3></article></li>
+      <li data-cats="business taxes"><article class="card"><p class="card__meta"><span class="cat">ДДС</span><time datetime="2026-08-31">31 авг 2026</time></p><h3 class="card__title"><a class="card__link" href="#filters">9% или 20% ДДС за еднодневния тур?</a></h3></article></li>
+    </ul>
+    <div class="empty-state" data-filter-empty="" hidden=""><p><strong>Няма статии по този филтър.</strong></p><p>Опитайте друга тема или друга дума.</p></div>
+    <details class="sg-a11y"><summary><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#shield"></use></svg>Достъпност</summary>
+      <dl>
+        <dt>Филтри</dt><dd><code>role="group" aria-label="Филтър по тема"</code> / „Filter by topic“; бутони с <code>aria-pressed</code>.</dd>
+        <dt>Търсене</dt><dd>Елементът <code>&lt;search&gt;</code> (с <code>role="search"</code> за по-стари браузъри) и видим <code>&lt;label&gt;</code>, не само placeholder.</dd>
+        <dt>Резултат</dt><dd><code>role="status"</code> обявява „Показани са 3 статии“ / „Showing 3 articles“ (с българско множествено число); празно състояние с видим текст.</dd>
+        <dt>Адрес</dt><dd><code>?cat=crypto</code> отваря страницата с избран филтър (връзките от „Услуги“).</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<!-- ============================== ARTICLE ============================== -->
+<section class="sg-section" id="article" aria-labelledby="article-title">
+  <div class="wrap">
+    <h2 id="article-title">Статия</h2>
+    <p class="sg-lead">Текст ~68 знака на ред, 17–19 px. Съдържанието е отдясно (на телефон над текста, сгънато). Лентата най-горе показва докъде сте стигнали. Отдолу има дисклеймър, автор с призив за консултация и споделяне.</p>
+    <div class="sg-article">
+      <article class="sg-demo" data-article="" style="background: var(--color-bg)">
+        <nav class="breadcrumb" aria-label="Път на статията"><ol><li><a href="#article">Начало</a></li><li><a href="#article">Блог</a></li><li><a href="#article" aria-current="page">Инвестиции</a></li></ol></nav>
+        <p style="margin-top: var(--space-s)"><span class="chip">Инвестиции</span></p>
+        <h3 class="sg-post-title"><span lang="en">Tax-loss harvesting</span> по български</h3>
+        <div class="post-meta" style="margin-top: var(--space-s)">
+          <span class="post-meta__author"><picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-72.avif 72w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-72.webp 72w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="avatar" src="../img/profile-9-RfR76xxzeh-72.jpeg" alt="" width="72" height="96"></picture>Марина Мучакова</span>
+          <time datetime="2026-10-08">8 октомври 2026</time><span>12 мин четене</span>
+          <a href="#article" hreflang="en" lang="en">Read in English</a>
+        </div>
+        <details class="toc-mobile" style="margin-top: var(--space-m)">
+          <summary>Съдържание</summary>
+          <nav class="toc" aria-label="Съдържание на статията (телефон)"><ol><li><a href="#sg-h-1">Какво е tax-loss harvesting</a></li><li><a href="#sg-h-2">Пример</a></li><li><a href="#sg-h-3">Промпт за проверка с AI</a></li></ol></nav>
+        </details>
+        <div class="prose" style="margin-top: var(--space-l)">
+          <p><em>Как да реализираме загуби в края на годината законно – и къде минава границата с пазарната манипулация.</em></p>
+          <h4 class="h2" id="sg-h-1">Какво е <span lang="en">tax-loss harvesting</span></h4>
+          <p><span lang="en">Tax-loss harvesting</span> („жътва на данъчни загуби“) е съзнателната продажба на позиция, която към момента е на загуба. Целта е реализираната загуба да намали облагаемата печалба, вече реализирана през същата година.</p>
+          <ul><li>Загубата вече е налице, продажбата само я реализира.</li><li>При обратна покупка новата цена на придобиване е по-ниска.</li><li>В повечето случаи данъкът се отлага, а не изчезва.</li></ul>
+          <div class="callout" role="note" aria-labelledby="sg-note-1"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#info"></use></svg><div><p class="callout__title" id="sg-note-1">Важно</p><p>Непокритата загуба от 2026 г. не може да намали печалба от 2027 г. 31 декември е твърд срок.</p></div></div>
+          <h5 class="h3" id="sg-h-2">Пример</h5>
+          <p>Инвеститор е реализирал през 2026 г. печалба от 8 000 евро от продажба на американски акции, изпълнена извънборсово.</p>
+          <section class="table-wrap" aria-labelledby="sg-table-cap" tabindex="0">
+            <table>
+              <caption id="sg-table-cap">Ефект от реализиране на загубата (EUR)</caption>
+              <thead><tr><th scope="col">Показател</th><th scope="col" class="num">Без загубата</th><th scope="col" class="num">Със загубата</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Реализирана печалба (американски акции, OTC)</th><td class="num">8 000</td><td class="num">8 000</td></tr>
+                <tr><th scope="row">Реализирана загуба (ETF извън регулиран пазар)</th><td class="num">0</td><td class="num">−5 000</td></tr>
+                <tr><th scope="row">Нетен резултат по чл. 33, ал. 3</th><td class="num">8 000</td><td class="num">3 000</td></tr>
+                <tr><th scope="row">Данък 10%</th><td class="num">720</td><td class="num">270</td></tr>
+              </tbody>
+            </table>
+        </section>
+          <div class="callout callout--warning" role="note" aria-labelledby="sg-note-2"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#alert"></use></svg><div><p class="callout__title" id="sg-note-2">Внимание</p><p>Загуба на регулиран пазар в ЕС е данъчно безполезна за физическото лице.</p></div></div>
+          <blockquote><p>Ключовите думи са „през годината“.</p></blockquote>
+          <h5 class="h3" id="sg-h-3">Промпт за проверка с AI</h5>
+          <div class="prompt-box" data-copy-scope="">
+            <div class="prompt-box__bar"><span>Промпт</span><span class="cluster" style="--cluster: 8px"><span class="copy-status" role="status" data-copy-status=""></span><button class="btn btn--secondary btn--small" type="button" data-copy-target="sg-prompt" data-copied="Копирано" data-copy-failed="Изберете текста и копирайте ръчно"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#copy"></use></svg>Копирай промпта</button></span></div>
+            <pre id="sg-prompt">РОЛЯ: Действай като данъчен консултант по българско право. Отговаряш само въз основа на нормативния текст, който ти давам по-долу.
+
+КОНТЕКСТ:
+- Аз съм: [местно физическо лице / българско ООД].
+- Данъчна година: 2026.</pre>
+          </div>
+          <p class="disclosure"><strong>Разкриване:</strong> сътруднича си с NativeArc — издателя на токена NX0, за който става дума в статията.</p>
+        </div>
+        <p class="disclaimer" style="margin-top: var(--space-l)">Статията е с информационна цел и отразява законодателството към датата на публикуване. Тя не е индивидуална данъчна или правна консултация.</p>
+        <section class="author-card" aria-labelledby="sg-author" style="margin-top: var(--space-m)">
+          <picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-144.avif 144w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-144.webp 144w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="avatar" src="../img/profile-9-RfR76xxzeh-144.jpeg" alt="" width="144" height="192"></picture>
+          <div><p class="muted" style="font-size: var(--step--1)">Автор</p><h4 id="sg-author" style="font-size: var(--step-1)">Марина Мучакова</h4><p class="muted" style="font-size: .95rem">Данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p></div>
+          <div class="author-card__cta"><p><strong>Имате конкретен казус?</strong> <span class="muted">Ще го разгледаме заедно онлайн.</span></p><a class="btn btn--primary btn--small" href="#booking">Запази консултация</a></div>
+        </section>
+        <div class="share" data-copy-scope="" style="margin-top: var(--space-m)">
+          <span class="share__label" id="sg-share">Сподели:</span>
+          <button class="icon-btn" type="button" data-share-native="" hidden="" aria-label="Сподели…"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#share"></use></svg></button>
+          <a class="icon-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmuchakova.com%2F" target="_blank" rel="noopener" aria-label="Сподели във Facebook (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#facebook"></use></svg></a>
+          <a class="icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmuchakova.com%2F" target="_blank" rel="noopener" aria-label="Сподели в LinkedIn (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#linkedin"></use></svg></a>
+          <a class="icon-btn" href="https://x.com/intent/post?url=https%3A%2F%2Fmuchakova.com%2F" target="_blank" rel="noopener" aria-label="Сподели в X (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#x"></use></svg></a>
+          <button class="icon-btn" type="button" data-copy-url="" data-copied="Връзката е копирана" aria-label="Копирай връзката"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#link"></use></svg></button>
+          <span class="copy-status" role="status" data-copy-status=""></span>
+        </div>
+      </article>
+      <div class="toc-desktop">
+        <nav class="toc" aria-labelledby="sg-toc-title"><p class="toc__title" id="sg-toc-title">Съдържание</p><ol><li><a href="#sg-h-1">Какво е tax-loss harvesting</a></li><li><a href="#sg-h-2">Пример</a></li><li><a href="#sg-h-3">Промпт за проверка с AI</a></li></ol></nav>
+        <a class="btn btn--primary btn--small btn--block" href="#booking" style="margin-top: var(--space-m)">Запази консултация</a>
+      </div>
+    </div>
+    <details class="sg-a11y"><summary><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#shield"></use></svg>Достъпност</summary>
+      <dl>
+        <dt>Съдържание</dt><dd><code>&lt;nav aria-label="Съдържание на статията"&gt;</code> / „Table of contents“; текущият раздел е с <code>aria-current="true"</code>; на телефон в <code>&lt;details&gt;</code>.</dd>
+        <dt>Прогрес</dt><dd>Лентата е <code>aria-hidden="true"</code>, защото дублира плъзгача.</dd>
+        <dt>Таблица</dt><dd><code>&lt;caption&gt;</code>, <code>&lt;th scope&gt;</code>; обвивката е <code>&lt;section aria-labelledby tabindex="0"&gt;</code> (именуван регион), за да се превърта с клавиатура на телефон.</dd>
+        <dt>Бележки</dt><dd><code>role="note" aria-labelledby</code> към видимото заглавие „Важно“ / „Внимание“; цветът никога не е единственият знак (има заглавие и иконка).</dd>
+        <dt>Копиране</dt><dd>Бутон „Копирай промпта“; „Копирано“ се обявява чрез <code>role="status"</code>; при отказ на браузъра обяснение какво да направите.</dd>
+        <dt>Автор</dt><dd><code>&lt;section aria-labelledby&gt;</code> в края на статията; снимката е декоративна (<code>alt=""</code>), защото името е до нея. „Свързани статии“ е <code>&lt;aside&gt;</code> извън <code>&lt;main&gt;</code> (допълващите ориентири трябва да са на най-горно ниво).</dd>
+        <dt>Споделяне</dt><dd>Иконни бутони с <code>aria-label</code> „Сподели във Facebook (отваря се в нов раздел)“; системното „Сподели…“ се показва само където браузърът го поддържа.</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section class="sg-section" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <h2 id="contact-title">Контакт и финален призив</h2>
+    <p class="sg-lead">Тъмносиният панел е последното нещо преди футъра на всяка основна страница.</p>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div>
+        <h3 id="cta-title">Имате конкретен казус?</h3>
+        <p>Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</p>
+        <a class="btn btn--on-navy" href="#booking">Запази час <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a>
+      </div>
+      <ul class="contact-list" aria-label="Директен контакт">
+        <li><a class="contact-item" href="mailto:office@vesta-bg.eu"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#mail"></use></svg>office@vesta-bg.eu</a></li>
+        <li><a class="contact-item" href="tel:+359887460907"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#phone"></use></svg>+359&nbsp;887&nbsp;460&nbsp;907</a></li>
+        <li><a class="contact-item" href="https://wa.me/359887460907" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#whatsapp"></use></svg>WhatsApp<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+      </ul>
+    </section>
+  </div>
+</section>
+
+<!-- ============================== LANDMARKS ============================== -->
+<section class="sg-section" id="landmarks" aria-labelledby="landmarks-title">
+  <div class="wrap">
+    <h2 id="landmarks-title">Ориентири за екранни четци (ARIA)</h2>
+    <p class="sg-lead">Еднакви на всяка страница. Всички етикети са преведени: EN страниците получават английските.</p>
+    <section class="table-wrap" aria-labelledby="landmarks-cap" tabindex="0">
+      <table>
+        <caption id="landmarks-cap">Ориентири и имена</caption>
+        <thead><tr><th scope="col">Зона</th><th scope="col">Елемент</th><th scope="col">BG</th><th scope="col">EN</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Прескачане</th><td><code class="sg-code">a.skip-link</code></td><td>Към съдържанието</td><td>Skip to content</td></tr>
+          <tr><th scope="row">Горна лента</th><td><code class="sg-code">header</code></td><td>—</td><td>—</td></tr>
+          <tr><th scope="row">Главно меню</th><td><code class="sg-code">nav[aria-label]</code></td><td>Главна навигация</td><td>Main navigation</td></tr>
+          <tr><th scope="row">Език</th><td><code class="sg-code">nav[aria-label]</code></td><td>Избор на език</td><td>Language</td></tr>
+          <tr><th scope="row">Път</th><td><code class="sg-code">nav[aria-label] ol</code></td><td>Път</td><td>Breadcrumb</td></tr>
+          <tr><th scope="row">Съдържание</th><td><code class="sg-code">main#main</code></td><td>—</td><td>—</td></tr>
+          <tr><th scope="row">Секции</th><td><code class="sg-code">section[aria-labelledby]</code></td><td>по заглавието</td><td>by heading</td></tr>
+          <tr><th scope="row">Съдържание на статия</th><td><code class="sg-code">nav[aria-label]</code></td><td>Съдържание на статията</td><td>Table of contents</td></tr>
+          <tr><th scope="row">Свързани статии</th><td><code class="sg-code">aside[aria-labelledby]</code> извън main</td><td>по заглавието</td><td>by heading</td></tr>
+          <tr><th scope="row">Автор, бележки</th><td><code class="sg-code">section</code> · <code class="sg-code">[role=note]</code></td><td>по заглавието</td><td>by heading</td></tr>
+          <tr><th scope="row">Търсене</th><td><code class="sg-code">search</code></td><td>Търсене в статиите</td><td>Search articles</td></tr>
+          <tr><th scope="row">Футър</th><td><code class="sg-code">footer</code> + <code class="sg-code">nav[aria-labelledby]</code></td><td>Навигация · Ресурси</td><td>Navigation · Resources</td></tr>
+        </tbody>
+      </table>
+        </section>
+  </div>
+</section>
+
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">MM</span><span>Марина Мучакова</span></a>
+        <p class="site-footer__tag">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+        <a class="donate-link" href="../donate/"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#heart"></use></svg>Подкрепи ме</a>
+      </div>
+      <nav aria-labelledby="footer-nav">
+        <h2 id="footer-nav">Навигация</h2>
+        <ul>
+          <li><a href="../services/">Услуги</a></li>
+          <li><a href="../about/">За мен</a></li>
+          <li><a href="../blog.html">Блог</a></li>
+          <li><a href="../vlog/">Видео</a></li>
+          <li><a href="../contact/">Контакти</a></li>
+          <li><a href="../booking/">Запази час</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-res">
+        <h2 id="footer-res">Ресурси</h2>
+        <ul>
+          <li><a href="../projects/">Проекти</a></li>
+          <li><a href="../partners/">Партньори</a></li>
+          <li><a href="../game/">Игра</a></li>
+          <li><a href="https://muchakova.github.io/looper/" target="_blank" rel="noopener">Синтезатор<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+          <li><a href="../feed.xml" type="application/rss+xml">RSS абонамент</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="footer-contact">Контакт</h2>
+        <ul>
+          <li><a href="mailto:office@vesta-bg.eu">office@vesta-bg.eu</a></li>
+          <li><a href="tel:+359887460907">+359 887 460 907</a></li>
+        </ul>
+        <ul class="socials" aria-label="Социални мрежи">
+          <li><a class="icon-btn" href="https://www.facebook.com/muchakova" target="_blank" rel="noopener" aria-label="Facebook (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#facebook"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.linkedin.com/in/vestaconsult/" target="_blank" rel="noopener" aria-label="LinkedIn (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#linkedin"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.youtube.com/@TheCryptoAcademy375" target="_blank" rel="noopener" aria-label="YouTube (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#youtube"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.tiktok.com/@muchakova" target="_blank" rel="noopener" aria-label="TikTok (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#tiktok"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://x.com/VestaConsult" target="_blank" rel="noopener" aria-label="X (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#x"></use></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>© 2026 Марина Мучакова · <a href="../privacy/">Поверителност</a> · <a href="../accessibility/">Достъпност</a></p>
+      <fieldset class="theme-switch">
+        <legend>Тема</legend>
+        <div class="theme-switch__options">
+          <label><input type="radio" name="theme" value="system" checked="">Системна</label>
+          <label><input type="radio" name="theme" value="light">Светла</label>
+          <label><input type="radio" name="theme" value="dark">Тъмна</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="muted" style="font-size: .85rem; padding-bottom: var(--space-l)">Съдържанието на сайта не е индивидуална данъчна или правна консултация.</p>
+  </div>
+</footer>
+<script src="../assets/js/styleguide.js?v=f729985235" defer=""></script></body>
+</html>
