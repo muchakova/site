@@ -71,7 +71,8 @@ test("filters announce the result count and show an empty state", async ({ page 
 });
 
 test("copy button announces success", async ({ page, context, browserName }) => {
-  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  // only Chromium asks for a permission; Safari and Firefox allow copying after a click
+  if (browserName === "chromium") await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.goto("/styleguide/");
   await page.locator('[data-copy-target="sg-prompt"]').click();
   await expect(page.locator("[data-copy-target='sg-prompt']").locator("xpath=ancestor::*[@data-copy-scope][1]").locator("[data-copy-status]")).toHaveText("Копирано");

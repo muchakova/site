@@ -12,11 +12,12 @@
     "clean": "rm -rf _site",
     "test": "npm run build && npm run test:static && npm run test:e2e",
     "test:static": "node tests/static/links.mjs && node tests/static/legacy-urls.mjs && node tests/static/i18n.mjs && node tests/static/pending.mjs && node tests/static/structured-data.mjs && node tests/static/seo.mjs && node tests/static/html.mjs",
-    "test:e2e": "playwright test",
+    "test:e2e": "playwright test --project=desktop --project=phone",
     "test:lighthouse": "lhci autorun",
     "serve": "node tools/serve.mjs _site 4173",
     "og": "eleventy --quiet && node tools/og-images.mjs",
-    "test:launch": "npm run build && STRICT_PENDING=1 node tests/static/pending.mjs"
+    "test:launch": "npm run build && STRICT_PENDING=1 node tests/static/pending.mjs",
+    "test:browsers": "playwright test --project=iphone-safari --project=firefox"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",

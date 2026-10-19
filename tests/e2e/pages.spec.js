@@ -32,12 +32,13 @@ for (const path of PAGES) {
     });
   }
 
-  test(`${path}: landmarks, headings, skip link, no sideways scroll`, async ({ page }) => {
+  test(`${path}: landmarks, headings, skip link, no sideways scroll`, async ({ page, browserName }) => {
     await page.goto(path);
     await expect(page.locator("main")).toHaveCount(1);
     await expect(page.locator("h1")).toHaveCount(1);
 
-    await page.keyboard.press("Tab");
+    // Safari moves to links with Option+Tab (plain Tab only visits form fields unless the user changes a setting)
+    await page.keyboard.press(browserName === "webkit" ? "Alt+Tab" : "Tab");
     await expect(page.locator(":focus")).toHaveAttribute("href", "#main");
 
     const levels = await page.$$eval("h1, h2, h3, h4, h5, h6", (hs) =>

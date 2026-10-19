@@ -127,6 +127,12 @@
     .portrait { justify-self: start; width: min(100%, 380px); }
     .portrait::before { inset: 4% 0 8% 0; } /* keep the glow inside the gutter: no sideways scroll */
   }
+  /* tablets: the photo on the left, the two facts stacked beside it (nothing over the face) */
+  @media (min-width: 561px) and (max-width: 860px) {
+    .portrait { width: 100%; display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: var(--space-m); align-items: end; }
+    .portrait::before { inset: 4% auto 8% 0; width: 340px; }
+    .portrait__facts { grid-template-columns: minmax(0, 1fr); margin: 0; max-width: 300px; }
+  }
   @media (max-width: 560px) { .portrait__facts { grid-template-columns: minmax(0, 1fr); } }
 
   /* ---------- Stats  <dl class="stats"><div><dt>label</dt><dd>15+</dd></div>
@@ -482,7 +488,8 @@
   /* ---------- Blog listing */
   .post-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: var(--space-s); margin: 0; padding: 0; list-style: none; }
   .post-grid > li { min-width: 0; }
-  .post-card .card__excerpt { color: var(--color-muted); font-size: .95rem; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  /* the whole excerpt is shown: clamping it to a few lines would hide text when a reader widens the spacing (WCAG 1.4.12) */
+  .post-card .card__excerpt { color: var(--color-muted); font-size: .95rem; }
 
   /* ---------- Print: articles print as clean documents */
   @media print {
