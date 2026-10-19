@@ -51,7 +51,7 @@ SITE_DIR="$tmp/site" node tests/static/preview.mjs
 node tools/serve.mjs "$tmp/site" "$PORT" "/$FOLDER/" >/dev/null & server=$!
 for _ in $(seq 50); do curl -fs -o /dev/null "http://127.0.0.1:$PORT/$FOLDER/" && break; sleep 0.2; done
 node tools/crawl.mjs "http://127.0.0.1:$PORT/$FOLDER/"
-kill "$server"; server=""
+{ kill "$server" && wait "$server"; } 2>/dev/null || true; server=""
 
 say "4/7 Copy into $FOLDER/ on main"
 git worktree add -q "$tmp/main" main
