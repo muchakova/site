@@ -122,7 +122,7 @@ test("article: table of contents, reading time and language link", async ({ page
   const toc = page.locator(".toc-desktop nav.toc a, .toc-mobile nav.toc a");
   expect(await toc.count()).toBeGreaterThanOrEqual(6);
   await expect(page.locator(".post-meta")).toContainText(/\d+ мин четене/);
-  await expect(page.locator('.post-meta a[hreflang="en"]')).toHaveAttribute("href", "/en/blog/tax-loss-harvesting-po-balgarski.html");
+  await expect(page.locator('.post-meta a[hreflang="en"]')).toHaveJSProperty("pathname", "/en/blog/tax-loss-harvesting-po-balgarski.html");
 });
 
 test("blog: ?cat= preselects a topic and the count is announced", async ({ page }) => {
@@ -149,7 +149,7 @@ test("projects and partners keep the anchors of the old pages", async ({ page })
   await page.goto("/partners/");
   await expect(page.locator("#tax-invest, #nx0")).toHaveCount(2);
   await page.goto("/en/partners/");
-  await expect(page.locator("#nx0 a")).toHaveAttribute("href", "/en/blog/parviyat-balgarski-white-paper-esma.html");
+  await expect(page.locator("#nx0 a")).toHaveJSProperty("pathname", "/en/blog/parviyat-balgarski-white-paper-esma.html");
 });
 
 test("game: start, keyboard focus, pause and resume with P, skip link", async ({ page }) => {
@@ -231,7 +231,7 @@ test("RSS feeds: well-formed, one item per article, links open the article in th
       if (lang === "en") expect(link).toMatch(/^\/en\/blog\//);
     }
   }
-  await expect(page.locator('link[rel="alternate"][type="application/rss+xml"]')).toHaveAttribute("href", "/feed.xml");
+  expect(await page.locator('link[rel="alternate"][type="application/rss+xml"]').evaluate((l) => new URL(l.href).pathname)).toBe("/feed.xml");
 });
 
 test("visitor statistics: Plausible without cookies; choosing a format is counted", async ({ page, context }) => {

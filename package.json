@@ -11,15 +11,17 @@
     "start": "eleventy --serve --port=8080",
     "clean": "rm -rf _site",
     "test": "npm run clean && npm run build && npm run test:static && npm run test:e2e",
-    "test:static": "node tests/static/links.mjs && node tests/static/legacy-urls.mjs && node tests/static/i18n.mjs && node tests/static/pending.mjs && node tests/static/structured-data.mjs && node tests/static/seo.mjs && node tests/static/html.mjs",
-    "test:e2e": "playwright test --project=desktop --project=phone",
+    "test:static": "node tests/static/relative-urls.mjs && node tests/static/relocatable.mjs && node tests/static/links.mjs && node tests/static/legacy-urls.mjs && node tests/static/i18n.mjs && node tests/static/pending.mjs && node tests/static/structured-data.mjs && node tests/static/seo.mjs && node tests/static/html.mjs",
+    "test:e2e": "playwright test --project=desktop --project=phone --project=mount",
     "test:lighthouse": "lhci autorun",
     "serve": "node tools/serve.mjs _site 4173",
     "og": "eleventy --quiet && node tools/og-images.mjs",
     "test:launch": "npm run build && STRICT_PENDING=1 node tests/static/pending.mjs",
     "test:browsers": "playwright test --project=iphone-safari --project=firefox",
     "build:preview": "SITE_PREVIEW=1 eleventy",
-    "preview:publish": "bash tools/publish-preview.sh"
+    "test:mount": "playwright test --project=mount",
+    "publish:new": "bash tools/publish-new.sh",
+    "check:new": "node tools/crawl.mjs https://muchakova.com/new/ && MOUNT_URL=https://muchakova.com/new/ playwright test --project=mount"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",

@@ -1,8 +1,9 @@
 // Small helpers shared by the static checks (no dependencies).
 import { readdirSync, readFileSync, statSync, existsSync } from "node:fs";
-import { join, relative, dirname, posix } from "node:path";
+import { join, relative, dirname, posix, resolve } from "node:path";
 
-export const SITE = new URL("../../_site/", import.meta.url).pathname;
+// the built site to check: _site, or another build folder given as SITE_DIR (the publish script uses it)
+export const SITE = process.env.SITE_DIR ? resolve(process.env.SITE_DIR) + "/" : new URL("../../_site/", import.meta.url).pathname;
 
 export function htmlFiles(dir = SITE) {
   const out = [];
