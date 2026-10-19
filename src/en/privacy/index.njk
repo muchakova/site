@@ -12,11 +12,12 @@ updated: 2026-10-19
   <li>The site uses no cookies. Visitor statistics are anonymous and do not track you.</li>
   <li>There are no forms on the site itself. You write to me by email, phone or message, and booking and payment happen with external providers.</li>
   <li>External content (the booking calendar, the videos) loads only after you act.</li>
+  <li>Consultation documents and recordings are not kept: they are deleted once the task is done. Accounting records are kept for 10 years, as the law requires.</li>
   <li>I do not sell personal data or use it for automated decisions or profiling.</li>
 </ul>
 
 <h2 id="controller">Who is responsible for your data</h2>
-{% if showPending %}<p>The controller of the personal data collected through this site is {% pending "13", T.pending.q13 %}</p>{% endif %}
+<p>This is the personal website of Marina Muchakova. The consultations you book through it are provided and invoiced by Vesta Consult. The controller of the personal data collected through this site is therefore Tax Expert EOOD (Vesta Consult), company ID (EIK) 206059468, address: Office A-1, 1st floor, 8 Hubcha St., Krasno Selo, Sofia, Bulgaria.</p>
 <p>For anything about your personal data, write to <a href="mailto:{{ site.email }}">{{ site.email }}</a> or call <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>.</p>
 
 <h2 id="browsing">When you browse the site</h2>
@@ -29,11 +30,13 @@ updated: 2026-10-19
 
 <h2 id="booking">When you book a consultation</h2>
 <p><strong>Calendar.</strong> Booking runs on Cal.com. The calendar loads only after you choose a meeting format. You enter the details the form asks for (name, email and, if you like, a description of your question). Cal.com processes them on my behalf and sends them to me. Inside the calendar, Cal.com may use cookies and similar technologies under its own policy.</p>
-<p><strong>Payment.</strong> Payment is processed by Stripe. Your card details are entered with Stripe and never reach me. I only receive the payment details: amount, date and email.</p>
-<p><strong>The meeting</strong> takes place on Google Meet. I use the information and documents you share for the consultation only to advise you.</p>
+<p><strong>Payment.</strong> Payment is processed by Stripe and goes to Vesta Consult’s account. Your card details are entered with Stripe and never reach me. I only receive the payment details: amount, date and email. If you ask for an invoice, Vesta Consult issues it using the details you send to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+<p><strong>The meeting</strong> takes place on Google Meet or, if we have arranged it, at the office. I use the information and documents you share only for the consultation and delete them once the task is done: for example, after I send you the finished document or after we fill in your tax return.</p>
+<p><strong>Recording.</strong> I record the meeting only if you ask in advance. The recording is kept on Google Drive until you download it and is deleted as soon as you confirm. If you do not confirm, I delete it after one week. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time.</p>
 <p>Legal bases: the consultation contract (Art. 6(1)(b) GDPR) and legal obligations under accounting and tax law (Art. 6(1)(c)).</p>
 
 <h2 id="contact">When you write or call</h2>
+<p>The official channel for correspondence is the email address <a href="mailto:{{ site.email }}">{{ site.email }}</a>. Correspondence there is handled by Vesta Consult, and <a href="https://vesta-bg.eu/policies/privacy-policy" target="_blank" rel="noopener">Vesta Consult’s privacy policy<span class="sr-only"> {{ T.a11y.newTab }}</span></a> also applies to it.</p>
 <p>When you email me, write on Viber, WhatsApp or Telegram, or call me, I process the data you send yourself (name, contact details, the content of the message) in order to reply. Legal basis: steps taken at your request before entering into a contract, or the legitimate interest in answering your enquiry (Art. 6(1)(b) and (f) GDPR).</p>
 <p>The messaging apps are provided by their own companies and process data under their own policies.</p>
 
@@ -50,7 +53,7 @@ updated: 2026-10-19
   <li><strong>Cal.com</strong>: booking consultations;</li>
   <li><strong>Stripe</strong>: card payments and donations;</li>
   <li><strong>Revolut</strong>: donations via Revolut;</li>
-  <li><strong>Google</strong>: meetings on Google Meet and videos on YouTube (once you play them);</li>
+  <li><strong>Google</strong>: meetings on Google Meet, recordings on Google Drive (only if you ask for one) and videos on YouTube (once you play them);</li>
   <li><strong>Viber, WhatsApp, Telegram</strong>: only if you write to me there;</li>
   <li><strong>public authorities</strong> (e.g. the National Revenue Agency), only where the law requires it.</li>
 </ul>
@@ -60,8 +63,10 @@ updated: 2026-10-19
 
 <h2 id="retention">How long I keep data</h2>
 <ul>
-{% if showPending %}  <li><strong>Correspondence and consultation notes:</strong> {% pending "14", T.pending.q14 %}</li>{% endif %}
-  <li><strong>Accounting records</strong> (invoices, payment details): for the periods required by accounting and tax law.</li>
+  <li><strong>Booking and payment</strong> (name, email, date, amount, invoice details): entered in Vesta Consult’s accounts and kept for 10 years, the legal period for accounting records.</li>
+  <li><strong>Documents and statements for the consultation:</strong> deleted as soon as the task is done.</li>
+  <li><strong>Meeting recording:</strong> until you confirm you have downloaded it, and for one week at most.</li>
+  <li><strong>Correspondence:</strong> the site stores no correspondence. Emails to <a href="mailto:{{ site.email }}">{{ site.email }}</a> are kept under Vesta Consult’s policy.</li>
   <li><strong>Server logs:</strong> under GitHub’s policy.</li>
 </ul>
 

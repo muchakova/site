@@ -126,6 +126,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("rfc822", (value) => new Date(`${value}T12:00:00Z`).toUTCString());   // RSS dates
   eleventyConfig.addFilter("isoDate", (value) => (value instanceof Date ? value : new Date(`${value}T12:00:00Z`)).toISOString().slice(0, 10));
   eleventyConfig.addFilter("price", (amount, lang) => (lang === "bg" ? `${amount} €` : `€${amount}`));
+  // texts from the i18n data may name {phone} and {email}: they become links (the rest is escaped)
+  const escapeHtml = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  eleventyConfig.addFilter("contactLinks", (text, site) => escapeHtml(text)
+    .replaceAll("{phone}", `<a href="tel:${site.phone}">${site.phoneDisplay}</a>`)
+    .replaceAll("{email}", `<a href="mailto:${site.email}">${site.email}</a>`));
   eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
   // pick posts by URL, keeping the given order (curated "related articles")
   eleventyConfig.addFilter("postsByUrl", (urls, posts) => (urls || []).map((u) => posts.find((p) => p.url === u)).filter(Boolean));

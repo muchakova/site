@@ -16,7 +16,7 @@
         <a class="btn btn--primary" href="{{ bookingUrl }}">{{ H.ctaBook }} {% icon "arrow-right" %}</a>
         <a class="btn btn--secondary" href="#pricing">{{ H.ctaServices }}</a>
       </div>
-      <p class="hero__trust">{{ H.trustPrefix }} <strong>{{ H.ventures.vesta.name }}</strong>, <strong>{{ H.ventures.academy.name }}</strong> {{ H.trustAnd }} <strong>{{ H.ventures.nabi.name }}</strong></p>
+      <p class="hero__trust">{{ H.trust.vesta }} <strong>{{ H.ventures.vesta.name }}</strong> · {{ H.trust.academy }} <strong>{{ H.ventures.academy.name }}</strong> · {{ H.trust.nabi }} <strong>{{ H.ventures.nabi.name }}</strong></p>
     </div>
     <div class="portrait">
       <img class="portrait__img" src="/images/profile_9.jpg" alt="{{ T.site.name }}" eleventy:widths="440,880,1050" loading="eager" fetchpriority="high" sizes="(min-width: 860px) 440px, calc(100vw - 40px)">

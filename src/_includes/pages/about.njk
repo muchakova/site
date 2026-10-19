@@ -21,7 +21,6 @@
     </div>
     <div class="portrait">
       <img class="portrait__img" src="/images/profile_3.jpg" alt="{{ T.site.name }}" eleventy:widths="320,500" sizes="(min-width: 860px) 440px, calc(100vw - 40px)" loading="eager" fetchpriority="high">
-      {% if showPending %}<p style="position: relative; margin-top: var(--space-s)">{% pending "11", T.pending.q11 %}</p>{% endif %}
     </div>
   </div>
 </section>
@@ -44,10 +43,10 @@
       </li>
       {% endfor %}
     </ul>
-    {% if showPending %}<div style="margin-top: var(--space-m)">
+    <div style="margin-top: var(--space-m)">
       <h3 style="font-size: var(--step-1); margin-bottom: var(--space-2xs)">{{ A.seminarsTitle }}</h3>
-      {% pending "6", T.pending.q6, true %}
-    </div>{% endif %}
+      <p class="measure">{{ A.seminars }}</p>
+    </div>
   </div>
 </section>
 
@@ -65,18 +64,18 @@
   </div>
 </section>
 
-{% if showPending %}<section class="section section--alt" id="credentials" aria-labelledby="credentials-title">
+<section class="section section--alt" id="credentials" aria-labelledby="credentials-title">
   <div class="wrap split">
     <div class="stack" style="--stack: var(--space-s)">
       <h2 id="credentials-title">{{ A.credentialsTitle }}</h2>
-      {% pending "7", T.pending.q7, true %}
+      <ul class="checklist">{% for c in A.credentials %}<li>{{ c }}</li>{% endfor %}</ul>
     </div>
     <div class="stack" style="--stack: var(--space-s)">
-      <h2 id="testimonials-title">{{ A.testimonialsTitle }}</h2>
-      {% pending "8", T.pending.q8, true %}
+      <h2 id="media-title">{{ A.mediaTitle }}</h2>
+      <p>{{ A.media }}</p>
     </div>
   </div>
-</section>{% endif %}
+</section>
 
 <section class="section" id="more" aria-labelledby="more-title">
   <div class="wrap">

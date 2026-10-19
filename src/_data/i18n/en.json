@@ -75,8 +75,11 @@
     "lede": "I help individuals and businesses to hack their taxes through legal optimisations and strategies.",
     "ctaBook": "Book a consultation",
     "ctaServices": "Services & pricing",
-    "trustPrefix": "I work across three projects:",
-    "trustAnd": "and",
+    "trust": {
+      "vesta": "Managing partner at",
+      "academy": "lecturer at",
+      "nabi": "member of"
+    },
     "factPriceTitle": "from €130",
     "factPriceText": "30 or 60 minutes",
     "factMeetTitle": "Google Meet",
@@ -105,7 +108,7 @@
     "ventures": {
       "vesta": {
         "name": "Vesta Consult",
-        "text": "Accounting firm and consultancy"
+        "text": "Accounting firm · managing partner"
       },
       "academy": {
         "name": "The Crypto Academy",
@@ -113,7 +116,7 @@
       },
       "nabi": {
         "name": "NABI",
-        "text": "Blockchain and innovation association"
+        "text": "Blockchain and innovation association · member"
       }
     },
     "servicesEyebrow": "Expertise",
@@ -182,7 +185,7 @@
       },
       {
         "q": "How do I pay?",
-        "a": "By card when you book. Payment is processed securely by Stripe."
+        "a": "By card when you book. Payment is processed securely by Stripe. Prices are final."
       },
       {
         "q": "What should I prepare?",
@@ -193,22 +196,6 @@
     "ctaText": "Every situation is different. Book an online consultation and we will go through it together.",
     "ctaButton": "Book a meeting",
     "videoPoster": "YouTube video"
-  },
-  "pending": {
-    "q1": "VAT and invoice: answer pending",
-    "q2": "Cancellation and rescheduling terms: answer pending",
-    "q3": "Consultation language (BG / EN): answer pending",
-    "q4": "What the client receives after the meeting (summary, documents in advance): answer pending",
-    "q5": "Online only, or also in person in Sofia: answer pending",
-    "q6": "Whether to show the seminar appearances separately: decision pending",
-    "q7": "Education, qualifications, memberships, media: answer pending",
-    "q8": "Client testimonials: answer pending",
-    "q9": "Reply time for messages: answer pending",
-    "q10": "Tax returns and bookkeeping (refer to Vesta Consult?): answer pending",
-    "q11": "New professional photos: answer pending",
-    "q12": "Official websites and logos of tax-invest and NativeArc: answer pending",
-    "q13": "Data controller (you personally or Vesta Consult; name, company number, address): answer pending",
-    "q14": "Retention period for correspondence and consultation notes: answer pending"
   },
   "servicesPage": {
     "onThisPage": "On this page",
@@ -222,72 +209,80 @@
     "nav": {
       "pricing": "Pricing",
       "terms": "Terms",
-      "faq": "Questions"
+      "faq": "Questions",
+      "accounting": "Accounting"
     },
     "terms": [
       {
         "title": "Payment",
-        "text": "The consultation is paid when booking, by card, via Stripe.",
-        "pending": "q1"
+        "text": "By card when you book, via Stripe. Prices are final. Invoices are issued by Vesta Consult: email {email} with your invoice details and a contact phone number."
       },
       {
         "title": "Cancelling and rescheduling",
-        "text": "",
-        "pending": "q2"
+        "text": "Up to 24 hours before the meeting, by calling {phone}. If you cancel, I refund the full amount and we check together that it has reached you. If something unexpected gets in the way at the last minute, call anyway: we will find a solution."
       },
       {
         "title": "Format",
-        "text": "The meeting is online on Google Meet. You receive the link by email after booking.",
-        "pending": ""
+        "text": "The meeting is online, on Google Meet, so we can meet from anywhere. You receive the link by email after booking. If you would rather meet at the office in Sofia, let me know in advance by phone or email."
       },
       {
         "title": "Scope",
-        "text": "The consultation is an analysis of your specific case.",
-        "pending": "q10"
+        "text": "The consultation is an analysis of your specific case. If needed, I explain how to fill in your tax return or document. Preparing and filing them is a service of the Vesta Consult team."
+      },
+      {
+        "title": "Recording",
+        "text": "If you would like a recording of the meeting, tell me in advance. I send it to you and delete it once you have downloaded it."
+      },
+      {
+        "title": "Language",
+        "text": "Bulgarian or English."
       }
     ],
     "faq": [
       {
         "q": "How does the consultation work?",
-        "a": "Online, on Google Meet, at the time you chose. We go through your case and finish with concrete next steps.",
-        "pending": ""
+        "a": "Online, on Google Meet, at the time you chose. We go through your case and finish with concrete next steps."
       },
       {
         "q": "Which consultation should I choose?",
-        "a": "30 minutes is enough for one clearly defined question. If you have several income types, foreign accounts or a company, choose 60 minutes.",
-        "pending": ""
+        "a": "30 minutes is enough for one clearly defined question. If you have several income types, foreign accounts or a company, choose 60 minutes."
       },
       {
         "q": "How do I pay?",
-        "a": "By card when you book. Payment is processed securely by Stripe.",
-        "pending": ""
+        "a": "By card when you book. Payment is processed securely by Stripe. Prices are final."
       },
       {
-        "q": "Can I reschedule?",
-        "a": "",
-        "pending": "q2"
+        "q": "Can I reschedule or cancel?",
+        "a": "Yes, up to 24 hours before the meeting. Call me on {phone}. If you cancel, I refund the full amount."
       },
       {
         "q": "What should I prepare?",
-        "a": "A short description of your question, the years concerned, and your broker or exchange statements, if any.",
-        "pending": "q4"
+        "a": "A short description of your question, the years concerned, and your broker or exchange statements, if any."
+      },
+      {
+        "q": "What do I get after the meeting?",
+        "a": "It depends on what the meeting is for: an answer to your case, clear next steps, or guidance on filling in your tax return or document. If you like, also a recording of the conversation: just tell me in advance."
       },
       {
         "q": "Do I get an invoice?",
-        "a": "",
-        "pending": "q1"
+        "a": "Yes. Invoices are issued by Vesta Consult. Email {email} with the details for the invoice and a phone number in case we need to clarify anything."
       },
       {
         "q": "Do you prepare tax returns?",
-        "a": "",
-        "pending": "q10"
+        "a": "Not personally. In the consultation I explain how to fill in the return. Preparing and filing it, as well as monthly bookkeeping, is handled by the Vesta Consult team, which I am part of."
       },
       {
         "q": "Do you consult in English?",
-        "a": "",
-        "pending": "q3"
+        "a": "Yes. The consultation and our correspondence can be in English."
       }
-    ]
+    ],
+    "accounting": {
+      "eyebrow": "Vesta Consult",
+      "title": "Ongoing accounting",
+      "text": "If you need monthly bookkeeping for your company or help with your tax return every year, the Vesta Consult team can take it on. We work with companies and individuals.",
+      "link": "Visit Vesta Consult",
+      "url": "https://vesta-bg.eu/"
+    }
   },
   "aboutPage": {
     "eyebrow": "Marina Muchakova",
@@ -296,16 +291,25 @@
       "My specialisations include crypto taxation, investment income taxation, application of Double Taxation Avoidance Treaties, business structuring and planning aimed at achieving the highest possible profit margin and minimum tax rates — leading to maximum profitability.",
       "My primary goal is to keep as much capital concentrated within the business as possible. I achieve this through in-depth analysis of tax rules and legislation and finding flexible, effective solutions."
     ],
-    "venturesTitle": "I work across three projects",
+    "venturesTitle": "Where I work",
     "ventures": {
-      "vesta": "An accounting firm and consultancy focused on corporate clients and individuals, specialising in crypto accounting, investment fund bookkeeping, translations and document legalisation.",
+      "vesta": "An accounting firm and consultancy where I am a managing partner. The team serves companies and individuals: monthly bookkeeping, annual tax returns, crypto accounting, investment fund bookkeeping, translations and document legalisation.",
       "academy": "An educational crypto and blockchain project running seminars in partnership with UNWE, Expert Events, Themida Training Centre, Kitov Centre, Finance Academy, Invest Pro, Invest Club and others.",
-      "nabi": "National Association for Blockchain and Innovation — a non-profit organisation bridging the gap between business and public administration in the technology sector, with a mission to create a favourable environment for investment and a technology crypto hub in Bulgaria."
+      "nabi": "I am a member of the National Association for Blockchain and Innovation, a non-profit organisation bridging the gap between business and public administration in the technology sector, with a mission to create a favourable environment for investment and a technology crypto hub in Bulgaria."
     },
     "seminarsTitle": "Speaking engagements",
+    "seminars": "I give lectures and seminars at Finance Academy Bulgaria, UNWE, Kitov Centre, Themida Training Centre, Expert Events and others.",
     "expertiseTitle": "How I can help",
     "credentialsTitle": "Education and qualifications",
-    "testimonialsTitle": "What clients say",
+    "credentials": [
+      "A university degree in law",
+      "Certified mediator with a dispute resolution centre",
+      "Course in international commercial arbitration at the Bulgarian Chamber of Commerce and Industry",
+      "Over 15 years at an accounting and tax firm",
+      "Member of the National Association for Blockchain and Innovation (NABI)"
+    ],
+    "mediaTitle": "In the media",
+    "media": "Guest on podcasts by Bloomberg TV Bulgaria, Benchmark Finance, Admirals Bulgaria and others.",
     "moreTitle": "Projects and partners",
     "projects": {
       "title": "Projects",
@@ -336,23 +340,31 @@
     "nextTitle": "What happens next",
     "next": [
       "A confirmation email right after you book.",
-      "A Google Meet link for the meeting."
+      "A Google Meet link for the meeting.",
+      "Would you rather meet at the office, or like a recording of the conversation? Let me know in advance by phone or email."
     ],
     "payTitle": "Payment and cancellation",
-    "pay": "You pay by card when you book, processed securely by Stripe.",
+    "pay": [
+      "You pay by card when you book, processed securely by Stripe. Prices are final.",
+      "Invoice: email {email} with your invoice details.",
+      "Rescheduling or cancelling: up to 24 hours before the meeting, by calling {phone}. If you cancel, I refund the full amount."
+    ],
     "privacy": "Bookings are handled by Cal.com and payments by Stripe. The calendar only loads after you choose a format.",
     "privacyLink": "Privacy policy",
     "noscript": "The calendar needs JavaScript. Email or call me:"
   },
   "contactPage": {
-    "lead": "The fastest way is to book a consultation. For a quick question, message me however suits you.",
+    "lead": "The fastest way is to book a consultation. For a question, email me: replies usually come the same or the next working day.",
     "bookTitle": "Online consultation",
     "bookText": "Choose a format and a convenient time. Payment is by card when you book.",
     "direct": "Direct contact",
     "messaging": "Messaging",
     "social": "Social media",
     "location": "Location",
-    "locationText": "Sofia, Bulgaria · consultations online"
+    "locationText": "Office A-1, 1st floor, 8 Hubcha St., Krasno Selo, Sofia",
+    "directNote": "Email is the official channel for correspondence.",
+    "messagingNote": "Good for a quick question. Please send service enquiries and documents by email.",
+    "locationNote": "Meetings are online, so we can meet from anywhere. At the Vesta Consult office: by prior arrangement."
   },
   "postPage": {
     "updated": "Updated on",

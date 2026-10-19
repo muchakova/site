@@ -15,6 +15,7 @@
         <li><a href="#pricing">{{ S.nav.pricing }}</a></li>
         <li><a href="#terms">{{ S.nav.terms }}</a></li>
         <li><a href="#faq">{{ S.nav.faq }}</a></li>
+        <li><a href="#accounting">{{ S.nav.accounting }}</a></li>
       </ul>
     </nav>
   </div>
@@ -60,7 +61,7 @@
     <div class="section-head"><div class="section-head__text"><p class="eyebrow">{{ S.termsEyebrow }}</p><h2 id="terms-title">{{ S.termsTitle }}</h2></div></div>
     <dl class="terms">
       {% for t in S.terms %}
-      {% if t.text or showPending %}<div><dt>{{ t.title }}</dt><dd>{% if t.text %}<span>{{ t.text }}</span>{% endif %}{% if t.pending %}{% pending t.pending | replace("q", ""), T.pending[t.pending] %}{% endif %}</dd></div>{% endif %}
+      {% if t.text or showPending %}<div><dt>{{ t.title }}</dt><dd>{% if t.text %}<span>{{ t.text | contactLinks(site) | safe }}</span>{% endif %}{% if t.pending %}{% pending t.pending | replace("q", ""), T.pending[t.pending] %}{% endif %}</dd></div>{% endif %}
       {% endfor %}
     </dl>
   </div>
@@ -71,9 +72,16 @@
     <div class="section-head"><div class="section-head__text"><h2 id="faq-title">{{ T.home.faqTitle }}</h2></div></div>
     <div class="faq measure">
       {% for f in S.faq %}
-      {% if f.a or showPending %}<details><summary>{{ f.q }}</summary><div class="stack" style="--stack: var(--space-2xs)">{% if f.a %}<p>{{ f.a }}</p>{% endif %}{% if f.pending and showPending %}<p>{% pending f.pending | replace("q", ""), T.pending[f.pending] %}</p>{% endif %}</div></details>{% endif %}
+      {% if f.a or showPending %}<details><summary>{{ f.q }}</summary><div class="stack" style="--stack: var(--space-2xs)">{% if f.a %}<p>{{ f.a | contactLinks(site) | safe }}</p>{% endif %}{% if f.pending and showPending %}<p>{% pending f.pending | replace("q", ""), T.pending[f.pending] %}</p>{% endif %}</div></details>{% endif %}
       {% endfor %}
     </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="accounting" aria-labelledby="accounting-title">
+  <div class="wrap">
+    <div class="section-head"><div class="section-head__text"><p class="eyebrow">{{ S.accounting.eyebrow }}</p><h2 id="accounting-title">{{ S.accounting.title }}</h2><p class="lead">{{ S.accounting.text }}</p></div></div>
+    <p><a class="btn btn--secondary" href="{{ S.accounting.url }}" target="_blank" rel="noopener">{{ S.accounting.link }} {% icon "external" %}<span class="sr-only"> {{ T.a11y.newTab }}</span></a></p>
   </div>
 </section>
 
