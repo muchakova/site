@@ -108,5 +108,11 @@
       "icon": "coins",
       "url": "https://revolut.me/marinarahv"
     }
-  ]
+  ],
+  "analytics": {
+    "plausible": {
+      "domain": "muchakova.com",
+      "script": "https://plausible.io/js/script.file-downloads.outbound-links.js"
+    }
+  }
 }

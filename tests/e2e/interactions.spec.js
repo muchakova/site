@@ -1,5 +1,5 @@
 // Behaviour of the interactive components (keyboard first).
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.js";
 
 // on phones the language link sits inside the collapsed menu
 async function openMenuIfCollapsed(page) {
@@ -231,4 +231,14 @@ test("RSS feeds: well-formed, one item per article, links open the article in th
     }
   }
   await expect(page.locator('link[rel="alternate"][type="application/rss+xml"]')).toHaveAttribute("href", "/feed.xml");
+});
+
+test("visitor statistics: Plausible without cookies; choosing a format is counted", async ({ page, context }) => {
+  await page.route("https://app.cal.com/**", (route) => route.abort());
+  await page.goto("/booking/");
+  await expect(page.locator('script[data-domain="muchakova.com"][src^="https://plausible.io/js/"]')).toHaveCount(1);
+  await page.locator('label:has(#format-60)').click();
+  const queued = await page.evaluate(() => (window.plausible.q || []).map((args) => [args[0], args[1]?.props?.format]));
+  expect(queued).toContainEqual(["Booking format", "60"]);
+  expect(await context.cookies()).toEqual([]);
 });

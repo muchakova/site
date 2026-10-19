@@ -1,6 +1,6 @@
 // Accessibility and structure of every redesigned page, in both colour schemes,
 // on desktop and phone (see playwright.config.js projects).
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.js";
 import AxeBuilder from "@axe-core/playwright";
 import { readdirSync } from "node:fs";
 

@@ -11,6 +11,10 @@
   var hint = root.querySelector('[data-cal-hint]');
   var fallback = root.querySelector('[data-cal-fallback]');
   var started = {};
+  var booked = {};
+
+  // visitor statistics (Plausible, no cookies): which format people pick and how many bookings are completed
+  function track(name, props) { if (window.plausible) window.plausible(name, { props: props }); }
 
   // Cal.com's official loader (queues calls until embed.js arrives)
   function loader() {
@@ -53,6 +57,7 @@
     root.querySelectorAll('[data-cal-panel]').forEach(function (p) { p.hidden = p.dataset.calPanel !== fmt; });
     if (started[fmt]) return;
     started[fmt] = true;
+    track('Booking format', { format: fmt });
     var panel = document.getElementById('cal-' + fmt);
     status.textContent = status.dataset.loading;
     loader();
@@ -65,6 +70,14 @@
       cssVarsPerTheme: { light: { 'cal-brand': '#4338CA' }, dark: { 'cal-brand': '#A5B4FC' } },
       hideEventTypeDetails: false,
       layout: 'month_view'
+    });
+    // Cal.com reports a completed booking (older and newer names of the event)
+    ['bookingSuccessful', 'bookingSuccessfulV2'].forEach(function (action) {
+      window.Cal.ns[ns]('on', { action: action, callback: function () {
+        if (booked[fmt]) return;
+        booked[fmt] = true;
+        track('Booking completed', { format: fmt });
+      } });
     });
     watch(fmt, panel);
   }

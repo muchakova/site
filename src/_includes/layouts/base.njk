@@ -55,6 +55,10 @@
   <link rel="stylesheet" href="/assets/css/site.css?v={{ assetVersion }}">
   {% for href in extraCss or [] %}<link rel="stylesheet" href="{{ href }}?v={{ assetVersion }}">{% endfor %}
   <script src="/assets/js/site.js?v={{ assetVersion }}" defer></script>
+  {% if site.analytics.plausible %}{# visitor statistics without cookies (see the privacy policy); custom events queue until the script arrives #}
+  <script defer data-domain="{{ site.analytics.plausible.domain }}" src="{{ site.analytics.plausible.script }}"></script>
+  <script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+  {% endif %}
 </head>
 <body>
   <a class="skip-link" href="#main">{{ T.a11y.skip }}</a>
