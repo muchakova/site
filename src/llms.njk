@@ -1,0 +1,55 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{#- A plain-text map of the site for AI assistants (llmstxt.org), generated from the site data. -#}
+{%- set map = collections.i18nMap -%}
+{%- set en = i18n.en -%}
+{%- set bg = i18n.bg -%}
+# {{ (en.site.name) | safe }} ({{ (bg.site.name) | safe }}) — muchakova.com
+
+> {{ (en.site.description) | safe }}
+
+## About
+
+{{ (en.site.name) | safe }} is a tax consultant with a law degree and over 15 years of experience in Bulgarian and EU tax law. She specialises in:
+
+- Crypto taxation and blockchain-related financial compliance
+- Investment income taxation (bonds, equities, government securities)
+- Double Taxation Avoidance Treaties (application and planning)
+- Business structuring and profit optimisation
+- MiCA (Markets in Crypto-Assets Regulation) prudential assessments and stress testing
+
+She works across three main projects:
+{% for v in site.ventures %}
+- **{{ (en.home.ventures[v.key].name) | safe }}**: {{ (en.aboutPage.ventures[v.key]) | safe }}{% if v.external %} ({{ (v.url) | safe }}){% endif %}{{ "" }}
+{% endfor %}
+
+## Website
+
+The site is in Bulgarian at the root and in English under /en/; every page links to its counterpart in the other language.
+
+- [Home]({{ (site.url) | safe }}/) · [English]({{ (site.url) | safe }}/en/)
+{% for item in ["services", "booking", "about", "blog", "vlog", "contact", "projects", "partners", "game"] %}
+- [{{ (en.nav[item]) | safe }}]({{ (site.url) | safe }}{{ (item | urlFor("bg", map, site.routes)) | safe }}) · [English]({{ (site.url) | safe }}{{ (item | urlFor("en", map, site.routes)) | safe }}){% if item == "services" %}: {% for s in services %}{{ (s.title.en) | safe }}{{ (", " if not loop.last) | safe }}{% endfor %}{% elif item == "booking" %}: online consultation on Google Meet, 30 min €{{ (site.prices["30"]) | safe }} or 60 min €{{ (site.prices["60"]) | safe }}, paid by card when booking{% elif item == "vlog" %}: short videos on investors' tax questions, each with a written answer and a link to the related article{% endif %}{{ "" }}
+{% endfor %}
+- LoopForge, a music loop studio in the browser (pet project): {{ (site.synth) | safe }}
+- RSS: {{ (site.url) | safe }}/feed.xml (Bulgarian) · {{ (site.url) | safe }}/en/feed.xml (English)
+
+## Blog articles ({{ (collections.postIndex.length) | safe }})
+{% for p in collections.postIndex %}
+
+### {{ (p.title.bg) | safe }} / {{ (p.title.en) | safe }}
+- URL: {{ (site.url) | safe }}{{ (p.urls.bg) | safe }} · English: {{ (site.url) | safe }}{{ (p.urls.en) | safe }}
+- Date: {{ (p.date) | safe }}
+- Topics: {{ (p.topics or p.excerpt.en) | safe }}
+{% endfor %}
+
+## Contact
+
+- Book a consultation: {{ (site.url) | safe }}{{ "booking" | urlFor("bg", map, site.routes) }} · English: {{ (site.url) | safe }}{{ "booking" | urlFor("en", map, site.routes) }}
+- Email: {{ (site.email) | safe }}
+- Phone / Viber / WhatsApp / Telegram: {{ (site.phoneDisplay) | safe }}
+{% for s in site.socials %}
+- {{ (s.name) | safe }}: {{ (s.url) | safe }}
+{% endfor %}

@@ -13,8 +13,9 @@ import { ogFor } from "./lib/og.js";
 
 const SITE = JSON.parse(readFileSync("src/_data/site.json", "utf8"));
 
-// Files published as they are: the /meet/ redirect, downloadable files, crawler files, the domain.
-const STATIC_FILES = ["meet", "files", "robots.txt", "llms.txt", "CNAME"];
+// Files published as they are: the /meet/ redirect, downloadable files, robots.txt, the domain.
+// (llms.txt is generated from the site data: src/llms.njk)
+const STATIC_FILES = ["meet", "files", "robots.txt", "CNAME"];
 
 // cache-busting version for /assets (changes whenever a source asset changes)
 function hashDir(dir) {
@@ -40,6 +41,11 @@ export default function (eleventyConfig) {
     "src/assets/js": "assets/js",
     "src/assets/icons.svg": "assets/icons.svg",
     "src/assets/favicon.svg": "favicon.svg",
+    "src/assets/icons/favicon.ico": "favicon.ico",
+    "src/assets/icons/apple-touch-icon.png": "apple-touch-icon.png",
+    "src/assets/icons/icon-192.png": "icon-192.png",
+    "src/assets/icons/icon-512.png": "icon-512.png",
+    "src/assets/site.webmanifest": "site.webmanifest",
     "src/assets/css/styleguide.css": "assets/css/styleguide.css",
     "src/assets/css/game.css": "assets/css/game.css",
     "src/images/og-game.png": "game/og-game.png",   // the game's share image keeps its old URL
@@ -85,7 +91,7 @@ export default function (eleventyConfig) {
       p.excerpt[lang] = item.data.excerpt || item.data.description;
       p.minutes[lang] = item.data.minutes;
       if (lang === "bg") {
-        Object.assign(p, { url: item.url, date: item.date.toISOString().slice(0, 10), cats: item.data.cats || [], order: item.data.order || 0 });
+        Object.assign(p, { url: item.url, date: item.date.toISOString().slice(0, 10), cats: item.data.cats || [], order: item.data.order || 0, topics: item.data.topics });
       }
     }
     return [...byKey.values()].filter((p) => p.url)

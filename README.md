@@ -30,7 +30,7 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | `src/_data/videos.json` | Видеата (заглавие, отговор, статия, дата и продължителност за Google). |
 | `src/assets/` | Дизайн системата: `css/` (токени, база, компоненти), `js/site.js`, `icons.svg`, `favicon.svg`. Живият наръчник е на `/styleguide/`. Играта има свои `css/game.css` и `js/game.js` (текстовете в самата игра са в `game.js`). |
 | `src/images/` | Оригиналните изображения. Публикуват се на `/images/…`, а в новите страници се превръщат автоматично в AVIF/WebP/JPEG в няколко размера. |
-| `meet/`, `files/`, `robots.txt`, `llms.txt`, `CNAME` в корена | Публикуват се както са (`STATIC_FILES` в `eleventy.config.js`): пренасочването `/meet/` → `/booking/`, файловете за изтегляне, файловете за търсачки и домейна. Старият сайт е в историята на git (таг `pre-redesign-2026`). |
+| `meet/`, `files/`, `robots.txt`, `CNAME` в корена | Публикуват се както са (`STATIC_FILES` в `eleventy.config.js`): пренасочването `/meet/` → `/booking/`, файловете за изтегляне, `robots.txt` и домейна. `llms.txt` (карта на сайта за AI асистенти) се генерира от данните: `src/llms.njk`. Старият сайт е в историята на git (таг `pre-redesign-2026`). |
 
 ### Езиците
 
