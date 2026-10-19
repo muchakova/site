@@ -13,9 +13,9 @@ import { ogFor } from "./lib/og.js";
 
 const SITE = JSON.parse(readFileSync("src/_data/site.json", "utf8"));
 
-// Files published as they are: the /meet/ redirect, downloadable files, robots.txt, the domain.
-// (llms.txt is generated from the site data: src/llms.njk)
-const STATIC_FILES = ["meet", "files", "robots.txt", "CNAME"];
+// Files published as they are: the /meet/ redirect, downloadable files, the domain.
+// (robots.txt and llms.txt are generated: src/robots.njk, src/llms.njk)
+const STATIC_FILES = ["meet", "files", "CNAME"];
 
 // cache-busting version for /assets (changes whenever a source asset changes)
 function hashDir(dir) {
@@ -58,6 +58,8 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addGlobalData("assetVersion", () => hashDir("src/assets"));
+  // SITE_PREVIEW=1: a build for testers — not indexed by search engines, no visitor statistics
+  eleventyConfig.addGlobalData("preview", process.env.SITE_PREVIEW === "1");
 
   // ---------- responsive images: every <img> in our templates becomes AVIF/WebP/JPEG <picture> ----------
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {

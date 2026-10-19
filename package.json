@@ -17,7 +17,8 @@
     "serve": "node tools/serve.mjs _site 4173",
     "og": "eleventy --quiet && node tools/og-images.mjs",
     "test:launch": "npm run build && STRICT_PENDING=1 node tests/static/pending.mjs",
-    "test:browsers": "playwright test --project=iphone-safari --project=firefox"
+    "test:browsers": "playwright test --project=iphone-safari --project=firefox",
+    "build:preview": "SITE_PREVIEW=1 eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",

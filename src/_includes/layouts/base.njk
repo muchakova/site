@@ -16,7 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ pageDescription }}">
-  {% if noindex %}<meta name="robots" content="noindex, follow">
+  {% if preview %}<meta name="robots" content="noindex, nofollow">
+  {% elif noindex %}<meta name="robots" content="noindex, follow">
   {% endif %}
   {% if i18nExempt %}<meta name="mm:i18n" content="bg-only">
   {% endif %}
@@ -55,7 +56,7 @@
   <link rel="stylesheet" href="/assets/css/site.css?v={{ assetVersion }}">
   {% for href in extraCss or [] %}<link rel="stylesheet" href="{{ href }}?v={{ assetVersion }}">{% endfor %}
   <script src="/assets/js/site.js?v={{ assetVersion }}" defer></script>
-  {% if site.analytics.plausible %}{# visitor statistics without cookies (see the privacy policy); custom events queue until the script arrives #}
+  {% if site.analytics.plausible and not preview %}{# visitor statistics without cookies (see the privacy policy); custom events queue until the script arrives #}
   <script defer data-domain="{{ site.analytics.plausible.domain }}" src="{{ site.analytics.plausible.script }}"></script>
   <script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
   {% endif %}
