@@ -29,8 +29,8 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | `src/_data/services.json` | Четирите услуги на двата езика. |
 | `src/_data/videos.json` | Видеата (заглавие, отговор, статия, дата и продължителност за Google). |
 | `src/assets/` | Дизайн системата: `css/` (токени, база, компоненти), `js/site.js`, `icons.svg`, `favicon.svg`. Живият наръчник е на `/styleguide/`. Играта има свои `css/game.css` и `js/game.js` (текстовете в самата игра са в `game.js`). |
-| `lib/` | Код за build-а: време за четене (`text.js`), структурирани данни за Google (`structured-data.js`), картинка за споделяне на страница (`og.js`). |
-| `tools/` | `og-images.mjs` (`npm run og`: картинките за споделяне в `src/images/og/`), `icons.mjs` (иконките), `fonts.mjs` (шрифтът Inter с ясни l / I / 1), `serve.mjs` (локален сървър за тестовете). |
+| `lib/` | Код за build-а: време за четене (`text.js`), структурирани данни за Google (`structured-data.js`), картинка за споделяне на страница (`og.js`), относителни адреси (`relative-urls.js`, вижте „Един build за всяка папка“). |
+| `tools/` | `og-images.mjs` (`npm run og`: картинките за споделяне в `src/images/og/`), `icons.mjs` (иконките), `fonts.mjs` (шрифтът Inter с ясни l / I / 1), `serve.mjs` (локален сървър за тестовете, по желание в папка), `crawl.mjs` (обхожда публикуван сайт), `publish-new.sh` (тестовата версия, вижте по-долу). |
 | `src/images/` | Оригиналните изображения. Публикуват се на `/images/…`, а в новите страници се превръщат автоматично в AVIF/WebP/JPEG в няколко размера. |
 | `meet/`, `files/`, `robots.txt`, `CNAME` в корена | Публикуват се както са (`STATIC_FILES` в `eleventy.config.js`): пренасочването `/meet/` → `/booking/`, файловете за изтегляне, `robots.txt` и домейна. `llms.txt` (карта на сайта за AI асистенти) се генерира от данните: `src/llms.njk`. Старият сайт е в историята на git (таг `pre-redesign-2026`). |
 
@@ -39,6 +39,15 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 - Всяка страница, която съществува на двата езика, има в началото си еднакъв `key` (напр. `key: services`). Така се свързват `hreflang`, превключвателят на езика и `sitemap.xml`.
 - Ако страница още няма EN версия, връзките от английския сайт водят към BG адреса. Филтърът `urlFor` решава това автоматично.
 - Страница само на български (напр. наръчникът) се отбелязва с `i18nExempt: true`.
+
+### Един build за всяка папка
+
+Готовият сайт работи от корена (`muchakova.com/`) и от всяка папка (`muchakova.com/new/`, `/x/y/` …) без друг build.
+
+- В шаблоните адресите се пишат от корена (`/services/`, `/assets/css/site.css`). Последната стъпка на build-а (`lib/relative-urls.js`) ги превръща в адреси спрямо страницата (`../services/`).
+- Изключения: `404.html` остава с адреси от корена, защото GitHub Pages го показва на всякаква дълбочина. Метаданните (canonical, `og:*`, `hreflang`, JSON-LD, `sitemap.xml`, RSS, `llms.txt`) винаги са пълни адреси към `https://muchakova.com/…`.
+- **Никога не пишете папката (`/new/`) в кода.** В CSS и JS адресите са относителни: `url("../fonts/…")`, `new URL("../icons.svg", document.currentScript.src)`.
+- `npm test` го проверява: `tests/static/relocatable.mjs` и Playwright проектът `mount` (сайтът, сервиран в `/x/y/`).
 
 ### Нова статия
 
@@ -82,16 +91,43 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | Структурирани данни за Google на всяка страница; картинка за споделяне на всяка индексирана страница | `tests/static/structured-data.mjs` |
 | Каноничен адрес, заглавие ≤ 70 и описание 70–160 знака, без повторения, всичко в `sitemap.xml` | `tests/static/seo.mjs` |
 | Валиден HTML | `tests/static/html.mjs` (правила в `.htmlvalidate.json`) |
+| Сайтът работи от всяка папка: няма адреси от корена (освен в 404), всяка относителна връзка намира файла си, имената минават през Jekyll на GitHub Pages | `tests/static/relocatable.mjs`, `tests/static/relative-urls.mjs` |
+| Същото в браузър: сайтът в `/x/y/`, обхождане на всички връзки, картинки, шрифтове и иконки; навигацията и смяната на езика не излизат от папката | `tests/e2e/mount.spec.js` (проект `mount`) |
 | axe (WCAG 2.2 AA) в светла и тъмна тема, конзола без грешки, един `<main>` и `<h1>`, заглавия без прескачане, без хоризонтален скрол; на компютър и на телефон | `tests/e2e/pages.spec.js` |
 | Смяна на език и тема, мобилно меню с клавиатура, видео, филтри, копиране, записване, играта, 404, RSS, статистиката (без бисквитки) | `tests/e2e/interactions.spec.js` |
 | Lighthouse: скорост ≥ 95, достъпност 100, добри практики ≥ 95, SEO 100, LCP < 2 s, CLS < 0,05 | `lighthouserc.json` |
 
-## Тестова версия
+## Тестова версия: muchakova.com/new/
 
-`npm run preview:publish` изгражда тестова версия (не се индексира, без статистика) и я качва в публичното хранилище [muchakova/newsite](https://github.com/muchakova/newsite). Оттам GitHub Pages я показва на **https://preview.muchakova.com**. Качва се само готовият сайт, без изходния код; всяко пускане заменя предишната версия.
+Новият сайт е в папка `new/` на клона `main`, до стария сайт, който не се пипа. Търсачките не го индексират (`noindex`), статистиката е изключена.
+
+```bash
+npm test                          # всичко локално
+DRY_RUN=1 npm run publish:new     # build и проверки; показва промяната, без да публикува
+npm run publish:new               # публикува в https://muchakova.com/new/
+npm run check:new                 # проверява живата версия (publish:new я пуска накрая)
+```
+
+`publish:new` (`tools/publish-new.sh`):
+
+1. Иска чисто работно дърво (публикува последния commit) и локален `main`, който не изостава от GitHub.
+2. Прави тестов build (`SITE_PREVIEW=1`) във временна папка; `_site/` не се пипа. Маха `CNAME`, `robots.txt`, `sitemap.xml`, `llms.txt` и `404.html` (имат смисъл само в корена) и добавя `version.txt` (клон@commit и час).
+3. Проверява го: `relocatable`, `links`, `preview` и обхождане под `/new/` на локален сървър.
+4. Копира го в `new/` на `main` през временен `git worktree`; работната папка остава на текущия клон. Спира, ако се променя нещо извън `new/`.
+5. Commit „New site test version in /new/ from …“ и push на `main`.
+6. Чака `https://muchakova.com/new/version.txt` да покаже новата версия и пуска `check:new`.
+
+Несъществуващ адрес под `/new/` показва 404 страницата на стария сайт: GitHub Pages ползва само тази в корена. `/new/booking/` е истинският календар, затова тестовите участници спират преди плащане.
 
 ## Публикуване
 
-`.github/workflows/site.yml` изгражда и тества всяка промяна. Само клонът `main` се публикува в GitHub Pages.
+- Няма GitHub Actions и build в GitHub. Всичко се изгражда и проверява локално, на тази машина. GitHub Pages само показва файловете от клона `main` („Deploy from a branch“, корен).
+- Изходният код е в клона `redesign`. В `main` е само това, което се публикува.
 
-> **Важно при пускането:** в GitHub → Settings → Pages → *Build and deployment* източникът трябва да се смени от „Deploy from a branch“ на **„GitHub Actions“** в същия момент, в който новият сайт влиза в `main`. Иначе GitHub ще публикува директно файловете от репото, а там изображенията вече са в `src/images/`.
+### Окончателна замяна (по-късно)
+
+1. `npm test`; production build във временна папка (`npx eleventy --output=<папка>`), проверките с `SITE_DIR=<папка>` и обхождане от корена.
+2. В worktree на `main`: `git rm` на стария сайт, копиране на build-а (с `CNAME` и `404.html`), `.nojekyll` в корена. Решение какво става с `new/`.
+3. Преди commit: `legacy-urls` срещу новия корен (старите адреси още работят); `CNAME` е непроменен.
+4. Push на `main` и `node tools/crawl.mjs https://muchakova.com/`.
+5. Връщане назад: `git revert` на този commit. Старият сайт е и в тага `pre-redesign-2026`.

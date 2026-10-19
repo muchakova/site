@@ -11,7 +11,8 @@ export default defineConfig({
   fullyParallel: true,
   reporter: process.env.CI ? "github" : "list",
   use: { baseURL: "http://127.0.0.1:4173", reducedMotion: "reduce" },
-  webServer: [
+  // no local servers when checking the published test version (MOUNT_URL=https://muchakova.com/new/)
+  webServer: process.env.MOUNT_URL ? undefined : [
     { command: "node tools/serve.mjs _site 4173", url: "http://127.0.0.1:4173/", reuseExistingServer: !process.env.CI },
     { command: "node tools/serve.mjs _site 4174 /x/y/", url: "http://127.0.0.1:4174/x/y/", reuseExistingServer: !process.env.CI },
   ],
