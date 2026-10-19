@@ -8,6 +8,9 @@ import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { plainText as plain, readingMinutes } from "./lib/text.js";
+import { structuredData, breadcrumbLd } from "./lib/structured-data.js";
+
+const SITE = JSON.parse(readFileSync("src/_data/site.json", "utf8"));
 
 // Files published as they are: the /meet/ redirect, downloadable files, crawler files, the domain.
 const STATIC_FILES = ["meet", "files", "robots.txt", "llms.txt", "CNAME"];
@@ -57,6 +60,12 @@ export default function (eleventyConfig) {
     urlPath: "/img/",
     outputDir: "_site/img/",
     defaultAttributes: { loading: "lazy", decoding: "async", sizes: "(min-width: 860px) 440px, 100vw" },
+  });
+
+  // ---------- structured data: page graph (filter, in base.njk) + breadcrumbs from the visible breadcrumb ----------
+  eleventyConfig.addFilter("structuredData", structuredData);
+  eleventyConfig.addTransform("breadcrumb-ld", function (content) {
+    return this.page.outputPath?.endsWith(".html") ? breadcrumbLd(content, SITE.url) : content;
   });
 
   // ---------- post list: one entry per article with both languages, built from the post files ----------

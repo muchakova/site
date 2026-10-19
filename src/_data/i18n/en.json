@@ -6,7 +6,18 @@
     "name": "Marina Muchakova",
     "role": "Tax Consultant",
     "tagline": "Tax consultant. I help individuals and businesses hack their taxes — legally.",
-    "description": "Marina Muchakova — tax consultant with a law degree and over 15 years of experience. Crypto tax and MiCA, investment income, international tax, business structuring."
+    "description": "Marina Muchakova — tax consultant with a law degree and over 15 years of experience. Crypto tax and MiCA, investment income, international tax, business structuring.",
+    "city": "Sofia",
+    "knowsAbout": [
+      "Tax law",
+      "Crypto taxation",
+      "MiCA",
+      "Investment income",
+      "Government securities",
+      "Business structuring",
+      "Double taxation treaties",
+      "VAT"
+    ]
   },
   "a11y": {
     "skip": "Skip to content",

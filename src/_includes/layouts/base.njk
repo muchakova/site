@@ -4,6 +4,10 @@
 {%- set pageTitle = (shortTitle + " — " + T.site.name) if shortTitle else T.home.title -%}
 {%- if pageTitle.length > 65 %}{% set pageTitle = shortTitle %}{% endif -%}
 {%- set pageDescription = description or T.site.description -%}
+{%- set map = collections.i18nMap -%}
+{%- set ogUrl = site.url + (ogImage or '/images/og-site.jpg') -%}
+{%- set ldKind = "article" if ogType == "article" else (key if key in ["home", "about", "services", "booking", "contact", "blog"] else "") -%}
+{%- set ldLinks = { home: 'home' | urlFor(lang, map, site.routes), booking: 'booking' | urlFor(lang, map, site.routes), blog: 'blog' | urlFor(lang, map, site.routes) } -%}
 <!doctype html>
 <html lang="{{ lang }}">
 <head>
@@ -28,12 +32,13 @@
   <meta property="og:description" content="{{ pageDescription }}">
   {% if not is404 %}<meta property="og:url" content="{{ site.url }}{{ page.url }}">
   {% endif %}
-  <meta property="og:image" content="{{ site.url }}{{ ogImage or '/images/og-site.jpg' }}">
+  <meta property="og:image" content="{{ ogUrl }}">
   <meta property="og:locale" content="{{ T.locale }}">
   <meta property="og:locale:alternate" content="{{ i18n[other].locale }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#F2F4FA" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#080C19" media="(prefers-color-scheme: dark)">
+  {{ { kind: ldKind, url: page.url, lang: lang, title: title or T.home.title, description: pageDescription, date: page.date, updated: updated, keywords: keywords, tag: tag, image: ogUrl, site: site, T: T, other: i18n[other], links: ldLinks } | structuredData | safe }}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="{{ T.feed.title }}" href="{{ '/feed.xml' if lang == 'bg' else '/en/feed.xml' }}">
   <script>try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
