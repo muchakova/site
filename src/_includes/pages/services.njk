@@ -60,7 +60,7 @@
     <div class="section-head"><div class="section-head__text"><p class="eyebrow">{{ S.termsEyebrow }}</p><h2 id="terms-title">{{ S.termsTitle }}</h2></div></div>
     <dl class="terms">
       {% for t in S.terms %}
-      <div><dt>{{ t.title }}</dt><dd>{% if t.text %}<span>{{ t.text }}</span>{% endif %}{% if t.pending %}{% pending t.pending | replace("q", ""), T.pending[t.pending] %}{% endif %}</dd></div>
+      {% if t.text or showPending %}<div><dt>{{ t.title }}</dt><dd>{% if t.text %}<span>{{ t.text }}</span>{% endif %}{% if t.pending %}{% pending t.pending | replace("q", ""), T.pending[t.pending] %}{% endif %}</dd></div>{% endif %}
       {% endfor %}
     </dl>
   </div>
@@ -71,7 +71,7 @@
     <div class="section-head"><div class="section-head__text"><h2 id="faq-title">{{ T.home.faqTitle }}</h2></div></div>
     <div class="faq measure">
       {% for f in S.faq %}
-      <details><summary>{{ f.q }}</summary><div class="stack" style="--stack: var(--space-2xs)">{% if f.a %}<p>{{ f.a }}</p>{% endif %}{% if f.pending %}<p>{% pending f.pending | replace("q", ""), T.pending[f.pending] %}</p>{% endif %}</div></details>
+      {% if f.a or showPending %}<details><summary>{{ f.q }}</summary><div class="stack" style="--stack: var(--space-2xs)">{% if f.a %}<p>{{ f.a }}</p>{% endif %}{% if f.pending and showPending %}<p>{% pending f.pending | replace("q", ""), T.pending[f.pending] %}</p>{% endif %}</div></details>{% endif %}
       {% endfor %}
     </div>
   </div>

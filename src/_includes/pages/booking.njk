@@ -55,7 +55,7 @@
     <div class="card">
       <h2 id="prepare-title" class="booking-aside__title">{{ B.prepareTitle }}</h2>
       <ul class="checklist">{% for p in B.prepare %}<li>{{ p }}</li>{% endfor %}</ul>
-      <p>{% pending "4", T.pending.q4 %}</p>
+      {% if showPending %}<p>{% pending "4", T.pending.q4 %}</p>{% endif %}
     </div>
     <div class="card">
       <h2 class="booking-aside__title">{{ B.nextTitle }}</h2>
@@ -64,8 +64,8 @@
     <div class="card">
       <h2 class="booking-aside__title">{{ B.payTitle }}</h2>
       <p class="card__text">{{ B.pay }}</p>
-      <p>{% pending "1", T.pending.q1 %}</p>
-      <p>{% pending "2", T.pending.q2 %}</p>
+      {% if showPending %}<p>{% pending "1", T.pending.q1 %}</p>{% endif %}
+      {% if showPending %}<p>{% pending "2", T.pending.q2 %}</p>{% endif %}
     </div>
     <p class="muted" style="font-size: .9rem">{{ B.privacy }} <a href="{{ 'privacy' | urlFor(lang, map, site.routes) }}">{{ B.privacyLink }}</a></p>
   </div>

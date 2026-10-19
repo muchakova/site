@@ -181,10 +181,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("icon", (name, cls = "") =>
     `<svg class="icon${cls ? " " + cls : ""}" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#${name}"/></svg>`);
 
-  // Visible placeholder for an answer we are still waiting for (questions ⟨?N⟩ in docs/redesign).
-  // tests/static/pending.mjs lists them; the launch build fails while any remain.
-  eleventyConfig.addShortcode("pending", (n, label, block = false) =>
-    `<span class="pending${block ? " pending--block" : ""}" data-pending="?${n}"><strong>⟨?${n}⟩</strong> ${label}</span>`);
+  // Placeholder for an answer we are still waiting for (questions ⟨?N⟩ in docs/redesign).
+  // Hidden by default (the published site leaves them out, and blocks that would be empty are skipped);
+  // SHOW_PENDING=1 npm start shows them as yellow boxes. tests/static/pending.mjs lists them either way.
+  const SHOW_PENDING = process.env.SHOW_PENDING === "1";
+  eleventyConfig.addGlobalData("showPending", SHOW_PENDING);
+  eleventyConfig.addShortcode("pending", (n, label, block = false) => (SHOW_PENDING
+    ? `<span class="pending${block ? " pending--block" : ""}" data-pending="?${n}"><strong>⟨?${n}⟩</strong> ${label}</span>` : ""));
 
   // sitemap entries: indexable template pages with their language alternates
   eleventyConfig.addFilter("sitemapPages", (items) =>

@@ -9,7 +9,7 @@
     <nav class="breadcrumb" aria-label="{{ T.a11y.breadcrumb }}"><ol><li><a href="{{ home }}">{{ T.nav.home }}</a></li><li><a href="{{ page.url }}" aria-current="page">{{ title }}</a></li></ol></nav>
     <h1 id="page-title" style="margin-top: var(--space-m)">{{ title }}</h1>
     <p class="lead measure">{{ C.lead }}</p>
-    <p style="margin-top: var(--space-xs)">{% pending "9", T.pending.q9 %}</p>
+    {% if showPending %}<p style="margin-top: var(--space-xs)">{% pending "9", T.pending.q9 %}</p>{% endif %}
   </div>
 </section>
 
@@ -54,7 +54,7 @@
     <section aria-labelledby="location-title">
       <h2 id="location-title" class="contact-group__title">{{ C.location }}</h2>
       <p class="contact-item contact-item--static">{% icon "map-pin" %}{{ C.locationText }}</p>
-      <p style="margin-top: var(--space-xs)">{% pending "5", T.pending.q5 %}</p>
+      {% if showPending %}<p style="margin-top: var(--space-xs)">{% pending "5", T.pending.q5 %}</p>{% endif %}
     </section>
   </div>
 </div>

@@ -16,7 +16,7 @@ updated: 2026-10-19
 </ul>
 
 <h2 id="administrator">Кой отговаря за данните</h2>
-<p>Администратор на личните данни, събирани чрез сайта, е {% pending "13", T.pending.q13 %}</p>
+{% if showPending %}<p>Администратор на личните данни, събирани чрез сайта, е {% pending "13", T.pending.q13 %}</p>{% endif %}
 <p>За всичко, свързано с личните ви данни, пишете на <a href="mailto:{{ site.email }}">{{ site.email }}</a> или се обадете на <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>.</p>
 
 <h2 id="razglezhdane">Когато разглеждате сайта</h2>
@@ -60,7 +60,7 @@ updated: 2026-10-19
 
 <h2 id="srokove">Колко време пазя данните</h2>
 <ul>
-  <li><strong>Кореспонденция и бележки от консултации:</strong> {% pending "14", T.pending.q14 %}</li>
+{% if showPending %}  <li><strong>Кореспонденция и бележки от консултации:</strong> {% pending "14", T.pending.q14 %}</li>{% endif %}
   <li><strong>Счетоводни документи</strong> (фактури, данни за плащания): в сроковете по счетоводното и данъчното законодателство.</li>
   <li><strong>Сървърни журнали:</strong> според политиката на GitHub.</li>
 </ul>

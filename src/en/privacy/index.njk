@@ -16,7 +16,7 @@ updated: 2026-10-19
 </ul>
 
 <h2 id="controller">Who is responsible for your data</h2>
-<p>The controller of the personal data collected through this site is {% pending "13", T.pending.q13 %}</p>
+{% if showPending %}<p>The controller of the personal data collected through this site is {% pending "13", T.pending.q13 %}</p>{% endif %}
 <p>For anything about your personal data, write to <a href="mailto:{{ site.email }}">{{ site.email }}</a> or call <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>.</p>
 
 <h2 id="browsing">When you browse the site</h2>
@@ -60,7 +60,7 @@ updated: 2026-10-19
 
 <h2 id="retention">How long I keep data</h2>
 <ul>
-  <li><strong>Correspondence and consultation notes:</strong> {% pending "14", T.pending.q14 %}</li>
+{% if showPending %}  <li><strong>Correspondence and consultation notes:</strong> {% pending "14", T.pending.q14 %}</li>{% endif %}
   <li><strong>Accounting records</strong> (invoices, payment details): for the periods required by accounting and tax law.</li>
   <li><strong>Server logs:</strong> under GitHub’s policy.</li>
 </ul>

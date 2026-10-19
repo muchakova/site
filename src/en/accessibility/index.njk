@@ -40,4 +40,4 @@ updated: 2026-10-19
 
 <h2 id="feedback">Feedback</h2>
 <p>If you run into a problem or need content in another format, write to <a href="mailto:{{ site.email }}">{{ site.email }}</a> or call <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>. Describe the page and the problem, and I will help you get the information in a way that works for you.</p>
-<p>{% pending "9", T.pending.q9 %}</p>
+{% if showPending %}<p>{% pending "9", T.pending.q9 %}</p>{% endif %}
