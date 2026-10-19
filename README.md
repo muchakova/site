@@ -82,6 +82,10 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | Смяна на език и тема, мобилно меню с клавиатура, видео, филтри, копиране, записване, играта, 404, RSS, статистиката (без бисквитки) | `tests/e2e/interactions.spec.js` |
 | Lighthouse: скорост ≥ 95, достъпност 100, добри практики ≥ 95, SEO 100, LCP < 2 s, CLS < 0,05 | `lighthouserc.json` |
 
+## Тестова версия
+
+`npm run preview:publish` изгражда тестова версия (не се индексира, без статистика) и я качва в публичното хранилище [muchakova/newsite](https://github.com/muchakova/newsite). Оттам GitHub Pages я показва на **https://preview.muchakova.com**. Качва се само готовият сайт, без изходния код; всяко пускане заменя предишната версия.
+
 ## Публикуване
 
 `.github/workflows/site.yml` изгражда и тества всяка промяна. Само клонът `main` се публикува в GitHub Pages.

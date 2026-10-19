@@ -18,7 +18,8 @@
     "og": "eleventy --quiet && node tools/og-images.mjs",
     "test:launch": "npm run build && STRICT_PENDING=1 node tests/static/pending.mjs",
     "test:browsers": "playwright test --project=iphone-safari --project=firefox",
-    "build:preview": "SITE_PREVIEW=1 eleventy"
+    "build:preview": "SITE_PREVIEW=1 eleventy",
+    "preview:publish": "bash tools/publish-preview.sh"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
