@@ -49,8 +49,7 @@ export default function (eleventyConfig) {
     "src/assets/css/styleguide.css": "assets/css/styleguide.css",
     "src/assets/css/game.css": "assets/css/game.css",
     "src/images/og-game.png": "game/og-game.png",   // the game's share image keeps its old URL
-    "node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": "assets/fonts/inter-latin.woff2",
-    "node_modules/@fontsource-variable/inter/files/inter-cyrillic-wght-normal.woff2": "assets/fonts/inter-cyrillic.woff2",
+    "src/assets/fonts": "assets/fonts",   // Inter with cv05/cv08 (tools/fonts.mjs)
     // the game's display and typewriter fonts (only /game/ loads them)
     "node_modules/@fontsource/russo-one/files/russo-one-latin-400-normal.woff2": "assets/fonts/russo-one-latin.woff2",
     "node_modules/@fontsource/russo-one/files/russo-one-cyrillic-400-normal.woff2": "assets/fonts/russo-one-cyrillic.woff2",
