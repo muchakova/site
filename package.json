@@ -10,7 +10,7 @@
     "build": "eleventy",
     "start": "eleventy --serve --port=8080",
     "clean": "rm -rf _site",
-    "test": "npm run build && npm run test:static && npm run test:e2e",
+    "test": "npm run clean && npm run build && npm run test:static && npm run test:e2e",
     "test:static": "node tests/static/links.mjs && node tests/static/legacy-urls.mjs && node tests/static/i18n.mjs && node tests/static/pending.mjs && node tests/static/structured-data.mjs && node tests/static/seo.mjs && node tests/static/html.mjs",
     "test:e2e": "playwright test --project=desktop --project=phone",
     "test:lighthouse": "lhci autorun",
@@ -32,6 +32,7 @@
     "@playwright/test": "1.64.1",
     "html-validate": "9.7.1",
     "inter-ui": "4.1.1",
+    "posthtml": "0.16.7",
     "subset-font": "2.9.0"
   }
 }

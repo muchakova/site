@@ -10,6 +10,8 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { plainText as plain, readingMinutes } from "./lib/text.js";
 import { structuredData, breadcrumbLd } from "./lib/structured-data.js";
 import { ogFor } from "./lib/og.js";
+import { relativizeUrls } from "./lib/relative-urls.js";
+import { basename, extname } from "node:path";
 
 const SITE = JSON.parse(readFileSync("src/_data/site.json", "utf8"));
 
@@ -65,8 +67,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["avif", "webp", "jpeg"],
     widths: [400, 800, 1200],
-    urlPath: "/img/",
-    outputDir: "_site/img/",
+    urlPath: "/img/",                  // written into <output>/img/ (follows --output); made page-relative by "relative-urls"
+    // readable names that never start with "_" or "-": GitHub Pages (Jekyll) skips files starting with "_"
+    filenameFormat: (id, src, width, format) =>
+      `${basename(src, extname(src)).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "img"}-${id}-${width}.${format}`,
     defaultAttributes: { loading: "lazy", decoding: "async", sizes: "(min-width: 860px) 440px, 100vw" },
   });
 
@@ -194,6 +198,16 @@ export default function (eleventyConfig) {
     items.filter((i) => i.url && !i.data.noindex && !i.data.eleventyExcludeFromCollections && i.outputPath?.endsWith(".html")));
 
   eleventyConfig.setNunjucksEnvironmentOptions({ trimBlocks: true, lstripBlocks: true });
+
+  // ---------- one build for any folder: must stay the LAST transform ----------
+  // Templates write root-absolute URLs ("/services/"); here every one of them in an HTML attribute becomes
+  // relative to the page ("../services/"), so the same output works at muchakova.com/ and at muchakova.com/new/.
+  // Absolute metadata URLs (https://muchakova.com/…) stay as they are. The 404 page keeps root URLs, because
+  // GitHub Pages serves it for missing addresses at any depth.
+  eleventyConfig.addTransform("relative-urls", function (content) {
+    const { url, outputPath } = this.page;
+    return outputPath?.endsWith(".html") && url !== "/404.html" ? relativizeUrls(content, url) : content;
+  });
 
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },

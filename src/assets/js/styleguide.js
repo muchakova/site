@@ -1,17 +1,18 @@
 /* Style guide page only: icon list + live contrast table */
-/* style-guide only: icon list + live contrast table */
 (function () {
+  // the sprite next to this script (assets/icons.svg), wherever the site is published
+  var SPRITE = new URL('../icons.svg', document.currentScript.src).href;
   var list = document.querySelector('[data-icon-list]');
   var sprite = document.querySelector('svg[data-sprite]');
   function fillIcons(names) {
     names.forEach(function (n) {
       var li = document.createElement('li');
-      li.innerHTML = '<svg class="icon" aria-hidden="true" focusable="false"><use href="' + (sprite ? '#' : '/assets/icons.svg#') + n + '"/></svg><span>' + n + '</span>';
+      li.innerHTML = '<svg class="icon" aria-hidden="true" focusable="false"><use href="' + (sprite ? '#' : SPRITE + '#') + n + '"/></svg><span>' + n + '</span>';
       list.appendChild(li);
     });
   }
   if (sprite) fillIcons([].map.call(sprite.querySelectorAll('symbol'), function (s) { return s.id; }));
-  else fetch('/assets/icons.svg').then(function (r) { return r.text(); }).then(function (t) {
+  else fetch(SPRITE).then(function (r) { return r.text(); }).then(function (t) {
     fillIcons((t.match(/<symbol id="([^"]+)"/g) || []).map(function (m) { return m.slice(12, -1); }));
   });
 

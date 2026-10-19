@@ -14,7 +14,7 @@
         </ul>
       </nav>
       <div class="header-tools">
-        <nav aria-label="{{ T.a11y.langNav }}"><a class="icon-btn" href="{{ otherUrl }}" hreflang="{{ other }}" lang="{{ other }}">{{ T.a11y.otherLangShort }}<span class="sr-only"> · {{ T.a11y.otherLangName }}</span></a></nav>
+        <nav aria-label="{{ T.a11y.langNav }}"><a class="icon-btn" href="{{ otherUrl }}" data-lang-switch hreflang="{{ other }}" lang="{{ other }}">{{ T.a11y.otherLangShort }}<span class="sr-only"> · {{ T.a11y.otherLangName }}</span></a></nav>
         <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false">
           {% icon "moon", "icon-moon" %}{% icon "sun", "icon-sun" %}<span class="sr-only">{{ T.a11y.themeDark }}</span>
         </button>

@@ -11,8 +11,11 @@
   var lang = root.lang === 'en' ? 'en' : 'bg';
   var oldAnchor = location.hash.match(/^#(bg|en)-\d+$/);
   if (oldAnchor && oldAnchor[1] !== lang) {
+    // only when the page exists in that language (hreflang pair); go through the visible language link,
+    // which is relative, so this also works when the site is published in a folder
     var alt = document.querySelector('link[rel="alternate"][hreflang="' + oldAnchor[1] + '"]');
-    if (alt) location.replace(alt.getAttribute('href').replace(/^https?:\/\/[^/]+/, '') + location.hash);
+    var link = document.querySelector('a[data-lang-switch][hreflang="' + oldAnchor[1] + '"]');
+    if (alt && link) location.replace(link.href.split('#')[0] + location.hash);
   }
 
   /* ---------- Theme: system by default, manual override remembered ----------
