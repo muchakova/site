@@ -40,7 +40,7 @@ fi
 git branch -r --contains HEAD | grep -q . || echo "Note: $src is not on GitHub yet (git push) — the published files name it in version.txt."
 
 say "2/7 Build ($src, SITE_PREVIEW=1)"
-SITE_PREVIEW=1 npx --no eleventy --quiet --output="$tmp/site"
+SITE_PREVIEW=1 node_modules/.bin/eleventy --quiet --output="$tmp/site"
 for f in "${ROOT_ONLY[@]}"; do rm -f "$tmp/site/$f"; done
 printf '%s %s\n' "$src" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$tmp/site/version.txt"
 
