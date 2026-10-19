@@ -9,6 +9,7 @@ import { join } from "node:path";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { plainText as plain, readingMinutes } from "./lib/text.js";
 import { structuredData, breadcrumbLd } from "./lib/structured-data.js";
+import { ogFor } from "./lib/og.js";
 
 const SITE = JSON.parse(readFileSync("src/_data/site.json", "utf8"));
 
@@ -64,6 +65,7 @@ export default function (eleventyConfig) {
 
   // ---------- structured data: page graph (filter, in base.njk) + breadcrumbs from the visible breadcrumb ----------
   eleventyConfig.addFilter("structuredData", structuredData);
+  eleventyConfig.addFilter("ogFor", ogFor);
   eleventyConfig.addTransform("breadcrumb-ld", function (content) {
     return this.page.outputPath?.endsWith(".html") ? breadcrumbLd(content, SITE.url) : content;
   });

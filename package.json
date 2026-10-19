@@ -15,6 +15,7 @@
     "test:e2e": "playwright test",
     "test:lighthouse": "lhci autorun",
     "serve": "node tools/serve.mjs _site 4173",
+    "og": "eleventy --quiet && node tools/og-images.mjs",
     "test:launch": "npm run build && STRICT_PENDING=1 node tests/static/pending.mjs"
   },
   "devDependencies": {
