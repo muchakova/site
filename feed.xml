@@ -6,7 +6,15 @@
     <atom:link href="https://muchakova.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Статии за данъци, инвестиции, крипто и ДДС от Марина Мучакова, данъчен консултант.</description>
     <language>bg</language>
-    <lastBuildDate>Thu, 08 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Проверка от НАП за местно лице, чужди сметки и криптоборси</title>
+      <link>https://muchakova.com/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html</guid>
+      <pubDate>Tue, 27 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>Разбор на реално искане от НАП (с заличени лични данни): проверка или ревизия, срокове, дали да подпишете съгласие за банкова тайна, как се обжалва и какво НАП реално знае за сметките ви в Revolut, Wise, при брокерите и в криптоборсите към октомври 2026 г.</description>
+    </item>
     <item>
       <title>Tax-loss harvesting по български</title>
       <link>https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html</link>

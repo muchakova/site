@@ -34,7 +34,12 @@ The site is in Bulgarian at the root and in English under /en/; every page links
 - LoopForge, a music loop studio in the browser (pet project): https://muchakova.github.io/looper/
 - RSS: https://muchakova.com/feed.xml (Bulgarian) · https://muchakova.com/en/feed.xml (English)
 
-## Blog articles (29)
+## Blog articles (30)
+
+### Проверка от НАП за местно лице, чужди сметки и криптоборси / NRA Tax Residency Check: Foreign Accounts and Crypto Exchanges
+- URL: https://muchakova.com/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html · English: https://muchakova.com/en/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html
+- Date: 2026-10-27
+- Topics: A real NRA request taken apart (personal data removed): inspection or tax audit, deadlines, whether to sign the bank secrecy waiver, how to appeal, and what the NRA actually knows about your Revolut, Wise, broker and crypto exchange accounts as of October 2026.
 
 ### Tax-loss harvesting по български / Tax-Loss Harvesting, the Bulgarian Way
 - URL: https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html · English: https://muchakova.com/en/blog/tax-loss-harvesting-po-balgarski.html

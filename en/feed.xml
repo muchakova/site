@@ -6,7 +6,15 @@
     <atom:link href="https://muchakova.com/en/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Articles on tax, investing, crypto and VAT by Marina Muchakova, tax consultant.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>NRA Tax Residency Check: Foreign Accounts and Crypto Exchanges</title>
+      <link>https://muchakova.com/en/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html</guid>
+      <pubDate>Tue, 27 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Taxes</category>
+      <description>A real NRA request taken apart (personal data removed): inspection or tax audit, deadlines, whether to sign the bank secrecy waiver, how to appeal, and what the NRA actually knows about your Revolut, Wise, broker and crypto exchange accounts as of October 2026.</description>
+    </item>
     <item>
       <title>Tax-Loss Harvesting, the Bulgarian Way</title>
       <link>https://muchakova.com/en/blog/tax-loss-harvesting-po-balgarski.html</link>
