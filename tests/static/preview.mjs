@@ -1,5 +1,5 @@
-// The test version (SITE_PREVIEW=1 build, published in /new/): kept out of search engines and statistics.
-// Run by tools/publish-new.sh on the folder it is about to publish (SITE_DIR=…).
+// The test version (SITE_PREVIEW=1 build, npm run build:preview): kept out of search engines and statistics.
+// Run on a test build with SITE_DIR=<folder>.
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { SITE, htmlFiles, read, urlOf, isNewPage, report } from "./_lib.mjs";

@@ -48,7 +48,7 @@
      <header class="site-header"> = banner landmark.
      <nav aria-label="Главна навигация">; current page link has aria-current="page", a link to the section of a sub-page has aria-current="true".
      Mobile: <button aria-expanded aria-controls="site-menu"> (disclosure); Esc closes, focus returns. */
-  /* only in the test version (SITE_PREVIEW=1, muchakova.com/new/) */
+  /* only in the test version (SITE_PREVIEW=1, npm run build:preview) */
   .preview-banner {
     background: var(--color-warning-soft); color: var(--color-warning);
     border-bottom: 1px solid currentColor;

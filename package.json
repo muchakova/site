@@ -20,8 +20,8 @@
     "test:browsers": "playwright test --project=iphone-safari --project=firefox",
     "build:preview": "SITE_PREVIEW=1 eleventy",
     "test:mount": "playwright test --project=mount",
-    "publish:new": "bash tools/publish-new.sh",
-    "check:new": "node tools/crawl.mjs https://muchakova.com/new/ && MOUNT_URL=https://muchakova.com/new/ playwright test --project=mount"
+    "publish:site": "bash tools/publish.sh",
+    "check:site": "node tools/crawl.mjs https://muchakova.com/ && MOUNT_URL=https://muchakova.com/ playwright test --project=mount"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",

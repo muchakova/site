@@ -2,7 +2,7 @@
 // npm run test:e2e      → desktop + phone (Chrome) + mount (the same build served in the folder /x/y/)
 // npm run test:browsers → the same tests in Safari's engine on an iPhone and in Firefox
 //                         (needs: npx playwright install webkit firefox)
-// npm run check:new     → the mount checks against the published test version, https://muchakova.com/new/
+// npm run check:site    → the mount checks against the live site, https://muchakova.com/
 import { defineConfig, devices } from "@playwright/test";
 
 const chrome = process.env.CI ? {} : { channel: "chrome" };
@@ -11,7 +11,7 @@ export default defineConfig({
   fullyParallel: true,
   reporter: process.env.CI ? "github" : "list",
   use: { baseURL: "http://127.0.0.1:4173", reducedMotion: "reduce" },
-  // no local servers when checking the published test version (MOUNT_URL=https://muchakova.com/new/)
+  // no local servers when checking the live site (MOUNT_URL=https://muchakova.com/)
   webServer: process.env.MOUNT_URL ? undefined : [
     { command: "node tools/serve.mjs _site 4173", url: "http://127.0.0.1:4173/", reuseExistingServer: !process.env.CI },
     { command: "node tools/serve.mjs _site 4174 /x/y/", url: "http://127.0.0.1:4174/x/y/", reuseExistingServer: !process.env.CI },

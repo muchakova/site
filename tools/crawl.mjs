@@ -1,5 +1,5 @@
-// Crawls a published copy of the site from a start folder (e.g. https://muchakova.com/new/ or a local
-// test server) and reports every internal URL that does not answer 200 or that leads OUT of the folder.
+// Crawls a published copy of the site from a start folder (e.g. https://muchakova.com/ or a local
+// test server in a folder) and reports every internal URL that does not answer 200 or that leads OUT of the folder.
 // Followed: relative and root-absolute URLs in HTML attributes (href, src, srcset, use href, …), CSS url()
 // and @import, and the web manifest (start_url, icons). Absolute https:// URLs are metadata or external
 // links and are not followed (the site's metadata points at https://muchakova.com on purpose).

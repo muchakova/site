@@ -1,5 +1,5 @@
 // The same build, served in a folder: locally at http://127.0.0.1:4174/x/y/ (tools/serve.mjs mount), or the
-// published test version with MOUNT_URL=https://muchakova.com/new/. Every request must stay inside the
+// live site with MOUNT_URL=https://muchakova.com/. Every request must stay inside the
 // folder and succeed; pictures, fonts and icons load; navigation never leaves the folder.
 import { test, expect } from "./fixtures.js";
 import { crawl } from "../../tools/crawl.mjs";

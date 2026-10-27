@@ -30,7 +30,7 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | `src/_data/videos.json` | Видеата (заглавие, отговор, статия, дата и продължителност за Google). |
 | `src/assets/` | Дизайн системата: `css/` (токени, база, компоненти), `js/site.js`, `icons.svg`, `favicon.svg`. Живият наръчник е на `/styleguide/`. Играта има свои `css/game.css` и `js/game.js` (текстовете в самата игра са в `game.js`). |
 | `lib/` | Код за build-а: време за четене (`text.js`), структурирани данни за Google (`structured-data.js`), картинка за споделяне на страница (`og.js`), относителни адреси (`relative-urls.js`, вижте „Един build за всяка папка“). |
-| `tools/` | `og-images.mjs` (`npm run og`: картинките за споделяне в `src/images/og/`), `icons.mjs` (иконките), `fonts.mjs` (шрифтът Inter с ясни l / I / 1), `serve.mjs` (локален сървър за тестовете, по желание в папка), `crawl.mjs` (обхожда публикуван сайт), `publish-new.sh` (тестовата версия, вижте по-долу). |
+| `tools/` | `og-images.mjs` (`npm run og`: картинките за споделяне в `src/images/og/`), `icons.mjs` (иконките), `fonts.mjs` (шрифтът Inter с ясни l / I / 1), `serve.mjs` (локален сървър за тестовете, по желание в папка), `crawl.mjs` (обхожда публикуван сайт), `publish.sh` (публикуване, вижте „Публикуване“). |
 | `src/images/` | Оригиналните изображения. Публикуват се на `/images/…`, а в новите страници се превръщат автоматично в AVIF/WebP/JPEG в няколко размера. |
 | `meet/`, `files/`, `robots.txt`, `CNAME` в корена | Публикуват се както са (`STATIC_FILES` в `eleventy.config.js`): пренасочването `/meet/` → `/booking/`, файловете за изтегляне, `robots.txt` и домейна. `llms.txt` (карта на сайта за AI асистенти) се генерира от данните: `src/llms.njk`. Старият сайт е в историята на git (таг `pre-redesign-2026`). |
 
@@ -42,11 +42,11 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 
 ### Един build за всяка папка
 
-Готовият сайт работи от корена (`muchakova.com/`) и от всяка папка (`muchakova.com/new/`, `/x/y/` …) без друг build.
+Готовият сайт работи от корена (`muchakova.com/`) и от всяка папка (`/x/y/` …) без друг build.
 
 - В шаблоните адресите се пишат от корена (`/services/`, `/assets/css/site.css`). Последната стъпка на build-а (`lib/relative-urls.js`) ги превръща в адреси спрямо страницата (`../services/`).
 - Изключения: `404.html` остава с адреси от корена, защото GitHub Pages го показва на всякаква дълбочина. Метаданните (canonical, `og:*`, `hreflang`, JSON-LD, `sitemap.xml`, RSS, `llms.txt`) винаги са пълни адреси към `https://muchakova.com/…`.
-- **Никога не пишете папката (`/new/`) в кода.** В CSS и JS адресите са относителни: `url("../fonts/…")`, `new URL("../icons.svg", document.currentScript.src)`.
+- **Никога не пишете папка в кода.** В CSS и JS адресите са относителни: `url("../fonts/…")`, `new URL("../icons.svg", document.currentScript.src)`.
 - `npm test` го проверява: `tests/static/relocatable.mjs` и Playwright проектът `mount` (сайтът, сервиран в `/x/y/`).
 
 ### Нова статия
@@ -97,37 +97,29 @@ npm run test:lighthouse   # Lighthouse: скорост, достъпност, SE
 | Смяна на език и тема, мобилно меню с клавиатура, видео, филтри, копиране, записване, играта, 404, RSS, статистиката (без бисквитки) | `tests/e2e/interactions.spec.js` |
 | Lighthouse: скорост ≥ 95, достъпност 100, добри практики ≥ 95, SEO 100, LCP < 2 s, CLS < 0,05 | `lighthouserc.json` |
 
-## Тестова версия: muchakova.com/new/
-
-Новият сайт е в папка `new/` на клона `main`, до стария сайт, който не се пипа. Търсачките не го индексират (`noindex`), статистиката е изключена.
-
-```bash
-npm test                          # всичко локално
-DRY_RUN=1 npm run publish:new     # build и проверки; показва промяната, без да публикува
-npm run publish:new               # публикува в https://muchakova.com/new/
-npm run check:new                 # проверява живата версия (publish:new я пуска накрая)
-```
-
-`publish:new` (`tools/publish-new.sh`):
-
-1. Иска чисто работно дърво (публикува последния commit) и локален `main`, който не изостава от GitHub.
-2. Прави тестов build (`SITE_PREVIEW=1`) във временна папка; `_site/` не се пипа. Маха `CNAME`, `robots.txt`, `sitemap.xml`, `llms.txt` и `404.html` (имат смисъл само в корена) и добавя `version.txt` (клон@commit и час).
-3. Проверява го: `relocatable`, `links`, `preview` и обхождане под `/new/` на локален сървър.
-4. Копира го в `new/` на `main` през временен `git worktree`; работната папка остава на текущия клон. Спира, ако се променя нещо извън `new/`.
-5. Commit „New site test version in /new/ from …“ и push на `main`.
-6. Чака `https://muchakova.com/new/version.txt` да покаже новата версия и пуска `check:new`.
-
-Несъществуващ адрес под `/new/` показва 404 страницата на стария сайт: GitHub Pages ползва само тази в корена. `/new/booking/` е истинският календар, затова тестовите участници спират преди плащане.
-
 ## Публикуване
 
-- Няма GitHub Actions и build в GitHub. Всичко се изгражда и проверява локално, на тази машина. GitHub Pages само показва файловете от клона `main` („Deploy from a branch“, корен).
-- Изходният код е в клона `redesign`. В `main` е само това, което се публикува.
+Сайтът е в корена на клона `main` на `muchakova/site`. GitHub Pages го показва на https://muchakova.com/ („Deploy from a branch“, корен).
 
-### Окончателна замяна (по-късно)
+- Няма GitHub Actions и build в GitHub. Всичко се изгражда и проверява локално, на тази машина.
+- Изходният код е в клона `redesign`. В `main` е само готовият сайт.
 
-1. `npm test`; production build във временна папка (`npx eleventy --output=<папка>`), проверките с `SITE_DIR=<папка>` и обхождане от корена.
-2. В worktree на `main`: `git rm` на стария сайт, копиране на build-а (с `CNAME` и `404.html`), `.nojekyll` в корена. Решение какво става с `new/`.
-3. Преди commit: `legacy-urls` срещу новия корен (старите адреси още работят); `CNAME` е непроменен.
-4. Push на `main` и `node tools/crawl.mjs https://muchakova.com/`.
-5. Връщане назад: `git revert` на този commit. Старият сайт е и в тага `pre-redesign-2026`.
+```bash
+npm test                           # всичко локално
+DRY_RUN=1 npm run publish:site     # build и проверки; показва промяната, без да публикува
+npm run publish:site               # публикува на https://muchakova.com/
+npm run check:site                 # проверява живия сайт (publish:site я пуска накрая)
+```
+
+`publish:site` (`tools/publish.sh`):
+
+1. Иска чисто работно дърво (публикува последния commit) и локален `main`, който не изостава от GitHub.
+2. Прави build във временна папка; `_site/` не се пипа. Добавя `.nojekyll` (GitHub показва файловете както са, без Jekyll) и `version.txt` (клон@commit и час).
+3. Проверява го: `relocatable`, `links`, `legacy-urls`, `seo`, `pending` (нито един ⟨?N⟩) и обхождане на локален сървър.
+4. Копира го в корена на `main` през временен `git worktree`; работната папка остава на текущия клон. Спира, ако `CNAME` би се променил, и проверява старите адреси още веднъж.
+5. Commit „Publish the site from …“ и push на `main`.
+6. Чака `https://muchakova.com/version.txt` да покаже новата версия и пуска `check:site`.
+
+**Връщане назад:** `git revert` на commit-а в `main` и push. Старият сайт е и в тага `pre-redesign-2026`.
+
+**Тестова версия:** `npm run build:preview` прави локално версия с банер „Тестова версия“, `noindex` и без статистика. Публикуваната тестова папка `muchakova.com/new/` беше махната при замяната на 27 октомври 2026.
