@@ -39,6 +39,10 @@
     "facts": "Consultations at a glance",
     "topics": "Topics"
   },
+  "previewBanner": {
+    "label": "Test version",
+    "text": "This is the test version of the new site. Booking and payment here are real: if you are only looking around, stop before paying."
+  },
   "nav": {
     "home": "Home",
     "services": "Services",

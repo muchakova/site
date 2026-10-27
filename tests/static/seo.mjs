@@ -11,6 +11,7 @@ const errors = [], titles = new Map(), descriptions = new Map();
 let pages = 0;
 for (const file of htmlFiles()) {
   const html = read(file);
+  if (html.includes('class="preview-banner"')) errors.push(`${urlOf(file)}: the test-version banner is in the normal build`);
   if (!isNewPage(html) || html.includes('name="robots" content="noindex')) continue;
   pages++;
   const url = urlOf(file).replace(/index\.html$/, "");

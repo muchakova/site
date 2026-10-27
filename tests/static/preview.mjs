@@ -12,6 +12,7 @@ for (const file of htmlFiles()) {
   pages++;
   if (!html.includes('<meta name="robots" content="noindex, nofollow">')) errors.push(`${urlOf(file)}: not marked noindex, nofollow`);
   if (html.includes("plausible.io")) errors.push(`${urlOf(file)}: loads the visitor statistics`);
+  if (!html.includes('class="preview-banner"')) errors.push(`${urlOf(file)}: no test-version banner`);
 }
 const robots = join(SITE, "robots.txt");
 if (existsSync(robots) && !/Disallow:\s*\/\s*$/m.test(readFileSync(robots, "utf8"))) errors.push("robots.txt does not disallow crawling");

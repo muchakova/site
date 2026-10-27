@@ -63,6 +63,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">{{ T.a11y.skip }}</a>
+  {% if preview %}<aside class="preview-banner" aria-label="{{ T.previewBanner.label }}"><p>{% icon "alert" %} <strong>{{ T.previewBanner.label }}.</strong> {{ T.previewBanner.text }}</p></aside>{% endif %}
   {% include "partials/header.njk" %}
   <main id="main" tabindex="-1">
 {{ content | safe }}
