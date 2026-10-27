@@ -123,7 +123,7 @@
       <a class="link-arrow" href="{{ 'vlog' | urlFor(lang, map, site.routes) }}">{{ H.allVideos }} {% icon "arrow-right" %}</a>
     </div>
     <ul class="grid" role="list" style="--grid-min: 18rem">
-      {% for v in videos %}
+      {% for v in videos.slice(0, 3) %}
       <li>{% include "partials/video-card.njk" %}</li>
       {% endfor %}
     </ul>

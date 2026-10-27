@@ -1,5 +1,32 @@
 [
  {
+  "id": "oborot-dds-interactive-brokers",
+  "yt": "KaS3ABZdmYM",
+  "date": "2026-10-19",
+  "cats": [
+   "vat",
+   "invest"
+  ],
+  "duration": "4:43",
+  "shorts": false,
+  "tag": {
+   "bg": "ДДС",
+   "en": "VAT"
+  },
+  "title": {
+   "bg": "Трупане на оборот за ДДС регистрация при търговия с финансови активи — пример с Interactive Brokers",
+   "en": "Building Up VAT Registration Turnover from Trading Financial Assets — the Interactive Brokers Example"
+  },
+  "answer": {
+   "bg": "Пет стъпки: кога продажбите на акции през Interactive Brokers трупат оборот за регистрация по чл. 96 ЗДДС, как доказваме, че мястото на изпълнение е извън България, и как се стига до отказ от регистрация.",
+   "en": "Five steps: when share sales through Interactive Brokers count towards VAT registration turnover under Art. 96 of the VAT Act, how to prove the place of supply is outside Bulgaria, and how the case ends in a refusal to register. Video in Bulgarian."
+  },
+  "article": "/blog/dds-registraciya-interactive-brokers.html",
+  "watch": "https://youtu.be/KaS3ABZdmYM",
+  "uploadDate": "2026-10-18T14:17:27-07:00",
+  "isoDuration": "PT4M43S"
+ },
+ {
   "id": "zagubi-finansovi-instrumenti",
   "yt": "Dba4_JBF_4o",
   "date": "2026-10-18",
