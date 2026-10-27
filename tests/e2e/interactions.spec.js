@@ -142,7 +142,7 @@ test("videos: topic filter, singular/plural announcement, anchors from the old p
   await page.locator('[data-filter="vat"]').click();
   await expect(page.locator("[data-filter-status]")).toHaveText("Показани са 2 видеа");
   await page.locator('[data-filter="all"]').click();
-  await expect(page.locator("[data-filter-status]")).toHaveText("Показани са 4 видеа");
+  await expect(page.locator("[data-filter-status]")).toHaveText("Показани са 5 видеа");
 });
 
 test("projects and partners keep the anchors of the old pages", async ({ page }) => {

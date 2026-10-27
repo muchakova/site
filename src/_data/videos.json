@@ -1,5 +1,31 @@
 [
  {
+  "id": "pismo-nap-mestno-lice",
+  "yt": "zM0Heieb6x8",
+  "date": "2026-10-27",
+  "cats": [
+   "nap"
+  ],
+  "duration": "13:09",
+  "shorts": false,
+  "tag": {
+   "bg": "Декларации и отчетност",
+   "en": "Returns & reporting"
+  },
+  "title": {
+   "bg": "Писмо от НАП за местно лице, чужди сметки и крипто — как да отговорите",
+   "en": "An NRA Letter on Tax Residency, Foreign Accounts and Crypto — How to Reply"
+  },
+  "answer": {
+   "bg": "Реално искане от НАП (образец Кд40), разгледано точка по точка: проверка или ревизия, 14-дневният срок, местно лице ли сте, какво да приложите, дали да подпишете съгласие за банкова тайна и какво НАП вече знае по CRS, CESOP и DAC8.",
+   "en": "A real NRA request (form Kd40) taken point by point: inspection or tax audit, the 14-day deadline, whether you are a tax resident, what to attach, whether to sign the bank secrecy waiver, and what the NRA already knows through CRS, CESOP and DAC8. Video in Bulgarian."
+  },
+  "article": "/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html",
+  "watch": "https://youtu.be/zM0Heieb6x8",
+  "uploadDate": "2026-10-27T19:20:00+02:00",
+  "isoDuration": "PT13M9S"
+ },
+ {
   "id": "oborot-dds-interactive-brokers",
   "yt": "KaS3ABZdmYM",
   "date": "2026-10-19",
