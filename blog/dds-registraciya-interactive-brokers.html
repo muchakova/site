@@ -1,521 +1,420 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ДДС регистрация при търговия с акции и финансови инструменти чрез Interactive Brokers — къде е мястото на изпълнение, чл. 21, ал. 2 ЗДДС, ролята на брокера и примерен отговор на ИПДПОЗЛ, довел до акт за отказ от регистрация." />
-  <meta name="author" content="Марина Мучакова" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://muchakova.com/blog/dds-registraciya-interactive-brokers.html" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ДДС регистрация при търговия с акции чрез Interactive Brokers</title>
+  <meta name="description" content="ДДС регистрация при търговия с акции чрез Interactive Brokers: мястото на изпълнение, чл. 21, ал. 2 ЗДДС и отговорът до НАП, довел до отказ от регистрация.">
+<link rel="canonical" href="https://muchakova.com/blog/dds-registraciya-interactive-brokers.html">
+  <link rel="alternate" hreflang="bg" href="https://muchakova.com/blog/dds-registraciya-interactive-brokers.html">
+  <link rel="alternate" hreflang="en" href="https://muchakova.com/en/blog/dds-registraciya-interactive-brokers.html">
+  <link rel="alternate" hreflang="x-default" href="https://muchakova.com/blog/dds-registraciya-interactive-brokers.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Марина Мучакова">
+  <meta property="og:title" content="ДДС регистрация при търговия с акции чрез Interactive Brokers">
+  <meta property="og:description" content="ДДС регистрация при търговия с акции чрез Interactive Brokers: мястото на изпълнение, чл. 21, ал. 2 ЗДДС и отговорът до НАП, довел до отказ от регистрация.">
+<meta property="og:url" content="https://muchakova.com/blog/dds-registraciya-interactive-brokers.html">
+  <meta property="og:image" content="https://muchakova.com/images/og/blog-dds-registraciya-interactive-brokers.jpg">
+<meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ДДС регистрация при търговия с акции чрез Interactive Brokers">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F2F4FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080C19" media="(prefers-color-scheme: dark)">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://muchakova.com/blog/dds-registraciya-interactive-brokers.html#article","url":"https://muchakova.com/blog/dds-registraciya-interactive-brokers.html","mainEntityOfPage":"https://muchakova.com/blog/dds-registraciya-interactive-brokers.html","headline":"ДДС регистрация при търговия с акции чрез Interactive Brokers","description":"ДДС регистрация при търговия с акции чрез Interactive Brokers: мястото на изпълнение, чл. 21, ал. 2 ЗДДС и отговорът до НАП, довел до отказ от регистрация.","image":["https://muchakova.com/images/og/blog-dds-registraciya-interactive-brokers.jpg"],"datePublished":"2026-08-05","dateModified":"2026-08-05","inLanguage":"bg","author":{"@type":"Person","@id":"https://muchakova.com/#person","name":"Марина Мучакова","url":"https://muchakova.com/"},"publisher":{"@type":"Person","@id":"https://muchakova.com/#person","name":"Марина Мучакова","url":"https://muchakova.com/"},"isPartOf":{"@type":"Blog","@id":"https://muchakova.com/blog.html#blog","url":"https://muchakova.com/blog.html"},"articleSection":"ДДС","keywords":["ДДС","чл. 96 ЗДДС","чл. 21 ал. 2 ЗДДС","Interactive Brokers","място на изпълнение","финансови инструменти","ИПДПОЗЛ","акт за отказ"]}]}</script>
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="Марина Мучакова — Блог" href="../feed.xml">
+  <script>try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin="">  <link rel="stylesheet" href="../assets/css/site.css?v=4fa5071a68">
+  <script src="../assets/js/site.js?v=4fa5071a68" defer=""></script>
 
-  <title>ДДС регистрация при търговия с акции чрез Interactive Brokers — Марина Мучакова</title>
-
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://muchakova.com/blog/dds-registraciya-interactive-brokers.html" />
-  <meta property="og:title" content="ДДС регистрация при търговия с акции и финансови инструменти чрез Interactive Brokers" />
-  <meta property="og:description" content="Кога оборотът от продажба на финансови инструменти НЕ формира оборот за задължителна регистрация по чл. 96 ЗДДС — анализ на мястото на изпълнение и примерен отговор на ИПДПОЗЛ с акт за отказ." />
-  <meta property="og:image" content="https://muchakova.com/images/og-site.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Марина Мучакова — данъчен консултант" />
-  <meta property="og:locale" content="bg_BG" />
-  <meta property="og:locale:alternate" content="en_GB" />
-  <meta property="og:site_name" content="Марина Мучакова" />
-  <meta property="article:author" content="Марина Мучакова" />
-  <meta property="article:published_time" content="2026-08-05" />
-  <meta property="article:tag" content="ДДС" />
-  <meta property="article:tag" content="Interactive Brokers" />
-  <meta property="article:tag" content="Инвеститори" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@VestaConsult" />
-  <meta name="twitter:title" content="ДДС регистрация при търговия с акции чрез Interactive Brokers" />
-  <meta name="twitter:description" content="Защо оборотът от финансови инструменти през чуждестранен брокер може да не формира оборот за регистрация по чл. 96 ЗДДС — с примерен отговор на ИПДПОЗЛ." />
-  <meta name="twitter:image" content="https://muchakova.com/images/og-site.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- LAYOUT:HEAD -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" />
-  <script>try{var t=localStorage.getItem('mm-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-  <!-- /LAYOUT:HEAD -->
-  <link rel="stylesheet" href="../css/style.css" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "ДДС регистрация при търговия с акции и финансови инструменти чрез Interactive Brokers",
-    "description": "Кога оборотът от продажба на финансови инструменти чрез чуждестранен инвестиционен посредник не формира оборот за задължителна регистрация по чл. 96 ЗДДС — анализ на мястото на изпълнение и примерен отговор на ИПДПОЗЛ с акт за отказ.",
-    "url": "https://muchakova.com/blog/dds-registraciya-interactive-brokers.html",
-    "datePublished": "2026-08-05",
-    "dateModified": "2026-08-05",
-    "image": "https://muchakova.com/images/og-site.jpg",
-    "inLanguage": ["bg", "en"],
-    "author": {
-      "@type": "Person",
-      "name": "Марина Мучакова",
-      "url": "https://muchakova.com"
-    },
-    "publisher": {
-      "@type": "Person",
-      "name": "Марина Мучакова",
-      "url": "https://muchakova.com"
-    },
-    "isPartOf": {
-      "@type": "Blog",
-      "url": "https://muchakova.com/blog.html"
-    },
-    "keywords": ["ДДС", "чл. 96 ЗДДС", "чл. 21 ал. 2 ЗДДС", "Interactive Brokers", "място на изпълнение", "финансови инструменти", "ИПДПОЗЛ", "акт за отказ"]
-  }
-  </script>
+  <script defer="" data-domain="muchakova.com" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
+  <script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Начало","item":"https://muchakova.com/"},{"@type":"ListItem","position":2,"name":"Блог","item":"https://muchakova.com/blog.html"},{"@type":"ListItem","position":3,"name":"ДДС","item":"https://muchakova.com/blog.html?cat=taxes"},{"@type":"ListItem","position":4,"name":"ДДС регистрация при търговия с акции чрез Interactive Brokers"}]}</script>
 </head>
-<body
-  data-title-bg="ДДС регистрация при търговия с акции чрез Interactive Brokers — Марина Мучакова"
-  data-title-en="VAT Registration When Trading Shares via Interactive Brokers — Marina Muchakova"
->
-
-  <!-- LAYOUT:NAV -->
-  <a href="#main" class="skip-link" data-key="skip_link">Към съдържанието</a>
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Главна навигация">
-    <div class="nav-container">
-      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html#about" data-nav="about" data-key="nav_about">За мен</a></li>
-        <li><a href="../blog.html" data-nav="blog" aria-current="page" data-key="nav_blog">Блог</a></li>
-        <li><a href="../vlog/" data-nav="vlog" data-key="nav_vlog">Влог</a></li>
-        <li><a href="../projects/" data-nav="projects" data-key="nav_projects">Проекти</a></li>
-        <li><a href="../partners/" data-nav="partners" data-key="nav_partners">Партньори</a></li>
-        <li><a href="../index.html#contact" data-nav="contact" data-key="nav_contact">Контакти</a></li>
-        <li><a href="../booking/" data-nav="booking" class="nav-cta" data-key="nav_booking">Запази час</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Светла / тъмна тема" title="Светла / тъмна тема">
-          <svg class="icon icon-moon" aria-hidden="true"><use href="../images/icons.svg#moon"/></svg>
-          <svg class="icon icon-sun" aria-hidden="true"><use href="../images/icons.svg#sun"/></svg>
-        </button>
-        <button class="lang-toggle" id="langToggle" type="button" aria-label="Смени езика">EN</button>
-        <button class="hamburger" id="hamburger" type="button" aria-label="Меню" aria-expanded="false">
-          <span></span><span></span><span></span>
+<body>
+  <a class="skip-link" href="#main">Към съдържанието</a>
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">MM</span><span class="brand__name">Марина Мучакова</span></a>
+    <div class="site-menu" id="site-menu">
+      <nav class="site-nav" aria-label="Главна навигация">
+        <ul>
+          
+          <li><a href="../services/">Услуги</a></li>
+          
+          <li><a href="../about/">За мен</a></li>
+          
+          <li><a href="../blog.html" aria-current="true">Блог</a></li>
+          
+          <li><a href="../contact/">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <nav aria-label="Избор на език"><a class="icon-btn" href="../en/blog/dds-registraciya-interactive-brokers.html" data-lang-switch="" hreflang="en" lang="en">EN<span class="sr-only"> · English version</span></a></nav>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle="" aria-pressed="false">
+<svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#sun"></use></svg><span class="sr-only">Тъмна тема</span>
         </button>
       </div>
     </div>
-  </nav>
-  <span id="main" tabindex="-1"></span>
-  <!-- /LAYOUT:NAV -->
-
-  <header class="post-header">
-    <div class="container">
-      <a href="../blog.html" class="post-back" data-key="post_back">← Обратно към блога</a>
-
-      <div class="post-tag">
-        <span class="lang-content" data-lang="bg">ДДС</span>
-        <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
-      </div>
-
-      <h1 class="post-title">
-        <span class="lang-content" data-lang="bg">ДДС регистрация при търговия с акции и финансови инструменти чрез Interactive Brokers</span>
-        <span class="lang-content" data-lang="en" style="display:none;">VAT Registration When Trading Shares and Financial Instruments via Interactive Brokers</span>
-      </h1>
-
-      <div class="post-meta">
-        <div class="post-author">
-          <img src="../images/profile_6.jpg" alt="Марина Мучакова" class="post-author-img" />
-          <span class="post-author-name" data-key="full_name">Марина Мучакова</span>
-        </div>
-        <span class="post-separator">·</span>
-        <time datetime="2026-08-05">
-          <span class="lang-content" data-lang="bg">5 август 2026</span>
-          <span class="lang-content" data-lang="en" style="display:none;">August 5, 2026</span>
-        </time>
-        <span class="post-separator">·</span>
-        <span>
-          <span class="lang-content" data-lang="bg">14 мин четене</span>
-          <span class="lang-content" data-lang="en" style="display:none;">14 min read</span>
-        </span>
-      </div>
-    </div>
+    <a class="btn btn--primary btn--small" href="../booking/">Запази час</a>
+    <button class="menu-btn" type="button" data-menu-button="" aria-expanded="false" aria-controls="site-menu" data-label-open="Меню" data-label-close="Затвори">
+<svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#menu"></use></svg><span data-menu-label="">Меню</span>
+    </button>
+  </div>
+</header>
+  <main id="main" tabindex="-1">
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<article class="post" data-article="" aria-labelledby="post-title">
+  <header class="wrap post-header">
+    <nav class="breadcrumb" aria-label="Път"><ol><li><a href="../">Начало</a></li><li><a href="../blog.html">Блог</a></li><li><a href="../blog.html?cat=taxes">ДДС</a></li></ol></nav>
+    <p class="post-header__tag"><span class="chip">ДДС</span></p>
+    <h1 id="post-title" class="post-title">ДДС регистрация при търговия с акции чрез Interactive Brokers</h1>
+    <div class="post-meta">
+      <span class="post-meta__author"><picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-72.avif 72w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-72.webp 72w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="avatar" src="../img/profile-9-RfR76xxzeh-72.jpeg" alt="" width="72" height="96"></picture>Марина Мучакова</span>
+      <time datetime="2026-08-05">5 август 2026</time>
+      <span>27 мин четене</span>
+<a href="../en/blog/dds-registraciya-interactive-brokers.html" hreflang="en" lang="en">Read in English</a>    </div>
   </header>
 
-  <main class="post-body">
-    <div class="container">
-      <article class="post-content">
-
-        <!-- ═══════════════ BG ═══════════════ -->
-        <div class="lang-content" data-lang="bg">
-          <p>
+  <div class="wrap post-layout">
+    <div class="post-main">
+      <details class="toc-mobile">
+        <summary>Съдържание</summary>
+        <nav class="toc" aria-label="Съдържание на статията"><ol><li><a href="#bg-1">Как започва процедурата</a></li><li><a href="#bg-2">Основният въпрос: къде е мястото на изпълнение</a></li><li><a href="#bg-3">Как работи Interactive Brokers</a></li><li><a href="#bg-4">Пряко и косвено представителство</a></li><li><a href="#bg-5">Interactive Brokers като инвестиционен посредник и участник на пазара</a></li><li><a href="#bg-6">Данъчен статут на Interactive Brokers Ireland Limited</a></li><li><a href="#bg-7">Приложение на чл. 21, ал. 2 ЗДДС</a></li><li><a href="#bg-8">Защо отчетите на брокера са важни</a></li><li><a href="#bg-9">Техническото изпълнение на поръчките</a></li><li><a href="#bg-10">Кога оборотът може да не се включи при регистрацията</a></li><li><a href="#bg-11">Какво прие НАП в конкретния случай</a></li><li><a href="#bg-12">Какви документи могат да бъдат представени</a></li><li><a href="#bg-13">Важни уточнения</a></li><li><a href="#bg-14">Примерен отговор на ИПДПОЗЛ</a></li></ol></nav>
+      </details>
+      <div class="prose">
+<p>
             През последните месеци получаваме все повече въпроси от инвеститори и трейдъри, които търгуват
             с акции и други финансови инструменти чрез Interactive Brokers и други чуждестранни инвестиционни
             посредници. Най-често задаваният въпрос е:
           </p>
-          <blockquote>
+<blockquote>
             „След като оборотът ми от продажба на финансови инструменти надхвърли прага за регистрация по
             ЗДДС, задължен ли съм да се регистрирам?“
           </blockquote>
-          <p>Отговорът не е еднозначен.</p>
-          <p>
+<p>Отговорът не е еднозначен.</p>
+<p>
             Самото достигане на определен размер на продажбите не означава автоматично, че е налице задължение
             за регистрация по чл. 96 ЗДДС. Необходимо е да бъдат анализирани конкретната дейност, начинът на
             извършване на сделките, отношенията с инвестиционния посредник и мястото на изпълнение на
             съответните доставки.
           </p>
-          <p>
+<p>
             В настоящата статия разглеждаме конкретен случай, при който след подадено заявление по чл. 96 ЗДДС
             и извършена проверка НАП издава акт за отказ от регистрация.
           </p>
-          <p>
+<p>
             Важно е още в началото да подчертаем, че всеки случай има свои особености. Изложената по-долу
             аргументация не представлява универсално решение и не може да бъде прилагана механично спрямо всяко
             лице, което инвестира или търгува с финансови инструменти.
           </p>
-
-          <h2>Как започва процедурата</h2>
-          <p>
+<h2 id="bg-1">Как започва процедурата</h2>
+<p>
             След подаване на заявление за регистрация по чл. 96 ЗДДС органът по приходите обичайно извършва
             проверка на декларираните обстоятелства. В рамките на тази проверка заявителят може да получи искане
             за представяне на документи и писмени обяснения от задължено лице, известно като ИПДПОЗЛ.
           </p>
-          <p>С искането могат да бъдат изискани документи и информация относно:</p>
-          <ul>
-            <li>характера на извършваната дейност;</li>
-            <li>използвания инвестиционен посредник;</li>
-            <li>реализираните покупки и продажби;</li>
-            <li>размера на получения оборот;</li>
-            <li>банковите преводи;</li>
-            <li>договорните отношения с брокера;</li>
-            <li>начина и мястото на изпълнение на сделките;</li>
-            <li>извлеченията от инвестиционната платформа;</li>
-            <li>подаваните годишни данъчни декларации;</li>
-            <li>други доходи и стопански дейности на лицето.</li>
-          </ul>
-          <p>
+<p>С искането могат да бъдат изискани документи и информация относно:</p>
+<ul>
+<li>характера на извършваната дейност;</li>
+<li>използвания инвестиционен посредник;</li>
+<li>реализираните покупки и продажби;</li>
+<li>размера на получения оборот;</li>
+<li>банковите преводи;</li>
+<li>договорните отношения с брокера;</li>
+<li>начина и мястото на изпълнение на сделките;</li>
+<li>извлеченията от инвестиционната платформа;</li>
+<li>подаваните годишни данъчни декларации;</li>
+<li>други доходи и стопански дейности на лицето.</li>
+</ul>
+<p>
             Отговорът на това искане е особено важен, тъй като чрез него се представя фактическата и правната
             обосновка на позицията на заявителя.
           </p>
-
-          <h2>Основният въпрос: къде е мястото на изпълнение</h2>
-          <p>
+<h2 id="bg-2">Основният въпрос: къде е мястото на изпълнение</h2>
+<p>
             Продажбата на акции и други финансови инструменти може да представлява освободена доставка по смисъла
             на чл. 46 ЗДДС. Това обаче не означава, че всяка продажба автоматично участва във формирането на
             оборота за задължителна регистрация по чл. 96 ЗДДС.
           </p>
-          <p>
+<p>
             За да бъде включена дадена доставка при определянето на оборота, следва да бъдат изпълнени всички
             приложими законови предпоставки. От значение са например:
           </p>
-          <ol>
-            <li>дали лицето извършва независима икономическа дейност по смисъла на чл. 3 ЗДДС;</li>
-            <li>дали съответните доставки са част от основната му дейност;</li>
-            <li>дали мястото на изпълнение на доставките е на територията на България.</li>
-          </ol>
-          <p>Тези предпоставки трябва да бъдат разгледани заедно, а не изолирано.</p>
-          <p>
+<ol>
+<li>дали лицето извършва независима икономическа дейност по смисъла на чл. 3 ЗДДС;</li>
+<li>дали съответните доставки са част от основната му дейност;</li>
+<li>дали мястото на изпълнение на доставките е на територията на България.</li>
+</ol>
+<p>Тези предпоставки трябва да бъдат разгледани заедно, а не изолирано.</p>
+<p>
             В конкретния случай основната аргументация е свързана с мястото на изпълнение на сделките и с ролята
             на Interactive Brokers Ireland Limited при тяхното реализиране.
           </p>
-
-          <h2>Как работи Interactive Brokers</h2>
-          <p>Interactive Brokers Ireland Limited е инвестиционен посредник, установен в Ирландия.</p>
-          <p>
+<h2 id="bg-3">Как работи Interactive Brokers</h2>
+<p>Interactive Brokers Ireland Limited е инвестиционен посредник, установен в Ирландия.</p>
+<p>
             За да използва платформата, всеки клиент сключва клиентско споразумение. В него са уредени правата и
             задълженията на страните, както и начинът, по който брокерът приема, маршрутизира и изпълнява
             клиентските поръчки.
           </p>
-          <p>От разпоредбите на клиентското споразумение могат да бъдат изведени няколко важни обстоятелства. Interactive Brokers може:</p>
-          <ul>
-            <li>да избере пазара или дилъра, към който да насочи клиентската поръчка;</li>
-            <li>да използва автоматизирана система за интелигентно маршрутизиране;</li>
-            <li>да изпълни поръчката чрез друг брокер или свързано лице;</li>
-            <li>да изпълнява поръчките като агент, а в определени случаи и като принципал;</li>
-            <li>да откаже изпълнението на дадена поръчка;</li>
-            <li>да коригира или отмени отчетено изпълнение при наличие на грешка;</li>
-            <li>да осъществява собствена търговия, включително когато държи неизпълнени клиентски поръчки за същите финансови инструменти.</li>
-          </ul>
-          <p>
+<p>От разпоредбите на клиентското споразумение могат да бъдат изведени няколко важни обстоятелства. Interactive Brokers може:</p>
+<ul>
+<li>да избере пазара или дилъра, към който да насочи клиентската поръчка;</li>
+<li>да използва автоматизирана система за интелигентно маршрутизиране;</li>
+<li>да изпълни поръчката чрез друг брокер или свързано лице;</li>
+<li>да изпълнява поръчките като агент, а в определени случаи и като принципал;</li>
+<li>да откаже изпълнението на дадена поръчка;</li>
+<li>да коригира или отмени отчетено изпълнение при наличие на грешка;</li>
+<li>да осъществява собствена търговия, включително когато държи неизпълнени клиентски поръчки за същите финансови инструменти.</li>
+</ul>
+<p>
             Това означава, че клиентът не определя във всички случаи конкретния пазар, контрагента и техническия
             начин, по който ще бъде изпълнена поръчката.
           </p>
-          <p>
+<p>
             Дори когато даден финансов инструмент е листнат на определена борса, действителното изпълнение може
             да бъде отчетено на друг пазар, чрез различен търговски сегмент или посредством друг допустим
             механизъм за изпълнение.
           </p>
-          <p>След приключването на операцията Interactive Brokers отразява резултата в клиентската сметка и в съответните отчети.</p>
-
-          <div class="post-download">
-            <a href="../files/ib-client-agreement.pdf" target="_blank" rel="noopener">
-              📄 Клиентско споразумение с Interactive Brokers (PDF, 30 стр.)
-            </a>
-          </div>
-
-          <h2>Пряко и косвено представителство</h2>
-          <p>В българското гражданско и търговско право обичайно се разграничават пряко и косвено представителство.</p>
-          <p>
+<p>След приключването на операцията Interactive Brokers отразява резултата в клиентската сметка и в съответните отчети.</p>
+<p><a class="download-link" href="../files/ib-client-agreement.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon" focusable="false"><use href="../assets/icons.svg#download"></use></svg>Клиентско споразумение с Interactive Brokers (PDF, 30 стр.)
+            <span class="sr-only"> (отваря се в нов раздел)</span></a></p>
+<h2 id="bg-4">Пряко и косвено представителство</h2>
+<p>В българското гражданско и търговско право обичайно се разграничават пряко и косвено представителство.</p>
+<p>
             При прякото представителство представителят действа от името и за сметка на представлявания. Правните
             последици възникват непосредствено за представлявания.
           </p>
-          <p>
+<p>
             При косвеното представителство представителят действа от свое име, но за сметка на друго лице. След
             това резултатът от сделката се прехвърля или отчита на лицето, за чиято сметка е извършена тя.
           </p>
-          <p>
+<p>
             С оглед на предоставената на брокера свобода при маршрутизирането и изпълнението на поръчките може да
             бъде защитена тезата, че отношенията не се изчерпват с обикновено техническо посредничество между
             инвеститора и конкретен краен купувач.
           </p>
-          <p>В тази хипотеза могат условно да се разграничат три етапа:</p>
-          <ol>
-            <li>клиентът подава поръчка и оправомощава брокера да извърши определено действие;</li>
-            <li>брокерът организира или извършва покупката или продажбата при приложимите пазарни условия;</li>
-            <li>резултатът от операцията се отразява и отчита по клиентската сметка.</li>
-          </ol>
-          <p>Тази конструкция е от значение при определянето на насрещната страна и мястото на изпълнение на доставката.</p>
-
-          <h2>Interactive Brokers като инвестиционен посредник и участник на пазара</h2>
-          <p>
+<p>В тази хипотеза могат условно да се разграничат три етапа:</p>
+<ol>
+<li>клиентът подава поръчка и оправомощава брокера да извърши определено действие;</li>
+<li>брокерът организира или извършва покупката или продажбата при приложимите пазарни условия;</li>
+<li>резултатът от операцията се отразява и отчита по клиентската сметка.</li>
+</ol>
+<p>Тази конструкция е от значение при определянето на насрещната страна и мястото на изпълнение на доставката.</p>
+<h2 id="bg-5">Interactive Brokers като инвестиционен посредник и участник на пазара</h2>
+<p>
             Interactive Brokers не функционира единствено като пасивна електронна платформа, която технически
             свързва купувачи и продавачи.
           </p>
-          <p>
+<p>
             Дружеството изпълнява функции на инвестиционен посредник и участва в процеса по маршрутизиране и
             изпълнение на клиентските поръчки. В зависимост от конкретната сделка то може да действа като агент,
             принципал или да използва друг брокер или свързано лице.
           </p>
-          <p>
+<p>
             От тази гледна точка може да бъде обосновано становището, че правоотношенията на клиента са основно с
             Interactive Brokers, а не непосредствено с неустановен краен купувач на дадена борса. Това
             обстоятелство е съществено при анализа на мястото на изпълнение.
           </p>
-
-          <h2>Данъчен статут на Interactive Brokers Ireland Limited</h2>
-          <p>Interactive Brokers Ireland Limited е дружество, установено в Ирландия.</p>
-          <p>Дружеството има европейски ДДС номер и участва в икономическата дейност като данъчнозадължено лице.</p>
-          <p>
+<h2 id="bg-6">Данъчен статут на Interactive Brokers Ireland Limited</h2>
+<p>Interactive Brokers Ireland Limited е дружество, установено в Ирландия.</p>
+<p>Дружеството има европейски ДДС номер и участва в икономическата дейност като данъчнозадължено лице.</p>
+<p>
             При извършването на конкретна проверка е препоръчително актуалните регистрационни данни да бъдат
             потвърдени чрез официални източници, тъй като адреси, регистрационни номера и други обстоятелства
             могат да се променят.
           </p>
-          <p>Към писмените обяснения могат да бъдат приложени:</p>
-          <ul>
-            <li>извлечение от официалния търговски регистър;</li>
-            <li>потвърждение за валидност на ДДС номера чрез системата VIES;</li>
-            <li>клиентското споразумение;</li>
-            <li>Activity Statement;</li>
-            <li>Trade Confirmation Report;</li>
-            <li>официални документи, от които се установява седалището на дружеството.</li>
-          </ul>
-
-          <h2>Приложение на чл. 21, ал. 2 ЗДДС</h2>
-          <p>
+<p>Към писмените обяснения могат да бъдат приложени:</p>
+<ul>
+<li>извлечение от официалния търговски регистър;</li>
+<li>потвърждение за валидност на ДДС номера чрез системата VIES;</li>
+<li>клиентското споразумение;</li>
+<li>Activity Statement;</li>
+<li>Trade Confirmation Report;</li>
+<li>официални документи, от които се установява седалището на дружеството.</li>
+</ul>
+<h2 id="bg-7">Приложение на чл. 21, ал. 2 ЗДДС</h2>
+<p>
             Съгласно чл. 21, ал. 2 ЗДДС мястото на изпълнение при доставка на услуга, когато получателят е
             данъчнозадължено лице, е мястото, където получателят е установил независимата си икономическа дейност.
           </p>
-          <p>
+<p>
             Когато услугата е предоставена на постоянен обект, намиращ се на друго място, мястото на изпълнение е
             там, където се намира този постоянен обект. Ако липсват място на установяване и постоянен обект,
             мястото на изпълнение е мястото на постоянния адрес или обичайното пребиваване на получателя.
           </p>
-          <p>
+<p>
             При аргументацията в разглеждания случай е застъпено становището, че Interactive Brokers е получателят
             по доставките, свързани с продажбата на финансовите инструменти. Тъй като дружеството е установено в
             Ирландия, мястото на изпълнение се определя извън територията на България.
           </p>
-
-          <h2>Защо отчетите на брокера са важни</h2>
-          <p>Особено значение имат двата основни вида отчети, които клиентът може да изтегли от инвестиционната платформа.</p>
-
-          <h3>Activity Statement</h3>
-          <p>Activity Statement съдържа обобщена информация за:</p>
-          <ul>
-            <li>притежаваните финансови инструменти;</li>
-            <li>движението по сметката;</li>
-            <li>покупките и продажбите;</li>
-            <li>начислените такси и комисиони;</li>
-            <li>реализираните и нереализираните резултати;</li>
-            <li>пазара или борсата, на която съответният инструмент е листнат.</li>
-          </ul>
-
-          <h3>Trade Confirmation Report</h3>
-          <p>Trade Confirmation Report съдържа конкретни данни за изпълнението на отделните поръчки, включително:</p>
-          <ul>
-            <li>дата и час;</li>
-            <li>количество;</li>
-            <li>цена;</li>
-            <li>пазар или сегмент на изпълнение;</li>
-            <li>комисиони;</li>
-            <li>други детайли по транзакцията.</li>
-          </ul>
-          <p>
+<h2 id="bg-8">Защо отчетите на брокера са важни</h2>
+<p>Особено значение имат двата основни вида отчети, които клиентът може да изтегли от инвестиционната платформа.</p>
+<h3>Activity Statement</h3>
+<p>Activity Statement съдържа обобщена информация за:</p>
+<ul>
+<li>притежаваните финансови инструменти;</li>
+<li>движението по сметката;</li>
+<li>покупките и продажбите;</li>
+<li>начислените такси и комисиони;</li>
+<li>реализираните и нереализираните резултати;</li>
+<li>пазара или борсата, на която съответният инструмент е листнат.</li>
+</ul>
+<h3>Trade Confirmation Report</h3>
+<p>Trade Confirmation Report съдържа конкретни данни за изпълнението на отделните поръчки, включително:</p>
+<ul>
+<li>дата и час;</li>
+<li>количество;</li>
+<li>цена;</li>
+<li>пазар или сегмент на изпълнение;</li>
+<li>комисиони;</li>
+<li>други детайли по транзакцията.</li>
+</ul>
+<p>
             Съпоставката между двата отчета може да покаже, че борсата, на която даден инструмент е листнат, не
             винаги съвпада с мястото или механизма, чрез който е изпълнена конкретната поръчка.
           </p>
-          <p>
+<p>
             Това подкрепя тезата, че брокерът разполага с оперативна самостоятелност при изпълнението на поръчките
             и не е само неутрална платформа за публикуване на оферти.
           </p>
-
-          <h2>Техническото изпълнение на поръчките</h2>
-          <p>
+<h2 id="bg-9">Техническото изпълнение на поръчките</h2>
+<p>
             Когато клиентът нареди продажба на финансов актив, той не прехвърля самостоятелно акциите си на избран
             от него купувач. Техническото изпълнение преминава през инфраструктурата на брокера, съответните
             пазари, клирингови системи и депозитари.
           </p>
-          <p>Клиентът вижда крайния резултат в своя акаунт, но обикновено не участва пряко в:</p>
-          <ul>
-            <li>избора на конкретния контрагент;</li>
-            <li>клиринга на сделката;</li>
-            <li>сетълмента;</li>
-            <li>избора на търговски сегмент;</li>
-            <li>прехвърлянето на финансовите инструменти;</li>
-            <li>вътрешните операции на брокера.</li>
-          </ul>
-          <p>Тази фактическа обстановка е важна при определянето на естеството на отношенията между инвеститора и инвестиционния посредник.</p>
-
-          <h2>Кога оборотът може да не се включи при регистрацията</h2>
-          <p>
+<p>Клиентът вижда крайния резултат в своя акаунт, но обикновено не участва пряко в:</p>
+<ul>
+<li>избора на конкретния контрагент;</li>
+<li>клиринга на сделката;</li>
+<li>сетълмента;</li>
+<li>избора на търговски сегмент;</li>
+<li>прехвърлянето на финансовите инструменти;</li>
+<li>вътрешните операции на брокера.</li>
+</ul>
+<p>Тази фактическа обстановка е важна при определянето на естеството на отношенията между инвеститора и инвестиционния посредник.</p>
+<h2 id="bg-10">Кога оборотът може да не се включи при регистрацията</h2>
+<p>
             За да участва определен оборот при формиране на прага за задължителна регистрация по чл. 96 ЗДДС, не е
             достатъчно единствено да е реализирана значителна стойност на продажбите. Следва да се установи:
           </p>
-          <ul>
-            <li>че е налице независима икономическа дейност;</li>
-            <li>че финансовите сделки са част от основната дейност на лицето, когато това е релевантно;</li>
-            <li>че доставките попадат в приложното поле на ЗДДС;</li>
-            <li>че мястото на изпълнение е на територията на България;</li>
-            <li>че стойността им следва да бъде включена в облагаемия оборот.</li>
-          </ul>
-          <p>
+<ul>
+<li>че е налице независима икономическа дейност;</li>
+<li>че финансовите сделки са част от основната дейност на лицето, когато това е релевантно;</li>
+<li>че доставките попадат в приложното поле на ЗДДС;</li>
+<li>че мястото на изпълнение е на територията на България;</li>
+<li>че стойността им следва да бъде включена в облагаемия оборот.</li>
+</ul>
+<p>
             Когато мястото на изпълнение е извън България, съответните доставки не формират оборот за регистрация
             по чл. 96 ЗДДС на това основание.
           </p>
-
-          <h2>Какво прие НАП в конкретния случай</h2>
-          <p>В разглеждания случай органът по приходите приема, че:</p>
-          <ul>
-            <li>извършените сделки са свързани с финансови инструменти;</li>
-            <li>съответните доставки представляват финансови услуги;</li>
-            <li>мястото им на изпълнение не е на територията на България;</li>
-            <li>реализираният оборот не формира облагаем оборот по чл. 96 ЗДДС;</li>
-            <li>не е налице основание за задължителна регистрация.</li>
-          </ul>
-          <p>
+<h2 id="bg-11">Какво прие НАП в конкретния случай</h2>
+<p>В разглеждания случай органът по приходите приема, че:</p>
+<ul>
+<li>извършените сделки са свързани с финансови инструменти;</li>
+<li>съответните доставки представляват финансови услуги;</li>
+<li>мястото им на изпълнение не е на територията на България;</li>
+<li>реализираният оборот не формира облагаем оборот по чл. 96 ЗДДС;</li>
+<li>не е налице основание за задължителна регистрация.</li>
+</ul>
+<p>
             В резултат е издаден акт за отказ от регистрация по ЗДДС. Този акт е важен практически пример, но не
             създава автоматично приложимо правило за всички инвеститори и трейдъри.
           </p>
-
-          <figure class="post-cover">
-            <img
-              src="../images/dds-ib-otkaz-str1.jpg"
-              alt="Акт за отказ от регистрация по ЗДДС от НАП — страница 1"
-              loading="lazy"
-              decoding="async"
-              width="750"
-              height="1200"
-            />
-            <figcaption>Акт за отказ от регистрация по ЗДДС — страница 1 (личните данни са заличени).</figcaption>
-          </figure>
-
-          <figure class="post-cover">
-            <img
-              src="../images/dds-ib-otkaz-str2.jpg"
-              alt="Акт за отказ от регистрация по ЗДДС от НАП — страница 2"
-              loading="lazy"
-              decoding="async"
-              width="750"
-              height="1200"
-            />
-            <figcaption>Акт за отказ от регистрация по ЗДДС — страница 2 (личните данни са заличени).</figcaption>
-          </figure>
-
-          <h2>Какви документи могат да бъдат представени</h2>
-          <p>При отговор на ИПДПОЗЛ могат да бъдат приложени следните документи:</p>
-          <ul>
-            <li>клиентско споразумение с Interactive Brokers;</li>
-            <li>Activity Statement за проверявания период;</li>
-            <li>Trade Confirmation Report;</li>
-            <li>банкови извлечения;</li>
-            <li>доказателства за внесените лични средства;</li>
-            <li>справка за данъчната регистрация на брокера;</li>
-            <li>справка за седалището и адреса на брокера;</li>
-            <li>годишна данъчна декларация;</li>
-            <li>приложенията към нея;</li>
-            <li>справка за други доходи;</li>
-            <li>декларация относно липсата или наличието на други стопански дейности;</li>
-            <li>обяснение относно начина на подаване и изпълнение на поръчките;</li>
-            <li>други документи, изрично поискани от органа по приходите.</li>
-          </ul>
-          <p>
+<figure class="post-cover">
+<picture><source type="image/avif" srcset="../img/dds-ib-otkaz-str1-RVrRXaQFVT-680.avif 680w" sizes="(min-width: 980px) 680px, calc(100vw - 40px)"><source type="image/webp" srcset="../img/dds-ib-otkaz-str1-RVrRXaQFVT-680.webp 680w" sizes="(min-width: 980px) 680px, calc(100vw - 40px)"><img loading="lazy" decoding="async" alt="Акт за отказ от регистрация по ЗДДС от НАП — страница 1" src="../img/dds-ib-otkaz-str1-RVrRXaQFVT-680.jpeg" width="680" height="1088"></picture>
+<figcaption>Акт за отказ от регистрация по ЗДДС — страница 1 (личните данни са заличени).</figcaption>
+</figure>
+<figure class="post-cover">
+<picture><source type="image/avif" srcset="../img/dds-ib-otkaz-str2-DVZi_5bQ_o-680.avif 680w" sizes="(min-width: 980px) 680px, calc(100vw - 40px)"><source type="image/webp" srcset="../img/dds-ib-otkaz-str2-DVZi_5bQ_o-680.webp 680w" sizes="(min-width: 980px) 680px, calc(100vw - 40px)"><img loading="lazy" decoding="async" alt="Акт за отказ от регистрация по ЗДДС от НАП — страница 2" src="../img/dds-ib-otkaz-str2-DVZi_5bQ_o-680.jpeg" width="680" height="1088"></picture>
+<figcaption>Акт за отказ от регистрация по ЗДДС — страница 2 (личните данни са заличени).</figcaption>
+</figure>
+<h2 id="bg-12">Какви документи могат да бъдат представени</h2>
+<p>При отговор на ИПДПОЗЛ могат да бъдат приложени следните документи:</p>
+<ul>
+<li>клиентско споразумение с Interactive Brokers;</li>
+<li>Activity Statement за проверявания период;</li>
+<li>Trade Confirmation Report;</li>
+<li>банкови извлечения;</li>
+<li>доказателства за внесените лични средства;</li>
+<li>справка за данъчната регистрация на брокера;</li>
+<li>справка за седалището и адреса на брокера;</li>
+<li>годишна данъчна декларация;</li>
+<li>приложенията към нея;</li>
+<li>справка за други доходи;</li>
+<li>декларация относно липсата или наличието на други стопански дейности;</li>
+<li>обяснение относно начина на подаване и изпълнение на поръчките;</li>
+<li>други документи, изрично поискани от органа по приходите.</li>
+</ul>
+<p>
             Не е необходимо във всеки случай да бъдат представяни всички изброени документи. Подборът им трябва да
             бъде съобразен с конкретното искане на НАП и с фактическата обстановка.
           </p>
-
-          <h2>Важни уточнения</h2>
-          <p>Различен резултат може да бъде получен при:</p>
-          <ul>
-            <li>използване на друг инвестиционен посредник;</li>
-            <li>различно клиентско споразумение;</li>
-            <li>търговия чрез дружество;</li>
-            <li>професионално управление на чужди средства;</li>
-            <li>извършване на дейността по занятие;</li>
-            <li>предоставяне на инвестиционни или консултантски услуги;</li>
-            <li>търговия за сметка на други лица;</li>
-            <li>наличие на персонал, офис или специална организация;</li>
-            <li>използване на алгоритмични системи като организирана стопанска дейност;</li>
-            <li>получаване на други възнаграждения или комисиони;</li>
-            <li>различен начин на изпълнение и сетълмент на сделките.</li>
-          </ul>
-          <p>Поради това не следва да се изхожда единствено от размера на оборота или от факта, че се използва същият брокер.</p>
-
-          <h2>Примерен отговор на ИПДПОЗЛ</h2>
-          <p>
+<h2 id="bg-13">Важни уточнения</h2>
+<p>Различен резултат може да бъде получен при:</p>
+<ul>
+<li>използване на друг инвестиционен посредник;</li>
+<li>различно клиентско споразумение;</li>
+<li>търговия чрез дружество;</li>
+<li>професионално управление на чужди средства;</li>
+<li>извършване на дейността по занятие;</li>
+<li>предоставяне на инвестиционни или консултантски услуги;</li>
+<li>търговия за сметка на други лица;</li>
+<li>наличие на персонал, офис или специална организация;</li>
+<li>използване на алгоритмични системи като организирана стопанска дейност;</li>
+<li>получаване на други възнаграждения или комисиони;</li>
+<li>различен начин на изпълнение и сетълмент на сделките.</li>
+</ul>
+<p>Поради това не следва да се изхожда единствено от размера на оборота или от факта, че се използва същият брокер.</p>
+<h2 id="bg-14">Примерен отговор на ИПДПОЗЛ</h2>
+<p>
             За да улесним максимално данъчните хакери, прилагаме примерен отговор на изпратено до кантората ни
             ИПДПОЗЛ, по заявлението по което сме получили акт за отказ от регистрация.
           </p>
-          <p>
+<p>
             Естествено, всеки случай е уникален и неповторим. Текстът не може да бъде използван наготово, а следва
             да бъде персонализиран спрямо конкретната дейност, фактическата обстановка, използвания инвестиционен
             посредник и представените документи.
           </p>
-
-          <blockquote>
-            <p><strong>Писмени обяснения</strong></p>
-            <p>От …..<br>
+<blockquote>
+<p><strong>Писмени обяснения</strong></p>
+<p>От …..<br>
             Във връзка с Искане ………………..</p>
-
-            <p>Уважаема г-жо Инспектор по Приходите,</p>
-
-            <p>
+<p>Уважаема г-жо Инспектор по Приходите,</p>
+<p>
               Отговарям на отправеното ми искане ИПДПОЗЛ номер ………………….. от дата …………………..,
               връчено на ………………………………. Както следва:
             </p>
-            <p>Инвестирам лични средства.</p>
-            <p>Използвам Интерактив Брокерс за тази цел.</p>
-            <p>
+<p>Инвестирам лични средства.</p>
+<p>Използвам Интерактив Брокерс за тази цел.</p>
+<p>
               Интерактив Брокерс са инвестиционен посредник, лицензиран в Ирландия. Платформата им е достъпна на
               този адрес:<br>
-              <a href="https://www.interactivebrokers.ie/en/trading/international-lp.php?gclid=Cj0KCQjwhMq-BhCFARIsAGvo0KdzFIsBcE13QxIFtSvp0Hh1ZpxYlcF3pAYTJYm2cRvsui4T-i1rKLIaAtOUEALw_wcB" target="_blank" rel="noopener">https://www.interactivebrokers.ie/en/trading/international-lp.php</a>
-            </p>
-            <p>
+<a href="https://www.interactivebrokers.ie/en/trading/international-lp.php?gclid=Cj0KCQjwhMq-BhCFARIsAGvo0KdzFIsBcE13QxIFtSvp0Hh1ZpxYlcF3pAYTJYm2cRvsui4T-i1rKLIaAtOUEALw_wcB" rel="noopener" target="_blank">https://www.interactivebrokers.ie/en/trading/international-lp.php<span class="sr-only"> (отваря се в нов раздел)</span></a>
+</p>
+<p>
               За да може да съм техен клиент, съм сключил с тях клиентсвко споразумение, на което оригиналният текст
               се намира на този адрес:<br>
-              <a href="https://www.interactivebrokers.com/en/accounts/forms-and-disclosures-client-agreements.php" target="_blank" rel="noopener">https://www.interactivebrokers.com/en/accounts/forms-and-disclosures-client-agreements.php</a>
-            </p>
-
-            <div class="post-download">
-              <a href="../files/ib-client-agreement.pdf" target="_blank" rel="noopener">
-                📄 Изтегли клиентското споразумение с Interactive Brokers (PDF, 30 стр.)
-              </a>
-            </div>
-
-            <p>
+<a href="https://www.interactivebrokers.com/en/accounts/forms-and-disclosures-client-agreements.php" rel="noopener" target="_blank">https://www.interactivebrokers.com/en/accounts/forms-and-disclosures-client-agreements.php<span class="sr-only"> (отваря се в нов раздел)</span></a>
+</p>
+<p><a class="download-link" href="../files/ib-client-agreement.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon" focusable="false"><use href="../assets/icons.svg#download"></use></svg>Изтегли клиентското споразумение с Interactive Brokers (PDF, 30 стр.)
+              <span class="sr-only"> (отваря се в нов раздел)</span></a></p>
+<p>
               По силата на това споразумение всеки клинет може да купува и продава финансови активи през тяхната
               платформа, като заплаща за това такси и комисионни на брокера, както и спазва определени правила.
               Част от тези правила засягат начина, по който се сключват сделките в платформата на брокера, а именно:
             </p>
-
-            <p><strong>Превод:</strong><br>
+<p><strong>Превод:</strong><br>
             5. Маршрутизиране на поръчки: Освен ако не е указано друго, IB ще избере пазара/дилъра, към който да
             изпрати поръчките на Клиента. За продукти, търгувани на множество пазари, IB може да предостави
             „Интелигентно маршрутизиране“, което търси най-добрия пазар за всяка поръчка чрез компютърен алгоритъм.
@@ -527,8 +426,7 @@
             пренасочват поръчките за ръчна обработка; или пазарните правила, решения или системни повреди може да
             предотвратят/забавят изпълнението на поръчките на Клиента или да доведат до това, че поръчките да не
             получат най-добрата цена.</p>
-
-            <p><strong>Превод:</strong><br>
+<p><strong>Превод:</strong><br>
             7. Отмяна/Промяна на поръчка: Клиентът признава, че може да не е възможно да се отмени/промени поръчка и
             че Клиентът носи отговорност за изпълненията, независимо от заявка за отмяна/промяна.<br>
             8. Изпълнение на поръчка: IB ще изпълнява поръчките на Клиента като агент, освен ако не е потвърдено
@@ -538,8 +436,7 @@
             Клиента по всяко време по свое усмотрение. Всички транзакции са предмет на правилата и политиките на
             съответните пазари и клирингови къщи, както и на приложимите закони и разпоредби. IB НЕ НОСИ ОТГОВОРНОСТ
             ЗА ВСЯКО ДЕЙСТВИЕ ИЛИ РЕШЕНИЕ НА КОЯТО И ДА Е БОРСА, ПАЗАР, ДИЛЪР, КЛИРИНГОВА КЪЩА ИЛИ РЕГУЛАТОР.</p>
-
-            <p><strong>Превод:</strong><br>
+<p><strong>Превод:</strong><br>
             9. Потвърждения и грешки при отчитане:<br>
             А. Клиентът се съгласява да следи всяка поръчка, докато IB потвърди изпълнението или отмяната ѝ. Клиентът
             признава, че потвържденията за изпълнение или отмяна може да бъдат забавени или да са грешни (напр. поради
@@ -557,70 +454,66 @@
             поръчки, сделки, салда, позиции, маргинален статус или история на транзакциите. Клиентът признава, че IB
             може да коригира сметката на Клиента, за да поправи всяка грешка. Клиентът се съгласява незабавно да върне
             на IB всички активи, които са му били изпратени по грешка.</p>
-
-            <p><strong>Превод:</strong><br>
+<p><strong>Превод:</strong><br>
             10. Собствена търговия – Показване на поръчките на Клиента: Съгласно всички приложими закони и разпоредби,
             Клиентът упълномощава IB да извършва собствена търговия за себе си и своите афилирани лица, въпреки че IB
             може едновременно да държи неизпълнени поръчки на Клиента за същите продукти на същата цена.</p>
-
-            <p>
+<p>
               Излиза, че когато клиент въведе поръчка, Интерактив Брокерс имат право да изберат на кой пазар да се
               случи, да изберат цената, по която да изпълнят поръчката, дори и тя да е лимитирана (т.е. ще продадат
               на по-ниска стойност, а на мен ще ми прехвърлят резултата според цената, която съм посочил и ще задържат
               разликата); да изменят момента, в който да се случи и дали изобщо да я изпълнят. Листингът може да е на
               една борса, а изпълението може да е на съвсем различна и даже да не е на борсов сегмент.
             </p>
-            <p>
+<p>
               След това ще отчетат резултатите в електронната платформа и аз като техен клинет следва да ги приема
               такива каквито са.
             </p>
-            <p>
+<p>
               В гражданското ни право, действащо към момента, съществуват 2 вида представителство- пряко и косвено.
             </p>
-            <p>
+<p>
               При прякото представителство аз упълномощавам моя представител да действа при строго дефинирани условия
               за цени, вид на покупката или на продажбата и пазар. Случаят тук не е този.
             </p>
-            <p>
+<p>
               Вторият вид представителство е косвеното представителство, при което представителят влиза „в обувките“
               на търговец, договаря от свое име и за своя сметка и в последствие прехвърля резултата на титуляра.
               Нашият случай е такъв.
             </p>
-            <p>Съответно тук имаме 3 сделки:</p>
-            <p>
+<p>Съответно тук имаме 3 сделки:</p>
+<p>
               1. Въвеждане на поръчка, с която оправомощавам ИБ да купуват или продават;<br>
               2. Сделката по покупка или продажба, която те сключват на цена и на пазар по тяхно усмотрение;<br>
               3. Прехвърлителна сделка, с която ми отчитат резултата в акаунта.
             </p>
-            <p>
+<p>
               При тези обстоятелства мога да твърдя съвсем обосновано, че моите правоотношения са с Интерактив
               брокерс, които не функционират като обикновен маркетплейс, ами са маркетмейкър по смисъла на Директивата
               MIFID II и като такъв участват хем в осигуряването на ликвидност на пазара, хем действат като посредник
               между инвеститорите, хем са търговец, който участва в търговията за собствена сметка, в това число и със
               своите клинети, в случая с мен.
             </p>
-            <p>
+<p>
               Интерактив Брокер са базирани в Ирландия, като юридическият им адрес фигурира на всички извлечения от
               акаунта ми, включително на 1ва страница в Activity Statement и отговарят на всички изисквания за данъчно
               задължено лице по смисъла на Регламта за прилагане на Директива 112/2006 ЕО (Директивата за ДДС), член
               13-24 включително, а именно: (линк:
-              <a href="https://eur-lex.europa.eu/legal-content/BG/ALL/?uri=celex%3A32011R0282" target="_blank" rel="noopener">https://eur-lex.europa.eu/legal-content/BG/ALL/?uri=celex%3A32011R0282</a>)
+              <a href="https://eur-lex.europa.eu/legal-content/BG/ALL/?uri=celex%3A32011R0282" rel="noopener" target="_blank">https://eur-lex.europa.eu/legal-content/BG/ALL/?uri=celex%3A32011R0282<span class="sr-only"> (отваря се в нов раздел)</span></a>)
             </p>
-
-            <p><strong>Член 13</strong><br>
+<p><strong>Член 13</strong><br>
             „Обичайното местоживеене“ на физическо лице, независимо от това дали то е данъчнозадължено лице или не,
             посочено в Директива 2006/112/ЕО, е мястото, където физическото лице обичайно живее поради лични и
             професионални връзки.<br>
             Когато държавите на професионалните връзки и на личните връзки са различни или когато не съществуват
             професионални връзки, мястото на обичайното местоживеене се определя от личните връзки, които показват
             тясна връзка между лицето и мястото, където то живее.</p>
-
-            <p><strong>РАЗДЕЛ 4</strong><br>
+<p><strong>РАЗДЕЛ 4</strong><br>
             Място на доставка на услуги<br>
             (Членове 43—59 от Директива 2006/112/ЕО)<br>
             Подраздел 1<br>
             Статут на получателя<br>
-            <strong>Член 17</strong><br>
+<strong>Член 17</strong><br>
             1.   Ако мястото на доставка на услуги зависи от това дали получателят е данъчнозадължено лице или данъчно
             незадължено лице, статутът на получателя се определя въз основа на членове 9—13 и член 43 от Директива
             2006/112/ЕО.<br>
@@ -629,8 +522,7 @@
             извършваните от него вътреобщностни придобивания на стоки подлежат на облагане с ДДС или защото е
             упражнило правото си на избор да подлежи на облагане с ДДС за извършваните от него придобивания, е
             данъчнозадължено лице по смисъла на член 43 от посочената директива.</p>
-
-            <p><strong>Член 18</strong><br>
+<p><strong>Член 18</strong><br>
             1.   Освен ако не разполага с информация за противното, доставчикът на услуги може да счита, че получател,
             установен в Общността, има статут на данъчнозадължено лице:<br>
             а) когато получателят му е съобщил идентификационния си номер по ДДС и доставчикът получи потвърждение за
@@ -660,10 +552,9 @@
             получателят е данъчнозадължено лице и ако доставчикът извърши проверка в разумна степен на точността на
             информацията, предоставена му от получателя, с помощта на обичайните търговски мерки за сигурност като
             мерките, свързани с проверките на самоличността и на плащанията.</p>
-
-            <p>Подраздел 2<br>
+<p>Подраздел 2<br>
             Качество на получателя<br>
-            <strong>Член 19</strong><br>
+<strong>Член 19</strong><br>
             За целите на прилагане на правилата относно мястото на доставка на услугите, установени в членове 44 и 45
             от Директива 2006/112/ЕО, данъчнозадължено лице или данъчно незадължено юридическо лице, считано за
             данъчнозадължено лице, което получава услуги изключително за лично ползване, включително за нуждите на своя
@@ -674,10 +565,9 @@
             Когато една-единствена услуга е предназначена както за лично ползване, включително за нуждите на персонала
             на получателя, така и за целите на стопанската дейност, предоставянето на тази услуга попада изключително
             в обхвата на член 44 от Директива 2006/112/ЕО, ако не съществува никаква практика на злоупотреба.</p>
-
-            <p>Подраздел 3<br>
+<p>Подраздел 3<br>
             Местоположение на получателя<br>
-            <strong>Член 20</strong><br>
+<strong>Член 20</strong><br>
             Когато дадена доставка на услуги, извършена в полза на данъчнозадължено лице или данъчно незадължено
             юридическо лице, считано за данъчнозадължено лице, попада в обхвата на член 44 от Директива 2006/112/ЕО, и
             когато това данъчнозадължено лице е установено в една-единствена държава или, при отсъствие на място на
@@ -687,8 +577,7 @@
             помощта на обичайните търговски мерки за сигурност като проверките на самоличността и на плащанията.<br>
             Информацията може да включва идентификационния номер по ДДС, предоставен от държавата-членка, в която е
             установен получателят.</p>
-
-            <p><strong>Член 21</strong><br>
+<p><strong>Член 21</strong><br>
             Когато дадена доставка на услуги към данъчнозадължено лице или на данъчно незадължено юридическо лице,
             считано за данъчнозадължено лице, попада в обхвата на член 44 от Директива 2006/112/ЕО, и данъчнозадълженото
             лице е установено в повече от една държава, тази доставка на услуги се облага в държавата, в която
@@ -698,8 +587,7 @@
             в мястото на постоянния обект, който получава услугата и я ползва за собствените си нужди.<br>
             Когато данъчнозадълженото лице няма място на установяване на стопанска дейност, нито постоянен обект,
             услугата се облага на мястото на неговия постоянен адрес или обичайно местоживеене.</p>
-
-            <p><strong>Член 22</strong><br>
+<p><strong>Член 22</strong><br>
             1.   С оглед да се определи постоянният обект на получателя, на който се предоставя услугата, доставчикът
             разглежда естеството и използването на предоставената услуга.<br>
             В случай че естеството и използването на предоставените услуги не му позволяват да установи постоянния
@@ -714,8 +602,7 @@
             услуги може с пълно основание да счита, че услугите са доставени там, където получателят е установил
             стопанската си дейност.<br>
             2.   Прилагането на настоящия член не засяга задълженията на получателя.</p>
-
-            <p><strong>Член 23</strong><br>
+<p><strong>Член 23</strong><br>
             1.   От 1 януари 2013 г., когато, в съответствие с член 56, параграф 2, първа алинея от Директива
             2006/112/ЕО, дадена доставка на услуги се облага в мястото, където е установен получателят, или при
             отсъствие на такова, в мястото на постоянния му адрес или на обичайното му местоживеене, доставчикът
@@ -727,8 +614,7 @@
             или на обичайното му местоживеене, доставчикът установява това място въз основа на фактическа информация,
             предоставена от получателя, и проверява тази информация с помощта на обичайните търговски мерки за
             сигурност като мерките, свързани с проверките на самоличността и на плащанията.</p>
-
-            <p><strong>Член 24</strong><br>
+<p><strong>Член 24</strong><br>
             1.   От 1 януари 2013 г., когато доставки, обхванати от член 56, параграф 2, първа алинея от Директива
             2006/112/ЕО, са доставени на данъчно незадължено лице, което е установено в повече от една държава, има
             постоянен адрес в една държава, а обичайното му местоживеене е в друга държава, при определяне на мястото
@@ -739,55 +625,53 @@
             обичайното му местоживеене е в друга държава, при определяне на мястото на доставка на тези услуги
             предимство се предоставя на мястото, в което облагането е осигурено най-добре, пред мястото на
             действителното потребление на услугите.</p>
-
-            <p>
+<p>
               Информацията, свързана с VAT  (ДДС) номер, адрес и регистрация на Interactive Brokers Ireland в
               Европейската система EORI (European Union Registration and Identification), е публично достъпна, но
               трябва да се провери директно чрез официални източници поради възможни промени. Ето данните, които мога
               да предоставя:
             </p>
-            <p>
+<p>
               1. VAT номер (ДДС номер):<br>
-              &nbsp;&nbsp;&nbsp;- VAT номерът на Interactive Brokers Ireland е: IE6388047G.<br>
-              &nbsp;&nbsp;Този номер може да се провери в европейската система VIES:
-              <a href="https://ec.europa.eu/taxation_customs/vies/" target="_blank" rel="noopener">https://ec.europa.eu/taxation_customs/vies/</a>
+                 - VAT номерът на Interactive Brokers Ireland е: IE6388047G.<br>
+                Този номер може да се провери в европейската система VIES:
+              <a href="https://ec.europa.eu/taxation_customs/vies/" rel="noopener" target="_blank">https://ec.europa.eu/taxation_customs/vies/<span class="sr-only"> (отваря се в нов раздел)</span></a>
               , която потвърждава валидността на ДДС регистрациите в ЕС.
             </p>
-            <p>
+<p>
               2. Адрес на регистрация:<br>
-              &nbsp;&nbsp;&nbsp;- Interactive Brokers Ireland Limited<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registered Office:<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 Earlsfort Terrace, Dublin 2, D02 T380, Ireland.<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Това е основният регистриран адрес на дружеството в Ирландия.
+                 - Interactive Brokers Ireland Limited<br>
+                   Registered Office:<br>
+                   10 Earlsfort Terrace, Dublin 2, D02 T380, Ireland.<br>
+                   Това е основният регистриран адрес на дружеството в Ирландия.
             </p>
-            <p>
+<p>
               3. Регистрация в ЕИОП (EORI):<br>
-              &nbsp;&nbsp;&nbsp;- EORI номерът се използва за митнически цели в ЕС. Ако Interactive Brokers Ireland
+                 - EORI номерът се използва за митнически цели в ЕС. Ако Interactive Brokers Ireland
               извършва дейности, свързани с внос/износ на стоки (което е малко вероятно, тъй като те са финансов
               посредник), техният EORI номер би бил свързан с VAT номера им.<br>
-              &nbsp;&nbsp;&nbsp;- Примерен формат за Ирландия:  IE6388047G ,съвпадащ с VAT номера, но с допълнителни
+                 - Примерен формат за Ирландия:  IE6388047G ,съвпадащ с VAT номера, но с допълнителни
               символи.<br>
-              &nbsp;&nbsp;За точно потвърждение се препоръчва да се свържете директно с Interactive Brokers или да
+                За точно потвърждение се препоръчва да се свържете директно с Interactive Brokers или да
               проверите чрез митническите власти на Ирландия
-              <a href="https://www.revenue.ie/" target="_blank" rel="noopener">https://www.revenue.ie/</a>
-            </p>
-            <p>
+              <a href="https://www.revenue.ie/" rel="noopener" target="_blank">https://www.revenue.ie/<span class="sr-only"> (отваря се в нов раздел)</span></a>
+</p>
+<p>
               Важни бележки:<br>
               - За EORI регистрация: Финансовите институции обикновено нямат EORI номер, освен ако не извършват
               митнически операции.
             </p>
-            <p>
+<p>
               Ако имате нужда от официално потвърждение, можете да се свържете с Interactive Brokers директно на:<br>
               - Поддръжка за клиенти: +353 1 603 7250 (Ирландия)<br>
               - Официален уебсайт:
-              <a href="https://www.interactivebrokers.ie" target="_blank" rel="noopener">www.interactivebrokers.ie</a>
-            </p>
-
-            <p>
+              <a href="https://www.interactivebrokers.ie" rel="noopener" target="_blank">www.interactivebrokers.ie<span class="sr-only"> (отваря се в нов раздел)</span></a>
+</p>
+<p>
               На основание на предоставената информация, считам , че отговарям на изискванията на чл. 21, ал 2 от ЗДДС,
               а именно:
             </p>
-            <p>
+<p>
               (2) Мястото на изпълнение при доставка на услуга, когато получателят е данъчно задължено лице, е мястото,
               където получателят е установил независимата си икономическа дейност. Когато тези услуги се предоставят на
               постоянен обект, който се намира на място, различно от мястото, където получателят е установил
@@ -795,947 +679,156 @@
               Когато няма място на установяване на независима икономическа дейност или постоянен обект, мястото на
               изпълнение на доставката е мястото на постоянния адрес или обичайното пребиваване на получателя.
             </p>
-            <p>
+<p>
               Когато аз продавам финансови активи, моите продажби са освободени от ЗДДС на основание на чл. 46 ЗДДС, но
               трупам оборот за регистрация по чл. 96 ЗДДС, 1) когато моята дейност се счита за основна, 2) приема се за
               независима иконимическа дейност по чл. 3 от ЗДДС и 3) оборотът е натрупан на територията на България.
               Тези 3 условия следва да са налице едновременно. При мен не всички са налице.
             </p>
-            <p>
+<p>
               Съгласно описаната фактическа обстановка по-горе, считам, че Интерактив  Брокерс са в качеството си на
               купувач, когато продавам акции и други финансови активи;
             </p>
-            <p>
+<p>
               Като допълнително доказателство, моля да имате предвид, че в раздел Financial Instruments Information от
               приложения Activity Statement като листинг на притежаваните и продадените от мен активи са посочени
               конкретни борси.
             </p>
-            <p>В същото време в справката Trades Confirmation report са дадени реално къде са изпълнени поръчките.</p>
-            <p>
+<p>В същото време в справката Trades Confirmation report са дадени реално къде са изпълнени поръчките.</p>
+<p>
               Казано с прости думи моите акции няма как сами да се преместят на други борси или сегменти. А за да се
               преместят физически, трябва да се обърнат в поименни акции и да се премине през процедура по clearing.
               Това просто е невъзможно да се получи без мое дейно участи и без участието на депозитар.
             </p>
-            <p>
+<p>
               Следователно е невъзможно да държа акции, които са листнати например на борсата Ксетра в Германия (с
               тикер IBIS или IBIS2), и да ги продам на сегмента DARK, примерно, който изобщо не е борса.
             </p>
-            <p>Понеже Интерактив Брокерс имат покритие на много пазари, ето какво става технически.</p>
-            <p>
+<p>Понеже Интерактив Брокерс имат покритие на много пазари, ето какво става технически.</p>
+<p>
               Когато искам да продам актив, без значение къде е листнат, те продават техен там, където финансово
               най-много им изнася, след което «прибират» моя актив от акаунта ми  и ми превеждат стойността му, демек
               изкупуват го.
             </p>
-            <p>
+<p>
               Именно това е описано като процес в частта “5. маршрутизиране на поръчките” в точка 5 от подписаното с
               тях клинетско споразумение.
             </p>
-            <p>Интерактив Брокерс имат седалище в ЕС – в Ирландия. , т.е. те са местно лице за ЕС.</p>
-            <p>Интеркатив Брокерс имат европейски ДДС номер - IE6388047G</p>
-            <p>Интеркатив Брокерс имат статут на данъчно задължено лице в ЕС.</p>
-            <p>
+<p>Интерактив Брокерс имат седалище в ЕС – в Ирландия. , т.е. те са местно лице за ЕС.</p>
+<p>Интеркатив Брокерс имат европейски ДДС номер - IE6388047G</p>
+<p>Интеркатив Брокерс имат статут на данъчно задължено лице в ЕС.</p>
+<p>
               Сделките са онлайн, следователно мястото на изпълнение следва да се определи като „мястото на постоянния
               адрес или обичайното пребиваване на получателя“, което в случая е Ирландия.
             </p>
-            <p>
+<p>
               На основание на изброените, моля да приемете за доказано, че оборотът е натрупан в Ирландия и да
               постановите акт за отказ от ДДС.
             </p>
-            <p>С уважение:<br>……………………..</p>
-          </blockquote>
-
-          <p>
-            <em>
+<p>С уважение:<br>……………………..</p>
+</blockquote>
+<p>
+<em>
               Настоящият материал има общ информационен характер. Той не представлява индивидуална данъчна, правна
               или счетоводна консултация. Преди подаване на заявление за регистрация по ЗДДС или отговор до НАП
               конкретните факти и документи следва да бъдат прегледани от квалифициран специалист.
             </em>
-          </p>
+</p>
+<p>Поздрави,<br><strong>Марина Мучакова</strong></p>
 
-          <p>Поздрави,<br><strong>Марина Мучакова</strong></p>
-        </div>
-
-        <!-- ═══════════════ EN ═══════════════ -->
-        <div class="lang-content" data-lang="en" style="display:none;">
-          <p>
-            Over recent months we have received a growing number of questions from investors and traders who deal
-            in shares and other financial instruments through Interactive Brokers and other foreign investment
-            firms. The most frequent question is:
-          </p>
-          <blockquote>
-            “Now that my turnover from selling financial instruments has exceeded the VAT registration threshold,
-            am I obliged to register?”
-          </blockquote>
-          <p>The answer is not clear-cut.</p>
-          <p>
-            Reaching a certain volume of sales does not automatically create an obligation to register under
-            Art. 96 of the Bulgarian VAT Act. The specific activity, the manner in which the trades are carried out,
-            the relationship with the investment firm and the place of supply of the relevant supplies all have to be
-            analysed.
-          </p>
-          <p>
-            This article examines a concrete case in which, after an application under Art. 96 of the VAT Act was
-            filed and a review carried out, the Bulgarian Revenue Agency (NRA) issued an act refusing registration.
-          </p>
-          <p>
-            It is important to stress at the outset that every case has its own particularities. The reasoning set
-            out below is not a universal solution and cannot be applied mechanically to every person who invests or
-            trades in financial instruments.
-          </p>
-
-          <h2>How the procedure starts</h2>
-          <p>
-            After an application for registration under Art. 96 of the VAT Act is filed, the revenue authority
-            normally carries out a review of the declared circumstances. As part of that review the applicant may
-            receive a demand for the submission of documents and written explanations from an obligated person, known
-            as an “ИПДПОЗЛ”.
-          </p>
-          <p>The demand may request documents and information regarding:</p>
-          <ul>
-            <li>the nature of the activity carried out;</li>
-            <li>the investment firm used;</li>
-            <li>the purchases and sales made;</li>
-            <li>the amount of turnover received;</li>
-            <li>the bank transfers;</li>
-            <li>the contractual relationship with the broker;</li>
-            <li>the manner and place of execution of the trades;</li>
-            <li>the statements from the investment platform;</li>
-            <li>the annual tax returns filed;</li>
-            <li>other income and business activities of the person.</li>
-          </ul>
-          <p>
-            The response to this demand is especially important, because it is where the factual and legal basis of
-            the applicant’s position is presented.
-          </p>
-
-          <h2>The key question: where is the place of supply</h2>
-          <p>
-            The sale of shares and other financial instruments may constitute an exempt supply within the meaning of
-            Art. 46 of the VAT Act. That, however, does not mean that every sale automatically counts towards the
-            turnover for mandatory registration under Art. 96 of the VAT Act.
-          </p>
-          <p>
-            For a given supply to be included when determining turnover, all applicable statutory preconditions must
-            be met. What matters, for example, is:
-          </p>
-          <ol>
-            <li>whether the person carries out an independent economic activity within the meaning of Art. 3 of the VAT Act;</li>
-            <li>whether the relevant supplies are part of that person’s main activity;</li>
-            <li>whether the place of supply is on the territory of Bulgaria.</li>
-          </ol>
-          <p>These preconditions must be considered together, not in isolation.</p>
-          <p>
-            In the case at hand the main line of reasoning concerns the place of execution of the trades and the role
-            of Interactive Brokers Ireland Limited in carrying them out.
-          </p>
-
-          <h2>How Interactive Brokers works</h2>
-          <p>Interactive Brokers Ireland Limited is an investment firm established in Ireland.</p>
-          <p>
-            In order to use the platform, every client enters into a client agreement. It governs the rights and
-            obligations of the parties, as well as the manner in which the broker accepts, routes and executes client
-            orders.
-          </p>
-          <p>Several important circumstances can be derived from the provisions of the client agreement. Interactive Brokers may:</p>
-          <ul>
-            <li>select the market or dealer to which the client order is routed;</li>
-            <li>use an automated smart-routing system;</li>
-            <li>execute the order through another broker or an affiliate;</li>
-            <li>execute orders as agent and, in certain cases, as principal;</li>
-            <li>decline to execute a given order;</li>
-            <li>correct or cancel a reported execution where there is an error;</li>
-            <li>carry out proprietary trading, including while holding unexecuted client orders for the same financial instruments.</li>
-          </ul>
-          <p>
-            This means that the client does not, in every case, determine the specific market, the counterparty and
-            the technical manner in which the order will be executed.
-          </p>
-          <p>
-            Even where a financial instrument is listed on a particular exchange, the actual execution may be reported
-            on another market, through a different trading segment, or by means of another permissible execution
-            mechanism.
-          </p>
-          <p>After the operation is completed, Interactive Brokers records the result in the client account and in the relevant reports.</p>
-
-          <div class="post-download">
-            <a href="../files/ib-client-agreement.pdf" target="_blank" rel="noopener">
-              📄 Download the Interactive Brokers Client Agreement (PDF, 30 pages)
-            </a>
-          </div>
-
-          <h2>Direct and indirect representation</h2>
-          <p>Bulgarian civil and commercial law usually distinguishes between direct and indirect representation.</p>
-          <p>
-            In direct representation the representative acts in the name and on the account of the represented person.
-            The legal consequences arise directly for the represented person.
-          </p>
-          <p>
-            In indirect representation the representative acts in their own name, but on the account of another
-            person. The result of the transaction is then transferred or accounted for to the person on whose account
-            it was carried out.
-          </p>
-          <p>
-            Given the freedom granted to the broker in routing and executing orders, it can be argued that the
-            relationship is not exhausted by mere technical intermediation between the investor and a specific end
-            buyer.
-          </p>
-          <p>In this scenario three stages can conditionally be distinguished:</p>
-          <ol>
-            <li>the client places an order and authorises the broker to carry out a certain action;</li>
-            <li>the broker arranges or carries out the purchase or sale under the applicable market conditions;</li>
-            <li>the result of the operation is recorded and accounted for in the client account.</li>
-          </ol>
-          <p>This construction is relevant when determining the counterparty and the place of supply.</p>
-
-          <h2>Interactive Brokers as an investment firm and market participant</h2>
-          <p>
-            Interactive Brokers does not function merely as a passive electronic platform that technically connects
-            buyers and sellers.
-          </p>
-          <p>
-            The company performs the functions of an investment firm and takes part in the process of routing and
-            executing client orders. Depending on the specific trade, it may act as agent, principal, or use another
-            broker or an affiliate.
-          </p>
-          <p>
-            From this standpoint it can be argued that the client’s legal relationship is essentially with Interactive
-            Brokers, and not directly with an unidentified end buyer on a given exchange. This circumstance is
-            material to the place-of-supply analysis.
-          </p>
-
-          <h2>Tax status of Interactive Brokers Ireland Limited</h2>
-          <p>Interactive Brokers Ireland Limited is a company established in Ireland.</p>
-          <p>The company has an EU VAT number and participates in economic activity as a taxable person.</p>
-          <p>
-            When carrying out a specific review it is advisable to confirm the current registration details through
-            official sources, since addresses, registration numbers and other circumstances may change.
-          </p>
-          <p>The written explanations may be accompanied by:</p>
-          <ul>
-            <li>an extract from the official commercial register;</li>
-            <li>confirmation of the validity of the VAT number through the VIES system;</li>
-            <li>the client agreement;</li>
-            <li>the Activity Statement;</li>
-            <li>the Trade Confirmation Report;</li>
-            <li>official documents establishing the company’s seat.</li>
-          </ul>
-
-          <h2>Application of Art. 21(2) of the VAT Act</h2>
-          <p>
-            Under Art. 21(2) of the VAT Act, the place of supply of a service, where the recipient is a taxable
-            person, is the place where the recipient has established its independent economic activity.
-          </p>
-          <p>
-            Where the service is supplied to a fixed establishment located elsewhere, the place of supply is where
-            that fixed establishment is located. In the absence of a place of establishment and a fixed establishment,
-            the place of supply is the place of the recipient’s permanent address or usual residence.
-          </p>
-          <p>
-            In the reasoning of the case at hand it is argued that Interactive Brokers is the recipient of the
-            supplies relating to the sale of the financial instruments. Since the company is established in Ireland,
-            the place of supply is determined outside the territory of Bulgaria.
-          </p>
-
-          <h2>Why the broker’s reports matter</h2>
-          <p>The two main types of report the client can download from the investment platform are of particular importance.</p>
-
-          <h3>Activity Statement</h3>
-          <p>The Activity Statement contains summary information on:</p>
-          <ul>
-            <li>the financial instruments held;</li>
-            <li>the movement on the account;</li>
-            <li>the purchases and sales;</li>
-            <li>the fees and commissions charged;</li>
-            <li>the realised and unrealised results;</li>
-            <li>the market or exchange on which the relevant instrument is listed.</li>
-          </ul>
-
-          <h3>Trade Confirmation Report</h3>
-          <p>The Trade Confirmation Report contains specific data on the execution of individual orders, including:</p>
-          <ul>
-            <li>date and time;</li>
-            <li>quantity;</li>
-            <li>price;</li>
-            <li>market or execution segment;</li>
-            <li>commissions;</li>
-            <li>other transaction details.</li>
-          </ul>
-          <p>
-            Comparing the two reports may show that the exchange on which a given instrument is listed does not always
-            coincide with the place or mechanism through which the specific order was executed.
-          </p>
-          <p>
-            This supports the argument that the broker has operational discretion when executing orders and is not
-            merely a neutral platform for posting offers.
-          </p>
-
-          <h2>The technical execution of orders</h2>
-          <p>
-            When the client places an order to sell a financial asset, they do not themselves transfer their shares to
-            a buyer of their own choosing. The technical execution passes through the broker’s infrastructure, the
-            relevant markets, clearing systems and depositories.
-          </p>
-          <p>The client sees the final result in their account, but usually does not directly take part in:</p>
-          <ul>
-            <li>the choice of the specific counterparty;</li>
-            <li>the clearing of the trade;</li>
-            <li>the settlement;</li>
-            <li>the choice of trading segment;</li>
-            <li>the transfer of the financial instruments;</li>
-            <li>the broker’s internal operations.</li>
-          </ul>
-          <p>These facts are important when determining the nature of the relationship between the investor and the investment firm.</p>
-
-          <h2>When turnover may not be included in the registration</h2>
-          <p>
-            For a certain turnover to count towards the threshold for mandatory registration under Art. 96 of the VAT
-            Act, it is not enough that a significant value of sales has simply been achieved. It must be established:
-          </p>
-          <ul>
-            <li>that there is an independent economic activity;</li>
-            <li>that the financial transactions are part of the person’s main activity, where relevant;</li>
-            <li>that the supplies fall within the scope of the VAT Act;</li>
-            <li>that the place of supply is on the territory of Bulgaria;</li>
-            <li>that their value should be included in the taxable turnover.</li>
-          </ul>
-          <p>
-            Where the place of supply is outside Bulgaria, the relevant supplies do not form turnover for registration
-            under Art. 96 of the VAT Act on that basis.
-          </p>
-
-          <h2>What the NRA accepted in this case</h2>
-          <p>In the case at hand the revenue authority accepted that:</p>
-          <ul>
-            <li>the trades carried out relate to financial instruments;</li>
-            <li>the relevant supplies constitute financial services;</li>
-            <li>their place of supply is not on the territory of Bulgaria;</li>
-            <li>the turnover achieved does not form taxable turnover under Art. 96 of the VAT Act;</li>
-            <li>there are no grounds for mandatory registration.</li>
-          </ul>
-          <p>
-            As a result, an act refusing VAT registration was issued. This act is an important practical example, but
-            does not create an automatically applicable rule for all investors and traders.
-          </p>
-
-          <figure class="post-cover">
-            <img
-              src="../images/dds-ib-otkaz-str1.jpg"
-              alt="NRA act refusing VAT registration — page 1"
-              loading="lazy"
-              decoding="async"
-              width="750"
-              height="1200"
-            />
-            <figcaption>Act refusing VAT registration — page 1 (personal data redacted).</figcaption>
-          </figure>
-
-          <figure class="post-cover">
-            <img
-              src="../images/dds-ib-otkaz-str2.jpg"
-              alt="NRA act refusing VAT registration — page 2"
-              loading="lazy"
-              decoding="async"
-              width="750"
-              height="1200"
-            />
-            <figcaption>Act refusing VAT registration — page 2 (personal data redacted).</figcaption>
-          </figure>
-
-          <h2>What documents can be submitted</h2>
-          <p>When responding to the ИПДПОЗЛ demand, the following documents may be attached:</p>
-          <ul>
-            <li>the client agreement with Interactive Brokers;</li>
-            <li>the Activity Statement for the period under review;</li>
-            <li>the Trade Confirmation Report;</li>
-            <li>bank statements;</li>
-            <li>evidence of the personal funds contributed;</li>
-            <li>a reference on the broker’s tax registration;</li>
-            <li>a reference on the broker’s seat and address;</li>
-            <li>the annual tax return;</li>
-            <li>its annexes;</li>
-            <li>a reference on other income;</li>
-            <li>a declaration on the absence or presence of other business activities;</li>
-            <li>an explanation of the manner in which orders are placed and executed;</li>
-            <li>other documents expressly requested by the revenue authority.</li>
-          </ul>
-          <p>
-            It is not necessary to submit all of the documents listed in every case. Their selection should be tailored
-            to the specific NRA demand and to the factual circumstances.
-          </p>
-
-          <h2>Important clarifications</h2>
-          <p>A different result may be reached where there is:</p>
-          <ul>
-            <li>use of a different investment firm;</li>
-            <li>a different client agreement;</li>
-            <li>trading through a company;</li>
-            <li>professional management of third-party funds;</li>
-            <li>carrying out the activity as a business (by occupation);</li>
-            <li>provision of investment or advisory services;</li>
-            <li>trading on the account of other persons;</li>
-            <li>presence of staff, an office or a dedicated organisation;</li>
-            <li>use of algorithmic systems as an organised business activity;</li>
-            <li>receipt of other remuneration or commissions;</li>
-            <li>a different manner of execution and settlement of the trades.</li>
-          </ul>
-          <p>
-            For that reason, one should not proceed solely on the basis of the size of the turnover or the fact that
-            the same broker is used.
-          </p>
-
-          <h2>Sample response to the ИПДПОЗЛ demand</h2>
-          <p>
-            To make things as easy as possible for the “tax hackers”, we provide a sample response to an ИПДПОЗЛ
-            demand received by our practice, on the application for which we obtained an act refusing registration.
-          </p>
-          <p>
-            Naturally, every case is unique. The text cannot be used off the shelf; it must be personalised to the
-            specific activity, the factual circumstances, the investment firm used and the documents submitted.
-          </p>
-
-          <blockquote>
-            <p><strong>Written explanations</strong></p>
-            <p>From …..<br>
-            In connection with Demand ………………..</p>
-
-            <p>Dear Madam Revenue Inspector,</p>
-
-            <p>
-              I am responding to the demand addressed to me, ИПДПОЗЛ number ………………….. of date …………………..,
-              served on ………………………………, as follows:
-            </p>
-            <p>I invest personal funds.</p>
-            <p>I use Interactive Brokers for this purpose.</p>
-            <p>
-              Interactive Brokers is an investment firm licensed in Ireland. Their platform is available at this
-              address:<br>
-              <a href="https://www.interactivebrokers.ie/en/trading/international-lp.php?gclid=Cj0KCQjwhMq-BhCFARIsAGvo0KdzFIsBcE13QxIFtSvp0Hh1ZpxYlcF3pAYTJYm2cRvsui4T-i1rKLIaAtOUEALw_wcB" target="_blank" rel="noopener">https://www.interactivebrokers.ie/en/trading/international-lp.php</a>
-            </p>
-            <p>
-              In order to be their client, I have entered into a client agreement with them, the original text of
-              which is located at this address:<br>
-              <a href="https://www.interactivebrokers.com/en/accounts/forms-and-disclosures-client-agreements.php" target="_blank" rel="noopener">https://www.interactivebrokers.com/en/accounts/forms-and-disclosures-client-agreements.php</a>
-            </p>
-
-            <div class="post-download">
-              <a href="../files/ib-client-agreement.pdf" target="_blank" rel="noopener">
-                📄 Download the Interactive Brokers Client Agreement (PDF, 30 pages)
-              </a>
-            </div>
-
-            <p>
-              Under this agreement, every client may buy and sell financial assets through their platform, paying fees
-              and commissions to the broker and observing certain rules. Some of these rules concern the manner in
-              which trades are concluded on the broker’s platform, namely:
-            </p>
-
-            <p><strong>Translation:</strong><br>
-            5. Order Routing: Unless otherwise directed, IB will select the market/dealer to which to send the
-            Client’s orders. For products traded on multiple markets, IB may provide “Smart Routing”, which seeks the
-            best market for each order through a computer algorithm. The Client should select Smart Routing where it is
-            available. If the Client directs orders to a particular market, the Client assumes responsibility for
-            knowing and trading in accordance with the rules and policies of that market (e.g. trading hours, order
-            types, etc.). IB cannot guarantee execution of every order at the best posted price: IB may not have access
-            to every market/dealer; other orders may execute ahead; market centres may not honour posted prices or may
-            re-route orders for manual handling; or market rules, decisions or system failures may prevent/delay
-            execution of the Client’s orders or cause the orders not to receive the best price.</p>
-
-            <p><strong>Translation:</strong><br>
-            7. Order Cancellation/Modification: The Client acknowledges that it may not be possible to cancel/modify an
-            order and that the Client is responsible for executions notwithstanding a request to cancel/modify.<br>
-            8. Order Execution: IB will execute the Client’s orders as agent, unless otherwise confirmed. IB may
-            execute the Client’s orders as principal. IB may use another broker or an affiliate to execute orders, and
-            they benefit from all of IB’s rights under these terms. IB may decline any Client order or terminate the
-            Client’s use of IB’s services at any time at its sole discretion. All transactions are subject to the rules
-            and policies of the relevant markets and clearing houses, as well as to applicable laws and regulations. IB
-            IS NOT LIABLE FOR ANY ACT OR DECISION OF ANY EXCHANGE, MARKET, DEALER, CLEARING HOUSE OR REGULATOR.</p>
-
-            <p><strong>Translation:</strong><br>
-            9. Confirmations and reporting errors:<br>
-            A. The Client agrees to monitor every order until IB confirms its execution or cancellation. The Client
-            acknowledges that confirmations of execution or cancellation may be delayed or may be erroneous (e.g. due
-            to computer-system problems) or may be cancelled/adjusted by the exchange. The Client is bound by the
-            actual execution of the order, if it corresponds to the Client’s order. If IB confirms an execution or
-            cancellation in error and the Client delays reporting such an error, IB reserves the right to remove the
-            trade from the account or to require the Client to accept the trade, at IB’s discretion.<br>
-            B. The Client agrees to accept electronic trade confirmations instead of printed confirmations (see Annex 1,
-            “Client Consent to Receive Electronic Records and Communications”).<br>
-            C. The Client agrees to notify IB promptly, by telephone or electronically via IB’s website, if:<br>
-            i) the Client does not receive an accurate confirmation of execution or cancellation;<br>
-            ii) the Client receives a confirmation that differs from their order;<br>
-            iii) the Client receives a confirmation for an order they did not place; or<br>
-            iv) the Client receives an account statement, confirmation or other information reflecting inaccurate
-            orders, trades, balances, positions, margin status or transaction history. The Client acknowledges that IB
-            may adjust the Client’s account to correct any error. The Client agrees to return to IB promptly any assets
-            sent to them in error.</p>
-
-            <p><strong>Translation:</strong><br>
-            10. Proprietary Trading – Display of Customer Orders: Subject to all applicable laws and regulations, the
-            Client authorises IB to carry out proprietary trading for itself and its affiliates, even though IB may
-            simultaneously hold unexecuted Client orders for the same products at the same price.</p>
-
-            <p>
-              It follows that when a client places an order, Interactive Brokers has the right to choose on which
-              market it takes place, to choose the price at which to execute the order even if it is a limit order
-              (i.e. they will sell at a lower value, transfer to me the result at the price I specified and keep the
-              difference); to change the moment at which it takes place and whether to execute it at all. The listing
-              may be on one exchange, while execution may be on a completely different one and may not even be on an
-              exchange segment.
-            </p>
-            <p>
-              After that, they will record the results on the electronic platform and I, as their client, must accept
-              them as they are.
-            </p>
-            <p>
-              In our civil law, as currently in force, there are 2 types of representation — direct and indirect.
-            </p>
-            <p>
-              In direct representation I authorise my representative to act under strictly defined conditions as to
-              price, type of purchase or sale, and market. That is not the case here.
-            </p>
-            <p>
-              The second type of representation is indirect representation, in which the representative steps “into the
-              shoes” of a trader, contracts in their own name and on their own account, and subsequently transfers the
-              result to the principal. Our case is such. Accordingly, we have 3 transactions here:
-            </p>
-            <p>
-              1. Placing an order, by which I authorise IB to buy or sell;<br>
-              2. The purchase or sale transaction, which they conclude at a price and on a market of their choosing;<br>
-              3. A transfer transaction, by which they account the result to me in the account.
-            </p>
-            <p>
-              In these circumstances I can quite reasonably assert that my legal relationship is with Interactive
-              Brokers, who do not function as an ordinary marketplace but are a market maker within the meaning of the
-              MiFID II Directive and, as such, participate at once in providing market liquidity, act as an
-              intermediary between investors, and are a trader participating in trading for their own account,
-              including with their clients — in this case with me.
-            </p>
-            <p>
-              Interactive Brokers is based in Ireland, with their legal address appearing on all statements from my
-              account, including on page 1 of the Activity Statement, and they meet all the requirements for a taxable
-              person within the meaning of the Regulation implementing Directive 112/2006/EC (the VAT Directive),
-              Articles 13 to 24 inclusive, namely: (link:
-              <a href="https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32011R0282" target="_blank" rel="noopener">https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32011R0282</a>)
-            </p>
-
-            <p><strong>Article 13</strong><br>
-            The “permanent address” of a natural person, whether or not a taxable person, referred to in Directive
-            2006/112/EC shall be the address entered in the population or similar register, or the address indicated by
-            that person to the relevant tax authorities, unless there is evidence that this address does not reflect
-            reality.<br>
-            The place where a natural person “usually resides”, whether or not a taxable person, referred to in
-            Directive 2006/112/EC shall be the place where that natural person usually resides as a result of personal
-            and occupational ties.<br>
-            Where the occupational ties are in a country different from that of the personal ties, or where there are
-            no occupational ties, the place of usual residence shall be determined by personal ties which show close
-            links between the natural person and the place where they are living.</p>
-
-            <p><strong>SECTION 4</strong><br>
-            Place of supply of services<br>
-            (Articles 43 to 59 of Directive 2006/112/EC)<br>
-            Subsection 1<br>
-            Status of the customer<br>
-            <strong>Article 17</strong><br>
-            1.   If the place of supply of services depends on whether the customer is a taxable or a non-taxable
-            person, the status of the customer shall be determined on the basis of Articles 9 to 13 and Article 43 of
-            Directive 2006/112/EC.<br>
-            2.   A non-taxable legal person who is identified or required to be identified for VAT purposes under Article
-            214(1)(b) of Directive 2006/112/EC, because their intra-Community acquisitions of goods are subject to VAT
-            or because they have exercised the option to make those acquisitions subject to VAT, shall be a taxable
-            person within the meaning of Article 43 of that Directive.</p>
-
-            <p><strong>Article 18</strong><br>
-            1.   Unless he has information to the contrary, the supplier may regard a customer established within the
-            Community as a taxable person:<br>
-            (a) where the customer has communicated his individual VAT identification number to him, and the supplier
-            obtains confirmation of the validity of that identification number and of the associated name and address
-            in accordance with Article 31 of Council Regulation (EC) No 904/2010 of 7 October 2010 on administrative
-            cooperation and combating fraud in the field of value added tax;<br>
-            (b) where the customer has not yet received an individual VAT identification number, but informs the
-            supplier that he has applied for it and the supplier obtains any other proof which demonstrates that the
-            customer is a taxable person or a non-taxable legal person who is required to be identified for VAT
-            purposes, and carries out a reasonable level of verification of the accuracy of the information provided by
-            the customer, by normal commercial security measures such as those relating to identity or payment checks.<br>
-            2.   Unless he has information to the contrary, the supplier may regard a customer established within the
-            Community as a non-taxable person when he can demonstrate that the customer has not communicated his
-            individual VAT identification number to him.<br>
-            3.   Unless he has information to the contrary, the supplier may regard a customer established outside the
-            Community as a taxable person:<br>
-            (a) if he obtains from the customer a certificate issued by the customer’s competent tax authorities as
-            confirmation that the customer is engaged in economic activities in order to enable him to obtain a refund
-            of VAT under Council Directive 86/560/EEC of 17 November 1986 on the harmonisation of the laws of the
-            Member States relating to turnover taxes — arrangements for the refund of value added tax to taxable
-            persons not established in Community territory;<br>
-            (b) where the customer does not hold that certificate, if the supplier has the VAT number, or a similar
-            number attributed to the customer by the country of establishment and used to identify businesses, or any
-            other proof which demonstrates that the customer is a taxable person and if the supplier carries out a
-            reasonable level of verification of the accuracy of the information provided by the customer, by normal
-            commercial security measures such as those relating to identity or payment checks.</p>
-
-            <p>Subsection 2<br>
-            Capacity of the customer<br>
-            <strong>Article 19</strong><br>
-            For the purpose of applying the rules concerning the place of supply of services laid down in Articles 44
-            and 45 of Directive 2006/112/EC, a taxable person, or a non-taxable legal person deemed to be a taxable
-            person, who receives services exclusively for private use, including use by his staff, shall be regarded as
-            a non-taxable person.<br>
-            Unless he has information to the contrary, such as information on the nature of the services provided, the
-            supplier may regard the services as being for the customer’s business purposes if, in respect of that
-            supply, the customer has communicated his individual VAT identification number.<br>
-            Where one and the same service is intended for both private use, including use by the customer’s staff, and
-            business purposes, the supply of that service shall be covered exclusively by Article 44 of Directive
-            2006/112/EC, provided there is no abusive practice.</p>
-
-            <p>Subsection 3<br>
-            Location of the customer<br>
-            <strong>Article 20</strong><br>
-            Where a supply of services carried out for a taxable person, or a non-taxable legal person deemed to be a
-            taxable person, falls within the scope of Article 44 of Directive 2006/112/EC, and where that taxable
-            person is established in a single country, or, in the absence of a place of establishment of a business or
-            a fixed establishment, has his permanent address and usually resides in a single country, that supply of
-            services shall be taxable in that country.<br>
-            The supplier shall establish that place on the basis of information from the customer, and verify that
-            information by normal commercial security measures such as those relating to identity or payment checks.<br>
-            The information may include the VAT identification number attributed by the Member State where the customer
-            is established.</p>
-
-            <p><strong>Article 21</strong><br>
-            Where a supply of services to a taxable person, or a non-taxable legal person deemed to be a taxable
-            person, falls within the scope of Article 44 of Directive 2006/112/EC, and the taxable person is
-            established in more than one country, that supply shall be taxable in the country where that taxable person
-            has established his business.<br>
-            However, where the service is provided to a fixed establishment of the taxable person located in a place
-            other than that where the customer has established his business, that supply shall be taxable at the place
-            of the fixed establishment receiving that service and using it for its own needs.<br>
-            Where the taxable person does not have a place of establishment of a business or a fixed establishment, the
-            service shall be taxable at his permanent address or usual residence.</p>
-
-            <p><strong>Article 22</strong><br>
-            1.   In order to identify the customer’s fixed establishment to which the service is provided, the supplier
-            shall examine the nature and use of the service provided.<br>
-            Where the nature and use of the service provided do not enable him to identify the fixed establishment to
-            which the service is provided, the supplier, in identifying that fixed establishment, shall pay particular
-            attention to whether the contract, the order form and the VAT identification number attributed by the
-            Member State of the customer and communicated to him by the customer identify the fixed establishment as
-            the customer of the service and whether the fixed establishment is the entity paying for the service.<br>
-            Where the customer’s fixed establishment to which the service is provided cannot be determined in
-            accordance with the first and second subparagraphs of this paragraph, or where services covered by Article
-            44 of Directive 2006/112/EC are supplied to a taxable person under a contract covering one or more
-            services used in an unidentifiable and non-quantifiable manner, the supplier may legitimately consider that
-            the services are supplied at the place where the customer has established his business.<br>
-            2.   The application of this Article shall be without prejudice to the customer’s obligations.</p>
-
-            <p><strong>Article 23</strong><br>
-            1.   From 1 January 2013, where, in accordance with the first subparagraph of Article 56(2) of Directive
-            2006/112/EC, a supply of services is taxable at the place where the customer is established, or, in the
-            absence of an establishment, where he has his permanent address or usually resides, the supplier shall
-            establish that place on the basis of factual information provided by the customer, and verify that
-            information by normal commercial security measures such as those relating to identity or payment checks.<br>
-            2.   Where, in accordance with Articles 58 and 59 of Directive 2006/112/EC, a supply of services is taxable
-            at the place where the customer is established, or, in the absence of an establishment, where he has his
-            permanent address or usually resides, the supplier shall establish that place on the basis of factual
-            information provided by the customer, and verify that information by normal commercial security measures
-            such as those relating to identity or payment checks.</p>
-
-            <p><strong>Article 24</strong><br>
-            1.   From 1 January 2013, where services covered by the first subparagraph of Article 56(2) of Directive
-            2006/112/EC are supplied to a non-taxable person who is established in more than one country or who has his
-            permanent address in one country but usually resides in another, priority shall be given, in determining
-            the place of supply of those services, to the place that best ensures taxation at the place of actual
-            consumption.<br>
-            2.   Where services covered by Articles 58 and 59 of Directive 2006/112/EC are supplied to a non-taxable
-            person who is established in more than one country or who has his permanent address in one country but
-            usually resides in another, priority shall be given, in determining the place of supply of those services,
-            to the place that best ensures taxation at the place of actual consumption.</p>
-
-            <p>
-              The information relating to the VAT number, address and registration of Interactive Brokers Ireland in
-              the EU EORI system (European Union Registration and Identification) is publicly available, but should be
-              checked directly through official sources due to possible changes. Here is the data I can provide:
-            </p>
-            <p>
-              1. VAT number:<br>
-              &nbsp;&nbsp;&nbsp;- The VAT number of Interactive Brokers Ireland is: IE6388047G.<br>
-              &nbsp;&nbsp;This number can be checked in the European VIES system:
-              <a href="https://ec.europa.eu/taxation_customs/vies/" target="_blank" rel="noopener">https://ec.europa.eu/taxation_customs/vies/</a>
-              , which confirms the validity of VAT registrations in the EU.
-            </p>
-            <p>
-              2. Registered address:<br>
-              &nbsp;&nbsp;&nbsp;- Interactive Brokers Ireland Limited<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registered Office:<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 Earlsfort Terrace, Dublin 2, D02 T380, Ireland.<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the company’s main registered address in Ireland.
-            </p>
-            <p>
-              3. EORI registration:<br>
-              &nbsp;&nbsp;&nbsp;- The EORI number is used for customs purposes in the EU. If Interactive Brokers Ireland
-              carries out activities involving the import/export of goods (which is unlikely, since they are a financial
-              intermediary), their EORI number would be linked to their VAT number.<br>
-              &nbsp;&nbsp;&nbsp;- Example format for Ireland: IE6388047G, matching the VAT number but with additional
-              characters.<br>
-              &nbsp;&nbsp;For precise confirmation, it is recommended to contact Interactive Brokers directly or to
-              check with the Irish customs authorities
-              <a href="https://www.revenue.ie/" target="_blank" rel="noopener">https://www.revenue.ie/</a>
-            </p>
-            <p>
-              Important notes:<br>
-              - As to EORI registration: financial institutions usually do not have an EORI number unless they carry out
-              customs operations.
-            </p>
-            <p>
-              If you need official confirmation, you can contact Interactive Brokers directly at:<br>
-              - Client support: +353 1 603 7250 (Ireland)<br>
-              - Official website:
-              <a href="https://www.interactivebrokers.ie" target="_blank" rel="noopener">www.interactivebrokers.ie</a>
-            </p>
-
-            <p>
-              On the basis of the information provided, I consider that I meet the requirements of Art. 21(2) of the VAT
-              Act, namely:
-            </p>
-            <p>
-              (2) The place of supply of a service, where the recipient is a taxable person, is the place where the
-              recipient has established its independent economic activity. Where those services are provided to a fixed
-              establishment located in a place other than the place where the recipient has established its independent
-              economic activity, the place of supply is the place where that establishment is located. Where there is
-              no place of establishment of an independent economic activity or a fixed establishment, the place of
-              supply is the place of the recipient’s permanent address or usual residence.
-            </p>
-            <p>
-              When I sell financial assets, my sales are exempt from VAT on the basis of Art. 46 of the VAT Act, but I
-              accumulate turnover for registration under Art. 96 of the VAT Act only where, at the same time: 1) my
-              activity is regarded as my main activity, 2) it is regarded as an independent economic activity under
-              Art. 3 of the VAT Act, and 3) the turnover is accumulated on the territory of Bulgaria. These 3
-              conditions must be met simultaneously. In my case not all of them are met.
-            </p>
-            <p>
-              In accordance with the factual circumstances described above, I consider that Interactive Brokers acts in
-              the capacity of buyer when I sell shares and other financial assets;
-            </p>
-            <p>
-              As additional evidence, please note that in the Financial Instruments Information section of the attached
-              Activity Statement, the listing of the assets held and sold by me specifies particular exchanges.
-            </p>
-            <p>At the same time, the Trade Confirmation Report shows where the orders were actually executed.</p>
-            <p>
-              Put simply, my shares cannot move to other exchanges or segments on their own. For them to move
-              physically, they would have to be converted into registered shares and go through a clearing procedure.
-              This is simply impossible without my active participation and without the involvement of a depository.
-            </p>
-            <p>
-              It is therefore impossible for me to hold shares listed, for example, on the Xetra exchange in Germany
-              (with ticker IBIS or IBIS2) and to sell them on the DARK segment, for instance, which is not an exchange
-              at all.
-            </p>
-            <p>Since Interactive Brokers has coverage of many markets, here is what happens technically.</p>
-            <p>
-              When I want to sell an asset, regardless of where it is listed, they sell one of theirs where it is
-              financially most advantageous for them, after which they “take” my asset from my account and transfer its
-              value to me — i.e. they buy it out.
-            </p>
-            <p>
-              This is precisely what is described as a process in the part “5. order routing”, in point 5 of the client
-              agreement I signed with them.
-            </p>
-            <p>Interactive Brokers has its seat in the EU — in Ireland; i.e. they are an EU-resident person.</p>
-            <p>Interactive Brokers has a European VAT number - IE6388047G</p>
-            <p>Interactive Brokers has the status of a taxable person in the EU.</p>
-            <p>
-              The trades are online, and therefore the place of supply should be determined as “the place of the
-              recipient’s permanent address or usual residence”, which in this case is Ireland.
-            </p>
-            <p>
-              On the basis of the above, please accept as proven that the turnover was accumulated in Ireland, and
-              issue an act refusing VAT registration.
-            </p>
-            <p>Yours sincerely:<br>……………………..</p>
-          </blockquote>
-
-          <p>
-            <em>This material is for general information only and does not constitute individual tax, legal, or
-            accounting advice. Before filing an application for VAT registration or responding to the NRA, the specific
-            facts and documents should be reviewed by a qualified specialist.</em>
-          </p>
-
-          <h2>Original Interactive Brokers Client Agreement (full text)</h2>
-          <p>
-            Below is the complete original Interactive Brokers client agreement, reproduced page by page exactly as
-            published by the broker. It is the same document referenced throughout the written explanations above —
-            in particular the order-routing, execution, confirmation and proprietary-trading clauses. You can also
-            download it as a single PDF:
-          </p>
-
-          <div class="post-download">
-            <a href="../files/ib-client-agreement.pdf" target="_blank" rel="noopener">
-              📄 Download the Interactive Brokers Client Agreement (PDF, 30 pages)
-            </a>
-          </div>
-
-          <div class="ib-agreement-gallery">
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-01.jpg" alt="Interactive Brokers Client Agreement — page 1 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-02.jpg" alt="Interactive Brokers Client Agreement — page 2 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-03.jpg" alt="Interactive Brokers Client Agreement — page 3 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-04.jpg" alt="Interactive Brokers Client Agreement — page 4 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-05.jpg" alt="Interactive Brokers Client Agreement — page 5 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-06.jpg" alt="Interactive Brokers Client Agreement — page 6 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-07.jpg" alt="Interactive Brokers Client Agreement — page 7 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-08.jpg" alt="Interactive Brokers Client Agreement — page 8 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-09.jpg" alt="Interactive Brokers Client Agreement — page 9 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-10.jpg" alt="Interactive Brokers Client Agreement — page 10 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-11.jpg" alt="Interactive Brokers Client Agreement — page 11 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-12.jpg" alt="Interactive Brokers Client Agreement — page 12 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-13.jpg" alt="Interactive Brokers Client Agreement — page 13 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-14.jpg" alt="Interactive Brokers Client Agreement — page 14 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-15.jpg" alt="Interactive Brokers Client Agreement — page 15 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-16.jpg" alt="Interactive Brokers Client Agreement — page 16 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-17.jpg" alt="Interactive Brokers Client Agreement — page 17 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-18.jpg" alt="Interactive Brokers Client Agreement — page 18 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-19.jpg" alt="Interactive Brokers Client Agreement — page 19 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-20.jpg" alt="Interactive Brokers Client Agreement — page 20 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-21.jpg" alt="Interactive Brokers Client Agreement — page 21 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-22.jpg" alt="Interactive Brokers Client Agreement — page 22 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-23.jpg" alt="Interactive Brokers Client Agreement — page 23 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-24.jpg" alt="Interactive Brokers Client Agreement — page 24 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-25.jpg" alt="Interactive Brokers Client Agreement — page 25 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-26.jpg" alt="Interactive Brokers Client Agreement — page 26 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-27.jpg" alt="Interactive Brokers Client Agreement — page 27 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-28.jpg" alt="Interactive Brokers Client Agreement — page 28 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-29.jpg" alt="Interactive Brokers Client Agreement — page 29 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-            <figure class="post-cover ib-agreement-page">
-              <img src="../images/ib-agreement/page-30.jpg" alt="Interactive Brokers Client Agreement — page 30 of 30" loading="lazy" decoding="async" width="1275" height="1650" />
-            </figure>
-          </div>
-        </div>
-
-        <hr>
-        <div class="post-share">
-          <p class="share-label" data-key="share_label">Сподели</p>
-          <div class="share-buttons">
-
-            <button class="share-btn" id="shareNative" style="display:none;">
-              📤 <span data-key="share_native">Сподели</span>
-            </button>
-
-            <a href="#" class="share-btn" id="shareTwitter" target="_blank" rel="noopener">𝕏 Twitter</a>
-            <a href="#" class="share-btn" id="shareFacebook" target="_blank" rel="noopener">f Facebook</a>
-            <a href="#" class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener">in LinkedIn</a>
-
-            <button class="share-btn" id="shareCopy" data-key="share_copy">🔗 Копирай линк</button>
-
-          </div>
-        </div>
-
-      </article>
+      </div>
+      <p class="disclaimer">Статията е с информационна цел и отразява законодателството към датата на публикуване. Тя не е индивидуална данъчна или правна консултация.</p>
+      <section class="author-card" aria-labelledby="author-title">
+        <picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-144.avif 144w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-144.webp 144w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="avatar" src="../img/profile-9-RfR76xxzeh-144.jpeg" alt="" width="144" height="192"></picture>
+        <div><p class="muted" style="font-size: var(--step--1)">Автор</p><h2 id="author-title" style="font-size: var(--step-1)">Марина Мучакова</h2><p class="muted" style="font-size: .95rem">Данъчен консултант с юридическо образование и над 15 години опит в данъчното право.</p></div>
+        <div class="author-card__cta"><p><strong>Имате конкретен казус?</strong> <span class="muted">Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</span></p><a class="btn btn--primary btn--small" href="../booking/">Запази консултация</a></div>
+      </section>
+      <div class="share" data-copy-scope="">
+        <span class="share__label">Сподели:</span>
+        <button class="icon-btn" type="button" data-share-native="" hidden="" aria-label="Сподели…"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#share"></use></svg></button>
+        <a class="icon-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmuchakova.com%2Fblog%2Fdds-registraciya-interactive-brokers.html" target="_blank" rel="noopener" aria-label="Сподели в Facebook (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#facebook"></use></svg></a>
+        <a class="icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmuchakova.com%2Fblog%2Fdds-registraciya-interactive-brokers.html" target="_blank" rel="noopener" aria-label="Сподели в LinkedIn (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#linkedin"></use></svg></a>
+        <a class="icon-btn" href="https://x.com/intent/post?url=https%3A%2F%2Fmuchakova.com%2Fblog%2Fdds-registraciya-interactive-brokers.html&amp;text=%D0%94%D0%94%D0%A1%20%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D1%80%D0%B8%20%D1%82%D1%8A%D1%80%D0%B3%D0%BE%D0%B2%D0%B8%D1%8F%20%D1%81%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20%D1%87%D1%80%D0%B5%D0%B7%20Interactive%20Brokers" target="_blank" rel="noopener" aria-label="Сподели в X (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#x"></use></svg></a>
+        <button class="icon-btn" type="button" data-copy-url="" data-copied="Връзката е копирана" aria-label="Копирай връзката"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#link"></use></svg></button>
+        <span class="copy-status" role="status" data-copy-status=""></span>
+      </div>
     </div>
+    <div class="toc-desktop">
+      <nav class="toc" aria-labelledby="toc-title"><p class="toc__title" id="toc-title">Съдържание</p><ol><li><a href="#bg-1">Как започва процедурата</a></li><li><a href="#bg-2">Основният въпрос: къде е мястото на изпълнение</a></li><li><a href="#bg-3">Как работи Interactive Brokers</a></li><li><a href="#bg-4">Пряко и косвено представителство</a></li><li><a href="#bg-5">Interactive Brokers като инвестиционен посредник и участник на пазара</a></li><li><a href="#bg-6">Данъчен статут на Interactive Brokers Ireland Limited</a></li><li><a href="#bg-7">Приложение на чл. 21, ал. 2 ЗДДС</a></li><li><a href="#bg-8">Защо отчетите на брокера са важни</a></li><li><a href="#bg-9">Техническото изпълнение на поръчките</a></li><li><a href="#bg-10">Кога оборотът може да не се включи при регистрацията</a></li><li><a href="#bg-11">Какво прие НАП в конкретния случай</a></li><li><a href="#bg-12">Какви документи могат да бъдат представени</a></li><li><a href="#bg-13">Важни уточнения</a></li><li><a href="#bg-14">Примерен отговор на ИПДПОЗЛ</a></li></ol></nav>
+      <a class="btn btn--primary btn--small btn--block" href="../booking/" style="margin-top: var(--space-m)">Запази консултация</a>
+    </div>
+  </div>
+</article><section class="section post-related" aria-labelledby="related-title">
+  <div class="wrap">
+    <h2 id="related-title" style="font-size: var(--step-2); margin-bottom: var(--space-s)">Още по темата</h2>
+    <div class="post-feed">
+      <ul class="post-rows">
+        <li><article class="post-row"><time datetime="2026-10-08">08.10.2026</time><div><span class="cat">Инвестиции</span><h3 class="post-row__title"><a class="card__link" href="../blog/tax-loss-harvesting-po-balgarski.html">Tax-loss harvesting по български</a></h3></div><span class="len">15 мин</span></article></li>
+        <li><article class="post-row"><time datetime="2026-10-08">08.10.2026</time><div><span class="cat">Инвестиции</span><h3 class="post-row__title"><a class="card__link" href="../blog/lichen-ili-firmen-akaunt-broker.html">Личен или фирмен акаунт при брокер</a></h3></div><span class="len">15 мин</span></article></li>
+        <li><article class="post-row"><time datetime="2026-09-18">18.09.2026</time><div><span class="cat">Данъци</span><h3 class="post-row__title"><a class="card__link" href="../blog/nap-pismo-dohodi-investicii.html">Получи ли писмо от НАП за доходите си от инвестиции?</a></h3></div><span class="len">9 мин</span></article></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
   </main>
-
-  <!-- LAYOUT:FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-          <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
-          <p class="footer-tagline" data-key="footer_tagline">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
-          <a href="../donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-heading" data-key="footer_nav">Навигация</p>
-          <a href="../index.html#about" data-key="nav_about">За мен</a>
-          <a href="../projects/" data-key="nav_projects">Проекти</a>
-          <a href="../partners/" data-key="nav_partners">Партньори</a>
-          <a href="../booking/" data-key="nav_booking">Запази час</a>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-heading" data-key="footer_resources">Ресурси</p>
-          <a href="../blog.html" data-key="nav_blog">Блог</a>
-          <a href="../vlog/" data-key="nav_vlog">Влог</a>
-          <a href="../game/" data-key="nav_game">Игра</a>
-          <a href="https://muchakova.github.io/looper/" target="_blank" rel="noopener" data-key="footer_synth">Синтезатор</a>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-heading" data-key="footer_contact">Контакт</p>
-          <a href="mailto:office@vesta-bg.eu">office@vesta-bg.eu</a>
-          <a href="tel:+359887460907">+359 887 460 907</a>
-          <div class="footer-socials">
-            <a href="https://www.facebook.com/muchakova" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#facebook"/></svg></a>
-            <a href="https://www.linkedin.com/in/vestaconsult/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#linkedin"/></svg></a>
-            <a href="https://www.tiktok.com/@muchakova" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#tiktok"/></svg></a>
-            <a href="https://www.youtube.com/@TheCryptoAcademy375" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#youtube"/></svg></a>
-            <a href="https://x.com/VestaConsult" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#x"/></svg></a>
-          </div>
-        </div>
-
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">MM</span><span>Марина Мучакова</span></a>
+        <p class="site-footer__tag">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+        <a class="donate-link" href="../donate/"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#heart"></use></svg>Подкрепи ме</a>
       </div>
-      <div class="footer-bottom">
-        <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+      <nav aria-labelledby="footer-nav">
+        <h2 id="footer-nav">Навигация</h2>
+        <ul>
+          <li><a href="../services/">Услуги</a></li>
+          <li><a href="../about/">За мен</a></li>
+          <li><a href="../blog.html">Блог</a></li>
+          <li><a href="../vlog/">Видео</a></li>
+          <li><a href="../contact/">Контакти</a></li>
+          <li><a href="../booking/">Запази час</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-res">
+        <h2 id="footer-res">Ресурси</h2>
+        <ul>
+          <li><a href="../projects/">Проекти</a></li>
+          <li><a href="../partners/">Партньори</a></li>
+          <li><a href="../game/">Игра</a></li>
+          <li><a href="https://muchakova.github.io/looper/" target="_blank" rel="noopener">Синтезатор<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+          <li><a href="../feed.xml" type="application/rss+xml">RSS абонамент</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="footer-contact">Контакт</h2>
+        <ul>
+          <li><a href="mailto:office@vesta-bg.eu">office@vesta-bg.eu</a></li>
+          <li><a href="tel:+359887460907">+359 887 460 907</a></li>
+        </ul>
+        <ul class="socials" aria-label="Социални мрежи">
+          <li><a class="icon-btn" href="https://www.facebook.com/muchakova" target="_blank" rel="noopener" aria-label="Facebook (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#facebook"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.linkedin.com/in/vestaconsult/" target="_blank" rel="noopener" aria-label="LinkedIn (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#linkedin"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.youtube.com/@TheCryptoAcademy375" target="_blank" rel="noopener" aria-label="YouTube (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#youtube"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.tiktok.com/@muchakova" target="_blank" rel="noopener" aria-label="TikTok (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#tiktok"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://x.com/VestaConsult" target="_blank" rel="noopener" aria-label="X (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#x"></use></svg></a></li>
+        </ul>
       </div>
     </div>
-  </footer>
-  <!-- /LAYOUT:FOOTER -->
-
-  <script src="../js/main.js"></script>
+    <div class="site-footer__bottom">
+      <p>© 2026 Марина Мучакова · <a href="../privacy/">Поверителност</a> · <a href="../accessibility/">Достъпност</a></p>
+      <fieldset class="theme-switch">
+        <legend>Тема</legend>
+        <div class="theme-switch__options">
+          <label><input type="radio" name="theme" value="system" checked="">Системна</label>
+          <label><input type="radio" name="theme" value="light">Светла</label>
+          <label><input type="radio" name="theme" value="dark">Тъмна</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="muted" style="font-size: .85rem; padding-bottom: var(--space-l)">Съдържанието на сайта не е индивидуална данъчна или правна консултация.</p>
+  </div>
+</footer>
 </body>
 </html>

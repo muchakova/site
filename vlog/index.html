@@ -1,354 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Видео отговори на най-честите данъчни въпроси на инвеститорите — НАП, ETF, Interactive Brokers, ДДС и крипто. Влог на Марина Мучакова." />
-  <meta name="author" content="Марина Мучакова" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://muchakova.com/vlog/" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Видео — Марина Мучакова</title>
+  <meta name="description" content="Видео отговори на най-честите данъчни въпроси на инвеститорите — НАП, ETF, Interactive Brokers, ДДС и крипто. Влог на Марина Мучакова.">
+<link rel="canonical" href="https://muchakova.com/vlog/">
+  <link rel="alternate" hreflang="bg" href="https://muchakova.com/vlog/">
+  <link rel="alternate" hreflang="en" href="https://muchakova.com/en/vlog/">
+  <link rel="alternate" hreflang="x-default" href="https://muchakova.com/vlog/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Марина Мучакова">
+  <meta property="og:title" content="Видео">
+  <meta property="og:description" content="Видео отговори на най-честите данъчни въпроси на инвеститорите — НАП, ETF, Interactive Brokers, ДДС и крипто. Влог на Марина Мучакова.">
+<meta property="og:url" content="https://muchakova.com/vlog/">
+  <meta property="og:image" content="https://muchakova.com/images/og/vlog.jpg">
+<meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Видео">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F2F4FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080C19" media="(prefers-color-scheme: dark)">
+  
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="Марина Мучакова — Блог" href="../feed.xml">
+  <script>try{var t=localStorage.getItem('mm-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin="">  <link rel="stylesheet" href="../assets/css/site.css?v=4fa5071a68">
+  <script src="../assets/js/site.js?v=4fa5071a68" defer=""></script>
 
-  <title>Влог — Марина Мучакова</title>
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://muchakova.com/vlog/" />
-  <meta property="og:title" content="Влог — Марина Мучакова" />
-  <meta property="og:description" content="Кратки видео отговори на най-честите данъчни въпроси на инвеститорите в България." />
-  <meta property="og:image" content="https://muchakova.com/images/og-site.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Марина Мучакова — данъчен консултант" />
-  <meta property="og:locale" content="bg_BG" />
-  <meta property="og:locale:alternate" content="en_GB" />
-  <meta property="og:site_name" content="Марина Мучакова" />
-
-  <!-- Twitter / X Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@VestaConsult" />
-  <meta name="twitter:title" content="Влог — Марина Мучакова" />
-  <meta name="twitter:description" content="Кратки видео отговори на най-честите данъчни въпроси на инвеститорите в България." />
-  <meta name="twitter:image" content="https://muchakova.com/images/og-site.jpg" />
-
-  <!-- Google Fonts (Noto Sans is loaded in LAYOUT:HEAD) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- LAYOUT:HEAD -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" />
-  <script>try{var t=localStorage.getItem('mm-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-  <!-- /LAYOUT:HEAD -->
-  <link rel="stylesheet" href="../css/style.css" />
-
-  <!-- Structured Data: списък с видеата (VideoObject). -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Деклариране на загуби от търговия с финансови инструменти — защо и как",
-          "description": "Защо си струва да декларирате загубите от търговия с финансови инструменти и как точно се прави.",
-          "thumbnailUrl": "https://i.ytimg.com/vi/Dba4_JBF_4o/hqdefault.jpg",
-          "uploadDate": "2026-10-18T05:42:47-07:00",
-          "duration": "PT4M11S",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/Dba4_JBF_4o",
-          "contentUrl": "https://www.youtube.com/watch?v=Dba4_JBF_4o",
-          "inLanguage": "bg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)",
-          "description": "Кои продажби и суапове на криптовалути трупат оборот за регистрация по ЗДДС — и кои не.",
-          "thumbnailUrl": "https://i.ytimg.com/vi/aLl--h5-LL4/hqdefault.jpg",
-          "uploadDate": "2026-10-13T07:58:29-07:00",
-          "duration": "PT12M29S",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/aLl--h5-LL4",
-          "contentUrl": "https://www.youtube.com/watch?v=aLl--h5-LL4",
-          "inLanguage": "bg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "VideoObject",
-          "name": "Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex",
-          "description": "Кратко видео: стъпка по стъпка проверяваме дали Gettex е регулиран пазар. Защо статутът на пазара е важен за данъците — в статията.",
-          "thumbnailUrl": "https://i.ytimg.com/vi/FB5gS9jWRzM/hqdefault.jpg",
-          "uploadDate": "2026-10-12T10:44:09-07:00",
-          "duration": "PT1M34S",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/FB5gS9jWRzM",
-          "contentUrl": "https://www.youtube.com/watch?v=FB5gS9jWRzM",
-          "inLanguage": "bg"
-        }
-      }
-    ]
-  }
-  </script>
+  <script defer="" data-domain="muchakova.com" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
+  <script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Начало","item":"https://muchakova.com/"},{"@type":"ListItem","position":2,"name":"Блог","item":"https://muchakova.com/blog.html"},{"@type":"ListItem","position":3,"name":"Видео","item":"https://muchakova.com/vlog/"}]}</script>
 </head>
-<body data-title-bg="Влог — Марина Мучакова" data-title-en="Vlog — Marina Muchakova">
+<body>
+  <a class="skip-link" href="#main">Към съдържанието</a>
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">MM</span><span class="brand__name">Марина Мучакова</span></a>
+    <div class="site-menu" id="site-menu">
+      <nav class="site-nav" aria-label="Главна навигация">
+        <ul>
+          
+          <li><a href="../services/">Услуги</a></li>
+          
+          <li><a href="../about/">За мен</a></li>
+          
+          <li><a href="../blog.html" aria-current="true">Блог</a></li>
+          
+          <li><a href="../contact/">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <nav aria-label="Избор на език"><a class="icon-btn" href="../en/vlog/" data-lang-switch="" hreflang="en" lang="en">EN<span class="sr-only"> · English version</span></a></nav>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle="" aria-pressed="false">
+<svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#sun"></use></svg><span class="sr-only">Тъмна тема</span>
+        </button>
+      </div>
+    </div>
+    <a class="btn btn--primary btn--small" href="../booking/">Запази час</a>
+    <button class="menu-btn" type="button" data-menu-button="" aria-expanded="false" aria-controls="site-menu" data-label-open="Меню" data-label-close="Затвори">
+<svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#menu"></use></svg><span data-menu-label="">Меню</span>
+    </button>
+  </div>
+</header>
+  <main id="main" tabindex="-1">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://muchakova.com/vlog/#zagubi-finansovi-instrumenti","item":{"@type":"VideoObject","name":"Деклариране на загуби от търговия с финансови инструменти — защо и как","description":"Защо си струва да декларирате загубите от търговия с финансови инструменти и как точно се прави.","thumbnailUrl":"https://i.ytimg.com/vi/Dba4_JBF_4o/hqdefault.jpg","uploadDate":"2026-10-18T05:42:47-07:00","duration":"PT4M11S","embedUrl":"https://www.youtube-nocookie.com/embed/Dba4_JBF_4o","contentUrl":"https://www.youtube.com/watch?v=Dba4_JBF_4o","inLanguage":"bg"}},{"@type":"ListItem","position":2,"url":"https://muchakova.com/vlog/#oborot-dds-kripto","item":{"@type":"VideoObject","name":"Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)","description":"Кои продажби и суапове на криптовалути трупат оборот за регистрация по ЗДДС — и кои не.","thumbnailUrl":"https://i.ytimg.com/vi/aLl--h5-LL4/hqdefault.jpg","uploadDate":"2026-10-13T07:58:29-07:00","duration":"PT12M29S","embedUrl":"https://www.youtube-nocookie.com/embed/aLl--h5-LL4","contentUrl":"https://www.youtube.com/watch?v=aLl--h5-LL4","inLanguage":"bg"}},{"@type":"ListItem","position":3,"url":"https://muchakova.com/vlog/#reguliran-pazar-gettex","item":{"@type":"VideoObject","name":"Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex","description":"Кратко видео: стъпка по стъпка проверяваме дали Gettex е регулиран пазар. Защо статутът на пазара е важен за данъците — в статията.","thumbnailUrl":"https://i.ytimg.com/vi/FB5gS9jWRzM/hqdefault.jpg","uploadDate":"2026-10-12T10:44:09-07:00","duration":"PT1M34S","embedUrl":"https://www.youtube-nocookie.com/embed/FB5gS9jWRzM","contentUrl":"https://www.youtube.com/watch?v=FB5gS9jWRzM","inLanguage":"bg"}}]}</script>
 
-  <!-- LAYOUT:NAV -->
-  <a href="#main" class="skip-link" data-key="skip_link">Към съдържанието</a>
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Главна навигация">
-    <div class="nav-container">
-      <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
+<section class="page-head" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Път"><ol><li><a href="../">Начало</a></li><li><a href="../blog.html">Блог</a></li><li><a href="../vlog/" aria-current="page">Видео</a></li></ol></nav>
+    <p class="eyebrow" style="margin-top: var(--space-m)">Видео</p>
+    <h1 id="page-title">Данъци за инвеститори — на видео</h1>
+    <p class="lead measure">Кратки отговори на въпросите, които инвеститорите ми задават най-често. Всяко видео има и текстово резюме и връзка към подробна статия.</p>
+    <p style="margin-top: var(--space-xs)"><a class="link-arrow" href="../blog.html">Статии <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a></p>
+  </div>
+</section>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html#about" data-nav="about" data-key="nav_about">За мен</a></li>
-        <li><a href="../blog.html" data-nav="blog" data-key="nav_blog">Блог</a></li>
-        <li><a href="../vlog/" data-nav="vlog" aria-current="page" data-key="nav_vlog">Влог</a></li>
-        <li><a href="../projects/" data-nav="projects" data-key="nav_projects">Проекти</a></li>
-        <li><a href="../partners/" data-nav="partners" data-key="nav_partners">Партньори</a></li>
-        <li><a href="../index.html#contact" data-nav="contact" data-key="nav_contact">Контакти</a></li>
-        <li><a href="../booking/" data-nav="booking" class="nav-cta" data-key="nav_booking">Запази час</a></li>
+<div class="wrap" data-filter-scope="" style="padding-bottom: var(--space-section)">
+  <div class="toolbar">
+    <div class="filters" role="group" aria-label="Филтър по тема">
+<button class="filter" type="button" data-filter="all" aria-pressed="true">Всички</button><button class="filter" type="button" data-filter="invest" aria-pressed="false">Инвестиции</button><button class="filter" type="button" data-filter="crypto" aria-pressed="false">Крипто</button><button class="filter" type="button" data-filter="nap" aria-pressed="false">Декларации и отчетност</button><button class="filter" type="button" data-filter="vat" aria-pressed="false">ДДС</button>    </div>
+    <search class="search" role="search">
+      <label for="vlog-search">Търсене във видеата</label>
+      <input id="vlog-search" type="search" data-filter-search="" placeholder="Търси във въпросите…" autocomplete="off">
+<svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#search"></use></svg>    </search>
+  </div>
+  <p class="result-status" role="status" data-filter-status="" data-one="Показано е {n} видео" data-many="Показани са {n} видеа" data-none="Няма видеа, които отговарят на търсенето."></p>
+  <ul class="grid" role="list" data-filter-list="" style="--grid-min: 20rem; margin-top: var(--space-s)">
+    <li data-cats="nap invest">
+<article class="card video-card" id="zagubi-finansovi-instrumenti">
+  <div class="video-card__media">
+    <div class="video-card__poster" aria-hidden="true">
+      <span class="video-card__brand"><picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-96.avif 96w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-96.webp 96w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="video-card__avatar" src="../img/profile-9-RfR76xxzeh-96.jpeg" alt="" width="96" height="128"></picture><span><strong>Марина Мучакова</strong><span class="video-card__topic">Видео в YouTube</span></span></span>
+    </div>
+    <button class="video-card__play" type="button" data-yt="Dba4_JBF_4o" data-title="Деклариране на загуби от търговия с финансови инструменти — защо и как" aria-label="Пусни видео: Деклариране на загуби от търговия с финансови инструменти — защо и как"><span><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#play"></use></svg></span></button>
+    <span class="video-card__duration"><span aria-hidden="true">4:11</span><span class="sr-only">Продължителност: 4:11</span></span>
+  </div>
+  <div class="video-card__body">
+    <p class="card__meta"><span class="cat">Декларации и отчетност</span><time datetime="2026-10-18">18 октомври 2026</time></p>
+    <h2 class="card__title">Деклариране на загуби от търговия с финансови инструменти — защо и как</h2>
+<p class="card__text">Защо си струва да декларирате загубите от търговия с финансови инструменти и как точно се прави.</p>    <div class="video-card__links">
+<a class="link-arrow" href="../blog/tax-loss-harvesting-po-balgarski.html">Прочети статията<span class="sr-only">: Деклариране на загуби от търговия с финансови инструменти — защо и как</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a><a class="link-arrow" href="https://youtu.be/Dba4_JBF_4o" target="_blank" rel="noopener">Гледай в YouTube<span class="sr-only">: Деклариране на загуби от търговия с финансови инструменти — защо и как (отваря се в нов раздел)</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#external"></use></svg></a>    </div>
+  </div>
+</article>
+</li>
+    <li data-cats="vat crypto">
+<article class="card video-card" id="oborot-dds-kripto">
+  <div class="video-card__media">
+    <div class="video-card__poster" aria-hidden="true">
+      <span class="video-card__brand"><picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-96.avif 96w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-96.webp 96w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="video-card__avatar" src="../img/profile-9-RfR76xxzeh-96.jpeg" alt="" width="96" height="128"></picture><span><strong>Марина Мучакова</strong><span class="video-card__topic">Видео в YouTube</span></span></span>
+    </div>
+    <button class="video-card__play" type="button" data-yt="aLl--h5-LL4" data-title="Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)" aria-label="Пусни видео: Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)"><span><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#play"></use></svg></span></button>
+    <span class="video-card__duration"><span aria-hidden="true">12:29</span><span class="sr-only">Продължителност: 12:29</span></span>
+  </div>
+  <div class="video-card__body">
+    <p class="card__meta"><span class="cat">ДДС</span><time datetime="2026-10-13">13 октомври 2026</time></p>
+    <h2 class="card__title">Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)</h2>
+<p class="card__text">Кои продажби и суапове на криптовалути трупат оборот за регистрация по ЗДДС — и кои не.</p>    <div class="video-card__links">
+<a class="link-arrow" href="../blog/kripto-borsi-cex-dex-oborot-zdds.html">Прочети статията<span class="sr-only">: Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a><a class="link-arrow" href="https://youtu.be/aLl--h5-LL4" target="_blank" rel="noopener">Гледай в YouTube<span class="sr-only">: Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове) (отваря се в нов раздел)</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#external"></use></svg></a>    </div>
+  </div>
+</article>
+</li>
+    <li data-cats="invest">
+<article class="card video-card" id="reguliran-pazar-gettex">
+  <div class="video-card__media">
+    <div class="video-card__poster" aria-hidden="true">
+      <span class="video-card__brand"><picture><source type="image/avif" srcset="../img/profile-9-RfR76xxzeh-96.avif 96w" sizes="(min-width: 860px) 440px, 100vw"><source type="image/webp" srcset="../img/profile-9-RfR76xxzeh-96.webp 96w" sizes="(min-width: 860px) 440px, 100vw"><img loading="lazy" decoding="async" class="video-card__avatar" src="../img/profile-9-RfR76xxzeh-96.jpeg" alt="" width="96" height="128"></picture><span><strong>Марина Мучакова</strong><span class="video-card__topic">Видео в YouTube</span></span></span>
+    </div>
+    <button class="video-card__play" type="button" data-yt="FB5gS9jWRzM" data-title="Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex" aria-label="Пусни видео: Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex"><span><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#play"></use></svg></span></button>
+    <span class="video-card__duration"><span aria-hidden="true">1:34</span><span class="sr-only">Продължителност: 1:34</span></span>
+  </div>
+  <div class="video-card__body">
+    <p class="card__meta"><span class="cat">Инвестиции</span><time datetime="2026-10-12">12 октомври 2026</time><span>Shorts</span></p>
+    <h2 class="card__title">Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex</h2>
+<p class="card__text">Кратко видео: стъпка по стъпка проверяваме дали Gettex е регулиран пазар. Защо статутът на пазара е важен за данъците — в статията.</p>    <div class="video-card__links">
+<a class="link-arrow" href="../blog/5-danachni-greshki-investitori.html">Прочети статията<span class="sr-only">: Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a><a class="link-arrow" href="https://www.youtube.com/shorts/FB5gS9jWRzM" target="_blank" rel="noopener">Гледай в YouTube<span class="sr-only">: Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex (отваря се в нов раздел)</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#external"></use></svg></a>    </div>
+  </div>
+</article>
+</li>
+  </ul>
+  
+  <div class="empty-state" id="vlogEmpty" data-filter-empty="" hidden=""><p><strong>Няма видеа, които отговарят на търсенето.</strong></p><p>Опитайте друга тема или друга дума.</p></div>
+</div>
+
+
+<section class="section" id="consult" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2 id="cta-title">Имате конкретен казус?</h2>
+        <p>Всяка ситуация е различна. Запазете онлайн консултация и ще я разгледаме заедно.</p>
+        <a class="btn btn--on-navy" href="../booking/">Запази час <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#arrow-right"></use></svg></a>
+      </div>
+      <ul class="contact-list" aria-label="Директен контакт">
+        <li><a class="contact-item" href="mailto:office@vesta-bg.eu"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#mail"></use></svg>office@vesta-bg.eu</a></li>
+        <li><a class="contact-item" href="tel:+359887460907"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#phone"></use></svg>+359 887 460 907</a></li>
+        <li><a class="contact-item" href="viber://chat?number=%2B359887460907"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#viber"></use></svg>Viber</a></li>
+        <li><a class="contact-item" href="https://wa.me/359887460907" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#whatsapp"></use></svg>WhatsApp<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+        <li><a class="contact-item" href="https://t.me/+359887460907" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#telegram"></use></svg>Telegram<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
       </ul>
-
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Светла / тъмна тема" title="Светла / тъмна тема">
-          <svg class="icon icon-moon" aria-hidden="true"><use href="../images/icons.svg#moon"/></svg>
-          <svg class="icon icon-sun" aria-hidden="true"><use href="../images/icons.svg#sun"/></svg>
-        </button>
-        <button class="lang-toggle" id="langToggle" type="button" aria-label="Смени езика">EN</button>
-        <button class="hamburger" id="hamburger" type="button" aria-label="Меню" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
-  </nav>
-  <span id="main" tabindex="-1"></span>
-  <!-- /LAYOUT:NAV -->
+  </div>
+</section>
 
-  <!-- PAGE HEADER -->
-  <header class="page-hero">
-    <div class="container">
-      <p class="section-eyebrow">
-        <span class="lang-content" data-lang="bg">Влог</span>
-        <span class="lang-content" data-lang="en" style="display:none;">Vlog</span>
-      </p>
-      <h1 class="section-title">
-        <span class="lang-content" data-lang="bg">Данъци за инвеститори — на видео</span>
-        <span class="lang-content" data-lang="en" style="display:none;">Investor tax, on video</span>
-      </h1>
-      <p class="page-hero-subtitle">
-        <span class="lang-content" data-lang="bg">Кратки отговори на въпросите, които инвеститорите ми задават най-често. Всяко видео има и текстово резюме и връзка към подробна статия.</span>
-        <span class="lang-content" data-lang="en" style="display:none;">Short answers to the questions investors ask me most often. Every video comes with a text summary and a link to an in-depth article.</span>
-      </p>
-    </div>
-  </header>
-
-  <!-- =========================================
-       VIDEO LIBRARY
-       Добавяне на видео:
-       1. Копирайте една <article class="video-card"> по-долу.
-       2. id = кратък адрес за споделяне (muchakova.com/vlog/#id).
-       3. data-yt = ID на YouTube видеото (youtu.be/ID или youtube.com/shorts/ID).
-          Празно data-yt="" показва „Видеото идва скоро“.
-          .video-duration = продължителност; за Shorts добавете <span class="chip chip-gold">Shorts</span>.
-       4. data-cats = invest crypto nap vat (с интервал); data-date = YYYY-MM-DD.
-       5. Попълнете въпроса, краткия отговор (БГ + EN) и линка към статията.
-       ========================================= -->
-  <main class="page-section">
-    <div class="container">
-
-      <div class="blog-toolbar" data-filter-toolbar=".video-grid" data-empty="#vlogEmpty">
-        <div class="blog-filters" role="group" aria-label="Филтър по тема">
-          <button class="filter-chip active" data-cat="all" data-key="filter_all">Всички</button>
-          <button class="filter-chip" data-cat="invest">
-            <span class="lang-content" data-lang="bg">Инвестиции</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
-          </button>
-          <button class="filter-chip" data-cat="crypto">
-            <span class="lang-content" data-lang="bg">Крипто</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Crypto</span>
-          </button>
-          <button class="filter-chip" data-cat="nap">
-            <span class="lang-content" data-lang="bg">Декларации и отчетност</span>
-            <span class="lang-content" data-lang="en" style="display:none;">Returns & reporting</span>
-          </button>
-          <button class="filter-chip" data-cat="vat">
-            <span class="lang-content" data-lang="bg">ДДС</span>
-            <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
-          </button>
-        </div>
-        <div class="blog-toolbar-right">
-          <label class="blog-search">
-            <svg class="icon" aria-hidden="true"><use href="../images/icons.svg#search"/></svg>
-            <input type="search" data-key-placeholder="search_videos" placeholder="Търси във въпросите…" aria-label="Търсене" />
-          </label>
-        </div>
-      </div>
-
-      <div class="video-grid">
-        <article class="video-card reveal" id="zagubi-finansovi-instrumenti" data-yt="Dba4_JBF_4o" data-cats="nap invest" data-date="2026-10-18">
-          <div class="video-thumb"><span class="video-duration">4:11</span></div>
-          <div class="video-body">
-            <div class="blog-meta">
-              <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">Декларации и отчетност</span>
-                <span class="lang-content" data-lang="en" style="display:none;">Returns & reporting</span>
-              </span>
-              <span class="blog-date">
-                <span class="lang-content" data-lang="bg">18 октомври 2026</span>
-                <span class="lang-content" data-lang="en" style="display:none;">October 18, 2026</span>
-              </span>
-            </div>
-            <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Деклариране на загуби от търговия с финансови инструменти — защо и как</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Declaring Losses from Trading Financial Instruments — Why and How</span>
-            </h3>
-            <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Защо си струва да декларирате загубите от търговия с финансови инструменти и как точно се прави.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Why it pays to declare your losses from trading financial instruments, and exactly how to do it. Video in Bulgarian.</span>
-            </p>
-            <div class="video-links">
-              <a href="../blog/tax-loss-harvesting-po-balgarski.html" data-key="video_read_article">Прочети статията →</a>
-              <a href="https://youtu.be/Dba4_JBF_4o" target="_blank" rel="noopener"><span data-key="video_watch_yt">Гледай в YouTube</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="video-card reveal" id="oborot-dds-kripto" data-yt="aLl--h5-LL4" data-cats="vat crypto" data-date="2026-10-13">
-          <div class="video-thumb"><span class="video-duration">12:29</span></div>
-          <div class="video-body">
-            <div class="blog-meta">
-              <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">ДДС</span>
-                <span class="lang-content" data-lang="en" style="display:none;">VAT</span>
-              </span>
-              <span class="blog-date">
-                <span class="lang-content" data-lang="bg">13 октомври 2026</span>
-                <span class="lang-content" data-lang="en" style="display:none;">October 13, 2026</span>
-              </span>
-            </div>
-            <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Трупане на оборот за регистрация по ДДС от криптовалути (продажби и суапове)</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Building Up VAT Registration Turnover from Crypto (Sales and Swaps)</span>
-            </h3>
-            <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Кои продажби и суапове на криптовалути трупат оборот за регистрация по ЗДДС — и кои не.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">Which crypto sales and swaps count towards VAT registration turnover — and which do not. Video in Bulgarian.</span>
-            </p>
-            <div class="video-links">
-              <a href="../blog/kripto-borsi-cex-dex-oborot-zdds.html" data-key="video_read_article">Прочети статията →</a>
-              <a href="https://youtu.be/aLl--h5-LL4" target="_blank" rel="noopener"><span data-key="video_watch_yt">Гледай в YouTube</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="video-card reveal" id="reguliran-pazar-gettex" data-yt="FB5gS9jWRzM" data-cats="invest" data-date="2026-10-12">
-          <div class="video-thumb"><span class="video-duration">1:34</span></div>
-          <div class="video-body">
-            <div class="blog-meta">
-              <span class="blog-tag">
-                <span class="lang-content" data-lang="bg">Инвестиции</span>
-                <span class="lang-content" data-lang="en" style="display:none;">Investing</span>
-              </span>
-              <span class="chip chip-gold">Shorts</span>
-              <span class="blog-date">
-                <span class="lang-content" data-lang="bg">12 октомври 2026</span>
-                <span class="lang-content" data-lang="en" style="display:none;">October 12, 2026</span>
-              </span>
-            </div>
-            <h3 class="video-title">
-              <span class="lang-content" data-lang="bg">Как проверяваме дали един пазар е регулиран? Проверяваме заедно Gettex</span>
-              <span class="lang-content" data-lang="en" style="display:none;">How Do We Check Whether a Market Is Regulated? Let’s Check Gettex Together</span>
-            </h3>
-            <p class="video-answer">
-              <span class="lang-content" data-lang="bg">Кратко видео: стъпка по стъпка проверяваме дали Gettex е регулиран пазар. Защо статутът на пазара е важен за данъците — в статията.</span>
-              <span class="lang-content" data-lang="en" style="display:none;">A short video: step by step, we check whether Gettex is a regulated market. Why a market’s status matters for tax — in the article. Video in Bulgarian.</span>
-            </p>
-            <div class="video-links">
-              <a href="../blog/5-danachni-greshki-investitori.html" data-key="video_read_article">Прочети статията →</a>
-              <a href="https://www.youtube.com/shorts/FB5gS9jWRzM" target="_blank" rel="noopener"><span data-key="video_watch_yt">Гледай в YouTube</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <p class="blog-empty" id="vlogEmpty" data-key="vlog_empty">Няма видеа, които отговарят на търсенето.</p>
-
-      <div class="vlog-cta reveal">
-        <p>
-          <strong>
-            <span class="lang-content" data-lang="bg">Още видеа предстоят</span>
-            <span class="lang-content" data-lang="en" style="display:none;">More videos are on the way</span>
-          </strong>
-          <span class="lang-content" data-lang="bg">Абонирайте се в YouTube, за да не пропуснете новите видеа — или запазете консултация за вашия конкретен случай.</span>
-          <span class="lang-content" data-lang="en" style="display:none;">Subscribe on YouTube so you don’t miss new videos — or book a consultation for your specific case.</span>
-        </p>
-        <div class="hero-cta">
-          <a href="https://www.youtube.com/@TheCryptoAcademy375" class="btn btn-outline" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="../images/icons.svg#youtube"/></svg>
-            <span>YouTube</span>
-          </a>
-          <a href="../booking/" class="btn btn-primary">
-            <span data-key="hero_cta_book">Запази консултация</span>
-            <svg class="icon" aria-hidden="true"><use href="../images/icons.svg#arrow-right"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
   </main>
-
-  <!-- LAYOUT:FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-          <a href="../index.html" class="nav-logo">Marina <span>M.</span></a>
-          <p class="footer-tagline" data-key="footer_tagline">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
-          <a href="../donate/" class="footer-donate" data-key="footer_donate">💛 Подкрепи ме</a>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-heading" data-key="footer_nav">Навигация</p>
-          <a href="../index.html#about" data-key="nav_about">За мен</a>
-          <a href="../projects/" data-key="nav_projects">Проекти</a>
-          <a href="../partners/" data-key="nav_partners">Партньори</a>
-          <a href="../booking/" data-key="nav_booking">Запази час</a>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-heading" data-key="footer_resources">Ресурси</p>
-          <a href="../blog.html" data-key="nav_blog">Блог</a>
-          <a href="../vlog/" data-key="nav_vlog">Влог</a>
-          <a href="../game/" data-key="nav_game">Игра</a>
-          <a href="https://muchakova.github.io/looper/" target="_blank" rel="noopener" data-key="footer_synth">Синтезатор</a>
-        </div>
-
-        <div class="footer-col">
-          <p class="footer-heading" data-key="footer_contact">Контакт</p>
-          <a href="mailto:office@vesta-bg.eu">office@vesta-bg.eu</a>
-          <a href="tel:+359887460907">+359 887 460 907</a>
-          <div class="footer-socials">
-            <a href="https://www.facebook.com/muchakova" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#facebook"/></svg></a>
-            <a href="https://www.linkedin.com/in/vestaconsult/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#linkedin"/></svg></a>
-            <a href="https://www.tiktok.com/@muchakova" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#tiktok"/></svg></a>
-            <a href="https://www.youtube.com/@TheCryptoAcademy375" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#youtube"/></svg></a>
-            <a href="https://x.com/VestaConsult" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><svg class="icon" aria-hidden="true"><use href="../images/icons.svg#x"/></svg></a>
-          </div>
-        </div>
-
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">MM</span><span>Марина Мучакова</span></a>
+        <p class="site-footer__tag">Данъчен консултант. Помагам на хора и бизнеси да минат НАП без НАП да ги мине.</p>
+        <a class="donate-link" href="../donate/"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#heart"></use></svg>Подкрепи ме</a>
       </div>
-      <div class="footer-bottom">
-        <p data-key="footer_text">© 2026 Марина Мучакова. Всички права запазени.</p>
+      <nav aria-labelledby="footer-nav">
+        <h2 id="footer-nav">Навигация</h2>
+        <ul>
+          <li><a href="../services/">Услуги</a></li>
+          <li><a href="../about/">За мен</a></li>
+          <li><a href="../blog.html">Блог</a></li>
+          <li><a href="../vlog/">Видео</a></li>
+          <li><a href="../contact/">Контакти</a></li>
+          <li><a href="../booking/">Запази час</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-res">
+        <h2 id="footer-res">Ресурси</h2>
+        <ul>
+          <li><a href="../projects/">Проекти</a></li>
+          <li><a href="../partners/">Партньори</a></li>
+          <li><a href="../game/">Игра</a></li>
+          <li><a href="https://muchakova.github.io/looper/" target="_blank" rel="noopener">Синтезатор<span class="sr-only"> (отваря се в нов раздел)</span></a></li>
+          <li><a href="../feed.xml" type="application/rss+xml">RSS абонамент</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="footer-contact">Контакт</h2>
+        <ul>
+          <li><a href="mailto:office@vesta-bg.eu">office@vesta-bg.eu</a></li>
+          <li><a href="tel:+359887460907">+359 887 460 907</a></li>
+        </ul>
+        <ul class="socials" aria-label="Социални мрежи">
+          <li><a class="icon-btn" href="https://www.facebook.com/muchakova" target="_blank" rel="noopener" aria-label="Facebook (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#facebook"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.linkedin.com/in/vestaconsult/" target="_blank" rel="noopener" aria-label="LinkedIn (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#linkedin"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.youtube.com/@TheCryptoAcademy375" target="_blank" rel="noopener" aria-label="YouTube (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#youtube"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://www.tiktok.com/@muchakova" target="_blank" rel="noopener" aria-label="TikTok (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#tiktok"></use></svg></a></li>
+          <li><a class="icon-btn" href="https://x.com/VestaConsult" target="_blank" rel="noopener" aria-label="X (отваря се в нов раздел)"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#x"></use></svg></a></li>
+        </ul>
       </div>
     </div>
-  </footer>
-  <!-- /LAYOUT:FOOTER -->
-
-  <script src="../js/main.js"></script>
+    <div class="site-footer__bottom">
+      <p>© 2026 Марина Мучакова · <a href="../privacy/">Поверителност</a> · <a href="../accessibility/">Достъпност</a></p>
+      <fieldset class="theme-switch">
+        <legend>Тема</legend>
+        <div class="theme-switch__options">
+          <label><input type="radio" name="theme" value="system" checked="">Системна</label>
+          <label><input type="radio" name="theme" value="light">Светла</label>
+          <label><input type="radio" name="theme" value="dark">Тъмна</label>
+        </div>
+      </fieldset>
+    </div>
+    <p class="muted" style="font-size: .85rem; padding-bottom: var(--space-l)">Съдържанието на сайта не е индивидуална данъчна или правна консултация.</p>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,10 +1,10 @@
-# Marina Muchakova — Personal Website
+# Marina Muchakova (Марина Мучакова) — muchakova.com
 
-> Tax consultant, legal specialist, and educator based in Bulgaria.
+> Marina Muchakova — tax consultant with a law degree and over 15 years of experience: crypto tax and MiCA, investment income, international tax, business.
 
 ## About
 
-Marina Muchakova (Марина Мучакова) is a tax consultant with a law degree and over 15 years of experience in Bulgarian and EU tax law. She specialises in:
+Marina Muchakova is a tax consultant with a law degree and over 15 years of experience in Bulgarian and EU tax law. She specialises in:
 
 - Crypto taxation and blockchain-related financial compliance
 - Investment income taxation (bonds, equities, government securities)
@@ -13,96 +13,181 @@ Marina Muchakova (Марина Мучакова) is a tax consultant with a law 
 - MiCA (Markets in Crypto-Assets Regulation) prudential assessments and stress testing
 
 She works across three main projects:
-- **Vesta Consult** — accounting firm and consultancy (https://vesta-bg.eu)
-- **The Crypto Academy** — educational platform for crypto and blockchain (https://thecrypto.academy)
-- **NABI** — National Association for Blockchain and Innovation (non-profit)
+- **Vesta Consult**: An accounting firm and consultancy where I am a managing partner. The team serves companies and individuals: monthly bookkeeping, annual tax returns, crypto accounting, investment fund bookkeeping, translations and document legalisation. (https://vesta-bg.eu)
+- **The Crypto Academy**: An educational crypto and blockchain project running seminars in partnership with UNWE, Expert Events, Themida Training Centre, Kitov Centre, Finance Academy, Invest Pro, Invest Club and others. (https://thecrypto.academy)
+- **NABI**: I am a member of the National Association for Blockchain and Innovation, a non-profit organisation bridging the gap between business and public administration in the technology sector, with a mission to create a favourable environment for investment and a technology crypto hub in Bulgaria.
 
 ## Website
 
-- Homepage: https://muchakova.com/
-- Blog: https://muchakova.com/blog.html
-- Book a consultation: https://muchakova.com/booking/
-- Vlog — short videos on investors' tax questions (declaring trading losses, VAT registration turnover from crypto sales and swaps, checking whether a market such as Gettex is regulated), each with a summary and a link to the related article: https://muchakova.com/vlog/
-- Projects — Vesta Consult, The Crypto Academy, NABI, plus pet projects (LoopForge music synthesizer / loop studio: https://muchakova.github.io/looper/ , browser game): https://muchakova.com/projects/
-- Partners — tax-invest and NX0 / NativeArc: https://muchakova.com/partners/
-- Game "Marina vs the Tax Zombies" (3-minute browser game, BG + EN): https://muchakova.com/game/
-- Language: Bulgarian (primary) + English (toggle available on every page)
+The site is in Bulgarian at the root and in English under /en/; every page links to its counterpart in the other language.
 
-## Blog Articles
+- [Home](https://muchakova.com/) · [English](https://muchakova.com/en/)
+- [Services](https://muchakova.com/services/) · [English](https://muchakova.com/en/services/): Crypto tax & MiCA, Investment income, International tax, Business structuring
+- [Book a meeting](https://muchakova.com/booking/) · [English](https://muchakova.com/en/booking/): online consultation on Google Meet, 30 min €130 or 60 min €230, paid by card when booking
+- [About](https://muchakova.com/about/) · [English](https://muchakova.com/en/about/)
+- [Blog](https://muchakova.com/blog.html) · [English](https://muchakova.com/en/blog.html)
+- [Videos](https://muchakova.com/vlog/) · [English](https://muchakova.com/en/vlog/): short videos on investors' tax questions, each with a written answer and a link to the related article
+- [Contact](https://muchakova.com/contact/) · [English](https://muchakova.com/en/contact/)
+- [Projects](https://muchakova.com/projects/) · [English](https://muchakova.com/en/projects/)
+- [Partners](https://muchakova.com/partners/) · [English](https://muchakova.com/en/partners/)
+- [Game](https://muchakova.com/game/) · [English](https://muchakova.com/en/game/)
+- LoopForge, a music loop studio in the browser (pet project): https://muchakova.github.io/looper/
+- RSS: https://muchakova.com/feed.xml (Bulgarian) · https://muchakova.com/en/feed.xml (English)
+
+## Blog articles (29)
+
+### Tax-loss harvesting по български / Tax-Loss Harvesting, the Bulgarian Way
+- URL: https://muchakova.com/blog/tax-loss-harvesting-po-balgarski.html · English: https://muchakova.com/en/blog/tax-loss-harvesting-po-balgarski.html
+- Date: 2026-10-08
+- Topics: How to realise losses before 31 December lawfully: why a loss on an EU regulated segment is useless for tax (Art. 33(3) PITA), wash sale rules in the US, Ireland and the UK, seasonality, and where the line with market manipulation under MAR runs.
+
+### Личен или фирмен акаунт при брокер / Personal or Company Brokerage Account
+- URL: https://muchakova.com/blog/lichen-ili-firmen-akaunt-broker.html · English: https://muchakova.com/en/blog/lichen-ili-firmen-akaunt-broker.html
+- Date: 2026-10-08
+- Topics: PITA versus CITA, letter by letter: listing is not execution, a “regulated exchange” is not a regulated market (XETA vs XETB), loss carry-forward, US markets, actual expenses, the 5% dividend tax and US estate tax. Plus a prompt that stops AI from just saying “It depends”.
+
+### Скъпа БНБ, имам акции в Interactive Brokers / Dear BNB, I Have Shares at Interactive Brokers
+- URL: https://muchakova.com/blog/spb-8-bnb-interactive-brokers.html · English: https://muchakova.com/en/blog/spb-8-bnb-interactive-brokers.html
+- Date: 2026-10-05
+- Topics: The BNB wants statistics, not tax. When SPB-8 is due (the €25,000 threshold at 31 December, Art. 10(2) of the Currency Act), why securities go in by ISIN and quantity rather than in euro, and what companies file: SPB-10, SPB-10A, SPB-2.
+
+### Местно лице на половин Европа (и на един кораб) / Tax Resident of Half of Europe (and of One Ship)
+- URL: https://muchakova.com/blog/siddo-dvoyno-mestno-lice.html · English: https://muchakova.com/en/blog/siddo-dvoyno-mestno-lice.html
+- Date: 2026-10-02
+- Topics: When several countries treat you as resident at once: Art. 4 PITA, the DTT tie-breaker rules, tax credit vs. exemption, the €255,645.94 TSSPC threshold — and a case involving the UK, Germany, Cyprus, Barbados and a ship under the Panamanian flag.
+
+### Първият български White Paper в ESMA: Пробив за Web3 у нас или просто регулаторна формалност? / The First Bulgarian White Paper in ESMA’s Register: A Web3 Breakthrough or Just a Regulatory Formality?
+- URL: https://muchakova.com/blog/parviyat-balgarski-white-paper-esma.html · English: https://muchakova.com/en/blog/parviyat-balgarski-white-paper-esma.html
+- Date: 2026-10-01
+- Topics: NativeArc’s NX0 token is the first fully Bulgarian White Paper entered in ESMA’s register. What the project is, why a Title II MiCA notification is not a licence, and what the register entry does — and does not — prove.
+
+### Чий е оборотът: на борсата или наш? Крипто сделките през CEX и DEX и прагът по ЗДДС / Whose Turnover Is It — the Exchange’s or Ours? Crypto Trades via CEX and DEX and the VAT Threshold
+- URL: https://muchakova.com/blog/kripto-borsi-cex-dex-oborot-zdds.html · English: https://muchakova.com/en/blog/kripto-borsi-cex-dex-oborot-zdds.html
+- Date: 2026-10-01
+- Topics: Instant Sell and Convert, order book or Uniswap — which crypto sales count towards the €51,130 VAT registration threshold and which “go to the exchange”. Place of supply under Art. 21 of the VAT Act, the presumptions in Art. 18 of Regulation 282/2011, and the split of services under MiCA.
+
+### Получи ли писмо от НАП за доходите си от инвестиции? / Got a Letter from the NRA About Your Investment Income?
+- URL: https://muchakova.com/blog/nap-pismo-dohodi-investicii.html · English: https://muchakova.com/en/blog/nap-pismo-dohodi-investicii.html
+- Date: 2026-09-18
+- Topics: Short and to the point — how to find an accountant, how to handle it yourself, what documents you need, and exactly where each type of income (shares, government securities, crypto, interest, dividends) is declared for tax year 2025.
+
+### 9% или 20% ДДС за еднодневния тур? / 9% or 20% VAT on a One-Day Tour?
+- URL: https://muchakova.com/blog/dds-turisticheska-usluga-9-ili-20.html · English: https://muchakova.com/en/blog/dds-turisticheska-usluga-9-ili-20.html
+- Date: 2026-08-31
+- Topics: A one-day tour sold through platforms like GetYourGuide, Viator or Airbnb Experiences — which VAT rate applies, when there's a “general tourist service” under Art. 136, and what the tax is charged on. Why the 9% reduced rate no longer exists.
+
+### MEXC е в „черния списък“ на ESMA. Какво означава това и какво става с активите ти / MEXC Is on ESMA's “Blacklist”. What It Means and What Happens to Your Assets
+- URL: https://muchakova.com/blog/esma-non-compliant-mexc.html · English: https://muchakova.com/en/blog/esma-non-compliant-mexc.html
+- Date: 2026-08-06
+- Topics: MEXC is listed in ESMA's register of non-compliant entities under MiCA. How it differs from a revoked license, why the transition period has expired, and what actually happens to your assets if you move them through a private address.
+
+### ДДС регистрация при търговия с акции чрез Interactive Brokers / VAT Registration When Trading Shares via Interactive Brokers
+- URL: https://muchakova.com/blog/dds-registraciya-interactive-brokers.html · English: https://muchakova.com/en/blog/dds-registraciya-interactive-brokers.html
+- Date: 2026-08-05
+- Topics: When turnover from financial instruments through a foreign broker does NOT count toward Art. 96 VAT registration — place of supply, Art. 21(2), and a sample response to the NRA with a real refusal act.
+
+### Как се облагат ETF-ите в България? (И защо инвеститорите бъркат най-важното) / How Are ETFs Taxed in Bulgaria? (And Why Investors Get the Most Important Part Wrong)
+- URL: https://muchakova.com/blog/kak-se-oblagat-etf-ite-v-balgaria.html · English: https://muchakova.com/en/blog/kak-se-oblagat-etf-ite-v-balgaria.html
+- Date: 2026-07-21
+- Topics: ETF, ETN or ETC — the legal form decides everything. Plus accumulating vs. distributing funds, investing through a company, Irish UCITS funds, inheritance, and a VAT masterclass.
+
+### 5 данъчни грешки, които допускат инвеститорите — Част 2 (За ценители) / 5 Tax Mistakes Investors Make — Part 2 (For Connoisseurs)
+- URL: https://muchakova.com/blog/5-danachni-greshki-investitori-chast-2.html · English: https://muchakova.com/en/blog/5-danachni-greshki-investitori-chast-2.html
+- Date: 2026-07-17
+- Topics: The expanded, edited version: regulated market vs. qualifying growth market, ETF/ETC/ETN/ADR/GDR, tax-loss harvesting and MAR, the VAT risk, and when an investor already looks like a trader.
+
+### 5 данъчни грешки, които допускат инвеститорите! (И които после им струват скъпо) / 5 Tax Mistakes Investors Make! (That Later Cost Them Dearly)
+- URL: https://muchakova.com/blog/5-danachni-greshki-investitori.html · English: https://muchakova.com/en/blog/5-danachni-greshki-investitori.html
+- Date: 2026-07-15
+- Topics: Regulated market vs. European market, ETF vs. ETC/ETP, Tax Loss Harvesting, the December law changes and the hidden risk of VAT registration — 5 traps that wipe out your returns.
+
+### Смарт контракти и DeFi: Какво реално означава това за вашия бизнес? / Smart Contracts and DeFi: What Does This Actually Mean for Your Business?
+- URL: https://muchakova.com/blog/smart-kontrakti-defi-biznes.html · English: https://muchakova.com/en/blog/smart-kontrakti-defi-biznes.html
+- Date: 2026-07-10
+- Topics: Why code is not law, which technical movements in DeFi are taxable events under Bulgarian tax law, what MiCA changes, and what steps every business leader should take.
 
 ### Допълнение: Прагове (Thresholds) и степени на комплексна проверка (Due Diligence) / Addendum: Thresholds and Levels of Due Diligence
-- URL: https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html
+- URL: https://muchakova.com/blog/aml-pragove-stepeni-due-diligence.html · English: https://muchakova.com/en/blog/aml-pragove-stepeni-due-diligence.html
 - Date: 2026-07-10
 - Topics: AML thresholds, EUR 1000 Travel Rule threshold, EUR 15000 occasional transactions threshold, EUR 10000 cash payments and border control, Simplified Due Diligence (SDD), Customer Due Diligence (CDD), Enhanced Due Diligence (EDD), Risk-Based Approach, dynamic thresholds, PEP, smurfing, EBA guidelines, Bulgarian Measures Against Money Laundering Act (ЗМИП), crypto exchanges
-- Languages: BG + EN
 
 ### Наръчник: Как успешно да преминем AML проверка при крипто транзакции / A Guide to Successfully Passing an AML Check on Crypto Transactions
-- URL: https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html
+- URL: https://muchakova.com/blog/kak-da-preminem-aml-proverka-kripto.html · English: https://muchakova.com/en/blog/kak-da-preminem-aml-proverka-kripto.html
 - Date: 2026-07-10
 - Topics: AML checks on crypto transactions, KYC, source of funds (SoF), source of wealth (SoW), MiCA Regulation (EU) 2023/1114, Travel Rule Regulation (EU) 2023/1113, Bulgarian Measures Against Money Laundering Act (ЗМИП), compliance, crypto exchanges, bank transfers, structuring, smurfing, blockchain explorers, document file preparation
-- Languages: BG + EN
 
 ### Данъчен наръчник за инвеститори в България / Tax Guide for Investors in Bulgaria
-- URL: https://muchakova.com/blog/danachen-narachnik-za-investitori.html
+- URL: https://muchakova.com/blog/danachen-narachnik-za-investitori.html · English: https://muchakova.com/en/blog/danachen-narachnik-za-investitori.html
 - Date: 2026-07-08
 - Topics: taxation of investments in Bulgaria, cryptocurrencies, stocks, ETFs, ETCs, dividends, derivatives, forex, CFDs, investment gold, real estate, long-term rent, Airbnb short-term rent, PITA (ЗДДФЛ), VAT (ЗДДС), patent tax, annual tax return, Annex 5, Annex 8, double taxation treaties, NRA Bulgaria
-- Languages: BG + EN
 
 ### Моите 5 стотинки за Проектобюджет 2026 / My Two Cents on Draft Budget 2026
-- URL: https://muchakova.com/blog/moite-5-stotinki-za-proektobyudzhet-2026.html
+- URL: https://muchakova.com/blog/moite-5-stotinki-za-proektobyudzhet-2026.html · English: https://muchakova.com/en/blog/moite-5-stotinki-za-proektobyudzhet-2026.html
 - Date: 2026-07-08
 - Topics: Draft Budget 2026 Bulgaria, budget deficit, public spending, administrative burden, reforms, digitalisation, public sector productivity, entrepreneurship, SMEs, transaction costs, opportunity cost, Estonia e-government, Diagnosis Bulgaria
-- Languages: BG + EN
 
-### MetaMask CL Card вече преминава под MiCA / MetaMask CL Card Now Moves Under MiCA
-- URL: https://muchakova.com/blog/metamask-cl-card-mica-moonpay.html
+### MetaMask CL Card вече преминава под MiCA: зад крипто услугите вече стои MoonPay Europe / MetaMask CL Card Now Moves Under MiCA: MoonPay Europe Is Behind the Crypto Services
+- URL: https://muchakova.com/blog/metamask-cl-card-mica-moonpay.html · English: https://muchakova.com/en/blog/metamask-cl-card-mica-moonpay.html
 - Date: 2026-07-08
 - Topics: MetaMask CL Card, MoonPay Europe, MiCA, CASP, AFM, AML, Travel Rule, KYC, DORA, DAC8, CARF, automatic exchange of information, NRA Bulgaria, crypto taxation
-- Languages: BG + EN
 
 ### Разлика между търговия на борсов сегмент и over-the-counter / The Difference Between Exchange Trading and Over-the-Counter Trading
-- URL: https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html
+- URL: https://muchakova.com/blog/razlika-borsov-segment-over-the-counter.html · English: https://muchakova.com/en/blog/razlika-borsov-segment-over-the-counter.html
 - Date: 2026-06-11
 - Topics: OTC trading, exchange execution, off-exchange execution, fractional shares, MiFID II, MiFIR, systematic internaliser, ATS, execution venue, trade confirmation
-- Languages: BG + EN
 
 ### Кога сделките с ценни книжа СА икономическа дейност? / When Are Securities Transactions an Economic Activity?
-- URL: https://muchakova.com/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html
+- URL: https://muchakova.com/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html · English: https://muchakova.com/en/blog/koga-sdelkite-s-cenni-knizha-sa-ikonomicheska-deynost.html
 - Date: 2026-05-29
 - Topics: VAT, securities transactions, economic activity, CJEU case law, Polysar, Wellcome Trust, AB SKF, Régie Dauphinoise, Bulgarian VAT Act, VAT registration threshold
-- Languages: BG + EN
-
-### Затрудненията пред CASP-овете при MiCA лиценз пред КФН / CASP Challenges in Bulgaria During MiCA Licensing Before the FSC
-- URL: https://muchakova.com/blog/zatrudnenia-casp-mica-licenz-kfn.html
-- Date: 2026-05-28
-- Topics: MiCA licensing, CASP authorisation, FSC Bulgaria, prudential safeguards, DORA, outsourcing, custody, client asset segregation, knowledge and competence, fit and proper assessment
-- Languages: BG + EN
 
 ### Какво не пише в white paper-ите / What White Papers Do Not Say
-- URL: https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html
+- URL: https://muchakova.com/blog/kakvo-ne-pishe-v-white-paperite.html · English: https://muchakova.com/en/blog/kakvo-ne-pishe-v-white-paperite.html
 - Date: 2026-05-28
 - Topics: Cryptoeconomics, blockchain economics, Bitcoin, Ethereum, DeFi, Layer 2, bridges, wrapped tokens, MiCA, crypto regulation, shadow banking
-- Languages: BG + EN
 
-### ДЦК и как не се облагат с данъци / Government Bonds and How They Are NOT Taxed
-- URL: https://muchakova.com/blog/dck-obligacii-danaci.html
-- Date: 2026-02-14
-- Topics: Government securities (ДЦК), bond taxation in Bulgaria, coupons, discounts, capital gains, ZDDFL (Bulgarian Personal Income Tax Act), regulated markets, ESMA, MiFID 2, Bulgarian Stock Exchange
-- Languages: BG + EN
+### Затрудненията пред CASP-овете при MiCA лиценз пред КФН / CASP Challenges in Bulgaria During MiCA Licensing Before the FSC
+- URL: https://muchakova.com/blog/zatrudnenia-casp-mica-licenz-kfn.html · English: https://muchakova.com/en/blog/zatrudnenia-casp-mica-licenz-kfn.html
+- Date: 2026-05-28
+- Topics: MiCA licensing, CASP authorisation, FSC Bulgaria, prudential safeguards, DORA, outsourcing, custody, client asset segregation, knowledge and competence, fit and proper assessment
+
+### Какво е „субстанция“ на една компания и защо това е важно? / What Is Company Substance and Why Does It Matter?
+- URL: https://muchakova.com/blog/substancia-kompania-zashto-vazhno.html · English: https://muchakova.com/en/blog/substancia-kompania-zashto-vazhno.html
+- Date: 2026-03-04
+- Topics: Substance means a company's real economic presence in a given country. In practice, it answers whether the company genuinely operates there or is only registered on paper.
+
+### Промени в ДДС при електронна търговия и онлайн събития / VAT Changes for E-commerce and Online Events
+- URL: https://muchakova.com/blog/dds-promeni-2026.html · English: https://muchakova.com/en/blog/dds-promeni-2026.html
+- Date: 2026-03-04
+- Topics: As of January 1, 2026, several major VAT changes are now in effect, with the strongest impact on online businesses, digital services, and cross-border sales within the EU.
+
+### Натрупване на оборот за регистрация по ДДС след 01.01.2026 г. / VAT Registration Turnover Accumulation After 01.01.2026
+- URL: https://muchakova.com/blog/natrupvane-oborot-registraciya-dds-2026.html · English: https://muchakova.com/en/blog/natrupvane-oborot-registraciya-dds-2026.html
+- Date: 2026-03-04
+- Topics: As of January 1, 2026, the VAT registration threshold in Bulgaria remains EUR 51,130, but turnover monitoring shifts to a calendar-year basis.
+
+### Обобщение на промените в режима на ДДС след 1.1.2026 / Summary of VAT Regime Changes After 1.1.2026
+- URL: https://muchakova.com/blog/obobshtenie-promeni-zdds-2026.html · English: https://muchakova.com/en/blog/obobshtenie-promeni-zdds-2026.html
+- Date: 2026-03-04
+- Topics: As of January 1, 2026, substantial amendments to the Bulgarian VAT Act enter into force, transposing Directive (EU) 2020/285 on the special scheme for small enterprises.
 
 ### Размерът има значение! / Size Matters!
-- URL: https://muchakova.com/blog/razmer-ima-znachenie.html
+- URL: https://muchakova.com/blog/razmer-ima-znachenie.html · English: https://muchakova.com/en/blog/razmer-ima-znachenie.html
 - Date: 2026-02-28
 - Topics: Starting capital, business stress testing, MiCA licensing, FSC (КФН), prudential requirements, business model resilience, break-even, risk buffers
-- Languages: BG + EN
+
+### ДЦК и как не се облагат с данъци / Government Bonds and How They Are NOT Taxed
+- URL: https://muchakova.com/blog/dck-obligacii-danaci.html · English: https://muchakova.com/en/blog/dck-obligacii-danaci.html
+- Date: 2026-02-14
+- Topics: Government securities (ДЦК), bond taxation in Bulgaria, coupons, discounts, capital gains, ZDDFL (Bulgarian Personal Income Tax Act), regulated markets, ESMA, MiFID 2, Bulgarian Stock Exchange
 
 ## Contact
 
-- Book a consultation: https://muchakova.com/booking/
+- Book a consultation: https://muchakova.com/booking/ · English: https://muchakova.com/en/booking/
 - Email: office@vesta-bg.eu
-- Phone / Viber / WhatsApp / Telegram: +359 887 460 907
-- LinkedIn: https://www.linkedin.com/in/vestaconsult/
+- Phone / Viber / WhatsApp / Telegram: +359 887 460 907
 - Facebook: https://www.facebook.com/muchakova
-- X / Twitter: https://x.com/VestaConsult
-- TikTok: https://www.tiktok.com/@muchakova
+- LinkedIn: https://www.linkedin.com/in/vestaconsult/
 - YouTube: https://www.youtube.com/@TheCryptoAcademy375
+- TikTok: https://www.tiktok.com/@muchakova
+- X: https://x.com/VestaConsult
