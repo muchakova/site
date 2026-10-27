@@ -58,7 +58,7 @@ SITE_DIR="$tmp/main" node tests/static/legacy-urls.mjs
 if [ -z "$(git -C "$tmp/main" diff --cached --name-only -- . ":!version.txt")" ]; then
   echo "Nothing changed: $ADDRESS already has this version."; exit 0
 fi
-git -C "$tmp/main" diff --cached --name-status | cut -c1 | sort | uniq -c | sed 's/ A$/ added/; s/ M$/ changed/; s/ D$/ removed/'
+git -C "$tmp/main" diff --cached --name-status | cut -c1 | sort | uniq -c | sed 's/ A$/ added/; s/ M$/ changed/; s/ D$/ removed/; s/ R$/ moved/'
 
 if [ -n "${DRY_RUN:-}" ]; then
   say "DRY_RUN: everything checked, nothing committed or pushed."
