@@ -35,7 +35,6 @@ git branch -r --contains HEAD | grep -q . || echo "Note: $src is not on GitHub y
 
 say "2/7 Build ($src)"
 env -u SITE_PREVIEW -u SHOW_PENDING node_modules/.bin/eleventy --quiet --output="$tmp/site"
-touch "$tmp/site/.nojekyll"   # serve the files as they are, without Jekyll
 printf '%s %s\n' "$src" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$tmp/site/version.txt"
 
 say "3/7 Checks of the build"
@@ -51,6 +50,7 @@ node tools/crawl.mjs "http://127.0.0.1:$PORT/"
 
 say "4/7 Copy into the root of main"
 git worktree add -q "$tmp/main" main
+touch "$tmp/site/.nojekyll"   # serve the files as they are, without Jekyll (added after the checks: the build stays Jekyll-safe)
 rsync -a --delete --exclude .DS_Store $(printf -- '--exclude /%s ' "${KEEP[@]}") "$tmp/site/" "$tmp/main/"
 git -C "$tmp/main" add -A
 git -C "$tmp/main" diff --cached --quiet -- CNAME || fail "CNAME would change — stopping, nothing published."
