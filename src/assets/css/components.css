@@ -55,6 +55,7 @@
     padding: var(--space-2xs) var(--space-s); text-align: center; font-size: var(--step--1);
   }
   .preview-banner p { margin: 0 auto; max-width: 70rem; }
+  .preview-banner .icon { display: inline-block; }
 
   .site-header {
     position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40;
