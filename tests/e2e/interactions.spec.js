@@ -19,6 +19,16 @@ test("language switch leads to the counterpart page and back", async ({ page }) 
   await expect(page.locator("html")).toHaveAttribute("lang", "bg");
 });
 
+test("article lists on English pages open the English articles", async ({ page }) => {
+  for (const path of ["/en/", "/en/services/", "/en/blog.html"]) {
+    await page.goto(path);
+    const paths = await page.locator(".card__link").evaluateAll((links) =>
+      links.map((a) => new URL(a.href).pathname).filter((p) => p.includes("/blog/")));
+    expect(paths.length, path).toBeGreaterThan(0);
+    for (const p of paths) expect(p, path).toMatch(/^\/en\/blog\//);
+  }
+});
+
 test("theme: header toggle and footer choice stay in sync and persist", async ({ page }) => {
   await page.emulateMedia({ colorScheme: "light" });
   await page.goto("/");

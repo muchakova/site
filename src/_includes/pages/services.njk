@@ -42,7 +42,7 @@
       <div class="post-feed">
         <ul class="post-rows">
           {% for p in s.posts | postsByUrl(collections.postIndex) %}
-          <li><article class="post-row"><time datetime="{{ p.date }}">{{ p.date | date(lang, "short") }}</time><div><span class="cat">{{ p.tag[lang] }}</span><h4 class="post-row__title"><a class="card__link" href="{{ p.url }}">{{ p.title[lang] }}</a></h4></div><span class="len">{{ p.minutes[lang] }} {{ T.units.min }}</span></article></li>
+          <li><article class="post-row"><time datetime="{{ p.date }}">{{ p.date | date(lang, "short") }}</time><div><span class="cat">{{ p.tag[lang] }}</span><h4 class="post-row__title"><a class="card__link" href="{{ p | postUrl(lang) }}">{{ p.title[lang] }}</a></h4></div><span class="len">{{ p.minutes[lang] }} {{ T.units.min }}</span></article></li>
           {% endfor %}
         </ul>
       </div>
