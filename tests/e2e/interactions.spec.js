@@ -131,7 +131,7 @@ test("blog: ?cat= preselects a topic and the count is announced", async ({ page 
   const visible = await page.locator("[data-filter-list] > li:visible").count();
   expect(visible).toBeGreaterThan(0);
   await page.locator('[data-filter="all"]').click();
-  await expect(page.locator("[data-filter-status]")).toHaveText(/Показани са 30 статии/);
+  await expect(page.locator("[data-filter-status]")).toHaveText(/Показани са 33 статии/);
 });
 
 test("videos: topic filter, singular/plural announcement, anchors from the old page", async ({ page }) => {
@@ -227,7 +227,7 @@ test("RSS feeds: well-formed, one item per article, links open the article in th
     }, xml);
     expect(feed.error).toBe(false);
     expect(feed.lang).toBe(lang);
-    expect(feed.links.length).toBe(30);
+    expect(feed.links.length).toBe(33);
     for (const link of feed.links.slice(0, 3)) {
       expect((await request.get(link)).status()).toBe(200);
       if (lang === "en") expect(link).toMatch(/^\/en\/blog\//);
