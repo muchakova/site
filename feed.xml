@@ -6,7 +6,31 @@
     <atom:link href="https://muchakova.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Статии за данъци, инвестиции, крипто и ДДС от Марина Мучакова, данъчен консултант.</description>
     <language>bg</language>
-    <lastBuildDate>Tue, 27 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Какво знае НАП за приходите ми от чужбина. Част 1: Каналите</title>
+      <link>https://muchakova.com/blog/kakvo-znae-nap-chast-1-kanalite.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/kakvo-znae-nap-chast-1-kanalite.html</guid>
+      <pubDate>Wed, 28 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>По кои закони, директиви и договори информацията за доходите ти от чужбина стига до НАП, кой я подава, колко често и какво точно съдържа. С пълния списък на подписалите CRS MCAA.</description>
+    </item>
+    <item>
+      <title>Какво знае НАП за приходите ми от чужбина. Част 2: Платците</title>
+      <link>https://muchakova.com/blog/kakvo-znae-nap-chast-2-platcite.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/kakvo-znae-nap-chast-2-platcite.html</guid>
+      <pubDate>Wed, 28 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>Работодатели, възложители, платформи, брокери, криптоборси, банки, P2P и проп фирми: кой през кой канал докладва, кога данните стигат до НАП и какво НАП има и какво няма.</description>
+    </item>
+    <item>
+      <title>Какво знае НАП за приходите ми от чужбина. Част 3: Данъчното събитие, митовете и стратегията</title>
+      <link>https://muchakova.com/blog/kakvo-znae-nap-chast-3-danachno-sabitie.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/kakvo-znae-nap-chast-3-danachno-sabitie.html</guid>
+      <pubDate>Wed, 28 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Данъци</category>
+      <description>Кога доходът е „получен“, как НАП тълкува данните, които има, кои са най-скъпите заблуди и как да тичаш пред вятъра.</description>
+    </item>
     <item>
       <title>Проверка от НАП за местно лице, чужди сметки и криптоборси</title>
       <link>https://muchakova.com/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html</link>

@@ -34,7 +34,22 @@ The site is in Bulgarian at the root and in English under /en/; every page links
 - LoopForge, a music loop studio in the browser (pet project): https://muchakova.github.io/looper/
 - RSS: https://muchakova.com/feed.xml (Bulgarian) · https://muchakova.com/en/feed.xml (English)
 
-## Blog articles (30)
+## Blog articles (33)
+
+### Какво знае НАП за приходите ми от чужбина. Част 1: Каналите / What the NRA Knows About My Income from Abroad. Part 1: The Channels
+- URL: https://muchakova.com/blog/kakvo-znae-nap-chast-1-kanalite.html · English: https://muchakova.com/en/blog/kakvo-znae-nap-chast-1-kanalite.html
+- Date: 2026-10-28
+- Topics: What the Bulgarian NRA knows about foreign income: automatic exchange of information, DAC1, CRS/DAC2, CRS MCAA signatories, DAC7 digital platforms, DAC8 and CARF crypto-assets, CESOP cross-border payments, FATCA (non-reciprocal Model 1B), exchange on request, group requests, Bulgarian Tax and Social Security Procedure Code (ДОПК), Personal Income Tax Act (ЗДДФЛ)
+
+### Какво знае НАП за приходите ми от чужбина. Част 2: Платците / What the NRA Knows About My Income from Abroad. Part 2: The Payers
+- URL: https://muchakova.com/blog/kakvo-znae-nap-chast-2-platcite.html · English: https://muchakova.com/en/blog/kakvo-znae-nap-chast-2-platcite.html
+- Date: 2026-10-28
+- Topics: Which foreign payers report to the Bulgarian NRA and through which channel: foreign employers, B2B clients, DAC7 platforms (Upwork, Fiverr, YouTube, OnlyFans, Patreon, Airbnb, Booking.com, Etsy, Vinted), EU brokers under CRS (Interactive Brokers, Trading 212, eToro, Saxo, DEGIRO, XTB), US brokers, MiCA crypto exchanges under DAC8, CARF, banks and e-money institutions (Revolut, Wise, PayPal), P2P lending (Mintos, Bondora), prop firms (FTMO), acquisition cost, Personal Income Tax Act (ЗДДФЛ)
+
+### Какво знае НАП за приходите ми от чужбина. Част 3: Данъчното събитие, митовете и стратегията / What the NRA Knows About My Income from Abroad. Part 3: The Taxable Event, Myths and Strategy
+- URL: https://muchakova.com/blog/kakvo-znae-nap-chast-3-danachno-sabitie.html · English: https://muchakova.com/en/blog/kakvo-znae-nap-chast-3-danachno-sabitie.html
+- Date: 2026-10-28
+- Topics: Taxable event for Bulgarian residents (Article 11 and Article 33 of the Personal Income Tax Act, ЗДДФЛ): selling or swapping shares, ETFs and crypto, crypto-to-stablecoin swaps, dividends, platform balances; how the NRA reads CRS, DAC7 and DAC8 data, zero acquisition cost, special assessment procedure (Articles 122–124 ДОПК), penalties and limitation periods, 15 tax myths, strategy: documents, annual return, SPB-8 report to the BNB, VAT and social security, FAQ
 
 ### Проверка от НАП за местно лице, чужди сметки и криптоборси / NRA Tax Residency Check: Foreign Accounts and Crypto Exchanges
 - URL: https://muchakova.com/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html · English: https://muchakova.com/en/blog/nap-proverka-mestno-lice-chuzhdi-smetki-kripto.html
