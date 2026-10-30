@@ -34,7 +34,12 @@ The site is in Bulgarian at the root and in English under /en/; every page links
 - LoopForge, a music loop studio in the browser (pet project): https://muchakova.github.io/looper/
 - RSS: https://muchakova.com/feed.xml (Bulgarian) · https://muchakova.com/en/feed.xml (English)
 
-## Blog articles (33)
+## Blog articles (34)
+
+### Пруденциални гаранции по MiCA при дружествата, предоставящи услуги за криптоактиви (CASP) / Prudential Safeguards Under MiCA for Crypto-Asset Service Providers (CASPs)
+- URL: https://muchakova.com/blog/prudencialni-garancii-mica-casp.html · English: https://muchakova.com/en/blog/prudencialni-garancii-mica-casp.html
+- Date: 2026-10-30
+- Topics: MiCA Article 67, prudential safeguards, CASP own funds, Annex IV minimum capital, fixed overheads, ESMA Q&A 2349, ESMA Q&A 2344, Delegated Regulation (EU) 2025/305, stress scenarios, CET1, insurance policy
 
 ### Какво знае НАП за приходите ми от чужбина. Част 1: Каналите / What the NRA Knows About My Income from Abroad. Part 1: The Channels
 - URL: https://muchakova.com/blog/kakvo-znae-nap-chast-1-kanalite.html · English: https://muchakova.com/en/blog/kakvo-znae-nap-chast-1-kanalite.html

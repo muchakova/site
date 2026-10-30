@@ -6,7 +6,15 @@
     <atom:link href="https://muchakova.com/en/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Articles on tax, investing, crypto and VAT by Marina Muchakova, tax consultant.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Prudential Safeguards Under MiCA for Crypto-Asset Service Providers (CASPs)</title>
+      <link>https://muchakova.com/en/blog/prudencialni-garancii-mica-casp.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/prudencialni-garancii-mica-casp.html</guid>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 GMT</pubDate>
+      <category>MiCA</category>
+      <description>How authorised services, the cost base and stress scenarios determine the actual capital buffer of crypto-asset service providers, and why after ESMA Q&amp;A 2349 “fixed overheads” include variable costs too.</description>
+    </item>
     <item>
       <title>What the NRA Knows About My Income from Abroad. Part 1: The Channels</title>
       <link>https://muchakova.com/en/blog/kakvo-znae-nap-chast-1-kanalite.html</link>

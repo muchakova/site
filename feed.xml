@@ -6,7 +6,15 @@
     <atom:link href="https://muchakova.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Статии за данъци, инвестиции, крипто и ДДС от Марина Мучакова, данъчен консултант.</description>
     <language>bg</language>
-    <lastBuildDate>Wed, 28 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Пруденциални гаранции по MiCA при дружествата, предоставящи услуги за криптоактиви (CASP)</title>
+      <link>https://muchakova.com/blog/prudencialni-garancii-mica-casp.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/prudencialni-garancii-mica-casp.html</guid>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 GMT</pubDate>
+      <category>MiCA</category>
+      <description>Как лицензираните услуги, разходната база и стрес сценариите определят реалния капиталов буфер на доставчиците на услуги за криптоактиви и защо след ESMA Q&amp;A 2349 „постоянните общи разходи“ включват и променливите.</description>
+    </item>
     <item>
       <title>Какво знае НАП за приходите ми от чужбина. Част 1: Каналите</title>
       <link>https://muchakova.com/blog/kakvo-znae-nap-chast-1-kanalite.html</link>
