@@ -6,7 +6,15 @@
     <atom:link href="https://muchakova.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Статии за данъци, инвестиции, крипто и ДДС от Марина Мучакова, данъчен консултант.</description>
     <language>bg</language>
-    <lastBuildDate>Fri, 30 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>DAC8 без паника: какво трябва да направят лицензираните ДУКА, кандидатите за лиценз и VASP-овете, които спряха дейност</title>
+      <link>https://muchakova.com/blog/dac8-bez-panika-duka-vasp.html</link>
+      <guid isPermaLink="true">https://muchakova.com/blog/dac8-bez-panika-duka-vasp.html</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 GMT</pubDate>
+      <category>DAC8</category>
+      <description>Промените в ДОПК, с които DAC8 влезе в българското право, се прилагат от 1 януари 2026 г. Какво трябва да направят лицензираните ДУКА, дружествата в процес на лицензиране и бившите VASP-ове, с календар на сроковете и таблица на санкциите.</description>
+    </item>
     <item>
       <title>Пруденциални гаранции по MiCA при дружествата, предоставящи услуги за криптоактиви (CASP)</title>
       <link>https://muchakova.com/blog/prudencialni-garancii-mica-casp.html</link>

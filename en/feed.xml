@@ -6,7 +6,15 @@
     <atom:link href="https://muchakova.com/en/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Articles on tax, investing, crypto and VAT by Marina Muchakova, tax consultant.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>DAC8 Without Panic: What Licensed CASPs, Licence Applicants and VASPs That Have Ceased Operations Need to Do</title>
+      <link>https://muchakova.com/en/blog/dac8-bez-panika-duka-vasp.html</link>
+      <guid isPermaLink="true">https://muchakova.com/en/blog/dac8-bez-panika-duka-vasp.html</guid>
+      <pubDate>Fri, 13 Nov 2026 12:00:00 GMT</pubDate>
+      <category>DAC8</category>
+      <description>The amendments that brought DAC8 into Bulgarian law apply from 1 January 2026. What licensed CASPs, companies awaiting a licence and former VASPs need to do, with a calendar of deadlines and a table of penalties.</description>
+    </item>
     <item>
       <title>Prudential Safeguards Under MiCA for Crypto-Asset Service Providers (CASPs)</title>
       <link>https://muchakova.com/en/blog/prudencialni-garancii-mica-casp.html</link>
